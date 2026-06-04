@@ -1,0 +1,62 @@
+[
+  {
+    "name": "925-geary-street-san-francisco-ca-lc5977562",
+    "address": "",
+    "price_min": 1895,
+    "price_max": 2245,
+    "units": [],
+    "amenities": [],
+    "has_parking": "mentioned in description",
+    "url": "https://www.rent.com/apartment/925-geary-street-san-francisco-ca-lc5977562"
+  },
+  {
+    "name": "the-pharaoh-apartments-san-francisco-ca-lc6614847",
+    "address": "",
+    "price_min": 2695,
+    "price_max": 2795,
+    "units": [],
+    "amenities": [],
+    "has_parking": "mentioned in description",
+    "url": "https://www.rent.com/apartment/the-pharaoh-apartments-san-francisco-ca-lc6614847"
+  },
+  {
+    "name": "855-brannan-san-francisco-ca-lc5966048",
+    "address": "",
+    "price_min": 4010,
+    "price_max": 4375,
+    "units": [],
+    "amenities": [],
+    "has_parking": "mentioned in description",
+    "url": "https://www.rent.com/apartment/855-brannan-san-francisco-ca-lc5966048"
+  },
+  {
+    "name": "1000-1010-bush-street-san-francisco-ca-lc5905883",
+    "address": "",
+    "price_min": null,
+    "price_max": null,
+    "units": [],
+    "amenities": [],
+    "has_parking": "mentioned in description",
+    "url": "https://www.rent.com/apartment/1000-1010-bush-street-san-francisco-ca-lc5905883"
+  },
+  {
+    "name": "the-grid-soma-san-francisco-ca-lc6703049",
+    "address": "",
+    "price_min": null,
+    "price_max": null,
+    "units": [],
+    "amenities": [],
+    "has_parking": "mentioned in description",
+    "url": "https://www.rent.com/apartment/the-grid-soma-san-francisco-ca-lc6703049"
+  },
+  {
+    "name": "55-polk-st-san-francisco-ca-lc5991349",
+    "address": "",
+    "price_min": null,
+    "price_max": null,
+    "units": [],
+    "amenities": [],
+    "has_parking": "mentioned in description",
+    "url": "https://www.rent.com/apartment/55-polk-st-san-francisco-ca-lc5991349"
+  }
+]

@@ -1,0 +1,213 @@
+[
+  {
+    "id": 1,
+    "name": "Tony Brettkelly",
+    "address": "524 Columbus Ave",
+    "status": "contacted",
+    "date_contacted": "2026-05-14",
+    "response": null,
+    "notes": "Sent intro, asked to schedule tour"
+  },
+  {
+    "id": 2,
+    "name": "Ameer A.",
+    "address": "7001 7th St #3",
+    "status": "contacted",
+    "date_contacted": "2026-05-14",
+    "response": null,
+    "notes": "Sent intro, asked to schedule tour"
+  },
+  {
+    "id": 3,
+    "name": "San Francisco Room for Rent",
+    "address": "325 Fillmore St",
+    "status": "declined",
+    "date_contacted": "2026-05-14",
+    "response": null,
+    "notes": "Not in SF, passed"
+  },
+  {
+    "id": 4,
+    "name": "673 Broadway Management",
+    "address": "673 Broadway #5",
+    "status": "replied",
+    "date_contacted": "2026-05-14",
+    "response": "Offers 6-12 month leases only, asked if interested in a look",
+    "notes": "Long lease only \u2014 decide if acceptable"
+  },
+  {
+    "id": 5,
+    "name": "Elvina Beck",
+    "address": "2424 Lombard St",
+    "status": "closed",
+    "date_contacted": "2026-05-14",
+    "response": "Best of luck (declined/unavailable)",
+    "notes": null
+  },
+  {
+    "id": 6,
+    "name": "Fanny Chun",
+    "address": "668 Clay St #58",
+    "status": "replied",
+    "date_contacted": "2026-05-13",
+    "response": "Check email/texts for more info. Can reschedule/cancel.",
+    "notes": "Tour likely scheduled \u2014 check email"
+  },
+  {
+    "id": 7,
+    "name": "Leasing Agent",
+    "address": "2186 Union St (SRO)",
+    "status": "contacted",
+    "date_contacted": "2026-05-13",
+    "response": null,
+    "notes": "SRO unit"
+  },
+  {
+    "id": 8,
+    "name": "TNDC Team",
+    "address": "SOMA Studios Apartments",
+    "status": "contacted",
+    "date_contacted": "2026-05-13",
+    "response": null,
+    "notes": "SoMa location"
+  },
+  {
+    "id": 9,
+    "name": "Lawrence Kennedy",
+    "address": "Polk Street Commons",
+    "status": "contacted",
+    "date_contacted": "2026-05-13",
+    "response": null,
+    "notes": null
+  },
+  {
+    "id": 10,
+    "name": "Brightwell West",
+    "address": "Brightwell West",
+    "status": "contacted",
+    "date_contacted": "2026-05-13",
+    "response": null,
+    "notes": null
+  },
+  {
+    "name": "Marina weekly stay",
+    "address": "Marina District",
+    "price": "$350/wk",
+    "status": "contacted",
+    "source": "SpareRoom",
+    "notes": "Auto-messaged via Playwright",
+    "id": 11,
+    "date_contacted": "2026-05-17",
+    "response": null
+  },
+  {
+    "name": "Russian Hill listing",
+    "address": "640 Broadway, Russian Hill",
+    "price": "$1,500",
+    "status": "contacted",
+    "source": "SpareRoom",
+    "notes": "Auto-messaged via Playwright",
+    "id": 12,
+    "date_contacted": "2026-05-17",
+    "response": null
+  },
+  {
+    "name": "Presidio room",
+    "address": "The Presidio",
+    "price": "$1,400",
+    "status": "pending",
+    "source": "Craigslist",
+    "notes": "Opened in browser for manual reply",
+    "id": 13,
+    "date_contacted": "2026-05-17",
+    "response": null
+  },
+  {
+    "name": "Pac Heights 2BR flat",
+    "address": "Pacific Heights",
+    "price": "$1,550",
+    "status": "pending",
+    "source": "Craigslist",
+    "notes": "Opened in browser for manual reply",
+    "id": 14,
+    "date_contacted": "2026-05-17",
+    "response": null
+  },
+  {
+    "name": "Potrero Hill Victorian",
+    "address": "Potrero Hill",
+    "price": "$873",
+    "status": "pending",
+    "source": "Craigslist",
+    "notes": "Opened in browser for manual reply",
+    "id": 15,
+    "date_contacted": "2026-05-17",
+    "response": null
+  },
+  {
+    "name": "Mission Dolores sunny",
+    "address": "Mission Bay area",
+    "price": "$1,334",
+    "status": "pending",
+    "source": "Craigslist",
+    "notes": "Opened in browser for manual reply",
+    "id": 16,
+    "date_contacted": "2026-05-17",
+    "response": null
+  },
+  {
+    "name": "Liberty Hill views",
+    "address": "Mission Bay area",
+    "price": "$1,580",
+    "status": "pending",
+    "source": "Craigslist",
+    "notes": "Opened in browser for manual reply",
+    "id": 17,
+    "date_contacted": "2026-05-17",
+    "response": null
+  },
+  {
+    "name": "Bernal Heights pet-friendly",
+    "address": "Mission Bay area",
+    "price": "$1,150",
+    "status": "pending",
+    "source": "Craigslist",
+    "notes": "Opened in browser for manual reply",
+    "id": 18,
+    "date_contacted": "2026-05-17",
+    "response": null
+  },
+  {
+    "name": "Bernal Heights room",
+    "address": "Mission Bay area",
+    "price": "$1,297",
+    "status": "pending",
+    "source": "Craigslist",
+    "notes": "Opened in browser for manual reply",
+    "id": 19,
+    "date_contacted": "2026-05-17",
+    "response": null
+  },
+  {
+    "name": "Cow Hollow private bed+bath",
+    "address": "Cow Hollow",
+    "price": "$700",
+    "status": "pending",
+    "source": "Craigslist",
+    "notes": "Opened in browser for manual reply",
+    "id": 20,
+    "date_contacted": "2026-05-17",
+    "response": null
+  },
+  {
+    "name": "Presidio Home",
+    "address": "Cow Hollow/Presidio",
+    "price": "$1,262",
+    "status": "pending",
+    "source": "Craigslist",
+    "notes": "Opened in browser for manual reply",
+    "id": 21,
+    "date_contacted": "2026-05-17",
+    "response": null
+  }
+]

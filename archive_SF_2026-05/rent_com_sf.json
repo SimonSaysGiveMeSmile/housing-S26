@@ -1,0 +1,92 @@
+[
+  {
+    "name": "925 Geary Street",
+    "address": "925 Geary St, San Francisco, California 94109",
+    "price_min": null,
+    "price_max": null,
+    "beds": [],
+    "amenities": [],
+    "has_parking": false,
+    "url": "https://www.rent.com/apartment/925-geary-street-san-francisco-ca-lc5977562"
+  },
+  {
+    "name": "The Grid SOMA",
+    "address": "673 Brannan St, San Francisco, California 94107",
+    "price_min": null,
+    "price_max": null,
+    "beds": [],
+    "amenities": [],
+    "has_parking": false,
+    "url": "https://www.rent.com/apartment/the-grid-soma-san-francisco-ca-lc6703049"
+  },
+  {
+    "name": "The Pharaoh Apartments",
+    "address": "930 Sutter St, San Francisco, California 94109",
+    "price_min": null,
+    "price_max": null,
+    "beds": [],
+    "amenities": [],
+    "has_parking": false,
+    "url": "https://www.rent.com/apartment/the-pharaoh-apartments-san-francisco-ca-lc6614847"
+  },
+  {
+    "name": "L Seven",
+    "address": "1222 Harrison St, San Francisco, California 94103",
+    "price_min": null,
+    "price_max": null,
+    "beds": [],
+    "amenities": [],
+    "has_parking": false,
+    "url": "https://www.rent.com/apartment/l-seven-san-francisco-ca-lc5892747"
+  },
+  {
+    "name": "855 Brannan",
+    "address": "855 Brannan St, San Francisco, California 94103",
+    "price_min": null,
+    "price_max": null,
+    "beds": [],
+    "amenities": [],
+    "has_parking": false,
+    "url": "https://www.rent.com/apartment/855-brannan-san-francisco-ca-lc5966048"
+  },
+  {
+    "name": "Azure",
+    "address": "690 Long Bridge St, San Francisco, California 94158",
+    "price_min": null,
+    "price_max": null,
+    "beds": [],
+    "amenities": [],
+    "has_parking": false,
+    "url": "https://www.rent.com/apartment/azure-san-francisco-ca-lc5967938"
+  },
+  {
+    "name": "Prism",
+    "address": "1028 Market St, San Francisco, California 94102",
+    "price_min": null,
+    "price_max": null,
+    "beds": [],
+    "amenities": [],
+    "has_parking": false,
+    "url": "https://www.rent.com/apartment/prism-san-francisco-ca-lc5915567"
+  },
+  {
+    "name": "Konrad on the Park",
+    "address": "971 Eddy St, San Francisco, California 94109",
+    "price_min": null,
+    "price_max": null,
+    "beds": [],
+    "amenities": [],
+    "has_parking": false,
+    "url": "https://www.rent.com/apartment/konrad-on-the-park-san-francisco-ca-lc6700855"
+  },
+  {
+    "name": "55 Polk St.",
+    "address": "55 Polk St, San Francisco, California 94102",
+    "price_min": null,
+    "price_max": null,
+    "beds": [],
+    "amenities": [],
+    "has_parking": false,
+    "url": "https://www.rent.com/apartment/55-polk-st-san-francisco-ca-lc5991349"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-05-17 01:16:49",
+  "phone": "415-426-8741",
+  "results": {
+    "sent": [
+      "https://www.spareroom.com/flatshare/san_francisco/any/102567992",
+      "https://www.spareroom.com/flatshare/san_francisco/any/102941425"
+    ],
+    "failed": [
+      "https://www.spareroom.com/flatshare/san_francisco/any/102629109",
+      "https://sfbay.craigslist.org/sfc/roo/d/san-francisco-room-available-in-the/7934420349.html",
+      "https://sfbay.craigslist.org/sfc/roo/d/san-francisco-room-for-rent-in-bedroom/7928728983.html",
+      "https://sfbay.craigslist.org/sfc/roo/d/san-francisco-spacious-room-for-rent-in/7933018196.html",
+      "https://sfbay.craigslist.org/sfc/roo/d/san-francisco-sunny-bedroom-in-shared/7934097470.html",
+      "https://sfbay.craigslist.org/sfc/roo/d/san-francisco-room-unique-with-views/7934015296.html",
+      "https://sfbay.craigslist.org/sfc/roo/d/san-francisco-pet-friendly-houseshare/7933973154.html",
+      "https://sfbay.craigslist.org/sfc/roo/d/san-francisco-room-for-rent-in-bernal/7934339161.html",
+      "https://sfbay.craigslist.org/sfc/roo/d/san-francisco-private-bedroom-plus/7934517528.html",
+      "https://sfbay.craigslist.org/sfc/roo/d/san-francisco-presidio-home-bedroom/7934194422.html"
+    ]
+  }
+}

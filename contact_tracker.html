@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Contact Tracker - Housing Search</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin: 0 0 10px 0;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .stat-number {
+            font-size: 48px;
+            font-weight: 800;
+            color: #667eea;
+            margin: 0;
+        }
+        .stat-label {
+            color: #666;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .listing {
+            background: white;
+            padding: 20px;
+            margin: 12px 0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            transition: all 0.2s;
+        }
+        .listing:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .listing.contacted {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+        }
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+        .number {
+            font-weight: 700;
+            color: #666;
+            min-width: 30px;
+        }
+        .price {
+            font-size: 20px;
+            font-weight: 800;
+            color: #2e7d32;
+            min-width: 80px;
+        }
+        .title {
+            flex: 1;
+            font-weight: 600;
+        }
+        .location {
+            color: #666;
+            font-size: 14px;
+            min-width: 120px;
+        }
+        .link-btn {
+            background: #1565c0;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+        }
+        .link-btn:hover {
+            background: #0d47a1;
+        }
+        .timestamp {
+            color: #999;
+            font-size: 12px;
+        }
+        .message-box {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #1565c0;
+        }
+        .message-template {
+            background: white;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 13px;
+            line-height: 1.8;
+            margin-top: 10px;
+        }
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            font-size: 14px;
+        }
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        .btn-success {
+            background: #4caf50;
+            color: white;
+        }
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            border: 2px solid transparent;
+        }
+        .tab.active {
+            border-color: #667eea;
+            background: #f0f4ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏠 Housing Contact Tracker</h1>
+        <p>Simon - Stanford Summer 2026 | 415-426-8741</p>
+    </div>
+
+    <div class="stats">
+        <div class="stat-card">
+            <div class="stat-number" id="contacted-count">0</div>
+            <div class="stat-label">Contacted</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" id="remaining-count">43</div>
+            <div class="stat-label">Remaining</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" id="total-count">43</div>
+            <div class="stat-label">Total (Good Areas)</div>
+        </div>
+    </div>
+
+    <div class="message-box">
+        <strong>📝 Your Message Template:</strong>
+        <div class="message-template" id="message-template">
+Hi! I'm Simon, an incoming Stanford summer student starting on campus June 1, 2026. I'm looking for a room for the summer and yours looks like a great fit. (I saw it listed at $<span style="background: yellow;">[PRICE]</span>/mo, which works for me.) I'm a non-smoker, no parties, quiet and clean. Is it still available, and would a short summer stay work for you? Happy to arrange an in-person or video tour at your convenience. Thanks so much for considering — Simon, 415-426-8741.
+        </div>
+        <button class="btn btn-primary" style="margin-top: 10px;" onclick="copyMessage()">📋 Copy Template</button>
+    </div>
+
+    <div class="btn-group">
+        <button class="btn btn-success" onclick="saveProgress()">💾 Save Progress</button>
+        <button class="btn btn-primary" onclick="markAllVisible()">✓ Mark All Visible as Contacted</button>
+    </div>
+
+    <div class="filter-tabs">
+        <div class="tab active" onclick="filterListings('all')">All (43)</div>
+        <div class="tab" onclick="filterListings('todo')">To Contact (<span id="todo-count">43</span>)</div>
+        <div class="tab" onclick="filterListings('contacted')">Contacted (<span id="contacted-tab-count">0</span>)</div>
+    </div>
+
+    <div id="listings"></div>
+
+    <script>
+        const listings = [
+            {id: "cl-7937669933", price: 850, title: "Good condo", location: "palo alto", url: "https://sfbay.craigslist.org/pen/roo/d/palo-alto-good-condo/7937669933.html"},
+            {id: "cl-7936522629", price: 950, title: "Convinennt location Great for Commuters!", location: "palo alto", url: "https://sfbay.craigslist.org/pen/apa/d/palo-alto-convinennt-location-great-for/7936522629.html"},
+            {id: "cl-7932602167", price: 955, title: "Fantastic Room Available In The Heart Of Downtown", location: "palo alto", url: "https://sfbay.craigslist.org/pen/apa/d/palo-alto-fantastic-room-available-in/7932602167.html"},
+            {id: "cl-7932557248", price: 955, title: "Charming Room Available in Downtown Palo Alto", location: "palo alto", url: "https://sfbay.craigslist.org/pen/apa/d/palo-alto-charming-room-available-in/7932557248.html"},
+            {id: "cl-7936051548", price: 1050, title: "Private Furnished Room — 5-Minute Walk to Facebook", location: "menlo park", url: "https://sfbay.craigslist.org/pen/roo/d/menlo-park-private-furnished-room/7936051548.html"},
+            {id: "cl-7934903541", price: 1050, title: "Nice room for rent", location: "menlo park", url: "https://sfbay.craigslist.org/pen/roo/d/menlo-park-nice-room-for-rent/7934903541.html"},
+            {id: "cl-7935947132", price: 1100, title: "Near Stanford, all-female house", location: "palo alto", url: "https://sfbay.craigslist.org/pen/roo/d/palo-alto-near-stanford-all-female/7935947132.html"},
+            {id: "cl-7937645925", price: 1185, title: "College Terrace, 1 Block from Stanford Campus", location: "palo alto", url: "https://sfbay.craigslist.org/pen/roo/d/stanford-college-terrace-block-from/7937645925.html"},
+            {id: "cl-7936246919", price: 1200, title: "Room for Rent/ Cuarto de Renta Menlo Park", location: "menlo park", url: "https://sfbay.craigslist.org/pen/roo/d/menlo-park-room-for-rent-cuarto-de/7936246919.html"},
+            {id: "cl-7935678965", price: 1200, title: "Cuarto de Renta Menlo Park", location: "menlo park", url: "https://sfbay.craigslist.org/pen/roo/d/menlo-park-cuarto-de-renta-menlo-park/7935678965.html"},
+            {id: "cl-7935022688", price: 1200, title: "Se renta cuarto", location: "menlo park", url: "https://sfbay.craigslist.org/pen/roo/d/menlo-park-se-renta-cuarto/7935022688.html"},
+            {id: "cl-7934150154", price: 1230, title: "1 BR avail in a SFH w yard in Mtn View!", location: "mountain view", url: "https://sfbay.craigslist.org/pen/roo/d/mountain-view-br-avail-in-sfh-yard-in/7934150154.html"},
+            {id: "cl-7935954077", price: 1250, title: "Lake View from Large Bedroom and Bath", location: "los altos", url: "https://sfbay.craigslist.org/pen/roo/d/los-altos-lake-view-from-large-bedroom/7935954077.html"},
+            {id: "cl-7935997984", price: 1250, title: "Room in Mountain View", location: "mountain view", url: "https://sfbay.craigslist.org/pen/roo/d/mountain-view-room-in-mountain-view/7935997984.html"},
+            {id: "cl-7936355051", price: 1270, title: "Rent a room in a single Residence!!", location: "palo alto", url: "https://sfbay.craigslist.org/pen/sub/d/palo-alto-rent-room-in-single-residence/7936355051.html"}
+        ];
+
+        let currentFilter = 'all';
+        let contacted = JSON.parse(localStorage.getItem('contacted') || '{}');
+
+        function renderListings() {
+            const container = document.getElementById('listings');
+            container.innerHTML = '';
+
+            const filteredListings = listings.filter(l => {
+                if (currentFilter === 'all') return true;
+                if (currentFilter === 'contacted') return contacted[l.id];
+                if (currentFilter === 'todo') return !contacted[l.id];
+                return true;
+            });
+
+            filteredListings.forEach((listing, index) => {
+                const isContacted = contacted[listing.id];
+                const div = document.createElement('div');
+                div.className = 'listing' + (isContacted ? ' contacted' : '');
+                div.innerHTML = `
+                    <input type="checkbox" class="checkbox" ${isContacted ? 'checked' : ''}
+                           onchange="toggleContacted('${listing.id}')">
+                    <div class="number">#${index + 1}</div>
+                    <div class="price">$${listing.price}</div>
+                    <div class="title">${listing.title}</div>
+                    <div class="location">${listing.location}</div>
+                    ${isContacted ? '<div class="timestamp">' + contacted[listing.id] + '</div>' : ''}
+                    <a href="${listing.url}" target="_blank" class="link-btn">View & Reply</a>
+                `;
+                container.appendChild(div);
+            });
+
+            updateStats();
+        }
+
+        function toggleContacted(id) {
+            if (contacted[id]) {
+                delete contacted[id];
+            } else {
+                contacted[id] = new Date().toLocaleString();
+            }
+            localStorage.setItem('contacted', JSON.stringify(contacted));
+            renderListings();
+        }
+
+        function updateStats() {
+            const contactedCount = Object.keys(contacted).length;
+            const remaining = listings.length - contactedCount;
+            document.getElementById('contacted-count').textContent = contactedCount;
+            document.getElementById('remaining-count').textContent = remaining;
+            document.getElementById('total-count').textContent = listings.length;
+            document.getElementById('todo-count').textContent = remaining;
+            document.getElementById('contacted-tab-count').textContent = contactedCount;
+        }
+
+        function filterListings(filter) {
+            currentFilter = filter;
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            renderListings();
+        }
+
+        function copyMessage() {
+            const text = document.getElementById('message-template').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Message template copied! Remember to replace [PRICE] with the actual price.');
+            });
+        }
+
+        function saveProgress() {
+            alert(`Progress saved!\n\nContacted: ${Object.keys(contacted).length}/${listings.length}\n\nYour progress is automatically saved in your browser.`);
+        }
+
+        function markAllVisible() {
+            const now = new Date().toLocaleString();
+            listings.forEach(listing => {
+                if (!contacted[listing.id]) {
+                    contacted[listing.id] = now;
+                }
+            });
+            localStorage.setItem('contacted', JSON.stringify(contacted));
+            renderListings();
+        }
+
+        // Initial render
+        renderListings();
+    </script>
+</body>
+</html>

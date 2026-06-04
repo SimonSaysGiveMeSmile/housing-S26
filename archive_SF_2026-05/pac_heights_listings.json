@@ -1,0 +1,41 @@
+[
+  {
+    "id": "102567992",
+    "title": "&#36;350 per week stay in the Marina district",
+    "price": "$350",
+    "price_numeric": 350,
+    "avail": "Available now",
+    "min_term": "None",
+    "furnished": "Furnished",
+    "parking": "No",
+    "area": "Marina",
+    "url": "https://www.spareroom.com/flatshare/san_francisco/any/102567992",
+    "date": "2026-05-17"
+  },
+  {
+    "id": "102629109",
+    "title": "Stunning Cathedral Hill Home by Lafayette Park",
+    "price": "$1,200",
+    "price_numeric": 1200,
+    "avail": "Available now",
+    "min_term": "3 months",
+    "furnished": "Unfurnished",
+    "parking": "Not mentioned",
+    "area": "Cathedral Hill",
+    "url": "https://www.spareroom.com/flatshare/san_francisco/any/102629109",
+    "date": "2026-05-17"
+  },
+  {
+    "id": "102941425",
+    "title": "640 BroadwaySan FranciscoCA",
+    "price": "$1,500",
+    "price_numeric": 1500,
+    "avail": "Available now",
+    "min_term": "1 month",
+    "furnished": "Furnished",
+    "parking": "Not mentioned",
+    "area": "Russian Hill",
+    "url": "https://www.spareroom.com/flatshare/san_francisco/any/102941425",
+    "date": "2026-05-17"
+  }
+]

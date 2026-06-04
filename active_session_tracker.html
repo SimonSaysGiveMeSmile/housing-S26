@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>🚀 ACTIVE OUTREACH SESSION - Track Your Progress</title>
+    <style>
+        body {
+            font-family: -apple-system, system-ui, sans-serif;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #0f0f23;
+            color: #e0e0e0;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+        h1 { margin: 0 0 10px 0; font-size: 32px; }
+        .alert {
+            background: #ff3d00;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-card {
+            background: #1e1e2e;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #667eea;
+        }
+        .stat-number {
+            font-size: 42px;
+            font-weight: 800;
+            color: #667eea;
+            margin: 0;
+        }
+        .stat-label {
+            color: #999;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        .listing {
+            background: #1e1e2e;
+            padding: 15px;
+            margin: 8px 0;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-left: 4px solid #667eea;
+            transition: all 0.2s;
+        }
+        .listing:hover {
+            background: #2a2a3e;
+            transform: translateX(5px);
+        }
+        .listing.contacted {
+            background: #1a3a1a;
+            border-left-color: #4caf50;
+            opacity: 0.6;
+        }
+        .checkbox {
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            accent-color: #4caf50;
+        }
+        .number {
+            font-weight: 700;
+            color: #667eea;
+            min-width: 35px;
+            font-size: 16px;
+        }
+        .price {
+            font-size: 22px;
+            font-weight: 800;
+            color: #4caf50;
+            min-width: 90px;
+        }
+        .title {
+            flex: 1;
+            font-weight: 600;
+            color: #e0e0e0;
+        }
+        .location {
+            color: #999;
+            font-size: 13px;
+            min-width: 130px;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 40px;
+            background: #1e1e2e;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 20px 0;
+            border: 2px solid #667eea;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #4caf50 100%);
+            transition: width 0.5s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+        }
+        .section {
+            background: #1e1e2e;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #333;
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .btn {
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            margin: 5px;
+            transition: all 0.2s;
+        }
+        .btn-primary { background: #667eea; color: white; }
+        .btn-primary:hover { background: #5568d3; transform: scale(1.05); }
+        .btn-success { background: #4caf50; color: white; }
+        .btn-success:hover { background: #45a049; transform: scale(1.05); }
+        .message-box {
+            background: #2a2a3e;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Monaco', monospace;
+            font-size: 13px;
+            line-height: 1.8;
+            color: #e0e0e0;
+            border: 1px solid #667eea;
+        }
+        .timer {
+            font-size: 48px;
+            font-weight: 800;
+            text-align: center;
+            color: #ff3d00;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 ACTIVE OUTREACH SESSION</h1>
+        <p>Simon | 415-426-8741 (Business) | Stanford Summer 2026</p>
+    </div>
+
+    <div class="alert">
+        ⚠️ 52 BROWSER TABS ARE NOW OPEN - START CONTACTING NOW! ⚠️
+    </div>
+
+    <div class="timer" id="timer">Time Active: 00:00</div>
+
+    <div class="progress-bar">
+        <div class="progress-fill" id="progress" style="width: 0%">0 / 43 Contacted (0%)</div>
+    </div>
+
+    <div class="stats">
+        <div class="stat-card">
+            <div class="stat-number" id="contacted">0</div>
+            <div class="stat-label">✓ Contacted</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" id="remaining">43</div>
+            <div class="stat-label">⏳ Remaining</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" id="rate">0</div>
+            <div class="stat-label">Per Hour</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" id="eta">--</div>
+            <div class="stat-label">Est. Complete</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📝 Your Contact Message (Copy & Paste)</h2>
+        <div class="message-box" id="template">
+Hi! I'm Simon, an incoming Stanford summer student starting on campus June 1, 2026. I'm looking for a room for the summer and yours looks like a great fit. (I saw it listed at $<strong style="background: #ff3d00; padding: 2px 6px; border-radius: 3px;">[PRICE]</strong>/mo, which works for me.) I'm a non-smoker, no parties, quiet and clean. Is it still available, and would a short summer stay work for you? Happy to arrange an in-person or video tour at your convenience. Thanks so much for considering — Simon, 415-426-8741.
+        </div>
+        <button class="btn btn-primary" onclick="copyMessage()">📋 Copy Template</button>
+    </div>
+
+    <div style="display: flex; gap: 10px; margin: 20px 0;">
+        <button class="btn btn-success" onclick="saveProgress()">💾 Save Progress</button>
+        <button class="btn btn-primary" onclick="location.reload()">🔄 Refresh</button>
+    </div>
+
+    <div class="section">
+        <h2>🎯 ALL 43 PROPERTIES - Check as You Contact</h2>
+        <div id="listings"></div>
+    </div>
+
+    <script>
+        const startTime = Date.now();
+        const listings = [
+            {id:"cl-7937669933",price:850,title:"Good condo",location:"palo alto"},
+            {id:"cl-7936522629",price:950,title:"Convenient location",location:"palo alto"},
+            {id:"cl-7932602167",price:955,title:"Downtown Palo Alto (1)",location:"palo alto"},
+            {id:"cl-7932557248",price:955,title:"Downtown Palo Alto (2)",location:"palo alto"},
+            {id:"cl-7936051548",price:1050,title:"Near Facebook",location:"menlo park"},
+            {id:"cl-7934903541",price:1050,title:"Nice room for rent",location:"menlo park"},
+            {id:"cl-7935947132",price:1100,title:"Near Stanford",location:"palo alto"},
+            {id:"cl-7937645925",price:1185,title:"College Terrace 1 block from Stanford",location:"palo alto"},
+            {id:"cl-7936246919",price:1200,title:"Room Menlo Park (1)",location:"menlo park"},
+            {id:"cl-7935678965",price:1200,title:"Room Menlo Park (2)",location:"menlo park"},
+            {id:"cl-7935022688",price:1200,title:"Room Menlo Park (3)",location:"menlo park"},
+            {id:"cl-7934150154",price:1230,title:"Mountain View near Google",location:"mountain view"},
+            {id:"cl-7935954077",price:1250,title:"Lake View Los Altos",location:"los altos"},
+            {id:"cl-7935997984",price:1250,title:"Room Mountain View",location:"mountain view"},
+            {id:"cl-7936355051",price:1270,title:"Single Residence Palo Alto",location:"palo alto"}
+        ];
+
+        let contacted = JSON.parse(localStorage.getItem('contacted_v2') || '{}');
+
+        function renderListings() {
+            const container = document.getElementById('listings');
+            container.innerHTML = '';
+
+            listings.forEach((listing, index) => {
+                const isContacted = contacted[listing.id];
+                const div = document.createElement('div');
+                div.className = 'listing' + (isContacted ? ' contacted' : '');
+                div.innerHTML = `
+                    <input type="checkbox" class="checkbox" ${isContacted ? 'checked' : ''}
+                           onchange="toggleContacted('${listing.id}')">
+                    <div class="number">#${index + 1}</div>
+                    <div class="price">$${listing.price}</div>
+                    <div class="title">${listing.title}</div>
+                    <div class="location">${listing.location}</div>
+                    ${isContacted ? '<div style="color: #4caf50;">✓ Sent</div>' : ''}
+                `;
+                container.appendChild(div);
+            });
+
+            updateStats();
+        }
+
+        function toggleContacted(id) {
+            if (contacted[id]) {
+                delete contacted[id];
+            } else {
+                contacted[id] = new Date().toLocaleString();
+            }
+            localStorage.setItem('contacted_v2', JSON.stringify(contacted));
+            renderListings();
+        }
+
+        function updateStats() {
+            const count = Object.keys(contacted).length;
+            const remaining = listings.length - count;
+            const percent = Math.round((count / listings.length) * 100);
+
+            document.getElementById('contacted').textContent = count;
+            document.getElementById('remaining').textContent = remaining;
+            document.getElementById('progress').style.width = percent + '%';
+            document.getElementById('progress').textContent = `${count} / ${listings.length} Contacted (${percent}%)`;
+
+            // Calculate rate
+            const elapsed = (Date.now() - startTime) / 3600000; // hours
+            const rate = elapsed > 0 ? Math.round(count / elapsed) : 0;
+            document.getElementById('rate').textContent = rate;
+
+            // ETA
+            if (rate > 0 && remaining > 0) {
+                const hoursLeft = remaining / rate;
+                const eta = new Date(Date.now() + (hoursLeft * 3600000));
+                document.getElementById('eta').textContent = eta.toLocaleTimeString();
+            } else {
+                document.getElementById('eta').textContent = '--';
+            }
+        }
+
+        function copyMessage() {
+            const text = document.getElementById('template').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('✓ Message copied! Remember to replace [PRICE]');
+            });
+        }
+
+        function saveProgress() {
+            const count = Object.keys(contacted).length;
+            alert(`✅ Progress Saved!\n\n${count} contacted\n${listings.length - count} remaining\n\nKeep going!`);
+        }
+
+        // Update timer
+        setInterval(() => {
+            const elapsed = Math.floor((Date.now() - startTime) / 1000);
+            const minutes = Math.floor(elapsed / 60);
+            const seconds = elapsed % 60;
+            document.getElementById('timer').textContent =
+                `Time Active: ${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }, 1000);
+
+        renderListings();
+    </script>
+</body>
+</html>

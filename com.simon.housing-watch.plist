@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.simon.housing-watch</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/test/Desktop/housing-S26/run_watch.sh</string>
+    </array>
+
+    <!-- Every 30 minutes -->
+    <key>StartInterval</key>
+    <integer>1800</integer>
+
+    <!-- Run once at load too -->
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/test/Desktop/housing-S26</string>
+
+    <!-- Sender stays in DRY-RUN under the scheduler. To let it send for real,
+         change this to 1 AND make sure you're logged into Craigslist in the
+         browser profile. Leaving it at 0 means it only queues + notifies. -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>AUTO_SEND_LIVE</key>
+        <string>0</string>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/test/Desktop/housing-S26/scheduler.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/test/Desktop/housing-S26/scheduler.err.log</string>
+</dict>
+</plist>

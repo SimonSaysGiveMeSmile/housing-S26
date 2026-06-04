@@ -1,0 +1,4106 @@
+{
+  "props": {
+    "encodedZuid": "",
+    "guid": "8c8ba433-5dfe-448b-996f-7cc5503c54bf",
+    "isBot": false,
+    "deviceType": "desktop",
+    "zuid": "",
+    "pageProps": {
+      "moduleVersion": "search-page-sub-app.main.14522070.3e1cca97",
+      "subAppName": "search-page-sub-app",
+      "fullPage": true,
+      "bodyProps": {
+        "classes": [
+          "responsive-search-page",
+          "nav-full-width"
+        ]
+      },
+      "pageFrameData": {
+        "guid": "8c8ba433-5dfe-448b-996f-7cc5503c54bf",
+        "requestId": "ff368bb8-05a1-49e6-82b2-d26d19ee798d",
+        "config": {},
+        "core": {
+          "js": "https://www.zillowstatic.com/s3/pfs/core-c6b2bde86c9de33b9629.js"
+        },
+        "bodyScripts": {
+          "json": {
+            "input.staticDomain": {
+              "type": "input",
+              "props": {
+                "type": "hidden",
+                "id": "zillow-static-domain",
+                "value": "https://www.zillowstatic.com/"
+              }
+            },
+            "input.staticPFSAssetsDomain": {
+              "type": "input",
+              "props": {
+                "type": "hidden",
+                "id": "zillow-static-pfs-assets-domain",
+                "value": "https://www.zillowstatic.com/s3/pfs/"
+              }
+            },
+            "scripts.perimeterX": {
+              "type": "script",
+              "props": {
+                "id": "scripts.perimeterX"
+              },
+              "content": "(function(){\n                var allowedHosts = [\n                    'www.qa.zillow.net',\n                    'tid.zillow.com',\n                    'www.zillow.com',\n                ];\n\n                function getCookieValue(name) {\n                    const raw = document.cookie\n                        .match('(^|;)\\\\s*' + name + '\\\\s*=\\\\s*([^;]+)')\n                        ?.pop() || '';\n\n                    // Decode URL-encoded characters (e.g., %22 \u2192 \")\n                    const decoded = decodeURIComponent(raw);\n\n                    // Remove wrapping quotes if they exist\n                    return decoded.replace(/^\"|\"$/g, '');\n                }\n\n                if (allowedHosts.includes(window.location.host)) {\n                    window._pxAppId = 'PXHYx10rg3';\n                    // Custom parameters\n                    window._pxParam1 = getCookieValue('zguid');\n                    window._pxParam4 = getCookieValue('zjs_user_id');\n                    var p = document.getElementsByTagName('script')[0],\n                        s = document.createElement('script');\n                    s.async = 1;\n                    s.src = '/HYx10rg3/init.js';\n                    p.parentNode.insertBefore(s,p);\n                }\n            }());"
+            },
+            "noscripts.perimeterX": {
+              "type": "noscript",
+              "content": "<div style=\"position:fixed; top:0; left:0; display:none\" width=\"1\" height=\"1\">\n                      <img src='/HYx10rg3/xhr/api/v1/collector/noScript.gif?appId=PXHYx10rg3' alt='PxPixel' />\n                  </div>"
+            }
+          }
+        },
+        "headTags": {
+          "json": {
+            "scripts.appInfo": {
+              "type": "script",
+              "props": {
+                "id": "scripts.pfs.appInfo"
+              },
+              "content": "\n        if (typeof Object.assign === 'function') {\n            window.appInfo = Object.assign(\n                typeof window.appInfo === 'object' ? window.appInfo : {},\n                {\"@zillow/page-frame-content\":\"master.5170.4c3df0ce\"}\n            );\n        }\n    "
+            },
+            "scripts.ua": {
+              "type": "script",
+              "content": "(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');"
+            },
+            "scripts.ua.init": {
+              "type": "script",
+              "content": "window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;\n    ga(\"create\",\"UA-21174015-56\", \"auto\", {allowLinker:true});\n\n    /* Queue for Global UA Object */\n    (function(w,n){w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)}})(window, 'ua');\n    "
+            },
+            "scripts.zganalytics.init": {
+              "type": "script",
+              "content": "\n        !function () {\n            // Getting datagrail_consent_preferences_s cookie from document.cookie\n            var n = !1,\n                op = document.cookie && document.cookie.split(\"; \").filter(function(n){ return n.indexOf(\"datagrail_consent_preferences_s=\") === 0; });\n            try {\n                var o = op && op.length > 0 && op[0];\n                if (void 0 !== o && null != o) {\n                    // Parse datagrail_consent_preferences_s cookie with format: dg-category-functional:1|dg-category-marketing:1|...\n                    var cookieValue = o.substring(o.indexOf(\"=\") + 1); // Get value after \"datagrail_consent_preferences_s=\"\n                    // Check if performance cookies are disabled (dg-category-functional:0) or missing\n                    if (cookieValue.indexOf(\"dg-category-functional:1\") === -1) {\n                        n = !0;\n                    }\n                }\n            }\n            catch(e) {};\n            window['ga-disable-' + 'UA-21174015-56'] = n;\n            window['disable-analytics'] = n;\n        }();\n\n        \n            \n        (function(w,d,ns,cdn,opt,ml,fa,my,fst){\n            w['ZillowAnalyticsObject']=ns;w[ns]=w[ns]||[];\n            if(w[ns].initialize||w[ns].invoked)return;\n            w[ns].invoked=1;w[ns]._loadOptions=opt;\n            ml=['identify','track','page','off','on','use','unuse','setdim','setprop','event','send','dwell','dwellEnd', 'setPayloadDefaults', 'getEnrichedAuth0Url', 'getAuth0QueryParams', 'validatePayload', 'loadTechSpec', 'getEventingHeaders', 'zepEvent'];\n            fa=function(m){return function(){w[ns].push([].concat(m,[].slice.call(arguments)));return w[ns]}};\n            ml.forEach(function(mn){w[ns][mn]=fa(mn)});\n            var x=!(window && window['disable-analytics']);\n            if(x){my=d.createElement('script');fst=d.getElementsByTagName('script')[0];\n            my.defer=!0;my.src=cdn;if(fst)fst.parentNode.insertBefore(my,fst);}\n            return w[ns];\n            })(window,document,'zanalytics', 'https://cdn.zg-api.com/a/z/js/v1/analytics.js?v=bcf290c', {'zillow': {\n                apiKey: 'z_prod',\n                writeKey: 'z_prod_web',\n                env: 'prod',\n                apiHost: 'cs.zg-api.com:443',\n                secure: true,\n                anonymousId: '8c8ba433-5dfe-448b-996f-7cc5503c54bf',\n            }});\n    \n        "
+            },
+            "scripts.user-session-initial-state.init": {
+              "type": "script",
+              "content": "window.__USER_SESSION_INITIAL_STATE__ = { user: { loggedIn: false } };"
+            },
+            "scripts.gtm-experimentation-flags.init": {
+              "type": "script",
+              "content": "\n        const staticMarkup = false;\n        const CLIENT_ACCESSIBLE_FLAGS = [\"ZILLOW_PRIVACY_COOKIE_BANNER\"];\n\n        window.GTM_EXPERIMENTATION = window.GTM_EXPERIMENTATION || {};\n\n        function filterFlags(flags) {\n            return Object.keys(flags)\n                .filter(key => CLIENT_ACCESSIBLE_FLAGS.includes(key))\n                .reduce((obj, key) => {\n                    obj[key] = flags[key];\n                    return obj;\n                }, {});\n        }\n\n        if (staticMarkup) {\n            window.addEventListener('pfsClientDataReceived', e => {\n                const data = e.detail;\n                const experimentationFlags = data && data.experimentation || {};\n                const clientFlags = filterFlags(experimentationFlags);\n                Object.assign(window.GTM_EXPERIMENTATION, experimentationFlags);\n            });\n        } else {\n            const clientFlags = filterFlags({\"Web_Nav_Account_Inbox\":\"on\",\"HOPS_MWEB_SAFARI_BANNER_SRP_FSHDP\":\"off\",\"WEB_NAV_RENT_MANAGE_RENTALS\":\"on\",\"ELE_ADS_WEB_RAMPID\":\"off\",\"ZILLOW_PRIVACY_COOKIE_BANNER\":\"off\",\"HOPS_UPSELL_TOP_BANNER\":\"on\",\"WAY_PRODUCT_NAV_EMPTY_STATES_WEB\":\"on\",\"WAY_PRODUCT_NAV\":\"on\",\"DEBUG_IS_DEFAULT_SPLITS\":\"false\",\"AI_VOYAGER_WEB\":\"off\",\"AI_VOYAGER_ALL\":\"off\",\"IA_SIGN_IN_BUTTON\":\"on\"});\n            Object.assign(window.GTM_EXPERIMENTATION, clientFlags);\n        }"
+            },
+            "scripts.custom-dimension.initialDimensions": {
+              "type": "script",
+              "content": "\n        var customDimension1 = '8c8ba4335dfe448b996f7cc5503c54bf';\n        ua('set', 'dimension1', customDimension1);\n        ga('set', 'dimension1', customDimension1);\n        ua('identify', null);\n    "
+            },
+            "scripts.custom-dimensions.others": {
+              "type": "script",
+              "content": "\n        var w = window.innerWidth\n            || (document && document.documentElement && document.documentElement.clientWidth)\n            || (document && document.body && document.body.clientWidth);\n\n        var h = window.innerHeight\n            || (document && document.documentElement && document.documentElement.clientHeight)\n            || (document && document.body && document.body.clientHeight);\n\n        ua('set', 'dimension20', w + \"x\" + h);\n        ua('set','dimension68', window.location.href);\n        ua('set', 'dimension69', document.referrer);\n        ua('set', 'dimension192', '1778718107811');\n        ga('set', 'dimension20', w + \"x\" + h);\n        ga('set','dimension68', window.location.href);\n        ga('set', 'dimension69', document.referrer);\n        ga('set', 'dimension192', '1778718107811');\n\n        document.addEventListener('DOMContentLoaded', function ProfileDOMContentLoadedEvent (e) {\n            // wait two seconds to make sure this performance metric has been recorded\n            setTimeout(function () {\n                if (performance && performance.timing) {\n                    var domContentLoadedTime = ((performance.timing.domContentLoadedEventStart - performance.timing.navigationStart)/1000).toFixed(2);\n                    ua('set', 'dimension72', domContentLoadedTime);\n                    ga('set', 'dimension72', domContentLoadedTime);\n                }\n            }, 2000);\n            document.removeEventListener('DOMContentLoaded', ProfileDOMContentLoadedEvent);\n        });\n\n        window.addEventListener('load', function ProfileLoadEvent (e) {\n            // wait two seconds to make sure this performance metric has been recorded\n            setTimeout(function () {\n                if (performance && performance.timing) {\n                    var loadEventTime = ((performance.timing.loadEventEnd - performance.timing.navigationStart)/1000).toFixed(2);\n                    ua('set', 'dimension73', loadEventTime);\n                    ga('set', 'dimension73', loadEventTime);\n                }\n            }, 2000);\n            window.removeEventListener('load', ProfileLoadEvent);\n        });\n    "
+            },
+            "scripts.ui.init": {
+              "type": "script",
+              "content": "window.UI_INIT_AT = Date.now()"
+            },
+            "scripts.clientProfiler": {
+              "type": "script",
+              "props": {
+                "src": "https://www.zillowstatic.com/s3/pfs/clientProfiler-5c9b4277196976d48c51.js"
+              }
+            },
+            "scripts.pubnubClient": {
+              "type": "script",
+              "props": {
+                "src": "https://cdn.pubnub.com/sdk/javascript/pubnub.7.5.0.min.js",
+                "defer": true
+              }
+            },
+            "link.dns-prefetch.google-fonts": {
+              "type": "link",
+              "props": {
+                "rel": "dns-prefetch",
+                "href": "//fonts.googleapis.com"
+              }
+            },
+            "meta.charset": {
+              "type": "meta",
+              "props": {
+                "charSet": "utf-8"
+              }
+            },
+            "meta.format-detection.telephone": {
+              "type": "meta",
+              "props": {
+                "name": "format-detection",
+                "content": "telephone=no"
+              }
+            },
+            "meta.http-equiv": {
+              "type": "meta",
+              "props": {
+                "httpEquiv": "x-dns-prefetch-control",
+                "content": "on"
+              }
+            },
+            "meta.referrer": {
+              "type": "meta",
+              "props": {
+                "name": "referrer",
+                "content": "always"
+              }
+            },
+            "meta.viewport": {
+              "type": "meta",
+              "props": {
+                "name": "viewport",
+                "content": "width=device-width, height=device-height, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0"
+              }
+            },
+            "meta.icon": {
+              "type": "meta",
+              "props": {
+                "rel": "icon",
+                "type": "image/png",
+                "href": "/apple-touch-icon.png"
+              }
+            },
+            "meta.ms.tileColor": {
+              "type": "meta",
+              "props": {
+                "name": "msapplication-TileColor",
+                "content": "#3366b8"
+              }
+            },
+            "meta.ms.tileImage": {
+              "type": "meta",
+              "props": {
+                "name": "msapplication-TileImage",
+                "content": "https://www.zillowstatic.com/static/images/logos/zillow-logo-win8-tile.png"
+              }
+            },
+            "meta.ms.application-config": {
+              "type": "meta",
+              "props": {
+                "name": "msapplication-config",
+                "content": "none"
+              }
+            },
+            "meta.apple.status-bar-style": {
+              "type": "meta",
+              "props": {
+                "name": "apple-mobile-web-app-status-bar-style",
+                "content": "black-translucent"
+              }
+            },
+            "meta.apple.touch-icon": {
+              "type": "link",
+              "props": {
+                "rel": "apple-touch-icon",
+                "href": "/apple-touch-icon.png"
+              }
+            },
+            "meta.fb.app-id": {
+              "type": "meta",
+              "props": {
+                "property": "fb:app_id",
+                "content": "172285552816089"
+              }
+            },
+            "meta.google.translate": {
+              "type": "meta",
+              "props": {
+                "name": "google-translate-customization",
+                "content": "691f1bfccade71b5-c065751219a379dd-g64cedb67f5ea020a-a"
+              }
+            },
+            "meta.google.signin.client-id": {
+              "type": "meta",
+              "props": {
+                "name": "google-signin-clientid",
+                "content": "238648973530.apps.googleusercontent.com"
+              }
+            },
+            "meta.google.signin.scope": {
+              "type": "meta",
+              "props": {
+                "name": "google-signin-scope",
+                "content": "openid profile email"
+              }
+            },
+            "meta.google.signin.cookie-policy": {
+              "type": "meta",
+              "props": {
+                "name": "google-signin-cookiepolicy",
+                "content": "single_host_origin"
+              }
+            },
+            "meta.og.site-name": {
+              "type": "meta",
+              "props": {
+                "property": "og:site_name",
+                "content": "Zillow"
+              }
+            },
+            "scripts.zganalytics.steal.dimensions": {
+              "type": "script",
+              "content": "(function() {\n            if (typeof ga===undefined||!Array.isArray(ga.q)){return}\n            var gaSetCalls=[].concat(ga.q).filter(function(args){return args && args[0]==='set'});\n            var dims = {};\n            gaSetCalls.forEach(function(cmdCall) {\n                var arg1=cmdCall[1], arg2=cmdCall[2];\n                if (typeof arg1==='string') {\n                    dims[arg1] = arg2;\n                } else if (typeof arg1==='object' && arg1!==null) {\n                    Object.getOwnPropertyNames(arg1).forEach(function(k) {dims[k] = arg1[k]});\n                }\n            });\n            if (typeof zanalytics!=='undefined' && typeof zanalytics.setdim==='function') {zanalytics.setdim(dims)}\n        })();"
+            }
+          }
+        },
+        "footer": {
+          "markup": "<style static-data-ssr-styled-pfs=\"true\" static-data-ssr-styled-version=\"5.3.11\">.bNenTk{display:inline-block;vertical-align:top;stroke:currentColor;fill:currentColor;height:1em;width:1em;height:32px;width:32px;}/*!sc*/\ndata-styled-pfs.g2[id=\"Icon-c11n-8-112-0__sc-13llmml-0\"]{content:\"bNenTk,\"}/*!sc*/\n.ezPwpO{color:#535364;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-transform:none;font-family:\"Inter\",\"Adjusted Arial\",Tahoma,Geneva,sans-serif;font-weight:400;font-size:10px;line-height:16px;margin:0;}/*!sc*/\n.ezPwpO > .Icon-c11n-8-112-0__sc-13llmml-0{margin-top:3px;}/*!sc*/\n.ezPwpO strong,.ezPwpO b{font-weight:700;}/*!sc*/\n.ezPwpO em,.ezPwpO i{font-style:italic;}/*!sc*/\ndata-styled-pfs.g3[id=\"Text-c11n-8-112-0__sc-aiai24-0\"]{content:\"ezPwpO,\"}/*!sc*/\n.ivHafp{cursor:pointer;font-family:inherit;font-size:inherit;font-weight:inherit;line-height:inherit;-webkit-text-decoration:underline;text-decoration:underline;outline:none;box-shadow:none;}/*!sc*/\n.ivHafp:focus-visible{box-shadow:0 0 2px 3px #BFDFFF,0 0 2px 4px #0041D9;}/*!sc*/\n@supports not selector(:focus-visible){.ivHafp:focus{box-shadow:0 0 2px 3px #BFDFFF,0 0 2px 4px #0041D9;}}/*!sc*/\n.ivHafp{color:#0041D9;}/*!sc*/\n.ivHafp:focus{color:#0033AB;}/*!sc*/\n.ivHafp:visited{color:#6000B6;}/*!sc*/\n@media (hover:hover) and (pointer:fine){.ivHafp:not(:active):hover:not(:disabled){color:#001962;}}/*!sc*/\n.ivHafp:active{color:#001962;}/*!sc*/\ndata-styled-pfs.g29[id=\"Anchor-c11n-8-112-0__sc-hn4bge-0\"]{content:\"ivHafp,\"}/*!sc*/\n.lcrsxX{color:#111116;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-transform:none;font-family:\"Inter\",\"Adjusted Arial\",Tahoma,Geneva,sans-serif;font-weight:400;font-size:14px;line-height:24px;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;outline:none;box-shadow:none;border:0;background:none;padding:0;text-align:initial;-webkit-appearance:none;}/*!sc*/\n.lcrsxX > .Icon-c11n-8-112-0__sc-13llmml-0{margin-top:5px;}/*!sc*/\n.lcrsxX{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/\n.lcrsxX:active{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/\n.lcrsxX{color:#111116;}/*!sc*/\n@media (hover:hover) and (pointer:fine){.lcrsxX:not(:active):hover:not(:disabled){-webkit-text-decoration:underline;text-decoration:underline;}}/*!sc*/\n.lcrsxX:focus-visible{box-shadow:0 0 2px 3px #BFDFFF,0 0 2px 4px #0041D9;}/*!sc*/\n@supports not selector(:focus-visible){.lcrsxX:focus{box-shadow:0 0 2px 3px #BFDFFF,0 0 2px 4px #0041D9;}}/*!sc*/\n.lcrsxX:not(:disabled){cursor:pointer;}/*!sc*/\n.iDsNNg{color:#111116;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-transform:none;font-family:\"Inter\",\"Adjusted Arial\",Tahoma,Geneva,sans-serif;font-weight:400;font-size:14px;line-height:24px;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;outline:none;box-shadow:none;border:0;background:none;padding:0;text-align:initial;-webkit-appearance:none;}/*!sc*/\n.iDsNNg > .Icon-c11n-8-112-0__sc-13llmml-0{margin-top:5px;}/*!sc*/\n.iDsNNg{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/\n.iDsNNg:active{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/\n.iDsNNg{color:#0041D9;}/*!sc*/\n@media (hover:hover) and (pointer:fine){.iDsNNg:not(:active):hover:not(:disabled){-webkit-text-decoration:underline;text-decoration:underline;}}/*!sc*/\n.iDsNNg:focus-visible{box-shadow:0 0 2px 3px #BFDFFF,0 0 2px 4px #0041D9;}/*!sc*/\n@supports not selector(:focus-visible){.iDsNNg:focus{box-shadow:0 0 2px 3px #BFDFFF,0 0 2px 4px #0041D9;}}/*!sc*/\n.iDsNNg:not(:disabled){cursor:pointer;}/*!sc*/\ndata-styled-pfs.g30[id=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0\"]{content:\"lcrsxX,iDsNNg,\"}/*!sc*/\n.htreMF{border:0;-webkit-clip:rect(0 0 0 0);clip:rect(0 0 0 0);-webkit-clip-path:rect(0 0 0 0);clip-path:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;}/*!sc*/\ndata-styled-pfs.g80[id=\"VisuallyHidden-c11n-8-112-0__sc-t8tewe-0\"]{content:\"htreMF,\"}/*!sc*/\n.jkEgaY{margin:auto;height:30px;margin-top:18px;}/*!sc*/\n.jkEgaY:focus{box-shadow:none;outline-offset:8px;outline:2px solid #0041D9;}/*!sc*/\ndata-styled-pfs.g276[id=\"pfs__j60ma-0\"]{content:\"jkEgaY,\"}/*!sc*/\n.hiOroW{display:block;margin:auto;}/*!sc*/\ndata-styled-pfs.g277[id=\"pfs__j60ma-1\"]{content:\"hiOroW,\"}/*!sc*/\n.eWHYiW{display:block;margin:8px;font-size:14px;}/*!sc*/\ndata-styled-pfs.g282[id=\"pfs__chkjii-0\"]{content:\"eWHYiW,\"}/*!sc*/\n.cddVWG{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;}/*!sc*/\ndata-styled-pfs.g283[id=\"pfs__chkjii-1\"]{content:\"cddVWG,\"}/*!sc*/\n.gtfXp{margin-top:16px;text-align:center;}/*!sc*/\n@media (max-width:480px){.gtfXp{text-align:left;margin-left:24px;}}/*!sc*/\ndata-styled-pfs.g292[id=\"pfs__sc-16y5ofh-0\"]{content:\"gtfXp,\"}/*!sc*/\n.dLUIkV{color:black;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;}/*!sc*/\n.dLUIkV:focus{box-shadow:none;outline:auto;}/*!sc*/\n.dLUIkV:visited,.dLUIkV:hover{color:#0033AB;}/*!sc*/\ndata-styled-pfs.g299[id=\"pfs__x86ldc-0\"]{content:\"dLUIkV,\"}/*!sc*/\n.fWhoHA{background:white;max-width:1280px;margin:auto;display:block;box-sizing:border-box;font-family:\"Inter\",\"Adjusted Arial\",Tahoma,Geneva,sans-serif;}/*!sc*/\ndata-styled-pfs.g300[id=\"pfs__sc-16g5ked-0\"]{content:\"fWhoHA,\"}/*!sc*/\n#mobile-hdp .pfs__sc-16g5ked-0{padding-bottom:0;}/*!sc*/\ndata-styled-pfs.g301[id=\"sc-global-gFrTFR1\"]{content:\"sc-global-gFrTFR1,\"}/*!sc*/\n.gKiWnX{list-style:none;margin-inline-start:0;margin-inline-end:0;padding-inline-start:0;padding-inline-end:0;margin-block-start:0;margin-block-end:0;list-style:none;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;margin-bottom:24px;}/*!sc*/\n.gKiWnX li{display:inline-block;vertical-align:middle;}/*!sc*/\ndata-styled-pfs.g302[id=\"pfs__sc-5sfc2u-0\"]{content:\"gKiWnX,\"}/*!sc*/\n.QHehi{margin:auto;padding:24px 0;color:#666;text-align:center;}/*!sc*/\n.QHehi li{margin-left:8px;margin-right:0px;font-style:italic;}/*!sc*/\n.QHehi li:last-child{margin-left:8px;}/*!sc*/\n.QHehi li:first-child{display:block;}/*!sc*/\n@media (min-width:481px){.QHehi li:first-child{display:inline-block;}}/*!sc*/\ndata-styled-pfs.g304[id=\"pfs__wsq7ni-0\"]{content:\"QHehi,\"}/*!sc*/\n.CrqVZ{max-width:720px;margin:auto;margin-bottom:24px;}/*!sc*/\n@media (max-width:480px){.CrqVZ{margin:0 24px 16px;}}/*!sc*/\ndata-styled-pfs.g305[id=\"pfs__sc-1sj5qgb-0\"]{content:\"CrqVZ,\"}/*!sc*/\n.cWXOkA{list-style:none;margin-inline-start:0;margin-inline-end:0;padding-inline-start:0;padding-inline-end:0;margin-block-start:0;margin-block-end:0;list-style:none;font-size:12px;}/*!sc*/\n.cWXOkA li{display:inline-block;vertical-align:middle;margin-bottom:24px;}/*!sc*/\n.cWXOkA li > span{display:inline-block;vertical-align:middle;margin-left:4px;margin-right:4px;}/*!sc*/\ndata-styled-pfs.g306[id=\"pfs__sc-1a1yrk2-0\"]{content:\"cWXOkA,\"}/*!sc*/\n.cqzKrS{list-style:none;margin-inline-start:0;margin-inline-end:0;padding-inline-start:0;padding-inline-end:0;margin-block-start:0;margin-block-end:0;font-size:13px;font-weight:600;margin:0;padding:0;text-align:center;-webkit-columns:2;columns:2;}/*!sc*/\n.cqzKrS a{text-transform:none;color:#2a2a37;display:block;-webkit-text-decoration-line:none;text-decoration-line:none;font-weight:normal;}/*!sc*/\n.cqzKrS li{margin:0 24px;display:block;text-align:left;}/*!sc*/\ndata-styled-pfs.g307[id=\"pfs__sc-1kahb5i-0\"]{content:\"cqzKrS,\"}/*!sc*/\n.brand-links{padding-left:0;}/*!sc*/\n@media (min-width:481px){body:not(.responsive-search-page) .pfs__sc-1kahb5i-0{-webkit-columns:1;columns:1;line-height:30px;}body:not(.responsive-search-page) .pfs__sc-1kahb5i-0 li{margin:0 10px;display:inline-block;padding-top:0;text-align:center;}body:not(.responsive-search-page) .pfs__sc-1kahb5i-0.brand-links{display:inline;}@media (min-width:1024px){body:not(.responsive-search-page) .pfs__sc-1kahb5i-0.brand-links{display:block;}}}/*!sc*/\ndata-styled-pfs.g308[id=\"sc-global-kpEhCd1\"]{content:\"sc-global-kpEhCd1,\"}/*!sc*/\n.hLkQch{margin:auto;padding:24px 0;height:auto;overflow:visible;border-top:1px solid #CDCDD3;border-bottom:1px solid #CDCDD3;position:relative;display:block;text-align:center;}/*!sc*/\ndata-styled-pfs.g309[id=\"pfs__sc-1i1gn38-0\"]{content:\"hLkQch,\"}/*!sc*/\n.flQjlK{display:block;}/*!sc*/\n.flQjlK li{padding-top:10px;}/*!sc*/\ndata-styled-pfs.g310[id=\"pfs__cacbnh-0\"]{content:\"flQjlK,\"}/*!sc*/\n.gGqeMS{color:#1877F2;line-height:45px;}/*!sc*/\n.hDUcNU{line-height:45px;}/*!sc*/\n.cFSSpv{color:#0041D9;line-height:45px;}/*!sc*/\ndata-styled-pfs.g311[id=\"pfs__tgmoyx-0\"]{content:\"gGqeMS,hDUcNU,cFSSpv,\"}/*!sc*/\n.HDXeu > span{margin:0;}/*!sc*/\n.HDXeu a{margin-right:0;margin-left:8px;}/*!sc*/\ndata-styled-pfs.g312[id=\"pfs__sc-1l86zl0-0\"]{content:\"HDXeu,\"}/*!sc*/\n</style><div><footer class=\"pfs__sc-16g5ked-0 fWhoHA site-footer\"><div class=\"pfs__cacbnh-0 flQjlK\"><nav class=\"pfs__sc-1i1gn38-0 hLkQch\"><ul data-za-category=\"Navigation\" data-za-action=\"Footer\" class=\"pfs__sc-1kahb5i-0 cqzKrS\"><li><a href=\"/z/corp/about/\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"About\">About</a></li><li><a href=\"/zestimate/\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"Zestimates\">Zestimates</a></li><li><a href=\"/news/\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"News\">News</a></li><li><a href=\"/research/\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"Research\">Research</a></li><li><a href=\"/careers/\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"Careers\">Careers</a></li><li><a href=\"/careers/global-applicant-privacy-notice/\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"Applicant Privacy Notice\">Applicant Privacy Notice</a></li><li><a href=\"https://www.zillow.help/\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"Help\">Help</a></li><li><a href=\"/partners/advertise/\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"Advertise\">Advertise</a></li><li><a href=\"https://www.zillow.com/rentals-network/fair-housing-guide/\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"Fair Housing Guide\">Fair Housing Guide</a></li><li><a href=\"https://www.zillow.com/news/advocacy/\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"Advocacy\">Advocacy</a></li><li><a href=\"https://www.zillow.com/corporate/terms-of-use/\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"Terms of use\">Terms of use</a></li><li><a href=\"https://www.zillow.com/corporate/zg-privacy-notice/\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"Privacy Notice\">Privacy Notice</a></li><li><a href=\"https://www.zillowgroup.com/zg-privacy-policy/#third-party\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"Ad Choices\">Ad Choices</a></li><li><a href=\"javascript:;\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX cookie-preference\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"Cookie Preference\">Cookie Preference</a></li><li><a href=\"/learn/\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"Learn\">Learn</a></li><li><a href=\"/tech/\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"AI\">AI</a></li><li><a href=\"/buy/app-download/\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"Mobile Apps\">Mobile Apps</a></li></ul><ul class=\"pfs__sc-1kahb5i-0 cqzKrS brand-links\" data-za-category=\"Navigation\" data-za-action=\"Footer\"><li><a href=\"https://www.trulia.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"Trulia\">Trulia</a></li><li><a href=\"https://streeteasy.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"StreetEasy\">StreetEasy</a></li><li><a href=\"https://hotpads.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"HotPads\">HotPads</a></li><li><a href=\"https://outeast.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 lcrsxX\" tabindex=\"0\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"Out East\">Out East</a></li></ul><div class=\"pfs__sc-16y5ofh-0 gtfXp\"><a id=\"doNotSell\" href=\"https://privacy.zillowgroup.com/cookie\" aria-label=\"Do not sell or share my personal information\" class=\"StyledTextButton-c11n-8-112-0__sc-1nwmfqo-0 iDsNNg\">Do Not Sell or Share My Personal Information<span aria-hidden=\"true\"> \u2192</span></a></div></nav></div><div class=\"pfs__wsq7ni-0 QHehi\"><div class=\"pfs__sc-1sj5qgb-0 CrqVZ\"><p class=\"Text-c11n-8-112-0__sc-aiai24-0 ezPwpO\">Zillow Group is committed to ensuring digital accessibility for individuals with disabilities. We are continuously working to improve the accessibility of our web experience for everyone, and we welcome feedback and accommodation requests. If you wish to report an issue or seek an accommodation, please <a href=\"https://www.zillow.help/contact-us\" rel=\"nofollow\" class=\"Anchor-c11n-8-112-0__sc-hn4bge-0 ivHafp\">let us know</a>.</p></div><div class=\"pfs__sc-1sj5qgb-0 CrqVZ\"><p class=\"Text-c11n-8-112-0__sc-aiai24-0 ezPwpO\"><a href=\"https://www.zillow.com/affiliated-business-arrangement-disclosure/\" rel=\"nofollow\" class=\"Anchor-c11n-8-112-0__sc-hn4bge-0 ivHafp\">Affiliated Business Arrangement Disclosure</a><br/>Zillow, Inc. holds real estate brokerage <a href=\"/c/info/real-estate-licenses/\" class=\"Anchor-c11n-8-112-0__sc-hn4bge-0 ivHafp\">licenses</a> in multiple states. Zillow (Canada), Inc. holds real estate brokerage <a href=\"/c/info/real-estate-licenses/\" class=\"Anchor-c11n-8-112-0__sc-hn4bge-0 ivHafp\">licenses</a> in multiple provinces.<br/>All mortgage lending products and information provided by Zillow Home Loans, LLC, NMLS #10287. <a href=\"https://www.nmlsconsumeraccess.org\" class=\"Anchor-c11n-8-112-0__sc-hn4bge-0 ivHafp\">NMLS Consumer Access</a><br/>Licensed Mortgage Banker, N.Y.S. Department of Financial Services<br/>2600 Michelson Drive, Suite 1201, Irvine, CA 92612 | Equal Housing Lender | <a href=\"https://www.zillow.com/homeloans/licensing/\" class=\"Anchor-c11n-8-112-0__sc-hn4bge-0 ivHafp\">Licensing Information</a><br/><a href=\"https://www.zillowstatic.com/s3/pfs/static/SOP_NYS_10-4-23.pdf\" rel=\"nofollow\" class=\"Anchor-c11n-8-112-0__sc-hn4bge-0 ivHafp\">\u00a7 442-H New York Standard Operating Procedures</a><br/><a href=\"https://www.zillowstatic.com/s3/pfs/static/fairhousingnotice_10-4-23.pdf\" rel=\"nofollow\" class=\"Anchor-c11n-8-112-0__sc-hn4bge-0 ivHafp\">\u00a7 New York Fair Housing Notice</a><br/>TREC: <a href=\"https://delivery.digitallibrary.zillowgroup.com/public/TRECNO.IABS1-1INFORMATIONABOUTBROKERAGESERVICES_pdf_Original.pdf\" rel=\"nofollow\" class=\"Anchor-c11n-8-112-0__sc-hn4bge-0 ivHafp\">Information about brokerage services</a>, <a href=\"https://www.trec.texas.gov/forms/consumer-protection-notice\" rel=\"nofollow\" class=\"Anchor-c11n-8-112-0__sc-hn4bge-0 ivHafp\">Consumer protection notice</a><br/>California DRE #1522444<a href=\"https://www.zillow.com/c/info/contact-us/\" class=\"Anchor-c11n-8-112-0__sc-hn4bge-0 pfs__chkjii-0 ivHafp eWHYiW\">Contact Zillow, Inc. Brokerage</a></p></div><div class=\"pfs__sc-1sj5qgb-0 CrqVZ\"><p class=\"Text-c11n-8-112-0__sc-aiai24-0 ezPwpO\">For listings in Canada, the trademarks REALTOR\u00ae, REALTORS\u00ae, and the REALTOR\u00ae logo are controlled by The Canadian Real Estate Association (CREA) and identify real estate professionals who are members of CREA. The trademarks MLS\u00ae, Multiple Listing Service\u00ae and the associated logos are owned by CREA and identify the quality of services provided by real estate professionals who are members of CREA. Used under license.</p></div><ul class=\"pfs__sc-5sfc2u-0 gKiWnX\"><li><a href=\"https://www.zillow.com/buy/app-download/?itc=zw_zw_zw_zillow-footer_btn_ios-download\" aria-label=\"Download on the App Store\"><img src=\"https://www.zillowstatic.com/s3/pfs/static/app-store-badge.svg\" type=\"image/svg+xml\" alt=\"App store logo\" focusable=\"false\" height=\"32\" width=\"96\" class=\"\" title=\"Download on the App Store\" loading=\"lazy\" decoding=\"async\"/></a></li><li><a href=\"https://www.zillow.com/buy/app-download/?itc=zw_zw_zw_zillow-footer_btn_android-download\" aria-label=\"Get it on Google play\"><img src=\"https://www.zillowstatic.com/s3/pfs/static/google-play-badge.svg\" type=\"image/svg+xml\" alt=\"Google play logo\" focusable=\"false\" height=\"32\" width=\"108\" class=\"\" title=\"Get it on Google Play\" loading=\"lazy\" decoding=\"async\"/></a></li></ul><ul class=\"pfs__sc-1a1yrk2-0 cWXOkA\"><li><a href=\"/\" width=\"80\" height=\"18\" data-za-action=\"Zillow logo click\" data-za-category=\"!inherit\" aria-label=\"Zillow.com homepage\" version=\"DEFAULT\" class=\"Anchor-c11n-8-112-0__sc-hn4bge-0 pfs__j60ma-0 ivHafp jkEgaY znav-topnav-logo\"><img src=\"https://www.zillowstatic.com/s3/pfs/static/z-logo-default-visual-refresh.svg\" type=\"image/svg+xml\" alt=\"Zillow logo\" focusable=\"false\" height=\"18\" width=\"80\" class=\"pfs__j60ma-1 hiOroW\" loading=\"eager\" decoding=\"auto\"/></a></li><li><div id=\"socialLinks\" data-za-category=\"Homepage\" data-za-action=\"Social Icon\" class=\"pfs__sc-1l86zl0-0 HDXeu\"><span>Follow us:</span><a href=\"https://www.facebook.com/Zillow\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"Anchor-c11n-8-112-0__sc-hn4bge-0 pfs__chkjii-1 ivHafp cddVWG\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"Facebook\" aria-label=\"Visit us on Facebook\"><span aria-hidden=\"true\" class=\"pfs__tgmoyx-0 gGqeMS\"><svg viewBox=\"0 0 32 32\" aria-hidden=\"true\" focusable=\"false\" role=\"img\" class=\"Icon-c11n-8-112-0__sc-13llmml-0 bNenTk\"><path stroke=\"none\" d=\"M30,16.08A14,14,0,1,0,13.81,30V20H10.26V16h3.55V13c0-3.53,2.09-5.48,5.29-5.48a20.46,20.46,0,0,1,3.13.28v3.46H20.47A2,2,0,0,0,18.2,13a1.7,1.7,0,0,0,0,.45V16h3.88l-.62,4H18.19V30A14.06,14.06,0,0,0,30,16.08Z\"></path></svg></span><span class=\"VisuallyHidden-c11n-8-112-0__sc-t8tewe-0 htreMF\">Visit us on facebook</span></a><a href=\"https://www.instagram.com/zillow/\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"Anchor-c11n-8-112-0__sc-hn4bge-0 pfs__chkjii-1 ivHafp cddVWG\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"Instagram\" aria-label=\"Visit us on Instagram\"><span aria-hidden=\"true\" class=\"pfs__tgmoyx-0 hDUcNU\"><svg viewBox=\"0 0 32 32\" aria-hidden=\"true\" focusable=\"false\" role=\"img\" class=\"Icon-c11n-8-112-0__sc-13llmml-0 bNenTk\"><g stroke=\"none\"><path d=\"M21,2H11a9,9,0,0,0-9,9V21a9,9,0,0,0,9,9H21a9,9,0,0,0,9-9V11A9,9,0,0,0,21,2Zm7,19a7,7,0,0,1-7,7H11a7,7,0,0,1-7-7V11a7,7,0,0,1,7-7H21a7,7,0,0,1,7,7Z\"/><path d=\"M16,9a7,7,0,1,0,7,7A7,7,0,0,0,16,9Zm0,12a5,5,0,1,1,5-5A5,5,0,0,1,16,21Z\"/><circle cx=\"23.5\" cy=\"8.5\" r=\"1.5\"/></g></svg></span><span class=\"VisuallyHidden-c11n-8-112-0__sc-t8tewe-0 htreMF\">Visit us on instagram</span></a><a href=\"https://www.tiktok.com/@zillow\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" class=\"Anchor-c11n-8-112-0__sc-hn4bge-0 pfs__chkjii-1 ivHafp cddVWG\" data-za-category=\"!inherit\" data-za-action=\"!inherit\" data-za-label=\"TikTok\" aria-label=\"Visit us on TikTok\"><span aria-hidden=\"true\" class=\"pfs__tgmoyx-0 cFSSpv\"><svg viewBox=\"0 0 32 32\" aria-hidden=\"true\" focusable=\"false\" role=\"img\" class=\"Icon-c11n-8-112-0__sc-13llmml-0 bNenTk\"><path d=\"M27.988 9.01a6.774 6.774 0 0 1-4.16-1.424 7.095 7.095 0 0 1-2.616-4.263A7.263 7.263 0 0 1 21.079 2h-4.46v12.492l-.006 6.843c0 1.83-1.162 3.38-2.773 3.926a3.961 3.961 0 0 1-3.345-.377 4.158 4.158 0 0 1-1.973-3.487c-.034-2.313 1.79-4.199 4.045-4.199.445 0 .873.075 1.273.21v-4.641a8.565 8.565 0 0 0-1.286-.098c-2.468 0-4.777 1.052-6.427 2.947a8.687 8.687 0 0 0-2.11 5.173c-.152 2.516.746 4.908 2.489 6.673A8.423 8.423 0 0 0 12.555 30a8.448 8.448 0 0 0 6.048-2.538 8.664 8.664 0 0 0 2.505-6.092l-.024-10.218a11.2 11.2 0 0 0 2.506 1.498 11.03 11.03 0 0 0 4.41.911V9.01h-.012z\" stroke=\"none\"></path></svg></span><span class=\"VisuallyHidden-c11n-8-112-0__sc-t8tewe-0 htreMF\">Visit us on tiktok</span></a></div></li><li><span class=\"VisuallyHidden-c11n-8-112-0__sc-t8tewe-0 htreMF\">\u00a9 2006 to 2026 Zillow</span><span aria-hidden=\"true\">\u00a9 2006-2026 Zillow</span><span><a href=\"https://www.hud.gov/program_offices/fair_housing_equal_opp\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" id=\"eho-link\" class=\"Anchor-c11n-8-112-0__sc-hn4bge-0 pfs__x86ldc-0 ivHafp dLUIkV\"><svg viewBox=\"0 0 271.2 290.1\" aria-hidden=\"true\" focusable=\"false\" role=\"img\" class=\"Icon-c11n-8-112-0__sc-13llmml-0 bNenTk\"><g stroke=\"none\"><path d=\"M0 126.8V90.3l10.4-7L30 70l19.2-12.7 19.5-13.2 19.1-12.8 18.8-12.6L133.8.5a3.4 3.4 0 0 1 3.6 0l5.8 3.9 13.7 9.3q13.2 9 26.5 17.8l13.8 9.3 27.4 18.4 26.2 17.6 18.4 12.4a17.7 17.7 0 0 1 2 1.8v36h-17.6v107.8H252l-147-.3H19.8a16.2 16.2 0 0 1-2-.3V126.8zm224.4 71v-.7-89.8a1.8 1.8 0 0 0-.8-1.3L198 88.8l-41-27.5L136 47.5a1.2 1.2 0 0 0-1.6 0l-7.8 5.3-18.5 12.4L91 76.8 73.4 88.6l-25.2 16.9a1.9 1.9 0 0 0-1 1.8v90.5z\"/><path d=\"M89.1 181v-38.6h93.4V181zM88.9 97.8h93.3v38.5H89z\"/><path d=\"M21.4 261v-20.3h14.7v2.4h-12v6.2h11.3v2.4H24v7h12.5v2.3zM55.7 258.9a16.5 16.5 0 0 0 3.5 1.8l-.8 2A15.9 15.9 0 0 1 54 260a10 10 0 0 1-5 1.3 9.6 9.6 0 0 1-5-1.4 8.9 8.9 0 0 1-3.4-3.7 12 12 0 0 1-1.3-5.4 12.2 12.2 0 0 1 1.3-5.5 8.6 8.6 0 0 1 3.4-3.8 10 10 0 0 1 5-1.3 9.8 9.8 0 0 1 5.1 1.4 8.7 8.7 0 0 1 3.5 3.7 12.1 12.1 0 0 1 1.2 5.5 12.6 12.6 0 0 1-.8 4.5 9.5 9.5 0 0 1-2.3 3.5zm-6-3.5a10 10 0 0 1 4 2q2.3-2.2 2.3-6.5a10.3 10.3 0 0 0-.8-4.4 6.5 6.5 0 0 0-2.5-2.8 7 7 0 0 0-8.6 1q-2 2-2 6.2a8.6 8.6 0 0 0 2 6 6.5 6.5 0 0 0 5 2.2 6.9 6.9 0 0 0 2.7-.6 8.7 8.7 0 0 0-2.7-1.1zM75.7 240.7h2.7v11.7a14 14 0 0 1-.7 5 6 6 0 0 1-2.5 2.8 8.9 8.9 0 0 1-4.7 1.2 9.8 9.8 0 0 1-4.7-1 5.6 5.6 0 0 1-2.6-2.9 13.6 13.6 0 0 1-.8-5v-11.8h2.7v11.7a11.4 11.4 0 0 0 .5 4 3.7 3.7 0 0 0 1.7 1.9 5.9 5.9 0 0 0 3 .7q3 0 4.2-1.4t1.2-5.2zM80.7 261l7.8-20.3h2.9l8.3 20.3h-3l-2.4-6.1h-8.5l-2.3 6.1zm5.8-8.3h7l-2.2-5.6q-1-2.6-1.4-4.3a26 26 0 0 1-1.1 4zM101.7 261v-20.3h2.7v18h10v2.3zM124.6 261v-20.3h2.7v8.4h10.5v-8.4h2.7V261h-2.7v-9.6h-10.5v9.6zM144.2 251.1q0-5 2.7-7.9a9.2 9.2 0 0 1 7-2.9 9.7 9.7 0 0 1 5 1.4 8.8 8.8 0 0 1 3.5 3.7 12.2 12.2 0 0 1 1.2 5.5 12 12 0 0 1-1.2 5.5 8.5 8.5 0 0 1-3.6 3.7 10.1 10.1 0 0 1-5 1.3 9.6 9.6 0 0 1-5-1.4 9 9 0 0 1-3.5-3.8 11.5 11.5 0 0 1-1.1-5zm2.7 0a8.1 8.1 0 0 0 2 5.9 6.9 6.9 0 0 0 10 0 8.6 8.6 0 0 0 2-6.1 10.4 10.4 0 0 0-.9-4.4 6.4 6.4 0 0 0-2.5-2.8 6.7 6.7 0 0 0-3.6-1 6.9 6.9 0 0 0-4.9 2q-2 1.9-2 6.5zM180.4 240.7h2.7v11.7a14 14 0 0 1-.7 5 6 6 0 0 1-2.5 2.8 8.9 8.9 0 0 1-4.7 1.2 9.8 9.8 0 0 1-4.7-1 5.6 5.6 0 0 1-2.6-2.9 13.6 13.6 0 0 1-.8-5v-11.8h2.7v11.7a11.4 11.4 0 0 0 .5 4 3.7 3.7 0 0 0 1.7 1.9 5.9 5.9 0 0 0 3 .7q2.9 0 4.2-1.4t1.2-5.2zM186.7 254.5l2.5-.2a5.6 5.6 0 0 0 .9 2.5 4.6 4.6 0 0 0 2 1.6 7.7 7.7 0 0 0 3.1.6 7.5 7.5 0 0 0 2.7-.5 3.8 3.8 0 0 0 1.8-1.2 3 3 0 0 0 .6-1.8 2.6 2.6 0 0 0-.6-1.7 4.1 4.1 0 0 0-1.8-1.2 35.7 35.7 0 0 0-3.6-1 18.4 18.4 0 0 1-4-1.2 5.5 5.5 0 0 1-2.1-2 4.6 4.6 0 0 1-.7-2.4 5.2 5.2 0 0 1 .8-3 5.4 5.4 0 0 1 2.6-2 9.7 9.7 0 0 1 3.7-.6 10.2 10.2 0 0 1 4 .7 5.8 5.8 0 0 1 2.7 2.1 6.2 6.2 0 0 1 1 3.2l-2.6.2a4.2 4.2 0 0 0-1.4-2.9 5.5 5.5 0 0 0-3.6-1 5.7 5.7 0 0 0-3.5 1 2.7 2.7 0 0 0-1.2 2 2.3 2.3 0 0 0 .8 1.9q.8.7 4 1.4a26.7 26.7 0 0 1 4.6 1.3 6.2 6.2 0 0 1 2.6 2.1 5 5 0 0 1 .9 2.9 5.5 5.5 0 0 1-1 3 6.1 6.1 0 0 1-2.6 2.3 9.3 9.3 0 0 1-4 .8 11.7 11.7 0 0 1-4.6-.8 6.5 6.5 0 0 1-3-2.4 6.9 6.9 0 0 1-1-3.7zM207 261v-20.3h2.7V261zM214.4 261v-20.3h2.8l10.6 16v-16h2.6V261h-2.7L217 245v16zM244.4 253v-2.3h8.7v7.5a15.2 15.2 0 0 1-4.1 2.4 12.1 12.1 0 0 1-4.4.8 11.6 11.6 0 0 1-5.4-1.3 8.5 8.5 0 0 1-3.7-3.7 11.7 11.7 0 0 1-1.2-5.4 12.6 12.6 0 0 1 1.2-5.6 8.3 8.3 0 0 1 3.6-3.8 11.2 11.2 0 0 1 5.3-1.2 10.6 10.6 0 0 1 4 .7 6.6 6.6 0 0 1 2.8 2 8.8 8.8 0 0 1 1.6 3.3l-2.5.7a7.5 7.5 0 0 0-1.1-2.5 4.7 4.7 0 0 0-2-1.4 7.1 7.1 0 0 0-2.8-.5 8.3 8.3 0 0 0-3.1.5 6 6 0 0 0-2.2 1.5 7 7 0 0 0-1.3 2 10.6 10.6 0 0 0-.8 4.1 10 10 0 0 0 1 4.5 6 6 0 0 0 2.7 2.8 8.4 8.4 0 0 0 3.8.9 9 9 0 0 0 3.4-.7 8.8 8.8 0 0 0 2.5-1.5v-3.7z\"/><path d=\"M18.8 278.1q0-5.9 3.2-9.2a10.8 10.8 0 0 1 8.2-3.4 11.4 11.4 0 0 1 5.9 1.6 10.3 10.3 0 0 1 4 4.4 14.2 14.2 0 0 1 1.4 6.3 14 14 0 0 1-1.5 6.5 10 10 0 0 1-4 4.3 11.8 11.8 0 0 1-5.9 1.5 11.2 11.2 0 0 1-6-1.6 10.4 10.4 0 0 1-4-4.4 13.4 13.4 0 0 1-1.3-6zm3.2 0a9.5 9.5 0 0 0 2.3 6.8 7.6 7.6 0 0 0 5.8 2.5A7.6 7.6 0 0 0 36 285q2.3-2.5 2.3-7a12.2 12.2 0 0 0-1-5.1 7.5 7.5 0 0 0-2.9-3.4 7.8 7.8 0 0 0-4.2-1.2 8 8 0 0 0-5.8 2.3q-2.4 2.3-2.4 7.7zM45.6 289.7v-23.8h9a21.6 21.6 0 0 1 3.5.3 7.2 7.2 0 0 1 3 1 5.8 5.8 0 0 1 1.9 2.4 7.7 7.7 0 0 1-1.2 8.3q-2 2.1-7 2.1h-6.1v9.7zm3.1-12.5h6.1q3.1 0 4.4-1.1a4 4 0 0 0 1.3-3.2 4.3 4.3 0 0 0-.8-2.6 3.5 3.5 0 0 0-2-1.4 13.4 13.4 0 0 0-3-.2h-6zM67.7 289.7v-23.8h9a21.6 21.6 0 0 1 3.6.3 7.2 7.2 0 0 1 3 1 5.8 5.8 0 0 1 1.8 2.4 7.7 7.7 0 0 1-1.2 8.3q-2 2.1-7 2.1h-6v9.7zm3.1-12.5H77q3 0 4.3-1.1a4 4 0 0 0 1.3-3.2 4.3 4.3 0 0 0-.8-2.6 3.5 3.5 0 0 0-2-1.4 13.4 13.4 0 0 0-2.9-.2h-6zM88.9 278.1q0-5.9 3.2-9.2a10.8 10.8 0 0 1 8.2-3.4 11.4 11.4 0 0 1 5.9 1.6 10.3 10.3 0 0 1 4 4.4 14.2 14.2 0 0 1 1.4 6.3 14 14 0 0 1-1.4 6.5 10 10 0 0 1-4.2 4.3 11.8 11.8 0 0 1-5.7 1.5 11.2 11.2 0 0 1-6-1.6 10.4 10.4 0 0 1-4-4.4 13.4 13.4 0 0 1-1.4-6zm3.2 0a9.5 9.5 0 0 0 2.3 6.8 8 8 0 0 0 11.7 0q2.3-2.5 2.3-7a12.2 12.2 0 0 0-1-5.1 7.5 7.5 0 0 0-2.9-3.4 7.8 7.8 0 0 0-4.2-1.2 8 8 0 0 0-5.8 2.3q-2.4 2.3-2.4 7.7zM115.7 289.7v-23.8h10.6a14 14 0 0 1 4.8.7 5.3 5.3 0 0 1 2.6 2.2 6.7 6.7 0 0 1 1 3.6 6 6 0 0 1-1.6 4.3 8.3 8.3 0 0 1-5 2.2 8.1 8.1 0 0 1 1.8 1.2 16.4 16.4 0 0 1 2.6 3.1l4.2 6.5h-4l-3.1-5-2.3-3.2a7.1 7.1 0 0 0-1.6-1.6 4.7 4.7 0 0 0-1.4-.6 9.4 9.4 0 0 0-1.8-.2H119v10.6zm3.2-13.3h6.7a10.1 10.1 0 0 0 3.4-.4 3.6 3.6 0 0 0 1.8-1.5 3.9 3.9 0 0 0 .7-2 3.5 3.5 0 0 0-1.2-2.9 5.7 5.7 0 0 0-4-1H119zM145 289.7v-21h-7.7V266H156v2.8h-7.9v21zM175 266h3v13.7a16.2 16.2 0 0 1-.7 5.7 7 7 0 0 1-3 3.4 10.4 10.4 0 0 1-5.5 1.3 11.4 11.4 0 0 1-5.5-1.2 6.6 6.6 0 0 1-3-3.3 15.9 15.9 0 0 1-1-6V266h3.2v13.7a13.4 13.4 0 0 0 .6 4.6 4.4 4.4 0 0 0 2 2.3 6.9 6.9 0 0 0 3.4.8q3.5 0 5-1.6t1.4-6zM183.3 289.7v-23.8h3.2l12.5 18.7v-18.7h3v23.8h-3.2L186.3 271v18.7zM207.8 289.7v-23.8h3.2v23.8zM222.6 289.7v-21h-7.9V266h18.9v2.8h-7.9v21zM243.5 289.7v-10l-9.2-13.8h3.8l4.7 7.2 2.4 4 2.6-4.2 4.6-7h3.7l-9.5 13.7v10.1z\"/></g></svg><span class=\"VisuallyHidden-c11n-8-112-0__sc-t8tewe-0 htreMF\">Equal Housing Opportunity</span></a></span></li></ul></div></footer></div>",
+          "js": "https://www.zillowstatic.com/s3/pfs/datagrailBanner-a0d378b68eb95adf7915.js"
+        },
+        "productnav": {
+          "markup": "\n    <div id='pfs-product-nav-wrapper' style=\"display: contents;\"><style static-data-ssr-styled-pfs=\"true\" static-data-ssr-styled-version=\"5.3.11\">.lmxdUt{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}/*!sc*/\n@media (min-width:1024px){.lmxdUt{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}}/*!sc*/\n.kuYyEA{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/\n@media (min-width:481px){.kuYyEA{-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}}/*!sc*/\n@media (min-width:1024px){.kuYyEA{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}}/*!sc*/\ndata-styled-pfs.g1[id=\"Flex-c11n-8-112-0__sc-n94bjd-0\"]{content:\"lmxdUt,kuYyEA,\"}/*!sc*/\n.bIRDRs{display:inline-block;vertical-align:top;stroke:currentColor;fill:currentColor;height:1em;width:1em;height:24px;width:24px;}/*!sc*/\ndata-styled-pfs.g2[id=\"Icon-c11n-8-112-0__sc-13llmml-0\"]{content:\"bIRDRs,\"}/*!sc*/\n.iNkOZY{color:#0041D9;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-transform:none;font-family:\"Inter\",\"Adjusted Arial\",Tahoma,Geneva,sans-serif;font-weight:700;font-size:14px;line-height:24px;margin:0;}/*!sc*/\n.iNkOZY > .Icon-c11n-8-112-0__sc-13llmml-0{margin-top:5px;}/*!sc*/\n.iNkOZY strong,.iNkOZY b{font-weight:700;}/*!sc*/\n.iNkOZY em,.iNkOZY i{font-style:italic;}/*!sc*/\n.dBaEas{color:#111116;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-transform:none;font-family:\"Inter\",\"Adjusted Arial\",Tahoma,Geneva,sans-serif;font-weight:400;font-size:14px;line-height:24px;margin:0;}/*!sc*/\n.dBaEas > .Icon-c11n-8-112-0__sc-13llmml-0{margin-top:5px;}/*!sc*/\n.dBaEas strong,.dBaEas b{font-weight:700;}/*!sc*/\n.dBaEas em,.dBaEas i{font-style:italic;}/*!sc*/\ndata-styled-pfs.g3[id=\"Text-c11n-8-112-0__sc-aiai24-0\"]{content:\"iNkOZY,dBaEas,\"}/*!sc*/\n.hENhWg{background-color:#FFF;border-top:1px solid #CDCDD3;height:100%;overflow-x:auto;display:block;}/*!sc*/\n@media (min-width:1024px){.hENhWg{display:block;border-right:1px solid #CDCDD3;overflow:visible;}}/*!sc*/\n.eOLgso{position:-webkit-sticky;position:sticky;top:0;padding:4px;-webkit-box-pack:space-around;-webkit-justify-content:space-around;-ms-flex-pack:space-around;justify-content:space-around;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/\n@media (min-width:1024px){.eOLgso{-webkit-box-pack:start;-webkit-justify-content:start;-ms-flex-pack:start;justify-content:start;gap:16px;padding:8px;}}/*!sc*/\n.jjvgzd{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/\n.dfCXuA{color:#0041D9;text-align:center;gap:0px;}/*!sc*/\n@media (min-width:481px){.dfCXuA{gap:4px;}}/*!sc*/\n@media (min-width:1024px){.dfCXuA{gap:0px;}}/*!sc*/\n.dfCXuA:hover{color:#0041D9;}/*!sc*/\n.dfCXuA:hover > span{color:#0041D9;}/*!sc*/\n.dfCXuA:hover > :first-child{background-color:#F4F9FF;border-radius:12px;}/*!sc*/\n.juxMbt{padding:8px;background-color:#E2F0FF !important;border-radius:12px;}/*!sc*/\n.ECMYT{font-size:10px;white-space:nowrap;line-height:16px;}/*!sc*/\n.btpmaa{color:#535364;text-align:center;gap:0px;}/*!sc*/\n@media (min-width:481px){.btpmaa{gap:4px;}}/*!sc*/\n@media (min-width:1024px){.btpmaa{gap:0px;}}/*!sc*/\n.btpmaa:hover{color:#0041D9;}/*!sc*/\n.btpmaa:hover > span{color:#0041D9;}/*!sc*/\n.btpmaa:hover > :first-child{background-color:#F4F9FF;border-radius:12px;}/*!sc*/\n.jRHBFY{padding:8px;}/*!sc*/\ndata-styled-pfs.g86[id=\"StyledBox-c11n-8-112-0__sc-ocjv7k-0\"]{content:\"hENhWg,eOLgso,jjvgzd,dfCXuA,juxMbt,ECMYT,btpmaa,jRHBFY,\"}/*!sc*/\n.hFLpMJ{display:inline-block;position:relative;}/*!sc*/\n.hFLpMJ .StyledGleam-c11n-8-112-0__sc-wil507-0{position:absolute;top:calc(-1 * 8px);right:calc(-1 * 8px);}/*!sc*/\ndata-styled-pfs.g158[id=\"StyledGleamWrapper-c11n-8-112-0__sc-m5v26w-0\"]{content:\"hFLpMJ,\"}/*!sc*/\n</style><div class=\"StyledBox-c11n-8-112-0__sc-ocjv7k-0 hENhWg\"><div class=\"Flex-c11n-8-112-0__sc-n94bjd-0 lmxdUt StyledBox-c11n-8-112-0__sc-ocjv7k-0 eOLgso\"><a href=\"/homes\" class=\"StyledBox-c11n-8-112-0__sc-ocjv7k-0 jjvgzd\"><div class=\"Flex-c11n-8-112-0__sc-n94bjd-0 kuYyEA StyledBox-c11n-8-112-0__sc-ocjv7k-0 dfCXuA\"><div class=\"StyledBox-c11n-8-112-0__sc-ocjv7k-0 juxMbt\"><div class=\"StyledGleamWrapper-c11n-8-112-0__sc-m5v26w-0 hFLpMJ\"><svg viewBox=\"0 0 32 32\" aria-hidden=\"true\" class=\"Icon-c11n-8-112-0__sc-13llmml-0 bIRDRs StyledBox-c11n-8-112-0__sc-ocjv7k-0\" focusable=\"false\" role=\"img\"><path stroke=\"none\" d=\"M29.41,26.59,23.77,21A12,12,0,0,0,14,2c-.17,0-.33,0-.5,0s-.33,0-.5,0A11,11,0,0,0,2,13c0,.17,0,.33,0,.5s0,.33,0,.5a12,12,0,0,0,19,9.77l5.64,5.64a2,2,0,0,0,2.82-2.82ZM14,22a8,8,0,1,1,8-8A8,8,0,0,1,14,22Z\"></path></svg></div></div><span class=\"Text-c11n-8-112-0__sc-aiai24-0 iNkOZY StyledBox-c11n-8-112-0__sc-ocjv7k-0 ECMYT\">Search</span></div></a><a href=\"/login/updates/\" class=\"StyledBox-c11n-8-112-0__sc-ocjv7k-0 jjvgzd\"><div class=\"Flex-c11n-8-112-0__sc-n94bjd-0 kuYyEA StyledBox-c11n-8-112-0__sc-ocjv7k-0 btpmaa\"><div class=\"StyledBox-c11n-8-112-0__sc-ocjv7k-0 jRHBFY\"><div class=\"StyledGleamWrapper-c11n-8-112-0__sc-m5v26w-0 hFLpMJ\"><svg viewBox=\"0 0 32 32\" aria-hidden=\"true\" class=\"Icon-c11n-8-112-0__sc-13llmml-0 bIRDRs StyledBox-c11n-8-112-0__sc-ocjv7k-0\" focusable=\"false\" role=\"img\"><path stroke=\"none\" d=\"M29.41,26.59,23.77,21A12,12,0,0,0,14,2c-.17,0-.33,0-.5,0s-.33,0-.5,0A11,11,0,0,0,2,13c0,.17,0,.33,0,.5s0,.33,0,.5a12,12,0,0,0,19,9.77l5.64,5.64a2,2,0,0,0,2.82-2.82ZM18.17,14.87l-.23.24-3.7,3.78a.35.35,0,0,1-.51,0L10,15.11l-.23-.24a2.93,2.93,0,0,1,.27-4.29C12,9,14,11.29,14,11.29s1.67-2.34,3.9-.71A2.87,2.87,0,0,1,18.17,14.87Z\"></path></svg></div></div><span class=\"Text-c11n-8-112-0__sc-aiai24-0 dBaEas StyledBox-c11n-8-112-0__sc-ocjv7k-0 ECMYT\">Updates</span></div></a><a href=\"/login/favorites/\" class=\"StyledBox-c11n-8-112-0__sc-ocjv7k-0 jjvgzd\"><div class=\"Flex-c11n-8-112-0__sc-n94bjd-0 kuYyEA StyledBox-c11n-8-112-0__sc-ocjv7k-0 btpmaa\"><div class=\"StyledBox-c11n-8-112-0__sc-ocjv7k-0 jRHBFY\"><div class=\"StyledGleamWrapper-c11n-8-112-0__sc-m5v26w-0 hFLpMJ\"><svg viewBox=\"0 0 32 32\" aria-hidden=\"true\" class=\"Icon-c11n-8-112-0__sc-13llmml-0 bIRDRs StyledBox-c11n-8-112-0__sc-ocjv7k-0\" focusable=\"false\" role=\"img\"><path stroke=\"none\" d=\"M27 5.6a7.91 7.91 0 00-10.49.87l-.51.47-.46-.47A7.91 7.91 0 005.05 5.6a8 8 0 00-.76 11.92l.65.66L15.29 28.7a1 1 0 001.42 0l10.35-10.52.65-.66A8 8 0 0027 5.6z\"></path></svg></div></div><span class=\"Text-c11n-8-112-0__sc-aiai24-0 dBaEas StyledBox-c11n-8-112-0__sc-ocjv7k-0 ECMYT\">Favorites</span></div></a><a href=\"/homeloans\" class=\"StyledBox-c11n-8-112-0__sc-ocjv7k-0 jjvgzd\"><div class=\"Flex-c11n-8-112-0__sc-n94bjd-0 kuYyEA StyledBox-c11n-8-112-0__sc-ocjv7k-0 btpmaa\"><div class=\"StyledBox-c11n-8-112-0__sc-ocjv7k-0 jRHBFY\"><div class=\"StyledGleamWrapper-c11n-8-112-0__sc-m5v26w-0 hFLpMJ\"><svg viewBox=\"0 0 32 32\" aria-hidden=\"true\" class=\"Icon-c11n-8-112-0__sc-13llmml-0 bIRDRs StyledBox-c11n-8-112-0__sc-ocjv7k-0\" focusable=\"false\" role=\"img\"><path stroke=\"none\" d=\"M16 2a14 14 0 1014 14A14 14 0 0016 2zm.74 20.13v.38a1 1 0 01-2 0v-.43a3.92 3.92 0 01-3.35-2.27 1.38 1.38 0 01-.1-.49c0-.53.36-.85 1-.85a1 1 0 011 .65 3.45 3.45 0 003.26 1.49c1.39-.08 2.22-.74 2.22-1.76s-.6-1.44-2.21-1.83l-1.61-.36c-2.42-.54-3.55-1.59-3.55-3.32s1.31-3.05 3.39-3.4V9.5a1 1 0 012 0v.39c1.84.21 3.21 1.1 3.62 2.39a1.52 1.52 0 01.08.49c0 .45-.35.74-.91.74a1.09 1.09 0 01-1-.64 3.2 3.2 0 00-3-1.47c-1.25.13-2.11.78-2.11 1.7s.64 1.43 2 1.79l1.65.36c2.57.58 3.67 1.57 3.67 3.32-.04 2.34-2.06 3.36-4.05 3.56z\"></path></svg></div></div><span class=\"Text-c11n-8-112-0__sc-aiai24-0 dBaEas StyledBox-c11n-8-112-0__sc-ocjv7k-0 ECMYT\">Home Loans</span></div></a><a href=\"/login/inbox/\" class=\"StyledBox-c11n-8-112-0__sc-ocjv7k-0 jjvgzd\"><div class=\"Flex-c11n-8-112-0__sc-n94bjd-0 kuYyEA StyledBox-c11n-8-112-0__sc-ocjv7k-0 btpmaa\"><div class=\"StyledBox-c11n-8-112-0__sc-ocjv7k-0 jRHBFY\"><div class=\"StyledGleamWrapper-c11n-8-112-0__sc-m5v26w-0 hFLpMJ\"><svg viewBox=\"0 0 32 32\" aria-hidden=\"true\" class=\"Icon-c11n-8-112-0__sc-13llmml-0 bIRDRs StyledBox-c11n-8-112-0__sc-ocjv7k-0\" focusable=\"false\" role=\"img\"><path stroke=\"none\" d=\"M29.84,17.62,24.52,5.21A2,2,0,0,0,22.68,4H9.32A2,2,0,0,0,7.48,5.21L2.16,17.62a1.92,1.92,0,0,0-.16.79V26a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V18.41A1.92,1.92,0,0,0,29.84,17.62ZM25,20H23.41l-1.56,1.57a1.49,1.49,0,0,1-1.06.43H11.21a1.49,1.49,0,0,1-1.06-.43L8.59,20H7a1,1,0,0,1,0-2H8.79a1.5,1.5,0,0,1,1.06.44L11.41,20h9.18l1.56-1.56A1.5,1.5,0,0,1,23.21,18H25a1,1,0,0,1,0,2Z\"></path></svg></div></div><span class=\"Text-c11n-8-112-0__sc-aiai24-0 dBaEas StyledBox-c11n-8-112-0__sc-ocjv7k-0 ECMYT\">Inbox</span></div></a></div></div></div>\n    <script id=\"__PFS_PRODUCTNAV_DATA__\" type=\"application/json\">{\"useVisualRefreshTheme\":true,\"productnavProps\":{\"activeTab\":\"SEARCH\",\"hideOnScroll\":true,\"links\":[{\"text\":\"Search\",\"href\":\"/homes\",\"id\":\"SEARCH\",\"notificationCount\":0},{\"text\":\"Updates\",\"href\":\"/login/updates/\",\"id\":\"UPDATES\",\"notificationCount\":0},{\"text\":\"Favorites\",\"href\":\"/login/favorites/\",\"id\":\"FAVORITES\",\"notificationCount\":0},{\"text\":\"Home Loans\",\"href\":\"/homeloans\",\"id\":\"HOMELOANS\",\"notificationCount\":0},{\"text\":\"Inbox\",\"href\":\"/login/inbox/\",\"id\":\"INBOX\",\"notificationCount\":0}],\"mainAsync\":false,\"productNavEnabled\":true}}</script>\n"
+        },
+        "reg": {
+          "markup": "<div id='login-anchor'></div>\n            <input id='hidden-reg-details' type='hidden' value='{\"facebookAppId\":\"172285552816089\",\"googleClientId\":\"238648973530.apps.googleusercontent.com\",\"authProcess\":\"TopNav\",\"isLightbox\":\"true\",\"proTypes\":\"{\\\"0\\\":\\\"Select your category\\\",\\\"1\\\":\\\"Real Estate Agent/Broker\\\",\\\"2\\\":\\\"Mortgage Lender\\\",\\\"3\\\":\\\"Home Improvement Services\\\",\\\"5\\\":\\\"Landlord\\\",\\\"6\\\":\\\"Photographer\\\",\\\"7\\\":\\\"Home Builder\\\",\\\"8\\\":\\\"Home Inspector\\\",\\\"9\\\":\\\"Property Manager\\\",\\\"11\\\":\\\"Other Real Estate Professional\\\"}\",\"disableSubmitOnValidate\":true,\"strongPasswordField\":true,\"signInWithAppleEnabled\":true,\"is2faOn\":false,\"emailValidationEnabled\":true,\"isActivationExperimentsFeatureEnabled\":true,\"isActivationNewLaneMetricsEnabled\":false,\"isActivationGAMetricsEnabled\":true,\"isActivationOnboardingEnabled\":true,\"verifyOnRegisterTreatment\":\"CONTROL\",\"emailOTP\":\"CONTROL\",\"useVisualRefreshTheme\":true,\"preferHomepageUpsellOverGoogleOneTap\":false}'>",
+          "js": "https://www.zillowstatic.com/s3/pfs/reg-12172e00903d095e5b29.js"
+        }
+      },
+      "searchPageState": {
+        "queryState": {
+          "isMapVisible": true,
+          "mapBounds": {
+            "west": -122.408,
+            "east": -122.382,
+            "south": 37.78,
+            "north": 37.802
+          },
+          "usersSearchTerm": "San Francisco, CA",
+          "regionSelection": [
+            {
+              "regionId": 20330
+            }
+          ],
+          "filterState": {
+            "isForRent": {
+              "value": true
+            },
+            "isForSaleByAgent": {
+              "value": false
+            },
+            "isForSaleByOwner": {
+              "value": false
+            },
+            "price": {
+              "min": null,
+              "max": 2000
+            },
+            "monthlyPayment": {
+              "min": null,
+              "max": 2000
+            }
+          }
+        },
+        "filterDefinitions": {
+          "price": {
+            "id": "price",
+            "labels": {
+              "default": "Price",
+              "long": "Price Range",
+              "valueFormatter": {
+                "none": "Any",
+                "min": "${{min}}+",
+                "max": "Up to ${{max}}",
+                "minMax": "${{min}}-${{max}}",
+                "identicalMinMax": "${{min}}",
+                "numberFormatter": "0,0",
+                "inputFormatter": "0.[0]a"
+              }
+            },
+            "sortOrder": 1,
+            "type": "Range",
+            "defaultValue": {
+              "min": null,
+              "max": null
+            },
+            "suggestedEnums": [
+              {
+                "label": "$50,000",
+                "value": 50000
+              },
+              {
+                "label": "$100,000",
+                "value": 100000
+              },
+              {
+                "label": "$150,000",
+                "value": 150000
+              },
+              {
+                "label": "$200,000",
+                "value": 200000
+              },
+              {
+                "label": "$250,000",
+                "value": 250000
+              },
+              {
+                "label": "$300,000",
+                "value": 300000
+              },
+              {
+                "label": "$350,000",
+                "value": 350000
+              },
+              {
+                "label": "$400,000",
+                "value": 400000
+              },
+              {
+                "label": "$450,000",
+                "value": 450000
+              },
+              {
+                "label": "$500,000",
+                "value": 500000
+              },
+              {
+                "label": "$550,000",
+                "value": 550000
+              },
+              {
+                "label": "$600,000",
+                "value": 600000
+              },
+              {
+                "label": "$650,000",
+                "value": 650000
+              },
+              {
+                "label": "$700,000",
+                "value": 700000
+              },
+              {
+                "label": "$750,000",
+                "value": 750000
+              },
+              {
+                "label": "$800,000",
+                "value": 800000
+              },
+              {
+                "label": "$850,000",
+                "value": 850000
+              },
+              {
+                "label": "$900,000",
+                "value": 900000
+              },
+              {
+                "label": "$950,000",
+                "value": 950000
+              },
+              {
+                "label": "$1M",
+                "value": 1000000
+              },
+              {
+                "label": "$1.25M",
+                "value": 1250000
+              },
+              {
+                "label": "$1.5M",
+                "value": 1500000
+              },
+              {
+                "label": "$1.75M",
+                "value": 1750000
+              },
+              {
+                "label": "$2M",
+                "value": 2000000
+              },
+              {
+                "label": "$2.25M",
+                "value": 2250000
+              },
+              {
+                "label": "$2.5M",
+                "value": 2500000
+              },
+              {
+                "label": "$2.75M",
+                "value": 2750000
+              },
+              {
+                "label": "$3M",
+                "value": 3000000
+              },
+              {
+                "label": "$3.25M",
+                "value": 3250000
+              },
+              {
+                "label": "$3.5M",
+                "value": 3500000
+              },
+              {
+                "label": "$3.75M",
+                "value": 3750000
+              },
+              {
+                "label": "$4M",
+                "value": 4000000
+              },
+              {
+                "label": "$4.25M",
+                "value": 4250000
+              },
+              {
+                "label": "$4.5M",
+                "value": 4500000
+              },
+              {
+                "label": "$4.75M",
+                "value": 4750000
+              },
+              {
+                "label": "$5M",
+                "value": 5000000
+              },
+              {
+                "label": "$6M",
+                "value": 6000000
+              },
+              {
+                "label": "$7M",
+                "value": 7000000
+              },
+              {
+                "label": "$8M",
+                "value": 8000000
+              },
+              {
+                "label": "$9M",
+                "value": 9000000
+              },
+              {
+                "label": "$10M",
+                "value": 10000000
+              },
+              {
+                "label": "$11M",
+                "value": 11000000
+              },
+              {
+                "label": "$12M",
+                "value": 12000000
+              },
+              {
+                "label": "$13M",
+                "value": 13000000
+              },
+              {
+                "label": "$14M",
+                "value": 14000000
+              },
+              {
+                "label": "$15M",
+                "value": 15000000
+              },
+              {
+                "label": "$16M",
+                "value": 16000000
+              },
+              {
+                "label": "$17M",
+                "value": 17000000
+              },
+              {
+                "label": "$18M",
+                "value": 18000000
+              }
+            ],
+            "exposedPillEnabled": false
+          },
+          "monthlyPayment": {
+            "id": "monthlyPayment",
+            "shortId": "mp",
+            "labels": {
+              "default": "Price",
+              "valueFormatter": {
+                "none": "Any",
+                "min": "${{min}}+",
+                "max": "Up to ${{max}}",
+                "minMax": "${{min}}-${{max}}",
+                "identicalMinMax": "${{min}}",
+                "numberFormatter": "0,0",
+                "inputFormatter": "0.[0]a"
+              }
+            },
+            "sortOrder": 1,
+            "type": "Range",
+            "defaultValue": {
+              "min": null,
+              "max": null
+            },
+            "suggestedEnums": [
+              {
+                "label": "$200",
+                "value": 200
+              },
+              {
+                "label": "$400",
+                "value": 400
+              },
+              {
+                "label": "$600",
+                "value": 600
+              },
+              {
+                "label": "$800",
+                "value": 800
+              },
+              {
+                "label": "$1,000",
+                "value": 1000
+              },
+              {
+                "label": "$1,200",
+                "value": 1200
+              },
+              {
+                "label": "$1,400",
+                "value": 1400
+              },
+              {
+                "label": "$1,600",
+                "value": 1600
+              },
+              {
+                "label": "$1,800",
+                "value": 1800
+              },
+              {
+                "label": "$2,000",
+                "value": 2000
+              },
+              {
+                "label": "$2,200",
+                "value": 2200
+              },
+              {
+                "label": "$2,400",
+                "value": 2400
+              },
+              {
+                "label": "$2,600",
+                "value": 2600
+              },
+              {
+                "label": "$2,800",
+                "value": 2800
+              },
+              {
+                "label": "$3,000",
+                "value": 3000
+              },
+              {
+                "label": "$3,500",
+                "value": 3500
+              },
+              {
+                "label": "$4,000",
+                "value": 4000
+              },
+              {
+                "label": "$4,500",
+                "value": 4500
+              },
+              {
+                "label": "$5,000",
+                "value": 5000
+              },
+              {
+                "label": "$5,500",
+                "value": 5500
+              },
+              {
+                "label": "$6,000",
+                "value": 6000
+              },
+              {
+                "label": "$7,000",
+                "value": 7000
+              },
+              {
+                "label": "$8,000",
+                "value": 8000
+              },
+              {
+                "label": "$9,000",
+                "value": 9000
+              },
+              {
+                "label": "$10,000",
+                "value": 10000
+              }
+            ],
+            "exposedPillEnabled": false
+          },
+          "beds": {
+            "id": "beds",
+            "labels": {
+              "default": "Beds",
+              "valueFormatter": {
+                "none": "Any",
+                "min": "{{min}}+",
+                "max": "<{{max}}",
+                "minMax": "{{min}}-{{max}}",
+                "identicalMinMax": {
+                  "0": "Studio",
+                  "default": "{{min}}"
+                }
+              }
+            },
+            "sortOrder": 1,
+            "type": "Range",
+            "subType": "ExactableMin",
+            "defaultValue": {
+              "min": null,
+              "max": null
+            },
+            "suggestedEnums": {
+              "default": [
+                {
+                  "key": "Any",
+                  "value": 0
+                },
+                {
+                  "key": "1+",
+                  "value": 1
+                },
+                {
+                  "key": "2+",
+                  "value": 2
+                },
+                {
+                  "key": "3+",
+                  "value": 3
+                },
+                {
+                  "key": "4+",
+                  "value": 4
+                },
+                {
+                  "key": "5+",
+                  "value": 5
+                }
+              ],
+              "exact": [
+                {
+                  "key": "Studio",
+                  "value": 0
+                },
+                {
+                  "key": "1",
+                  "value": 1
+                },
+                {
+                  "key": "2",
+                  "value": 2
+                },
+                {
+                  "key": "3",
+                  "value": 3
+                },
+                {
+                  "key": "4",
+                  "value": 4
+                },
+                {
+                  "key": "5",
+                  "value": 5
+                }
+              ]
+            },
+            "exposedPillEnabled": false
+          },
+          "singleStory": {
+            "id": "singleStory",
+            "shortId": "sto",
+            "labels": {
+              "default": "Single-story only",
+              "tracking": "Single Story",
+              "valueFormatter": {
+                "true": "1 story"
+              }
+            },
+            "sortOrder": 8,
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            },
+            "exposedPillEnabled": true
+          },
+          "baths": {
+            "id": "baths",
+            "labels": {
+              "default": "Bathrooms",
+              "valueFormatter": {
+                "none": "Any",
+                "min": "{{min}}+",
+                "max": "<{{max}}",
+                "minMax": "{{min}}-{{max}}",
+                "identicalMinMax": "{{min}}"
+              }
+            },
+            "sortOrder": 3,
+            "type": "Range",
+            "defaultValue": {
+              "min": null,
+              "max": null
+            },
+            "suggestedEnums": {
+              "Any": 0,
+              "1+": 1,
+              "1.5+": 1.5,
+              "2+": 2,
+              "3+": 3,
+              "4+": 4
+            },
+            "exposedPillEnabled": true
+          },
+          "sqft": {
+            "id": "sqft",
+            "labels": {
+              "default": "Square feet",
+              "alternate": "Home size",
+              "minimum": "Square feet minimum",
+              "maximum": "Square feet maximum",
+              "short": "Sqft",
+              "valueFormatter": {
+                "none": "Any",
+                "min": "{{min}}+",
+                "max": "<{{max}}",
+                "minMax": "{{min}}-{{max}}",
+                "identicalMinMax": "{{min}}",
+                "numberFormatter": "0,0",
+                "inputFormatter": "0,0"
+              }
+            },
+            "sortOrder": 4,
+            "type": "Range",
+            "defaultValue": {
+              "min": null,
+              "max": null
+            },
+            "suggestedEnums": [
+              {
+                "label": "500",
+                "value": 500
+              },
+              {
+                "label": "750",
+                "value": 750
+              },
+              {
+                "label": "1,000",
+                "value": 1000
+              },
+              {
+                "label": "1,250",
+                "value": 1250
+              },
+              {
+                "label": "1,500",
+                "value": 1500
+              },
+              {
+                "label": "1,750",
+                "value": 1750
+              },
+              {
+                "label": "2,000",
+                "value": 2000
+              },
+              {
+                "label": "2,250",
+                "value": 2250
+              },
+              {
+                "label": "2,500",
+                "value": 2500
+              },
+              {
+                "label": "2,750",
+                "value": 2750
+              },
+              {
+                "label": "3,000",
+                "value": 3000
+              },
+              {
+                "label": "3,500",
+                "value": 3500
+              },
+              {
+                "label": "4,000",
+                "value": 4000
+              },
+              {
+                "label": "5,000",
+                "value": 5000
+              },
+              {
+                "label": "7,500",
+                "value": 7500
+              }
+            ],
+            "exposedPillEnabled": true
+          },
+          "lotSize": {
+            "id": "lotSize",
+            "shortId": "lot",
+            "labels": {
+              "default": "Lot size",
+              "minimum": "Lot size minimum",
+              "maximum": "Lot size maximum",
+              "shortDescription": "...",
+              "longDescription": "...",
+              "pluralSubstitutes": {
+                "acre": "acres"
+              },
+              "valueFormatter": {
+                "none": "Any",
+                "min": "{{min}}+ {{unit}}",
+                "max": "<={{max}} {{unit}}",
+                "minMax": "{{min}}-{{max}} {{unit}}",
+                "identicalMinMax": "{{min}} {{unit}}",
+                "numberFormatter": "0,0[.][000]",
+                "inputFormatter": "0,0[.][000]"
+              }
+            },
+            "sortOrder": 5,
+            "type": "Range",
+            "subType": "RangeWithUnits",
+            "defaultValue": {
+              "min": null,
+              "max": null,
+              "units": "sqft"
+            },
+            "unitTypes": [
+              "sqft",
+              "acre"
+            ],
+            "suggestedEnums": [
+              {
+                "label": "1,000 sqft",
+                "value": 1000,
+                "units": "sqft"
+              },
+              {
+                "label": "2,000 sqft",
+                "value": 2000,
+                "units": "sqft"
+              },
+              {
+                "label": "3,000 sqft",
+                "value": 3000,
+                "units": "sqft"
+              },
+              {
+                "label": "4,000 sqft",
+                "value": 4000,
+                "units": "sqft"
+              },
+              {
+                "label": "5,000 sqft",
+                "value": 5000,
+                "units": "sqft"
+              },
+              {
+                "label": "7,500 sqft",
+                "value": 7500,
+                "units": "sqft"
+              },
+              {
+                "label": "1/4 acre/10,890 sqft",
+                "value": 10890,
+                "units": "sqft"
+              },
+              {
+                "label": "1/2 acre",
+                "value": 21780,
+                "units": "sqft"
+              },
+              {
+                "label": "1 acre",
+                "value": 43560,
+                "units": "sqft"
+              },
+              {
+                "label": "2 acres",
+                "value": 87120,
+                "units": "sqft"
+              },
+              {
+                "label": "5 acres",
+                "value": 217800,
+                "units": "sqft"
+              },
+              {
+                "label": "10 acres",
+                "value": 435600,
+                "units": "sqft"
+              },
+              {
+                "label": "20 acres",
+                "value": 871200,
+                "units": "sqft"
+              },
+              {
+                "label": "50 acres",
+                "value": 2178000,
+                "units": "sqft"
+              },
+              {
+                "label": "100 acres",
+                "value": 4356000,
+                "units": "sqft"
+              }
+            ],
+            "exposedPillEnabled": true
+          },
+          "built": {
+            "id": "built",
+            "labels": {
+              "default": "Year built",
+              "minimum": "Year built minimum",
+              "maximum": "Year built maximum",
+              "valueFormatter": {
+                "none": "Any",
+                "min": "{{min}}+",
+                "max": "<{{max}}",
+                "minMax": "{{min}}-{{max}}",
+                "identicalMinMax": "{{min}}",
+                "numberFormatter": "0",
+                "inputFormatter": "0"
+              }
+            },
+            "sortOrder": 6,
+            "type": "Range",
+            "defaultValue": {
+              "min": null,
+              "max": null
+            },
+            "exposedPillEnabled": true
+          },
+          "hoa": {
+            "id": "hoa",
+            "labels": {
+              "default": "Max HOA",
+              "alternate": "Max HOA fees",
+              "valueFormatter": {
+                "none": "Any",
+                "max": "${{max}}/month"
+              }
+            },
+            "sortOrder": 9,
+            "type": "Range",
+            "defaultValue": {
+              "min": null,
+              "max": null
+            },
+            "suggestedEnums": {
+              "Any": null,
+              "No HOA Fee": 0,
+              "$50/month": 50,
+              "$100/month": 100,
+              "$200/month": 200,
+              "$300/month": 300,
+              "$400/month": 400,
+              "$500/month": 500,
+              "$600/month": 600,
+              "$700/month": 700,
+              "$800/month": 800,
+              "$900/month": 900,
+              "$1000/month": 1000,
+              "$1500/month": 1500,
+              "$2000/month": 2000
+            },
+            "exposedPillEnabled": true
+          },
+          "includeHomesWithNoHoaData": {
+            "id": "includeHomesWithNoHoaData",
+            "shortId": "nohoa",
+            "labels": {
+              "default": "Include homes with incomplete HOA data",
+              "tracking": "HOA No Data"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "doz": {
+            "id": "doz",
+            "labels": {
+              "default": "Days on Zillow",
+              "alternate": "Time on Zillow",
+              "soldInLast": "Sold in last",
+              "both": "Listed or Sold in last",
+              "valueFormatter": {
+                "1": "1 day",
+                "7": "7 days",
+                "14": "14 days",
+                "30": "30 days",
+                "90": "90 days",
+                "any": "Any",
+                "6m": "6 months",
+                "12m": "12 months",
+                "24m": "24 months",
+                "36m": "36 months"
+              }
+            },
+            "sortOrder": 7,
+            "type": "Enum",
+            "defaultValue": {
+              "value": "any"
+            },
+            "allowedValues": {
+              "1": -1,
+              "7": -7,
+              "14": -14,
+              "30": -30,
+              "90": -90,
+              "any": null,
+              "6m": -182,
+              "12m": -365,
+              "24m": -730,
+              "36m": -1095
+            },
+            "suggestedEnums": {
+              "Any": "any",
+              "1 day": "1",
+              "7 days": "7",
+              "14 days": "14",
+              "30 days": "30",
+              "90 days": "90",
+              "6 months": "6m",
+              "12 months": "12m",
+              "24 months": "24m",
+              "36 months": "36m"
+            },
+            "exposedPillEnabled": true
+          },
+          "sortSelection": {
+            "id": "sortSelection",
+            "shortId": "sort",
+            "labels": {
+              "default": "Sort",
+              "valueFormatter": {
+                "saved": "Date Saved",
+                "listingstatus": "Listing Status",
+                "mostrecentchange": "Most Recent Change",
+                "globalrelevanceex": "Homes for You",
+                "featured": "Verified Source",
+                "priced": "Price (High to Low)",
+                "pricea": "Price (Low to High)",
+                "paymentd": "Payment (High to Low)",
+                "paymenta": "Payment (Low to High)",
+                "days": "Newest",
+                "beds": "Bedrooms",
+                "baths": "Bathrooms",
+                "size": "Square Feet",
+                "lot": "Lot Size",
+                "zest": "Zestimate (High to Low)",
+                "zesta": "Zestimate (Low to High)",
+                "priorityscore": "Recommended",
+                "personalizedsort": "Homes for You"
+              }
+            },
+            "type": "Enum",
+            "defaultValue": {
+              "value": "personalizedsort"
+            },
+            "allowedValues": {
+              "saved": "saved",
+              "listingstatus": "listingstatus",
+              "mostrecentchange": "mostrecentchange",
+              "globalrelevanceex": "globalrelevanceex",
+              "featured": "featured",
+              "priced": "priced",
+              "pricea": "pricea",
+              "paymentd": "paymentd",
+              "paymenta": "paymenta",
+              "days": "days",
+              "beds": "beds",
+              "baths": "baths",
+              "size": "size",
+              "lot": "lot",
+              "zest": "zest",
+              "zesta": "zesta",
+              "priorityscore": "priorityscore",
+              "personalizedsort": "personalizedsort"
+            }
+          },
+          "keywords": {
+            "id": "keywords",
+            "shortId": "att",
+            "labels": {
+              "default": "Keywords",
+              "tracking": "Keyword"
+            },
+            "sortOrder": 2,
+            "type": "String",
+            "defaultValue": {
+              "value": ""
+            },
+            "exposedPillEnabled": true
+          },
+          "includeSchoolsSelection": {
+            "id": "includeSchoolsSelection",
+            "labels": {
+              "default": "Include",
+              "valueFormatter": {
+                "highSchool": "high schools",
+                "middleSchool": "middle schools",
+                "elementarySchool": "elementary schools"
+              }
+            },
+            "type": "String",
+            "defaultValue": {
+              "highSchool": null,
+              "middleSchool": null,
+              "elementarySchool": null
+            }
+          },
+          "isElementarySchool": {
+            "id": "isElementarySchool",
+            "shortId": "sche",
+            "labels": {
+              "default": "Elementary"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isMiddleSchool": {
+            "id": "isMiddleSchool",
+            "shortId": "schm",
+            "labels": {
+              "default": "Middle"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isHighSchool": {
+            "id": "isHighSchool",
+            "shortId": "schh",
+            "labels": {
+              "default": "High"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isPublicSchool": {
+            "id": "isPublicSchool",
+            "shortId": "schp",
+            "labels": {
+              "default": "Public"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isPrivateSchool": {
+            "id": "isPrivateSchool",
+            "shortId": "schr",
+            "labels": {
+              "default": "Private"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isCharterSchool": {
+            "id": "isCharterSchool",
+            "shortId": "schc",
+            "labels": {
+              "default": "Charter"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "greatSchoolsRating": {
+            "id": "greatSchoolsRating",
+            "shortId": "schb",
+            "labels": {
+              "default": "GreatSchools Rating",
+              "valueFormatter": {
+                "none": "Any"
+              }
+            },
+            "type": "Range",
+            "defaultValue": {
+              "min": 1
+            },
+            "suggestedEnums": [
+              {
+                "label": "1+",
+                "value": 1
+              },
+              {
+                "label": "2+",
+                "value": 2
+              },
+              {
+                "label": "3+",
+                "value": 3
+              },
+              {
+                "label": "4+",
+                "value": 4
+              },
+              {
+                "label": "5+",
+                "value": 5
+              },
+              {
+                "label": "6+",
+                "value": 6
+              },
+              {
+                "label": "7+",
+                "value": 7
+              },
+              {
+                "label": "8+",
+                "value": 8
+              },
+              {
+                "label": "9+",
+                "value": 9
+              },
+              {
+                "label": "10",
+                "value": 10
+              }
+            ]
+          },
+          "includeUnratedSchools": {
+            "id": "includeUnratedSchools",
+            "shortId": "schu",
+            "labels": {
+              "default": "Include schools with no rating"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "enableSchools": {
+            "id": "enableSchools",
+            "shortId": "sch",
+            "labels": {
+              "default": "Schools"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "dataSourceSelection": {
+            "id": "dataSourceSelection",
+            "shortId": "dsrc",
+            "labels": {
+              "default": "Data Source"
+            },
+            "type": "String",
+            "defaultValue": {
+              "value": "all"
+            }
+          },
+          "onlyWithPhotos": {
+            "id": "onlyWithPhotos",
+            "labels": {
+              "default": "Photos"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyPriceReduction": {
+            "id": "onlyPriceReduction",
+            "labels": {
+              "default": "Price Reduction"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalPetsAllowed": {
+            "id": "onlyRentalPetsAllowed",
+            "shortId": "pet",
+            "labels": {
+              "default": "Pets Allowed"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalLargeDogsAllowed": {
+            "id": "onlyRentalLargeDogsAllowed",
+            "shortId": "ldog",
+            "labels": {
+              "default": "Allows large dogs"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalSmallDogsAllowed": {
+            "id": "onlyRentalSmallDogsAllowed",
+            "shortId": "sdog",
+            "labels": {
+              "default": "Allows small dogs"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalCatsAllowed": {
+            "id": "onlyRentalCatsAllowed",
+            "shortId": "cat",
+            "labels": {
+              "default": "Allows cats"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalIncomeRestrictedHousingType": {
+            "id": "onlyRentalIncomeRestrictedHousingType",
+            "shortId": "inct",
+            "labels": {
+              "default": "Income restricted"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalStudentHousingType": {
+            "id": "onlyRentalStudentHousingType",
+            "shortId": "stut",
+            "labels": {
+              "default": "Student Housing"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalSeniorHousingType": {
+            "id": "onlyRentalSeniorHousingType",
+            "shortId": "sent",
+            "labels": {
+              "default": "Senior Housing"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalDisabledHousingType": {
+            "id": "onlyRentalDisabledHousingType",
+            "shortId": "dist",
+            "labels": {
+              "default": "Disabled Housing"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalMilitaryHousingType": {
+            "id": "onlyRentalMilitaryHousingType",
+            "shortId": "milt",
+            "labels": {
+              "default": "Military Housing"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalParkingAvailable": {
+            "id": "onlyRentalParkingAvailable",
+            "shortId": "parka",
+            "labels": {
+              "default": "On-site Parking"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalInUnitLaundry": {
+            "id": "onlyRentalInUnitLaundry",
+            "shortId": "lau",
+            "labels": {
+              "default": "In-unit Laundry"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalAcceptsApplications": {
+            "id": "onlyRentalAcceptsApplications",
+            "shortId": "app",
+            "labels": {
+              "default": "Accepts Zillow Applications"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalIncomeRestricted": {
+            "id": "onlyRentalIncomeRestricted",
+            "shortId": "inc",
+            "labels": {
+              "default": "Income restricted"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalHousingConnector": {
+            "id": "onlyRentalHousingConnector",
+            "shortId": "hc",
+            "labels": {
+              "default": "Accepts Housing Connector",
+              "tracking": "Housing Connector"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalInstantTourAvailable": {
+            "id": "onlyRentalInstantTourAvailable",
+            "shortId": "ita",
+            "labels": {
+              "default": "Instant Tour Available"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalShortTermLease": {
+            "id": "onlyRentalShortTermLease",
+            "shortId": "stl",
+            "labels": {
+              "default": "Short term lease available"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalFurnished": {
+            "id": "onlyRentalFurnished",
+            "shortId": "fur",
+            "labels": {
+              "default": "Furnished"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalOutdoorSpace": {
+            "id": "onlyRentalOutdoorSpace",
+            "shortId": "os",
+            "labels": {
+              "default": "Outdoor space"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "hasFitnessCenter": {
+            "id": "hasFitnessCenter",
+            "shortId": "fit",
+            "labels": {
+              "default": "Fitness Center"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "hasDishwasher": {
+            "id": "hasDishwasher",
+            "shortId": "dish",
+            "labels": {
+              "default": "Dishwasher"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "highSpeedInternetAvailable": {
+            "id": "highSpeedInternetAvailable",
+            "shortId": "hsia",
+            "labels": {
+              "default": "High speed internet"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalControlledAccess": {
+            "id": "onlyRentalControlledAccess",
+            "shortId": "ca",
+            "labels": {
+              "default": "Controlled access"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalNoPets": {
+            "id": "onlyRentalNoPets",
+            "shortId": "np",
+            "labels": {
+              "default": "No pets"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "elevatorAccessAvailable": {
+            "id": "elevatorAccessAvailable",
+            "shortId": "eaa",
+            "labels": {
+              "default": "Elevator"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalHasPromotion": {
+            "id": "onlyRentalHasPromotion",
+            "shortId": "promo",
+            "labels": {
+              "default": "Only show listings with move in offers"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "isForSaleByAgent": {
+            "id": "isForSaleByAgent",
+            "shortId": "fsba",
+            "labels": {
+              "default": "Agent listed"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isForSaleByOwner": {
+            "id": "isForSaleByOwner",
+            "shortId": "fsbo",
+            "labels": {
+              "default": "Owner posted"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isNewConstruction": {
+            "id": "isNewConstruction",
+            "shortId": "nc",
+            "labels": {
+              "default": "New construction"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isForSaleForeclosure": {
+            "id": "isForSaleForeclosure",
+            "shortId": "fore",
+            "labels": {
+              "default": "Foreclosures"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isActiveStatus": {
+            "id": "isActiveStatus",
+            "shortId": "lsact",
+            "labels": {
+              "default": "Active"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isComingSoon": {
+            "id": "isComingSoon",
+            "shortId": "cmsn",
+            "labels": {
+              "default": "Coming soon"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isComingSoonStatus": {
+            "id": "isComingSoonStatus",
+            "shortId": "lscmsn",
+            "labels": {
+              "default": "Coming soon"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isZillowPreview": {
+            "id": "isZillowPreview",
+            "shortId": "lszp",
+            "labels": {
+              "default": "Zillow Preview"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isAuction": {
+            "id": "isAuction",
+            "shortId": "auc",
+            "labels": {
+              "default": "Auctions"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isPreMarketForeclosure": {
+            "id": "isPreMarketForeclosure",
+            "shortId": "pmf",
+            "labels": {
+              "default": "Foreclosed"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "isPreMarketPreForeclosure": {
+            "id": "isPreMarketPreForeclosure",
+            "shortId": "pf",
+            "labels": {
+              "default": "Pre-foreclosures"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "isForRent": {
+            "id": "isForRent",
+            "shortId": "fr",
+            "labels": {
+              "default": "For Rent",
+              "alternate": "For rent"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "isRecentlySold": {
+            "id": "isRecentlySold",
+            "shortId": "rs",
+            "labels": {
+              "default": "Sold",
+              "long": "Recently Sold"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "isOpenHousesOnly": {
+            "id": "isOpenHousesOnly",
+            "shortId": "open",
+            "labels": {
+              "default": "Must have open house",
+              "tracking": "Open House"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "isZillowOwnedOnly": {
+            "id": "isZillowOwnedOnly",
+            "shortId": "zo",
+            "labels": {
+              "default": "",
+              "tracking": "Zillow Owned"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "isPendingListingsSelected": {
+            "id": "isPendingListingsSelected",
+            "shortId": "pnd",
+            "labels": {
+              "default": "Pending & under contract"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "isAcceptingBackupOffersSelected": {
+            "id": "isAcceptingBackupOffersSelected",
+            "shortId": "abo",
+            "labels": {
+              "default": "Accepting backup offers"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "isSingleFamily": {
+            "id": "isSingleFamily",
+            "shortId": "sf",
+            "labels": {
+              "default": "Houses"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isCondo": {
+            "id": "isCondo",
+            "shortId": "con",
+            "labels": {
+              "default": "Condos/Co-ops"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isApartmentOrCondo": {
+            "id": "isApartmentOrCondo",
+            "shortId": "apco",
+            "labels": {
+              "default": "Apartments/Condos/Co-ops"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isMultiFamily": {
+            "id": "isMultiFamily",
+            "shortId": "mf",
+            "labels": {
+              "default": "Multi-family"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isApartment": {
+            "id": "isApartment",
+            "shortId": "apa",
+            "labels": {
+              "default": "Apartments"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isManufactured": {
+            "id": "isManufactured",
+            "shortId": "manu",
+            "labels": {
+              "default": "Manufactured"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isLotLand": {
+            "id": "isLotLand",
+            "shortId": "land",
+            "labels": {
+              "default": "Lots/Land"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isTownhouse": {
+            "id": "isTownhouse",
+            "shortId": "tow",
+            "labels": {
+              "default": "Townhomes"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "isRoomForRent": {
+            "id": "isRoomForRent",
+            "shortId": "r4r",
+            "labels": {
+              "default": "Room"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "isEntirePlaceForRent": {
+            "id": "isEntirePlaceForRent",
+            "shortId": "r4re",
+            "labels": {
+              "default": "Entire place"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": true
+            }
+          },
+          "hasDisabledAccess": {
+            "id": "hasDisabledAccess",
+            "shortId": "disac",
+            "labels": {
+              "default": "Disabled Access"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "hasHardwoodFloor": {
+            "id": "hasHardwoodFloor",
+            "shortId": "hrdwd",
+            "labels": {
+              "default": "Hardwood Floors"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "areUtilitiesIncluded": {
+            "id": "areUtilitiesIncluded",
+            "shortId": "uti",
+            "labels": {
+              "default": "Utilities Included"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "isCityView": {
+            "id": "isCityView",
+            "shortId": "cityv",
+            "labels": {
+              "default": "City"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "isMountainView": {
+            "id": "isMountainView",
+            "shortId": "mouv",
+            "labels": {
+              "default": "Mountain"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "isParkView": {
+            "id": "isParkView",
+            "shortId": "parkv",
+            "labels": {
+              "default": "Park"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "isWaterView": {
+            "id": "isWaterView",
+            "shortId": "watv",
+            "labels": {
+              "default": "Water"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "SEOTypedIdField": {
+            "id": "SEOTypedIdField",
+            "shortId": "seo",
+            "labels": {
+              "default": "SEO"
+            },
+            "defaultValue": {
+              "value": null,
+              "field": null,
+              "id": null
+            }
+          },
+          "parkingSpots": {
+            "id": "parkingSpots",
+            "shortId": "parks",
+            "type": "Range",
+            "labels": {
+              "default": "Parking spots",
+              "alternate": "Parking"
+            },
+            "defaultValue": {
+              "min": null
+            },
+            "suggestedEnums": {
+              "Any": null,
+              "1+": 1,
+              "2+": 2,
+              "3+": 3,
+              "4+": 4
+            }
+          },
+          "hasGarage": {
+            "id": "hasGarage",
+            "shortId": "gar",
+            "labels": {
+              "default": "Must have garage",
+              "tracking": "Garage"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "hasAirConditioning": {
+            "id": "hasAirConditioning",
+            "shortId": "ac",
+            "labels": {
+              "default": "Must have A/C",
+              "tracking": "AC"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "hasPool": {
+            "id": "hasPool",
+            "shortId": "pool",
+            "labels": {
+              "default": "Must have pool",
+              "tracking": "Pool"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "isWaterfront": {
+            "id": "isWaterfront",
+            "shortId": "wat",
+            "labels": {
+              "default": "Waterfront"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "isBasementFinished": {
+            "id": "isBasementFinished",
+            "shortId": "basf",
+            "labels": {
+              "default": "Finished"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "isBasementUnfinished": {
+            "id": "isBasementUnfinished",
+            "shortId": "basu",
+            "labels": {
+              "default": "Unfinished"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "hasBasement": {
+            "id": "hasBasement",
+            "shortId": "hbas",
+            "labels": {
+              "default": "Has Basement"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "is3dHome": {
+            "id": "is3dHome",
+            "shortId": "3d",
+            "labels": {
+              "default": "Must have 3D Tour",
+              "alternate": "3D tour",
+              "tracking": "3D Home"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "isShowcase": {
+            "id": "isShowcase",
+            "shortId": "shwcs",
+            "labels": {
+              "default": "Must have Showcase",
+              "tracking": "Showcase"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalFeaturedMultiFamilyBuilding": {
+            "id": "onlyRentalFeaturedMultiFamilyBuilding",
+            "shortId": "fmfb",
+            "labels": {
+              "default": "Apartment Community"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          },
+          "onlyRentalRequestedAvailabilityDate": {
+            "id": "onlyRentalRequestedAvailabilityDate",
+            "shortId": "rad",
+            "labels": {
+              "default": "Move-in Date",
+              "alternate": "Move in date"
+            },
+            "type": "String",
+            "defaultValue": {
+              "value": ""
+            },
+            "exposedPillEnabled": true
+          },
+          "onlyRentalExcludeNullAvailabilityDates": {
+            "id": "onlyRentalExcludeNullAvailabilityDates",
+            "shortId": "enad",
+            "labels": {
+              "default": "Hide listings with no date provided"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            },
+            "exposedPillEnabled": true
+          },
+          "ageRestricted55Plus": {
+            "id": "ageRestricted55Plus",
+            "shortId": "55plus",
+            "labels": {
+              "default": "Hide 55+ communities"
+            },
+            "type": "Enum",
+            "defaultValue": {
+              "value": "i"
+            },
+            "allowedValues": {
+              "i": "Include",
+              "e": "Don't show",
+              "o": "Only show"
+            }
+          },
+          "commuteDestination": {
+            "id": "commuteDestination",
+            "shortId": "comDest",
+            "labels": {
+              "default": "Commute Time",
+              "alternate": "Commute time"
+            },
+            "type": "String",
+            "defaultValue": {
+              "value": ""
+            }
+          },
+          "commuteMode": {
+            "id": "commuteMode",
+            "shortId": "comMode",
+            "labels": {
+              "default": "Travel Mode",
+              "alternate": "Travel mode"
+            },
+            "type": "Enum",
+            "defaultValue": {
+              "value": "driving"
+            },
+            "allowedValues": {
+              "Drive": "driving",
+              "Transit": "transit",
+              "Walk": "walking",
+              "Bike": "biking"
+            }
+          },
+          "commuteTimeOfDay": {
+            "id": "commuteTimeOfDay",
+            "shortId": "comTime",
+            "labels": {
+              "default": "Time of Day",
+              "alternate": "Time of day"
+            },
+            "type": "Enum",
+            "defaultValue": {
+              "value": "now"
+            },
+            "allowedValues": {
+              "Now": "now",
+              "Rush hour": "rushHour",
+              "Off-peak": "offPeak"
+            }
+          },
+          "commuteMaxTime": {
+            "id": "commuteMaxTime",
+            "shortId": "comMax",
+            "labels": {
+              "default": "Max. Travel Time",
+              "alternate": "Max. travel time"
+            },
+            "type": "Enum",
+            "defaultValue": {
+              "value": null
+            },
+            "allowedValues": {
+              "Any": null,
+              "60min": 60,
+              "45min": 45,
+              "30min": 30,
+              "15min": 15
+            }
+          },
+          "monthlyCostPayment": {
+            "id": "monthlyCostPayment",
+            "shortId": "mcp",
+            "labels": {
+              "default": "Monthly Payment",
+              "valueFormatter": {
+                "none": "Any",
+                "min": "${{min}}+",
+                "max": "Up to ${{max}}",
+                "minMax": "${{min}}-${{max}}",
+                "identicalMinMax": "${{min}}",
+                "numberFormatter": "0,0",
+                "inputFormatter": "0.[0]a"
+              }
+            },
+            "type": "Range",
+            "defaultValue": {
+              "min": null,
+              "max": null
+            },
+            "suggestedEnums": [
+              {
+                "label": "$50",
+                "value": 50
+              },
+              {
+                "label": "$100",
+                "value": 100
+              },
+              {
+                "label": "$150",
+                "value": 150
+              },
+              {
+                "label": "$200",
+                "value": 200
+              },
+              {
+                "label": "$250",
+                "value": 250
+              },
+              {
+                "label": "$300",
+                "value": 300
+              },
+              {
+                "label": "$350",
+                "value": 350
+              },
+              {
+                "label": "$400",
+                "value": 400
+              },
+              {
+                "label": "$450",
+                "value": 450
+              },
+              {
+                "label": "$500",
+                "value": 500
+              },
+              {
+                "label": "$550",
+                "value": 550
+              },
+              {
+                "label": "$600",
+                "value": 600
+              },
+              {
+                "label": "$650",
+                "value": 650
+              },
+              {
+                "label": "$700",
+                "value": 700
+              },
+              {
+                "label": "$750",
+                "value": 750
+              },
+              {
+                "label": "$800",
+                "value": 800
+              },
+              {
+                "label": "$850",
+                "value": 850
+              },
+              {
+                "label": "$900",
+                "value": 900
+              },
+              {
+                "label": "$950",
+                "value": 950
+              },
+              {
+                "label": "$1,000",
+                "value": 1000
+              },
+              {
+                "label": "$1,050",
+                "value": 1050
+              },
+              {
+                "label": "$1,100",
+                "value": 1100
+              },
+              {
+                "label": "$1,150",
+                "value": 1150
+              },
+              {
+                "label": "$1,200",
+                "value": 1200
+              },
+              {
+                "label": "$1,250",
+                "value": 1250
+              },
+              {
+                "label": "$1,300",
+                "value": 1300
+              },
+              {
+                "label": "$1,350",
+                "value": 1350
+              },
+              {
+                "label": "$1,400",
+                "value": 1400
+              },
+              {
+                "label": "$1,450",
+                "value": 1450
+              },
+              {
+                "label": "$1,500",
+                "value": 1500
+              },
+              {
+                "label": "$1,550",
+                "value": 1550
+              },
+              {
+                "label": "$1,600",
+                "value": 1600
+              },
+              {
+                "label": "$1,650",
+                "value": 1650
+              },
+              {
+                "label": "$1,700",
+                "value": 1700
+              },
+              {
+                "label": "$1,750",
+                "value": 1750
+              },
+              {
+                "label": "$1,800",
+                "value": 1800
+              },
+              {
+                "label": "$1,850",
+                "value": 1850
+              },
+              {
+                "label": "$1,900",
+                "value": 1900
+              },
+              {
+                "label": "$1,950",
+                "value": 1950
+              },
+              {
+                "label": "$2,000",
+                "value": 2000
+              },
+              {
+                "label": "$2,050",
+                "value": 2050
+              },
+              {
+                "label": "$2,100",
+                "value": 2100
+              },
+              {
+                "label": "$2,150",
+                "value": 2150
+              },
+              {
+                "label": "$2,200",
+                "value": 2200
+              },
+              {
+                "label": "$2,250",
+                "value": 2250
+              },
+              {
+                "label": "$2,300",
+                "value": 2300
+              },
+              {
+                "label": "$2,350",
+                "value": 2350
+              },
+              {
+                "label": "$2,400",
+                "value": 2400
+              },
+              {
+                "label": "$2,450",
+                "value": 2450
+              },
+              {
+                "label": "$2,500",
+                "value": 2500
+              },
+              {
+                "label": "$2,625",
+                "value": 2625
+              },
+              {
+                "label": "$2,750",
+                "value": 2750
+              },
+              {
+                "label": "$2,875",
+                "value": 2875
+              },
+              {
+                "label": "$3,000",
+                "value": 3000
+              },
+              {
+                "label": "$3,125",
+                "value": 3125
+              },
+              {
+                "label": "$3,250",
+                "value": 3250
+              },
+              {
+                "label": "$3,375",
+                "value": 3375
+              },
+              {
+                "label": "$3,500",
+                "value": 3500
+              },
+              {
+                "label": "$3,625",
+                "value": 3625
+              },
+              {
+                "label": "$3,750",
+                "value": 3750
+              },
+              {
+                "label": "$3,875",
+                "value": 3875
+              },
+              {
+                "label": "$4,000",
+                "value": 4000
+              },
+              {
+                "label": "$4,125",
+                "value": 4125
+              },
+              {
+                "label": "$4,250",
+                "value": 4250
+              },
+              {
+                "label": "$4,375",
+                "value": 4375
+              },
+              {
+                "label": "$4,500",
+                "value": 4500
+              },
+              {
+                "label": "$4,625",
+                "value": 4625
+              },
+              {
+                "label": "$4,750",
+                "value": 4750
+              },
+              {
+                "label": "$4,875",
+                "value": 4875
+              },
+              {
+                "label": "$5,000",
+                "value": 5000
+              },
+              {
+                "label": "$6,250",
+                "value": 6250
+              },
+              {
+                "label": "$7,500",
+                "value": 7500
+              },
+              {
+                "label": "$8,750",
+                "value": 8750
+              },
+              {
+                "label": "$10,000",
+                "value": 10000
+              },
+              {
+                "label": "$11,250",
+                "value": 11250
+              },
+              {
+                "label": "$12,500",
+                "value": 12500
+              },
+              {
+                "label": "$13,750",
+                "value": 13750
+              },
+              {
+                "label": "$15,000",
+                "value": 15000
+              },
+              {
+                "label": "$16,250",
+                "value": 16250
+              },
+              {
+                "label": "$17,500",
+                "value": 17500
+              },
+              {
+                "label": "$18,750",
+                "value": 18750
+              },
+              {
+                "label": "$20,000",
+                "value": 20000
+              },
+              {
+                "label": "$21,250",
+                "value": 21250
+              },
+              {
+                "label": "$22,500",
+                "value": 22500
+              },
+              {
+                "label": "$23,750",
+                "value": 23750
+              },
+              {
+                "label": "$25,000",
+                "value": 25000
+              },
+              {
+                "label": "$27,500",
+                "value": 27500
+              },
+              {
+                "label": "$30,000",
+                "value": 30000
+              },
+              {
+                "label": "$32,500",
+                "value": 32500
+              },
+              {
+                "label": "$35,000",
+                "value": 35000
+              },
+              {
+                "label": "$37,500",
+                "value": 37500
+              },
+              {
+                "label": "$40,000",
+                "value": 40000
+              },
+              {
+                "label": "$42,500",
+                "value": 42500
+              },
+              {
+                "label": "$45,000",
+                "value": 45000
+              },
+              {
+                "label": "$47,500",
+                "value": 47500
+              },
+              {
+                "label": "$50,000",
+                "value": 50000
+              },
+              {
+                "label": "$60,000",
+                "value": 60000
+              },
+              {
+                "label": "$70,000",
+                "value": 70000
+              },
+              {
+                "label": "$80,000",
+                "value": 80000
+              },
+              {
+                "label": "$90,000",
+                "value": 90000
+              },
+              {
+                "label": "$100,000",
+                "value": 100000
+              }
+            ]
+          },
+          "monthlyCostDownPayment": {
+            "id": "monthlyCostDownPayment",
+            "shortId": "mcdp",
+            "labels": {
+              "default": "Down Payment"
+            },
+            "type": "Enum",
+            "defaultValue": {
+              "value": null
+            },
+            "valueFormatter": {
+              "none": "No Down Payment",
+              "numberFormatter": "0,0"
+            },
+            "allowedValues": {
+              "No Down Payment": null,
+              "$1,000": 1000,
+              "$2,000": 2000,
+              "$3,000": 3000,
+              "$4,000": 4000,
+              "$5,000": 5000,
+              "$6,000": 6000,
+              "$7,000": 7000,
+              "$8,000": 8000,
+              "$9,000": 9000,
+              "$10,000": 10000,
+              "$11,000": 11000,
+              "$12,000": 12000,
+              "$13,000": 13000,
+              "$14,000": 14000,
+              "$15,000": 15000,
+              "$16,000": 16000,
+              "$17,000": 17000,
+              "$18,000": 18000,
+              "$19,000": 19000,
+              "$20,000": 20000,
+              "$25,000": 25000,
+              "$30,000": 30000,
+              "$35,000": 35000,
+              "$40,000": 40000,
+              "$45,000": 45000,
+              "$50,000": 50000,
+              "$55,000": 55000,
+              "$60,000": 60000,
+              "$65,000": 65000,
+              "$70,000": 70000,
+              "$75,000": 75000,
+              "$80,000": 80000,
+              "$85,000": 85000,
+              "$90,000": 90000,
+              "$95,000": 95000,
+              "$100,000": 100000,
+              "$110,000": 110000,
+              "$120,000": 120000,
+              "$130,000": 130000,
+              "$140,000": 140000,
+              "$150,000": 150000,
+              "$160,000": 160000,
+              "$170,000": 170000,
+              "$180,000": 180000,
+              "$190,000": 190000,
+              "$200,000": 200000,
+              "$210,000": 210000,
+              "$220,000": 220000,
+              "$230,000": 230000,
+              "$240,000": 240000,
+              "$250,000": 250000,
+              "$260,000": 260000,
+              "$270,000": 270000,
+              "$280,000": 280000,
+              "$290,000": 290000,
+              "$300,000": 300000,
+              "$350,000": 350000,
+              "$400,000": 400000,
+              "$450,000": 450000,
+              "$500,000": 500000,
+              "$550,000": 550000,
+              "$600,000": 600000,
+              "$650,000": 650000,
+              "$700,000": 700000,
+              "$750,000": 750000,
+              "$800,000": 800000,
+              "$850,000": 850000,
+              "$900,000": 900000,
+              "$950,000": 950000,
+              "$1,000,000": 1000000,
+              "$1,250,000": 1250000,
+              "$1,500,000": 1500000,
+              "$1,750,000": 1750000,
+              "$2,000,000": 2000000,
+              "$2,250,000": 2250000,
+              "$2,500,000": 2500000,
+              "$2,750,000": 2750000,
+              "$3,000,000": 3000000,
+              "$3,250,000": 3250000,
+              "$3,500,000": 3500000,
+              "$3,750,000": 3750000,
+              "$4,000,000": 4000000,
+              "$4,250,000": 4250000,
+              "$4,500,000": 4500000,
+              "$4,750,000": 4750000,
+              "$5,000,000": 5000000,
+              "$5,250,000": 5250000,
+              "$5,500,000": 5500000,
+              "$5,750,000": 5750000,
+              "$6,000,000": 6000000,
+              "$6,250,000": 6250000,
+              "$6,500,000": 6500000,
+              "$6,750,000": 6750000,
+              "$7,000,000": 7000000,
+              "$7,250,000": 7250000,
+              "$7,500,000": 7500000,
+              "$7,750,000": 7750000,
+              "$8,000,000": 8000000,
+              "$8,250,000": 8250000,
+              "$8,500,000": 8500000,
+              "$8,750,000": 8750000,
+              "$9,000,000": 9000000,
+              "$9,250,000": 9250000,
+              "$9,500,000": 9500000,
+              "$9,750,000": 9750000,
+              "$10,000,000+": 10000000
+            }
+          },
+          "monthlyCostLoanTerm": {
+            "id": "monthlyCostLoanTerm",
+            "shortId": "mclt",
+            "type": "Integer",
+            "defaultValue": {
+              "value": null
+            }
+          },
+          "monthlyCostInterestRate": {
+            "id": "monthlyCostInterestRate",
+            "shortId": "mcir",
+            "type": "Float",
+            "defaultValue": {
+              "value": null
+            }
+          },
+          "monthlyCostCreditScore": {
+            "id": "monthlyCostCreditScore",
+            "shortId": "mccs",
+            "type": "Enum",
+            "defaultValue": {
+              "value": null
+            },
+            "labels": {
+              "default": "Credit Score"
+            },
+            "allowedValues": {
+              "No Selection": null,
+              "720 & above": "CS720_AND_ABOVE",
+              "660 - 719": "CS660_719",
+              "620 - 659": "CS620_659",
+              "580 - 619": "CS580_619",
+              "579 or below": "CS579_AND_BELOW"
+            }
+          },
+          "onlyRestrictedOnMarketListing": {
+            "id": "onlyRestrictedOnMarketListing",
+            "shortId": "restricted",
+            "type": "Boolean",
+            "defaultValue": {
+              "value": false
+            }
+          }
+        },
+        "defaultFilterState": {
+          "price": {
+            "min": null,
+            "max": null
+          },
+          "monthlyPayment": {
+            "min": null,
+            "max": null
+          },
+          "beds": {
+            "min": null,
+            "max": null
+          },
+          "singleStory": {
+            "value": false
+          },
+          "baths": {
+            "min": null,
+            "max": null
+          },
+          "sqft": {
+            "min": null,
+            "max": null
+          },
+          "lotSize": {
+            "min": null,
+            "max": null,
+            "units": "sqft"
+          },
+          "built": {
+            "min": null,
+            "max": null
+          },
+          "hoa": {
+            "min": null,
+            "max": null
+          },
+          "includeHomesWithNoHoaData": {
+            "value": true
+          },
+          "doz": {
+            "value": "any"
+          },
+          "sortSelection": {
+            "value": "personalizedsort"
+          },
+          "keywords": {
+            "value": ""
+          },
+          "includeSchoolsSelection": {
+            "highSchool": null,
+            "middleSchool": null,
+            "elementarySchool": null
+          },
+          "isElementarySchool": {
+            "value": true
+          },
+          "isMiddleSchool": {
+            "value": true
+          },
+          "isHighSchool": {
+            "value": true
+          },
+          "isPublicSchool": {
+            "value": true
+          },
+          "isPrivateSchool": {
+            "value": true
+          },
+          "isCharterSchool": {
+            "value": true
+          },
+          "greatSchoolsRating": {
+            "min": 1
+          },
+          "includeUnratedSchools": {
+            "value": true
+          },
+          "enableSchools": {
+            "value": false
+          },
+          "dataSourceSelection": {
+            "value": "all"
+          },
+          "onlyWithPhotos": {
+            "value": false
+          },
+          "onlyPriceReduction": {
+            "value": false
+          },
+          "onlyRentalPetsAllowed": {
+            "value": false
+          },
+          "onlyRentalLargeDogsAllowed": {
+            "value": false
+          },
+          "onlyRentalSmallDogsAllowed": {
+            "value": false
+          },
+          "onlyRentalCatsAllowed": {
+            "value": false
+          },
+          "onlyRentalIncomeRestrictedHousingType": {
+            "value": false
+          },
+          "onlyRentalStudentHousingType": {
+            "value": false
+          },
+          "onlyRentalSeniorHousingType": {
+            "value": false
+          },
+          "onlyRentalDisabledHousingType": {
+            "value": false
+          },
+          "onlyRentalMilitaryHousingType": {
+            "value": false
+          },
+          "onlyRentalParkingAvailable": {
+            "value": false
+          },
+          "onlyRentalInUnitLaundry": {
+            "value": false
+          },
+          "onlyRentalAcceptsApplications": {
+            "value": false
+          },
+          "onlyRentalIncomeRestricted": {
+            "value": false
+          },
+          "onlyRentalHousingConnector": {
+            "value": false
+          },
+          "onlyRentalInstantTourAvailable": {
+            "value": false
+          },
+          "onlyRentalShortTermLease": {
+            "value": false
+          },
+          "onlyRentalFurnished": {
+            "value": false
+          },
+          "onlyRentalOutdoorSpace": {
+            "value": false
+          },
+          "hasFitnessCenter": {
+            "value": false
+          },
+          "hasDishwasher": {
+            "value": false
+          },
+          "highSpeedInternetAvailable": {
+            "value": false
+          },
+          "onlyRentalControlledAccess": {
+            "value": false
+          },
+          "onlyRentalNoPets": {
+            "value": false
+          },
+          "elevatorAccessAvailable": {
+            "value": false
+          },
+          "onlyRentalHasPromotion": {
+            "value": false
+          },
+          "isForSaleByAgent": {
+            "value": true
+          },
+          "isForSaleByOwner": {
+            "value": true
+          },
+          "isNewConstruction": {
+            "value": true
+          },
+          "isForSaleForeclosure": {
+            "value": true
+          },
+          "isActiveStatus": {
+            "value": true
+          },
+          "isComingSoon": {
+            "value": true
+          },
+          "isComingSoonStatus": {
+            "value": true
+          },
+          "isZillowPreview": {
+            "value": true
+          },
+          "isAuction": {
+            "value": true
+          },
+          "isPreMarketForeclosure": {
+            "value": false
+          },
+          "isPreMarketPreForeclosure": {
+            "value": false
+          },
+          "isForRent": {
+            "value": false
+          },
+          "isRecentlySold": {
+            "value": false
+          },
+          "isOpenHousesOnly": {
+            "value": false
+          },
+          "isZillowOwnedOnly": {
+            "value": false
+          },
+          "isPendingListingsSelected": {
+            "value": false
+          },
+          "isAcceptingBackupOffersSelected": {
+            "value": false
+          },
+          "isSingleFamily": {
+            "value": true
+          },
+          "isCondo": {
+            "value": true
+          },
+          "isApartmentOrCondo": {
+            "value": true
+          },
+          "isMultiFamily": {
+            "value": true
+          },
+          "isApartment": {
+            "value": true
+          },
+          "isManufactured": {
+            "value": true
+          },
+          "isLotLand": {
+            "value": true
+          },
+          "isTownhouse": {
+            "value": true
+          },
+          "isRoomForRent": {
+            "value": false
+          },
+          "isEntirePlaceForRent": {
+            "value": true
+          },
+          "hasDisabledAccess": {
+            "value": false
+          },
+          "hasHardwoodFloor": {
+            "value": false
+          },
+          "areUtilitiesIncluded": {
+            "value": false
+          },
+          "isCityView": {
+            "value": false
+          },
+          "isMountainView": {
+            "value": false
+          },
+          "isParkView": {
+            "value": false
+          },
+          "isWaterView": {
+            "value": false
+          },
+          "SEOTypedIdField": {
+            "value": null,
+            "field": null,
+            "id": null
+          },
+          "parkingSpots": {
+            "min": null
+          },
+          "hasGarage": {
+            "value": false
+          },
+          "hasAirConditioning": {
+            "value": false
+          },
+          "hasPool": {
+            "value": false
+          },
+          "isWaterfront": {
+            "value": false
+          },
+          "isBasementFinished": {
+            "value": false
+          },
+          "isBasementUnfinished": {
+            "value": false
+          },
+          "hasBasement": {
+            "value": false
+          },
+          "is3dHome": {
+            "value": false
+          },
+          "isShowcase": {
+            "value": false
+          },
+          "onlyRentalFeaturedMultiFamilyBuilding": {
+            "value": false
+          },
+          "onlyRentalRequestedAvailabilityDate": {
+            "value": ""
+          },
+          "onlyRentalExcludeNullAvailabilityDates": {
+            "value": false
+          },
+          "ageRestricted55Plus": {
+            "value": "i"
+          },
+          "commuteDestination": {
+            "value": ""
+          },
+          "commuteMode": {
+            "value": "driving"
+          },
+          "commuteTimeOfDay": {
+            "value": "now"
+          },
+          "commuteMaxTime": {
+            "value": null
+          },
+          "monthlyCostPayment": {
+            "min": null,
+            "max": null
+          },
+          "monthlyCostDownPayment": {
+            "value": null
+          },
+          "monthlyCostLoanTerm": {
+            "value": null
+          },
+          "monthlyCostInterestRate": {
+            "value": null
+          },
+          "monthlyCostCreditScore": {
+            "value": null
+          },
+          "onlyRestrictedOnMarketListing": {
+            "value": false
+          }
+        },
+        "defaultQueryState": {
+          "filterState": {},
+          "dataSource": "core",
+          "isMapVisible": false,
+          "isListVisible": true,
+          "mapBounds": {
+            "west": 0,
+            "south": 0,
+            "east": 0,
+            "north": 0,
+            "zoom": 10
+          },
+          "mapZoom": 10,
+          "pagination": {
+            "currentPage": 1
+          },
+          "usersSearchTerm": null,
+          "regionSelection": null,
+          "schoolId": null,
+          "districtId": null,
+          "customRegionId": null,
+          "savedSearchEnrollmentId": null,
+          "nearMe": null,
+          "category": "cat1",
+          "debugRequest": {},
+          "commuteLat": null,
+          "commuteLng": null,
+          "listPriceActive": true
+        },
+        "searchPageConstants": {
+          "isMobile": false,
+          "isTablet": false,
+          "searchMapGoogleAPIKey": "AIzaSyC1dhrSOF7uvGpaCanRaa9sT7MIakZBGlc",
+          "mapComboUrl": "https://www.zillowstatic.com",
+          "debugEnabled": false,
+          "keystoneTargetUrl": "https://cs.zg-api.com/event",
+          "categoryOneTitle": "Agent listings",
+          "categoryTwoTitle": "Other listings",
+          "gtm": {
+            "gtmContainerID": "GTM-P6HT97",
+            "isGtmEnabled": true,
+            "gtmInitialData": [
+              {
+                "isTablet": false,
+                "isPhone": false,
+                "isMobile": false,
+                "isMobileApp": false
+              }
+            ]
+          },
+          "staticMapUrls": {
+            "3": "https://maps.googleapis.com/maps/api/staticmap?center=37.791,-122.39500000000001&zoom=3&size=905x720&maptype=roadmap&key=AIzaSyC1dhrSOF7uvGpaCanRaa9sT7MIakZBGlc&style=feature:all%7Celement:labels%7Cvisibility:off&signature=VSF_P-TUnwupYQ6966U3LDwWxcc=",
+            "4": "https://maps.googleapis.com/maps/api/staticmap?center=37.791,-122.39500000000001&zoom=4&size=905x720&maptype=roadmap&key=AIzaSyC1dhrSOF7uvGpaCanRaa9sT7MIakZBGlc&style=feature:all%7Celement:labels%7Cvisibility:off&signature=WA7owiYVkwVEhe22dPumDGGd2K4=",
+            "5": "https://maps.googleapis.com/maps/api/staticmap?center=37.791,-122.39500000000001&zoom=5&size=905x720&maptype=roadmap&key=AIzaSyC1dhrSOF7uvGpaCanRaa9sT7MIakZBGlc&style=feature:all%7Celement:labels%7Cvisibility:off&signature=Bnene8-wLy6l2U8jqMnp4rlrfJw=",
+            "6": "https://maps.googleapis.com/maps/api/staticmap?center=37.791,-122.39500000000001&zoom=6&size=905x720&maptype=roadmap&key=AIzaSyC1dhrSOF7uvGpaCanRaa9sT7MIakZBGlc&style=feature:all%7Celement:labels%7Cvisibility:off&signature=IIuZ7STZ0IW6Hp6pYsIM9JC_a8c=",
+            "7": "https://maps.googleapis.com/maps/api/staticmap?center=37.791,-122.39500000000001&zoom=7&size=905x720&maptype=roadmap&key=AIzaSyC1dhrSOF7uvGpaCanRaa9sT7MIakZBGlc&style=feature:all%7Celement:labels%7Cvisibility:off&signature=Ox8PfQ06uOrq7AiwxS3prw4kkTo=",
+            "8": "https://maps.googleapis.com/maps/api/staticmap?center=37.791,-122.39500000000001&zoom=8&size=905x720&maptype=roadmap&key=AIzaSyC1dhrSOF7uvGpaCanRaa9sT7MIakZBGlc&style=feature:all%7Celement:labels%7Cvisibility:off&signature=vsXy_VfRalWN59Z0yY8RDznGUiM=",
+            "9": "https://maps.googleapis.com/maps/api/staticmap?center=37.791,-122.39500000000001&zoom=9&size=905x720&maptype=roadmap&key=AIzaSyC1dhrSOF7uvGpaCanRaa9sT7MIakZBGlc&style=feature:all%7Celement:labels%7Cvisibility:off&signature=hmiY_B3tmtKXhn0FTsNWttobwVY=",
+            "10": "https://maps.googleapis.com/maps/api/staticmap?center=37.791,-122.39500000000001&zoom=10&size=905x720&maptype=roadmap&key=AIzaSyC1dhrSOF7uvGpaCanRaa9sT7MIakZBGlc&style=feature:all%7Celement:labels%7Cvisibility:off&signature=MOpXnAXUbh7qem_U4u8p4N2BRew=",
+            "11": "https://maps.googleapis.com/maps/api/staticmap?center=37.791,-122.39500000000001&zoom=11&size=905x720&maptype=roadmap&key=AIzaSyC1dhrSOF7uvGpaCanRaa9sT7MIakZBGlc&style=feature:all%7Celement:labels%7Cvisibility:off&signature=JqmmJG8RmwrqqBPHSy2JdIjVEBY=",
+            "12": "https://maps.googleapis.com/maps/api/staticmap?center=37.791,-122.39500000000001&zoom=12&size=905x720&maptype=roadmap&key=AIzaSyC1dhrSOF7uvGpaCanRaa9sT7MIakZBGlc&style=feature:all%7Celement:labels%7Cvisibility:off&signature=vPPnLgHbaHbNar9GrbB6zyHMH0c=",
+            "13": "https://maps.googleapis.com/maps/api/staticmap?center=37.791,-122.39500000000001&zoom=13&size=905x720&maptype=roadmap&key=AIzaSyC1dhrSOF7uvGpaCanRaa9sT7MIakZBGlc&style=feature:all%7Celement:labels%7Cvisibility:off&signature=XPYbS0-TbiMvddCyccrZ9xlpTXA=",
+            "14": "https://maps.googleapis.com/maps/api/staticmap?center=37.791,-122.39500000000001&zoom=14&size=905x720&maptype=roadmap&key=AIzaSyC1dhrSOF7uvGpaCanRaa9sT7MIakZBGlc&style=feature:all%7Celement:labels%7Cvisibility:off&signature=fe_Xfxg_S9tY0ZFcml95f1FzMKE=",
+            "15": "https://maps.googleapis.com/maps/api/staticmap?center=37.791,-122.39500000000001&zoom=15&size=905x720&maptype=roadmap&key=AIzaSyC1dhrSOF7uvGpaCanRaa9sT7MIakZBGlc&style=feature:all%7Celement:labels%7Cvisibility:off&signature=A7UNsu88uqpWxQBDzSKmm6pRZUk=",
+            "16": "https://maps.googleapis.com/maps/api/staticmap?center=37.791,-122.39500000000001&zoom=16&size=905x720&maptype=roadmap&key=AIzaSyC1dhrSOF7uvGpaCanRaa9sT7MIakZBGlc&style=feature:all%7Celement:labels%7Cvisibility:off&signature=9cWghs-06Qzu9pYws7TClaV7_uY=",
+            "17": "https://maps.googleapis.com/maps/api/staticmap?center=37.791,-122.39500000000001&zoom=17&size=905x720&maptype=satellite&key=AIzaSyC1dhrSOF7uvGpaCanRaa9sT7MIakZBGlc&style=feature:all%7Celement:labels%7Cvisibility:off&signature=p6DN0tPxopUxvgBEZRpFiCb5dvc=",
+            "18": "https://maps.googleapis.com/maps/api/staticmap?center=37.791,-122.39500000000001&zoom=18&size=905x720&maptype=satellite&key=AIzaSyC1dhrSOF7uvGpaCanRaa9sT7MIakZBGlc&style=feature:all%7Celement:labels%7Cvisibility:off&signature=-MeNqAZRkUoNVHkYs7MaMu6L6BY="
+          }
+        },
+        "user": {
+          "isLoggedIn": false,
+          "hasHousingConnectorPermission": false,
+          "personalizedSearchTraceID": "6a05159b000000004f95025a18c4cf70",
+          "guid": "8c8ba433-5dfe-448b-996f-7cc5503c54bf",
+          "zuid": "",
+          "isBot": false,
+          "email": "",
+          "displayName": "",
+          "isAgent": false,
+          "phoneNumber": ""
+        },
+        "mapState": {
+          "customRegionPolygonWkt": null,
+          "schoolPolygonWkt": null,
+          "commutePolygonWkt": null,
+          "poiPolygonWkt": null,
+          "isCurrentLocationSearch": false,
+          "userPosition": {
+            "lat": null,
+            "lon": null
+          }
+        },
+        "regionState": {
+          "regionInfo": [
+            {
+              "regionId": 20330,
+              "regionType": 6,
+              "regionName": "San Francisco",
+              "displayName": "San Francisco CA",
+              "isPointRegion": false
+            }
+          ],
+          "regionBounds": {
+            "north": 37.842914,
+            "south": 37.707608,
+            "east": -122.32992,
+            "west": -122.536739
+          }
+        },
+        "schoolState": {},
+        "poiState": {},
+        "searchPageSeoObject": {
+          "baseUrl": "/san-francisco-ca/rentals/",
+          "windowTitle": "Rental Listings in San Francisco CA - 0 Rentals | Zillow",
+          "metaDescription": "This is a list of all of the rental listings in San Francisco CA. Don't forget to use the filters and set up a saved search.",
+          "robotsTagContent": "NOINDEX, NOFOLLOW"
+        },
+        "abTrials": {
+          "TR_FS_SRP_STRUCTURED_MARKUP_ENHANCEMENT": "ON",
+          "SXP_CURATED_COLLECTIONS": "off",
+          "SXP_Link_MapDot_ListCard": "on",
+          "SXP_UPDATE_MAP_MARKER_PILLS": "on",
+          "SXP_VR": "off",
+          "RE_FR_Photo_Carousel_mWeb": "on",
+          "RE_PREMIUM_CTA": "on",
+          "RE_PREMIUM_DEALS": "off",
+          "TR_NFS_SRP_STRUCTURED_MARKUP_ENHANCEMENT": "CONTROL",
+          "HOPS_MWEB_SAFARI_BANNER_SRP_FSHDP": "off",
+          "RE_PREMIUM_CTA_SIGNED_OUT": "off",
+          "SXP_USE_CLICKSTREAM_NEWLANE": "ON",
+          "RE_PropertyCard_White_Badge": "control",
+          "SXP_KACEY_SEARCH_BOX": "on",
+          "SXP_ZILLOW_PREVIEW_FILTER": "off",
+          "RE_RENTALS_INLINE_FILTER_SUGGESTIONS": "control",
+          "RE_ExpandedMapBoundaries": "20_or_less",
+          "LEGO_SRP_LIST_CARD_MULTIPLE_CTAS": "CONTROL",
+          "RE_FR_Link_MapDot_ListCard": "on",
+          "SXP_ExpandedMapBoundaries": "off",
+          "RE_SRP_UnitInfo": "control",
+          "RE_REQUEST_ON_PRICE": "control",
+          "RE_QUICK_GUIDED_FILTERS_MWEB": "CONTROL",
+          "RE_filter_visual_overhaul": "on",
+          "SXP_AZEROTH_SEARCH_BOX": "on",
+          "ELE_ADS_WEB_BOLTIVE": "off",
+          "SXP_SRP_ZESS_ADOPTION": "on",
+          "LEGO_RENTALS_STATUSES_ON_SRP_LIST_CARD": "CONTROL",
+          "TR_FR_SRP_STRUCTURED_MARKUP_ENHANCEMENT": "on",
+          "RE_FR_FitnessCenter_Gym_Dishwasher_Filter": "on",
+          "TR_SEO_SANDBOX_SPSA": "ON",
+          "RE_PREMIUM_LISTCARD": "on",
+          "RE_ENHANCED_PLUS_DISABLED_WEB": "off",
+          "Web_Nav_Account_Inbox": "on",
+          "NC_Property_Tag": "off",
+          "IA_SIGN_IN_BUTTON": "on",
+          "HOPS_UPSELL_SRP_MODAL_MFE": "on",
+          "NC_CDP_MAP_CARDS": "control",
+          "RE_JANUS_BRAIN_DIFFERENTIATION_UPDATE_V2": "off",
+          "WAY_PRODUCT_NAV": "on",
+          "SXP_filter_visual_overhaul": "control",
+          "RE_ENHANCED_SPECIAL_OFFER_CONTEXT": "on",
+          "AI_VOYAGER_WEB": "CONTROL",
+          "RE_RENTALS_VOYAGER_AA": "CONTROL",
+          "AI_VOYAGER_ALL": "CONTROL",
+          "AI_VOYAGER_WEB_SEARCH_BOX": "CONTROL",
+          "AI_VOYAGER_WEB_SRP": "CONTROL",
+          "ZHL_BUYABILITY_PREAPPROVAL_WEB": "CONTROL",
+          "RE_PREMIUM_CTA_v2": "on",
+          "RE_JANUS_BRAIN_DIFFERENTIATION_UPDATE": "off",
+          "RE_PREMIUM_CTA_NO_PHONE_DESKTOP": "on",
+          "SXP_SHOWCASE_MAP_MARKER": "off",
+          "SXP_SSR_OPTIMIZATION": "on",
+          "HOPS_UPSELL_TOP_BANNER": "on",
+          "SXP_CLEAN_UP_CSRF_TOKEN": "on",
+          "RE_Multilocation_Commute_V1": "control",
+          "RE_MAP_CARD_V2": "on"
+        },
+        "cat1": {
+          "searchResults": {
+            "listResults": [],
+            "mapResults": [],
+            "relaxedResults": [],
+            "resultsHash": "1",
+            "homeRecCount": 0,
+            "showForYouCount": 0,
+            "relaxedResultsHash": "1",
+            "resultsCommingled": true
+          },
+          "searchList": {
+            "expansionDistance": 0,
+            "staticBaseUrl": null,
+            "zeroResultResponse": {
+              "shouldShowZeroResultMessage": true,
+              "shouldShowFilterSuggestionBoxes": true,
+              "filterRemovalSuggestions": null
+            },
+            "pagination": null,
+            "adsConfig": {
+              "navAdSlot": "zillow/search_results_1/buy_general/search_1",
+              "displayAdSlot": "zillow/search_results_1/buy_general/b_right_p1",
+              "targets": {
+                "guid": "8c8ba433-5dfe-448b-996f-7cc5503c54bf",
+                "vers": "constellation_dynamic,srp_ad_target_refactor",
+                "premieragent": "no",
+                "state": "CA",
+                "dma": "37",
+                "cnty": "San_Francisco",
+                "city": "San_Francisco",
+                "mlat": "37.791",
+                "mlong": "-122.39500000000001",
+                "prange": "0-100k,0-499,1000-1249,1250-1499,1500-1749,1750-1999,2000-2499,500-749,750-999",
+                "listtp": "buy_general",
+                "searchtp": "city"
+              },
+              "needsUpdate": true,
+              "restrictedAds": false
+            },
+            "totalResultCount": 0,
+            "resultsPerPage": 41,
+            "totalPages": 0,
+            "limitSearchResultsCount": null,
+            "listResultsTitle": "San Francisco CA Rental Listings",
+            "resultContexts": null,
+            "pageRules": null,
+            "gdpUrl": "https://www.zillow.com/graphql/",
+            "zgGraphUrl": "/zg-graph"
+          }
+        },
+        "categoryTotals": {
+          "cat1": {
+            "totalResultCount": 0
+          },
+          "cat2": {
+            "totalResultCount": 0
+          }
+        },
+        "footerLinksContents": {
+          "region_info": {
+            "region_id": 20330,
+            "region_type": 6,
+            "region_name": "San Francisco",
+            "region_name_for_display": "San Francisco CA"
+          },
+          "canonical_url": "/san-francisco-ca/rentals/",
+          "base_url": "https://www.zillow.com",
+          "ab_trials": [],
+          "contents": [
+            {
+              "template": "BREADCRUMBS",
+              "title": "For Rent",
+              "heading_level": null,
+              "rows": [
+                {
+                  "text": "California",
+                  "path": "/ca/rentals/"
+                },
+                {
+                  "text": "San Francisco County",
+                  "path": "/san-francisco-county-ca/rentals/"
+                },
+                {
+                  "text": "San Francisco"
+                }
+              ]
+            },
+            {
+              "template": "NESTED_SECTION",
+              "title": "Find What You're Looking for in a Rental",
+              "heading_level": null,
+              "icon": null,
+              "rows": [
+                [
+                  {
+                    "template": "SINGLE_SECTION",
+                    "title": "Search by Bedroom Size",
+                    "heading_level": null,
+                    "icon": "home",
+                    "rows": [
+                      [
+                        {
+                          "text": "San Francisco 1 Bedroom Houses",
+                          "path": "/san-francisco-ca/rent-houses-1-bedrooms/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "San Francisco 2 Bedroom Houses",
+                          "path": "/san-francisco-ca/rent-houses-2-bedrooms/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "San Francisco 3 Bedroom Houses",
+                          "path": "/san-francisco-ca/rent-houses-3-bedrooms/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "San Francisco 1 Bedroom Apartments",
+                          "path": "/san-francisco-ca/apartments-1-bedrooms/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "San Francisco 2 Bedroom Apartments",
+                          "path": "/san-francisco-ca/apartments-2-bedrooms/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "San Francisco 3 Bedroom Apartments",
+                          "path": "/san-francisco-ca/apartments-3-bedrooms/"
+                        }
+                      ]
+                    ],
+                    "expanded": true
+                  }
+                ],
+                [
+                  {
+                    "template": "SINGLE_SECTION",
+                    "title": "Select Property Types",
+                    "heading_level": null,
+                    "icon": "rent",
+                    "rows": [
+                      [
+                        {
+                          "text": "San Francisco Apartments for Rent",
+                          "path": "/san-francisco-ca/apartments/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "San Francisco Condos for Rent",
+                          "path": "/san-francisco-ca/condos-for-rent/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "San Francisco Townhouses for Rent",
+                          "path": "/san-francisco-ca/rent-townhomes/"
+                        }
+                      ]
+                    ],
+                    "expanded": true
+                  }
+                ],
+                [
+                  {
+                    "template": "SINGLE_SECTION",
+                    "title": "Choose Apartment by Amenity",
+                    "heading_level": null,
+                    "icon": "hammer",
+                    "rows": [
+                      [
+                        {
+                          "text": "Pet Friendly Apartments in San Francisco",
+                          "path": "/san-francisco-ca/pet-friendly/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Furnished Apartments in San Francisco",
+                          "path": "/san-francisco-ca/furnished-apartments/"
+                        }
+                      ]
+                    ],
+                    "expanded": true
+                  }
+                ],
+                [
+                  {
+                    "template": "SINGLE_SECTION",
+                    "title": "Find Speciality Housing",
+                    "heading_level": null,
+                    "icon": "searchHeart",
+                    "rows": [
+                      [
+                        {
+                          "text": "Studio Apartments in San Francisco",
+                          "path": "/san-francisco-ca/studio-apartments/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Luxury Apartments in San Francisco",
+                          "path": "/san-francisco-ca/luxury-apartments/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Cheap Apartments in San Francisco",
+                          "path": "/san-francisco-ca/cheap-apartments/"
+                        }
+                      ]
+                    ],
+                    "expanded": true
+                  }
+                ]
+              ],
+              "expanded": null
+            },
+            {
+              "template": "NESTED_SECTION",
+              "title": "Find Your Ideal Location",
+              "heading_level": null,
+              "icon": null,
+              "rows": [
+                [
+                  {
+                    "template": "SINGLE_SECTION",
+                    "title": "Nearby San Francisco Houses Rentals",
+                    "heading_level": null,
+                    "icon": "home",
+                    "rows": [
+                      [
+                        {
+                          "text": "San Francisco Houses for Rent",
+                          "path": "/san-francisco-ca/rent-houses/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Oakland Houses for Rent",
+                          "path": "/oakland-ca/rent-houses/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Berkeley Houses for Rent",
+                          "path": "/berkeley-ca/rent-houses/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Daly City Houses for Rent",
+                          "path": "/daly-city-ca/rent-houses/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Alameda Houses for Rent",
+                          "path": "/alameda-ca/rent-houses/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "South San Francisco Houses for Rent",
+                          "path": "/south-san-francisco-ca/rent-houses/"
+                        }
+                      ]
+                    ],
+                    "expanded": true
+                  }
+                ],
+                [
+                  {
+                    "template": "SINGLE_SECTION",
+                    "title": "San Francisco Neighborhood Houses Rentals",
+                    "heading_level": null,
+                    "icon": "forSaleSign",
+                    "rows": [
+                      [
+                        {
+                          "text": "Dolores Heights Houses for Rent",
+                          "path": "/dolores-heights-san-francisco-ca/rent-houses/"
+                        }
+                      ]
+                    ],
+                    "expanded": true
+                  }
+                ],
+                [
+                  {
+                    "template": "SINGLE_SECTION",
+                    "title": "San Francisco Houses Rentals by Zip Code",
+                    "heading_level": null,
+                    "icon": "keyHome",
+                    "rows": [
+                      [
+                        {
+                          "text": "94110 Houses for Rent",
+                          "path": "/san-francisco-ca-94110/rent-houses/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "94109 Houses for Rent",
+                          "path": "/san-francisco-ca-94109/rent-houses/"
+                        }
+                      ]
+                    ],
+                    "expanded": true
+                  }
+                ],
+                [
+                  {
+                    "template": "SINGLE_SECTION",
+                    "title": "Nearby San Francisco Townhouses Rentals",
+                    "heading_level": null,
+                    "icon": "homeTour",
+                    "rows": [
+                      [
+                        {
+                          "text": "San Francisco Townhouses for Rent",
+                          "path": "/san-francisco-ca/rent-townhomes/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Oakland Townhouses for Rent",
+                          "path": "/oakland-ca/rent-townhomes/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Berkeley Townhouses for Rent",
+                          "path": "/berkeley-ca/rent-townhomes/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Daly City Townhouses for Rent",
+                          "path": "/daly-city-ca/rent-townhomes/"
+                        }
+                      ]
+                    ],
+                    "expanded": true
+                  }
+                ],
+                [
+                  {
+                    "template": "SINGLE_SECTION",
+                    "title": "Nearby San Francisco Condos for Rent",
+                    "heading_level": null,
+                    "icon": "home",
+                    "rows": [
+                      [
+                        {
+                          "text": "San Francisco Condos for Rent",
+                          "path": "/san-francisco-ca/condos-for-rent/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Oakland Condos for Rent",
+                          "path": "/oakland-ca/condos-for-rent/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Berkeley Condos for Rent",
+                          "path": "/berkeley-ca/condos-for-rent/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Daly City Condos for Rent",
+                          "path": "/daly-city-ca/condos-for-rent/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Alameda Condos for Rent",
+                          "path": "/alameda-ca/condos-for-rent/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "South San Francisco Condos for Rent",
+                          "path": "/south-san-francisco-ca/condos-for-rent/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "San Bruno Condos for Rent",
+                          "path": "/san-bruno-ca/condos-for-rent/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Pacifica Condos for Rent",
+                          "path": "/pacifica-ca/condos-for-rent/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Mill Valley Condos for Rent",
+                          "path": "/mill-valley-ca/condos-for-rent/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Millbrae Condos for Rent",
+                          "path": "/millbrae-ca/condos-for-rent/"
+                        }
+                      ]
+                    ],
+                    "expanded": true
+                  }
+                ],
+                [
+                  {
+                    "template": "SINGLE_SECTION",
+                    "title": "Nearby San Francisco Apartments",
+                    "heading_level": null,
+                    "icon": "forSaleSign",
+                    "rows": [
+                      [
+                        {
+                          "text": "San Francisco Apartments for Rent",
+                          "path": "/san-francisco-ca/apartments/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Oakland Apartments for Rent",
+                          "path": "/oakland-ca/apartments/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Berkeley Apartments for Rent",
+                          "path": "/berkeley-ca/apartments/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Daly City Apartments for Rent",
+                          "path": "/daly-city-ca/apartments/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Alameda Apartments for Rent",
+                          "path": "/alameda-ca/apartments/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "South San Francisco Apartments for Rent",
+                          "path": "/south-san-francisco-ca/apartments/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "San Bruno Apartments for Rent",
+                          "path": "/san-bruno-ca/apartments/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Pacifica Apartments for Rent",
+                          "path": "/pacifica-ca/apartments/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Mill Valley Apartments for Rent",
+                          "path": "/mill-valley-ca/apartments/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Millbrae Apartments for Rent",
+                          "path": "/millbrae-ca/apartments/"
+                        }
+                      ]
+                    ],
+                    "expanded": true
+                  }
+                ],
+                [
+                  {
+                    "template": "SINGLE_SECTION",
+                    "title": "San Francisco Neighborhood Apartments",
+                    "heading_level": null,
+                    "icon": "compare",
+                    "rows": [
+                      [
+                        {
+                          "text": "Western Addition Apartments for Rent",
+                          "path": "/western-addition-san-francisco-ca/apartments/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Mission Dolores Apartments for Rent",
+                          "path": "/mission-dolores-san-francisco-ca/apartments/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Dolores Heights Apartments for Rent",
+                          "path": "/dolores-heights-san-francisco-ca/apartments/"
+                        }
+                      ]
+                    ],
+                    "expanded": true
+                  }
+                ],
+                [
+                  {
+                    "template": "SINGLE_SECTION",
+                    "title": "San Francisco Apartments by Zip Code",
+                    "heading_level": null,
+                    "icon": "park",
+                    "rows": [
+                      [
+                        {
+                          "text": "94110 Apartments for Rent",
+                          "path": "/san-francisco-ca-94110/apartments/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "94109 Apartments for Rent",
+                          "path": "/san-francisco-ca-94109/apartments/"
+                        }
+                      ]
+                    ],
+                    "expanded": true
+                  }
+                ],
+                [
+                  {
+                    "template": "SINGLE_SECTION",
+                    "title": "Popular Apartment Communities in San Francisco",
+                    "heading_level": null,
+                    "icon": "privacy",
+                    "rows": [
+                      [
+                        {
+                          "text": "California Rental Buildings",
+                          "path": "/browse/b/ca/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "San Francisco Rental Buildings",
+                          "path": "/browse/b/ca/san-francisco/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "1050 Post Street",
+                          "path": "/apartments/san-francisco-ca/1050-post-street/5XjwYW/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Astella",
+                          "path": "/apartments/san-francisco-ca/astella/CkBBqs/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Spera",
+                          "path": "/apartments/san-francisco-ca/spera/CgGxyh/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "814 California Street",
+                          "path": "/apartments/san-francisco-ca/814-california-street/5XkgGR/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "MB360",
+                          "path": "/apartments/san-francisco-ca/mb360/5XjSnF/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "19",
+                          "path": "/apartments/san-francisco-ca/19/9NLgyf/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "709 Geary Street",
+                          "path": "/apartments/san-francisco-ca/709-geary-street/5XjXtL/"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Hawkins",
+                          "path": "/apartments/san-francisco-ca/hawkins/CmNPKC/"
+                        }
+                      ]
+                    ],
+                    "expanded": true
+                  }
+                ]
+              ],
+              "expanded": null
+            },
+            {
+              "template": "SINGLE_SECTION",
+              "title": "Estimate Your Rental Budget",
+              "heading_level": null,
+              "icon": "calculator",
+              "rows": [
+                [
+                  {
+                    "text": "Rent Affordability Calculator",
+                    "path": "/rent-affordability-calculator/"
+                  }
+                ]
+              ],
+              "expanded": true
+            },
+            {
+              "template": "SINGLE_SECTION",
+              "title": "Have You Considered Buying?",
+              "heading_level": null,
+              "icon": "keyTag",
+              "rows": [
+                [
+                  {
+                    "text": "San Francisco Single Family Homes for Sale",
+                    "path": "/san-francisco-ca/houses/"
+                  }
+                ],
+                [
+                  {
+                    "text": "Waterfront Homes in San Francisco",
+                    "path": "/san-francisco-ca/waterfront/"
+                  }
+                ]
+              ],
+              "expanded": true
+            },
+            {
+              "template": "SINGLE_SECTION",
+              "title": "Download Our App",
+              "heading_level": null,
+              "icon": "appHome",
+              "rows": [
+                [
+                  {
+                    "text": "Mobile App for Rentals",
+                    "path": "/z/buying/app-download/"
+                  }
+                ]
+              ],
+              "expanded": true
+            }
+          ]
+        },
+        "uiState": {
+          "isNativeSafariBannerEnabled": false,
+          "isAgenticSearch": false
+        },
+        "serverRenderTimestamp": 1778718107815
+      },
+      "requestContext": {
+        "forwardedHost": "www.zillow.com",
+        "relativeUrl": "/san-francisco-ca/rentals/?searchQueryState={%22usersSearchTerm%22:%22San%20Francisco,%20CA%22,%22mapBounds%22:{%22north%22:37.802,%22south%22:37.78,%22east%22:-122.382,%22west%22:-122.408},%22isMapVisible%22:true,%22filterState%22:{%22price%22:{%22max%22:2000},%22mp%22:{%22max%22:2000},%22fr%22:{%22value%22:true},%22fsba%22:{%22value%22:false},%22fsbo%22:{%22value%22:false}},%22isListVisible%22:true}"
+      }
+    }
+  },
+  "page": "/render/[...urlPath]",
+  "query": {
+    "searchQueryState": "{\"usersSearchTerm\":\"San Francisco, CA\",\"mapBounds\":{\"north\":37.802,\"south\":37.78,\"east\":-122.382,\"west\":-122.408},\"isMapVisible\":true,\"filterState\":{\"price\":{\"max\":2000},\"mp\":{\"max\":2000},\"fr\":{\"value\":true},\"fsba\":{\"value\":false},\"fsbo\":{\"value\":false}},\"isListVisible\":true}",
+    "urlPath": [
+      "search-page-sub-app",
+      "SearchPage",
+      "san-francisco-ca",
+      "rentals"
+    ]
+  },
+  "buildId": "qr5_SXp5aeDxpAkzMjHaf",
+  "assetPrefix": "https://www.zillowstatic.com/s3/shopper-platform",
+  "runtimeConfig": {
+    "COMSCORE_DEFAULT_BEACON_TYPE": "2",
+    "COMSCORE_HOST": "www.zillow.com",
+    "COMSCORE_ID": "6036206",
+    "ENV": "prod",
+    "EXPERIMENTATION_BROWSER_AUTH_KEY": "kmu2mnogs6jem8a0tjoketi1uok6cf82g100",
+    "FS_FLOOR_MAP_CDN_HOST": "https://www.zillowstatic.com/floor_map/",
+    "FS_URL_BASE": "https://www.zillow.com",
+    "FS_VR_MODEL_CDN_HOST": "https://www.zillowstatic.com/vrmodels/",
+    "GOOGLE_CAPTCHA_PUBLIC_KEY": "6Lf2nvMSAAAAAMQ5p6WlAfDEixMdOQgJsij-3_ud",
+    "GOOGLE_MAPS_API_KEY_FOR_CAROUSEL_SHARED_SRP_AND_HDP": "AIzaSyC1dhrSOF7uvGpaCanRaa9sT7MIakZBGlc",
+    "GOOGLE_MAPS_API_KEY_FOR_CAROUSEL": "AIzaSyC7840ujg6Izbaovl4DpDoFiH9PPaUHC_o",
+    "GOOGLE_MAPS_API_KEY_FOR_MAP_LIGHTBOX": "AIzaSyA0K9WyzDUqpTQoq2IOcjuopBqP7gxLNYE",
+    "GOOGLE_MAPS_API_KEY_FOR_MEDIA_WALL": "AIzaSyCbIPQFfOFict8CoJpTYoEjVn_uJ2XX_Pg",
+    "HOME_DETAILS_SERVICE_HOST": "hdp.del.zillow.local",
+    "HOME_DETAILS_SERVICE_PORT": "80",
+    "HOME_DETAILS_SERVICE_SCHEME": "http",
+    "CDS_URL": "http://community-data.del.zillow.local:80",
+    "KEYSTONE_CRAWL_URL": "http://keystone-int-api.del.zillow.local/messages",
+    "KEYSTONE_SINK_URL": "https://e.zg-api.com/event",
+    "NEXT_PUBLIC_CLICKSTREAM_HOST_PORT": "e.zg-api.com:443",
+    "NEXT_PUBLIC_CLIENT_PROFILER_HOST_ID": "FDcwuOfroKyopBm6IPQSAg",
+    "NEXT_PUBLIC_ENV": "prod",
+    "NEXT_PUBLIC_GDP_COMMON": "https://www.zillow.com/graphql",
+    "NEXT_PUBLIC_SENTRY_DSN": "https://a0dfc4d25bb843acb944ff1d115fd1b2@o168728.ingest.sentry.io/4505313524383744",
+    "NEXT_PUBLIC_SENTRY_SAMPLE_RATE": "0.005",
+    "NEXT_PUBLIC_SERVICE_VERSION": "master.16270.75475f31",
+    "NODE_ENV": "production",
+    "PAGE_FRAME_SERVICE": "http://page-frame-prod.int.zgcp-consumer-prod-k8s.zg-int.net",
+    "PHOENIX_ADMIN_TOOL_ENDPOINT": "https://phoenix-admin-tool.dna-compute-prod.zg-int.net/zillow-data-lookup/",
+    "PLATFORM_INTERNAL_URL": "http://web-platform-router-prod.int.zgcp-consumer-prod-k8s.zg-int.net",
+    "S3S_SERVICE": "http://s3s.del.zillow.local",
+    "STATICS_CDN": "https://www.zillowstatic.com/s3/shopper-platform",
+    "ZILLOW_STATICS_CDN": "https://www.zillowstatic.com/s3",
+    "DD_SETUP": "true",
+    "DD_ASYNC_SETUP": "true",
+    "DD_SERVICE_NAME": "web-platform-render-search-page-sub-app",
+    "DD_SAMPLE_RATE": "1"
+  },
+  "isFallback": false,
+  "isExperimentalCompile": false,
+  "gip": true,
+  "appGip": true,
+  "scriptLoader": []
+}

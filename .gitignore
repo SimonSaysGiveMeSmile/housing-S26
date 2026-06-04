@@ -1,0 +1,5 @@
+secrets.json
+watch_state.json
+send_queue.json
+*.log
+run_status.json
