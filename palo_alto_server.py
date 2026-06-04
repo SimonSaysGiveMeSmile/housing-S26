@@ -8,27 +8,35 @@ from datetime import datetime
 
 ROOT = "/Users/test/Desktop/housing-S26"
 PORT = 5555
+MY_EMAIL = "tianjiahe11@gmail.com"  # Email used for contacting landlords
 
-# Load contact tracking data
+# Load contact tracking data.
+# IMPORTANT: "contacted" means a message was actually SENT — sourced from
+# watch_state["sent"] and/or contact_history.json. It is NOT seen_ids
+# (seen_ids only means the scraper saw the listing, not that we reached out).
 try:
     with open(os.path.join(ROOT, "watch_state.json")) as f:
         watch_state = json.load(f)
-        contacted_ids = set(watch_state.get("seen_ids", []))
+        sent_log = watch_state.get("sent", {}) or {}
 except:
-    contacted_ids = set()
+    sent_log = {}
 
-try:
-    with open(os.path.join(ROOT, "contact_info_extracted.json")) as f:
-        contact_info = {item["url"]: item for item in json.load(f)}
-except:
-    contact_info = {}
-
-# Load contact history
+# Load contact history (real confirmed sends only)
 try:
     with open(os.path.join(ROOT, "contact_history.json")) as f:
-        contact_history = json.load(f)
+        contact_history = {k: v for k, v in json.load(f).items() if not k.startswith("_")}
 except:
     contact_history = {}
+
+# A listing counts as contacted only if it has a real send record.
+contacted_ids = set(sent_log.keys()) | set(contact_history.keys())
+
+# Load the pending outreach queue (matches awaiting send — NOT yet contacted).
+try:
+    with open(os.path.join(ROOT, "send_queue.json")) as f:
+        queued_ids = {item["id"] for item in json.load(f) if "id" in item}
+except:
+    queued_ids = set()
 
 def time_elapsed(timestamp_str):
     """Calculate time elapsed from timestamp"""
@@ -58,8 +66,15 @@ h2{margin:18px 0 6px;padding-bottom:3px;border-bottom:2px solid #1a1a2e;font-siz
 .card{border:1px solid #e0e0e0;border-radius:6px;margin:8px 0;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.05);padding:10px;display:grid;grid-template-columns:180px 1fr 240px;gap:10px;position:relative;height:150px;overflow:hidden}
 .card.top{border:2px solid #4caf50;background:#f9fff9}
 .card.contacted{border-left:4px solid #2196f3;background:#f5f9ff}
+.card.queued{border-left:4px solid #f9a825;background:#fffdf5}
+.card.dead{border-left:4px solid #c62828;opacity:.55}
+.card.dead .card-images{filter:grayscale(1)}
+.card.offcriteria{border-left:4px solid #9e9e9e}
 .card.expanded{height:auto;max-height:600px;overflow-y:auto}
 .contact-badge{position:absolute;top:6px;right:6px;background:#2196f3;color:#fff;padding:3px 8px;border-radius:3px;font-size:10px;font-weight:700;text-transform:uppercase;z-index:10}
+.contact-badge.queued{background:#f9a825}
+.contact-badge.dead{background:#c62828}
+.offcriteria-note{font-size:10px;color:#b26a00;background:#fff3e0;border:1px solid #ffcc80;border-radius:3px;padding:3px 6px;margin-bottom:4px;line-height:1.3}
 .card-images{width:180px;height:130px;display:flex;flex-direction:column;gap:3px;overflow:hidden}
 .card-images img{width:100%;height:100%;object-fit:cover;border-radius:4px}
 .card-images.multi{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:3px}
@@ -85,6 +100,7 @@ ul.facts li{margin:2px 0}
 .contact-item svg{width:14px;height:14px;flex-shrink:0}
 .contact-item a{color:#1565c0;text-decoration:none;word-break:break-all}
 .contact-item a:hover{text-decoration:underline}
+.contact-item.my-email{background:#e3f2fd;border:1px solid #90caf9;border-radius:3px;padding:4px 6px;margin-top:2px}
 .contact-note{font-size:10px;color:#777;margin-top:4px;line-height:1.3}
 .contact-history{margin-top:8px;padding-top:8px;border-top:1px solid #e0e0e0;display:none}
 .card.expanded .contact-history{display:block}
@@ -112,7 +128,7 @@ NON_CL = [
           "Ask specifically for a studio / dedicated unit (not a shared room).","Apply online with your admit/role status."],
   "clabel":"Apply / info (R&DE Summer Housing)",
   "curl":"https://rde.stanford.edu/conferences/summer-intern-housing",
-  "email":"rde-conferencehousing@stanford.edu",
+  "email":"summerhousing@stanford.edu",
   "cnote":"No phone listed — online application. Request a self-contained unit; email the housing office with your admit status.",
   "src":"Stanford R&DE"},
 ]
@@ -128,7 +144,6 @@ SUBLETS = [
            "Wood floors, high ceilings, exposed brick, off-street parking, laundry in building."],
   "clabel":"View listing",
   "curl":"https://sfbay.craigslist.org/pen/sub/d/palo-alto-one-bedroom-flat-for-rent/7936614381.html",
-  "phone":"(793) 661-4381",
   "cnote":"THE sublease option to skip applications. Confirm: (1) June 1 OK, (2) utilities included, (3) lease length."},
 ]
 
@@ -142,11 +157,11 @@ REGULAR_RENTALS = [
            "No move-in date posted — confirm June 1 works."],
   "clabel":"View listing",
   "curl":"https://sfbay.craigslist.org/pen/apa/d/menlo-park-lovely-cozy-little-cottage/7936493194.html",
-  "phone":"(793) 649-3194",
   "cnote":"Whole cottage in Menlo Park. Likely needs application — confirm if negotiable."},
 
  {"top":False,"title":"1BR unit in redwood forest with deck","price":"$1,750/mo","src":"Craigslist /apa · likely needs application",
   "area":"Woodside/Kings Mountain (~15 min to Stanford)","status":("check","Regular rental · 1-year lease required"),
+  "offcriteria":"Outside your criteria: July 1 start (you need June 1) + one-year lease (not a summer option).",
   "facts":["Whole lower unit (540 sqft): 1BR/1BA, full kitchen, washer/dryer in unit.",
            "Private entrance, wood floors, large covered redwood deck with mountain views.",
            "In redwoods with hiking trails nearby, off-street parking, AC included.",
@@ -157,6 +172,7 @@ REGULAR_RENTALS = [
 
  {"top":False,"title":"In-law unit, 2BD/2BA lower level","price":"$1,700/mo","src":"Craigslist /apa · likely needs application",
   "area":"Redwood City/Atherton area (~15 min drive to Stanford)","status":("check","Regular rental · application likely"),
+  "dead":True,
   "imgs":["inlaw_1700_1.jpg","inlaw_1700_2.jpg","inlaw_1700_3.jpg","inlaw_1700_4.jpg"],
   "facts":["Lower-level in-law unit: 2 bedrooms, 2 full baths — your own space.",
            "Posted in /apa (not /sub) — likely a regular rental requiring application.",
@@ -187,6 +203,8 @@ REGULAR_RENTALS = [
 
  {"top":False,"title":"Studio in-law unit, separate entrance","price":"$1,650/mo","src":"Craigslist /apa · private landlord",
   "area":"San Bruno (~25 min to Stanford)","status":("check","Regular rental · references required"),
+  "dead":True,
+  "offcriteria":"Outside your criteria: ~25 min from Stanford (over your 20-min limit).",
   "facts":["In-law studio unit with separate entrance (308 sqft).",
            "Updated floors, recessed lighting, walking distance to SFO shuttle.",
            "No smoking, street parking available, no on-site laundry.",
@@ -222,14 +240,14 @@ REGULAR_RENTALS = [
            "NOT a sublease — full application process, waitlist, $1,200 deposit required."],
   "clabel":"View listing",
   "curl":"https://sfbay.craigslist.org/pen/apa/d/menlo-park-open-house-605-willow-rd-am/7934591226.html",
-  "phone":"(793) 459-1226",
-  "cnote":"Cheapest, but mandatory formal application + income docs. Skip if avoiding applications. Has phone contact."},
+  "cnote":"Cheapest, but mandatory formal application + income docs. Skip if avoiding applications. Phone shown on the listing page (click 'show contact info')."},
 ]
 
 # Additional short-term sublets
 SHORT_TERM = [
  {"top":False,"title":"1BR/1BA short-term (mid-June to mid-Aug)","price":"$1,800/mo","src":"Craigslist /sub · short-term",
   "area":"Portola Valley (~5 min to Stanford)","status":("check","Short-term · shared housing"),
+  "offcriteria":"Outside your criteria: shared house with a housemate (you wanted dedicated units only); covers only mid-June to mid-Aug.",
   "facts":["~1000 sqft private room with private bathroom in shared house (one other person).",
            "Short-term only: mid-June to mid-August 2026, minimum 5-6 weeks.",
            "Access to patios, garden, on-site laundry, carport parking.",
@@ -252,9 +270,29 @@ def card(L):
         if len(parts) > 0:
             listing_id = "cl-" + parts[-1].replace(".html", "")
 
+    dead = L.get("dead", False)
+    offcriteria = L.get("offcriteria", "")
+
     contacted = listing_id in contacted_ids
-    contacted_class = " contacted" if contacted else ""
-    contacted_badge = '<div class="contact-badge">✓ CONTACTED</div>' if contacted else ""
+    queued = (not contacted) and (listing_id in queued_ids)
+    if dead:
+        contacted_class = " dead"
+        contacted_badge = '<div class="contact-badge dead">⊗ EXPIRED</div>'
+    elif contacted:
+        contacted_class = " contacted"
+        contacted_badge = '<div class="contact-badge">✓ CONTACTED</div>'
+    elif queued:
+        contacted_class = " queued"
+        contacted_badge = '<div class="contact-badge queued">⏳ QUEUED · not sent</div>'
+    else:
+        contacted_class = ""
+        contacted_badge = ""
+
+    if offcriteria:
+        contacted_class += " offcriteria"
+
+    offcriteria_html = (f'<div class="offcriteria-note">⚠ {html.escape(offcriteria)}</div>'
+                        if offcriteria else "")
 
     imgs=L.get("imgs",[])
     phone=L.get("phone", "")
@@ -269,22 +307,29 @@ def card(L):
 
     # Build contact box
     contact_items = []
+
+    # Add "My Contact Email" first (highlighted)
+    contact_items.append(f'''<div class="contact-item my-email">
+        <svg fill="currentColor" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/></svg>
+        <span style="font-weight:600">My Email: {html.escape(MY_EMAIL)}</span>
+    </div>''')
+
     if phone:
         contact_items.append(f'''<div class="contact-item">
             <svg fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/></svg>
-            <a href="tel:{phone.replace(' ', '')}">{html.escape(phone)}</a>
+            <span>Landlord: <a href="tel:{phone.replace(' ', '')}">{html.escape(phone)}</a></span>
         </div>''')
 
     if email:
         contact_items.append(f'''<div class="contact-item">
             <svg fill="currentColor" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/></svg>
-            <a href="mailto:{email}">{html.escape(email)}</a>
+            <span>Landlord: <a href="mailto:{email}">{html.escape(email)}</a></span>
         </div>''')
 
-    if not contact_items:
+    if not phone and not email:
         contact_items.append(f'''<div class="contact-item">
             <svg fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/></svg>
-            <span style="color:#999">Email via Craigslist</span>
+            <span style="color:#999">Email via Craigslist reply button</span>
         </div>''')
 
     # Build contact history section
@@ -345,6 +390,7 @@ def card(L):
 <div class="card-head"><p class="card-title">{html.escape(L['title'])}</p><span class="price">{html.escape(L['price'])}</span></div>
 <div class="area">{html.escape(L['area'])} · {html.escape(L['src'])}</div>
 <span class="status {scls}">{html.escape(stext)}</span>
+{offcriteria_html}
 <ul class="facts">{facts}</ul>
 <button class="expand-toggle" onclick="toggleCard('{card_id}')">▼ Show more details</button>
 </div>
@@ -372,6 +418,10 @@ function toggleCard(cardId) {{
 
 <div class="banner">
 <strong>Priority:</strong> Start with the <strong>$1,890 Palo Alto sublease</strong> — it's the ONLY whole-unit sublease that skips applications.
+</div>
+
+<div class="banner cl">
+<strong>Outreach status (real):</strong> {len(contacted_ids)} listing(s) contacted · {len(queued_ids)} queued (not yet sent) · auto-send last run: <strong>0 sent, 52 queued</strong>. No messages have actually gone out yet — solve the Craigslist captcha to send the queue.
 </div>
 
 <h2>Official Stanford Housing (most reliable)</h2>
@@ -404,7 +454,7 @@ function toggleCard(cardId) {{
 <tr><td>Craigslist /sub</td><td><a href="https://sfbay.craigslist.org/search/pen/sub?max_price=2000">Search link</a></td><td>Temporary/subleases — best for avoiding applications</td></tr>
 </table>
 
-<p style="margin-top:20px;color:#777;font-size:11px">Dashboard updated: June 3, 2026 · East Palo Alto excluded · Contact tracking active · Blue border = contacted</p>
+<p style="margin-top:20px;color:#777;font-size:11px">Dashboard updated: June 3, 2026 · East Palo Alto excluded · Blue border = contacted (real send) · Amber border = queued, not yet sent</p>
 </body></html>"""
 
 class Handler(http.server.SimpleHTTPRequestHandler):
