@@ -28,8 +28,34 @@ try:
 except:
     contact_history = {}
 
-# A listing counts as contacted only if it has a real send record.
-contacted_ids = set(sent_log.keys()) | set(contact_history.keys())
+# Manual "I reached out" marks set by you on the webpage (separate from auto
+# sends, but equally real — you attest to them). Persisted here.
+MANUAL_FILE = os.path.join(ROOT, "manual_contacts.json")
+
+def load_manual():
+    try:
+        with open(MANUAL_FILE) as f:
+            return set(json.load(f))
+    except Exception:
+        return set()
+
+def save_manual(ids):
+    with open(MANUAL_FILE, "w") as f:
+        json.dump(sorted(ids), f, indent=2)
+
+def toggle_manual(listing_id):
+    """Flip a listing's manual-contacted mark; return True if now contacted."""
+    ids = load_manual()
+    if listing_id in ids:
+        ids.discard(listing_id); now_on = False
+    else:
+        ids.add(listing_id); now_on = True
+    save_manual(ids)
+    return now_on
+
+# A listing counts as contacted if it has a real send record OR you marked it.
+# (Recomputed per request inside render_body so toggles show immediately.)
+contacted_ids = set(sent_log.keys()) | set(contact_history.keys()) | load_manual()
 
 # Load the pending outreach queue (matches awaiting send — NOT yet contacted).
 try:
@@ -75,6 +101,19 @@ h2{margin:18px 0 6px;padding-bottom:3px;border-bottom:2px solid #1a1a2e;font-siz
 .contact-badge.queued{background:#f9a825}
 .contact-badge.dead{background:#c62828}
 .offcriteria-note{font-size:10px;color:#b26a00;background:#fff3e0;border:1px solid #ffcc80;border-radius:3px;padding:3px 6px;margin-bottom:4px;line-height:1.3}
+.status-panel{background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:12px 14px;margin:10px 0;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.status-row{display:flex;gap:10px;margin-bottom:8px}
+.stat{flex:1;text-align:center;background:#fafafa;border:1px solid #eee;border-radius:6px;padding:8px 4px}
+.stat-num{font-size:26px;font-weight:800;line-height:1;color:#1a1a2e}
+.stat-num.ok{color:#2e7d32}
+.stat-num.warn{color:#e65100}
+.stat-num.dead-num{color:#c62828}
+.stat-lbl{font-size:10px;color:#666;margin-top:4px;line-height:1.2}
+.status-detail{font-size:11px;color:#444;line-height:1.5;margin-top:4px}
+.reach-toggle{margin-top:6px;width:100%;padding:6px 8px;border:1px solid #2196f3;background:#fff;color:#1565c0;border-radius:4px;font-size:11px;font-weight:700;cursor:pointer}
+.reach-toggle:hover{background:#e3f2fd}
+.reach-toggle.on{background:#2196f3;color:#fff;border-color:#1565c0}
+.reach-toggle:disabled{opacity:.5;cursor:wait}
 .card-images{width:180px;height:130px;display:flex;flex-direction:column;gap:3px;overflow:hidden}
 .card-images img{width:100%;height:100%;object-fit:cover;border-radius:4px}
 .card-images.multi{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:3px}
@@ -257,6 +296,113 @@ SHORT_TERM = [
   "cnote":"Great location but shared housing (has housemate). Only covers part of summer."},
 ]
 
+# SUpost (Stanford-only marketplace) — extracted from the listing page on
+# 2026-06-05. These are OFFERS only (the many "housing wanted" posts are
+# omitted). SUpost is login-gated: I can't pull the poster's email, and there
+# are no per-post links in the source, so "View listing" points to the SUpost
+# housing page — search the title there while logged in with your @stanford.edu.
+SUPOST = [
+ {"top":True,"title":"EVGR-B Private Studio sublet","price":"$1,600/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (EVGR-B)","status":("go","Whole studio · on campus · under budget"),
+  "facts":["WHOLE studio (your own unit, no housemates) on campus in EVGR-B.",
+           "Dates: June 20 – Sept 15. Covers all summer.",
+           "Best match to your criteria found on SUpost: private + on-campus + under $2,000.",
+           "Contact is via SUpost (Stanford login) — no email/phone exposed publicly."],
+  "clabel":"Find on SUpost",
+  "curl":"https://supost.com/search/cat/3",
+  "cnote":"STRONG match — whole on-campus studio, $1,600, full summer. Search 'EVGR B Private Studio' on SUpost while logged in."},
+
+ {"top":True,"title":"Private garden suite (bed + bath, own entrance)","price":"$2,000/mo","src":"SUpost · Stanford-only",
+  "area":"Near Palo Alto High (~10 min to Stanford)","status":("go","Private suite · utilities included"),
+  "facts":["Private garden suite: own bedroom + own bathroom + private entrance.",
+           "Utilities, laundry, and internet INCLUDED in the $2,000/mo.",
+           "Effectively a self-contained unit near Palo Alto High School.",
+           "Contact via SUpost (Stanford login)."],
+  "clabel":"Find on SUpost",
+  "curl":"https://supost.com/search/cat/3",
+  "cnote":"At your $2,000 ceiling but utilities included. Search 'Private garden suite Palo Alto High' on SUpost."},
+
+ {"top":False,"title":"EV Studio II sublet","price":"$2,039/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (Escondido Village)","status":("check","Whole studio · slightly over budget"),
+  "offcriteria":"Just over your $2,000 limit ($2,039).",
+  "facts":["Whole studio on campus (Escondido Village), no housemates.",
+           "Dates: June 18 – Sept 4.",
+           "Contact via SUpost (Stanford login)."],
+  "clabel":"Find on SUpost",
+  "curl":"https://supost.com/search/cat/3",
+  "cnote":"Whole on-campus studio, $39 over budget. Search 'EV Studio II' on SUpost."},
+
+ {"top":False,"title":"EVGR Summer sublease","price":"$2,000/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (EVGR)","status":("check","On campus · at budget"),
+  "facts":["EVGR sublease for the summer (confirm whether whole studio or room).",
+           "At your $2,000 ceiling.",
+           "Contact via SUpost (Stanford login)."],
+  "clabel":"Find on SUpost",
+  "curl":"https://supost.com/search/cat/3",
+  "cnote":"At budget, on campus. Confirm if it's a studio or a room. Search 'EVGR Sublease over Summer' on SUpost."},
+
+ {"top":False,"title":"EVGR-C room sublease (private bed + bath)","price":"$2,000/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (EVGR-C)","status":("check","Private room+bath · short window"),
+  "offcriteria":"Private room in a shared unit (not a whole unit); only covers Jul 5 – Aug 8.",
+  "facts":["Private bedroom + private bathroom on campus (EVGR-C).",
+           "Dates: July 5 – Aug 8 only (partial summer).",
+           "Contact via SUpost (Stanford login)."],
+  "clabel":"Find on SUpost",
+  "curl":"https://supost.com/search/cat/3",
+  "cnote":"On campus, private bed+bath, but only ~5 weeks. Search 'Room for sublease EVGR-C' on SUpost."},
+
+ {"top":False,"title":"Room, Midtown Palo Alto","price":"$1,950/mo","src":"SUpost · Stanford-only",
+  "area":"Midtown Palo Alto (~10 min to Stanford)","status":("check","Private room · under budget"),
+  "offcriteria":"A room (likely shared house), not a dedicated unit.",
+  "facts":["Room for rent in Midtown Palo Alto.",
+           "Under budget at $1,950; confirm whether private bath and who you'd share with.",
+           "Contact via SUpost (Stanford login)."],
+  "clabel":"Find on SUpost",
+  "curl":"https://supost.com/search/cat/3",
+  "cnote":"Under budget, good PA location, but a room. Search 'Room for rent Midtown Palo Alto' on SUpost."},
+
+ {"top":False,"title":"Furnished room, 15 min bike to the Oval","price":"$1,425/mo","src":"SUpost · Stanford-only",
+  "area":"~15 min bike to Stanford","status":("check","Private room · well under budget"),
+  "offcriteria":"A room (shared housing), not a dedicated unit.",
+  "facts":["Furnished room, ~15 minutes by bike to the Oval.",
+           "Well under budget at $1,425.",
+           "Contact via SUpost (Stanford login)."],
+  "clabel":"Find on SUpost",
+  "curl":"https://supost.com/search/cat/3",
+  "cnote":"Cheapest near-campus room here. A room, not a unit. Search 'Furnished room 15 minutes by bike to the Oval' on SUpost."},
+
+ {"top":False,"title":"Private bedroom + bath, Mountain View","price":"$2,000/mo","src":"SUpost · Stanford-only",
+  "area":"Mountain View (~15 min to Stanford)","status":("check","Private room+bath · at budget"),
+  "offcriteria":"Private room in a shared place, not a whole unit.",
+  "facts":["Private furnished bedroom with private bathroom in Mountain View.",
+           "At your $2,000 ceiling.",
+           "Contact via SUpost (Stanford login)."],
+  "clabel":"Find on SUpost",
+  "curl":"https://supost.com/search/cat/3",
+  "cnote":"Private bed+bath at budget, Mountain View. Search 'Private furnished bedroom private bathroom Mountain View' on SUpost."},
+]
+
+# Each SUpost card links to a Google search restricted to supost.com for its
+# exact title. SUpost posts ARE public at supost.com/post/index/NNN, but I
+# won't hard-code a specific post ID I can't verify (risk of linking the wrong
+# post) — the search reliably lands you on the right one. You log in to message.
+import urllib.parse as _uq
+_SUPOST_Q = {
+ "EVGR-B Private Studio sublet": "EVGR B Private Studio Sublet summer",
+ "Private garden suite (bed + bath, own entrance)": "private garden suite Palo Alto High School 2000",
+ "EV Studio II sublet": "EV Studio II sublet summer",
+ "EVGR Summer sublease": "EVGR Sublease over Summer 2000",
+ "EVGR-C room sublease (private bed + bath)": "Room for sublease EVGR-C private bedroom bathroom",
+ "Room, Midtown Palo Alto": "Room for rent Midtown Palo Alto 1950",
+ "Furnished room, 15 min bike to the Oval": "Furnished room 15 minutes by bike to the Oval",
+ "Private bedroom + bath, Mountain View": "Private furnished bedroom private bathroom Mountain View 2000",
+}
+for _L in SUPOST:
+    _q = _SUPOST_Q.get(_L["title"])
+    if _q:
+        _L["curl"] = "https://www.google.com/search?q=" + _uq.quote(f"site:supost.com {_q}")
+        _L["clabel"] = "Find post →"
+
 def card(L):
     facts="".join(f"<li>{html.escape(f)}</li>" for f in L["facts"])
     top=" top" if L["top"] else ""
@@ -269,11 +415,13 @@ def card(L):
         parts = url.split("/")
         if len(parts) > 0:
             listing_id = "cl-" + parts[-1].replace(".html", "")
+    # Stable key for the manual "reached out" toggle (works for non-CL too).
+    mark_id = listing_id or url
 
     dead = L.get("dead", False)
     offcriteria = L.get("offcriteria", "")
 
-    contacted = listing_id in contacted_ids
+    contacted = mark_id in contacted_ids or listing_id in contacted_ids
     queued = (not contacted) and (listing_id in queued_ids)
     if dead:
         contacted_class = " dead"
@@ -327,9 +475,15 @@ def card(L):
         </div>''')
 
     if not phone and not email:
+        if "SUpost" in L.get("src", "") or "supost.com" in url:
+            fallback = "Contact via SUpost (log in, then open the post)"
+        elif "stanford.edu" in url:
+            fallback = "Apply / email via the Stanford page"
+        else:
+            fallback = "Email via Craigslist reply button"
         contact_items.append(f'''<div class="contact-item">
             <svg fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/></svg>
-            <span style="color:#999">Email via Craigslist reply button</span>
+            <span style="color:#999">{html.escape(fallback)}</span>
         </div>''')
 
     # Build contact history section
@@ -370,12 +524,20 @@ def card(L):
             </div>
         '''
 
+    # Manual "I reached out" toggle — your attestation, persisted server-side.
+    toggle_on = " on" if contacted else ""
+    toggle_label = "✓ Reached out" if contacted else "Mark as reached out"
+    toggle_html = (f'<button class="reach-toggle{toggle_on}" '
+                   f'onclick="toggleReached(this, {json.dumps(mark_id)})">'
+                   f'{toggle_label}</button>')
+
     contact_box = f'''<div class="contact-box">
         <div class="contact-title">CONTACT INFO</div>
         {"".join(contact_items)}
         <div class="btn-group">
-            <a class="btn" href="{html.escape(url)}" target="_blank">View listing</a>
+            <a class="btn" href="{html.escape(url)}" target="_blank">{html.escape(L.get("clabel","View listing"))}</a>
         </div>
+        {toggle_html}
         <div class="contact-note">{html.escape(L['cnote'])}</div>
         {contact_history_html}
     </div>'''
@@ -397,9 +559,55 @@ def card(L):
 {contact_box}
 </div>"""
 
-BODY = f"""<!DOCTYPE html><html><head><meta charset="utf-8"><title>Simon's Stanford Summer 2026 Housing</title>
+def render_body():
+    # Recompute contacted set per request so manual toggles show on reload.
+    global contacted_ids
+    manual = load_manual()
+    contacted_ids = set(sent_log.keys()) | set(contact_history.keys()) | manual
+
+    # Live, combined stats across every contact source (for the status panel).
+    n_auto   = len(sent_log)
+    n_conf   = len(contact_history)
+    n_manual = len(manual)
+    n_total  = len(contacted_ids)
+    # Listings shown on this dashboard (curated cards across all sections).
+    all_cards = NON_CL + SUBLETS + REGULAR_RENTALS + SHORT_TERM + SUPOST
+    def card_key(L):
+        u = L["curl"]
+        if "craigslist.org" in u:
+            return "cl-" + u.split("/")[-1].replace(".html", "")
+        return u
+    n_cards = len(all_cards)
+    n_card_contacted = sum(1 for L in all_cards if card_key(L) in contacted_ids)
+    n_card_dead = sum(1 for L in all_cards if L.get("dead"))
+    n_queue = len(queued_ids)
+    n_queue_left = len([i for i in queued_ids if i not in contacted_ids])
+
+    return f"""<!DOCTYPE html><html><head><meta charset="utf-8"><title>Simon's Stanford Summer 2026 Housing</title>
 <style>{CSS}</style>
 <script>
+async function toggleReached(btn, id) {{
+    btn.disabled = true;
+    try {{
+        const r = await fetch('/api/toggle?id=' + encodeURIComponent(id), {{method:'POST'}});
+        const d = await r.json();
+        const on = d.contacted;
+        btn.classList.toggle('on', on);
+        btn.textContent = on ? '✓ Reached out' : 'Mark as reached out';
+        const card = btn.closest('.card');
+        if (card && !card.classList.contains('dead')) {{
+            card.classList.toggle('contacted', on);
+            if (on) card.classList.remove('queued');
+            let badge = card.querySelector('.contact-badge');
+            if (on) {{
+                if (!badge) {{ badge = document.createElement('div'); card.prepend(badge); }}
+                badge.className = 'contact-badge';
+                badge.textContent = '✓ CONTACTED';
+            }} else if (badge) {{ badge.remove(); }}
+        }}
+    }} catch (e) {{ alert('Could not save — is the server running?'); }}
+    finally {{ btn.disabled = false; }}
+}}
 function toggleCard(cardId) {{
     const card = document.getElementById(cardId);
     const btn = card.querySelector('.expand-toggle');
@@ -420,9 +628,27 @@ function toggleCard(cardId) {{
 <strong>Priority:</strong> Start with the <strong>$1,890 Palo Alto sublease</strong> — it's the ONLY whole-unit sublease that skips applications.
 </div>
 
-<div class="banner cl">
-<strong>Outreach status (real):</strong> {len(contacted_ids)} listing(s) contacted · {len(queued_ids)} queued (not yet sent) · auto-send last run: <strong>0 sent, 52 queued</strong>. No messages have actually gone out yet — solve the Craigslist captcha to send the queue.
+<div class="status-panel">
+  <div class="status-row">
+    <div class="stat"><div class="stat-num ok">{n_total}</div><div class="stat-lbl">reached out<br>(all sources)</div></div>
+    <div class="stat"><div class="stat-num">{n_card_contacted}/{n_cards - n_card_dead}</div><div class="stat-lbl">dashboard listings<br>contacted</div></div>
+    <div class="stat"><div class="stat-num warn">{n_queue_left}</div><div class="stat-lbl">in queue,<br>not contacted</div></div>
+    <div class="stat"><div class="stat-num dead-num">{n_card_dead}</div><div class="stat-lbl">expired<br>(skip)</div></div>
+  </div>
+  <div class="status-detail">
+    <strong>Combined outreach:</strong> {n_auto} auto/assisted send(s) · {n_conf} confirmed-with-message · {n_manual} marked by you on this page → <strong>{n_total} distinct landlord(s) contacted.</strong>
+    {"<span style='color:#c62828'>Nothing has actually gone out yet.</span>" if n_total == 0 else ""}
+  </div>
+  <div class="status-detail">
+    <strong>Search:</strong> Craigslist last scan Jun 4 ({len(queued_ids)} matches queued) · SUpost refreshed Jun 5 from your paste ({len(SUPOST)} offers) · Zillow/FB/Apartments/Reddit = manual links below.
+  </div>
 </div>
+
+<h2>⭐ SUpost — Stanford-only marketplace ({len(SUPOST)} offers · best fit · refreshed Jun 5)</h2>
+<div class="banner cl">
+<strong>Top priority — these are Stanford students/affiliates near campus.</strong> Pulled from the SUpost housing page you shared (offers only; "housing wanted" posts omitted; female-only and over-$2,000 filtered out). Each <em>View listing</em> button opens the SUpost housing page (supost.com/search/cat/3) — log in with your SUNet and search the title shown on the card (SUpost has no public per-post links). Grab the email/phone from the post and I'll add it here.
+</div>
+{"".join(card(L) for L in SUPOST)}
 
 <h2>Official Stanford Housing (most reliable)</h2>
 {"".join(card(L) for L in NON_CL)}
@@ -454,15 +680,17 @@ function toggleCard(cardId) {{
 <tr><td>Craigslist /sub</td><td><a href="https://sfbay.craigslist.org/search/pen/sub?max_price=2000">Search link</a></td><td>Temporary/subleases — best for avoiding applications</td></tr>
 </table>
 
-<p style="margin-top:20px;color:#777;font-size:11px">Dashboard updated: June 3, 2026 · East Palo Alto excluded · Blue border = contacted (real send) · Amber border = queued, not yet sent</p>
+<p style="margin-top:20px;color:#777;font-size:11px">Dashboard updated: June 4, 2026 · East Palo Alto excluded · Use the “Mark as reached out” button on each card to track outreach · Blue = reached out · Amber = queued · Red = expired</p>
 </body></html>"""
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         p = urlparse(self.path).path
         if p=="/":
-            self.send_response(200); self.send_header("Content-Type","text/html; charset=utf-8"); self.end_headers()
-            self.wfile.write(BODY.encode("utf-8"))
+            body = render_body().encode("utf-8")
+            self.send_response(200); self.send_header("Content-Type","text/html; charset=utf-8")
+            self.send_header("Content-Length", str(len(body))); self.end_headers()
+            self.wfile.write(body)
         elif p.startswith("/maps/") and (p.endswith(".png") or p.endswith(".jpg")):
             fp=os.path.join(ROOT,"maps",os.path.basename(p))
             if os.path.isfile(fp):
@@ -473,11 +701,27 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 self.send_error(404,"Image not found")
         else:
             self.send_error(404)
+
+    def do_POST(self):
+        p = urlparse(self.path)
+        if p.path == "/api/toggle":
+            from urllib.parse import parse_qs
+            mid = (parse_qs(p.query).get("id") or [""])[0]
+            if not mid:
+                self.send_error(400, "missing id"); return
+            now_on = toggle_manual(mid)
+            body = json.dumps({"id": mid, "contacted": now_on}).encode("utf-8")
+            self.send_response(200); self.send_header("Content-Type","application/json")
+            self.send_header("Content-Length", str(len(body))); self.end_headers()
+            self.wfile.write(body)
+        else:
+            self.send_error(404)
+
     def log_message(self,fmt,*args): pass
 
 if __name__=="__main__":
     if "--serve" not in sys.argv:
-        print(BODY); sys.exit(0)
+        print(render_body()); sys.exit(0)
     with socketserver.TCPServer(("",PORT),Handler) as httpd:
         print(f"[palo_alto_server] http://localhost:{PORT}/",flush=True)
         try: httpd.serve_forever()
