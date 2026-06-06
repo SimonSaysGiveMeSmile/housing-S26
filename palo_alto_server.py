@@ -100,6 +100,9 @@ h2{margin:18px 0 6px;padding-bottom:3px;border-bottom:2px solid #1a1a2e;font-siz
 .contact-badge{position:absolute;top:6px;right:6px;background:#2196f3;color:#fff;padding:3px 8px;border-radius:3px;font-size:10px;font-weight:700;text-transform:uppercase;z-index:10}
 .contact-badge.queued{background:#f9a825}
 .contact-badge.dead{background:#c62828}
+.contact-badge.replied{background:#7b1fa2}
+.card.replied{border-left:4px solid #7b1fa2;background:#faf5ff}
+.reply-note{font-size:11px;color:#4a148c;background:#f3e5f5;border:1px solid #ce93d8;border-radius:3px;padding:4px 6px;margin-bottom:4px;line-height:1.35;font-weight:500}
 .offcriteria-note{font-size:10px;color:#b26a00;background:#fff3e0;border:1px solid #ffcc80;border-radius:3px;padding:3px 6px;margin-bottom:4px;line-height:1.3}
 .status-panel{background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:12px 14px;margin:10px 0;box-shadow:0 1px 3px rgba(0,0,0,.06)}
 .status-row{display:flex;gap:10px;margin-bottom:8px}
@@ -108,6 +111,7 @@ h2{margin:18px 0 6px;padding-bottom:3px;border-bottom:2px solid #1a1a2e;font-siz
 .stat-num.ok{color:#2e7d32}
 .stat-num.warn{color:#e65100}
 .stat-num.dead-num{color:#c62828}
+.stat-num.replied-num{color:#7b1fa2}
 .stat-lbl{font-size:10px;color:#666;margin-top:4px;line-height:1.2}
 .status-detail{font-size:11px;color:#444;line-height:1.5;margin-top:4px}
 .reach-toggle{margin-top:6px;width:100%;padding:6px 8px;border:1px solid #2196f3;background:#fff;color:#1565c0;border-radius:4px;font-size:11px;font-weight:700;cursor:pointer}
@@ -302,84 +306,197 @@ SHORT_TERM = [
 # are no per-post links in the source, so "View listing" points to the SUpost
 # housing page — search the title there while logged in with your @stanford.edu.
 SUPOST = [
+ # ---- WHOLE UNITS (studios / apartments) — best fit ----
+ {"top":True,"title":"Fully Furnished EV Studio + Free Bike","price":"$1,900/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (Escondido Village)","status":("go","Whole studio · utilities incl · full summer"),
+  "facts":["WHOLE studio on campus — your own unit, no housemates.",
+           "Dates: June 9 – Sept 22 (covers the whole summer).",
+           "Utilities INCLUDED; comes with a free bike.",
+           "Under budget at $1,900. Contact via SUpost (Stanford login)."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"STRONG — whole studio, utilities incl, full summer, $1,900. Search 'Fully Furnished EV Studio Free Bike' on SUpost."},
+
  {"top":True,"title":"EVGR-B Private Studio sublet","price":"$1,600/mo","src":"SUpost · Stanford-only",
   "area":"On campus, Stanford (EVGR-B)","status":("go","Whole studio · on campus · under budget"),
   "facts":["WHOLE studio (your own unit, no housemates) on campus in EVGR-B.",
            "Dates: June 20 – Sept 15. Covers all summer.",
-           "Best match to your criteria found on SUpost: private + on-campus + under $2,000.",
-           "Contact is via SUpost (Stanford login) — no email/phone exposed publicly."],
-  "clabel":"Find on SUpost",
-  "curl":"https://supost.com/search/cat/3",
-  "cnote":"STRONG match — whole on-campus studio, $1,600, full summer. Search 'EVGR B Private Studio' on SUpost while logged in."},
+           "Cheapest full-summer whole studio in this batch.",
+           "Contact via SUpost (Stanford login)."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"STRONG — whole on-campus studio, $1,600, full summer. Search 'EVGR B Private Studio' on SUpost."},
 
+ {"top":True,"title":"EV low-rise apartment sublet","price":"$1,414/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (Escondido Village low-rise)","status":("go","Whole apartment · cheapest"),
+  "facts":["Subletting a whole EV low-rise apartment on campus.",
+           "Dates: ~June 15 – Sept 15.",
+           "Cheapest whole unit found — $1,414, well under budget.",
+           "Contact via SUpost (Stanford login)."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"Cheapest whole unit, on campus, full summer. Search 'subletting EV low-rise apartment' on SUpost."},
+
+ {"top":False,"title":"EV Studio for rent (flexible dates)","mid":"su-ev-studio-jun8-sep12","price":"$2,000/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (Escondido Village)","status":("check","Whole studio · at budget"),
+  "facts":["Whole EV studio on campus, no housemates.",
+           "Dates: June 8 – Sept 12 (flexible).",
+           "At your $2,000 ceiling. Contact via SUpost (Stanford login)."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"Whole studio, full summer, flexible dates, $2,000. Search 'EV Studio For Rent June 8 Sept 12' on SUpost."},
+
+ {"top":False,"title":"On-campus Stanford studio sublet (June–July)","price":"$2,000/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford","status":("check","Whole studio · partial summer"),
+  "offcriteria":"Covers June–July only (not the full summer).",
+  "facts":["Subletting a whole on-campus studio.",
+           "Dates: June–July. At your $2,000 ceiling.",
+           "Contact via SUpost (Stanford login)."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"Whole on-campus studio but June–July only. Search 'Subletting Stanford On-Campus Studio June July' on SUpost."},
+
+ {"top":False,"title":"EVGR Summer sublease","mid":"su-evgr-summer","price":"$2,000/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (EVGR)","status":("check","On campus · at budget"),
+  "facts":["EVGR sublease for the summer (confirm whether whole studio or room).",
+           "At your $2,000 ceiling. Contact via SUpost (Stanford login)."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"At budget, on campus. Confirm studio vs room. Search 'EVGR Sublease over Summer' on SUpost."},
+
+ {"top":False,"title":"1 bedroom in 2BHK — no flatmate","mid":"su-1b-2bhk-noflatmate","price":"$1,684/mo","src":"SUpost · Stanford-only",
+  "area":"Near Stanford","status":("check","Private 1BR · effectively whole"),
+  "facts":["1 bedroom in a 2BHK sublet — listing says NO flatmate (you'd have it to yourself).",
+           "Dates: June 15 – Sept 15. Under budget at $1,684.",
+           "Confirm the no-flatmate detail. Contact via SUpost (Stanford login)."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"Effectively private (no flatmate), full summer, $1,684. Search 'Sublet Jun 15 Sept 15 1B 2BHK no flatmate' on SUpost."},
+
+ # ---- PRIVATE SUITE / ROOM + PRIVATE BATH ----
  {"top":True,"title":"Private garden suite (bed + bath, own entrance)","price":"$2,000/mo","src":"SUpost · Stanford-only",
   "area":"Near Palo Alto High (~10 min to Stanford)","status":("go","Private suite · utilities included"),
   "facts":["Private garden suite: own bedroom + own bathroom + private entrance.",
            "Utilities, laundry, and internet INCLUDED in the $2,000/mo.",
-           "Effectively a self-contained unit near Palo Alto High School.",
-           "Contact via SUpost (Stanford login)."],
-  "clabel":"Find on SUpost",
-  "curl":"https://supost.com/search/cat/3",
-  "cnote":"At your $2,000 ceiling but utilities included. Search 'Private garden suite Palo Alto High' on SUpost."},
+           "Effectively self-contained near Palo Alto High. Contact via SUpost (Stanford login)."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"At budget but utilities incl + private entrance. Search 'Private garden suite Palo Alto High School' on SUpost."},
 
- {"top":False,"title":"EV Studio II sublet","price":"$2,039/mo","src":"SUpost · Stanford-only",
-  "area":"On campus, Stanford (Escondido Village)","status":("check","Whole studio · slightly over budget"),
-  "offcriteria":"Just over your $2,000 limit ($2,039).",
-  "facts":["Whole studio on campus (Escondido Village), no housemates.",
-           "Dates: June 18 – Sept 4.",
-           "Contact via SUpost (Stanford login)."],
-  "clabel":"Find on SUpost",
-  "curl":"https://supost.com/search/cat/3",
-  "cnote":"Whole on-campus studio, $39 over budget. Search 'EV Studio II' on SUpost."},
+ {"top":False,"title":"Private bed + bath, 5-min walk to Stanford (2B2B)","price":"$1,600/mo","src":"SUpost · Stanford-only",
+  "area":"5-min walk to Stanford","status":("check","Private room+bath · top location"),
+  "offcriteria":"Private room in a 2B2B (one housemate), not a whole unit.",
+  "facts":["Private bedroom + private bath + walk-in wardrobe in a 2B2B.",
+           "5-minute WALK to Stanford — best location in this batch.",
+           "Bright, quiet, park view. $1,600. Contact via SUpost (Stanford login)."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"Unbeatable location (5-min walk), private bed+bath, $1,600. Search '2B2B Private Bedroom Private Bath 5-min Walk to Stanford' on SUpost."},
 
- {"top":False,"title":"EVGR Summer sublease","price":"$2,000/mo","src":"SUpost · Stanford-only",
-  "area":"On campus, Stanford (EVGR)","status":("check","On campus · at budget"),
-  "facts":["EVGR sublease for the summer (confirm whether whole studio or room).",
-           "At your $2,000 ceiling.",
-           "Contact via SUpost (Stanford login)."],
-  "clabel":"Find on SUpost",
-  "curl":"https://supost.com/search/cat/3",
-  "cnote":"At budget, on campus. Confirm if it's a studio or a room. Search 'EVGR Sublease over Summer' on SUpost."},
+ {"top":False,"title":"Furnished private room + bath, Palo Alto (available now)","price":"$1,450/mo","src":"SUpost · Stanford-only",
+  "area":"Palo Alto","status":("check","Private room+bath · available now"),
+  "offcriteria":"Private room (shared house), not a whole unit.",
+  "facts":["Furnished private room + private bath in Palo Alto.",
+           "Available NOW / June 1 — good for your immediate need.",
+           "Under budget at $1,450. Contact via SUpost (Stanford login)."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"Available now, private bed+bath, $1,450, Palo Alto. Search 'Furnished private room private bath available now June 1st Palo Alto' on SUpost."},
 
- {"top":False,"title":"EVGR-C room sublease (private bed + bath)","price":"$2,000/mo","src":"SUpost · Stanford-only",
-  "area":"On campus, Stanford (EVGR-C)","status":("check","Private room+bath · short window"),
-  "offcriteria":"Private room in a shared unit (not a whole unit); only covers Jul 5 – Aug 8.",
-  "facts":["Private bedroom + private bathroom on campus (EVGR-C).",
-           "Dates: July 5 – Aug 8 only (partial summer).",
-           "Contact via SUpost (Stanford login)."],
-  "clabel":"Find on SUpost",
-  "curl":"https://supost.com/search/cat/3",
-  "cnote":"On campus, private bed+bath, but only ~5 weeks. Search 'Room for sublease EVGR-C' on SUpost."},
-
- {"top":False,"title":"Room, Midtown Palo Alto","price":"$1,950/mo","src":"SUpost · Stanford-only",
-  "area":"Midtown Palo Alto (~10 min to Stanford)","status":("check","Private room · under budget"),
-  "offcriteria":"A room (likely shared house), not a dedicated unit.",
-  "facts":["Room for rent in Midtown Palo Alto.",
-           "Under budget at $1,950; confirm whether private bath and who you'd share with.",
-           "Contact via SUpost (Stanford login)."],
-  "clabel":"Find on SUpost",
-  "curl":"https://supost.com/search/cat/3",
-  "cnote":"Under budget, good PA location, but a room. Search 'Room for rent Midtown Palo Alto' on SUpost."},
-
- {"top":False,"title":"Furnished room, 15 min bike to the Oval","price":"$1,425/mo","src":"SUpost · Stanford-only",
-  "area":"~15 min bike to Stanford","status":("check","Private room · well under budget"),
-  "offcriteria":"A room (shared housing), not a dedicated unit.",
-  "facts":["Furnished room, ~15 minutes by bike to the Oval.",
-           "Well under budget at $1,425.",
-           "Contact via SUpost (Stanford login)."],
-  "clabel":"Find on SUpost",
-  "curl":"https://supost.com/search/cat/3",
-  "cnote":"Cheapest near-campus room here. A room, not a unit. Search 'Furnished room 15 minutes by bike to the Oval' on SUpost."},
+ {"top":False,"title":"Small private room + private bath, Palo Alto","price":"$1,500/mo","src":"SUpost · Stanford-only",
+  "area":"Palo Alto","status":("check","Private room+bath · under budget"),
+  "offcriteria":"Private room (shared house), not a whole unit.",
+  "facts":["A small private room with private bath in Palo Alto.",
+           "Under budget at $1,500. Contact via SUpost (Stanford login)."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"Private bed+bath in PA, $1,500. Search 'A small private room with private bath in Palo Alto' on SUpost."},
 
  {"top":False,"title":"Private bedroom + bath, Mountain View","price":"$2,000/mo","src":"SUpost · Stanford-only",
   "area":"Mountain View (~15 min to Stanford)","status":("check","Private room+bath · at budget"),
   "offcriteria":"Private room in a shared place, not a whole unit.",
   "facts":["Private furnished bedroom with private bathroom in Mountain View.",
-           "At your $2,000 ceiling.",
-           "Contact via SUpost (Stanford login)."],
-  "clabel":"Find on SUpost",
-  "curl":"https://supost.com/search/cat/3",
+           "At your $2,000 ceiling. Contact via SUpost (Stanford login)."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
   "cnote":"Private bed+bath at budget, Mountain View. Search 'Private furnished bedroom private bathroom Mountain View' on SUpost."},
+
+ # ---- Additional listings YOU messaged on SUpost (recorded as reached out) ----
+ {"top":False,"title":"1 Room in a 3BR Townhouse (avail June 1)","mid":"su-3br-townhouse-jun1","price":"$1,730/mo","src":"SUpost · Stanford-only",
+  "area":"Mountain View (~15-20 min to Stanford)","status":("check","Room · 'ideally female' preferred"),
+  "offcriteria":"Room in a 3BR townhouse (housemates), and poster prefers 'ideally female' — may be a soft no.",
+  "facts":["1 room in a 3BR/2.5BA townhouse in Mountain View, available June 1.","Under budget at $1,730.",
+           "Housemates: a 31yo attorney + 25yo software engineer. Poster prefers female."],
+  "clabel":"Open post →","curl":"https://supost.com/post/index/130085280",
+  "cnote":"You messaged this. Room in Mountain View 3BR townhouse; poster prefers female (soft)."},
+
+ {"top":False,"title":"EV Studio Sublet (Jun 12–Sep 15, prorated)","mid":"su-ev-studio-jun12-sep15","price":"$2,039/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (Escondido Village)","status":("check","Whole studio · slightly over budget"),
+  "offcriteria":"$39 over your $2,000 limit.","facts":["Whole EV studio on campus, June 12 – Sept 15, rent prorated."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"You messaged this. Whole on-campus studio, full summer, $2,039 (prorated)."},
+
+ {"top":False,"title":"EV Studio sublet (late June – mid Aug)","mid":"su-ev-studio-latejune-midaug","price":"$2,039/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (Escondido Village)","status":("check","Whole studio · partial summer"),
+  "offcriteria":"$39 over budget; covers late June to mid-August only.","facts":["Whole EV studio on campus, late June to mid-August."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"You messaged this. Whole on-campus studio, late June to mid-August, $2,039."},
+
+ {"top":False,"title":"Furnished Private Room, Rains 2B1B (on campus)","mid":"su-rains-2b1b","price":"$1,628/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (Rains)","status":("warn","FEMALE household · likely not eligible"),
+  "offcriteria":"FEMALE household — you (male) are probably not eligible. You messaged it, but expect a no.",
+  "facts":["Furnished private room in Rains graduate housing (2B1B), on campus.","Under budget at $1,628.",
+           "Listing specifies a female household."],
+  "clabel":"Open post →","curl":"https://supost.com/post/index/130085804",
+  "cnote":"You messaged this, but it's a FEMALE household — likely a no. On-campus Rains room, $1,628."},
+
+ {"top":False,"title":"Blackwelder Room Sublet (6/19–8/31)","mid":"su-blackwelder","price":"$1,165/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (Blackwelder)","status":("check","Private room · cheapest"),
+  "offcriteria":"A room (shared apartment), not a whole unit.",
+  "facts":["Room sublet in Blackwelder, June 19 – Aug 31.","Cheapest of everything you've messaged: $1,165."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"You messaged this. On-campus Blackwelder room, $1,165, 6/19–8/31."},
+
+ {"top":True,"title":"1BR Hulme Sublease (Jun 21–Sep 14)","mid":"su-hulme-1br","price":"$2,500/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (Hulme)","status":("go","REPLIED · interest form submitted"),
+  "replied":True,
+  "reply":"andaru@stanford.edu replied and asked you to fill out the Hulme interest form (tinyurl.com/HulmeInterestForm). You submitted it — waiting to hear back.",
+  "offcriteria":"$500 over your $2,000 limit — confirm the price before going further.",
+  "facts":["Whole 1BR sublease in Hulme, June 21 – Sept 14.","Over budget at $2,500.",
+           "Poster: andaru@stanford.edu (Stanford Verified)."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"REPLIED — you submitted the Hulme interest form (tinyurl.com/HulmeInterestForm). Awaiting their response."},
+
+ {"top":False,"title":"Spacious room, EVGR-C grad housing","mid":"su-evgrc-spacious-room","price":"$2,039/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (EVGR-C)","status":("check","Private room+bath · over budget"),
+  "offcriteria":"Private room with 1 male roommate; $39 over budget; mid-June to mid-Sept.",
+  "facts":["Large furnished room + private bath in EVGR-C, shared living/kitchen with 1 roommate.","Mid-June to mid-September, $2,039."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"You messaged this. EVGR-C private bed+bath (1 housemate), $2,039."},
+
+ # ---- NEW leads from your direct links (not yet messaged) ----
+ {"top":False,"title":"Stanford Studio (Jun 15–Aug 31)","mid":"su-stanford-studio-jun15","price":"$2,049/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford","status":("check","Whole studio · full summer · $49 over"),
+  "offcriteria":"$49 over your $2,000 limit; no undergrads in the building.",
+  "facts":["Whole studio, June 15 – Aug 31, full summer.","Master's student / affiliate only, no undergrads.","NOT yet messaged."],
+  "clabel":"Open post →","curl":"https://supost.com/post/index/130035883",
+  "cnote":"NEW lead — whole studio, full summer, $2,049 (just over budget). Message after the rate limit lifts."},
+
+ {"top":False,"title":"EV Low-rise room (Jun 15–Aug 31)","mid":"su-ev-lowrise-room","price":"$1,599/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (EV Low-rise)","status":("check","Private room · under budget"),
+  "offcriteria":"A room in a 2Bed/1Bath (likely have it to yourself most of the time), not a whole unit.",
+  "facts":["1 room in an EV low-rise 2Bed/1Bath, June 15 – Aug 31.","Utilities, WiFi, laundry included. Under budget at $1,599.","NOT yet messaged."],
+  "clabel":"Open post →","curl":"https://supost.com/post/index/130083646",
+  "cnote":"NEW lead — on-campus room, $1,599, full summer, utilities incl. Message after the rate limit lifts."},
+
+ {"top":False,"title":"EV Studio 1 (Jun 21–~Jul 20)","mid":"su-ev-studio1-jun21","price":"$2,039/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (Escondido Village)","status":("check","Whole studio · short window · $39 over"),
+  "offcriteria":"$39 over budget and short window (June 21 to ~July 20 only).",
+  "facts":["Whole EV studio (Studio 1), June 21 to ~July 20, flexible.","Furnished. +$50 house dues. NOT yet messaged."],
+  "clabel":"Open post →","curl":"https://supost.com/post/index/130076651",
+  "cnote":"NEW lead — whole studio but only ~1 month (June 21–July 20), $2,039. Message after the rate limit lifts."},
+
+ {"top":False,"title":"1B/1Ba EV Midrise (Jun 15–Sep 1)","mid":"su-ev-midrise-1b1b","price":"$2,663/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (EV Midrise)","status":("warn","Whole 1B1B · over budget"),
+  "offcriteria":"$663 over your $2,000 limit.",
+  "facts":["Whole 1B/1Ba EV midrise apartment, June 15 – Sept 1, foothill view.","Fully furnished, utilities + laundry incl. NOT yet messaged."],
+  "clabel":"Open post →","curl":"https://supost.com/post/index/130085275",
+  "cnote":"NEW lead but $2,663 — well over budget. Only if you raise your ceiling."},
+
+ {"top":False,"title":"Oak Creek 1B1B (Jun 10–Jul 25)","mid":"su-oakcreek-1b1b","price":"$2,300/mo","src":"SUpost · Stanford-only",
+  "area":"Palo Alto (Oak Creek, ~10 min to Stanford)","status":("warn","Whole 1B1B · over budget · cat care"),
+  "offcriteria":"$300 over budget, short window (June 10–July 25), and includes caring for 2 cats.",
+  "facts":["Whole 1B1B (~800 sqft) in Oak Creek, June 10 – July 25.","$2,300 (discounted from $2,800 in exchange for cat-sitting). NOT yet messaged."],
+  "clabel":"Open post →","curl":"https://supost.com/post/index/130084320",
+  "cnote":"NEW lead but $2,300, short window, and you'd cat-sit. Off-budget."},
 ]
 
 # Each SUpost card links to a Google search restricted to supost.com for its
@@ -388,16 +505,44 @@ SUPOST = [
 # post) — the search reliably lands you on the right one. You log in to message.
 import urllib.parse as _uq
 _SUPOST_Q = {
- "EVGR-B Private Studio sublet": "EVGR B Private Studio Sublet summer",
- "Private garden suite (bed + bath, own entrance)": "private garden suite Palo Alto High School 2000",
- "EV Studio II sublet": "EV Studio II sublet summer",
+ "Fully Furnished EV Studio + Free Bike": "Fully Furnished EV Studio Free Bike Utilities Included summer 1900",
+ "EVGR-B Private Studio sublet": "EVGR B Private Studio Sublet June 20 Sept 15 1600",
+ "EV low-rise apartment sublet": "subletting EV low-rise apartment 1414",
+ "EV Studio for rent (flexible dates)": "EV Studio For Rent June 8 Sept 12 2000",
+ "On-campus Stanford studio sublet (June–July)": "Subletting Stanford On-Campus Studio June July 2000",
  "EVGR Summer sublease": "EVGR Sublease over Summer 2000",
- "EVGR-C room sublease (private bed + bath)": "Room for sublease EVGR-C private bedroom bathroom",
- "Room, Midtown Palo Alto": "Room for rent Midtown Palo Alto 1950",
- "Furnished room, 15 min bike to the Oval": "Furnished room 15 minutes by bike to the Oval",
+ "1 bedroom in 2BHK — no flatmate": "Sublet Jun 15 Sept 15 1B in 2BHK No flatmate 1684",
+ "Private garden suite (bed + bath, own entrance)": "private garden suite Palo Alto High School 2000",
+ "Private bed + bath, 5-min walk to Stanford (2B2B)": "2B2B Private Bedroom Private Bath Walk-in Wardrobe 5-min Walk to Stanford 1600",
+ "Furnished private room + bath, Palo Alto (available now)": "Furnished private room private bath available now June 1st Palo Alto 1450",
+ "Small private room + private bath, Palo Alto": "small private room with private bath Palo Alto 1500",
  "Private bedroom + bath, Mountain View": "Private furnished bedroom private bathroom Mountain View 2000",
+ "1 Room in a 3BR Townhouse (avail June 1)": "1 Room in a 3BR Townhouse Available June 1 1730",
+ "EV Studio Sublet (Jun 12–Sep 15, prorated)": "EV Studio Sublet June 12 Sept 15 2039 prorated",
+ "EV Studio sublet (late June – mid Aug)": "EV Studio sublet late June to mid-August 2039",
+ "Furnished Private Room, Rains 2B1B (on campus)": "Furnished Private Room Rains 2B1B On-Campus 1628",
+ "Blackwelder Room Sublet (6/19–8/31)": "Blackwelder Room Sublet 6/19 8/31 1165",
+ "1BR Hulme Sublease (Jun 21–Sep 14)": "1BR Hulme Sublease June 21 Sept 14 2500",
+ "Spacious room, EVGR-C grad housing": "Sublet Spacious room Stanford graduate housing EVGR-C 2039",
+}
+# Real direct SUpost post URLs (provided by you, identified by fetching each).
+_SUPOST_DIRECT = {
+ "su-hulme-1br": "https://supost.com/post/index/130085848",
+ "su-evgrc-spacious-room": "https://supost.com/post/index/130085883",
+ "su-blackwelder": "https://supost.com/post/index/130085820",
+ "su-rains-2b1b": "https://supost.com/post/index/130085804",
+ "su-ev-studio-latejune-midaug": "https://supost.com/post/index/130083894",
+ "su-ev-studio-jun12-sep15": "https://supost.com/post/index/130085618",
+ "su-3br-townhouse-jun1": "https://supost.com/post/index/130085280",
+ "su-1b-2bhk-noflatmate": "https://supost.com/post/index/130085276",
+ "Fully Furnished EV Studio + Free Bike": "https://supost.com/post/index/130085266",
 }
 for _L in SUPOST:
+    _key = _L.get("mid") or _L["title"]
+    if _key in _SUPOST_DIRECT:
+        _L["curl"] = _SUPOST_DIRECT[_key]
+        _L["clabel"] = "Open post →"
+        continue
     _q = _SUPOST_Q.get(_L["title"])
     if _q:
         _L["curl"] = "https://www.google.com/search?q=" + _uq.quote(f"site:supost.com {_q}")
@@ -416,16 +561,20 @@ def card(L):
         if len(parts) > 0:
             listing_id = "cl-" + parts[-1].replace(".html", "")
     # Stable key for the manual "reached out" toggle (works for non-CL too).
-    mark_id = listing_id or url
+    mark_id = L.get("mid") or listing_id or url
 
     dead = L.get("dead", False)
     offcriteria = L.get("offcriteria", "")
+    replied = L.get("replied", False)
 
     contacted = mark_id in contacted_ids or listing_id in contacted_ids
     queued = (not contacted) and (listing_id in queued_ids)
     if dead:
         contacted_class = " dead"
         contacted_badge = '<div class="contact-badge dead">⊗ EXPIRED</div>'
+    elif replied:
+        contacted_class = " replied"
+        contacted_badge = '<div class="contact-badge replied">💬 REPLIED</div>'
     elif contacted:
         contacted_class = " contacted"
         contacted_badge = '<div class="contact-badge">✓ CONTACTED</div>'
@@ -439,6 +588,8 @@ def card(L):
     if offcriteria:
         contacted_class += " offcriteria"
 
+    reply_html = (f'<div class="reply-note">💬 {html.escape(L["reply"])}</div>'
+                  if L.get("reply") else "")
     offcriteria_html = (f'<div class="offcriteria-note">⚠ {html.escape(offcriteria)}</div>'
                         if offcriteria else "")
 
@@ -552,6 +703,7 @@ def card(L):
 <div class="card-head"><p class="card-title">{html.escape(L['title'])}</p><span class="price">{html.escape(L['price'])}</span></div>
 <div class="area">{html.escape(L['area'])} · {html.escape(L['src'])}</div>
 <span class="status {scls}">{html.escape(stext)}</span>
+{reply_html}
 {offcriteria_html}
 <ul class="facts">{facts}</ul>
 <button class="expand-toggle" onclick="toggleCard('{card_id}')">▼ Show more details</button>
@@ -573,6 +725,8 @@ def render_body():
     # Listings shown on this dashboard (curated cards across all sections).
     all_cards = NON_CL + SUBLETS + REGULAR_RENTALS + SHORT_TERM + SUPOST
     def card_key(L):
+        if L.get("mid"):
+            return L["mid"]
         u = L["curl"]
         if "craigslist.org" in u:
             return "cl-" + u.split("/")[-1].replace(".html", "")
@@ -580,6 +734,19 @@ def render_body():
     n_cards = len(all_cards)
     n_card_contacted = sum(1 for L in all_cards if card_key(L) in contacted_ids)
     n_card_dead = sum(1 for L in all_cards if L.get("dead"))
+    n_replied = sum(1 for L in all_cards if L.get("replied"))
+
+    # Sort SUpost so the latest / most actionable is on top:
+    # replied → fresh leads to message → already contacted → ineligible/over-budget.
+    def supost_pri(L):
+        key = L.get("mid") or L["title"]
+        oc = L.get("offcriteria", "")
+        if L.get("replied"): return 0
+        if "FEMALE" in oc or "female" in oc or "$663 over" in oc or "$300 over" in oc:
+            return 4
+        if key not in contacted_ids: return 1   # fresh lead = action item
+        return 2                                  # contacted, waiting
+    supost_sorted = sorted(SUPOST, key=supost_pri)
     n_queue = len(queued_ids)
     n_queue_left = len([i for i in queued_ids if i not in contacted_ids])
 
@@ -631,7 +798,7 @@ function toggleCard(cardId) {{
 <div class="status-panel">
   <div class="status-row">
     <div class="stat"><div class="stat-num ok">{n_total}</div><div class="stat-lbl">reached out<br>(all sources)</div></div>
-    <div class="stat"><div class="stat-num">{n_card_contacted}/{n_cards - n_card_dead}</div><div class="stat-lbl">dashboard listings<br>contacted</div></div>
+    <div class="stat"><div class="stat-num replied-num">{n_replied}</div><div class="stat-lbl">replied<br>(in conversation)</div></div>
     <div class="stat"><div class="stat-num warn">{n_queue_left}</div><div class="stat-lbl">in queue,<br>not contacted</div></div>
     <div class="stat"><div class="stat-num dead-num">{n_card_dead}</div><div class="stat-lbl">expired<br>(skip)</div></div>
   </div>
@@ -648,7 +815,7 @@ function toggleCard(cardId) {{
 <div class="banner cl">
 <strong>Top priority — these are Stanford students/affiliates near campus.</strong> Pulled from the SUpost housing page you shared (offers only; "housing wanted" posts omitted; female-only and over-$2,000 filtered out). Each <em>View listing</em> button opens the SUpost housing page (supost.com/search/cat/3) — log in with your SUNet and search the title shown on the card (SUpost has no public per-post links). Grab the email/phone from the post and I'll add it here.
 </div>
-{"".join(card(L) for L in SUPOST)}
+{"".join(card(L) for L in supost_sorted)}
 
 <h2>Official Stanford Housing (most reliable)</h2>
 {"".join(card(L) for L in NON_CL)}
