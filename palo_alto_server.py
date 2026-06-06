@@ -3,7 +3,7 @@
 Card layout: each listing shows contact method + location map image.
 Updated to exclude East Palo Alto, focus on good neighborhoods only."""
 import http.server, socketserver, os, sys, html, mimetypes, json
-from urllib.parse import urlparse
+from urllib.parse import urlparse, quote
 from datetime import datetime
 
 ROOT = "/Users/test/Desktop/housing-S26"
@@ -82,140 +82,94 @@ def time_elapsed(timestamp_str):
         return "recently"
 
 CSS = """
-:root{
-  --paper:#efe8d7; --paper-deep:#e6ddc7; --surface:#fbf7ec; --surface-2:#f4eddd;
-  --ink:#241f17; --ink-2:#615847; --ink-3:#90876f; --rule:#dad0b8; --rule-2:#c6b994;
-  --cardinal:#8c1515; --cardinal-2:#a8392a; --green:#2f6b3f; --green-bg:#e6ede0;
-  --amber:#8a5e14; --amber-bg:#f1e6cc; --red:#9c2b22; --red-bg:#efdcd5;
-  --violet:#6a3f8a; --violet-bg:#ebe1f0;
-  --serif:'Fraunces',Georgia,serif; --sans:'Hanken Grotesk',system-ui,sans-serif;
-  --mono:'IBM Plex Mono',ui-monospace,monospace;
-}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);max-width:1180px;margin:0 auto;padding:0 22px 60px;color:var(--ink);line-height:1.4;background:var(--paper);font-size:13.5px;-webkit-font-smoothing:antialiased}
-body::before{content:"";position:fixed;top:0;left:0;right:0;height:4px;background:var(--cardinal);z-index:9998}
-body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.04;mix-blend-mode:multiply;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-::selection{background:var(--cardinal);color:var(--paper)}
-a{color:var(--cardinal);text-decoration:none}
+body{font-family:system-ui,-apple-system,sans-serif;max-width:1100px;margin:0 auto;padding:20px;color:#1a1a1a;line-height:1.45;background:#fff;font-size:14px}
+a{color:#2563eb;text-decoration:none}
 a:hover{text-decoration:underline}
-
-/* ---- masthead ---- */
-.masthead{text-align:center;padding:30px 0 16px;margin-bottom:6px;animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
-.kicker{display:flex;justify-content:center;align-items:center;gap:12px;font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-2);padding:9px 0;border-top:1px solid var(--rule-2);border-bottom:1px solid var(--rule-2)}
-.kicker .dot{color:var(--cardinal)}
-h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,5.6vw,52px);line-height:.98;letter-spacing:-.015em;color:var(--ink);margin:18px 0 12px;font-optical-sizing:auto}
-h1 em{font-style:italic;color:var(--cardinal)}
-.sub{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ink-2);line-height:1.7;max-width:760px;margin:0 auto;text-transform:uppercase}
-
-/* ---- banners ---- */
-.banner{background:var(--surface);border-left:3px solid var(--cardinal);padding:11px 16px;margin:14px 0;font-size:12.5px;line-height:1.5;color:var(--ink-2)}
-.banner strong{color:var(--ink)}
-.banner.cl{border-left-color:var(--amber);background:var(--amber-bg)}
-
-/* ---- section headers ---- */
-h2{font-family:var(--serif);font-weight:600;font-size:21px;letter-spacing:-.01em;color:var(--ink);margin:34px 0 4px;padding-top:14px;border-top:2px solid var(--ink);display:flex;align-items:baseline;gap:10px}
-
-/* ---- status panel (the ledger summary) ---- */
-.status-panel{background:var(--surface);border:1px solid var(--rule-2);border-top:4px solid var(--cardinal);margin:16px 0 8px;padding:0;animation:rise .7s .08s cubic-bezier(.2,.7,.2,1) both}
+.masthead{margin-bottom:14px}
+.kicker{display:none}
+h1{font-size:24px;font-weight:700;color:#111;margin-bottom:4px}
+h1 em{font-style:normal;color:#111}
+.sub{font-size:13px;color:#666;line-height:1.5}
+.banner{background:#f7f7f8;border-left:3px solid #2563eb;padding:10px 14px;margin:12px 0;font-size:13px;line-height:1.5;color:#444;border-radius:4px}
+.banner strong{color:#111}
+.banner.cl{border-left-color:#d97706;background:#fffbeb}
+h2{font-size:17px;font-weight:700;color:#111;margin:28px 0 8px;padding-bottom:6px;border-bottom:2px solid #111}
+.status-panel{border:1px solid #e2e2e2;border-radius:8px;margin:14px 0;background:#fff}
 .status-row{display:flex}
-.stat{flex:1;text-align:center;padding:18px 8px 14px;border-right:1px solid var(--rule)}
+.stat{flex:1;text-align:center;padding:14px 8px;border-right:1px solid #eee}
 .stat:last-child{border-right:none}
-.stat-num{font-family:var(--serif);font-size:40px;font-weight:500;line-height:.9;color:var(--ink);font-variant-numeric:tabular-nums}
-.stat-num.ok{color:var(--green)} .stat-num.warn{color:var(--amber)}
-.stat-num.dead-num{color:var(--red)} .stat-num.replied-num{color:var(--violet)}
-.stat-lbl{font-family:var(--mono);font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);margin-top:9px;line-height:1.35}
-.status-detail{font-size:12px;color:var(--ink-2);line-height:1.6;padding:11px 16px;border-top:1px solid var(--rule)}
-.status-detail strong{color:var(--ink)}
-
-/* ---- listing cards ---- */
-.card{position:relative;display:grid;grid-template-columns:182px 1fr 248px;gap:16px;background:var(--surface);border:1px solid var(--rule-2);padding:15px;margin:11px 0;height:196px;overflow:hidden;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,border-color .25s;animation:rise .5s both}
-.card:hover{transform:translateY(-3px);box-shadow:-6px 8px 0 -2px var(--paper-deep),0 10px 24px rgba(40,30,10,.1);border-color:var(--ink-3)}
-.card.top{border-color:var(--cardinal);box-shadow:inset 4px 0 0 var(--cardinal)}
-.card.contacted{box-shadow:inset 4px 0 0 var(--green)}
-.card.queued{box-shadow:inset 4px 0 0 var(--amber)}
-.card.replied{border-color:var(--violet);background:var(--violet-bg);box-shadow:inset 4px 0 0 var(--violet)}
-.card.dead{opacity:.5;box-shadow:inset 4px 0 0 var(--red)}
+.stat-num{font-size:28px;font-weight:700;color:#111;line-height:1}
+.stat-num.ok{color:#15803d}.stat-num.warn{color:#b45309}.stat-num.dead-num{color:#b91c1c}.stat-num.replied-num{color:#7c3aed}
+.stat-lbl{font-size:10px;color:#888;margin-top:6px;line-height:1.3;text-transform:uppercase;letter-spacing:.03em}
+.status-detail{font-size:12.5px;color:#555;line-height:1.6;padding:10px 14px;border-top:1px solid #eee}
+.status-detail strong{color:#111}
+.card{position:relative;display:grid;grid-template-columns:180px 1fr 240px;gap:14px;background:#fff;border:1px solid #e2e2e2;border-radius:8px;padding:14px;margin:10px 0;height:190px;overflow:hidden;transition:box-shadow .15s}
+.card:hover{box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.card.noimg{grid-template-columns:1fr 240px}
+.card.top{border-color:#15803d}
+.card.contacted{border-left:4px solid #15803d}
+.card.queued{border-left:4px solid #d97706}
+.card.replied{border-left:4px solid #7c3aed}
+.card.dead{opacity:.55}
 .card.dead .card-title{text-decoration:line-through}
 .card.dead .card-images{filter:grayscale(1)}
 .card.offcriteria{border-style:dashed}
-.card.noimg{grid-template-columns:1fr 248px}
 .card.expanded{height:auto;max-height:640px;overflow-y:auto}
-
-.contact-badge{position:absolute;top:0;right:0;background:var(--green);color:var(--paper);padding:5px 11px;font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;z-index:10}
-.contact-badge.queued{background:var(--amber)}
-.contact-badge.dead{background:var(--red)}
-.contact-badge.replied{background:var(--violet)}
-
-.card-images{width:182px;height:166px;display:flex;flex-direction:column;gap:3px;overflow:hidden}
-.card-images img{width:100%;height:100%;object-fit:cover;border:1px solid var(--rule)}
+.contact-badge{position:absolute;top:0;right:0;background:#15803d;color:#fff;padding:4px 10px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;border-bottom-left-radius:6px}
+.contact-badge.queued{background:#d97706}
+.contact-badge.dead{background:#b91c1c}
+.contact-badge.replied{background:#7c3aed}
+.card-images{width:180px;height:162px;display:flex;flex-direction:column;gap:3px;overflow:hidden}
+.card-images img{width:100%;height:100%;object-fit:cover;border-radius:4px}
 .card-images.multi{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:3px}
 .card-images.multi img:first-child{grid-column:1/3;grid-row:1}
-
 .card-content{display:flex;flex-direction:column;min-width:0;overflow:hidden}
 .card-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:4px}
-.card-title{font-family:var(--serif);font-weight:600;font-size:17px;line-height:1.12;color:var(--ink)}
-.price{font-family:var(--mono);font-size:16px;font-weight:600;color:var(--cardinal);white-space:nowrap;letter-spacing:-.02em}
-.area{font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);margin-bottom:7px}
-.status{display:inline-block;font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;margin-bottom:6px;border:1px solid currentColor;border-radius:1px}
-.status.go{color:var(--green)} .status.check{color:var(--amber)} .status.warn{color:var(--red)}
-ul.facts{list-style:none;font-size:12px;color:var(--ink-2);line-height:1.5;max-height:66px;overflow:hidden}
+.card-title{font-size:16px;font-weight:700;line-height:1.2;color:#111}
+.price{font-size:16px;font-weight:700;color:#15803d;white-space:nowrap}
+.area{font-size:12px;color:#777;margin-bottom:6px}
+.status{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;margin-bottom:6px}
+.status.go{background:#dcfce7;color:#15803d}.status.check{background:#fef3c7;color:#b45309}.status.warn{background:#fee2e2;color:#b91c1c}
+ul.facts{list-style:disc;padding-left:18px;font-size:12.5px;color:#444;line-height:1.5;max-height:66px;overflow:hidden}
 .card.expanded ul.facts{max-height:none}
-ul.facts li{margin:3px 0;padding-left:13px;position:relative}
-ul.facts li::before{content:"—";position:absolute;left:0;color:var(--cardinal)}
-.expand-toggle{background:none;border:none;color:var(--cardinal);font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;padding:6px 0 0;margin-top:auto}
-.expand-toggle:hover{color:var(--cardinal-2)}
-
-.reply-note{font-size:12px;color:var(--violet);background:var(--paper);border-left:3px solid var(--violet);padding:6px 9px;margin-bottom:6px;line-height:1.4}
-.offcriteria-note{font-size:11.5px;color:var(--amber);background:var(--paper);border-left:3px solid var(--amber);padding:6px 9px;margin-bottom:6px;line-height:1.4}
-
-/* ---- contact box ---- */
-.contact-box{border:1px solid var(--rule);background:var(--surface-2);padding:11px;display:flex;flex-direction:column;gap:5px;height:166px;overflow:hidden}
+ul.facts li{margin:2px 0}
+.expand-toggle{background:none;border:none;color:#2563eb;font-size:12px;cursor:pointer;padding:6px 0 0;margin-top:auto;text-align:left}
+.expand-toggle:hover{text-decoration:underline}
+.reply-note{font-size:12.5px;color:#6d28d9;background:#f5f3ff;border-left:3px solid #7c3aed;padding:6px 9px;margin-bottom:6px;line-height:1.4;border-radius:3px}
+.offcriteria-note{font-size:12px;color:#b45309;background:#fffbeb;border-left:3px solid #d97706;padding:6px 9px;margin-bottom:6px;line-height:1.4;border-radius:3px}
+.contact-box{border:1px solid #e2e2e2;background:#fafafa;border-radius:6px;padding:10px;display:flex;flex-direction:column;gap:5px;height:162px;overflow:hidden}
 .card.expanded .contact-box{height:auto;overflow:visible}
-.contact-note{display:none}
-.card.expanded .contact-note{display:block}
-.contact-title{font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);padding-bottom:5px;border-bottom:1px solid var(--rule)}
-.contact-item{font-size:12px;display:flex;align-items:center;gap:7px;padding:2px 0;color:var(--ink-2)}
-.contact-item svg{width:13px;height:13px;flex-shrink:0;color:var(--ink-3)}
+.contact-title{font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#999;padding-bottom:4px;border-bottom:1px solid #eee}
+.contact-item{font-size:12px;display:flex;align-items:center;gap:6px;padding:2px 0;color:#555}
+.contact-item svg{width:13px;height:13px;flex-shrink:0;color:#999}
 .contact-item a{word-break:break-all}
-.contact-item.my-email{background:var(--paper);border:1px solid var(--rule-2);border-left:3px solid var(--cardinal);padding:5px 8px;margin-top:2px;color:var(--ink)}
-.contact-note{font-size:11px;color:var(--ink-3);margin-top:3px;line-height:1.4}
-.btn-group{display:flex;gap:7px;margin-top:5px}
-.btn{display:inline-block;background:var(--cardinal);color:var(--paper)!important;padding:8px 12px;font-family:var(--mono);font-weight:500;font-size:10px;letter-spacing:.08em;text-transform:uppercase;text-align:center;flex:1;transition:background .2s}
-.btn:hover{background:var(--cardinal-2);text-decoration:none}
-.btn.secondary{background:var(--ink-2)}
-.reach-toggle{margin-top:5px;width:100%;padding:8px;border:1px solid var(--cardinal);background:transparent;color:var(--cardinal);font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:all .2s}
-.reach-toggle:hover{background:var(--paper)}
-.reach-toggle.on{background:var(--cardinal);color:var(--paper);border-color:var(--cardinal)}
+.contact-item.my-email{background:#eff6ff;border:1px solid #bfdbfe;border-radius:4px;padding:5px 8px;margin-top:2px;color:#1e40af}
+.contact-note{display:none;font-size:11px;color:#888;margin-top:3px;line-height:1.4}
+.card.expanded .contact-note{display:block}
+.btn-group{display:flex;gap:6px;margin-top:4px}
+.btn{display:inline-block;background:#2563eb;color:#fff!important;padding:8px 12px;border-radius:5px;font-weight:600;font-size:12px;text-align:center;flex:1}
+.btn:hover{background:#1d4ed8;text-decoration:none}
+.btn.secondary{background:#6b7280}
+.reach-toggle{margin-top:4px;width:100%;padding:8px;border:1px solid #2563eb;background:#fff;color:#2563eb;border-radius:5px;font-size:12px;font-weight:600;cursor:pointer}
+.reach-toggle:hover{background:#eff6ff}
+.reach-toggle.on{background:#15803d;color:#fff;border-color:#15803d}
 .reach-toggle:disabled{opacity:.5;cursor:wait}
-
-/* ---- contact history (expanded) ---- */
-.contact-history{margin-top:9px;padding-top:9px;border-top:1px solid var(--rule);display:none}
+.contact-history{margin-top:8px;padding-top:8px;border-top:1px solid #eee;display:none}
 .card.expanded .contact-history{display:block}
-.contact-history-title{font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px}
-.contact-entry{background:var(--paper);border:1px solid var(--rule);padding:8px;margin-bottom:7px;font-size:12px}
-.contact-entry-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
-.contact-channel{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--cardinal)}
-.contact-time{font-family:var(--mono);color:var(--ink-3);font-size:10px}
-.contact-via{font-family:var(--mono);color:var(--ink-3);font-size:10px;margin-bottom:5px}
-.contact-message{color:var(--ink-2);line-height:1.5;font-style:italic;padding:7px 9px;background:var(--surface-2);border-left:2px solid var(--rule-2)}
-
-/* ---- platforms table ---- */
-table{border-collapse:collapse;width:100%;margin:12px 0;font-size:12.5px;background:var(--surface)}
-th,td{border:1px solid var(--rule);padding:8px 11px;text-align:left;vertical-align:top}
-th{background:var(--ink);color:var(--paper);font-family:var(--mono);font-weight:500;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
-tr:nth-child(even) td{background:var(--surface-2)}
-
-@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-@media (max-width:720px){
-  body{padding:0 14px 50px}
-  .card{grid-template-columns:1fr;height:auto}
-  .card-images{width:100%;height:170px}
-  .status-row{flex-wrap:wrap}.stat{flex:1 0 50%;border-bottom:1px solid var(--rule)}
-  h1{font-size:34px}
-}
-@media print{body{background:#fff;max-width:100%}body::after,body::before{display:none}.card{break-inside:avoid;height:auto!important}h2{break-after:avoid}}
+.contact-history-title{font-size:10px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#999;margin-bottom:6px}
+.contact-entry{background:#fafafa;border:1px solid #eee;border-radius:5px;padding:8px;margin-bottom:6px;font-size:12px}
+.contact-entry-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.contact-channel{font-size:11px;font-weight:600;color:#2563eb}
+.contact-time{color:#999;font-size:10px}
+.contact-via{color:#888;font-size:10px;margin-bottom:4px}
+.contact-message{color:#444;line-height:1.5;font-style:italic;padding:6px 8px;background:#fff;border-left:2px solid #ddd;border-radius:3px}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:13px}
+th,td{border:1px solid #e2e2e2;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#f3f4f6;color:#111;font-weight:600;font-size:12px}
+tr:nth-child(even) td{background:#fafafa}
+@media (max-width:720px){body{padding:12px}.card,.card.noimg{grid-template-columns:1fr;height:auto}.card-images{width:100%;height:160px}.status-row{flex-wrap:wrap}.stat{flex:1 0 50%;border-bottom:1px solid #eee}}
+@media print{.card{break-inside:avoid;height:auto!important}h2{break-after:avoid}}
 """
 
 # ---- listing data ----------------------------------------------------------
@@ -602,6 +556,34 @@ for _L in SUPOST:
         _L["curl"] = "https://www.google.com/search?q=" + _uq.quote(f"site:supost.com {_q}")
         _L["clabel"] = "Find post →"
 
+def placeholder_svg(area, price):
+    """Clean location placeholder for listings without a real photo —
+    a labeled graphic (neighborhood + price), not a fake unit photo."""
+    loc = (area.split("(")[0].strip() or area)
+    words, lines, cur = loc.split(), [], ""
+    for w in words:
+        if len(cur) + len(w) + 1 <= 20:
+            cur = (cur + " " + w).strip()
+        else:
+            lines.append(cur); cur = w
+        if len(lines) == 2: break
+    if cur and len(lines) < 2: lines.append(cur)
+    lines = lines[:2] or [loc[:20]]
+    tspans = "".join(
+        f'<tspan x="90" dy="{0 if i==0 else 17}">{html.escape(l)}</tspan>'
+        for i, l in enumerate(lines))
+    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="180" height="162">'
+           f'<rect width="180" height="162" fill="#f3f4f6"/>'
+           f'<g fill="none" stroke="#9ca3af" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">'
+           f'<path d="M56 64 L90 40 L124 64"/><path d="M64 60 V100 H116 V60"/>'
+           f'<rect x="82" y="80" width="16" height="20"/></g>'
+           f'<text x="90" y="120" text-anchor="middle" font-family="system-ui,sans-serif" '
+           f'font-size="12" font-weight="600" fill="#4b5563">{tspans}</text>'
+           f'<text x="90" y="152" text-anchor="middle" font-family="system-ui,sans-serif" '
+           f'font-size="13" font-weight="700" fill="#15803d">{html.escape(price)}</text></svg>')
+    return "data:image/svg+xml," + quote(svg)
+
+
 def card(L):
     facts="".join(f"<li>{html.escape(f)}</li>" for f in L["facts"])
     top=" top" if L["top"] else ""
@@ -651,12 +633,12 @@ def card(L):
     phone=L.get("phone", "")
     email=L.get("email", "")
 
-    # Build image gallery HTML
-    img_html = ''
+    # One photo per listing — the real first photo, or a clean location placeholder.
     if imgs:
-        multi_class = ' multi' if len(imgs) > 1 else ''
-        img_tags = ''.join(f'<img src="/maps/{html.escape(img)}" alt="Property photo">' for img in imgs[:4])
-        img_html = f'<div class="card-images{multi_class}">{img_tags}</div>'
+        img_src = "/maps/" + html.escape(imgs[0])
+    else:
+        img_src = placeholder_svg(L["area"], L["price"])
+    img_html = f'<div class="card-images"><img src="{img_src}" alt="Property photo"></div>'
 
     # Build contact box
     contact_items = []
@@ -749,7 +731,7 @@ def card(L):
 
     # Generate unique ID for this card
     card_id = f"card-{listing_id}" if listing_id else f"card-{hash(url)}"
-    noimg = "" if imgs else " noimg"
+    noimg = ""  # every card now has a photo or a location placeholder
 
     return f"""<div class="card{top}{contacted_class}{noimg}" id="{card_id}">
 {contacted_badge}
@@ -806,8 +788,6 @@ def render_body():
     n_queue_left = len([i for i in queued_ids if i not in contacted_ids])
 
     return f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Simon's Stanford Summer 2026 Housing Ledger</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>{CSS}</style>
 <script>
 async function toggleReached(btn, id) {{
@@ -846,8 +826,7 @@ function toggleCard(cardId) {{
 </script>
 </head><body>
 <header class="masthead">
-<div class="kicker"><span>Palo Alto, California</span><span class="dot">✦</span><span>Summer 2026 Edition</span></div>
-<h1>Simon's Stanford Summer<br>Housing <em>Ledger</em></h1>
+<h1>Simon's Stanford Summer 2026 Housing</h1>
 <p class="sub">Under $2,000/mo · Dedicated units, no housemates · Within 20 min of Stanford · East Palo Alto excluded</p>
 </header>
 
