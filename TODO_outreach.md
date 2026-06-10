@@ -21,11 +21,16 @@ Sorted best-fit first:
 - [ ] $2,000  On-campus studio (June–July only)
 - [ ] $2,000  Private bed+bath, Mountain View
 
-## Message to send (copy-paste)
-> Hi! I'm Simon, coming from Cornell for the summer. Your place looks great and the
-> location is perfect. Is it still available, and when would be a good time for a tour?
-> I'm already in Palo Alto so I'm flexible. Thanks!
+## Message to send (copy-paste) — current standard intro (Jun 8)
+> Hi! My name is Simon, I'm a Cornell graduate incoming for the Summer School. About me:
+> Most of my summer days will be spent in classes and research projects, so I'm out and
+> about a lot and pretty easygoing when I'm home. I'm tidy, quiet, and friendly, and I
+> promise to treat your place like my own. Your place looks lovely and the location is
+> perfect! Is it still available? I'd love to come by for a tour whenever works for you.
+> I'm already in Palo Alto so I'm flexible. Thanks so much! :)
 >
-> Simon · ipo@stanford.edu · 607-262-9704
+> Simon, ipo@stanford.edu, 607-262-9704
+
+(Swap "classes and research projects" if your summer work is actually just coursework or an internship.)
 
 Find each post via the "Find post →" buttons on the dashboard (http://localhost:5555/).

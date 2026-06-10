@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:5555/ -->
+<html data-darkreader-mode="dynamic" data-darkreader-scheme="dark" data-darkreader-proxy-injected="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--user-agent" media="screen">@layer {
+html {
+    background-color: var(--darkreader-background-ffffff, #181a1b) !important;
+}
+html {
+    color-scheme: dark !important;
+}
+iframe {
+    color-scheme: dark !important;
+}
+html, body {
+    background-color: var(--darkreader-background-ffffff, #181a1b);
+}
+html, body {
+    border-color: var(--darkreader-border-4c4c4c, #736b5e);
+    color: var(--darkreader-text-000000, #e8e6e3);
+}
+a {
+    color: var(--darkreader-text-0040ff, #3391ff);
+}
+table {
+    border-color: var(--darkreader-border-808080, #545b5e);
+}
+mark {
+    color: var(--darkreader-text-000000, #e8e6e3);
+}
+::placeholder {
+    color: var(--darkreader-text-a9a9a9, #b2aba1);
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: var(--darkreader-background-faffbd, #404400) !important;
+    color: var(--darkreader-text-000000, #e8e6e3) !important;
+}
+::selection {
+    background-color: var(--darkreader-background-0060d4, #004daa) !important;
+    color: var(--darkreader-text-ffffff, #e8e6e3) !important;
+}
+::-moz-selection {
+    background-color: var(--darkreader-background-0060d4, #004daa) !important;
+    color: var(--darkreader-text-ffffff, #e8e6e3) !important;
+}
+}</style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, img.Wirisformula, a[data-testid="headerMediumLogo"]>svg, .d2l-navigation-link-image-container, .d2l-iframe-loading-container, div.mc-ip-hide[style*="background: rgb(255, 255, 255) !important"], [style*="color: rgb(0, 0, 1) !important;"] {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+}</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}
+[data-darkreader-inline-stopcolor] {
+  stop-color: var(--darkreader-inline-stopcolor) !important;
+}
+[data-darkreader-inline-bg] {
+  background: var(--darkreader-inline-bg) !important;
+}
+[data-darkreader-inline-border-short] {
+  border: var(--darkreader-inline-border-short) !important;
+}
+[data-darkreader-inline-border-bottom-short] {
+  border-bottom: var(--darkreader-inline-border-bottom-short) !important;
+}
+[data-darkreader-inline-border-left-short] {
+  border-left: var(--darkreader-inline-border-left-short) !important;
+}
+[data-darkreader-inline-border-right-short] {
+  border-right: var(--darkreader-inline-border-right-short) !important;
+}
+[data-darkreader-inline-border-top-short] {
+  border-top: var(--darkreader-inline-border-top-short) !important;
+}
+[data-darkreader-inline-invert] {
+    filter: invert(100%) hue-rotate(180deg);
+}</style><style class="darkreader darkreader--variables" media="screen">:root {
+   --darkreader-neutral-background: var(--darkreader-background-ffffff, #181a1b);
+   --darkreader-neutral-text: var(--darkreader-text-000000, #e8e6e3);
+   --darkreader-selection-background: var(--darkreader-background-0060d4, #004daa);
+   --darkreader-selection-text: var(--darkreader-text-ffffff, #e8e6e3);
+}</style><style class="darkreader darkreader--root-vars" media="screen"></style><style id="stndz-custom-css"></style><style class="darkreader darkreader--sync" media="screen"></style><title>Simon's Stanford Summer 2026 Housing</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,system-ui,sans-serif;max-width:1200px;margin:0 auto;padding:12px;color:#1a1a2e;line-height:1.3;background:#fafafa;font-size:13px}
+h1{margin:0 0 2px;color:#1a1a2e;font-size:22px}
+.sub{color:#555;font-size:12px;margin-bottom:10px}
+.banner{background:#fff8e1;border-left:3px solid #f9a825;padding:8px 12px;border-radius:4px;margin:10px 0;font-size:12px;line-height:1.4}
+.banner.cl{background:#fff3f3;border-color:#e57373}
+h2{margin:18px 0 6px;padding-bottom:3px;border-bottom:2px solid #1a1a2e;font-size:16px}
+.card{border:1px solid #e0e0e0;border-radius:6px;margin:8px 0;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.05);padding:10px;display:grid;grid-template-columns:180px 1fr 240px;gap:10px;position:relative;height:150px;overflow:hidden}
+.card.top{border:2px solid #4caf50;background:#f9fff9}
+.card.contacted{border-left:4px solid #2196f3;background:#f5f9ff}
+.card.expanded{height:auto;max-height:600px;overflow-y:auto}
+.contact-badge{position:absolute;top:6px;right:6px;background:#2196f3;color:#fff;padding:3px 8px;border-radius:3px;font-size:10px;font-weight:700;text-transform:uppercase;z-index:10}
+.card-images{width:180px;height:130px;display:flex;flex-direction:column;gap:3px;overflow:hidden}
+.card-images img{width:100%;height:100%;object-fit:cover;border-radius:4px}
+.card-images.multi{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:3px}
+.card-images.multi img:first-child{grid-column:1/3;grid-row:1}
+.card-content{display:flex;flex-direction:column;min-width:0;overflow:hidden}
+.card-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:3px}
+.card-title{font-weight:700;font-size:14px;line-height:1.2}
+.price{font-size:16px;font-weight:800;color:#2e7d32;white-space:nowrap}
+.area{font-size:11px;color:#666;margin-bottom:4px}
+.status{display:inline-block;font-size:10px;font-weight:700;padding:3px 7px;border-radius:3px;margin-bottom:4px}
+.status.go{background:#c8e6c9;color:#2e7d32}
+.status.check{background:#fff3e0;color:#e65100}
+.status.warn{background:#ffebee;color:#c62828}
+ul.facts{padding-left:16px;font-size:11px;color:#333;line-height:1.4;max-height:70px;overflow:hidden}
+.card.expanded ul.facts{max-height:none}
+ul.facts li{margin:2px 0}
+.expand-toggle{background:none;border:none;color:#1565c0;font-size:11px;cursor:pointer;padding:4px 0;text-decoration:underline;margin-top:4px}
+.expand-toggle:hover{color:#0d47a1}
+.contact-box{border:1px solid #e0e0e0;border-radius:4px;padding:8px;background:#fafafa;display:flex;flex-direction:column;gap:4px;height:130px;overflow:hidden}
+.card.expanded .contact-box{height:auto;overflow:visible}
+.contact-title{font-size:11px;font-weight:700;color:#555;margin-bottom:2px;text-transform:uppercase}
+.contact-item{font-size:12px;display:flex;align-items:center;gap:6px;padding:3px 0}
+.contact-item svg{width:14px;height:14px;flex-shrink:0}
+.contact-item a{color:#1565c0;text-decoration:none;word-break:break-all}
+.contact-item a:hover{text-decoration:underline}
+.contact-note{font-size:10px;color:#777;margin-top:4px;line-height:1.3}
+.contact-history{margin-top:8px;padding-top:8px;border-top:1px solid #e0e0e0;display:none}
+.card.expanded .contact-history{display:block}
+.contact-history-title{font-size:11px;font-weight:700;color:#555;margin-bottom:4px;text-transform:uppercase}
+.contact-entry{background:#fff;border:1px solid #e0e0e0;border-radius:4px;padding:6px;margin-bottom:6px;font-size:11px}
+.contact-entry-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.contact-channel{font-weight:700;color:#2196f3}
+.contact-time{color:#999;font-size:10px}
+.contact-via{color:#666;font-size:10px;margin-bottom:4px}
+.contact-message{color:#333;line-height:1.4;font-style:italic;padding:4px;background:#f9f9f9;border-radius:3px}
+.btn-group{display:flex;gap:6px;margin-top:6px}
+.btn{display:inline-block;background:#1565c0;color:#fff!important;padding:6px 12px;border-radius:4px;font-weight:600;text-decoration:none;font-size:11px;text-align:center;flex:1}
+.btn.secondary{background:#757575}
+table{border-collapse:collapse;width:100%;margin:8px 0;font-size:12px;background:#fff}
+th,td{border:1px solid #e0e0e0;padding:5px 8px;text-align:left;vertical-align:top}
+th{background:#1a1a2e;color:#fff;font-weight:500;font-size:11px}
+a{color:#1565c0}
+@media print{body{background:#fff;max-width:100%}.card{break-inside:avoid;box-shadow:none;height:auto!important}h2{break-after:avoid}}
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+<script>
+function toggleCard(cardId) {
+    const card = document.getElementById(cardId);
+    const btn = card.querySelector('.expand-toggle');
+    if (card.classList.contains('expanded')) {
+        card.classList.remove('expanded');
+        btn.textContent = '▼ Show more details';
+    } else {
+        card.classList.add('expanded');
+        btn.textContent = '▲ Show less';
+    }
+}
+</script>
+<meta name="darkreader" content="9425ac3f4628481aa88d495ec05b9f8e"><style class="darkreader darkreader--override" media="screen">.vimvixen-hint {
+    background-color: var(--darkreader-background-ffd76e, #684b00) !important;
+    border-color: var(--darkreader-background-c59d00, #9e7e00) !important;
+    color: var(--darkreader-text-302505, #d7d4cf) !important;
+}
+#vimvixen-console-frame {
+    color-scheme: light !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+#edge-translate-panel-body,
+.MuiTypography-body1,
+.nfe-quote-text {
+    color: var(--darkreader-neutral-text) !important;
+}
+gr-main-header {
+    background-color: var(--darkreader-background-add8e6, #1b4958) !important;
+}
+.tou-z65h9k,
+.tou-mignzq,
+.tou-1b6i2ox,
+.tou-lnqlqk {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.tou-75mvi {
+    background-color: var(--darkreader-background-cfecf5, #0f3a47) !important;
+}
+.tou-ta9e87,
+.tou-1w3fhi0,
+.tou-1b8t2us,
+.tou-py7lfi,
+.tou-1lpmd9d,
+.tou-1frrtv8,
+.tou-17ezmgn {
+    background-color: var(--darkreader-background-f5f5f5, #1e2021) !important;
+}
+.tou-uknfeu {
+    background-color: var(--darkreader-background-faedda, #432c09) !important;
+}
+.tou-6i3zyv {
+    background-color: var(--darkreader-background-85c3d8, #245d70) !important;
+}
+div.mermaid-viewer-control-panel .btn {
+    background-color: var(--darkreader-neutral-background);
+    fill: var(--darkreader-neutral-text);
+}
+svg g rect.er {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.entityBox {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.attributeBoxOdd {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.attributeBoxEven {
+    fill: var(--darkreader-selection-background);
+    fill-opacity: 0.8 !important;
+}
+svg rect.er.relationshipLabelBox {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g g.nodes rect,
+svg g g.nodes polygon {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.task {
+    fill: var(--darkreader-selection-background) !important;
+}
+svg line.messageLine0,
+svg line.messageLine1 {
+    stroke: var(--darkreader-neutral-text) !important;
+}
+div.mermaid .actor {
+    fill: var(--darkreader-neutral-background) !important;
+}
+mitid-authenticators-code-app > .code-app-container {
+    background-color: white !important;
+    padding-top: 1rem;
+}
+iframe#unpaywall[src$="unpaywall.html"] {
+    color-scheme: light !important;
+}
+select {
+    --darkreader-bg--form-control-background-color: rgba(22, 22, 22, 0) !important;
+}
+body#tumblr {
+    --darkreader-bg--secondary-accent: 31, 32, 34 !important;
+    --darkreader-bg--white: 23, 23, 23 !important;
+    --darkreader-text--black: 228, 224, 218 !important;
+}
+:host {
+    --d2l-border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+    --d2l-button-icon-background-color-hover: var(--darkreader-bg--d2l-color-gypsum) !important;
+    --d2l-color-ferrite: var(--darkreader-neutral-text) !important;
+    --d2l-color-sylvite: var(--darkreader-bg--d2l-color-sylvite) !important;
+    --d2l-dropdown-background-color: var(--darkreader-neutral-background) !important;
+    --d2l-dropdown-border-color: var(--darkreader-border--d2l-color-mica) !important;
+    --d2l-input-backgroud-color: var(--darkreader-neutral-background) !important;
+    --d2l-menu-border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+    --d2l-tooltip-background-color: var(--darkreader-neutral-background) !important;
+    --d2l-tooltip-border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+:host([_floating]) .d2l-floating-buttons-container {
+    background-color: var(--darkreader-neutral-background) !important;
+    border-top-color: var(--darkreader-border--d2l-color-mica) !important;
+    opacity: 0.88 !important;
+}
+d2l-card {
+    background: var(--darkreader-neutral-background) !important;
+    border-color: var(--darkreader-border--d2l-color-gypsum) !important;
+}
+d2l-dropdown-content > div,
+d2l-menu-item {
+    background-color: var(--darkreader-neutral-background) !important;
+    border-radius: 10px !important;
+}
+d2l-empty-state-simple {
+    border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+.d2l-button-filter > ul > li > a.vui-button {
+    border-color: var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-label-text:has(.d2l-button-subtle-content):hover,
+.d2l-label-text:has(.d2l-button-subtle-content):focus,
+.d2l-label-text:has(.d2l-button-subtle-content):active {
+    background-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+.d2l-navigation-centerer {
+    color: inherit !important;
+}
+.d2l-tabs-layout {
+    border-color: var(--darkreader-border--d2l-color-gypsum) !important;
+}
+.d2l-input,
+.d2l-calendar-date,
+.d2l-htmleditor-container {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.d2l-collapsible-panel {
+    border: 1px solid var(--darkreader-border--d2l-color-mica) !important;
+    border-radius: 0.4rem !important;
+}
+.d2l-collapsible-panel-divider {
+    border-bottom: 1px solid var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-w2d-flex {
+    border-bottom: 2px solid var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-collapsible-panel scrolled,
+.d2l-collapsible-panel-header,
+.d2l-w2d-collection-fixed {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.d2l-loading-spinner-bg {
+    fill: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+.d2l-loading-spinner-bg-stroke {
+    stroke: var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-loading-spinner-wrapper svg path,
+.d2l-loading-spinner-wrapper svg circle {
+    fill: var(--darkreader-neutral-background) !important;
+}
+.d2l-twopanelselector-side.d2l-twopanelselector-side-sep {
+    background: var(--darkreader-bg--d2l-color-mica) !important;
+}
+.d2l-le-TreeAccordionItem-anchor::before {
+    background: var(--darkreader-bg--d2l-color-corundum) !important;
+}
+table[class|="moz-header"] {
+    background: none;
+}
+*[style*="color: rgba(0,0,0,"],
+*[style*="color: rgba(0, 0, 0,"],
+*[style*="color:#000"],
+*[style*="color:black"],
+*[style*="color:#282828"],
+*[style*="color:#444"] {
+    color: var(--darkreader-neutral-text) !important;
+}
+*[style*="background:#fff"],
+*[style*="background-color:#fff"] {
+    background: var(--darkreader-neutral-background) !important;
+}
+*[bgcolor="#F5F5F5"],
+*[style*="background-color: #F5F5F5"] {
+    background: var(--darkreader-background-f5f5f5, #1e2021) !important;
+}
+body[style*="background: rgb(255, 255, 255) !important"] *:not(a),
+.body[style*="background-color: rgb(254, 254, 254) !important"] *:not(a) {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+div[style*="www.gstatic.com/android/"] {
+    background: none !important;
+}
+*[style*="background:#f9f9f9"] {
+    background: var(--darkreader-background-f9f9f9, #1b1e1f) !important;
+}
+body.mediawiki.skin-vector #mw-page-base {
+    background-image: none !important;
+}
+embed[type="application/pdf"][src="about:blank"] { filter: invert(100%) contrast(90%); }</style><style>.village-iframe{width:100%;height:100%;border:none;display:block;position:fixed;top:0;left:0;z-index:2147483647;background:#0000003d;color-scheme:light}.village-iframe.village-loading{display:flex;justify-content:center;align-items:center}.village-iframe>.village-spinner{width:1.5rem;height:1.5rem;border:2px solid #000;border-left-color:transparent;border-bottom-color:transparent;border-radius:50%;animation:spin .45s linear infinite}.village-iframe.village-hidden{display:none}@keyframes spin{0%{transform:rotate(0)}to{transform:rotate(360deg)}}.village-hidden{display:none}[village-paths-data=facepiles]{display:flex;align-items:center;padding-right:.5rem}[village-paths-data=facepiles] img{width:1.5rem;height:1.5rem;border-radius:50%;margin-right:-.5rem}[village-paths-data=facepiles] img.village-facepiler-avatar-not-found{filter:blur(7px)}[village-paths-data=facepiles] img:last-child{margin-right:0}[village-paths-data=count]{padding-right:.25rem}[village-paths-availability=error],[village-paths-availability=found],[village-paths-availability=not-found],[village-paths-availability=not-activated]{display:none!important}[village-paths-availability=loading]{display:inline-flex!important}</style><style class="darkreader darkreader--sync" media="screen"></style></head><body>
+<h1>Simon's Stanford Summer 2026 Housing</h1>
+<p class="sub">Under $2,000/mo · Dedicated units only (no housemates) · Hard June 1 start · Within 20 min of Stanford · Good neighborhoods (East Palo Alto excluded)</p>
+
+<div class="banner">
+<strong>Priority:</strong> Start with the <strong>$1,890 Palo Alto sublease</strong> — it's the ONLY whole-unit sublease that skips applications.
+</div>
+
+<h2>Official Stanford Housing (most reliable)</h2>
+<div class="card top" id="card-7519532110736957211">
+
+
+<div class="card-content">
+<div class="card-head"><p class="card-title">Stanford R&amp;DE — Official Summer Housing</p><span class="price">varies</span></div>
+<div class="area">On campus, Stanford · Stanford R&amp;DE</div>
+<span class="status go">Open — apply online</span>
+<ul class="facts"><li>Most reliable June-1 option, right next to campus.</li><li>Ask specifically for a studio / dedicated unit (not a shared room).</li><li>Apply online with your admit/role status.</li></ul>
+<button class="expand-toggle" onclick="toggleCard(&#39;card-7519532110736957211&#39;)">▼ Show more details</button>
+</div>
+<div class="contact-box">
+        <div class="contact-title">CONTACT INFO</div>
+        <div class="contact-item">
+            <svg fill="currentColor" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"></path></svg>
+            <a href="mailto:rde-conferencehousing@stanford.edu">rde-conferencehousing@stanford.edu</a>
+        </div>
+        <div class="btn-group">
+            <a class="btn" href="https://rde.stanford.edu/conferences/summer-intern-housing" target="_blank">View listing</a>
+        </div>
+        <div class="contact-note">No phone listed — online application. Request a self-contained unit; email the housing office with your admit status.</div>
+        
+    </div>
+</div>
+
+<h2>SUBLEASE — Skip applications (1 listing)</h2>
+<div class="card top contacted" id="card-cl-7936614381">
+<div class="contact-badge">✓ CONTACTED</div>
+<div class="card-images multi"><img src="./Simon&#39;s Stanford Summer 2026 Housing_files/flat_1890_1.jpg" alt="Property photo"><img src="./Simon&#39;s Stanford Summer 2026 Housing_files/flat_1890_2.jpg" alt="Property photo"><img src="./Simon&#39;s Stanford Summer 2026 Housing_files/flat_1890_3.jpg" alt="Property photo"><img src="./Simon&#39;s Stanford Summer 2026 Housing_files/flat_1890_4.jpg" alt="Property photo"></div>
+<div class="card-content">
+<div class="card-head"><p class="card-title">One Bedroom Flat (whole unit) — SUBLEASE</p><span class="price">$1,890/mo</span></div>
+<div class="area">Palo Alto (453 sqft) · Craigslist /sub · private party</div>
+<span class="status go">SUBLEASE · no application mentioned</span>
+<ul class="facts"><li>Self-contained 1BR: your OWN kitchen with full-sized appliances + your OWN tiled bath.</li><li>No housemates — a complete private flat, not a room in a shared house.</li><li>SUBLEASE from private individual — NO credit check or application process mentioned.</li><li>Wood floors, high ceilings, exposed brick, off-street parking, laundry in building.</li></ul>
+<button class="expand-toggle" onclick="toggleCard(&#39;card-cl-7936614381&#39;)">▼ Show more details</button>
+</div>
+<div class="contact-box">
+        <div class="contact-title">CONTACT INFO</div>
+        <div class="contact-item">
+            <svg fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"></path></svg>
+            <a href="tel:(793)661-4381">(793) 661-4381</a>
+        </div>
+        <div class="btn-group">
+            <a class="btn" href="https://sfbay.craigslist.org/pen/sub/d/palo-alto-one-bedroom-flat-for-rent/7936614381.html" target="_blank">View listing</a>
+        </div>
+        <div class="contact-note">THE sublease option to skip applications. Confirm: (1) June 1 OK, (2) utilities included, (3) lease length.</div>
+        
+            <div class="contact-history">
+                <div class="contact-history-title">Contact History (1 contact)</div>
+                
+                <div class="contact-entry">
+                    <div class="contact-entry-header">
+                        <span class="contact-channel">Craigslist Reply</span>
+                        <span class="contact-time">2d ago</span>
+                    </div>
+                    <div class="contact-via">Via: tianjiahe11@gmail.com</div>
+                    <div class="contact-message">Hi! I'm a Stanford graduate student looking for housing starting June 1st. Is this unit still available? I'd love to schedule a viewing. Best regards, Simon</div>
+                </div>
+            
+            </div>
+        
+    </div>
+</div>
+
+<h2>Regular Rentals — Good neighborhoods (9 listings)</h2>
+<div class="banner cl">
+<strong>Note:</strong> These are regular rentals (/apa) — expect applications, credit checks, and deposits. East Palo Alto listings removed.
+</div>
+<div class="card contacted" id="card-cl-7936493194">
+<div class="contact-badge">✓ CONTACTED</div>
+<div class="card-images"><img src="./Simon&#39;s Stanford Summer 2026 Housing_files/cottage_1800.jpg" alt="Property photo"></div>
+<div class="card-content">
+<div class="card-head"><p class="card-title">Cottage, private corner of property</p><span class="price">$1,800/mo</span></div>
+<div class="area">Menlo Park (~10 min drive to Stanford) · Craigslist /apa · likely needs application</div>
+<span class="status check">Regular rental · application likely</span>
+<ul class="facts"><li>Cozy cottage in private corner of property — separate structure, not shared.</li><li>Posted in /apa (not /sub) — likely a regular rental requiring application.</li><li>No move-in date posted — confirm June 1 works.</li></ul>
+<button class="expand-toggle" onclick="toggleCard(&#39;card-cl-7936493194&#39;)">▼ Show more details</button>
+</div>
+<div class="contact-box">
+        <div class="contact-title">CONTACT INFO</div>
+        <div class="contact-item">
+            <svg fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"></path></svg>
+            <a href="tel:(793)649-3194">(793) 649-3194</a>
+        </div>
+        <div class="btn-group">
+            <a class="btn" href="https://sfbay.craigslist.org/pen/apa/d/menlo-park-lovely-cozy-little-cottage/7936493194.html" target="_blank">View listing</a>
+        </div>
+        <div class="contact-note">Whole cottage in Menlo Park. Likely needs application — confirm if negotiable.</div>
+        
+            <div class="contact-history">
+                <div class="contact-history-title">Contact History (1 contact)</div>
+                
+                <div class="contact-entry">
+                    <div class="contact-entry-header">
+                        <span class="contact-channel">Craigslist Reply</span>
+                        <span class="contact-time">2d ago</span>
+                    </div>
+                    <div class="contact-via">Via: tianjiahe11@gmail.com</div>
+                    <div class="contact-message">Hello! I'm interested in the cottage. I'm a graduate student at Stanford starting June 1st. Could you please share more details about utilities and lease terms? Thank you!</div>
+                </div>
+            
+            </div>
+        
+    </div>
+</div><div class="card contacted" id="card-cl-7937976892">
+<div class="contact-badge">✓ CONTACTED</div>
+
+<div class="card-content">
+<div class="card-head"><p class="card-title">1BR unit in redwood forest with deck</p><span class="price">$1,750/mo</span></div>
+<div class="area">Woodside/Kings Mountain (~15 min to Stanford) · Craigslist /apa · likely needs application</div>
+<span class="status check">Regular rental · 1-year lease required</span>
+<ul class="facts"><li>Whole lower unit (540 sqft): 1BR/1BA, full kitchen, washer/dryer in unit.</li><li>Private entrance, wood floors, large covered redwood deck with mountain views.</li><li>In redwoods with hiking trails nearby, off-street parking, AC included.</li><li>Utilities: $150/mo flat rate (gas, electric, water, garbage) + internet separate.</li></ul>
+<button class="expand-toggle" onclick="toggleCard(&#39;card-cl-7937976892&#39;)">▼ Show more details</button>
+</div>
+<div class="contact-box">
+        <div class="contact-title">CONTACT INFO</div>
+        <div class="contact-item">
+            <svg fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path></svg>
+            <span style="color: rgb(153, 153, 153); --darkreader-inline-color: var(--darkreader-text-999999, #a8a095);" data-darkreader-inline-color="">Email via Craigslist</span>
+        </div>
+        <div class="btn-group">
+            <a class="btn" href="https://sfbay.craigslist.org/pen/apa/d/redwood-city-kings-mountain-redwood/7937976892.html" target="_blank">View listing</a>
+        </div>
+        <div class="contact-note">Beautiful forest setting, but 1-year lease + July 1 start. Ask if shorter term possible.</div>
+        
+    </div>
+</div><div class="card contacted" id="card-cl-7938345199">
+<div class="contact-badge">✓ CONTACTED</div>
+<div class="card-images multi"><img src="./Simon&#39;s Stanford Summer 2026 Housing_files/inlaw_1700_1.jpg" alt="Property photo"><img src="./Simon&#39;s Stanford Summer 2026 Housing_files/inlaw_1700_2.jpg" alt="Property photo"><img src="./Simon&#39;s Stanford Summer 2026 Housing_files/inlaw_1700_3.jpg" alt="Property photo"><img src="./Simon&#39;s Stanford Summer 2026 Housing_files/inlaw_1700_4.jpg" alt="Property photo"></div>
+<div class="card-content">
+<div class="card-head"><p class="card-title">In-law unit, 2BD/2BA lower level</p><span class="price">$1,700/mo</span></div>
+<div class="area">Redwood City/Atherton area (~15 min drive to Stanford) · Craigslist /apa · likely needs application</div>
+<span class="status check">Regular rental · application likely</span>
+<ul class="facts"><li>Lower-level in-law unit: 2 bedrooms, 2 full baths — your own space.</li><li>Posted in /apa (not /sub) — likely a regular rental requiring application.</li><li>No move-in date posted — confirm June 1 works.</li></ul>
+<button class="expand-toggle" onclick="toggleCard(&#39;card-cl-7938345199&#39;)">▼ Show more details</button>
+</div>
+<div class="contact-box">
+        <div class="contact-title">CONTACT INFO</div>
+        <div class="contact-item">
+            <svg fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path></svg>
+            <span style="color: rgb(153, 153, 153); --darkreader-inline-color: var(--darkreader-text-999999, #a8a095);" data-darkreader-inline-color="">Email via Craigslist</span>
+        </div>
+        <div class="btn-group">
+            <a class="btn" href="https://sfbay.craigslist.org/pen/apa/d/redwood-city-bd-ba-lower-level-in-law/7938345199.html" target="_blank">View listing</a>
+        </div>
+        <div class="contact-note">2BD/2BA in-law unit in Redwood City. Likely needs application.</div>
+        
+    </div>
+</div><div class="card contacted" id="card-cl-7936533032">
+<div class="contact-badge">✓ CONTACTED</div>
+
+<div class="card-content">
+<div class="card-head"><p class="card-title">Studio with EV charging, roof deck</p><span class="price">$1,414/mo</span></div>
+<div class="area">Redwood City, 855 Veterans Blvd (~15 min to Stanford) · Craigslist /apa · likely management company</div>
+<span class="status check">Regular rental · application required</span>
+<ul class="facts"><li>Whole 674 sqft studio with private kitchen and bathroom.</li><li>In-unit washer/dryer, dishwasher, stainless appliances, walk-in closet, central AC.</li><li>Building: fitness center, roof deck, dog park, EV charging, bike storage, attached garage.</li><li>Pets allowed: $500 deposit + $50/mo per pet.</li></ul>
+<button class="expand-toggle" onclick="toggleCard(&#39;card-cl-7936533032&#39;)">▼ Show more details</button>
+</div>
+<div class="contact-box">
+        <div class="contact-title">CONTACT INFO</div>
+        <div class="contact-item">
+            <svg fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path></svg>
+            <span style="color: rgb(153, 153, 153); --darkreader-inline-color: var(--darkreader-text-999999, #a8a095);" data-darkreader-inline-color="">Email via Craigslist</span>
+        </div>
+        <div class="btn-group">
+            <a class="btn" href="https://sfbay.craigslist.org/pen/apa/d/redwood-city-nest-thermostats-ev/7936533032.html" target="_blank">View listing</a>
+        </div>
+        <div class="contact-note">Modern amenities, good price for 674 sqft. Confirm utilities, security deposit, and June 1 availability.</div>
+        
+    </div>
+</div><div class="card contacted" id="card-cl-7933895643">
+<div class="contact-badge">✓ CONTACTED</div>
+
+<div class="card-content">
+<div class="card-head"><p class="card-title">Studio, 1207 Paloma Ave #1</p><span class="price">$1,895/mo</span></div>
+<div class="area">Burlingame (~20 min to Stanford) · Craigslist /apa · property management</div>
+<span class="status check">Regular rental · application required</span>
+<ul class="facts"><li>Whole studio (0BR/1BA) with private kitchen and full bath (shower over tub).</li><li>First floor with lots of windows, black granite counters, full-size fridge.</li><li>Covered parking (carport) + storage, laundry in building.</li><li>Application fee: $40 per applicant 18+.</li></ul>
+<button class="expand-toggle" onclick="toggleCard(&#39;card-cl-7933895643&#39;)">▼ Show more details</button>
+</div>
+<div class="contact-box">
+        <div class="contact-title">CONTACT INFO</div>
+        <div class="contact-item">
+            <svg fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path></svg>
+            <span style="color: rgb(153, 153, 153); --darkreader-inline-color: var(--darkreader-text-999999, #a8a095);" data-darkreader-inline-color="">Email via Craigslist</span>
+        </div>
+        <div class="btn-group">
+            <a class="btn" href="https://sfbay.craigslist.org/pen/apa/d/burlingame-avr-realty-inc-presents-1207/7933895643.html" target="_blank">View listing</a>
+        </div>
+        <div class="contact-note">Clean studio near transit. Burlingame is 20 min from Stanford — confirm commute works for you.</div>
+        
+    </div>
+</div><div class="card contacted" id="card-cl-7931983958">
+<div class="contact-badge">✓ CONTACTED</div>
+
+<div class="card-content">
+<div class="card-head"><p class="card-title">Studio in-law unit, separate entrance</p><span class="price">$1,650/mo</span></div>
+<div class="area">San Bruno (~25 min to Stanford) · Craigslist /apa · private landlord</div>
+<span class="status check">Regular rental · references required</span>
+<ul class="facts"><li>In-law studio unit with separate entrance (308 sqft).</li><li>Updated floors, recessed lighting, walking distance to SFO shuttle.</li><li>No smoking, street parking available, no on-site laundry.</li><li>Landlord requires: occupation info, income, credit score, and personal bio.</li></ul>
+<button class="expand-toggle" onclick="toggleCard(&#39;card-cl-7931983958&#39;)">▼ Show more details</button>
+</div>
+<div class="contact-box">
+        <div class="contact-title">CONTACT INFO</div>
+        <div class="contact-item">
+            <svg fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path></svg>
+            <span style="color: rgb(153, 153, 153); --darkreader-inline-color: var(--darkreader-text-999999, #a8a095);" data-darkreader-inline-color="">Email via Craigslist</span>
+        </div>
+        <div class="btn-group">
+            <a class="btn" href="https://sfbay.craigslist.org/pen/apa/d/san-bruno-in-law-studio-unit-separate/7931983958.html" target="_blank">View listing</a>
+        </div>
+        <div class="contact-note">Affordable but farther from Stanford. ASK about kitchen before applying. Confirm June 1 availability.</div>
+        
+    </div>
+</div><div class="card contacted" id="card-cl-7935265977">
+<div class="contact-badge">✓ CONTACTED</div>
+
+<div class="card-content">
+<div class="card-head"><p class="card-title">Small backyard studio</p><span class="price">$1,495/mo</span></div>
+<div class="area">San Mateo (~20 min to Stanford) · Craigslist /apa · private landlord</div>
+<span class="status check">Regular rental · restrictions apply</span>
+<ul class="facts"><li>Newly remodeled studio — described as 'small backyard' unit.</li><li>Laundry on site, off-street parking included.</li><li>No smoking, no drugs, no pets, single occupancy only.</li><li>Near El Camino Real, Hillsdale Shopping Center, and CalTrain.</li></ul>
+<button class="expand-toggle" onclick="toggleCard(&#39;card-cl-7935265977&#39;)">▼ Show more details</button>
+</div>
+<div class="contact-box">
+        <div class="contact-title">CONTACT INFO</div>
+        <div class="contact-item">
+            <svg fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path></svg>
+            <span style="color: rgb(153, 153, 153); --darkreader-inline-color: var(--darkreader-text-999999, #a8a095);" data-darkreader-inline-color="">Email via Craigslist</span>
+        </div>
+        <div class="btn-group">
+            <a class="btn" href="https://sfbay.craigslist.org/pen/apa/d/san-mateo-small-back-yard-studio-not/7935265977.html" target="_blank">View listing</a>
+        </div>
+        <div class="contact-note">Budget-friendly option. MUST verify it has private kitchen and bathroom before applying.</div>
+        
+    </div>
+</div><div class="card contacted" id="card-cl-7937147440">
+<div class="contact-badge">✓ CONTACTED</div>
+
+<div class="card-content">
+<div class="card-head"><p class="card-title">Newly remodeled studio</p><span class="price">$1,750/mo</span></div>
+<div class="area">San Mateo (~20 min to Stanford) · Craigslist /apa · private landlord</div>
+<span class="status check">Regular rental · application likely</span>
+<ul class="facts"><li>Described as 'newly remodeled studio' near CalTrain and shopping.</li><li>Laundry on site, off-street parking included.</li><li>No smoking, no drugs, no pets, single occupancy only.</li></ul>
+<button class="expand-toggle" onclick="toggleCard(&#39;card-cl-7937147440&#39;)">▼ Show more details</button>
+</div>
+<div class="contact-box">
+        <div class="contact-title">CONTACT INFO</div>
+        <div class="contact-item">
+            <svg fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path></svg>
+            <span style="color: rgb(153, 153, 153); --darkreader-inline-color: var(--darkreader-text-999999, #a8a095);" data-darkreader-inline-color="">Email via Craigslist</span>
+        </div>
+        <div class="btn-group">
+            <a class="btn" href="https://sfbay.craigslist.org/pen/apa/d/san-mateo-studio-in-san-mateo/7937147440.html" target="_blank">View listing</a>
+        </div>
+        <div class="contact-note">MUST verify private kitchen and bathroom before applying. Confirm June 1 availability.</div>
+        
+    </div>
+</div><div class="card contacted" id="card-cl-7934591226">
+<div class="contact-badge">✓ CONTACTED</div>
+<div class="card-images"><img src="./Simon&#39;s Stanford Summer 2026 Housing_files/studio_1300.jpg" alt="Property photo"></div>
+<div class="card-content">
+<div class="card-head"><p class="card-title">Affordable studio, 605 Willow Rd</p><span class="price">$1,300/mo</span></div>
+<div class="area">Menlo Park (~10 min drive to Stanford) · Craigslist /apa · formal application REQUIRED</div>
+<span class="status warn">Income-restricted · REQUIRES application</span>
+<ul class="facts"><li>Whole 450 sqft studio, partially furnished (bed, nightstand, table, chairs).</li><li>INCOME-RESTRICTED (tax-credit): requires ~$38,982 MIN gross annual income + formal application.</li><li>NOT a sublease — full application process, waitlist, $1,200 deposit required.</li></ul>
+<button class="expand-toggle" onclick="toggleCard(&#39;card-cl-7934591226&#39;)">▼ Show more details</button>
+</div>
+<div class="contact-box">
+        <div class="contact-title">CONTACT INFO</div>
+        <div class="contact-item">
+            <svg fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"></path></svg>
+            <a href="tel:(793)459-1226">(793) 459-1226</a>
+        </div>
+        <div class="btn-group">
+            <a class="btn" href="https://sfbay.craigslist.org/pen/apa/d/menlo-park-open-house-605-willow-rd-am/7934591226.html" target="_blank">View listing</a>
+        </div>
+        <div class="contact-note">Cheapest, but mandatory formal application + income docs. Skip if avoiding applications. Has phone contact.</div>
+        
+            <div class="contact-history">
+                <div class="contact-history-title">Contact History (2 contacts)</div>
+                
+                <div class="contact-entry">
+                    <div class="contact-entry-header">
+                        <span class="contact-channel">Phone Call</span>
+                        <span class="contact-time">1d ago</span>
+                    </div>
+                    <div class="contact-via">Via: (793) 459-1226</div>
+                    <div class="contact-message">Called and left voicemail inquiring about June 1st availability and application process</div>
+                </div>
+            
+                <div class="contact-entry">
+                    <div class="contact-entry-header">
+                        <span class="contact-channel">Craigslist Reply</span>
+                        <span class="contact-time">1d ago</span>
+                    </div>
+                    <div class="contact-via">Via: tianjiahe11@gmail.com</div>
+                    <div class="contact-message">Following up on my earlier call. I'm a Stanford graduate student interested in the affordable studio. What documents do I need for the application?</div>
+                </div>
+            
+            </div>
+        
+    </div>
+</div>
+
+<h2>Short-term Options (partial summer coverage)</h2>
+<div class="card contacted" id="card-cl-7933971597">
+<div class="contact-badge">✓ CONTACTED</div>
+
+<div class="card-content">
+<div class="card-head"><p class="card-title">1BR/1BA short-term (mid-June to mid-Aug)</p><span class="price">$1,800/mo</span></div>
+<div class="area">Portola Valley (~5 min to Stanford) · Craigslist /sub · short-term</div>
+<span class="status check">Short-term · shared housing</span>
+<ul class="facts"><li>~1000 sqft private room with private bathroom in shared house (one other person).</li><li>Short-term only: mid-June to mid-August 2026, minimum 5-6 weeks.</li><li>Access to patios, garden, on-site laundry, carport parking.</li><li>This is NOT a whole unit — you share the house with one other person.</li></ul>
+<button class="expand-toggle" onclick="toggleCard(&#39;card-cl-7933971597&#39;)">▼ Show more details</button>
+</div>
+<div class="contact-box">
+        <div class="contact-title">CONTACT INFO</div>
+        <div class="contact-item">
+            <svg fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path></svg>
+            <span style="color: rgb(153, 153, 153); --darkreader-inline-color: var(--darkreader-text-999999, #a8a095);" data-darkreader-inline-color="">Email via Craigslist</span>
+        </div>
+        <div class="btn-group">
+            <a class="btn" href="https://sfbay.craigslist.org/pen/sub/d/portola-valley-short-term-br-with-1ba/7933971597.html" target="_blank">View listing</a>
+        </div>
+        <div class="contact-note">Great location but shared housing (has housemate). Only covers part of summer.</div>
+        
+    </div>
+</div>
+
+<h2>Social/peer-to-peer platforms (check manually)</h2>
+<table>
+<tbody><tr><th>Platform</th><th>URL</th><th>Notes</th></tr>
+<tr><td>Stanford R&amp;DE</td><td><a href="https://rde.stanford.edu/conferences/summer-intern-housing">rde.stanford.edu</a></td><td>Official Stanford option</td></tr>
+<tr><td>SUpost</td><td><a href="https://supost.com/">supost.com</a></td><td>Stanford-affiliated classifieds</td></tr>
+<tr><td>Facebook Group</td><td><a href="https://www.facebook.com/groups/304588736883828/">Stanford Housing/Sublets</a></td><td>Active student housing market</td></tr>
+<tr><td>Facebook Marketplace</td><td><a href="https://www.facebook.com/marketplace/category/propertyrentals">Marketplace rentals</a></td><td>Search: "Palo Alto studio" or "Menlo Park sublet"</td></tr>
+<tr><td>RedNote (小红书)</td><td><a href="https://www.xiaohongshu.com/">xiaohongshu.com</a></td><td>Chinese platform — search "Stanford租房"</td></tr>
+<tr><td>Reddit r/Stanford</td><td><a href="https://www.reddit.com/r/stanford/">r/stanford</a></td><td>Search "housing" or "sublet summer 2026"</td></tr>
+<tr><td>Zillow Rentals</td><td><a href="https://www.zillow.com/homes/for_rent/">zillow.com</a></td><td>Filter: Palo Alto + Menlo Park, max $2000</td></tr>
+<tr><td>Apartments.com</td><td><a href="https://www.apartments.com/">apartments.com</a></td><td>Filter by location and move-in date</td></tr>
+<tr><td>Craigslist /apa</td><td><a href="https://sfbay.craigslist.org/search/pen/apa?max_price=2000">Search link</a></td><td>Regular rentals — filter for good areas</td></tr>
+<tr><td>Craigslist /sub</td><td><a href="https://sfbay.craigslist.org/search/pen/sub?max_price=2000">Search link</a></td><td>Temporary/subleases — best for avoiding applications</td></tr>
+</tbody></table>
+
+<p style="margin-top: 20px; color: rgb(119, 119, 119); font-size: 11px; --darkreader-inline-color: var(--darkreader-text-777777, #9d9488);" data-darkreader-inline-color="">Dashboard updated: June 3, 2026 · East Palo Alto excluded · Contact tracking active · Blue border = contacted</p>
+</body></html>

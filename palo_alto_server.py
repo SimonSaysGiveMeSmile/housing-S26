@@ -95,6 +95,7 @@ h1 em{font-style:normal;color:#111}
 .banner strong{color:#111}
 .banner.cl{border-left-color:#d97706;background:#fffbeb}
 h2{font-size:17px;font-weight:700;color:#111;margin:28px 0 8px;padding-bottom:6px;border-bottom:2px solid #111}
+h3.cat{font-size:14px;font-weight:700;color:#333;margin:18px 0 8px;padding:5px 10px;background:#f3f4f6;border-radius:5px}
 .status-panel{border:1px solid #e2e2e2;border-radius:8px;margin:14px 0;background:#fff}
 .status-row{display:flex}
 .stat{flex:1;text-align:center;padding:14px 8px;border-right:1px solid #eee}
@@ -314,8 +315,61 @@ SHORT_TERM = [
 # are no per-post links in the source, so "View listing" points to the SUpost
 # housing page — search the title there while logged in with your @stanford.edu.
 SUPOST = [
+ # ---- NEWEST (Jun 8) — your latest outreach on top ----
+ {"top":True,"title":"Room sublease — Kennedy (Jun 23–Sep 10)","mid":"su-kennedy-jun23-sep10","price":"$1,600/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (Kennedy grad housing)","status":("go","CONTACTED Jun 8 · best date match"),
+  "facts":["Room sublease in Kennedy graduate housing, June 23 – Sept 10 — covers nearly your whole summer.",
+           "Under budget at $1,600, on campus.",
+           "Best date coverage of this batch."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"You messaged this Jun 8 via SUpost (from ipo@stanford.edu). Sent: \"Hi! I'm Simon, coming from Cornell for the summer. Your place looks great and the location is good. Is it still available, and when would be a good time for a tour? I'm already in Palo Alto so it's flexible.\" Awaiting reply — best date match of the batch."},
+
+ {"top":True,"title":"Summer sublet — Kennedy Commons grad housing","mid":"su-kennedy-commons-1570","price":"$1,570/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (Kennedy Commons · 6 Comstock Circle, by EVGR)","status":("go","TEXTED Jun 8 · awaiting reply"),
+  "offcriteria":"Stanford grad housing — poster says you must be a Stanford affiliate AND a graduate student or over 21. Confirm you qualify before counting on it.",
+  "facts":["Room in a 2b/2b junior apartment — fully furnished, kitchen has all major appliances.",
+           "Dates: June 15 – Aug 19. Under budget at $1,570.",
+           "Poster: Bri — call/text 623-810-3457, or ba624@stanford.edu.",
+           "Located next to EVGR on 6 Comstock Circle.",
+           "Eligibility: must be Stanford affiliate + grad student or 21+ (Stanford sublicense rules)."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"You TEXTED Bri at 623-810-3457 on Jun 8 (also reachable at ba624@stanford.edu). $1,570, Jun 15–Aug 19, furnished room in a 2b/2b. Awaiting reply. Heads-up: grad-housing eligibility requires a Stanford affiliation + grad/21+ — confirm you qualify."},
+
+ # ---- NEW Jun-start leads (Jun 8 paste) — you're in a hotel, June availability ----
+ {"top":True,"title":"Stopgap: rooms in campus house (Jun 9–20)","mid":"su-campus-stopgap-jun9","price":"$1,200/mo","src":"SUpost · Stanford-only",
+  "area":"Heart of Stanford campus","status":("go","IMMEDIATE bridge · get out of the hotel"),
+  "offcriteria":"Only covers June 9–20 — a short bridge, not a full-summer place. Pair it with a July-start sublet.",
+  "facts":["Rooms with bathroom in a house in the heart of campus, June 9 – 20.","$1,200. Available right now — fills your immediate hotel gap.","Bridge to a longer (July-start) sublet."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"IMMEDIATE bridge (Jun 9–20) to get you out of the hotel now. Pair with a July-start place. Not yet messaged."},
+
+ {"top":True,"title":"Summer sublet — co-op close to campus","mid":"su-coop-summer","price":"$1,300/mo","src":"SUpost · Stanford-only",
+  "area":"Near Stanford campus (co-op house)","status":("go","Cheap · summer · confirm June start"),
+  "facts":["Room in a co-op house close to campus, summer sublet (has a photo on SUpost).","Under budget at $1,300 — one of the cheapest near campus.","Confirm the exact June start date and that it runs through your stay."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 8 lead — cheap ($1,300) co-op room near campus, summer. Ask if it starts in June. Not yet messaged."},
+
+ {"top":True,"title":"Room in creative community house (yard/pool/sauna)","mid":"su-community-house","price":"$1,100/mo","src":"SUpost · Stanford-only",
+  "area":"Palo Alto area","status":("go","Cheapest · confirm June start"),
+  "facts":["Room opening in a bright community house with a huge yard, pool, and sauna (photo on SUpost).","Cheapest option found at $1,100.","Dates not stated — confirm June availability."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 8 lead — cheapest at $1,100, community house w/ pool+sauna. Ask if it starts in June. Not yet messaged."},
+
+ {"top":False,"title":"Private room for rent — Mountain View ($1,425)","mid":"su-mv-room-1425","price":"$1,425/mo","src":"SUpost · Stanford-only",
+  "area":"Mountain View (~15–20 min to Stanford)","status":("check","Private room · confirm June start"),
+  "facts":["Private room for rent in Mountain View.","Under budget at $1,425.","Dates not stated — confirm June availability.","Farther out (~15–20 min to campus)."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 8 lead — Mountain View private room, $1,425. Ask if it starts in June. Not yet messaged."},
+
+ {"top":False,"title":"Private cottage + live-in assistant gig (Menlo Park)","mid":"su-menlo-livein-cottage","price":"$1,700/mo","src":"SUpost · Stanford-only",
+  "area":"Menlo Park","status":("check","Whole cottage · comes with a 10-15 hr/wk job"),
+  "offcriteria":"Comes with a commitment: live-in household assistant, 10-15 hrs/week (paid $25/hr). Only worth it if you want that on top of classes/research.",
+  "facts":["Private cottage in Menlo Park for $1,700/mo — a WHOLE unit, under budget.","Tied to a live-in household-assistant role: 10-15 hrs/week at $25/hr (the pay roughly offsets the rent).","Sponsored post on SUpost. Confirm dates and exact duties.","Trade-off: extra time commitment alongside your summer work."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 9 lead — whole private cottage $1,700 in Menlo Park, but you'd work 10-15 hrs/wk as a live-in assistant ($25/hr offsets rent). Good value if the hours fit your schedule."},
+
  # ---- WHOLE UNITS (studios / apartments) — best fit ----
- {"top":True,"title":"Fully Furnished EV Studio + Free Bike","price":"$1,900/mo","src":"SUpost · Stanford-only",
+ {"top":True,"title":"Fully Furnished EV Studio + Free Bike","mid":"su-ev-freebike","price":"$1,900/mo","src":"SUpost · Stanford-only",
   "area":"On campus, Stanford (Escondido Village)","status":("go","Whole studio · utilities incl · full summer"),
   "facts":["WHOLE studio on campus — your own unit, no housemates.",
            "Dates: June 9 – Sept 22 (covers the whole summer).",
@@ -324,7 +378,7 @@ SUPOST = [
   "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
   "cnote":"STRONG — whole studio, utilities incl, full summer, $1,900. Search 'Fully Furnished EV Studio Free Bike' on SUpost."},
 
- {"top":True,"title":"EVGR-B Private Studio sublet","price":"$1,600/mo","src":"SUpost · Stanford-only",
+ {"top":True,"title":"EVGR-B Private Studio sublet","mid":"su-evgrb-studio","price":"$1,600/mo","src":"SUpost · Stanford-only",
   "area":"On campus, Stanford (EVGR-B)","status":("go","Whole studio · on campus · under budget"),
   "facts":["WHOLE studio (your own unit, no housemates) on campus in EVGR-B.",
            "Dates: June 20 – Sept 15. Covers all summer.",
@@ -333,7 +387,7 @@ SUPOST = [
   "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
   "cnote":"STRONG — whole on-campus studio, $1,600, full summer. Search 'EVGR B Private Studio' on SUpost."},
 
- {"top":True,"title":"EV low-rise apartment sublet","price":"$1,414/mo","src":"SUpost · Stanford-only",
+ {"top":True,"title":"EV low-rise apartment sublet","mid":"su-ev-lowrise-apt","price":"$1,414/mo","src":"SUpost · Stanford-only",
   "area":"On campus, Stanford (Escondido Village low-rise)","status":("go","Whole apartment · cheapest"),
   "facts":["Subletting a whole EV low-rise apartment on campus.",
            "Dates: ~June 15 – Sept 15.",
@@ -474,9 +528,9 @@ SUPOST = [
  {"top":False,"title":"Stanford Studio (Jun 15–Aug 31)","mid":"su-stanford-studio-jun15","price":"$2,049/mo","src":"SUpost · Stanford-only",
   "area":"On campus, Stanford","status":("check","Whole studio · full summer · $49 over"),
   "offcriteria":"$49 over your $2,000 limit; no undergrads in the building.",
-  "facts":["Whole studio, June 15 – Aug 31, full summer.","Master's student / affiliate only, no undergrads.","NOT yet messaged."],
+  "facts":["Whole studio, June 15 – Aug 31, full summer.","Master's student / affiliate only, no undergrads.","Messaged on SUpost — awaiting reply."],
   "clabel":"Open post →","curl":"https://supost.com/post/index/130035883",
-  "cnote":"NEW lead — whole studio, full summer, $2,049 (just over budget). Message after the rate limit lifts."},
+  "cnote":"You messaged this. Whole studio, full summer, $2,049 (just over budget). Awaiting reply."},
 
  {"top":False,"title":"EV Low-rise room (Jun 15–Aug 31)","mid":"su-ev-lowrise-room","price":"$1,599/mo","src":"SUpost · Stanford-only",
   "area":"On campus, Stanford (EV Low-rise)","status":("check","Private room · under budget"),
@@ -488,9 +542,9 @@ SUPOST = [
  {"top":False,"title":"EV Studio 1 (Jun 21–~Jul 20)","mid":"su-ev-studio1-jun21","price":"$2,039/mo","src":"SUpost · Stanford-only",
   "area":"On campus, Stanford (Escondido Village)","status":("check","Whole studio · short window · $39 over"),
   "offcriteria":"$39 over budget and short window (June 21 to ~July 20 only).",
-  "facts":["Whole EV studio (Studio 1), June 21 to ~July 20, flexible.","Furnished. +$50 house dues. NOT yet messaged."],
+  "facts":["Whole EV studio (Studio 1), June 21 to ~July 20, flexible.","Furnished. +$50 house dues.","Messaged on SUpost — awaiting reply."],
   "clabel":"Open post →","curl":"https://supost.com/post/index/130076651",
-  "cnote":"NEW lead — whole studio but only ~1 month (June 21–July 20), $2,039. Message after the rate limit lifts."},
+  "cnote":"You messaged this. Whole studio but only ~1 month (June 21–July 20), $2,039. Awaiting reply."},
 
  {"top":False,"title":"1B/1Ba EV Midrise (Jun 15–Sep 1)","mid":"su-ev-midrise-1b1b","price":"$2,663/mo","src":"SUpost · Stanford-only",
   "area":"On campus, Stanford (EV Midrise)","status":("warn","Whole 1B1B · over budget"),
@@ -543,7 +597,7 @@ _SUPOST_DIRECT = {
  "su-ev-studio-jun12-sep15": "https://supost.com/post/index/130085618",
  "su-3br-townhouse-jun1": "https://supost.com/post/index/130085280",
  "su-1b-2bhk-noflatmate": "https://supost.com/post/index/130085276",
- "Fully Furnished EV Studio + Free Bike": "https://supost.com/post/index/130085266",
+ "su-ev-freebike": "https://supost.com/post/index/130085266",
 }
 for _L in SUPOST:
     _key = _L.get("mid") or _L["title"]
@@ -773,17 +827,27 @@ def render_body():
     n_card_dead = sum(1 for L in all_cards if L.get("dead"))
     n_replied = sum(1 for L in all_cards if L.get("replied"))
 
-    # Sort SUpost so the latest / most actionable is on top:
-    # replied → fresh leads to message → already contacted → ineligible/over-budget.
-    def supost_pri(L):
-        key = L.get("mid") or L["title"]
+    # Categorize SUpost listings by outreach status so the page reads as
+    # clear buckets instead of one long mixed list.
+    def sup_key(L): return L.get("mid") or L["title"]
+    def is_ineligible(L):
         oc = L.get("offcriteria", "")
-        if L.get("replied"): return 0
-        if "FEMALE" in oc or "female" in oc or "$663 over" in oc or "$300 over" in oc:
-            return 4
-        if key not in contacted_ids: return 1   # fresh lead = action item
-        return 2                                  # contacted, waiting
-    supost_sorted = sorted(SUPOST, key=supost_pri)
+        return ("FEMALE" in oc or "female" in oc or "$663 over" in oc or "$300 over" in oc)
+    def grp_sort(items):
+        return sorted(items, key=lambda L: (not L["top"], L["title"]))
+    sup_replied = grp_sort([L for L in SUPOST if L.get("replied")])
+    sup_todo    = grp_sort([L for L in SUPOST if not L.get("replied") and not is_ineligible(L) and sup_key(L) not in contacted_ids])
+    sup_msgd    = grp_sort([L for L in SUPOST if not L.get("replied") and not is_ineligible(L) and sup_key(L) in contacted_ids])
+    sup_inelig  = grp_sort([L for L in SUPOST if not L.get("replied") and is_ineligible(L)])
+    def sup_section(title, items):
+        if not items: return ""
+        return f'<h3 class="cat">{title} ({len(items)})</h3>' + "".join(card(L) for L in items)
+    supost_grouped = (
+        sup_section("💬 Replied — they responded", sup_replied)
+        + sup_section("📨 Not yet messaged — send these next", sup_todo)
+        + sup_section("✅ Messaged — awaiting reply", sup_msgd)
+        + sup_section("⚠️ Ineligible / over budget — low priority", sup_inelig)
+    )
     n_queue = len(queued_ids)
     n_queue_left = len([i for i in queued_ids if i not in contacted_ids])
 
@@ -846,15 +910,15 @@ function toggleCard(cardId) {{
     {"<span style='color:#c62828'>Nothing has actually gone out yet.</span>" if n_total == 0 else ""}
   </div>
   <div class="status-detail">
-    <strong>Search:</strong> Craigslist last scan Jun 4 ({len(queued_ids)} matches queued) · SUpost refreshed Jun 5 from your paste ({len(SUPOST)} offers) · Zillow/FB/Apartments/Reddit = manual links below.
+    <strong>Search:</strong> Craigslist last scan Jun 4 ({len(queued_ids)} matches queued) · SUpost refreshed Jun 9 from your paste ({len(SUPOST)} offers) · Zillow/FB/Apartments/Reddit = manual links below.
   </div>
 </div>
 
-<h2>⭐ SUpost — Stanford-only marketplace ({len(SUPOST)} offers · best fit · refreshed Jun 5)</h2>
+<h2>⭐ SUpost — Stanford marketplace ({len(SUPOST)} offers, grouped by status)</h2>
 <div class="banner cl">
-<strong>Top priority — these are Stanford students/affiliates near campus.</strong> Pulled from the SUpost housing page you shared (offers only; "housing wanted" posts omitted; female-only and over-$2,000 filtered out). Each <em>View listing</em> button opens the SUpost housing page (supost.com/search/cat/3) — log in with your SUNet and search the title shown on the card (SUpost has no public per-post links). Grab the email/phone from the post and I'll add it here.
+Stanford students/affiliates near campus — your best source. Grouped below: <strong>replied → to-send → messaged → low-priority.</strong> Use each card's button to open the post; paste me any reply and I'll log it.
 </div>
-{"".join(card(L) for L in supost_sorted)}
+{supost_grouped}
 
 <h2>Official Stanford Housing (most reliable)</h2>
 {"".join(card(L) for L in NON_CL)}
@@ -871,22 +935,30 @@ function toggleCard(cardId) {{
 <h2>Short-term Options (partial summer coverage)</h2>
 {"".join(card(L) for L in SHORT_TERM)}
 
-<h2>Social/peer-to-peer platforms (check manually)</h2>
+<h2>More places to reach out (check manually)</h2>
 <table>
 <tr><th>Platform</th><th>URL</th><th>Notes</th></tr>
-<tr><td>Stanford R&DE</td><td><a href="https://rde.stanford.edu/conferences/summer-intern-housing">rde.stanford.edu</a></td><td>Official Stanford option</td></tr>
-<tr><td>SUpost</td><td><a href="https://supost.com">supost.com</a></td><td>Stanford-affiliated classifieds</td></tr>
-<tr><td>Facebook Group</td><td><a href="https://www.facebook.com/groups/304588736883828/">Stanford Housing/Sublets</a></td><td>Active student housing market</td></tr>
-<tr><td>Facebook Marketplace</td><td><a href="https://www.facebook.com/marketplace/category/propertyrentals">Marketplace rentals</a></td><td>Search: "Palo Alto studio" or "Menlo Park sublet"</td></tr>
-<tr><td>RedNote (小红书)</td><td><a href="https://www.xiaohongshu.com/">xiaohongshu.com</a></td><td>Chinese platform — search "Stanford租房"</td></tr>
-<tr><td>Reddit r/Stanford</td><td><a href="https://www.reddit.com/r/stanford/">r/stanford</a></td><td>Search "housing" or "sublet summer 2026"</td></tr>
-<tr><td>Zillow Rentals</td><td><a href="https://www.zillow.com/homes/for_rent/">zillow.com</a></td><td>Filter: Palo Alto + Menlo Park, max $2000</td></tr>
+<tr><td colspan="3" style="background:#eef2ff;font-weight:700">Stanford-specific (try first)</td></tr>
+<tr><td>Stanford R&DE</td><td><a href="https://rde.stanford.edu/conferences/summer-intern-housing">rde.stanford.edu</a></td><td>Official summer-intern housing — email summerhousing@stanford.edu</td></tr>
+<tr><td>Stanford Summer Session</td><td><a href="https://summer.stanford.edu/">summer.stanford.edu</a></td><td>Email the program office — they often have a housing portal / partner list for summer students</td></tr>
+<tr><td>SUpost</td><td><a href="https://supost.com">supost.com</a></td><td>Stanford-affiliated classifieds (your main source above)</td></tr>
+<tr><td>Facebook — Stanford Housing</td><td><a href="https://www.facebook.com/groups/304588736883828/">Stanford Housing/Sublets</a></td><td>Active student market — post a "looking for" with your dates</td></tr>
+<tr><td>Reddit r/Stanford</td><td><a href="https://www.reddit.com/r/stanford/">r/stanford</a></td><td>Search "housing" / "sublet summer 2026" or post a request</td></tr>
+<tr><td colspan="3" style="background:#ecfdf5;font-weight:700">Intern / furnished short-term (great fit for you)</td></tr>
+<tr><td>Furnished Finder</td><td><a href="https://www.furnishedfinder.com/">furnishedfinder.com</a></td><td>Built for interns/travelers — furnished, monthly, no long lease. Search Palo Alto</td></tr>
+<tr><td>HousingAnywhere</td><td><a href="https://housinganywhere.com/">housinganywhere.com</a></td><td>International/student furnished sublets — Bay Area listings</td></tr>
+<tr><td>Nextdoor</td><td><a href="https://nextdoor.com/">nextdoor.com</a></td><td>Neighbors in Palo Alto/Menlo Park renting rooms — search "room for rent"</td></tr>
+<tr><td>Cornell sublets</td><td><a href="https://www.facebook.com/groups/cornellsublets/">FB: Cornell Sublets</a></td><td>Peers also heading to Stanford/Bay Area for summer — ask in Cornell groups</td></tr>
+<tr><td>RedNote (小红书)</td><td><a href="https://www.xiaohongshu.com/">xiaohongshu.com</a></td><td>Very active for Bay Area student rentals — search "Stanford租房"</td></tr>
+<tr><td colspan="3" style="background:#f3f4f6;font-weight:700">General rental sites (mostly long-lease)</td></tr>
+<tr><td>Facebook Marketplace</td><td><a href="https://www.facebook.com/marketplace/category/propertyrentals">Marketplace rentals</a></td><td>Search "Palo Alto studio" / "Menlo Park sublet"</td></tr>
+<tr><td>Zillow Rentals</td><td><a href="https://www.zillow.com/palo-alto-ca/apartments-under-2000/">zillow.com</a></td><td>Filter: Palo Alto + Menlo Park, max $2000 (blocks scraping — browse by hand)</td></tr>
 <tr><td>Apartments.com</td><td><a href="https://www.apartments.com/">apartments.com</a></td><td>Filter by location and move-in date</td></tr>
 <tr><td>Craigslist /apa</td><td><a href="https://sfbay.craigslist.org/search/pen/apa?max_price=2000">Search link</a></td><td>Regular rentals — filter for good areas</td></tr>
 <tr><td>Craigslist /sub</td><td><a href="https://sfbay.craigslist.org/search/pen/sub?max_price=2000">Search link</a></td><td>Temporary/subleases — best for avoiding applications</td></tr>
 </table>
 
-<p style="margin-top:20px;color:#777;font-size:11px">Dashboard updated: June 4, 2026 · East Palo Alto excluded · Use the “Mark as reached out” button on each card to track outreach · Blue = reached out · Amber = queued · Red = expired</p>
+<p style="margin-top:20px;color:#777;font-size:11px">Dashboard updated: June 8, 2026 · East Palo Alto excluded · Use the “Mark as reached out” button on each card to track outreach · Blue = reached out · Amber = queued · Red = expired</p>
 </body></html>"""
 
 class Handler(http.server.SimpleHTTPRequestHandler):
