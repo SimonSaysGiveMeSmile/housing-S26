@@ -895,6 +895,16 @@ function toggleCard(cardId) {{
 </header>
 
 <div class="banner">
+<strong>Today (Jun 10) — switch to direct channels:</strong>
+1) <strong>Call/text Bri</strong> 623-810-3457 (Kennedy Commons $1,570 — texted Jun 8, no reply) ·
+2) <strong>Email andaru@stanford.edu</strong> re: Hulme next steps (form already submitted) ·
+3) <strong>Book the Jun 9–20 campus stopgap</strong> ($1,200) to get out of the hotel ·
+4) <strong>Post a "Housing Wanted" ad</strong> on SUpost + the FB Stanford Housing group ·
+5) <strong>Email summerhousing@stanford.edu</strong> (official fallback).
+Ready-to-send scripts for all five are in <strong>TODO_outreach.md</strong>.
+</div>
+
+<div class="banner">
 <strong>Priority:</strong> Start with the <strong>$1,890 Palo Alto sublease</strong> — it's the ONLY whole-unit sublease that skips applications.
 </div>
 
@@ -958,7 +968,7 @@ Stanford students/affiliates near campus — your best source. Grouped below: <s
 <tr><td>Craigslist /sub</td><td><a href="https://sfbay.craigslist.org/search/pen/sub?max_price=2000">Search link</a></td><td>Temporary/subleases — best for avoiding applications</td></tr>
 </table>
 
-<p style="margin-top:20px;color:#777;font-size:11px">Dashboard updated: June 8, 2026 · East Palo Alto excluded · Use the “Mark as reached out” button on each card to track outreach · Blue = reached out · Amber = queued · Red = expired</p>
+<p style="margin-top:20px;color:#777;font-size:11px">Dashboard updated: June 10, 2026 · East Palo Alto excluded · Use the “Mark as reached out” button on each card to track outreach · Blue = reached out · Amber = queued · Red = expired</p>
 </body></html>"""
 
 class Handler(http.server.SimpleHTTPRequestHandler):
