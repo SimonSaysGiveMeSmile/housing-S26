@@ -131,7 +131,7 @@ h3.cat{font-size:14px;font-weight:700;color:#333;margin:18px 0 8px;padding:5px 1
 .price{font-size:16px;font-weight:700;color:#15803d;white-space:nowrap}
 .area{font-size:12px;color:#777;margin-bottom:6px}
 .status{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;margin-bottom:6px}
-.status.go{background:#dcfce7;color:#15803d}.status.check{background:#fef3c7;color:#b45309}.status.warn{background:#fee2e2;color:#b91c1c}
+.status.go{background:#dcfce7;color:#15803d}.status.check{background:#fef3c7;color:#b45309}.status.warn{background:#fee2e2;color:#b91c1c}.status.dead{background:#e5e7eb;color:#6b7280;text-decoration:line-through}
 ul.facts{list-style:disc;padding-left:18px;font-size:12.5px;color:#444;line-height:1.5;max-height:66px;overflow:hidden}
 .card.expanded ul.facts{max-height:none}
 ul.facts li{margin:2px 0}
@@ -378,14 +378,16 @@ SUPOST = [
   "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
   "cnote":"STRONG — whole studio, utilities incl, full summer, $1,900. Search 'Fully Furnished EV Studio Free Bike' on SUpost."},
 
- {"top":True,"title":"EVGR-B Private Studio sublet","mid":"su-evgrb-studio","price":"$1,600/mo","src":"SUpost · Stanford-only",
-  "area":"On campus, Stanford (EVGR-B)","status":("go","Whole studio · on campus · under budget"),
+ {"top":False,"title":"EVGR-B Private Studio sublet","mid":"su-evgrb-studio","price":"$1,600/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (EVGR-B)","status":("dead","TAKEN · full sublease period gone"),
+  "dead":True,"replied":True,
+  "reply":"Faatira (faatiraa@stanford.edu) replied Jun 8: the studio is already taken for the full sublease period. Wished you luck — closed.",
   "facts":["WHOLE studio (your own unit, no housemates) on campus in EVGR-B.",
            "Dates: June 20 – Sept 15. Covers all summer.",
            "Cheapest full-summer whole studio in this batch.",
            "Contact via SUpost (Stanford login)."],
   "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
-  "cnote":"STRONG — whole on-campus studio, $1,600, full summer. Search 'EVGR B Private Studio' on SUpost."},
+  "cnote":"TAKEN — Faatira replied Jun 8, full period already subleased. Closed."},
 
  {"top":True,"title":"EV low-rise apartment sublet","mid":"su-ev-lowrise-apt","price":"$1,414/mo","src":"SUpost · Stanford-only",
   "area":"On campus, Stanford (Escondido Village low-rise)","status":("go","Whole apartment · cheapest"),
@@ -501,11 +503,13 @@ SUPOST = [
   "cnote":"You messaged this, but it's a FEMALE household — likely a no. On-campus Rains room, $1,628."},
 
  {"top":False,"title":"Blackwelder Room Sublet (6/19–8/31)","mid":"su-blackwelder","price":"$1,165/mo","src":"SUpost · Stanford-only",
-  "area":"On campus, Stanford (Blackwelder)","status":("check","Private room · cheapest"),
+  "area":"On campus, Stanford (Blackwelder)","status":("dead","TAKEN · went to another subletter"),
+  "dead":True,"replied":True,
+  "reply":"Sujay Holla Rao (sujayrao@stanford.edu) was in active conversation (offered a virtual tour, June 11 move-in possible), but replied: another person got back to him first and he's working with them. Will let you know if it changes.",
   "offcriteria":"A room (shared apartment), not a whole unit.",
   "facts":["Room sublet in Blackwelder, June 19 – Aug 31.","Cheapest of everything you've messaged: $1,165."],
   "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
-  "cnote":"You messaged this. On-campus Blackwelder room, $1,165, 6/19–8/31."},
+  "cnote":"TAKEN — Sujay went with another subletter. Said he'd reach out if anything changes; treat as a long-shot backup."},
 
  {"top":True,"title":"1BR Hulme Sublease (Jun 21–Sep 14)","mid":"su-hulme-1br","price":"$2,500/mo","src":"SUpost · Stanford-only",
   "area":"On campus, Stanford (Hulme)","status":("go","REPLIED · interest form submitted"),
@@ -540,11 +544,13 @@ SUPOST = [
   "cnote":"NEW lead — on-campus room, $1,599, full summer, utilities incl. Message after the rate limit lifts."},
 
  {"top":False,"title":"EV Studio 1 (Jun 21–~Jul 20)","mid":"su-ev-studio1-jun21","price":"$2,039/mo","src":"SUpost · Stanford-only",
-  "area":"On campus, Stanford (Escondido Village)","status":("check","Whole studio · short window · $39 over"),
+  "area":"On campus, Stanford (Escondido Village)","status":("dead","TAKEN · poster Selim confirmed"),
+  "dead":True,"replied":True,
+  "reply":"Selim Amar (selama@stanford.edu) replied Jun 11: it's taken, wished you luck. You replied 'all the best.' Closed.",
   "offcriteria":"$39 over budget and short window (June 21 to ~July 20 only).",
   "facts":["Whole EV studio (Studio 1), June 21 to ~July 20, flexible.","Furnished. +$50 house dues.","Messaged on SUpost — awaiting reply."],
   "clabel":"Open post →","curl":"https://supost.com/post/index/130076651",
-  "cnote":"You messaged this. Whole studio but only ~1 month (June 21–July 20), $2,039. Awaiting reply."},
+  "cnote":"TAKEN — Selim confirmed Jun 11. Closed."},
 
  {"top":False,"title":"1B/1Ba EV Midrise (Jun 15–Sep 1)","mid":"su-ev-midrise-1b1b","price":"$2,663/mo","src":"SUpost · Stanford-only",
   "area":"On campus, Stanford (EV Midrise)","status":("warn","Whole 1B1B · over budget"),
@@ -835,18 +841,20 @@ def render_body():
         return ("FEMALE" in oc or "female" in oc or "$663 over" in oc or "$300 over" in oc)
     def grp_sort(items):
         return sorted(items, key=lambda L: (not L["top"], L["title"]))
-    sup_replied = grp_sort([L for L in SUPOST if L.get("replied")])
-    sup_todo    = grp_sort([L for L in SUPOST if not L.get("replied") and not is_ineligible(L) and sup_key(L) not in contacted_ids])
-    sup_msgd    = grp_sort([L for L in SUPOST if not L.get("replied") and not is_ineligible(L) and sup_key(L) in contacted_ids])
-    sup_inelig  = grp_sort([L for L in SUPOST if not L.get("replied") and is_ineligible(L)])
+    sup_taken   = grp_sort([L for L in SUPOST if L.get("dead")])
+    sup_replied = grp_sort([L for L in SUPOST if L.get("replied") and not L.get("dead")])
+    sup_todo    = grp_sort([L for L in SUPOST if not L.get("dead") and not L.get("replied") and not is_ineligible(L) and sup_key(L) not in contacted_ids])
+    sup_msgd    = grp_sort([L for L in SUPOST if not L.get("dead") and not L.get("replied") and not is_ineligible(L) and sup_key(L) in contacted_ids])
+    sup_inelig  = grp_sort([L for L in SUPOST if not L.get("dead") and not L.get("replied") and is_ineligible(L)])
     def sup_section(title, items):
         if not items: return ""
         return f'<h3 class="cat">{title} ({len(items)})</h3>' + "".join(card(L) for L in items)
     supost_grouped = (
-        sup_section("💬 Replied — they responded", sup_replied)
+        sup_section("💬 Replied — live conversation", sup_replied)
         + sup_section("📨 Not yet messaged — send these next", sup_todo)
         + sup_section("✅ Messaged — awaiting reply", sup_msgd)
         + sup_section("⚠️ Ineligible / over budget — low priority", sup_inelig)
+        + sup_section("❌ Taken / declined — closed", sup_taken)
     )
     n_queue = len(queued_ids)
     n_queue_left = len([i for i in queued_ids if i not in contacted_ids])
@@ -894,8 +902,12 @@ function toggleCard(cardId) {{
 <p class="sub">Under $2,000/mo · Dedicated units, no housemates · Within 20 min of Stanford · East Palo Alto excluded</p>
 </header>
 
+<div class="banner" style="background:#fef2f2;border-color:#fecaca">
+<strong>Jun 11 update — 3 more leads closed:</strong> EVGR-B studio ($1,600, Faatira), Blackwelder room ($1,165, Sujay), and Selim's EV Studio 1 all came back <strong>TAKEN</strong>. Bhavya (bhavyac@stanford.edu) sent a soft "talking to others, will reach out if it frees up" — treat as a long-shot. Net: the cold-sublet channel is mostly tapped out. <strong>Direct + official channels are now the priority.</strong>
+</div>
+
 <div class="banner">
-<strong>Today (Jun 10) — switch to direct channels:</strong>
+<strong>Do today (Jun 11) — direct channels:</strong>
 1) <strong>Call/text Bri</strong> 623-810-3457 (Kennedy Commons $1,570 — texted Jun 8, no reply) ·
 2) <strong>Email andaru@stanford.edu</strong> re: Hulme next steps (form already submitted) ·
 3) <strong>Book the Jun 9–20 campus stopgap</strong> ($1,200) to get out of the hotel ·
@@ -954,12 +966,16 @@ Stanford students/affiliates near campus — your best source. Grouped below: <s
 <tr><td>SUpost</td><td><a href="https://supost.com">supost.com</a></td><td>Stanford-affiliated classifieds (your main source above)</td></tr>
 <tr><td>Facebook — Stanford Housing</td><td><a href="https://www.facebook.com/groups/304588736883828/">Stanford Housing/Sublets</a></td><td>Active student market — post a "looking for" with your dates</td></tr>
 <tr><td>Reddit r/Stanford</td><td><a href="https://www.reddit.com/r/stanford/">r/stanford</a></td><td>Search "housing" / "sublet summer 2026" or post a request</td></tr>
+<tr><td>Ohana (liveohana.ai)</td><td><a href="https://liveohana.ai/university/stanford">liveohana.ai/university/stanford</a></td><td><strong>NEW Jun 11</strong> — aggregates Stanford sublets/subleases with flexible dates; furnished, short-term, comparison + secure booking</td></tr>
+<tr><td>Uloop — Stanford sublets</td><td><a href="https://stanford.uloop.com/housing/index.php/sublets">stanford.uloop.com</a></td><td><strong>NEW Jun 11</strong> — student sublet board for Stanford; browse by dates</td></tr>
 <tr><td colspan="3" style="background:#ecfdf5;font-weight:700">Intern / furnished short-term (great fit for you)</td></tr>
 <tr><td>Furnished Finder</td><td><a href="https://www.furnishedfinder.com/">furnishedfinder.com</a></td><td>Built for interns/travelers — furnished, monthly, no long lease. Search Palo Alto</td></tr>
 <tr><td>HousingAnywhere</td><td><a href="https://housinganywhere.com/">housinganywhere.com</a></td><td>International/student furnished sublets — Bay Area listings</td></tr>
 <tr><td>Nextdoor</td><td><a href="https://nextdoor.com/">nextdoor.com</a></td><td>Neighbors in Palo Alto/Menlo Park renting rooms — search "room for rent"</td></tr>
 <tr><td>Cornell sublets</td><td><a href="https://www.facebook.com/groups/cornellsublets/">FB: Cornell Sublets</a></td><td>Peers also heading to Stanford/Bay Area for summer — ask in Cornell groups</td></tr>
 <tr><td>RedNote (小红书)</td><td><a href="https://www.xiaohongshu.com/">xiaohongshu.com</a></td><td>Very active for Bay Area student rentals — search "Stanford租房"</td></tr>
+<tr><td>Sabbatical Homes</td><td><a href="https://www.sabbaticalhomes.com/housing/stanford-university/">sabbaticalhomes.com</a></td><td><strong>NEW Jun 11</strong> — visiting-academic furnished rentals near Stanford, June–July availability, 98% furnished (some over budget — filter)</td></tr>
+<tr><td>Zumper — short-term</td><td><a href="https://www.zumper.com/apartments-for-rent/near-stanford-university-ca/short-term">zumper.com short-term</a></td><td><strong>NEW Jun 11</strong> — furnished/monthly rentals near Stanford; filter by price + dates</td></tr>
 <tr><td colspan="3" style="background:#f3f4f6;font-weight:700">General rental sites (mostly long-lease)</td></tr>
 <tr><td>Facebook Marketplace</td><td><a href="https://www.facebook.com/marketplace/category/propertyrentals">Marketplace rentals</a></td><td>Search "Palo Alto studio" / "Menlo Park sublet"</td></tr>
 <tr><td>Zillow Rentals</td><td><a href="https://www.zillow.com/palo-alto-ca/apartments-under-2000/">zillow.com</a></td><td>Filter: Palo Alto + Menlo Park, max $2000 (blocks scraping — browse by hand)</td></tr>
@@ -968,7 +984,7 @@ Stanford students/affiliates near campus — your best source. Grouped below: <s
 <tr><td>Craigslist /sub</td><td><a href="https://sfbay.craigslist.org/search/pen/sub?max_price=2000">Search link</a></td><td>Temporary/subleases — best for avoiding applications</td></tr>
 </table>
 
-<p style="margin-top:20px;color:#777;font-size:11px">Dashboard updated: June 10, 2026 · East Palo Alto excluded · Use the “Mark as reached out” button on each card to track outreach · Blue = reached out · Amber = queued · Red = expired</p>
+<p style="margin-top:20px;color:#777;font-size:11px">Dashboard updated: June 11, 2026 · East Palo Alto excluded · Use the “Mark as reached out” button on each card to track outreach · Blue = reached out · Amber = queued · Red = expired</p>
 </body></html>"""
 
 class Handler(http.server.SimpleHTTPRequestHandler):
