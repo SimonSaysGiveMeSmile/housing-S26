@@ -186,6 +186,11 @@ tr:nth-child(even) td{background:#fafafa}
 .fb-reset{font-size:12px;color:#2563eb;cursor:pointer;background:none;border:none;padding:4px 6px;font-weight:600}
 .fb-reset:hover{text-decoration:underline}
 #noResults{display:none;text-align:center;color:#6b7280;font-size:14px;padding:40px 20px;border:1px dashed #d1d5db;border-radius:10px;margin:16px 0}
+.chip:focus-visible,.fb-search:focus-visible{outline:2px solid #2563eb;outline-offset:2px}
+#toTop{position:fixed;right:18px;bottom:18px;z-index:60;width:42px;height:42px;border-radius:50%;border:1px solid #d1d5db;background:#111;color:#fff;font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s;box-shadow:0 2px 10px rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center}
+#toTop.show{opacity:.9;pointer-events:auto}
+#toTop:hover{opacity:1}
+@media print{#toTop{display:none}}
 .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
 td a{word-break:break-word}
 @media (max-width:720px){body{padding:12px}.card,.card.noimg{grid-template-columns:1fr;height:auto}.card-images{width:100%;height:160px}.status-row{flex-wrap:wrap}.stat{flex:1 0 50%;border-bottom:1px solid #eee}.fb-count{margin-left:0;flex-basis:100%}.card-head{flex-wrap:wrap}.price{white-space:normal}table{min-width:560px}}
@@ -1373,7 +1378,24 @@ function updateSections() {{
         }}
     }});
 }}
-document.addEventListener('DOMContentLoaded', applyFilters);
+// keyboard support for the span-based chips (Enter / Space)
+document.addEventListener('keydown', function(e) {{
+    if ((e.key === 'Enter' || e.key === ' ') && e.target.classList && e.target.classList.contains('chip')) {{
+        e.preventDefault(); e.target.click();
+    }}
+}});
+// back-to-top button
+function scrollTop() {{ window.scrollTo({{top: 0, behavior: 'smooth'}}); }}
+window.addEventListener('scroll', function() {{
+    var b = document.getElementById('toTop');
+    if (b) b.classList.toggle('show', window.scrollY > 600);
+}}, {{passive: true}});
+document.addEventListener('DOMContentLoaded', function() {{
+    document.querySelectorAll('.chip').forEach(function(c) {{
+        c.setAttribute('role', 'button'); c.setAttribute('tabindex', '0');
+    }});
+    applyFilters();
+}});
 </script>
 </head><body>
 <header class="masthead">
@@ -1513,6 +1535,7 @@ Stanford students/affiliates near campus — your best source. Grouped below: <s
 </table>
 </div>
 
+<button id="toTop" onclick="scrollTop()" title="Back to top" aria-label="Back to top">↑</button>
 <p style="margin-top:20px;color:#777;font-size:11px">Dashboard updated: June 13, 2026 · {n_fresh} fresh verified leads added (3-wave web sweep + SUpost refresh) · East Palo Alto excluded · Use the “Mark as reached out” button on each card to track outreach · Blue = reached out · Amber = queued · Red = expired</p>
 </body></html>"""
 
