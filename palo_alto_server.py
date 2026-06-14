@@ -2,7 +2,7 @@
 """Palo Alto / Stanford summer housing dashboard. Default port 5555.
 Card layout: each listing shows contact method + location map image.
 Updated to exclude East Palo Alto, focus on good neighborhoods only."""
-import http.server, socketserver, os, sys, html, mimetypes, json
+import http.server, socketserver, os, sys, html, mimetypes, json, re
 from urllib.parse import urlparse, quote
 from datetime import datetime
 
@@ -169,8 +169,27 @@ table{border-collapse:collapse;width:100%;margin:10px 0;font-size:13px}
 th,td{border:1px solid #e2e2e2;padding:7px 10px;text-align:left;vertical-align:top}
 th{background:#f3f4f6;color:#111;font-weight:600;font-size:12px}
 tr:nth-child(even) td{background:#fafafa}
-@media (max-width:720px){body{padding:12px}.card,.card.noimg{grid-template-columns:1fr;height:auto}.card-images{width:100%;height:160px}.status-row{flex-wrap:wrap}.stat{flex:1 0 50%;border-bottom:1px solid #eee}}
-@media print{.card{break-inside:avoid;height:auto!important}h2{break-after:avoid}}
+.filtered-out,.sec-hidden{display:none!important}
+.filterbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:saturate(1.4) blur(4px);border:1px solid #e2e2e2;border-radius:10px;padding:10px 12px;margin:14px 0;box-shadow:0 1px 6px rgba(0,0,0,.05)}
+.fb-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.fb-row+.fb-row{margin-top:8px}
+.fb-search{flex:1 1 200px;min-width:160px;font-size:14px;padding:8px 12px 8px 30px;border:1px solid #d1d5db;border-radius:7px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='none' stroke='%239ca3af' stroke-width='2' viewBox='0 0 24 24'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M21 21l-4-4'/%3E%3C/svg%3E") 9px center no-repeat}
+.fb-search:focus{outline:none;border-color:#2563eb;box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.fb-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#9ca3af;margin-right:2px}
+.chip{font-size:12.5px;font-weight:600;padding:6px 11px;border:1px solid #d1d5db;border-radius:20px;background:#fff;color:#374151;cursor:pointer;user-select:none;transition:.12s}
+.chip:hover{border-color:#9ca3af;background:#f9fafb}
+.chip.on{background:#111;color:#fff;border-color:#111}
+.chip.on.go{background:#15803d;border-color:#15803d}
+.chip.on.check{background:#b45309;border-color:#b45309}
+.fb-count{margin-left:auto;font-size:12.5px;color:#6b7280;font-weight:600;white-space:nowrap}
+.fb-count b{color:#111}
+.fb-reset{font-size:12px;color:#2563eb;cursor:pointer;background:none;border:none;padding:4px 6px;font-weight:600}
+.fb-reset:hover{text-decoration:underline}
+#noResults{display:none;text-align:center;color:#6b7280;font-size:14px;padding:40px 20px;border:1px dashed #d1d5db;border-radius:10px;margin:16px 0}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+td a{word-break:break-word}
+@media (max-width:720px){body{padding:12px}.card,.card.noimg{grid-template-columns:1fr;height:auto}.card-images{width:100%;height:160px}.status-row{flex-wrap:wrap}.stat{flex:1 0 50%;border-bottom:1px solid #eee}.fb-count{margin-left:0;flex-basis:100%}.card-head{flex-wrap:wrap}.price{white-space:normal}table{min-width:560px}}
+@media print{.card{break-inside:avoid;height:auto!important}h2{break-after:avoid}.filterbar{display:none}}
 """
 
 # ---- listing data ----------------------------------------------------------
@@ -982,6 +1001,25 @@ def placeholder_svg(area, price):
     return "data:image/svg+xml," + quote(svg)
 
 
+def _price_num(price):
+    """Representative (lowest) monthly number from a price string, for filtering.
+    "$1,750–1,950" -> 1750 · "$1,700 (6+mo) · $2,300" -> 1700 · "" -> 0."""
+    m = re.search(r"\$?\s*(\d[\d,]*)", price or "")
+    return int(m.group(1).replace(",", "")) if m else 0
+
+def _is_june(L):
+    """True if the listing can plausibly start in June (Simon's strong preference)."""
+    t = " ".join([L.get("title",""), L.get("area",""), L["status"][1],
+                  L.get("offcriteria",""), " ".join(L.get("facts",[]))]).lower()
+    # match "june" / "jun 9" / "jun-" / "jun/" but NOT "junior"
+    return bool(re.search(r"\bjune\b|\bjun[ ./\-]", t))
+
+def _search_text(L):
+    """Lowercased haystack for the client-side text filter."""
+    return " ".join([L.get("title",""), L.get("area",""), L.get("src",""),
+                     L["status"][1], L.get("offcriteria",""),
+                     " ".join(L.get("facts",[]))]).lower()
+
 def card(L):
     facts="".join(f"<li>{html.escape(f)}</li>" for f in L["facts"])
     top=" top" if L["top"] else ""
@@ -1131,7 +1169,17 @@ def card(L):
     card_id = f"card-{listing_id}" if listing_id else f"card-{hash(url)}"
     noimg = ""  # every card now has a photo or a location placeholder
 
-    return f"""<div class="card{top}{contacted_class}{noimg}" id="{card_id}">
+    # Data attributes powering the live filter bar.
+    data_attrs = (
+        f' data-price="{_price_num(L["price"])}"'
+        f' data-status="{scls}"'
+        f' data-contacted="{1 if contacted else 0}"'
+        f' data-dead="{1 if dead else 0}"'
+        f' data-june="{1 if _is_june(L) else 0}"'
+        f' data-text="{html.escape(_search_text(L))}"'
+    )
+
+    return f"""<div class="card{top}{contacted_class}{noimg}"{data_attrs} id="{card_id}">
 {contacted_badge}
 {img_html}
 <div class="card-content">
@@ -1245,6 +1293,87 @@ function toggleCard(cardId) {{
         btn.textContent = '▲ Show less';
     }}
 }}
+
+// ---- live filter bar -------------------------------------------------------
+var FB = {{maxPrice: Infinity, status: 'all'}};
+function fbChip(el, group) {{
+    document.querySelectorAll('.chip[data-group="'+group+'"]').forEach(function(c){{c.classList.remove('on');}});
+    el.classList.add('on');
+    if (group === 'price') FB.maxPrice = el.dataset.val === 'all' ? Infinity : Number(el.dataset.val);
+    if (group === 'status') FB.status = el.dataset.val;
+    applyFilters();
+}}
+function fbToggle(el) {{ el.classList.toggle('on'); applyFilters(); }}
+function fbReset() {{
+    document.getElementById('fbSearch').value = '';
+    FB.maxPrice = Infinity; FB.status = 'all';
+    document.querySelectorAll('.chip[data-group="price"]').forEach(function(c){{c.classList.toggle('on', c.dataset.val==='all');}});
+    document.querySelectorAll('.chip[data-group="status"]').forEach(function(c){{c.classList.toggle('on', c.dataset.val==='all');}});
+    ['fbExpired','fbUncontacted','fbJune'].forEach(function(id){{
+        var t = document.getElementById(id);
+        t.classList.toggle('on', id === 'fbExpired'); // hide-expired stays ON by default
+    }});
+    applyFilters();
+}}
+function applyFilters() {{
+    var q = (document.getElementById('fbSearch').value || '').toLowerCase().trim();
+    var hideExpired = document.getElementById('fbExpired').classList.contains('on');
+    var uncontacted = document.getElementById('fbUncontacted').classList.contains('on');
+    var juneOnly    = document.getElementById('fbJune').classList.contains('on');
+    var shown = 0, total = 0;
+    document.querySelectorAll('.card').forEach(function(c) {{
+        total++;
+        var ok = true;
+        if (hideExpired && c.dataset.dead === '1') ok = false;
+        if (ok && FB.status !== 'all') {{
+            if (FB.status === 'go'    && c.dataset.status !== 'go') ok = false;
+            if (FB.status === 'check' && !(c.dataset.status === 'go' || c.dataset.status === 'check')) ok = false;
+        }}
+        if (ok && FB.maxPrice !== Infinity) {{
+            var p = Number(c.dataset.price || 0);
+            if (p > FB.maxPrice) ok = false;
+        }}
+        if (ok && uncontacted && c.dataset.contacted === '1') ok = false;
+        if (ok && juneOnly && c.dataset.june !== '1') ok = false;
+        if (ok && q && (c.dataset.text || '').indexOf(q) === -1) ok = false;
+        c.classList.toggle('filtered-out', !ok);
+        if (ok) shown++;
+    }});
+    updateSections();
+    document.getElementById('fbShown').textContent = shown;
+    document.getElementById('fbTotal').textContent = total;
+    document.getElementById('noResults').style.display = shown === 0 ? 'block' : 'none';
+}}
+function updateSections() {{
+    var kids = Array.prototype.slice.call(document.body.children);
+    function rangeStats(start, isH2) {{
+        var cards = 0, vis = 0;
+        for (var i = start + 1; i < kids.length; i++) {{
+            var el = kids[i];
+            if (el.tagName === 'H2') break;
+            if (!isH2 && el.tagName === 'H3' && el.classList.contains('cat')) break;
+            if (el.classList.contains('card')) {{
+                cards++;
+                if (!el.classList.contains('filtered-out')) vis++;
+            }}
+        }}
+        return {{cards: cards, vis: vis}};
+    }}
+    var h2Hidden = false;
+    kids.forEach(function(el, idx) {{
+        if (el.tagName === 'H2') {{
+            var s = rangeStats(idx, true);
+            h2Hidden = s.cards > 0 && s.vis === 0;
+            el.classList.toggle('sec-hidden', h2Hidden);
+        }} else if (el.tagName === 'H3' && el.classList.contains('cat')) {{
+            var s2 = rangeStats(idx, false);
+            el.classList.toggle('sec-hidden', h2Hidden || (s2.cards > 0 && s2.vis === 0));
+        }} else if (el.classList.contains('banner')) {{
+            el.classList.toggle('sec-hidden', h2Hidden);
+        }}
+    }});
+}}
+document.addEventListener('DOMContentLoaded', applyFilters);
 </script>
 </head><body>
 <header class="masthead">
@@ -1293,6 +1422,32 @@ The hard truth: a furnished, June-start, sub-$2k <em>whole</em> unit in the Palo
   </div>
 </div>
 
+<div class="filterbar">
+  <div class="fb-row">
+    <input id="fbSearch" class="fb-search" type="search" placeholder="Search title, area, notes… (e.g. studio, Menlo, private bath)" oninput="applyFilters()">
+    <span class="fb-count"><b id="fbShown">0</b> of <span id="fbTotal">0</span> showing</span>
+  </div>
+  <div class="fb-row">
+    <span class="fb-label">Max&nbsp;rent</span>
+    <span class="chip" data-group="price" data-val="1500" onclick="fbChip(this,'price')">≤ $1,500</span>
+    <span class="chip" data-group="price" data-val="1800" onclick="fbChip(this,'price')">≤ $1,800</span>
+    <span class="chip" data-group="price" data-val="2000" onclick="fbChip(this,'price')">≤ $2,000</span>
+    <span class="chip on" data-group="price" data-val="all" onclick="fbChip(this,'price')">Any</span>
+    <span class="fb-label" style="margin-left:6px">Quality</span>
+    <span class="chip go" data-group="status" data-val="go" onclick="fbChip(this,'status')">🟢 Best</span>
+    <span class="chip check" data-group="status" data-val="check" onclick="fbChip(this,'status')">🟡 Worth a look</span>
+    <span class="chip on" data-group="status" data-val="all" onclick="fbChip(this,'status')">All</span>
+  </div>
+  <div class="fb-row">
+    <span class="fb-label">Quick&nbsp;filters</span>
+    <span id="fbExpired" class="chip on" onclick="fbToggle(this)">🚫 Hide expired</span>
+    <span id="fbUncontacted" class="chip" onclick="fbToggle(this)">📭 Not contacted yet</span>
+    <span id="fbJune" class="chip" onclick="fbToggle(this)">📅 June-start</span>
+    <button class="fb-reset" onclick="fbReset()">Reset all</button>
+  </div>
+</div>
+<div id="noResults">No listings match these filters. Try raising the price cap or clearing a filter.</div>
+
 <h2>🆕 Fresh leads — Jun 13 web sweep ({n_fresh}, off-SUpost)</h2>
 <div class="banner cl">
 3 parallel search waves (~30 sources: Craigslist /sub /apa /roo, sublet.com, coliving operators, Furnished Finder, Uloop, aggregators), each lead <strong>verified live</strong>. The market reality: under-$2k <strong>whole units</strong> are nearly nonexistent for a summer sublet — the realistic path is a furnished <strong>private room + private bath</strong> in MV / Los Altos / RWC. Over-budget complexes &amp; hotel bridges are in the table at the bottom.
@@ -1321,6 +1476,7 @@ Stanford students/affiliates near campus — your best source. Grouped below: <s
 {"".join(card(L) for L in SHORT_TERM)}
 
 <h2>More places to reach out (check manually)</h2>
+<div class="table-wrap">
 <table>
 <tr><th>Platform</th><th>URL</th><th>Notes</th></tr>
 <tr><td colspan="3" style="background:#eef2ff;font-weight:700">Stanford-specific (try first)</td></tr>
@@ -1355,6 +1511,7 @@ Stanford students/affiliates near campus — your best source. Grouped below: <s
 <tr><td>Menlo College intern housing</td><td><a href="https://www.menlo.edu/about/conference-services/internship-housing/">menlo.edu</a></td><td>Atherton dorm single ~$2,160/mo (21-night min, communal bath). Requires proof of internship — confirm summer-session qualifies. summerhousing@menlo.edu.</td></tr>
 <tr><td>Cardinal Hotel (bridge)</td><td><a href="https://cardinalhotel.com/shared-bath-style-room/">cardinalhotel.com</a></td><td>Cheapest central-PA hotel bridge (shared-bath room), but ~$3,870+/mo at nightly rates. Call 650-323-5101 for a 30+ night monthly rate. Stopgap only.</td></tr>
 </table>
+</div>
 
 <p style="margin-top:20px;color:#777;font-size:11px">Dashboard updated: June 13, 2026 · {n_fresh} fresh verified leads added (3-wave web sweep + SUpost refresh) · East Palo Alto excluded · Use the “Mark as reached out” button on each card to track outreach · Blue = reached out · Amber = queued · Red = expired</p>
 </body></html>"""
