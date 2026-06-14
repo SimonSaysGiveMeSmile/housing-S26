@@ -48,6 +48,34 @@ Even shorter version:
 >
 > Simon, ipo@stanford.edu, 607-262-9704
 
+## Jun 13 — GETTING MORE REPLIES (you're mostly hearing "already taken")
+
+Diagnosis: cheap on-campus sublets get flooded and vanish in hours, and email/portal
+messages are slow. Three fixes, in order of leverage:
+
+**1. FLIP THE FUNNEL — post "Housing Wanted" today (biggest lever).**
+When listings disappear before you can act, make people come to you. Your pitch is strong:
+already in Palo Alto, can view same-day, ready to sign + pay deposit now, flexible dates.
+Post it on: SUpost ("post housing"), FB "Stanford Housing/Sublets", r/stanford, Nextdoor.
+(Full post below in script #3.)
+
+**2. PIVOT to private landlords — and CALL, don't email.**
+The web-sweep rooms (MV / Los Altos / RWC, $1,200–$1,850) get a handful of inquiries, not
+50, and several list phone numbers. A call gets a same-day yes/no; on-campus sublets are a
+lottery. Prioritize the Fresh-leads cards over the SUpost campus studios.
+
+**3. LEAD WITH COMMITMENT + SPEED in every first message.** Tighter opener:
+> Hi! I'm Simon, an incoming Stanford summer student — already in Palo Alto, so I can come
+> see it TODAY and sign + pay the deposit right away. Your place looks perfect. Is it still
+> available? — Simon, ipo@stanford.edu, 607-262-9704
+
+**Backup ask — send on EVERY "it's taken" reply (this is how leads stay warm):**
+> Totally understand, thanks for letting me know! If it ends up falling through, I'd jump on
+> it immediately — would you mind keeping me in mind? Good luck either way!
+
+**Speed habit:** check SUpost sorted newest 2–3× a day and message within minutes — the
+sub-$1,800 ones are usually gone the same day they post.
+
 ## Jun 10 action scripts — direct channels (no more relay-and-wait)
 
 ### 1. 📱 Bri — Kennedy Commons $1,570 (623-810-3457, ba624@stanford.edu)
@@ -81,15 +109,35 @@ Interest form submitted; nudge for next steps:
 
 Post at: https://supost.com (new post) and https://www.facebook.com/groups/304588736883828/
 
-### 4. ✉️ Stanford R&DE / Summer Session — summerhousing@stanford.edu
-> Subject: Summer 2026 housing availability — Summer Session student
+### 4. ✉️ Stanford housing help — TWO offices (Jun 13, sharpened)
+Two separate offices; email both. R&DE is the higher-value one (it actually assigns rooms).
+
+**4a. R&DE Student Housing — summerhousing@stanford.edu / 650-725-2810**
+> Subject: Summer 2026 housing — incoming Summer Session student, space-available?
 >
-> Hello! I'm an incoming Summer School student, already in Palo Alto, looking for
-> on-campus or Stanford-affiliated housing from now through early September.
-> Could you let me know what options are still available for Summer 2026, the
-> rates, and how to apply? I can complete any application right away. Thank you!
+> Hi — I'm an incoming Stanford Summer Session student (visiting from Cornell),
+> already in Palo Alto and looking for housing now through early September. I applied
+> after the April 30 deadline, so I understand on-campus is space-available. Could you
+> tell me (1) what SINGLE-occupancy options remain on a space-available basis and the
+> rates, and (2) how I get a Places4Students temporary ID to view the off-campus
+> listings? I can complete any application right away and can move quickly. Thank you!
 >
 > Simon, ipo@stanford.edu, 607-262-9704
+
+**4b. Summer Session program office — via summer.stanford.edu (contact/housing page)**
+> Subject: Housing portal / partner list for visiting Summer Session students?
+>
+> Hi! I'm an incoming Summer Session student arriving for Summer 2026 and still
+> finalizing housing. Does the Summer Session office keep a housing portal, partner
+> list, or overflow/roommate resource for visiting students? Any pointers would be a
+> huge help — I'm already in Palo Alto and can act fast. Thank you!
+>
+> Simon, ipo@stanford.edu, 607-262-9704
+
+**Reality check:** R&DE's own rates run over budget (cheapest private studio = EV Standard
+**$2,039/mo**; everything sub-$2k is a shared double/triple). Use them mainly for (a) the
+**Places4Students** board access and (b) a possible space-available studio if you'll stretch
+~$40 over. Keep the **MV / Los Altos / RWC private-bath leads ($1,200–$1,850)** as the primary track.
 
 ### 5. 🛏 Stopgap: book the Jun 9–20 campus house rooms ($1,200)
 Gets you out of the hotel immediately; pair with a July-start place. Send the

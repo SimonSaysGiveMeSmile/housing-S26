@@ -175,14 +175,19 @@ tr:nth-child(even) td{background:#fafafa}
 
 # ---- listing data ----------------------------------------------------------
 NON_CL = [
- {"top":True,"title":"Stanford R&DE — Official Summer Housing","price":"varies","status":("go","Open — apply online"),
-  "area":"On campus, Stanford","facts":["Most reliable June-1 option, right next to campus.",
-          "Ask specifically for a studio / dedicated unit (not a shared room).","Apply online with your admit/role status."],
-  "clabel":"Apply / info (R&DE Summer Housing)",
-  "curl":"https://rde.stanford.edu/conferences/summer-intern-housing",
+ {"top":True,"title":"Stanford R&DE — Official Summer Housing (apply NOW, space-available)","price":"$2,039/mo single studio","status":("check","Apply now · past Apr 30 = not guaranteed"),
+  "area":"On campus, Stanford","facts":[
+          "ELIGIBLE: Summer Session students from other institutions qualify. BUT the guarantee required applying by Apr 30 — late applicants (you, in June) are assigned SPACE-AVAILABLE after matriculated students. Apply anyway; it's still your most reliable on-campus path.",
+          "Cheapest SINGLE-occupancy (private studio): Escondido Village Standard Studio — $2,039/mo ($39 over budget). 8-wk Jun 20–Aug 16 = $3,806; 10-wk to Sep 1 = $4,826.",
+          "Other private studios: EV Kennedy Premium $2,515 · EVGR Premium $2,628 · Munger Standard $2,712.",
+          "Everything UNDER $2,000 is shared (double/triple): EV Junior 2bd high-rise $1,165, Kennedy Junior 2bd $1,517, Rains 4bd $1,614, EV/Lyman/Rains 2bd $1,628.",
+          "Includes furniture + all utilities (water/heat/electric/garbage/sewer) + laundry. Add ~$95 tech fee/qtr, $30 mail fee, house dues.",
+          "Default summer-session start July 3; 8-wk ends Aug 16, 10-wk ends Sep 1."],
+  "clabel":"Apply → myhousing.stanford.edu",
+  "curl":"https://myhousing.stanford.edu",
   "email":"summerhousing@stanford.edu",
-  "cnote":"No phone listed — online application. Request a self-contained unit; email the housing office with your admit status.",
-  "src":"Stanford R&DE"},
+  "cnote":"ACTION: (1) Apply at myhousing.stanford.edu → Graduate Housing Application → Summer. (2) Email summerhousing@stanford.edu — say you're an incoming Summer Session student, ask what SINGLE-occupancy studios remain space-available and how late assignment works. Cheapest private studio is EV Standard at $2,039 ($39 over). Sub-$2k = shared rooms only.",
+  "src":"Stanford R&DE · rates pulled Jun 11"},
 ]
 
 # SUBLEASE — avoids applications
@@ -431,13 +436,15 @@ SUPOST = [
   "cnote":"Effectively private (no flatmate), full summer, $1,684. Search 'Sublet Jun 15 Sept 15 1B 2BHK no flatmate' on SUpost."},
 
  # ---- PRIVATE SUITE / ROOM + PRIVATE BATH ----
- {"top":True,"title":"Private garden suite (bed + bath, own entrance)","price":"$2,000/mo","src":"SUpost · Stanford-only",
-  "area":"Near Palo Alto High (~10 min to Stanford)","status":("go","Private suite · utilities included"),
+ {"top":True,"title":"Private garden suite (bed + bath, own entrance)","mid":"su-garden-suite-130085923","price":"$2,000/mo","src":"SUpost · Stanford-only",
+  "area":"Near Palo Alto High (~10 min to Stanford)","status":("check","Private suite · Aug 1–Sep 15 only"),
+  "offcriteria":"Jun 13 sweep found the dated post: available Aug 1 – Sep 15, 2026 only — does NOT cover your June/July gap; useful only as an Aug-onward bridge.",
   "facts":["Private garden suite: own bedroom + own bathroom + private entrance.",
            "Utilities, laundry, and internet INCLUDED in the $2,000/mo.",
-           "Effectively self-contained near Palo Alto High. Contact via SUpost (Stanford login)."],
-  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
-  "cnote":"At budget but utilities incl + private entrance. Search 'Private garden suite Palo Alto High School' on SUpost."},
+           "Dates: Aug 1 – Sep 15, 2026 (confirmed via direct post Jun 13).",
+           "Effectively self-contained near Palo Alto High."],
+  "clabel":"Open post →","curl":"https://supost.com/post/index/130085923",
+  "cnote":"At budget, utilities incl, private entrance — BUT Aug 1–Sep 15 only (no June/July). Direct post verified Jun 13."},
 
  {"top":False,"title":"Private bed + bath, 5-min walk to Stanford (2B2B)","price":"$1,600/mo","src":"SUpost · Stanford-only",
   "area":"5-min walk to Stanford","status":("check","Private room+bath · top location"),
@@ -565,6 +572,162 @@ SUPOST = [
   "facts":["Whole 1B1B (~800 sqft) in Oak Creek, June 10 – July 25.","$2,300 (discounted from $2,800 in exchange for cat-sitting). NOT yet messaged."],
   "clabel":"Open post →","curl":"https://supost.com/post/index/130084320",
   "cnote":"NEW lead but $2,300, short window, and you'd cat-sit. Off-budget."},
+
+ # ---- Jun 13 SUpost paste — filtered NEW offers (wanted-posts/EPA/SF/over-budget/female-only removed) ----
+ {"top":True,"title":"Renovated Rains sublet (Jun 22–Sep 18)","mid":"su-rains-renov-1600","price":"$1,600/mo","src":"SUpost · Jun 13 paste",
+  "area":"On campus, Stanford (Rains grad housing)","status":("go","On campus · full summer · under budget"),
+  "offcriteria":"Rains = grad housing — confirm whole-unit vs a room, and that you're eligible (affiliate/grad/21+).",
+  "facts":["Renovated Rains sublet, June 22 – Sept 18 — covers nearly your whole summer.","Under budget at $1,600, on campus.","Best new date-match of this paste."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 13 — renovated Rains, $1,600, Jun 22–Sep 18 (full summer), on campus. Strong. Confirm room vs unit + grad-housing eligibility."},
+
+ {"top":True,"title":"Stanford Lyman 2B/1B, furnished (Jun 27–Aug 22)","mid":"su-lyman-2b1b-1684","price":"$1,684/mo","src":"SUpost · Jun 13 paste",
+  "area":"On campus, Stanford (Lyman grad housing)","status":("go","On campus · furnished · under budget"),
+  "offcriteria":"Lyman = grad housing — confirm whole-unit vs a room in the 2B/1B + eligibility.",
+  "facts":["Fully furnished Stanford Lyman 2B/1B, June 27 – Aug 22.","Under budget at $1,684, on campus."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 13 — Lyman 2B/1B furnished, $1,684, Jun 27–Aug 22, on campus. Confirm room vs unit + eligibility."},
+
+ {"top":True,"title":"EVGR on-campus sublet (Jul–Sep)","mid":"su-evgr-julsep-1659","price":"$1,659/mo","src":"SUpost · Jun 13 paste",
+  "area":"On campus, Stanford (EVGR)","status":("go","On campus · under budget"),
+  "offcriteria":"Starts in July — leaves a June gap (pair with a June bridge). Confirm studio vs room + eligibility.",
+  "facts":["On-campus EVGR summer sublet, July – September.","Under budget at $1,659."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 13 — EVGR on-campus, $1,659, Jul–Sep. June gap — pair with a bridge. Confirm studio vs room + eligibility."},
+
+ {"top":True,"title":"Private room + private bath, Atherton","mid":"su-atherton-room-1300","price":"$1,300/mo","src":"SUpost · Jun 13 paste",
+  "area":"Atherton (~15 min to Stanford)","status":("go","Private room+bath · cheap · close"),
+  "offcriteria":"Private room in a house (not a whole unit); confirm dates + June availability.",
+  "facts":["Private room WITH private bath in Atherton (photo on SUpost).","Under budget at $1,300 — one of the cheapest room+bath options.","~15 min to Stanford, upscale/quiet area."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 13 — Atherton private room+bath, $1,300, close to campus. Cheap + private bath. Confirm dates."},
+
+ {"top":False,"title":"Room — Palo Alto (Stanford Villa), late June/early July","mid":"su-stanfordvilla-1701","price":"$1,701/mo","src":"SUpost · Jun 13 paste",
+  "area":"Palo Alto (Stanford Villa)","status":("check","Room · late-June move-in"),
+  "offcriteria":"Room (shared), not a whole unit; confirm private bath + exact dates.",
+  "facts":["Room in Palo Alto (Stanford Villa), move-in late June / early July.","Under budget at $1,701 — June-ish start helps your hotel gap."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 13 — PA Stanford Villa room, $1,701, late-June/early-July. Confirm private bath + dates."},
+
+ {"top":False,"title":"Room — huge modern Downtown Palo Alto house","mid":"su-dtpa-house-1850","price":"$1,850/mo","src":"SUpost · Jun 13 paste",
+  "area":"Downtown Palo Alto","status":("check","Room · top location"),
+  "offcriteria":"Room (shared house), not a whole unit; confirm private bath + dates.",
+  "facts":["Room in a huge modern house in Downtown Palo Alto.","Under budget at $1,850; walkable downtown location."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 13 — Downtown PA house room, $1,850. Great location. Confirm bath + dates."},
+
+ {"top":False,"title":"Room — quiet Palo Alto neighborhood","mid":"su-quietpa-1600","price":"$1,600/mo","src":"SUpost · Jun 13 paste",
+  "area":"Palo Alto","status":("check","Room · under budget"),
+  "offcriteria":"Room (shared), not a whole unit; confirm private bath + dates.",
+  "facts":["Room in a quiet, beautiful Palo Alto neighborhood (photo on SUpost).","Under budget at $1,600."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 13 — quiet PA room, $1,600. Confirm bath + dates."},
+
+ {"top":False,"title":"Room in 2bd/1ba — Menlo Park (Jul 1)","mid":"su-menlo-2bd-1400","price":"$1,400/mo","src":"SUpost · Jun 13 paste",
+  "area":"Menlo Park (~10 min to Stanford)","status":("check","Room · cheap · close"),
+  "offcriteria":"Room (one housemate), shared bath; starts July 1 (June gap).",
+  "facts":["One room in a 2bed/1bath apartment in Menlo Park, available July 1 (photo on SUpost).","Under budget at $1,400 — cheap and close to campus."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 13 — Menlo 2bd/1ba room, $1,400, Jul 1. Cheap + close. June gap; shared bath."},
+
+ {"top":False,"title":"EV Studio 6 sublet (Jul 2–Sep 17)","mid":"su-ev-studio6-2049","price":"$2,049/mo","src":"SUpost · Jun 13 paste",
+  "area":"On campus, Stanford (Escondido Village)","status":("warn","Whole studio · $49 over · July start"),
+  "offcriteria":"$49 over your $2,000 limit; starts July 2 (June gap).",
+  "facts":["Whole EV studio (Studio 6) on campus, July 2 – Sept 17 (photo on SUpost).","$2,049, just over budget — but a whole unit on campus."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 13 — whole EV Studio 6, $2,049, Jul 2–Sep 17. Just over budget + June gap."},
+
+ {"top":False,"title":"EV studio stopgap ($700 total · Jun 27–Jul 6)","mid":"su-ev-studio-700","price":"$700 total (~10 days)","src":"SUpost · Jun 13 sweep",
+  "area":"On campus, Stanford (Escondido Village)","status":("warn","Whole studio · ~10-day STOPGAP only"),
+  "offcriteria":"Covers only Jun 27 – Jul 6 (~10 days) — a stopgap, not a summer place; and there's a gap from today to Jun 27 it doesn't cover. Eligibility likely requires Stanford affiliation.",
+  "facts":["Whole EV studio on campus, June 27 – July 6 (~10 days), $700 for the period (the '$700' was a short-stay total, not monthly).","Verified-active (posted Jun 11).","Use only to get out of the hotel briefly while you lock a longer place."],
+  "clabel":"Open post →","curl":"https://supost.com/post/index/130086936",
+  "cnote":"Jun 13 sweep clarified: this is a ~10-day stopgap (Jun 27–Jul 6) at $700 total, not a cheap monthly studio. Bridge only."},
+
+ {"top":True,"title":"On-campus whole studio (Jun 15–Aug 31, all-incl)","mid":"su-studio-15jun-31aug-2100","price":"$2,100/mo","src":"SUpost · Jun 13 sweep",
+  "area":"On campus, Stanford","status":("check","Whole studio · full summer · at tolerance"),
+  "offcriteria":"$100 over your $2,000 base (within ~$2,100 tolerance). Restricted to Stanford affiliates, undergrads excluded — confirm you qualify. Move-in Jun 15 is days away — act fast.",
+  "facts":["Whole/dedicated studio on campus, June 15 – Aug 31 (full summer), fully furnished.","All utilities included; 0-min commute.","Verified-active (posted May 29)."],
+  "clabel":"Open post →","curl":"https://supost.com/post/index/130085715",
+  "cnote":"Jun 13 sweep — whole on-campus furnished studio, Jun 15–Aug 31, all-incl, $2,100. Confirm eligibility; move-in is imminent."},
+
+ {"top":False,"title":"Idyllwild co-op room (Jun 17–Sep 15)","mid":"su-idyllwild-coop-950","price":"$950/mo (~$1,200 all-in)","src":"SUpost · Jun 13 sweep",
+  "area":"Los Altos Hills (~10 min to Stanford)","status":("check","Co-op room · cheapest · full summer"),
+  "offcriteria":"Private room in a shared co-op (8–10 residents); private bath NOT confirmed (likely communal). Requires co-op participation: cook ~3x/month + chores.",
+  "facts":["Room in the Idyllwild co-op, June 17 – Sept 15 (full summer, dates negotiable).","~$1,200/mo ALL-IN — food AND utilities included — far under budget.","Established Stanford-affiliated co-op, ~10 min to campus. Verified-active (posted May 5)."],
+  "clabel":"Open post →","curl":"https://supost.com/post/index/130076375",
+  "cnote":"Jun 13 sweep — Idyllwild co-op, ~$1,200 all-in (incl. food), Jun 17–Sep 15. Cheapest full-summer option; co-op chores required."},
+
+ # ---- Jun 13 SUpost paste #2 (earlier pages Jun 3–8) — additional NEW offers ----
+ {"top":True,"title":"EVGR Premium 2b/2b for 1 person (Jul 7–Aug 18)","mid":"su-evgr-premium-2b2b-2000","price":"$2,000/mo","src":"SUpost · Jun 13 paste",
+  "area":"On campus, Stanford (EVGR Premium)","status":("go","Effectively whole · on campus · at budget"),
+  "offcriteria":"Starts July 7 (June gap); ends Aug 18 (no Sept). 'For 1 person' = you'd have the 2b/2b to yourself. Confirm eligibility (grad/affiliate).",
+  "facts":["EVGR Premium 2b/2b sublet for ONE person — effectively a whole apartment to yourself, on campus.","At your $2,000 ceiling; July 7 – Aug 18.","Fully on-campus, 0-min commute."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 13 — EVGR Premium 2b/2b for 1 (you'd have it alone), $2,000, Jul 7–Aug 18, on campus. Confirm eligibility + the June gap."},
+
+ {"top":False,"title":"EVGR-C private bed + bath (Jul 5–Aug 8)","mid":"su-evgrc-jul5-aug8-2000","price":"$2,000/mo","src":"SUpost · Jun 13 paste",
+  "area":"On campus, Stanford (EVGR-C)","status":("check","Private room+bath · on campus · at budget"),
+  "offcriteria":"Jul 5 – Aug 8 only (June gap + no Sept). Private room in a shared apartment. Confirm eligibility.",
+  "facts":["Private bedroom AND private bathroom in EVGR-C on campus.","At your $2,000 ceiling; July 5 – Aug 8.","On campus, 0-min commute."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 13 — EVGR-C private bed+bath, $2,000, Jul 5–Aug 8, on campus. June gap; confirm eligibility."},
+
+ {"top":False,"title":"Room — Rains 2BR (Jul 3–Aug 14)","mid":"su-rains-2br-jul3-1700","price":"$1,700/mo","src":"SUpost · Jun 13 paste",
+  "area":"On campus, Stanford (Rains)","status":("check","Room · on campus · under budget"),
+  "offcriteria":"Room in a 2BR (one housemate); Jul 3 – Aug 14 only (June gap + no Sept). Confirm eligibility (grad housing).",
+  "facts":["Room in a 2BR Rains apartment on campus, July 3 – Aug 14.","Under budget at $1,700."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 13 — Rains 2BR room, $1,700, Jul 3–Aug 14, on campus. June gap; confirm eligibility."},
+
+ {"top":False,"title":"Private bed + bath, College Terrace 2B/2B","mid":"su-collegeterrace-2b2b-2150","price":"$2,150/mo","src":"SUpost · Jun 13 paste",
+  "area":"College Terrace, Palo Alto (adjacent to campus)","status":("warn","Private room+bath · top location · over budget"),
+  "offcriteria":"$150 over your $2,000 base (above the ~$2,100 stretch). Private room in a 2B/2B (one housemate), not a whole unit.",
+  "facts":["Private bedroom + private bathroom in a 2B/2B College Terrace apartment (photo on SUpost).","College Terrace is right next to campus — excellent location.","$2,150 — over budget; confirm dates."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 13 — College Terrace private bed+bath, $2,150 (over), great location. Confirm dates; only if you stretch budget."},
+
+ {"top":False,"title":"Private bed + attached bath, Stanford West 2B/2B","mid":"su-stanfordwest-2b2b-2200","price":"$2,200/mo","src":"SUpost · Jun 13 paste",
+  "area":"Stanford West (on/near campus)","status":("warn","Private room+bath · over budget"),
+  "offcriteria":"$200 over your $2,000 base. Private room in a 2B/2B (one housemate), not a whole unit.",
+  "facts":["Spacious private bedroom with attached bathroom in a 2B/2B Stanford West apartment (photo on SUpost).","$2,200 — over budget; confirm dates."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 13 — Stanford West private bed+bath, $2,200 (over). Confirm dates; only if you stretch."},
+
+ {"top":False,"title":"Room — downtown PA 4B2B (Jul 1)","mid":"su-dtpa-4b2b-jul1-1794","price":"$1,794/mo","src":"SUpost · Jun 13 paste",
+  "area":"Downtown Palo Alto","status":("check","Room · top location · under budget"),
+  "offcriteria":"Room in a 4B2B (shared bath, several housemates); July 1 start (June gap). Confirm private vs shared bath.",
+  "facts":["Sunny room in a 4B2B in downtown Palo Alto, move-in July 1 (photo on SUpost).","Under budget at $1,794; walkable downtown location."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 13 — downtown PA 4B2B room, $1,794, Jul 1. Great location; confirm bath + June gap."},
+
+ {"top":False,"title":"Master bedroom, 2B2B near campus (Aug 1)","mid":"su-2b2b-nearcampus-aug1-1700","price":"$1,700/mo","src":"SUpost · Jun 13 paste",
+  "area":"Near Stanford campus","status":("check","Room · under budget · Aug start"),
+  "offcriteria":"Move-in ~Aug 1 — does NOT cover June/July. Room in a 2B2B (one housemate). Useful only as an Aug-onward option.",
+  "facts":["Master bedroom in a 2B2B apartment near campus, move-in around Aug 1.","Under budget at $1,700."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 13 — 2B2B master near campus, $1,700, ~Aug 1. Aug-onward only; confirm private bath."},
+
+ {"top":False,"title":"2 rooms — Menlo Park (Jul 1)","mid":"su-menlo-2rooms-jul1-1590","price":"$1,590/mo","src":"SUpost · Jun 13 paste",
+  "area":"Menlo Park (~10 min to Stanford)","status":("check","Room · cheap · close · Jul 1"),
+  "offcriteria":"Room (shared), July 1 start (June gap). Confirm private vs shared bath.",
+  "facts":["2 rooms for rent in Menlo Park, starting July 1.","Under budget at $1,590; ~10 min to campus."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 13 — Menlo Park rooms, $1,590, Jul 1. Cheap + close; confirm bath + June gap."},
+
+ {"top":False,"title":"2 rooms — Menlo Park 3bd/2ba near campus","mid":"su-menlo-3bd-nearcampus-1390","price":"$1,390/mo","src":"SUpost · Jun 13 paste",
+  "area":"Menlo Park (near campus)","status":("check","Room · cheapest Menlo · near campus"),
+  "offcriteria":"Room in a 3bd/2ba (shared bath, housemates). Confirm dates + June availability.",
+  "facts":["2 room openings in a 3bedroom/2bath near campus, Menlo Park.","Cheapest Menlo room at $1,390."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 13 — Menlo 3bd/2ba rooms, $1,390, near campus. Cheap; confirm dates + bath."},
+
+ {"top":False,"title":"Barnes Midrise 1BR — STOPGAP (Jun 21–28)","mid":"su-barnes-midrise-jun21-28-800","price":"$800 (~1 week)","src":"SUpost · Jun 13 paste",
+  "area":"On campus, Stanford (Barnes Midrise)","status":("warn","Whole 1BR · ~1-week STOPGAP only"),
+  "offcriteria":"Covers only Jun 21–28 (~1 week) — a bridge, not a summer place. Confirm eligibility.",
+  "facts":["Subletting a 1BR in Barnes Midrise on campus, June 21 – 28.","$800 for the ~1-week window.","Use only to bridge out of the hotel while locking a longer place."],
+  "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
+  "cnote":"NEW Jun 13 — Barnes Midrise 1BR, $800, Jun 21–28 (~1 wk). Bridge only."},
 ]
 
 # Each SUpost card links to a Google search restricted to supost.com for its
@@ -592,6 +755,26 @@ _SUPOST_Q = {
  "Blackwelder Room Sublet (6/19–8/31)": "Blackwelder Room Sublet 6/19 8/31 1165",
  "1BR Hulme Sublease (Jun 21–Sep 14)": "1BR Hulme Sublease June 21 Sept 14 2500",
  "Spacious room, EVGR-C grad housing": "Sublet Spacious room Stanford graduate housing EVGR-C 2039",
+ # Jun 13 paste — text-only offers (no URL in paste): land on a Google search.
+ "Renovated Rains sublet (Jun 22–Sep 18)": "Renovated Rains Sublet June 22 September 18 1600",
+ "Stanford Lyman 2B/1B, furnished (Jun 27–Aug 22)": "Stanford Lyman 2B 1B fully furnished June 27 August 22 1684",
+ "EVGR on-campus sublet (Jul–Sep)": "On-Campus Summer Sublet EVGR July September 1659",
+ "Private room + private bath, Atherton": "Private room private bath Atherton 1300",
+ "Room — Palo Alto (Stanford Villa), late June/early July": "Room Palo Alto Stanford Villa move-in late June early July 1701",
+ "Room — huge modern Downtown Palo Alto house": "Room Available Huge Modern Downtown Palo Alto House 1850",
+ "Room — quiet Palo Alto neighborhood": "room quiet and beautiful neighborhood Palo Alto 1600",
+ "Room in 2bd/1ba — Menlo Park (Jul 1)": "One room 2 bed 1 bath apartment Menlo Park July 1st 1400",
+ # Jun 13 paste #2 — earlier-page offers (no URL in paste): Google search.
+ "EVGR Premium 2b/2b for 1 person (Jul 7–Aug 18)": "EVGR Premium 2b 2b Sublet July 7 Aug 18 1 person 2000",
+ "EVGR-C private bed + bath (Jul 5–Aug 8)": "Room sublease 7/5 8/8 EVGR-C private bed bathroom 2000",
+ "Room — Rains 2BR (Jul 3–Aug 14)": "Room 2BR Rains apartment July 3 August 14 1700",
+ "Private bed + bath, College Terrace 2B/2B": "Private bedroom bathroom 2B 2B College Terrace 2150",
+ "Private bed + attached bath, Stanford West 2B/2B": "Spacious private bedroom attached bathroom 2B 2B Stanford West 2200",
+ "Room — downtown PA 4B2B (Jul 1)": "Sunny room downtown PA 4B2B move in July 1st 1794",
+ "Master bedroom, 2B2B near campus (Aug 1)": "Master bedroom 2B2B apartment near Campus August 1 1700",
+ "2 rooms — Menlo Park (Jul 1)": "2 rooms for rent Menlo Park July 1 1590",
+ "2 rooms — Menlo Park 3bd/2ba near campus": "2 rooms openings 3bedroom 2bathroom near campus Menlo Park 1390",
+ "Barnes Midrise 1BR — STOPGAP (Jun 21–28)": "Subletting 1 BR Barnes Midrise June 21 28 800",
 }
 # Real direct SUpost post URLs (provided by you, identified by fetching each).
 _SUPOST_DIRECT = {
@@ -604,6 +787,11 @@ _SUPOST_DIRECT = {
  "su-3br-townhouse-jun1": "https://supost.com/post/index/130085280",
  "su-1b-2bhk-noflatmate": "https://supost.com/post/index/130085276",
  "su-ev-freebike": "https://supost.com/post/index/130085266",
+ # Jun 13 — direct post URLs confirmed by the web sweep.
+ "su-ev-studio6-2049": "https://supost.com/post/index/130086984",
+ "su-ev-studio-700": "https://supost.com/post/index/130086936",
+ "su-studio-15jun-31aug-2100": "https://supost.com/post/index/130085715",
+ "su-idyllwild-coop-950": "https://supost.com/post/index/130076375",
 }
 for _L in SUPOST:
     _key = _L.get("mid") or _L["title"]
@@ -615,6 +803,156 @@ for _L in SUPOST:
     if _q:
         _L["curl"] = "https://www.google.com/search?q=" + _uq.quote(f"site:supost.com {_q}")
         _L["clabel"] = "Find post →"
+
+# ---- FRESH LEADS — Jun 13 web sweep (off-SUpost: Craigslist, sublet.com, coliving, etc.)
+# 3 parallel search waves across ~30 sources, each lead verified live. Ordered by
+# status (go → check → warn). The bottom line: under-$2k WHOLE units barely exist
+# for a summer sublet — the realistic path is a furnished private-room+private-bath
+# in Mountain View / Los Altos / Redwood City, plus the on-campus SUpost studios.
+FRESH_LEADS = [
+ # ---- GO: in budget, June-able, whole-unit or private-bath ----
+ {"top":True,"title":"Suite Spot coliving — private en-suite room (Redwood City)","mid":"web-suitespot-209madison","price":"$1,700/mo (6+mo) · $2,300 short","src":"Suite Spot · Jun 13 sweep",
+  "area":"Redwood City (209 Madison Ave, ~15-20 min to Stanford)","status":("go","Private room+ensuite · June 19 · pro-managed"),
+  "offcriteria":"The $1,700 rate needs a 6+ month lease (runs past summer); a pure-summer term is quoted $2,300 (over budget). Private room in a managed 4BD/4BA home, not a whole unit.",
+  "facts":["Furnished private room WITH private en-suite bath in a professionally-managed coliving home.","$1,700/mo on the 6+ month rate (in budget); June 19 move-in; flexible lease.","Verified live on AppFolio. Contact golan@suitespotmgmt.com / 562-479-7609 — ask for a summer-length term."],
+  "clabel":"View listing","curl":"https://suitespot.appfolio.com/listings/detail/826b3b1a-1ffc-45d6-91c4-3b07e2679c41",
+  "cnote":"STRONGEST new lead: managed coliving, private en-suite, $1,700 (6+mo), Jun 19, RWC. Email to negotiate a summer term (short-term quoted $2,300)."},
+
+ {"top":True,"title":"Furnished room + private bath, Redwood City (Orchard Ave)","mid":"web-subletcom-4777217","price":"$1,200/mo (utils incl)","src":"sublet.com · Jun 13 sweep",
+  "area":"Redwood City (Orchard Ave, ~15-20 min to Stanford)","status":("go","Private room+bath · cheap · month-to-month"),
+  "offcriteria":"Private room (in a studio unit), not a whole unit. No posting date shown → likely-active; confirm June availability + exact address via the listing's message form.",
+  "facts":["Furnished private room WITH private bath, utilities included.","$1,200/mo — well under budget; true month-to-month, renewable.","Earliest move-in flexible (covers June). Verified on the individual sublet.com listing page."],
+  "clabel":"View listing","curl":"https://www.sublet.com/property/4777217/",
+  "cnote":"Great value: $1,200 furnished room+private bath, RWC, M2M, utils incl. Confirm June + address. Likely active Jun 13."},
+
+ {"top":True,"title":"Fully furnished studio, available now (Sunnyvale)","price":"$1,970/mo + utils","src":"Craigslist /apa · Jun 13 sweep",
+  "area":"Sunnyvale (San Ramon Ave, ~20-25 min to Stanford)","status":("go","Whole studio · furnished · available NOW"),
+  "offcriteria":"Sunnyvale is ~20-25 min out (at/just past your radius edge). Utilities NOT included; bring own bedding. Post showed a 'flagged' marker — book a showing ASAP before it's removed.",
+  "facts":["Whole/dedicated furnished studio (0BR/1BA): private patio, walk-in closet, in-unit W/D, weekly cleaning, WiFi, parking.","$1,970 — under budget; available NOW for an immediate June move-in.","Verified-active (posted May 25). Contact 'Attia'."],
+  "clabel":"View listing","curl":"https://sfbay.craigslist.org/sby/apa/d/sunnyvale-fully-furnished-studio-washer/7936765857.html",
+  "cnote":"Best whole-unit-available-now: furnished Sunnyvale studio, $1,970, in-unit W/D + weekly cleaning. ~20-25 min out; act fast (flagged). Verified Jun 13."},
+
+ {"top":True,"title":"Private room + bath, separate entrance (Emerald Hills, RWC)","price":"$1,475/mo","src":"Craigslist /roo · Jun 13 sweep",
+  "area":"Emerald Hills, Redwood City (~15-20 min to Stanford)","status":("go","Private room+bath · cheapest · June 5"),
+  "offcriteria":"Landlord prefers 'full-time working professionals' / 'no work-from-home' — confirm they'll take a summer student. 3-month min, single occupant, utilities shared (not incl).",
+  "facts":["Furnished private room (~300 sqft) + private bath + SEPARATE entrance + private living area/balcony in a single-family home.","$1,475 — cheapest private-bath option found; June 5 start; off-street parking.","Verified-active (posted May 17, updated Jun 10)."],
+  "clabel":"View listing","curl":"https://sfbay.craigslist.org/pen/roo/d/redwood-city-large-bedroom-private-bath/7934928950.html",
+  "cnote":"Cheapest private bath ($1,475), sep entrance, furnished, June 5, RWC. Confirm they accept a student. Verified Jun 13."},
+
+ {"top":True,"title":"Private room + private marble bath, all-incl (Menlo Park)","price":"$1,495/mo (all utils + fiber)","src":"Craigslist /roo · Jun 13 sweep",
+  "area":"Menlo Park (Hollyburne Ave, ~10-15 min to Stanford)","status":("go","Private room+bath · all incl · under budget"),
+  "offcriteria":"Move-in date NOT on the listing — confirm June start + that it runs through Aug/Sep. Shared single-family home with one housemate (not a whole unit). Below-market price → view in person, don't wire deposits sight-unseen.",
+  "facts":["Private bedroom WITH private marble bath (walk-in shower) in a 2BR home.","ALL utilities + AT&T fiber included; furnished; in-unit W/D; walk-in closet; deck; parking.","$1,495 — well under budget. Verified-active (posted Jun 5, updated Jun 10)."],
+  "clabel":"View listing","curl":"https://sfbay.craigslist.org/pen/roo/d/menlo-park-beautiful-one-bedroom-with/7939097965.html",
+  "cnote":"Strong: Menlo private marble bath, all utils+fiber incl, furnished, $1,495. Confirm dates; view in person. Verified Jun 13."},
+
+ {"top":True,"title":"Furnished private room + private bath, all-incl (Los Altos)","mid":"web-losaltos-homestead-1850","price":"$1,850/mo (all incl + maid)","src":"Craigslist /roo · Jun 13 sweep",
+  "area":"Los Altos (Homestead Rd, ~15-20 min to Stanford)","status":("go","Private room+bath · available now · all incl"),
+  "offcriteria":"Shared kitchen/dining (not a whole unit). URL slug says 'Cupertino' — confirm exact address (far-Homestead can push past 20 min). No end date — confirm summer-only.",
+  "facts":["Furnished private room WITH (luxury) private bath; all utilities + internet + monthly maid + parking + laundry included.","$1,850 — under budget; available now for June.","Several near-identical rooms posted this week (posts 7940421389 / 7940664077 / 7940421350) — pursue whichever is open. Verified-active."],
+  "clabel":"View listing","curl":"https://sfbay.craigslist.org/pen/roo/d/cupertino-clean-furnished-private-1br/7940421389.html",
+  "cnote":"All-inclusive furnished room+private bath, $1,850, Los Altos, available now (multiple rooms). Confirm address + dates. Verified Jun 13."},
+
+ {"top":True,"title":"Private room + bath, Rengstorff condo (Mountain View)","price":"$1,500/mo (utils incl)","src":"Craigslist /apa · Jun 13 sweep",
+  "area":"Mountain View (701 N Rengstorff Ave, ~15-20 min to Stanford)","status":("go","Private room+bath · June 8 · cheap"),
+  "offcriteria":"Room in a shared 4-bed condo (2 housemates), not a whole unit; 6-month minimum — confirm a summer term or early exit.",
+  "facts":["Furnished private bedroom + private bath in a 4-bed condo; nearly all utilities included; in-unit W/D.","$1,500 — under budget; available June 8 (good for your hotel gap).","Address corroborated on apartments.com/Zillow/Redfin; also seen on Uloop."],
+  "clabel":"View listing","curl":"https://sfbay.craigslist.org/pen/apa/d/mountain-view-cozy-bed-bath-room-in/7939756133.html",
+  "cnote":"$1,500 furnished room+private bath, MV, June 8, utils incl. Confirm summer-only (6-mo min listed). Verified Jun 13."},
+
+ # ---- CHECK: fits, confirm a detail ----
+ {"top":False,"title":"850 Calderon — whole studio (Mountain View)","price":"$2,000/mo","src":"Craigslist /apa · Jun 13 sweep",
+  "area":"Mountain View (850 Calderon Ave, ~15-20 min to Stanford)","status":("check","Whole studio · June 18 · at budget"),
+  "offcriteria":"Furnished status not stated (likely unfurnished); managed complex normally does 6-/12-mo leases — confirm a summer-only term. June 18 (a few more hotel nights). Utilities not specified.",
+  "facts":["Self-contained studio (0BR/1BA), freshly renovated, in-unit W/D + off-street parking.","$2,000 — exactly at your ceiling; available June 18; listed month-to-month.","Verified-active (posted Jun 5, updated Jun 10)."],
+  "clabel":"View listing","curl":"https://sfbay.craigslist.org/pen/apa/d/mountain-view-850-calderon-apartments/7938951036.html",
+  "cnote":"Whole MV studio, $2,000, Jun 18, in-unit W/D. Confirm furnished + summer-only term. Verified Jun 13."},
+
+ {"top":False,"title":"In-law unit — own kitchen + bath + entrance (San Mateo)","price":"$1,550/mo","src":"Craigslist /roo · Jun 13 sweep",
+  "area":"San Mateo (Sunnybrae, ~20-25 min to Stanford)","status":("check","Whole in-law unit · July 1"),
+  "offcriteria":"Starts July 1 (gap from your June hotel stay). Furnished status not stated. San Mateo ~20-25 min (far edge). Utilities not stated.",
+  "facts":["Whole/dedicated in-law unit (450 sqft 1BR/1BA): separate entrance, own kitchen, private bath, on-site laundry.","$1,550 — well under budget; 'good for one person'.","Verified-active (fresh Jun 11 post). Contact 'Steven'."],
+  "clabel":"View listing","curl":"https://sfbay.craigslist.org/pen/roo/d/san-mateo-san-mateo-inlaw-unit-for-rent/7940362301.html",
+  "cnote":"Whole in-law w/ own kitchen+bath+entrance, $1,550, San Mateo. July 1 start (gap); confirm furnished. Verified Jun 13."},
+
+ {"top":False,"title":"Private room + bath, midtown Palo Alto (Emerson St)","price":"$1,490/mo","src":"Craigslist /roo · Jun 13 sweep",
+  "area":"Midtown Palo Alto (Emerson St, very close to Stanford)","status":("check","Private room+bath · best PA location"),
+  "offcriteria":"MAJOR: listing requires a 12-MONTH lease + proof of income, targets long-term tech pros — conflicts with summer-only. Ask about a summer term; expect resistance. Room shared with a couple (not a whole unit).",
+  "facts":["Private 11x11 room WITH private bath in a 3BR/2BA Palo Alto house; furnished (bed, desk, dresser); W/D, WiFi incl.","$1,490 — well under budget; best location of the private-bath rooms (PA proper).","Verified-active (posted May 28, updated Jun 11)."],
+  "clabel":"View listing","curl":"https://sfbay.craigslist.org/pen/roo/d/palo-alto-private-bathroom-master-suite/7937203708.html",
+  "cnote":"Best-located private bath ($1,490, midtown PA) BUT wants a 12-mo lease — contact and ask about summer. Verified Jun 13."},
+
+ {"top":False,"title":"Private room, own bath + balcony (Los Altos, Matts Ct)","price":"$1,650/mo","src":"Craigslist · Jun 13 sweep",
+  "area":"Los Altos (951 Matts Court, ~20 min to Stanford)","status":("check","Private room+bath · month-to-month"),
+  "offcriteria":"MAJOR: 'No indoor kitchen use' (outdoor cooking only). Only partially furnished (dresser + air mattress, no real bed). Utilities split. Shared house.",
+  "facts":["Private room WITH private bath + private balcony in a 3-story house; month-to-month accepted; available now.","$1,650 — under budget. Address externally corroborated (hosts a real law office) — not a scam template.","Verified-active (posted Jun 12)."],
+  "clabel":"View listing","curl":"https://sfbay.craigslist.org/pen/apa/d/los-altos-room-for-rent/7940506126.html",
+  "cnote":"Room+private bath+balcony, $1,650, M2M, Los Altos — BUT no indoor kitchen + air mattress only. Verified Jun 13."},
+
+ {"top":False,"title":"Back unit, separate entrance (Redwood City)","price":"$2,000/mo (all incl)","src":"Craigslist /sub · Jun 13 sweep",
+  "area":"Redwood City (~15-20 min to Stanford)","status":("check","Whole unit · in-law style · at budget"),
+  "offcriteria":"No move-in date stated — June availability UNCONFIRMED. Furnished status not stated. Title/body conflict (2bd/1.5ba vs 1bd/1ba). Needs 680+ credit, no pets/smoking. Post had a 'flagged' marker.",
+  "facts":["Separate-entrance back unit (in-law style) — your own space; utilities + internet + W/D + parking included.","$2,000 — at your ceiling.","Posted May 15, updated May 30."],
+  "clabel":"View listing","curl":"https://sfbay.craigslist.org/pen/sub/d/redwood-city-back-unit-rental-redwood/7934565136.html",
+  "cnote":"Whole back unit, RWC, $2,000 all incl. Confirm June availability + bd/ba count. Likely active Jun 13."},
+
+ {"top":False,"title":"Private room + bath, garden cottage (Menlo/Atherton)","mid":"web-ff-816226","price":"$2,000/mo (furnished, utils incl)","src":"FurnishedFinder · Jun 13 sweep",
+  "area":"Menlo Park/Atherton line (~20 min to Stanford)","status":("check","Private room+bath · June unconfirmed"),
+  "offcriteria":"June-2026 availability UNCONFIRMED (documented availability from Nov 2025, 1-yr preferred) — a year tenancy could run through fall. Detail page was blocked → likely-active. Shared common areas (not a whole unit).",
+  "facts":["Private room WITH private bath/shower + separate entrance in a cottage; furnished; utilities included.","$2,000 — at your ceiling; ~20 min, not EPA.","Contact host via FurnishedFinder to confirm a June summer-length opening."],
+  "clabel":"View listing","curl":"https://www.furnishedfinder.com/property/816226_1",
+  "cnote":"Garden cottage private room+bath, $2,000, furnished, utils incl — but confirm June availability (only Nov-2025/1-yr documented). Likely active Jun 13."},
+
+ {"top":False,"title":"Olive Startup House — private room (South Palo Alto co-living)","mid":"web-olive-startuphouse","price":"$1,750–$1,950/mo (utils + cleaning incl)","src":"Startup House · Jun 13 sweep",
+  "area":"South Palo Alto (330 E Charleston Rd, <20 min to Stanford)","status":("check","Co-living room · in PA · month-to-month"),
+  "offcriteria":"Private room with SHARED bath + kitchen (not the private-bath tier). Verify summer-2026 availability + furnished + any private-bath rooms by applying at startuphouse.co.",
+  "facts":["Private room in a South Palo Alto co-living house; all utilities + weekly cleaning included.","$1,750–$1,950 — in budget; month-to-month (30+ day min, no 12-mo lease); accepting applications.","Real PA location (not EPA), <20 min to campus."],
+  "clabel":"Apply / info","curl":"https://www.startuphouse.co/",
+  "cnote":"In-budget PA co-living room, M2M, utils+cleaning incl, $1,750-1,950 — but shared bath. Apply at startuphouse.co; confirm summer dates. Likely active Jun 13."},
+
+ {"top":False,"title":"Palo Alto studio (4129 El Camino Way)","mid":"web-pa-4129-elcamino","price":"$1,950/mo + ~$100-150 utils","src":"SUpost · Jun 13 sweep",
+  "area":"Palo Alto (walk/bike to Stanford)","status":("check","Whole studio · July 6 – Aug 22"),
+  "offcriteria":"Dates: July 6 – Aug 22 only — does NOT cover your June gap, no September; ~7-week window. Utilities billed separately (+~$100-150 → ~$2,050-2,100 effective).",
+  "facts":["Dedicated 450 sqft studio in Palo Alto proper — closest to campus, walk/bikeable; partially furnished + kitchen utensils.","$1,950 base — under budget. Verified-active (posted Jun 10)."],
+  "clabel":"Open post →","curl":"https://supost.com/post/index/130086786",
+  "cnote":"Whole PA studio, walk to campus, $1,950 base — but Jul 6–Aug 22 only + utilities extra. Verified Jun 13."},
+
+ # ---- WARN: near-miss (shared bath / over budget / too far) ----
+ {"top":False,"title":"Furnished room, private patio entrance — SHARED bath (Palo Alto)","price":"$1,695/mo (all utils incl)","src":"Craigslist /roo · Jun 13 sweep",
+  "area":"Midtown Palo Alto (walk to Stanford)","status":("warn","Shared bath · July 4 start"),
+  "offcriteria":"Bathroom is SHARED (not private). Available July 4 — misses your June need (needs a bridge). Good backup if private bath isn't essential.",
+  "facts":["Furnished private room (144 sqft) in a shared house, private patio entrance; pool, AC, W/D, shared kitchen; all utilities included.","$1,695 — under budget; PA proper, walk to Stanford; housemates mostly Stanford affiliates.","Verified-active (updated Jun 12)."],
+  "clabel":"View listing","curl":"https://sfbay.craigslist.org/pen/roo/d/palo-alto-avail-4-furn-room-priv-patio/7938711274.html",
+  "cnote":"Great PA location, all utils incl, $1,695 — but shared bath + July 4 start. Backup. Verified Jun 13."},
+
+ {"top":False,"title":"Furnished room, separate entrance — SHARED bath (West Palo Alto)","price":"$1,550–$1,650/mo all-in","src":"Craigslist /roo · Jun 13 sweep",
+  "area":"West Palo Alto (bikeable to Stanford)","status":("warn","Shared bath · July 1 start"),
+  "offcriteria":"Bathroom is SHARED with one student/intern (not private). Available July 1 — misses your June need.",
+  "facts":["Furnished private bedroom with separate/private entrance in a house; shared kitchenette + W/D; single occupancy.","$1,550 (1-yr) / $1,600 (6-mo) + $50 flat utils/WiFi (~$1,600-1,650 all-in); PA proper, bikeable.","Verified-active (posted May 31, updated Jun 10)."],
+  "clabel":"View listing","curl":"https://sfbay.craigslist.org/pen/roo/d/palo-alto-modern-furnished-private/7937990394.html",
+  "cnote":"PA proper, furnished, ~$1,600 all-in — but shared bath + July 1 start. Backup. Verified Jun 13."},
+
+ {"top":False,"title":"Fully furnished studio, available now (Burlingame)","price":"$2,050/mo (all incl)","src":"Craigslist /apa · Jun 13 sweep",
+  "area":"Burlingame/Hillsborough (~20-25 min to Stanford)","status":("warn","Whole studio · available NOW · over budget"),
+  "offcriteria":"$2,050 is over the $2,000 cap (within ~$2,100 tolerance); Burlingame/Hillsborough ~20-25 min (outer edge). No pets. Confirm it runs through Aug/Sep.",
+  "facts":["Self-contained furnished studio: own kitchenette, full private bath, private entrance; all utilities + internet + parking included.","Available NOW — solves the hotel gap today.","Verified-active (posted Jun 6, updated Jun 9)."],
+  "clabel":"View listing","curl":"https://sfbay.craigslist.org/pen/apa/d/burlingame-beautiful-fully-furnished/7939249340.html",
+  "cnote":"Available-now whole studio, furnished, all incl, $2,050 (just over) + ~20-25 min. Verified Jun 13."},
+
+ {"top":False,"title":"Master bedroom + private bath (Sunnyvale)","mid":"web-uloop-sunnyvale-bradford","price":"$1,750/mo","src":"Uloop · Jun 13 sweep",
+  "area":"Sunnyvale (~8 mi / likely >20 min to Stanford)","status":("warn","Private room+bath · likely >20 min"),
+  "offcriteria":"Sunnyvale ~8 mi — likely over 20 min in traffic. No explicit dates; host prefers 6-month lease (conflicts with summer-only). Room in a shared house.",
+  "facts":["~200 sqft master suite with private bath + patio access in a newly built shared house; fiber internet; parking.","$1,750 — under budget. Confirm dates + that they'll do a summer term."],
+  "clabel":"View listing","curl":"https://stanford.uloop.com/housing/view.php/2739304165/Modern-Sunnyvale-Master-Bedroom-for-Rent",
+  "cnote":"Sunnyvale master+bath, $1,750 — but likely >20 min + 6-mo lease pref. Likely active Jun 13."},
+
+ {"top":False,"title":"Room + private bath (Half Moon Bay / El Granada)","price":"$1,300/mo (all utils incl)","src":"Craigslist /sub · Jun 13 sweep",
+  "area":"El Granada / Half Moon Bay (~35-45 min over Hwy 92)","status":("warn","Private room+bath · too far · fallback only"),
+  "offcriteria":"LOCATION disqualifier: ~35-45 min over the hills — well outside your 20-min ring; needs a car. Keep only if nothing closer works.",
+  "facts":["Furnished private room + private bath in a 2BR/2BA townhome; all utilities included; in-unit W/D.","$1,300 — well under budget; flexible dates (email your window).","Verified-active (posted May 17)."],
+  "clabel":"View listing","curl":"https://sfbay.craigslist.org/pen/sub/d/el-granada-room-and-private-bath-for/7934945431.html",
+  "cnote":"Cheapest room+bath ($1,300) but 35-45 min away — last-resort only. Verified Jun 13."},
+]
 
 def placeholder_svg(area, price):
     """Clean location placeholder for listings without a real photo —
@@ -820,7 +1158,7 @@ def render_body():
     n_manual = len(manual)
     n_total  = len(contacted_ids)
     # Listings shown on this dashboard (curated cards across all sections).
-    all_cards = NON_CL + SUBLETS + REGULAR_RENTALS + SHORT_TERM + SUPOST
+    all_cards = NON_CL + SUBLETS + REGULAR_RENTALS + SHORT_TERM + SUPOST + FRESH_LEADS
     def card_key(L):
         if L.get("mid"):
             return L["mid"]
@@ -858,6 +1196,18 @@ def render_body():
     )
     n_queue = len(queued_ids)
     n_queue_left = len([i for i in queued_ids if i not in contacted_ids])
+
+    # Fresh Jun-13 web-sweep leads, grouped by status tier.
+    def fresh_section(title, code):
+        items = [L for L in FRESH_LEADS if L["status"][0] == code]
+        if not items: return ""
+        return f'<h3 class="cat">{title} ({len(items)})</h3>' + "".join(card(L) for L in items)
+    fresh_grouped = (
+        fresh_section("🏆 Best new — in budget, June-able", "go")
+        + fresh_section("📍 Worth a look — confirm one detail", "check")
+        + fresh_section("⚠️ Near-miss — shared bath / over budget / far", "warn")
+    )
+    n_fresh = len(FRESH_LEADS)
 
     return f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Simon's Stanford Summer 2026 Housing Ledger</title>
 <style>{CSS}</style>
@@ -902,22 +1252,29 @@ function toggleCard(cardId) {{
 <p class="sub">Under $2,000/mo · Dedicated units, no housemates · Within 20 min of Stanford · East Palo Alto excluded</p>
 </header>
 
-<div class="banner" style="background:#fef2f2;border-color:#fecaca">
-<strong>Jun 11 update — 3 more leads closed:</strong> EVGR-B studio ($1,600, Faatira), Blackwelder room ($1,165, Sujay), and Selim's EV Studio 1 all came back <strong>TAKEN</strong>. Bhavya (bhavyac@stanford.edu) sent a soft "talking to others, will reach out if it frees up" — treat as a long-shot. Net: the cold-sublet channel is mostly tapped out. <strong>Direct + official channels are now the priority.</strong>
+<div class="banner" style="background:#ecfdf5;border-color:#a7f3d0">
+<strong>Jun 13 — {n_fresh} fresh leads added from a {len(SUPOST)}-offer SUpost refresh + a 3-wave web sweep (~30 sources, each verified live).</strong>
+The hard truth: a furnished, June-start, sub-$2k <em>whole</em> unit in the Palo Alto core basically doesn't exist right now. The on-budget inventory is <strong>furnished private-room+private-bath in Mountain View / Los Altos / Redwood City</strong> ($1,200–$1,850), plus on-campus SUpost studios. See <strong>🆕 Fresh leads</strong> below.
+</div>
+
+<div class="banner cl">
+<strong>⚠ Only hearing "already taken"? Here's why &amp; the fix.</strong> You're competing in the most-flooded pond — cheap on-campus SUpost sublets get dozens of messages and vanish in hours. Three fixes:
+<strong>(1) Flip the funnel — post a "Housing Wanted" ad TODAY</strong> (SUpost · FB Stanford Housing · r/stanford · Nextdoor) so posters come to you; your pitch is strong (in PA now, can view same-day, ready to sign + deposit).
+<strong>(2) Pivot to private landlords &amp; CALL, don't email</strong> — the Fresh-leads rooms (MV/Los Altos/RWC, $1,200–$1,850) get a handful of inquiries, not 50, and many list phone numbers.
+<strong>(3) Lead with commitment + speed</strong> in every message ("I'm in Palo Alto now, can see it today, can sign + pay deposit immediately"), and send a <strong>"keep me as backup"</strong> note on every "it's taken." Scripts in <strong>TODO_outreach.md</strong>.
 </div>
 
 <div class="banner">
-<strong>Do today (Jun 11) — direct channels:</strong>
-1) <strong>Call/text Bri</strong> 623-810-3457 (Kennedy Commons $1,570 — texted Jun 8, no reply) ·
-2) <strong>Email andaru@stanford.edu</strong> re: Hulme next steps (form already submitted) ·
-3) <strong>Book the Jun 9–20 campus stopgap</strong> ($1,200) to get out of the hotel ·
-4) <strong>Post a "Housing Wanted" ad</strong> on SUpost + the FB Stanford Housing group ·
-5) <strong>Email summerhousing@stanford.edu</strong> (official fallback).
-Ready-to-send scripts for all five are in <strong>TODO_outreach.md</strong>.
+<strong>Do today (Jun 13) — strongest new options:</strong>
+1) <strong>Suite Spot coliving</strong> (RWC, private en-suite, $1,700) — email golan@suitespotmgmt.com to negotiate a summer term ·
+2) <strong>Emerald Hills $1,475</strong> / <strong>Menlo marble-bath $1,495</strong> / <strong>RWC Orchard $1,200</strong> — all private-bath, June-able ·
+3) <strong>Sunnyvale whole studio $1,970</strong> (available NOW — flagged post, move fast) ·
+4) On campus: <strong>Renovated Rains $1,600</strong> (Jun 22–Sep 18) + <strong>whole studio $2,100</strong> (Jun 15–Aug 31, act fast) ·
+5) <strong>Email Stanford housing help — both offices:</strong> R&amp;DE <strong>summerhousing@stanford.edu</strong> (650-725-2810 — ask for space-available singles + a Places4Students temp ID) <em>and</em> the <strong>Summer Session office</strong> (summer.stanford.edu — ask about a housing portal / partner list). Templates 4a/4b in <strong>TODO_outreach.md</strong>.
 </div>
 
 <div class="banner">
-<strong>Priority:</strong> Start with the <strong>$1,890 Palo Alto sublease</strong> — it's the ONLY whole-unit sublease that skips applications.
+<strong>Still your easiest application-free whole unit:</strong> the <strong>$1,890 Palo Alto sublease</strong>. New close second for a whole unit you can get NOW: the <strong>Sunnyvale furnished studio ($1,970)</strong> or <strong>Burlingame studio ($2,050)</strong>.
 </div>
 
 <div class="status-panel">
@@ -932,9 +1289,15 @@ Ready-to-send scripts for all five are in <strong>TODO_outreach.md</strong>.
     {"<span style='color:#c62828'>Nothing has actually gone out yet.</span>" if n_total == 0 else ""}
   </div>
   <div class="status-detail">
-    <strong>Search:</strong> Craigslist last scan Jun 4 ({len(queued_ids)} matches queued) · SUpost refreshed Jun 9 from your paste ({len(SUPOST)} offers) · Zillow/FB/Apartments/Reddit = manual links below.
+    <strong>Search:</strong> Jun 13 web sweep across ~30 sources ({n_fresh} verified fresh leads) · SUpost refreshed Jun 13 ({len(SUPOST)} offers) · Craigslist /sub /apa /roo, sublet.com, coliving, Furnished Finder, Uloop all covered.
   </div>
 </div>
+
+<h2>🆕 Fresh leads — Jun 13 web sweep ({n_fresh}, off-SUpost)</h2>
+<div class="banner cl">
+3 parallel search waves (~30 sources: Craigslist /sub /apa /roo, sublet.com, coliving operators, Furnished Finder, Uloop, aggregators), each lead <strong>verified live</strong>. The market reality: under-$2k <strong>whole units</strong> are nearly nonexistent for a summer sublet — the realistic path is a furnished <strong>private room + private bath</strong> in MV / Los Altos / RWC. Over-budget complexes &amp; hotel bridges are in the table at the bottom.
+</div>
+{fresh_grouped}
 
 <h2>⭐ SUpost — Stanford marketplace ({len(SUPOST)} offers, grouped by status)</h2>
 <div class="banner cl">
@@ -968,7 +1331,10 @@ Stanford students/affiliates near campus — your best source. Grouped below: <s
 <tr><td>Reddit r/Stanford</td><td><a href="https://www.reddit.com/r/stanford/">r/stanford</a></td><td>Search "housing" / "sublet summer 2026" or post a request</td></tr>
 <tr><td>Ohana (liveohana.ai)</td><td><a href="https://liveohana.ai/university/stanford">liveohana.ai/university/stanford</a></td><td><strong>NEW Jun 11</strong> — aggregates Stanford sublets/subleases with flexible dates; furnished, short-term, comparison + secure booking</td></tr>
 <tr><td>Uloop — Stanford sublets</td><td><a href="https://stanford.uloop.com/housing/index.php/sublets">stanford.uloop.com</a></td><td><strong>NEW Jun 11</strong> — student sublet board for Stanford; browse by dates</td></tr>
+<tr><td>Stanford R&amp;DE — Places4Students</td><td><a href="https://rde.stanford.edu/studenthousing/housing-listings">rde.stanford.edu/studenthousing</a></td><td><strong>★ NEW Jun 13 — high value.</strong> Stanford's vetted off-campus board (whole units + sublets), login-gated so scrapers can't see it. Summer-session students qualify — email <strong>studenthousing@stanford.edu</strong> (650-725-2810) your admission proof for a temp ID, then filter sub-$2,000 within 20 min, excl. EPA.</td></tr>
 <tr><td colspan="3" style="background:#ecfdf5;font-weight:700">Intern / furnished short-term (great fit for you)</td></tr>
+<tr><td>sublet.com — Redwood City</td><td><a href="https://www.sublet.com/apartments-for-rent/san-mateo-(peninsula)/redwood-city/">sublet.com RWC</a></td><td><strong>NEW Jun 13</strong> — furnished month-to-month private rooms ($1,200–$1,650, some w/ private bath). Open each listing to confirm June dates + address (one $1,200 private-bath room is already a card above).</td></tr>
+<tr><td>Suite Spot coliving</td><td><a href="https://suitespot.appfolio.com/listings">suitespot coliving</a></td><td><strong>NEW Jun 13</strong> — managed coliving, private en-suite rooms in RWC/Peninsula; $1,700 on 6+mo. Email golan@suitespotmgmt.com for a summer term.</td></tr>
 <tr><td>Furnished Finder</td><td><a href="https://www.furnishedfinder.com/">furnishedfinder.com</a></td><td>Built for interns/travelers — furnished, monthly, no long lease. Search Palo Alto</td></tr>
 <tr><td>HousingAnywhere</td><td><a href="https://housinganywhere.com/">housinganywhere.com</a></td><td>International/student furnished sublets — Bay Area listings</td></tr>
 <tr><td>Nextdoor</td><td><a href="https://nextdoor.com/">nextdoor.com</a></td><td>Neighbors in Palo Alto/Menlo Park renting rooms — search "room for rent"</td></tr>
@@ -982,9 +1348,15 @@ Stanford students/affiliates near campus — your best source. Grouped below: <s
 <tr><td>Apartments.com</td><td><a href="https://www.apartments.com/">apartments.com</a></td><td>Filter by location and move-in date</td></tr>
 <tr><td>Craigslist /apa</td><td><a href="https://sfbay.craigslist.org/search/pen/apa?max_price=2000">Search link</a></td><td>Regular rentals — filter for good areas</td></tr>
 <tr><td>Craigslist /sub</td><td><a href="https://sfbay.craigslist.org/search/pen/sub?max_price=2000">Search link</a></td><td>Temporary/subleases — best for avoiding applications</td></tr>
+<tr><td colspan="3" style="background:#fef2f2;font-weight:700">Over budget / bridges (last resort — Jun 13 sweep)</td></tr>
+<tr><td>Olive Startup House</td><td><a href="https://www.startuphouse.co/">startuphouse.co</a></td><td>South Palo Alto co-living, $1,750–1,950 M2M, utils+cleaning incl — shared bath. Apply direct; confirm summer dates. (Also a card above.)</td></tr>
+<tr><td>Marymount Tower (RWC)</td><td><a href="https://www.apartmentlist.com/ca/redwood-city/marymount-tower">apartmentlist</a></td><td>Closest-to-budget <em>whole</em> 1BR among named complexes — but $2,395+, 12-mo, unfurnished. Call (650) 977-1210 to ask about any short-term/furnished option. (Other complexes — Sharon Green, Springline, Township — are $3,500–7,000.)</td></tr>
+<tr><td>Coliving.com — Mountain View</td><td><a href="https://coliving.com/spaces/4onmanbw">coliving.com</a></td><td>Furnished private room, M2M, June 16 — but $2,200 + shared bath (18-bed house). Over budget.</td></tr>
+<tr><td>Menlo College intern housing</td><td><a href="https://www.menlo.edu/about/conference-services/internship-housing/">menlo.edu</a></td><td>Atherton dorm single ~$2,160/mo (21-night min, communal bath). Requires proof of internship — confirm summer-session qualifies. summerhousing@menlo.edu.</td></tr>
+<tr><td>Cardinal Hotel (bridge)</td><td><a href="https://cardinalhotel.com/shared-bath-style-room/">cardinalhotel.com</a></td><td>Cheapest central-PA hotel bridge (shared-bath room), but ~$3,870+/mo at nightly rates. Call 650-323-5101 for a 30+ night monthly rate. Stopgap only.</td></tr>
 </table>
 
-<p style="margin-top:20px;color:#777;font-size:11px">Dashboard updated: June 11, 2026 · East Palo Alto excluded · Use the “Mark as reached out” button on each card to track outreach · Blue = reached out · Amber = queued · Red = expired</p>
+<p style="margin-top:20px;color:#777;font-size:11px">Dashboard updated: June 13, 2026 · {n_fresh} fresh verified leads added (3-wave web sweep + SUpost refresh) · East Palo Alto excluded · Use the “Mark as reached out” button on each card to track outreach · Blue = reached out · Amber = queued · Red = expired</p>
 </body></html>"""
 
 class Handler(http.server.SimpleHTTPRequestHandler):
