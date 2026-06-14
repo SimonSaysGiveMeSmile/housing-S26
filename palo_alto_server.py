@@ -183,6 +183,8 @@ tr:nth-child(even) td{background:#fafafa}
 .chip.on.check{background:#b45309;border-color:#b45309}
 .fb-count{margin-left:auto;font-size:12.5px;color:#6b7280;font-weight:600;white-space:nowrap}
 .fb-count b{color:#111}
+.fb-preset{font-size:12.5px;font-weight:700;padding:8px 14px;border:none;border-radius:7px;background:#2563eb;color:#fff;cursor:pointer;white-space:nowrap}
+.fb-preset:hover{background:#1d4ed8}
 .fb-reset{font-size:12px;color:#2563eb;cursor:pointer;background:none;border:none;padding:4px 6px;font-weight:600}
 .fb-reset:hover{text-decoration:underline}
 #noResults{display:none;text-align:center;color:#6b7280;font-size:14px;padding:40px 20px;border:1px dashed #d1d5db;border-radius:10px;margin:16px 0}
@@ -1276,6 +1278,7 @@ async function toggleReached(btn, id) {{
         const card = btn.closest('.card');
         if (card && !card.classList.contains('dead')) {{
             card.classList.toggle('contacted', on);
+            card.dataset.contacted = on ? '1' : '0';  // keep filter data in sync
             if (on) card.classList.remove('queued');
             let badge = card.querySelector('.contact-badge');
             if (on) {{
@@ -1283,6 +1286,7 @@ async function toggleReached(btn, id) {{
                 badge.className = 'contact-badge';
                 badge.textContent = '✓ CONTACTED';
             }} else if (badge) {{ badge.remove(); }}
+            applyFilters();  // re-evaluate "not contacted yet" live
         }}
     }} catch (e) {{ alert('Could not save — is the server running?'); }}
     finally {{ btn.disabled = false; }}
@@ -1309,6 +1313,22 @@ function fbChip(el, group) {{
     applyFilters();
 }}
 function fbToggle(el) {{ el.classList.toggle('on'); applyFilters(); }}
+function fbSetChip(group, val) {{
+    document.querySelectorAll('.chip[data-group="'+group+'"]').forEach(function(c){{c.classList.toggle('on', c.dataset.val===val);}});
+    if (group === 'price') FB.maxPrice = val === 'all' ? Infinity : Number(val);
+    if (group === 'status') FB.status = val;
+}}
+function fbPreset() {{
+    // Simon's actionable working set: in budget, June-able, not yet contacted, no expired.
+    document.getElementById('fbSearch').value = '';
+    fbSetChip('price', '2000');
+    fbSetChip('status', 'check');
+    document.getElementById('fbExpired').classList.add('on');
+    document.getElementById('fbUncontacted').classList.add('on');
+    document.getElementById('fbJune').classList.add('on');
+    applyFilters();
+    window.scrollTo({{top: 0, behavior: 'smooth'}});
+}}
 function fbReset() {{
     document.getElementById('fbSearch').value = '';
     FB.maxPrice = Infinity; FB.status = 'all';
@@ -1447,6 +1467,7 @@ The hard truth: a furnished, June-start, sub-$2k <em>whole</em> unit in the Palo
 <div class="filterbar">
   <div class="fb-row">
     <input id="fbSearch" class="fb-search" type="search" placeholder="Search title, area, notes… (e.g. studio, Menlo, private bath)" oninput="applyFilters()">
+    <button class="fb-preset" onclick="fbPreset()" title="In budget · June-able · not yet contacted">⚡ My next moves</button>
     <span class="fb-count"><b id="fbShown">0</b> of <span id="fbTotal">0</span> showing</span>
   </div>
   <div class="fb-row">
