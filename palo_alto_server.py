@@ -1155,7 +1155,7 @@ def card(L):
 
     # One photo per listing — the real first photo, or a clean location placeholder.
     if imgs:
-        img_src = "/maps/" + html.escape(imgs[0])
+        img_src = "maps/" + html.escape(imgs[0])  # relative so it works on GitHub Pages project path
     else:
         img_src = placeholder_svg(L["area"], L["price"])
     img_html = f'<div class="card-images"><img src="{img_src}" alt="Property photo"></div>'
@@ -1235,7 +1235,8 @@ def card(L):
     toggle_on = " on" if contacted else ""
     toggle_label = "✓ Reached out" if contacted else "Mark as reached out"
     toggle_html = (f'<button class="reach-toggle{toggle_on}" '
-                   f'onclick="toggleReached(this, {json.dumps(mark_id)})">'
+                   f'data-markid="{html.escape(str(mark_id))}" '
+                   f'onclick="toggleReached(this)">'
                    f'{toggle_label}</button>')
 
     contact_box = f'''<div class="contact-box">
@@ -1344,29 +1345,49 @@ def render_body():
     return f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Simon's Stanford Summer 2026 Housing Ledger</title>
 <style>{CSS}</style>
 <script>
-async function toggleReached(btn, id) {{
-    btn.disabled = true;
-    try {{
-        const r = await fetch('/api/toggle?id=' + encodeURIComponent(id), {{method:'POST'}});
-        const d = await r.json();
-        const on = d.contacted;
-        btn.classList.toggle('on', on);
-        btn.textContent = on ? '✓ Reached out' : 'Mark as reached out';
-        const card = btn.closest('.card');
-        if (card && !card.classList.contains('dead')) {{
-            card.classList.toggle('contacted', on);
-            card.dataset.contacted = on ? '1' : '0';  // keep filter data in sync
-            if (on) card.classList.remove('queued');
-            let badge = card.querySelector('.contact-badge');
-            if (on) {{
-                if (!badge) {{ badge = document.createElement('div'); card.prepend(badge); }}
-                badge.className = 'contact-badge';
-                badge.textContent = '✓ CONTACTED';
-            }} else if (badge) {{ badge.remove(); }}
-            applyFilters();  // re-evaluate "not contacted yet" live
+// "Reached out" state persists in this browser (localStorage) so it works on the
+// static GitHub Pages build with no server. The page is rebuilt from
+// manual_contacts.json on each push; localStorage holds any newer toggles on top.
+var CONTACT_KEY = 'housingContacted';
+function loadOverrides() {{
+    try {{ return JSON.parse(localStorage.getItem(CONTACT_KEY) || '{{}}'); }}
+    catch (e) {{ return {{}}; }}
+}}
+function saveOverrides(o) {{
+    try {{ localStorage.setItem(CONTACT_KEY, JSON.stringify(o)); }} catch (e) {{}}
+}}
+function paintContact(card, btn, on) {{
+    if (!card || card.classList.contains('dead')) return;
+    btn.classList.toggle('on', on);
+    btn.textContent = on ? '✓ Reached out' : 'Mark as reached out';
+    card.classList.toggle('contacted', on);
+    card.dataset.contacted = on ? '1' : '0';
+    if (on) card.classList.remove('queued');
+    var badge = card.querySelector('.contact-badge');
+    if (on) {{
+        if (!badge) {{ badge = document.createElement('div'); card.prepend(badge); }}
+        badge.className = 'contact-badge';
+        badge.textContent = '✓ CONTACTED';
+    }} else if (badge) {{ badge.remove(); }}
+}}
+function toggleReached(btn) {{
+    var id = btn.dataset.markid;
+    if (!id) return;
+    var on = !btn.classList.contains('on');
+    var ov = loadOverrides();
+    ov[id] = on;
+    saveOverrides(ov);
+    paintContact(btn.closest('.card'), btn, on);
+    applyFilters();
+}}
+function initContactState() {{
+    var ov = loadOverrides();
+    document.querySelectorAll('.reach-toggle').forEach(function(btn) {{
+        var id = btn.dataset.markid;
+        if (id && Object.prototype.hasOwnProperty.call(ov, id)) {{
+            paintContact(btn.closest('.card'), btn, !!ov[id]);
         }}
-    }} catch (e) {{ alert('Could not save — is the server running?'); }}
-    finally {{ btn.disabled = false; }}
+    }});
 }}
 function toggleCard(cardId) {{
     const card = document.getElementById(cardId);
@@ -1491,6 +1512,7 @@ document.addEventListener('DOMContentLoaded', function() {{
     document.querySelectorAll('.chip').forEach(function(c) {{
         c.setAttribute('role', 'button'); c.setAttribute('tabindex', '0');
     }});
+    initContactState();
     applyFilters();
 }});
 </script>
