@@ -2,6 +2,30 @@
 
 Hit a SUpost rate limit (~10 msgs/hour). Wait an hour, then message the rest.
 
+## ⭐ Jun 14 status — reconciled with your SUpost inbox
+**Contacted so far: 19 posts** (was 10). All now logged on the dashboard with the
+poster's @stanford.edu email, so you can follow up directly instead of via the relay.
+- **Replied:** 1BR Hulme (andaru@ — interest form in).
+- **Taken/closed:** EVGR-B studio (faatiraa@), Blackwelder (sujayrao@), EV Studio 1 / Selama (selama@).
+- **Awaiting reply (~12):** Kennedy ×2, EV Free Bike (jalimi@), EV low-rise (matthho@),
+  EV studios (trutter@, hlepp@, bbass@), Rains 2B1B (sankired@), EVGR summer (rrfang@),
+  EVGR-C spacious (wurgaft@), Stanford studio (genge@), 1B/2BHK (prashp@), 3BR townhouse (silvaste@),
+  Renovated Rains (worledge@), EV studio $700 (lamprini@).
+- **Send a follow-up** to anyone at 3+ days silent (template below), and the
+  "keep me as backup" line to the 3 "taken" replies.
+
+## 🆕 Jun 14 — NEW valuable posts to reach out to (best-first)
+On the dashboard these are the SUpost **"Not yet messaged"** group; the ⚡ My next moves
+filter surfaces the in-budget/June-able ones.
+- [ ] $1,950  **Studio Apartment, Palo Alto (Jul 6–Aug 22)** — rare WHOLE PA studio under budget. Move fast.
+- [ ] $1,850  Private bedroom, Palo Alto **Professorville** — central; confirm private bath + June start.
+- [ ] $1,550  2 rooms, **3BR/2BA next to California Ave** (Jul 1) — near Caltrain.
+- [ ] $1,900  Room in **2BD/2BA, downtown University Ave** — prime location; confirm bath.
+- [ ] $1,456  Single bedroom in a **3B/2B** — cheap; FIRST ask exactly where (skip EPA/SF/SJ).
+- [ ] $1,300  **Den room, downtown PA co-op** (short-term) — cheap stopgap; confirm length.
+- [ ] $2,250  Furnished **whole 1BR + attached bath, West Menlo** — ~$250 over; only if you want a private unit.
+- [ ] $2,200  **Whole studio, Redwood City** (balcony/pool) — ~$200 over; whole-unit stretch.
+
 ## Already messaged (10) ✅
 EV Studio (Jun 8–Sep 12) · EVGR Sublease over Summer · 1BR in 2BHK no flatmate ·
 1 Room in 3BR Townhouse · EV Studio (Jun 12–Sep 15) · EV Studio (late June–mid Aug) ·

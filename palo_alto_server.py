@@ -399,6 +399,58 @@ SUPOST = [
   "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
   "cnote":"NEW Jun 9 lead — whole private cottage $1,700 in Menlo Park, but you'd work 10-15 hrs/wk as a live-in assistant ($25/hr offsets rent). Good value if the hours fit your schedule."},
 
+ # ---- NEW Jun 14 paste — fresh valuable offers to reach out to ----
+ {"top":True,"title":"Studio Apartment in Palo Alto (Jul 6–Aug 22)","mid":"su-pa-studio-jul6-1950","price":"$1,950/mo","src":"SUpost · Stanford-only",
+  "area":"Palo Alto","status":("go","Whole studio · under budget · summer"),
+  "facts":["WHOLE studio apartment in Palo Alto — your own unit, no housemates.","Dates: July 6 – August 22 (core of the summer).","Under budget at $1,950 — rare for a whole PA unit.","Photo on SUpost. Confirm exact address + utilities."],
+  "clabel":"Find post →","curl":"https://www.google.com/search?q=site%3Asupost.com+Studio+Apartment+Available+Palo+Alto+July+6+August+22+1950",
+  "cnote":"NEW Jun 10 — one of the only whole PA studios under budget. Message fast; lead with 'in PA now, can tour today, ready to sign + deposit.'"},
+
+ {"top":False,"title":"Private bedroom in house — Palo Alto Professorville","mid":"su-pa-professorville-1850","price":"$1,850/mo","src":"SUpost · Stanford-only",
+  "area":"Palo Alto (Professorville)","status":("check","Private room · great location · confirm bath"),
+  "facts":["Private bedroom in a house in Palo Alto's Professorville — central, walkable.","Under budget at $1,850. Photo on SUpost.","Confirm: private vs shared bath, exact dates, June/July availability."],
+  "clabel":"Find post →","curl":"https://www.google.com/search?q=site%3Asupost.com+Private+bedroom+house+Palo+Alto+Professorville+1850",
+  "cnote":"NEW Jun 14 — central PA room, $1,850. Ask if the bath is private and whether it can start in June."},
+
+ {"top":False,"title":"Single bedroom in a 3B/2B apartment","mid":"su-3b2b-single-1456","price":"$1,456/mo","src":"SUpost · Stanford-only",
+  "area":"Near Stanford (confirm exact area)","status":("check","Room in 3B2B · cheap · confirm location"),
+  "facts":["Spacious single bedroom in a 3-bed/2-bath apartment. Photo on SUpost.","Cheap at $1,456 — well under budget.","Location not stated in the post — confirm it's within ~20 min of campus (not EPA/SF) and dates."],
+  "clabel":"Find post →","curl":"https://www.google.com/search?q=site%3Asupost.com+Spacious+single+bedroom+3B2B+apartment+1456",
+  "cnote":"NEW Jun 13 — cheap room ($1,456). First question: where exactly is it + is it June-able? Skip if EPA/SF/San Jose."},
+
+ {"top":False,"title":"2 rooms in 3BR/2BA next to California Ave (Jul 1)","mid":"su-calave-2rooms-1550","price":"$1,550/mo","src":"SUpost · Stanford-only",
+  "area":"Palo Alto (California Ave)","status":("check","Private room · Cal Ave PA · Jul 1"),
+  "facts":["Room in a 3BR/2BA apartment next to California Ave, Palo Alto — close to Caltrain + campus.","July 1 move-in. Under budget at $1,550. Photo on SUpost.","Two rooms available — confirm private vs shared bath."],
+  "clabel":"Find post →","curl":"https://www.google.com/search?q=site%3Asupost.com+2+Rooms+3BR+2BA+California+Ave+1550",
+  "cnote":"NEW Jun 11 — Cal Ave PA room, $1,550, July 1. Good location near Caltrain. Confirm bath + whether June start is possible."},
+
+ {"top":False,"title":"Room in 2BD/2BA — downtown University Ave","mid":"su-dtpa-univave-1900","price":"$1,900/mo","src":"SUpost · Stanford-only",
+  "area":"Palo Alto (downtown, University Ave)","status":("check","Room in 2B2B · prime downtown PA"),
+  "facts":["1 bedroom in a 2BD/2BA — downtown Palo Alto on University Ave, walk to everything. Photo on SUpost.","Under budget at $1,900.","Confirm private bath, dates, and June/July start."],
+  "clabel":"Find post →","curl":"https://www.google.com/search?q=site%3Asupost.com+1+bedroom+2bed+2bath+downtown+University+Avenue+1900",
+  "cnote":"NEW (reposted) — prime downtown PA location, $1,900. Confirm dates + private bath."},
+
+ {"top":False,"title":"Den room in a co-op — downtown Palo Alto (short-term)","mid":"su-dtpa-coop-den-1300","price":"$1,300/mo","src":"SUpost · Stanford-only",
+  "area":"Palo Alto (downtown co-op)","status":("check","Co-op den · short-term · cheap"),
+  "offcriteria":"It's a 'den' room in a co-op (shared house, likely shared bath) and flagged short-term — confirm it covers your full stay.",
+  "facts":["Den room in a downtown Palo Alto co-op house. Photo on SUpost.","Cheap at $1,300, central location.","Short-term flagged — confirm length and that it spans your dates."],
+  "clabel":"Find post →","curl":"https://www.google.com/search?q=site%3Asupost.com+Den+room+co-op+Palo+Alto+downtown+1300",
+  "cnote":"NEW Jun 14 — cheap central co-op room. Good stopgap; confirm it's not just a few weeks."},
+
+ {"top":False,"title":"Furnished 1BR + attached bath — West Menlo Park","mid":"su-westmenlo-1br-2250","price":"$2,250/mo","src":"SUpost · Stanford-only",
+  "area":"West Menlo Park (biking distance to Stanford & SLAC)","status":("warn","WHOLE 1BR+bath · ~$250 over budget"),
+  "offcriteria":"Over budget at $2,250 (~$250 over your $2,000 cap). Worth it only if you want a whole private 1BR — rare at this size.",
+  "facts":["Furnished WHOLE 1BR with its own attached bath — a real private unit, not a room. Photo on SUpost.","West Menlo Park, biking distance to Stanford & SLAC.","$2,250/mo — over budget; flag as a stretch for a whole unit."],
+  "clabel":"Find post →","curl":"https://www.google.com/search?q=site%3Asupost.com+Furnished+1+BR+Attached+Bath+West+Menlo+2250",
+  "cnote":"NEW Jun 12 — over budget ($2,250) but a genuine furnished whole 1BR+bath. Only chase if you'll stretch ~$250 for a private unit."},
+
+ {"top":False,"title":"Top-floor Redwood City studio (balcony, pool)","mid":"su-rwc-topfloor-studio-2200","price":"$2,200/mo","src":"SUpost · Stanford-only",
+  "area":"Redwood City (~15–20 min to Stanford)","status":("warn","WHOLE studio · ~$200 over budget"),
+  "offcriteria":"Over budget at $2,200 (~$200 over). Whole studio though — a real private unit. Redwood City, a bit farther out.",
+  "facts":["Top-floor whole studio with a large balcony, foothill views, pool, and parking. Photo on SUpost.","Redwood City — ~15–20 min to campus.","$2,200/mo — over budget; flag as a whole-unit stretch."],
+  "clabel":"Find post →","curl":"https://www.google.com/search?q=site%3Asupost.com+Top+Floor+Redwood+City+Studio+Large+Balcony+2200",
+  "cnote":"NEW Jun 9 — over budget ($2,200) but a whole studio with balcony/pool in RWC. Stretch option if whole-unit matters more than the $200."},
+
  # ---- WHOLE UNITS (studios / apartments) — best fit ----
  {"top":True,"title":"Fully Furnished EV Studio + Free Bike","mid":"su-ev-freebike","price":"$1,900/mo","src":"SUpost · Stanford-only",
   "area":"On campus, Stanford (Escondido Village)","status":("go","Whole studio · utilities incl · full summer"),
@@ -819,8 +871,33 @@ _SUPOST_DIRECT = {
  "su-studio-15jun-31aug-2100": "https://supost.com/post/index/130085715",
  "su-idyllwild-coop-950": "https://supost.com/post/index/130076375",
 }
+# Poster emails captured from Simon's SUpost Messages inbox (Jun 14) — lets him
+# follow up directly instead of going back through the SUpost relay.
+_SUPOST_EMAIL = {
+ "su-ev-studio-700": "lamprini@stanford.edu",
+ "su-rains-renov-1600": "worledge@stanford.edu",
+ "su-evgrb-studio": "faatiraa@stanford.edu",
+ "su-ev-studio1-jun21": "selama@stanford.edu",
+ "su-1b-2bhk-noflatmate": "prashp@stanford.edu",
+ "su-3br-townhouse-jun1": "silvaste@alumni.stanford.edu",
+ "su-ev-studio-jun12-sep15": "trutter@stanford.edu",
+ "su-ev-studio-latejune-midaug": "hlepp@stanford.edu",
+ "su-rains-2b1b": "sankired@stanford.edu",
+ "su-blackwelder": "sujayrao@stanford.edu",
+ "su-evgrc-spacious-room": "wurgaft@stanford.edu",
+ "su-evgr-summer": "rrfang@stanford.edu",
+ "su-ev-studio-jun8-sep12": "bbass@stanford.edu",
+ "su-stanford-studio-jun15": "genge@stanford.edu",
+ "su-hulme-1br": "andaru@stanford.edu",
+ "su-kennedy-jun23-sep10": "bhavyac@stanford.edu",
+ "su-kennedy-commons-1570": "ba624@stanford.edu",
+ "su-ev-freebike": "jalimi@stanford.edu",
+ "su-ev-lowrise-apt": "matthho@stanford.edu",
+}
 for _L in SUPOST:
     _key = _L.get("mid") or _L["title"]
+    if _key in _SUPOST_EMAIL and not _L.get("email"):
+        _L["email"] = _SUPOST_EMAIL[_key]
     if _key in _SUPOST_DIRECT:
         _L["curl"] = _SUPOST_DIRECT[_key]
         _L["clabel"] = "Open post →"
