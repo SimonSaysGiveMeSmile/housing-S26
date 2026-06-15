@@ -6,7 +6,7 @@ import http.server, socketserver, os, sys, html, mimetypes, json, re
 from urllib.parse import urlparse, quote
 from datetime import datetime
 
-ROOT = "/Users/test/Desktop/housing-S26"
+ROOT = os.path.dirname(os.path.abspath(__file__))  # repo dir — works locally and in CI
 PORT = 5555
 MY_EMAIL = "tianjiahe11@gmail.com"  # Email used for contacting landlords
 
