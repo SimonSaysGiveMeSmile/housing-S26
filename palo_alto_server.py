@@ -195,6 +195,28 @@ tr:nth-child(even) td{background:#fafafa}
 @media print{#toTop{display:none}}
 .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
 td a{word-break:break-word}
+/* collapsible disclosures (declutter the top) + channel directory */
+details.disc{border:1px solid #e2e2e2;border-radius:8px;margin:10px 0;background:#fafafa}
+details.disc>summary{cursor:pointer;padding:10px 14px;font-weight:600;font-size:13px;color:#333;list-style:none}
+details.disc>summary::-webkit-details-marker{display:none}
+details.disc>summary::before{content:"▸ ";color:#9ca3af}
+details.disc[open]>summary::before{content:"▾ "}
+details.disc .disc-body{padding:0 14px 12px;font-size:13px;line-height:1.6;color:#444}
+details.disc .disc-body strong{color:#111}
+.chan-top{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:8px;padding:12px 14px;margin:10px 0}
+.chan-top .lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#15803d}
+.chan-top ol{margin:8px 0 0 20px;font-size:13px;line-height:1.7}
+details.chan{border:1px solid #e2e2e2;border-radius:8px;margin:8px 0;background:#fff}
+details.chan>summary{cursor:pointer;padding:11px 14px;font-weight:700;font-size:14px;color:#111;list-style:none;display:flex;justify-content:space-between;gap:10px}
+details.chan>summary::-webkit-details-marker{display:none}
+details.chan>summary .cnt{color:#9ca3af;font-weight:500;font-size:12px;white-space:nowrap}
+details.chan[open]>summary{border-bottom:1px solid #eee}
+.chan-list{padding:4px 14px 10px}
+.chan-row{display:flex;flex-wrap:wrap;gap:4px 10px;padding:7px 0;border-top:1px solid #f3f4f6;font-size:13px;align-items:baseline}
+.chan-row:first-child{border-top:none}
+.chan-row .nm{font-weight:600;flex:0 0 auto}
+.chan-row .wy{color:#555;flex:1 1 240px;min-width:150px}
+.chan-row .ct{color:#9ca3af;font-size:11.5px;flex:0 0 auto}
 @media (max-width:720px){body{padding:12px}.card,.card.noimg{grid-template-columns:1fr;height:auto}.card-images{width:100%;height:160px}.status-row{flex-wrap:wrap}.stat{flex:1 0 50%;border-bottom:1px solid #eee}.fb-count{margin-left:0;flex-basis:100%}.card-head{flex-wrap:wrap}.price{white-space:normal}table{min-width:560px}}
 @media print{.card{break-inside:avoid;height:auto!important}h2{break-after:avoid}.filterbar{display:none}}
 """
@@ -1279,6 +1301,133 @@ def card(L):
 {contact_box}
 </div>"""
 
+# ---- Outreach channels: 79 verified websites/channels (Jun 15 multi-agent sweep)
+# Grouped + simplified. Each: (name, url, why, cost). do_first = best in group.
+OUTREACH_CHANNELS = [
+ ("🏛 Stanford-official & affiliated", "Places4Students", [
+   ("Places4Students", "https://www.places4students.com/schools/108", "Stanford's official vetted off-campus board — email studenthousing@stanford.edu your offer for a login", "rooms $1.2–2k"),
+   ("R&DE Short-Term Visitors", "https://rde.stanford.edu/studenthousing/short-term-visitors", "gateway: what proof to send to unlock the listings", "gateway"),
+   ("R&DE Sublicense board", "https://rde.stanford.edu/studenthousing/sublicense", "on-campus grad sublets (EV/Munger/Rains), often below-market — needs Stanford login", "often <$2k"),
+   ("Stanford FSH mailing lists", "https://fsh.stanford.edu/mailing_lists", "faculty/staff housing alerts + direct-from-owner portal", "some <$2.1k"),
+   ("Summer Session — Live on Campus", "https://summer.stanford.edu/residential", "your program's official on-campus option — email about late/waitlist", "bundled pkg"),
+   ("Summer housing application portal", "https://summerapply.stanford.edu/", "complete/check housing app or confirm commuter status", "portal"),
+   ("SabbaticalHomes — GSB sublets", "https://www.sabbaticalhomes.com/housing/stanford-graduate-school-of-business", "MBAs sublet furnished units Jun–Aug — strong window", "furnished"),
+   ("Intl visitor resources", "https://community.stanford.edu/engage/engaging-globally/resources-international-visitors-stanford-appointments", "Stanford-curated homestay/visitor links (cheap rooms)", "homestay"),
+ ]),
+ ("🎓 Student & intern sublet boards", "BayIntern", [
+   ("BayIntern", "https://www.bayintern.com/", "built for Bay Area summer interns — confirmed live PA room $1,850", "≤$2k tiers"),
+   ("Kopa", "https://www.kopa.co/", "furnished mid-term student rentals, Stanford-origin", "$1–2k"),
+   ("SubLeaps", "https://subleaps.com/subleases/stanford", ".edu-verified subleases (low scam risk)", "<$2k rooms"),
+   ("Uloop — Stanford", "https://stanford.uloop.com/housing/index.php/sublets", "browse sublets + post a free 'housing wanted'", "mixed"),
+   ("Ohana", "https://liveohana.ai/university/stanford", "Stanford sublet marketplace, protected booking", "$1.2–2.5k"),
+   ("The Student Sublet", "https://thestudentsublet.com/blog/student-housing-guide-stanford-university", "student sublets + Stanford guide", "<$2k rooms"),
+   ("Semester Sublet", "https://semestersublet.com/", "national student subletting — confirm Bay Area coverage", "below-mkt"),
+   ("InternHousingHub", "https://www.internhousinghub.com/", "aggregates dorm + intern programs", "$1–2k dorms"),
+   ("Menlo College intern housing", "https://www.menlo.edu/about/conference-services/internship-housing/summer-housing-information/", "furnished Atherton dorm singles, ~10–15 min — summerhousing@menlo.edu", "~$1–1.8k"),
+ ]),
+ ("🏘 Coliving operators", "Suite Spot Co-Living", [
+   ("Suite Spot Co-Living (RWC)", "https://www.suitespotcoliving.com/", "private-bed/bath suites, one Caltrain stop — golan@suitespotmgmt.com", "~$1.6–2.1k"),
+   ("Olive / Startup House (PA + Menlo)", "https://startuphouse.co/", "in-target PA/Menlo houses, month-to-month — insist on a private room", "~$1.3–2k"),
+   ("Coliving.com — Mountain View", "https://coliving.com/mountain-view", "private room from ~$1,500, MV (allowed)", "from ~$1.5k"),
+   ("HackerHome", "https://www.hackerhouse.io/", "tech furnished shared houses — confirm it's within 20 min", "~$1.2–2k"),
+   ("Diggz + Roomi", "https://www.diggz.co/san-francisco-coliving-apartments", "independent coliving rooms branded operators miss", "~$1.2–2k"),
+   ("everythingcoliving.com", "https://www.everythingcoliving.com/", "directory to find more Peninsula operators", "directory"),
+ ]),
+ ("🛋 Furnished / monthly-stay", "Furnished Finder", [
+   ("Furnished Finder — PA", "https://www.furnishedfinder.com/housing/Palo-Alto/California", "direct-from-landlord, no fee — best in-budget furnished route", "$1.45–2.4k"),
+   ("Airbnb (monthly)", "https://www.airbnb.com/palo-alto-ca/stays/monthly", "28+ night discount — message hosts for more; skip EPA", "rooms fit"),
+   ("2nd Address — Menlo intern", "https://www.2ndaddress.com/intern-housing/menlo-park", "furnished M2M, intern vertical, verified hosts", "rooms ~$1.3k+"),
+   ("Zumper short-term", "https://www.zumper.com/apartments-for-rent/palo-alto-ca/short-term", "short-term + furnished tabs", "varies"),
+   ("Vrbo (monthly)", "https://www.vrbo.com/vacation-rentals/usa/california/san-francisco-bay-ar/palo-alto", "~19% monthly discount on 28+ nights", "whole homes"),
+   ("HouseStay", "https://www.housestay.com/rent/furnished-monthly-rentals-in-palo-alto-ca/", "Bay Area furnished monthly — PA + Menlo pages", "skews $2k+"),
+   ("Nestpick", "https://www.nestpick.com/menlo-park/", "furnished mid-term aggregator — MP rooms from ~$880", "$800–1.5k"),
+   ("Anyplace", "https://www.anyplace.com/", "30+ day furnished, no contract — thin Peninsula", "$2k+"),
+   ("WoodSpring Suites PA", "https://www.woodspring.com/", "budget extended-stay + kitchen — ask 30-night rate", "~$1.8–2.4k"),
+   ("Extended Stay America MV", "https://www.extendedstayamerica.com/hotels/ca/san-jose/mountain-view", "kitchen suites, monthly rate — verify it's MV not San Jose", "~$1.9–2.5k"),
+   ("Blueground", "https://www.theblueground.com/furnished-apartments-san-francisco-bay-area-usa/s/palo-alto", "turnkey serviced — over budget solo, benchmark", "$3.2k+"),
+   ("HousingAnywhere / Spotahome", "https://housinganywhere.com/s/San-Francisco--United-States/student-accommodation", "mid-term w/ protections — thin Peninsula supply", "few matches"),
+ ]),
+ ("💬 Social & community — post a 'Housing Wanted'", "SUpost", [
+   ("SUpost Housing", "https://housing.supost.com/", "your main source — check newest daily, reply same-day, post a wanted ad", "$1.1–2k"),
+   ("Craigslist Peninsula /sub", "https://sfbay.craigslist.org/search/pen/sub", "'pen' filter keeps it near Stanford; also /roo /apa", "$1.2–2k"),
+   ("FB: Stanford Housing groups", "https://www.facebook.com/groups/stanfordhousing/", "join all sister groups + post a wanted ad", "$1.2–2k"),
+   ("Cornell Silicon Valley alumni", "https://www.facebook.com/CornellSiliconValley/", "your edge — warm intros, low scam, often below-market", "below-mkt"),
+   ("SpareRoom (US)", "https://www.spareroom.com/rooms-for-rent/san_francisco_bay_area", "most-trusted room site — make a 'room wanted' profile", "$1.2–2.2k"),
+   ("Roomies", "https://www.roomies.com/rooms/san-francisco-ca", "free messaging room finder", "$1.2–2.2k"),
+   ("Nextdoor PA", "https://nextdoor.com/city/palo-alto--ca/", "neighbor room/ADU sublets not on CL — needs local address", "$1.5–2.1k"),
+   ("Reddit r/stanford + r/sublets", "https://www.reddit.com/r/stanford/", "search '2026 sublet' + post a [Housing Wanted]", "$1.2–2k"),
+   ("FB: Bay Area rentals", "https://www.facebook.com/groups/bayarearentals/", "widest reach — specify Peninsula-only", "noisy"),
+   ("Stanford Discord", "https://discord.com/invite/WzVjTeP", "#housing channel + real-time advice", "leads"),
+   ("Real Intern SF / Meetup", "https://www.therealinternsf.com/", "find someone to split a whole unit under budget", "split"),
+   ("OfferUp", "https://offerup.com/", "low-volume supplement — search 'room for rent'", "occasional"),
+ ]),
+ ("🌏 International / Chinese-student boards", "RedNote (小红书)", [
+   ("小红书 / RedNote", "https://www.xiaohongshu.com/", "search 斯坦福租房 — many grad sublets appear here first; DM posters", "$0.9–1.6k"),
+   ("1point3acres 租房", "https://www.1point3acres.com/bbs/tag-8868-1.html?filter=renting", "interns leaving for summer — post a 求租 thread", "$1–1.7k"),
+   ("WeChat 租房 groups (bay123)", "https://www.bay123.com/", "highest-velocity — join via QR in the 斯坦福租房群 thread", "$0.9–1.7k"),
+   ("Moonbbs 北美微论坛", "https://www.moonbbs.com/forum-106-1.html", "Bay Area 租房 board with sublet filter", "$0.9–1.7k"),
+   ("硅谷信息港 (bay123 forum)", "http://www.bay123.com/forum-40-1.html", "Peninsula-centric rental forum", "$1–1.8k"),
+   ("Huaren.us", "https://huaren.us/", "large NA Chinese forum — search 'Stanford 租房'", "skews $3k+"),
+   ("uhomes / Uhouzz", "https://en.uhomes.com/us/stanford", "intl-student agent (EN+中文) — widen to nearby cities", "$1.5–2.3k"),
+   ("Dealmoon 省钱快报", "https://www.dealmoon.com/", "directory linking the boards above", "directory"),
+ ]),
+ ("🏢 Local property managers & hotels (stretch/backup)", "Marymount Tower", [
+   ("Marymount Tower (RWC)", "https://www.marymountapts.com/", "rare near-budget WHOLE 1BR — ask lowest 1BR + short summer lease", "~$2.15k+"),
+   ("Cardinal Hotel (monthly)", "https://cardinalhotel.com/", "cheapest central-PA hotel — negotiate monthly shared-bath rate", "negotiate"),
+   ("Stanford Guest House", "https://stanfordguesthouse.p3hotels.com/", "Stanford-owned — ask 30+ night educational rate", "$160–230/nt"),
+   ("Prometheus (PA/MV)", "https://prometheusapartments.com/ca/mountain-view-apartments", "ask about 3-month summer leases — needs a roommate", "$2.8k+"),
+   ("Equity Residential (RWC/MV)", "https://www.equityapartments.com/san-francisco-bay/redwood-city-apartments", "ask short-term terms — unfurnished", "$2.7k+"),
+   ("Essex (Peninsula)", "https://www.essexapartmenthomes.com/apartments/redwood-city", "broad Peninsula inventory — ask short-term", "$2.6k+"),
+   ("Avalon MV (Furnished+)", "https://www.avaloncommunities.com/california/mountain-view-apartments/avalon-mountain-view/", "furniture+utils+flex bundled — realistic only if sharing", "$3.9k+"),
+   ("Sharon Green (Menlo)", "https://www.sharongreenmenlo.com/", "furnished/corporate near Sand Hill", "$3k+"),
+   ("Oakwood / corporate housing", "https://www.corporatehousing.com/ca/mountain-view", "fully-serviced furnished — only if sharing", "$4k+"),
+   ("Synergy / SilverDoor (DT PA)", "https://www.synergyhousing.com/key-locations/furnished-apartments-silicon-valley", "actual PA serviced apt — corporate quotes", "$2k+"),
+   ("Key Housing (broker)", "https://www.keyhousing.com/corporate-housing-city/palo-alto/", "sources hard-to-find furnished PA units", "$2k+"),
+   ("Residence Inn (MV / Los Altos)", "https://www.marriott.com/en-us/hotels/sfomv-residence-inn-palo-alto-mountain-view/overview/", "kitchen suites — ask 30+ night rate", "$2k+"),
+   ("Crowne Plaza Cabana PA", "https://www.cabanapaloalto.com/", "central PA — bridge for the first week", "bridge"),
+ ]),
+ ("🔎 General aggregators (browse + set alerts)", "Zumper", [
+   ("Zumper /cheap", "https://www.zumper.com/apartments-for-rent/palo-alto-ca/cheap", "best for affordable inventory — start at /cheap, set max $2k + June", "<$2k"),
+   ("Zillow ($0–2k + alert)", "https://www.zillow.com/palo-alto-ca/rentals/", "deepest inventory — saved-search email alert; add MV/MP/RWC", "studios <$2k"),
+   ("HotPads", "https://hotpads.com/palo-alto-ca/apartments-for-rent", "instant new-listing alerts — contact landlords first", "$2.5k+"),
+   ("PadMapper", "https://www.padmapper.com/apartments/palo-alto-ca", "map-first; short-term + 'furnished' keyword + /cheap", "$2.5k+"),
+   ("Apartments.com", "https://www.apartments.com/palo-alto-ca/", "managed buildings — /furnished/ + /short-term/ filters", "$2.9k+"),
+   ("Dwellsy", "https://dwellsy.com/", "no-fee, mom-and-pop rentals the big sites miss", "some <$2k"),
+   ("Trulia", "https://www.trulia.com/for_rent/Palo_Alto,CA/", "neighborhood pages closest to Stanford", "studios <$2k"),
+   ("Realtor.com", "https://www.realtor.com/apartments/Palo-Alto_CA", "MLS-fed condos/houses that may allow summer leases", "$2k+"),
+   ("Rent.com / RentCafe / Homes.com", "https://www.rent.com/california/palo-alto-apartments", "managed-building cross-checks; expand to MV/Sunnyvale", "$2.5k+"),
+   ("Apartment List", "https://www.apartmentlist.com/ca/palo-alto", "quiz-driven matching — expand radius for <$2k", "engine"),
+   ("HomeToGo / cozycozy", "https://www.hometogo.com/", "metasearch over Airbnb/Vrbo — cheapest monthly source", "metasearch"),
+ ]),
+]
+OUTREACH_TOP8 = [
+ ("Places4Students", "https://www.places4students.com/schools/108", "Stanford's vetted board — your highest-value, lowest-scam channel"),
+ ("SUpost Housing", "https://housing.supost.com/", "check newest daily + post a 'Housing Wanted'"),
+ ("Furnished Finder", "https://www.furnishedfinder.com/housing/Palo-Alto/California", "direct-from-landlord, no fee — best in-budget furnished"),
+ ("BayIntern", "https://www.bayintern.com/", "built for summer interns; live PA inventory"),
+ ("Suite Spot Co-Living", "https://www.suitespotcoliving.com/", "private en-suite, one Caltrain stop"),
+ ("R&DE Sublicense board", "https://rde.stanford.edu/studenthousing/sublicense", "on-campus grad sublets, below-market"),
+ ("Craigslist Peninsula", "https://sfbay.craigslist.org/search/pen/sub", "'pen' filter stays near campus"),
+ ("RedNote 小红书", "https://www.xiaohongshu.com/", "search 斯坦福租房 — grad sublets first"),
+]
+
+def render_channels():
+    top = "".join(
+        f'<li><a href="{html.escape(u)}" target="_blank"><strong>{html.escape(n)}</strong></a> — {html.escape(w)}</li>'
+        for n, u, w in OUTREACH_TOP8)
+    out = [f'<div class="chan-top"><div class="lbl">⭐ Start here — 8 highest-leverage channels</div><ol>{top}</ol></div>']
+    for group, do_first, rows in OUTREACH_CHANNELS:
+        items = []
+        for n, u, w, c in rows:
+            star = ' <span class="star">★</span>' if n.startswith(do_first) else ""
+            items.append(
+                f'<div class="chan-row"><span class="nm"><a href="{html.escape(u)}" target="_blank">{html.escape(n)}</a>{star}</span>'
+                f'<span class="wy">{html.escape(w)}</span><span class="ct">{html.escape(c)}</span></div>')
+        out.append(
+            f'<details class="chan"><summary>{html.escape(group)}<span class="cnt">{len(rows)} · ★ {html.escape(do_first)}</span></summary>'
+            f'<div class="chan-list">{"".join(items)}</div></details>')
+    return "".join(out)
+
 def render_body():
     # Recompute contacted set per request so manual toggles show on reload.
     global contacted_ids
@@ -1523,29 +1672,20 @@ document.addEventListener('DOMContentLoaded', function() {{
 </header>
 
 <div class="banner" style="background:#ecfdf5;border-color:#a7f3d0">
-<strong>Jun 13 — {n_fresh} fresh leads added from a {len(SUPOST)}-offer SUpost refresh + a 3-wave web sweep (~30 sources, each verified live).</strong>
-The hard truth: a furnished, June-start, sub-$2k <em>whole</em> unit in the Palo Alto core basically doesn't exist right now. The on-budget inventory is <strong>furnished private-room+private-bath in Mountain View / Los Altos / Redwood City</strong> ($1,200–$1,850), plus on-campus SUpost studios. See <strong>🆕 Fresh leads</strong> below.
+<strong>The reality:</strong> a furnished, June-start, sub-$2k <em>whole</em> unit in the Palo Alto core barely exists. Target <strong>furnished private-room+private-bath in Mountain View / Los Altos / Redwood City</strong> ($1,200–$1,850) and on-campus SUpost studios. Tap <strong>⚡ My next moves</strong> below to see exactly what to contact today.
 </div>
 
-<div class="banner cl">
-<strong>⚠ Only hearing "already taken"? Here's why &amp; the fix.</strong> You're competing in the most-flooded pond — cheap on-campus SUpost sublets get dozens of messages and vanish in hours. Three fixes:
-<strong>(1) Flip the funnel — post a "Housing Wanted" ad TODAY</strong> (SUpost · FB Stanford Housing · r/stanford · Nextdoor) so posters come to you; your pitch is strong (in PA now, can view same-day, ready to sign + deposit).
-<strong>(2) Pivot to private landlords &amp; CALL, don't email</strong> — the Fresh-leads rooms (MV/Los Altos/RWC, $1,200–$1,850) get a handful of inquiries, not 50, and many list phone numbers.
-<strong>(3) Lead with commitment + speed</strong> in every message ("I'm in Palo Alto now, can see it today, can sign + pay deposit immediately"), and send a <strong>"keep me as backup"</strong> note on every "it's taken." Scripts in <strong>TODO_outreach.md</strong>.
+<details class="disc">
+<summary>📋 Strategy &amp; today's picks — why you keep hearing "taken," and the fix</summary>
+<div class="disc-body">
+<p><strong>You're in the most-flooded pond</strong> — cheap on-campus sublets get dozens of messages and vanish in hours. Three fixes:</p>
+<p><strong>1. Flip the funnel</strong> — post a "Housing Wanted" ad (SUpost · FB · r/stanford · Nextdoor) so posters come to you.
+<strong>2. Pivot to private landlords &amp; CALL</strong> — MV/Los Altos/RWC rooms get a few inquiries, not 50.
+<strong>3. Lead with commitment + speed</strong> — "in PA now, can view today, sign + deposit immediately," and send a "keep me as backup" note on every "it's taken."</p>
+<p><strong>Strongest right now:</strong> Suite Spot coliving (RWC en-suite, $1,700) · Emerald Hills $1,475 / Menlo marble-bath $1,495 / RWC Orchard $1,200 (private-bath, June) · Sunnyvale whole studio $1,970 (now) · on campus: Renovated Rains $1,600 + whole studio $2,100. Easiest application-free whole unit: the <strong>$1,890 Palo Alto sublease</strong>.</p>
+<p><strong>Official help:</strong> email R&amp;DE <strong>summerhousing@stanford.edu</strong> (650-725-2810) and the Summer Session office — see the channel directory at the bottom.</p>
 </div>
-
-<div class="banner">
-<strong>Do today (Jun 13) — strongest new options:</strong>
-1) <strong>Suite Spot coliving</strong> (RWC, private en-suite, $1,700) — email golan@suitespotmgmt.com to negotiate a summer term ·
-2) <strong>Emerald Hills $1,475</strong> / <strong>Menlo marble-bath $1,495</strong> / <strong>RWC Orchard $1,200</strong> — all private-bath, June-able ·
-3) <strong>Sunnyvale whole studio $1,970</strong> (available NOW — flagged post, move fast) ·
-4) On campus: <strong>Renovated Rains $1,600</strong> (Jun 22–Sep 18) + <strong>whole studio $2,100</strong> (Jun 15–Aug 31, act fast) ·
-5) <strong>Email Stanford housing help — both offices:</strong> R&amp;DE <strong>summerhousing@stanford.edu</strong> (650-725-2810 — ask for space-available singles + a Places4Students temp ID) <em>and</em> the <strong>Summer Session office</strong> (summer.stanford.edu — ask about a housing portal / partner list). Templates 4a/4b in <strong>TODO_outreach.md</strong>.
-</div>
-
-<div class="banner">
-<strong>Still your easiest application-free whole unit:</strong> the <strong>$1,890 Palo Alto sublease</strong>. New close second for a whole unit you can get NOW: the <strong>Sunnyvale furnished studio ($1,970)</strong> or <strong>Burlingame studio ($2,050)</strong>.
-</div>
+</details>
 
 <div class="status-panel">
   <div class="status-row">
@@ -1617,46 +1757,14 @@ Stanford students/affiliates near campus — your best source. Grouped below: <s
 <h2>Short-term Options (partial summer coverage)</h2>
 {"".join(card(L) for L in SHORT_TERM)}
 
-<h2>More places to reach out (check manually)</h2>
-<div class="table-wrap">
-<table>
-<tr><th>Platform</th><th>URL</th><th>Notes</th></tr>
-<tr><td colspan="3" style="background:#eef2ff;font-weight:700">Stanford-specific (try first)</td></tr>
-<tr><td>Stanford R&DE</td><td><a href="https://rde.stanford.edu/conferences/summer-intern-housing">rde.stanford.edu</a></td><td>Official summer-intern housing — email summerhousing@stanford.edu</td></tr>
-<tr><td>Stanford Summer Session</td><td><a href="https://summer.stanford.edu/">summer.stanford.edu</a></td><td>Email the program office — they often have a housing portal / partner list for summer students</td></tr>
-<tr><td>SUpost</td><td><a href="https://supost.com">supost.com</a></td><td>Stanford-affiliated classifieds (your main source above)</td></tr>
-<tr><td>Facebook — Stanford Housing</td><td><a href="https://www.facebook.com/groups/304588736883828/">Stanford Housing/Sublets</a></td><td>Active student market — post a "looking for" with your dates</td></tr>
-<tr><td>Reddit r/Stanford</td><td><a href="https://www.reddit.com/r/stanford/">r/stanford</a></td><td>Search "housing" / "sublet summer 2026" or post a request</td></tr>
-<tr><td>Ohana (liveohana.ai)</td><td><a href="https://liveohana.ai/university/stanford">liveohana.ai/university/stanford</a></td><td><strong>NEW Jun 11</strong> — aggregates Stanford sublets/subleases with flexible dates; furnished, short-term, comparison + secure booking</td></tr>
-<tr><td>Uloop — Stanford sublets</td><td><a href="https://stanford.uloop.com/housing/index.php/sublets">stanford.uloop.com</a></td><td><strong>NEW Jun 11</strong> — student sublet board for Stanford; browse by dates</td></tr>
-<tr><td>Stanford R&amp;DE — Places4Students</td><td><a href="https://rde.stanford.edu/studenthousing/housing-listings">rde.stanford.edu/studenthousing</a></td><td><strong>★ NEW Jun 13 — high value.</strong> Stanford's vetted off-campus board (whole units + sublets), login-gated so scrapers can't see it. Summer-session students qualify — email <strong>studenthousing@stanford.edu</strong> (650-725-2810) your admission proof for a temp ID, then filter sub-$2,000 within 20 min, excl. EPA.</td></tr>
-<tr><td colspan="3" style="background:#ecfdf5;font-weight:700">Intern / furnished short-term (great fit for you)</td></tr>
-<tr><td>sublet.com — Redwood City</td><td><a href="https://www.sublet.com/apartments-for-rent/san-mateo-(peninsula)/redwood-city/">sublet.com RWC</a></td><td><strong>NEW Jun 13</strong> — furnished month-to-month private rooms ($1,200–$1,650, some w/ private bath). Open each listing to confirm June dates + address (one $1,200 private-bath room is already a card above).</td></tr>
-<tr><td>Suite Spot coliving</td><td><a href="https://suitespot.appfolio.com/listings">suitespot coliving</a></td><td><strong>NEW Jun 13</strong> — managed coliving, private en-suite rooms in RWC/Peninsula; $1,700 on 6+mo. Email golan@suitespotmgmt.com for a summer term.</td></tr>
-<tr><td>Furnished Finder</td><td><a href="https://www.furnishedfinder.com/">furnishedfinder.com</a></td><td>Built for interns/travelers — furnished, monthly, no long lease. Search Palo Alto</td></tr>
-<tr><td>HousingAnywhere</td><td><a href="https://housinganywhere.com/">housinganywhere.com</a></td><td>International/student furnished sublets — Bay Area listings</td></tr>
-<tr><td>Nextdoor</td><td><a href="https://nextdoor.com/">nextdoor.com</a></td><td>Neighbors in Palo Alto/Menlo Park renting rooms — search "room for rent"</td></tr>
-<tr><td>Cornell sublets</td><td><a href="https://www.facebook.com/groups/cornellsublets/">FB: Cornell Sublets</a></td><td>Peers also heading to Stanford/Bay Area for summer — ask in Cornell groups</td></tr>
-<tr><td>RedNote (小红书)</td><td><a href="https://www.xiaohongshu.com/">xiaohongshu.com</a></td><td>Very active for Bay Area student rentals — search "Stanford租房"</td></tr>
-<tr><td>Sabbatical Homes</td><td><a href="https://www.sabbaticalhomes.com/housing/stanford-university/">sabbaticalhomes.com</a></td><td><strong>NEW Jun 11</strong> — visiting-academic furnished rentals near Stanford, June–July availability, 98% furnished (some over budget — filter)</td></tr>
-<tr><td>Zumper — short-term</td><td><a href="https://www.zumper.com/apartments-for-rent/near-stanford-university-ca/short-term">zumper.com short-term</a></td><td><strong>NEW Jun 11</strong> — furnished/monthly rentals near Stanford; filter by price + dates</td></tr>
-<tr><td colspan="3" style="background:#f3f4f6;font-weight:700">General rental sites (mostly long-lease)</td></tr>
-<tr><td>Facebook Marketplace</td><td><a href="https://www.facebook.com/marketplace/category/propertyrentals">Marketplace rentals</a></td><td>Search "Palo Alto studio" / "Menlo Park sublet"</td></tr>
-<tr><td>Zillow Rentals</td><td><a href="https://www.zillow.com/palo-alto-ca/apartments-under-2000/">zillow.com</a></td><td>Filter: Palo Alto + Menlo Park, max $2000 (blocks scraping — browse by hand)</td></tr>
-<tr><td>Apartments.com</td><td><a href="https://www.apartments.com/">apartments.com</a></td><td>Filter by location and move-in date</td></tr>
-<tr><td>Craigslist /apa</td><td><a href="https://sfbay.craigslist.org/search/pen/apa?max_price=2000">Search link</a></td><td>Regular rentals — filter for good areas</td></tr>
-<tr><td>Craigslist /sub</td><td><a href="https://sfbay.craigslist.org/search/pen/sub?max_price=2000">Search link</a></td><td>Temporary/subleases — best for avoiding applications</td></tr>
-<tr><td colspan="3" style="background:#fef2f2;font-weight:700">Over budget / bridges (last resort — Jun 13 sweep)</td></tr>
-<tr><td>Olive Startup House</td><td><a href="https://www.startuphouse.co/">startuphouse.co</a></td><td>South Palo Alto co-living, $1,750–1,950 M2M, utils+cleaning incl — shared bath. Apply direct; confirm summer dates. (Also a card above.)</td></tr>
-<tr><td>Marymount Tower (RWC)</td><td><a href="https://www.apartmentlist.com/ca/redwood-city/marymount-tower">apartmentlist</a></td><td>Closest-to-budget <em>whole</em> 1BR among named complexes — but $2,395+, 12-mo, unfurnished. Call (650) 977-1210 to ask about any short-term/furnished option. (Other complexes — Sharon Green, Springline, Township — are $3,500–7,000.)</td></tr>
-<tr><td>Coliving.com — Mountain View</td><td><a href="https://coliving.com/spaces/4onmanbw">coliving.com</a></td><td>Furnished private room, M2M, June 16 — but $2,200 + shared bath (18-bed house). Over budget.</td></tr>
-<tr><td>Menlo College intern housing</td><td><a href="https://www.menlo.edu/about/conference-services/internship-housing/">menlo.edu</a></td><td>Atherton dorm single ~$2,160/mo (21-night min, communal bath). Requires proof of internship — confirm summer-session qualifies. summerhousing@menlo.edu.</td></tr>
-<tr><td>Cardinal Hotel (bridge)</td><td><a href="https://cardinalhotel.com/shared-bath-style-room/">cardinalhotel.com</a></td><td>Cheapest central-PA hotel bridge (shared-bath room), but ~$3,870+/mo at nightly rates. Call 650-323-5101 for a 30+ night monthly rate. Stopgap only.</td></tr>
-</table>
+<h2>📒 All places to reach out ({sum(len(g[2]) for g in OUTREACH_CHANNELS)} channels — Jun 15 sweep)</h2>
+<div class="banner cl">
+Every channel below was found + URL-checked by a multi-agent web sweep. Tap a group to expand. The ★ in each group is the one to try first.
 </div>
+{render_channels()}
 
 <button id="toTop" onclick="scrollTop()" title="Back to top" aria-label="Back to top">↑</button>
-<p style="margin-top:20px;color:#777;font-size:11px">Dashboard updated: June 13, 2026 · {n_fresh} fresh verified leads added (3-wave web sweep + SUpost refresh) · East Palo Alto excluded · Use the “Mark as reached out” button on each card to track outreach · Blue = reached out · Amber = queued · Red = expired</p>
+<p style="margin-top:20px;color:#777;font-size:11px">Dashboard updated: June 15, 2026 · {len(SUPOST)} SUpost offers + {n_fresh} fresh leads · {sum(len(g[2]) for g in OUTREACH_CHANNELS)} outreach channels · East Palo Alto excluded · Tap “Mark as reached out” to track outreach · Blue = reached out · Amber = queued · Red = expired</p>
 </body></html>"""
 
 class Handler(http.server.SimpleHTTPRequestHandler):
