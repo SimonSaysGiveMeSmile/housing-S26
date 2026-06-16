@@ -403,7 +403,7 @@ SUPOST = [
   "cnote":"NEW Jun 8 lead — cheap ($1,300) co-op room near campus, summer. Ask if it starts in June. Not yet messaged."},
 
  {"top":True,"title":"Room in creative community house (yard/pool/sauna)","mid":"su-community-house","price":"$1,100/mo","src":"SUpost · Stanford-only",
-  "area":"Palo Alto area","status":("go","Cheapest · confirm June start"),
+  "area":"Hillsborough (~25 min — out of scope)","status":("go","Cheapest · confirm June start"),
   "facts":["Room opening in a bright community house with a huge yard, pool, and sauna (photo on SUpost).","Cheapest option found at $1,100.","Dates not stated — confirm June availability."],
   "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
   "cnote":"NEW Jun 8 lead — cheapest at $1,100, community house w/ pool+sauna. Ask if it starts in June. Not yet messaged."},
@@ -435,7 +435,7 @@ SUPOST = [
   "cnote":"NEW Jun 14 — central PA room, $1,850. Ask if the bath is private and whether it can start in June."},
 
  {"top":False,"title":"Single bedroom in a 3B/2B apartment","mid":"su-3b2b-single-1456","price":"$1,456/mo","src":"SUpost · Stanford-only",
-  "area":"Near Stanford (confirm exact area)","status":("check","Room in 3B2B · cheap · confirm location"),
+  "area":"Mountain View (~15 min — out of scope)","status":("check","Room in 3B2B · cheap · confirm location"),
   "facts":["Spacious single bedroom in a 3-bed/2-bath apartment. Photo on SUpost.","Cheap at $1,456 — well under budget.","Location not stated in the post — confirm it's within ~20 min of campus (not EPA/SF) and dates."],
   "clabel":"Find post →","curl":"https://www.google.com/search?q=site%3Asupost.com+Spacious+single+bedroom+3B2B+apartment+1456",
   "cnote":"NEW Jun 13 — cheap room ($1,456). First question: where exactly is it + is it June-able? Skip if EPA/SF/San Jose."},
@@ -892,6 +892,31 @@ _SUPOST_DIRECT = {
  "su-ev-studio-700": "https://supost.com/post/index/130086936",
  "su-studio-15jun-31aug-2100": "https://supost.com/post/index/130085715",
  "su-idyllwild-coop-950": "https://supost.com/post/index/130076375",
+  # ---- Jun 15: direct URLs matched + verified by the SUpost-match workflow ----
+ "Furnished private room + bath, Palo Alto (available now)": "https://supost.com/post/index/130085126",
+ "On-campus Stanford studio sublet (June\u2013July)": "https://supost.com/post/index/130035641",
+ "Private bed + bath, 5-min walk to Stanford (2B2B)": "https://supost.com/post/index/130083357",
+ "Small private room + private bath, Palo Alto": "https://supost.com/post/index/130085567",
+ "su-2b2b-nearcampus-aug1-1700": "https://supost.com/post/index/130086561",
+ "su-barnes-midrise-jun21-28-800": "https://supost.com/post/index/130086462",
+ "su-calave-2rooms-1550": "https://supost.com/post/index/130086870",
+ "su-campus-stopgap-jun9": "https://supost.com/post/index/130086276",
+ "su-dtpa-coop-den-1300": "https://supost.com/post/index/130087136",
+ "su-dtpa-house-1850": "https://supost.com/post/index/130086850",
+ "su-ev-lowrise-apt": "https://supost.com/post/index/130084710",
+ "su-ev-studio-jun8-sep12": "https://supost.com/post/index/130085893",
+ "su-evgr-julsep-1659": "https://supost.com/post/index/130086655",
+ "su-evgr-premium-2b2b-2000": "https://supost.com/post/index/130086385",
+ "su-evgrc-jul5-aug8-2000": "https://supost.com/post/index/130086250",
+ "su-garden-suite-130085923": "https://supost.com/post/index/130085923",
+ "su-lyman-2b1b-1684": "https://supost.com/post/index/130086714",
+ "su-pa-professorville-1850": "https://supost.com/post/index/130087131",
+ "su-pa-studio-jul6-1950": "https://supost.com/post/index/130086786",
+ "su-quietpa-1600": "https://supost.com/post/index/130087117",
+ "su-rains-2br-jul3-1700": "https://supost.com/post/index/130085267",
+ "su-rains-renov-1600": "https://supost.com/post/index/130086959",
+ "su-stanfordvilla-1701": "https://supost.com/post/index/130086784",
+ "su-stanfordwest-2b2b-2200": "https://supost.com/post/index/130086112",
 }
 # Poster emails captured from Simon's SUpost Messages inbox (Jun 14) — lets him
 # follow up directly instead of going back through the SUpost relay.
@@ -915,6 +940,31 @@ _SUPOST_EMAIL = {
  "su-kennedy-commons-1570": "ba624@stanford.edu",
  "su-ev-freebike": "jalimi@stanford.edu",
  "su-ev-lowrise-apt": "matthho@stanford.edu",
+  # ---- Jun 15: poster emails captured during the URL match ----
+ "Furnished private room + bath, Palo Alto (available now)": "arberg@stanford.edu",
+ "On-campus Stanford studio sublet (June\u2013July)": "elestant@stanford.edu",
+ "Private bed + bath, 5-min walk to Stanford (2B2B)": "hrmeym@stanford.edu",
+ "Small private room + private bath, Palo Alto": "yangt@stanford.edu",
+ "su-2b2b-nearcampus-aug1-1700": "zihanzhu@stanford.edu",
+ "su-barnes-midrise-jun21-28-800": "juliarz@stanford.edu",
+ "su-calave-2rooms-1550": "cbargell@stanford.edu",
+ "su-campus-stopgap-jun9": "horence@stanford.edu",
+ "su-dtpa-coop-den-1300": "asix@stanford.edu",
+ "su-dtpa-house-1850": "agarwald@stanford.edu",
+ "su-ev-lowrise-apt": "matthho@stanford.edu",
+ "su-ev-studio-jun8-sep12": "bbass@stanford.edu",
+ "su-evgr-julsep-1659": "smirchan@stanford.edu",
+ "su-evgr-premium-2b2b-2000": "youngdav@stanford.edu",
+ "su-evgrc-jul5-aug8-2000": "ruricher@stanford.edu",
+ "su-garden-suite-130085923": "codywang@stanford.edu",
+ "su-lyman-2b1b-1684": "shoaib@stanford.edu",
+ "su-pa-professorville-1850": "aalbuque@alumni.stanford.edu",
+ "su-pa-studio-jul6-1950": "rajaj@stanford.edu",
+ "su-quietpa-1600": "agnestin@alumni.stanford.edu",
+ "su-rains-2br-jul3-1700": "sankired@stanford.edu",
+ "su-rains-renov-1600": "worledge@stanford.edu",
+ "su-stanfordvilla-1701": "rcenteio@stanford.edu",
+ "su-stanfordwest-2b2b-2200": "ljy007@stanford.edu",
 }
 for _L in SUPOST:
     _key = _L.get("mid") or _L["title"]
@@ -1078,6 +1128,27 @@ FRESH_LEADS = [
   "clabel":"View listing","curl":"https://sfbay.craigslist.org/pen/sub/d/el-granada-room-and-private-bath-for/7934945431.html",
   "cnote":"Cheapest room+bath ($1,300) but 35-45 min away — last-resort only. Verified Jun 13."},
 ]
+
+# ---- LOCATION FILTER (Jun 15): Simon narrowed to ON-CAMPUS + Palo Alto (El Camino
+# corridor) only. Drop Mountain View / Menlo Park / Redwood City / Atherton / Los
+# Altos / and farther. Applied in-place so every count, section, and filter reflects it.
+_LOC_OUT = ("mountain view", "menlo", "redwood", "atherton", "los altos", "portola",
+            "san mateo", "burlingame", "san bruno", "half moon", "sunnyvale", "woodside",
+            "emerald hills", "east palo alto", "san jose", "fremont", "oakland", "berkeley",
+            " sf", "san francisco", "union city", "san carlos", "santa clara", "hillsborough")
+_LOC_IN = ("on campus", "stanford", "escondido", "evgr", " ev ", "ev studio", "ev low",
+           "rains", "munger", "kennedy", "blackwelder", "lyman", "barnes", "oak creek",
+           "stanford west", "stanford villa", "campus", "palo alto", "college terrace",
+           "professorville", "university ave", "california ave", "cal ave")
+def _on_campus_pa(L):
+    s = (L.get("area", "") + " " + L.get("title", "")).lower()
+    if "east palo alto" in s:
+        return False
+    if any(t in s for t in _LOC_OUT):
+        return False
+    return any(t in s for t in _LOC_IN)
+for _lst in (NON_CL, SUBLETS, REGULAR_RENTALS, SHORT_TERM, SUPOST, FRESH_LEADS):
+    _lst[:] = [L for L in _lst if _on_campus_pa(L)]
 
 def placeholder_svg(area, price):
     """Clean location placeholder for listings without a real photo —
@@ -1491,6 +1562,17 @@ def render_body():
     )
     n_fresh = len(FRESH_LEADS)
 
+    # Conditional sections — empty ones (after the on-campus/PA filter) are hidden.
+    official_sec = (f'<h2>Official Stanford Housing (most reliable)</h2>{"".join(card(L) for L in NON_CL)}'
+                    if NON_CL else "")
+    sublease_sec = (f'<h2>SUBLEASE — Skip applications ({len(SUBLETS)} listing)</h2>{"".join(card(L) for L in SUBLETS)}'
+                    if SUBLETS else "")
+    rentals_sec = (f'<h2>Regular Rentals — Good neighborhoods ({len(REGULAR_RENTALS)})</h2>'
+                   f'<div class="banner cl"><strong>Note:</strong> regular rentals (/apa) — expect applications, credit checks, deposits.</div>'
+                   f'{"".join(card(L) for L in REGULAR_RENTALS)}' if REGULAR_RENTALS else "")
+    shortterm_sec = (f'<h2>Short-term Options (partial summer coverage)</h2>{"".join(card(L) for L in SHORT_TERM)}'
+                     if SHORT_TERM else "")
+
     return f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Simon's Stanford Summer 2026 Housing Ledger</title>
 <style>{CSS}</style>
 <script>
@@ -1672,7 +1754,7 @@ document.addEventListener('DOMContentLoaded', function() {{
 </header>
 
 <div class="banner" style="background:#ecfdf5;border-color:#a7f3d0">
-<strong>The reality:</strong> a furnished, June-start, sub-$2k <em>whole</em> unit in the Palo Alto core barely exists. Target <strong>furnished private-room+private-bath in Mountain View / Los Altos / Redwood City</strong> ($1,200–$1,850) and on-campus SUpost studios. Tap <strong>⚡ My next moves</strong> below to see exactly what to contact today.
+<strong>Scope:</strong> on-campus Stanford + Palo Alto (El Camino corridor) only — Mountain View / Menlo / Redwood City / Atherton / Los Altos removed. Best on-budget fits here are <strong>on-campus SUpost rooms &amp; studios</strong> and <strong>Palo Alto private-room+private-bath</strong>. Tap <strong>⚡ My next moves</strong> below to see exactly what to contact today.
 </div>
 
 <details class="disc">
@@ -1680,7 +1762,7 @@ document.addEventListener('DOMContentLoaded', function() {{
 <div class="disc-body">
 <p><strong>You're in the most-flooded pond</strong> — cheap on-campus sublets get dozens of messages and vanish in hours. Three fixes:</p>
 <p><strong>1. Flip the funnel</strong> — post a "Housing Wanted" ad (SUpost · FB · r/stanford · Nextdoor) so posters come to you.
-<strong>2. Pivot to private landlords &amp; CALL</strong> — MV/Los Altos/RWC rooms get a few inquiries, not 50.
+<strong>2. Pivot to private landlords &amp; CALL</strong> — Palo Alto room listings get a few inquiries, not 50; many list phone numbers.
 <strong>3. Lead with commitment + speed</strong> — "in PA now, can view today, sign + deposit immediately," and send a "keep me as backup" note on every "it's taken."</p>
 <p><strong>Strongest right now:</strong> Suite Spot coliving (RWC en-suite, $1,700) · Emerald Hills $1,475 / Menlo marble-bath $1,495 / RWC Orchard $1,200 (private-bath, June) · Sunnyvale whole studio $1,970 (now) · on campus: Renovated Rains $1,600 + whole studio $2,100. Easiest application-free whole unit: the <strong>$1,890 Palo Alto sublease</strong>.</p>
 <p><strong>Official help:</strong> email R&amp;DE <strong>summerhousing@stanford.edu</strong> (650-725-2810) and the Summer Session office — see the channel directory at the bottom.</p>
@@ -1732,7 +1814,7 @@ document.addEventListener('DOMContentLoaded', function() {{
 
 <h2>🆕 Fresh leads — Jun 13 web sweep ({n_fresh}, off-SUpost)</h2>
 <div class="banner cl">
-3 parallel search waves (~30 sources: Craigslist /sub /apa /roo, sublet.com, coliving operators, Furnished Finder, Uloop, aggregators), each lead <strong>verified live</strong>. The market reality: under-$2k <strong>whole units</strong> are nearly nonexistent for a summer sublet — the realistic path is a furnished <strong>private room + private bath</strong> in MV / Los Altos / RWC. Over-budget complexes &amp; hotel bridges are in the table at the bottom.
+Off-SUpost leads, each <strong>verified live</strong>, now filtered to <strong>Palo Alto only</strong> (El Camino corridor / walk-bike to campus). The realistic on-budget options here are <strong>private room + private bath</strong> in Palo Alto plus the on-campus SUpost rooms &amp; studios above. The full list of places to search is in the channel directory at the bottom.
 </div>
 {fresh_grouped}
 
@@ -1742,20 +1824,10 @@ Stanford students/affiliates near campus — your best source. Grouped below: <s
 </div>
 {supost_grouped}
 
-<h2>Official Stanford Housing (most reliable)</h2>
-{"".join(card(L) for L in NON_CL)}
-
-<h2>SUBLEASE — Skip applications (1 listing)</h2>
-{"".join(card(L) for L in SUBLETS)}
-
-<h2>Regular Rentals — Good neighborhoods (9 listings)</h2>
-<div class="banner cl">
-<strong>Note:</strong> These are regular rentals (/apa) — expect applications, credit checks, and deposits. East Palo Alto listings removed.
-</div>
-{"".join(card(L) for L in REGULAR_RENTALS)}
-
-<h2>Short-term Options (partial summer coverage)</h2>
-{"".join(card(L) for L in SHORT_TERM)}
+{official_sec}
+{sublease_sec}
+{rentals_sec}
+{shortterm_sec}
 
 <h2>📒 All places to reach out ({sum(len(g[2]) for g in OUTREACH_CHANNELS)} channels — Jun 15 sweep)</h2>
 <div class="banner cl">
