@@ -8,7 +8,7 @@ from datetime import datetime
 
 ROOT = os.path.dirname(os.path.abspath(__file__))  # repo dir — works locally and in CI
 PORT = 5555
-MY_EMAIL = "tianjiahe11@gmail.com"  # Email used for contacting landlords
+MY_EMAIL = "ipo@stanford.edu"  # Email used for contacting landlords
 
 # Load contact tracking data.
 # IMPORTANT: "contacted" means a message was actually SENT — sourced from
@@ -1555,7 +1555,10 @@ def render_body():
         + sup_section("❌ Taken / declined — closed", sup_taken)
     )
     n_queue = len(queued_ids)
-    n_queue_left = len([i for i in queued_ids if i not in contacted_ids])
+    # "To contact" = current on-campus cards not yet reached out, not dead, not replied.
+    n_to_contact = sum(1 for L in all_cards
+                       if card_key(L) not in contacted_ids
+                       and not L.get("dead") and not L.get("replied"))
 
     # Fresh Jun-13 web-sweep leads, grouped by status tier.
     def fresh_section(title, code):
@@ -1779,17 +1782,17 @@ document.addEventListener('DOMContentLoaded', function() {{
 
 <div class="status-panel">
   <div class="status-row">
-    <div class="stat"><div class="stat-num ok">{n_total}</div><div class="stat-lbl">reached out<br>(all sources)</div></div>
+    <div class="stat"><div class="stat-num ok">{n_card_contacted}</div><div class="stat-lbl">reached out<br>(on this board)</div></div>
     <div class="stat"><div class="stat-num replied-num">{n_replied}</div><div class="stat-lbl">replied<br>(in conversation)</div></div>
-    <div class="stat"><div class="stat-num warn">{n_queue_left}</div><div class="stat-lbl">in queue,<br>not contacted</div></div>
+    <div class="stat"><div class="stat-num warn">{n_to_contact}</div><div class="stat-lbl">to contact<br>(not yet)</div></div>
     <div class="stat"><div class="stat-num dead-num">{n_card_dead}</div><div class="stat-lbl">expired<br>(skip)</div></div>
   </div>
   <div class="status-detail">
-    <strong>Combined outreach:</strong> {n_auto} auto/assisted send(s) · {n_conf} confirmed-with-message · {n_manual} marked by you on this page → <strong>{n_total} distinct landlord(s) contacted.</strong>
+    <strong>{len(all_cards)} on-campus listings</strong> · {n_card_contacted} reached out, {n_replied} replied, {n_to_contact} still to send, {n_card_dead} expired. Across all sources (incl. now-filtered off-campus ones) you've contacted <strong>{n_total} distinct landlord(s)</strong>.
     {"<span style='color:#c62828'>Nothing has actually gone out yet.</span>" if n_total == 0 else ""}
   </div>
   <div class="status-detail">
-    <strong>Search:</strong> Jun 13 web sweep across ~30 sources ({n_fresh} verified fresh leads) · SUpost refreshed Jun 13 ({len(SUPOST)} offers) · Craigslist /sub /apa /roo, sublet.com, coliving, Furnished Finder, Uloop all covered.
+    <strong>Scope:</strong> on-campus Stanford housing only · {len(SUPOST)} SUpost offers + R&amp;DE · updated Jun 15, 2026. Use <strong>⚡ My next moves</strong> for the not-yet-contacted shortlist.
   </div>
 </div>
 
