@@ -226,6 +226,15 @@ details.chan[open]>summary{border-bottom:1px solid #eee}
 .tpl-copy{flex:0 0 auto;border:1px solid #2563eb;background:#fff;color:#2563eb;border-radius:6px;font-size:12px;font-weight:700;padding:5px 14px;cursor:pointer}
 .tpl-copy:hover{background:#eff6ff}
 .tpl-copy.ok{background:#15803d;color:#fff;border-color:#15803d}
+/* to-do list */
+.todo-group{margin:6px 0 10px}
+.todo-gtitle{font-weight:700;font-size:13px;color:#111;margin:8px 0 4px}
+.todo{display:flex;gap:9px;align-items:flex-start;padding:5px 2px;font-size:13px;line-height:1.45;cursor:pointer;border-radius:5px}
+.todo:hover{background:#f9fafb}
+.todo input{margin-top:2px;flex:0 0 auto;width:16px;height:16px;cursor:pointer}
+.todo.done span{text-decoration:line-through;color:#9ca3af}
+details.disc.todobox{background:#fff;border-color:#d1d5db}
+details.disc.todobox>summary{color:#111;font-size:14px;font-weight:700}
 @media (max-width:720px){body{padding:12px}.card,.card.noimg{grid-template-columns:1fr;height:auto}.card-images{width:100%;height:160px}.status-row{flex-wrap:wrap}.stat{flex:1 0 50%;border-bottom:1px solid #eee}.fb-count{margin-left:0;flex-basis:100%}.card-head{flex-wrap:wrap}.price{white-space:normal}table{min-width:560px}}
 @media print{.card{break-inside:avoid;height:auto!important}h2{break-after:avoid}.filterbar{display:none}}
 """
@@ -1601,6 +1610,37 @@ def render_templates():
             f'<pre class="tpl-text">{html.escape(text)}</pre></div>')
     return "".join(out)
 
+# ---- To-do list (checkable, persists per-browser) ----
+TODOS = [
+ ("🔴 Official on-campus path — act by July 1", [
+   "Confirm you're enrolled in Summer Session 2026 (you have ipo@stanford.edu, so likely yes). If NOT, call Summer Session 650-723-3109 / summersession@stanford.edu today and ask about late/waitlist admission — it unlocks everything.",
+   "Call R&DE Housing Assignments (650) 725-2810 AND file a Help Ticket at rde.stanford.edu/studenthousing/contact-us for a SPACE-AVAILABLE summer room — the rolling round closes July 1.",
+   "Submit the summer housing application at myhousing.stanford.edu (Graduate Housing Application → Summer).",
+   "Email shsublease@lists.stanford.edu / call (650) 724-0544 for access to the OFFICIAL on-campus sublease database (sublicense window Jun 19 – Aug 31). Verify any sublicense is authorized before paying.",
+   "Email studenthousing@stanford.edu for a Places4Students login (or register at places4students.com with ipo@stanford.edu).",
+ ]),
+ ("🟡 Work the sublet tracker (below)", [
+   "Message the not-yet-contacted on-campus sublets — tap ⚡ My next moves, then copy the “Fast-mover opener” template.",
+   "Send a follow-up to anyone silent 3+ days (Follow-up template).",
+   "Send the “Keep me as backup” note to every “it's taken” reply (Faatira, Sujay, Selim so far).",
+   "Post a “Housing Wanted” ad on SUpost + FB Stanford Housing + r/stanford (template above).",
+   "Follow up with Hulme (andaru@stanford.edu) on next steps / the price.",
+ ]),
+ ("🟢 Daily habit", [
+   "Check SUpost sorted newest 2–3× a day and message within minutes — and mark each contact here as you go.",
+ ]),
+]
+
+def render_todos():
+    out = []
+    for gi, (title, items) in enumerate(TODOS):
+        rows = "".join(
+            f'<label class="todo" data-tid="td-{gi}-{ii}"><input type="checkbox" onchange="toggleTodo(this)">'
+            f'<span>{html.escape(t)}</span></label>'
+            for ii, t in enumerate(items))
+        out.append(f'<div class="todo-group"><div class="todo-gtitle">{html.escape(title)}</div>{rows}</div>')
+    return "".join(out)
+
 def render_body():
     # Recompute contacted set per request so manual toggles show on reload.
     global contacted_ids
@@ -1839,6 +1879,28 @@ document.addEventListener('keydown', function(e) {{
         e.preventDefault(); e.target.click();
     }}
 }});
+// checkable to-do list (persists in this browser)
+function loadTodos() {{ try {{ return JSON.parse(localStorage.getItem('housingTodos') || '{{}}'); }} catch (e) {{ return {{}}; }} }}
+function toggleTodo(cb) {{
+    var lab = cb.closest('.todo'); var id = lab.dataset.tid;
+    var o = loadTodos(); o[id] = cb.checked;
+    try {{ localStorage.setItem('housingTodos', JSON.stringify(o)); }} catch (e) {{}}
+    lab.classList.toggle('done', cb.checked);
+    updateTodoCount();
+}}
+function initTodos() {{
+    var o = loadTodos();
+    document.querySelectorAll('.todo').forEach(function(l) {{
+        if (o[l.dataset.tid]) {{ l.querySelector('input').checked = true; l.classList.add('done'); }}
+    }});
+    updateTodoCount();
+}}
+function updateTodoCount() {{
+    var all = document.querySelectorAll('.todo'); if (!all.length) return;
+    var done = document.querySelectorAll('.todo.done').length;
+    var el = document.getElementById('todoCount');
+    if (el) el.textContent = done + '/' + all.length + ' done';
+}}
 // copy an outreach template to the clipboard
 function copyTpl(btn) {{
     var pre = btn.closest('.tpl').querySelector('.tpl-text');
@@ -1867,6 +1929,7 @@ document.addEventListener('DOMContentLoaded', function() {{
         c.setAttribute('role', 'button'); c.setAttribute('tabindex', '0');
     }});
     initContactState();
+    initTodos();
     applyFilters();
 }});
 </script>
@@ -1875,6 +1938,13 @@ document.addEventListener('DOMContentLoaded', function() {{
 <h1>Simon's Stanford Summer 2026 Housing</h1>
 <p class="sub">Under $2,000/mo · Dedicated units, no housemates · Within 20 min of Stanford · East Palo Alto excluded</p>
 </header>
+
+<details class="disc todobox" open>
+<summary>✅ Your housing to-do list <span id="todoCount" style="font-weight:500;color:#9ca3af;font-size:12px"></span></summary>
+<div class="disc-body">
+{render_todos()}
+</div>
+</details>
 
 <div class="banner" style="background:#ecfdf5;border-color:#a7f3d0">
 <strong>Scope:</strong> <strong>on-campus Stanford housing</strong>, <strong>~3–4 month leases (full June→September, extendable)</strong> only. Off-campus Palo Alto and short-term sublets (stopgaps, 1–2 month partials) removed. Tap <strong>⚡ My next moves</strong> below to see what to contact today.
