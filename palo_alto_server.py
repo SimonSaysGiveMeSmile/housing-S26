@@ -1163,8 +1163,48 @@ def _campus_only(L):
     if any(t in s for t in _LOC_OFF):
         return any(t in s for t in _LOC_BLDG)  # keep only if a real on-campus building is named
     return any(t in s for t in _LOC_ON)
+
+# ---- LEASE-LENGTH FILTER (Jun 16): Simon needs a ~3-4 month lease (full June->September,
+# extendable) — drop short stopgaps & 1-2 month partial sublets. Keep spans >= ~10 weeks
+# plus flexible/unknown-length (summer / academic-year) listings he can ask to extend.
+_MON = {'jan':1,'feb':2,'mar':3,'apr':4,'may':5,'jun':6,'june':6,'jul':7,'july':7,'aug':8,
+        'sep':9,'sept':9,'september':9,'oct':10,'nov':11,'dec':12,'january':1,'august':8}
+_MIN_LEASE_DAYS = 70  # ~10 weeks; on-campus summer sublets top out near the quarter
+_SHORT_PHRASES = ("stopgap", "1 week", "~1 week", "(june july)", "june–july", "june-july",
+                  "june - july", "late june – mid aug", "late june - mid aug",
+                  "mid-june to mid-july", "mid june to mid july", "short-term", "short term")
+def _lease_span_days(blob):
+    tl = blob.lower()
+    pts = []
+    for mname, day in re.findall(r'\b(jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec|june|july|august|september)\.?\s*(\d{1,2})\b', tl):
+        pts.append((_MON[mname], int(day)))
+    for mm, dd in re.findall(r'\b(1[0-2]|[1-9])\s*/\s*(\d{1,2})\b', tl):
+        pts.append((int(mm), int(dd)))
+    mr = re.search(r'\b(jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec|june|july|august|september)\.?\s*\d{1,2}\s*[–\-]\s*(\d{1,2})\b', tl)
+    if mr and pts:
+        pts.append((_MON[mr.group(1)], int(mr.group(2))))
+    ds = []
+    for mo, dy in pts:
+        if 1 <= mo <= 12 and 1 <= dy <= 31:
+            try:
+                d = datetime(2026, mo, dy)
+                if datetime(2026, 5, 1) <= d <= datetime(2026, 10, 15):
+                    ds.append(d)
+            except ValueError:
+                pass
+    if len(ds) < 2:
+        return None
+    return (max(ds) - min(ds)).days
+def _lease_ok(L):
+    blob = L["title"] + " " + L["status"][1] + " " + L.get("offcriteria", "") + " " + " ".join(L.get("facts", []))
+    if any(p in blob.lower() for p in _SHORT_PHRASES):
+        return False
+    span = _lease_span_days(blob)
+    if span is not None and span < _MIN_LEASE_DAYS:
+        return False
+    return True  # long enough, or flexible/unknown (ask about extending)
 for _lst in (NON_CL, SUBLETS, REGULAR_RENTALS, SHORT_TERM, SUPOST, FRESH_LEADS):
-    _lst[:] = [L for L in _lst if _campus_only(L)]
+    _lst[:] = [L for L in _lst if _campus_only(L) and _lease_ok(L)]
 
 def placeholder_svg(area, price):
     """Clean location placeholder for listings without a real photo —
@@ -1837,7 +1877,7 @@ document.addEventListener('DOMContentLoaded', function() {{
 </header>
 
 <div class="banner" style="background:#ecfdf5;border-color:#a7f3d0">
-<strong>Scope:</strong> <strong>on-campus Stanford housing sublets only</strong> — EV / EVGR / Munger / Rains / Kennedy / Blackwelder / Lyman / Barnes / Stanford West + R&amp;DE. Off-campus Palo Alto (downtown, Professorville, College Terrace, Oak Creek, El Camino) and everywhere else removed. Tap <strong>⚡ My next moves</strong> below to see what to contact today.
+<strong>Scope:</strong> <strong>on-campus Stanford housing</strong>, <strong>~3–4 month leases (full June→September, extendable)</strong> only. Off-campus Palo Alto and short-term sublets (stopgaps, 1–2 month partials) removed. Tap <strong>⚡ My next moves</strong> below to see what to contact today.
 </div>
 
 <details class="disc">
@@ -1871,7 +1911,7 @@ document.addEventListener('DOMContentLoaded', function() {{
     {"<span style='color:#c62828'>Nothing has actually gone out yet.</span>" if n_total == 0 else ""}
   </div>
   <div class="status-detail">
-    <strong>Scope:</strong> on-campus Stanford housing only · {len(SUPOST)} SUpost offers + R&amp;DE · updated Jun 15, 2026. Use <strong>⚡ My next moves</strong> for the not-yet-contacted shortlist.
+    <strong>Scope:</strong> on-campus Stanford · ~3–4 month leases (full summer, extendable) · {len(SUPOST)} SUpost offers + R&amp;DE · updated Jun 16, 2026. Use <strong>⚡ My next moves</strong> for the not-yet-contacted shortlist.
   </div>
 </div>
 
