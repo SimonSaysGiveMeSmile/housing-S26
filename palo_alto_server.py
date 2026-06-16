@@ -693,11 +693,12 @@ SUPOST = [
 
  # ---- Jun 13 SUpost paste — filtered NEW offers (wanted-posts/EPA/SF/over-budget/female-only removed) ----
  {"top":True,"title":"Renovated Rains sublet (Jun 22–Sep 18)","mid":"su-rains-renov-1600","price":"$1,600/mo","src":"SUpost · Jun 13 paste",
-  "area":"On campus, Stanford (Rains grad housing)","status":("go","On campus · full summer · under budget"),
-  "offcriteria":"Rains = grad housing — confirm whole-unit vs a room, and that you're eligible (affiliate/grad/21+).",
+  "area":"On campus, Stanford (Rains grad housing)","status":("dead","TAKEN · renter found"),
+  "dead":True,"replied":True,
+  "reply":"worledge@stanford.edu — the post title now reads “[Renter found!!!!]” (Jun 16). Taken. Closed.",
   "facts":["Renovated Rains sublet, June 22 – Sept 18 — covers nearly your whole summer.","Under budget at $1,600, on campus.","Best new date-match of this paste."],
   "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
-  "cnote":"NEW Jun 13 — renovated Rains, $1,600, Jun 22–Sep 18 (full summer), on campus. Strong. Confirm room vs unit + grad-housing eligibility."},
+  "cnote":"TAKEN Jun 16 — poster (worledge@) marked it “Renter found.” Closed."},
 
  {"top":True,"title":"Stanford Lyman 2B/1B, furnished (Jun 27–Aug 22)","mid":"su-lyman-2b1b-1684","price":"$1,684/mo","src":"SUpost · Jun 13 paste",
   "area":"On campus, Stanford (Lyman grad housing)","status":("go","On campus · furnished · under budget"),
@@ -958,6 +959,9 @@ _SUPOST_EMAIL = {
  "su-kennedy-commons-1570": "ba624@stanford.edu",
  "su-ev-freebike": "jalimi@stanford.edu",
  "su-ev-lowrise-apt": "matthho@stanford.edu",
+  # ---- Jun 16: poster emails captured from Simon's direct-email sends ----
+ "su-studio-15jun-31aug-2100": "osahin25@stanford.edu",
+ "su-ev-lowrise-room": "afrancav@stanford.edu",
   # ---- Jun 15: poster emails captured during the URL match ----
  "Furnished private room + bath, Palo Alto (available now)": "arberg@stanford.edu",
  "On-campus Stanford studio sublet (June\u2013July)": "elestant@stanford.edu",
@@ -1566,6 +1570,9 @@ def render_channels():
 
 # ---- Copy-paste outreach message templates (shown on the dashboard) ----
 OUTREACH_TEMPLATES = [
+ ("Direct email — re-check (school starts Jun 22)", "Email posters directly (BCC the list); apologizes for the repeat",
+  "Subject: Still available? — Simon (incoming Stanford summer student)\n\n"
+  "Hi! Apologies if you've already heard from me — my earlier note may have gone through the SUpost relay, so I'm reaching out directly this time. I'm Simon, an incoming Stanford student and classes start June 22, so I'm trying to lock in summer housing. Is your place still available? I'm already in Palo Alto, can come see it today, and can sign + pay a deposit right away. Thanks so much, and sorry again for the repeat message!\n\nSimon · ipo@stanford.edu · 607-262-9704"),
  ("First message — standard", "Your opener when you find a post",
   "Hi! I'm Simon, an incoming Stanford Summer Session student (coming from Cornell). "
   "Your place looks great and the location is perfect. Is it still available? I'm already "
