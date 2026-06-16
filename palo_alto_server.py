@@ -217,6 +217,15 @@ details.chan[open]>summary{border-bottom:1px solid #eee}
 .chan-row .nm{font-weight:600;flex:0 0 auto}
 .chan-row .wy{color:#555;flex:1 1 240px;min-width:150px}
 .chan-row .ct{color:#9ca3af;font-size:11.5px;flex:0 0 auto}
+/* outreach templates */
+.tpl{border:1px solid #e2e2e2;border-radius:8px;margin:8px 0;background:#fff;overflow:hidden}
+.tpl-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 12px;border-bottom:1px solid #eee;background:#fafafa}
+.tpl-title{font-weight:700;font-size:13.5px;color:#111}
+.tpl-when{font-size:11.5px;color:#888;padding:6px 12px 0}
+.tpl-text{white-space:pre-wrap;font-family:inherit;font-size:12.5px;color:#333;line-height:1.5;padding:8px 12px 12px;margin:0}
+.tpl-copy{flex:0 0 auto;border:1px solid #2563eb;background:#fff;color:#2563eb;border-radius:6px;font-size:12px;font-weight:700;padding:5px 14px;cursor:pointer}
+.tpl-copy:hover{background:#eff6ff}
+.tpl-copy.ok{background:#15803d;color:#fff;border-color:#15803d}
 @media (max-width:720px){body{padding:12px}.card,.card.noimg{grid-template-columns:1fr;height:auto}.card-images{width:100%;height:160px}.status-row{flex-wrap:wrap}.stat{flex:1 0 50%;border-bottom:1px solid #eee}.fb-count{margin-left:0;flex-basis:100%}.card-head{flex-wrap:wrap}.price{white-space:normal}table{min-width:560px}}
 @media print{.card{break-inside:avoid;height:auto!important}h2{break-after:avoid}.filterbar{display:none}}
 """
@@ -1506,6 +1515,52 @@ def render_channels():
             f'<div class="chan-list">{"".join(items)}</div></details>')
     return "".join(out)
 
+# ---- Copy-paste outreach message templates (shown on the dashboard) ----
+OUTREACH_TEMPLATES = [
+ ("First message — standard", "Your opener when you find a post",
+  "Hi! I'm Simon, an incoming Stanford Summer Session student (coming from Cornell). "
+  "Your place looks great and the location is perfect. Is it still available? I'm already "
+  "in Palo Alto, so I can come see it today and I'm ready to sign and pay a deposit right "
+  "away. I'm tidy, quiet, and easygoing. Thanks so much!\n\nSimon · ipo@stanford.edu · 607-262-9704"),
+ ("Fast-mover opener — lead with speed", "For the flooded on-campus sublets — send within minutes",
+  "Hi! I'm Simon, an incoming Stanford summer student — already in Palo Alto, so I can tour "
+  "TODAY and sign + pay the deposit immediately. Your place looks perfect. Is it still available?"
+  "\n\nSimon · ipo@stanford.edu · 607-262-9704"),
+ ("Follow-up — no reply (~3 days)", "Gentle nudge",
+  "Hi! Just following up on my earlier message about your place — still very interested and "
+  "happy to come by for a tour anytime (I'm already in Palo Alto). No worries at all if it's "
+  "been taken, just wanted to check in. Thanks so much!\n\nSimon · ipo@stanford.edu · 607-262-9704"),
+ ("Keep me as backup — reply to “it's taken”", "Send on EVERY “already taken” to keep leads warm",
+  "Totally understand, thanks for letting me know! If it ends up falling through, I'd jump on "
+  "it immediately — would you mind keeping me in mind? Good luck either way!"
+  "\n\nSimon · ipo@stanford.edu · 607-262-9704"),
+ ("Stanford R&DE / Summer Session — official help", "Email summerhousing@stanford.edu + the Summer Session office",
+  "Subject: Incoming Summer Session student — space-available campus housing?\n\n"
+  "Hi — I'm an incoming Stanford Summer Session student (visiting from Cornell), already in "
+  "Palo Alto and looking for on-campus housing for the summer. I applied after the priority "
+  "deadline, so I understand it would be space-available. Could you tell me (1) what "
+  "single-occupancy options remain and the rates, and (2) how I get a Places4Students login "
+  "to see the off-campus listings? I can complete any application and pay a deposit right "
+  "away. Thank you!\n\nSimon · ipo@stanford.edu · 607-262-9704"),
+ ("“Housing Wanted” post", "Post on SUpost, FB Stanford Housing, r/stanford",
+  "Looking: on-campus Stanford summer sublet, June – early Sept, up to $2,000/mo\n\n"
+  "Hi! I'm Simon, an incoming Stanford Summer Session student (from Cornell). Looking for an "
+  "on-campus room or studio sublet for the summer (dates flexible), budget up to $2,000/mo. "
+  "I'm tidy, quiet, already in Palo Alto, and can tour same-day + sign immediately. If you or "
+  "a friend has something opening up, please reach out — thank you!"
+  "\n\nSimon · ipo@stanford.edu · 607-262-9704"),
+]
+
+def render_templates():
+    out = []
+    for title, when, text in OUTREACH_TEMPLATES:
+        out.append(
+            f'<div class="tpl"><div class="tpl-head"><span class="tpl-title">{html.escape(title)}</span>'
+            f'<button class="tpl-copy" onclick="copyTpl(this)">Copy</button></div>'
+            f'<div class="tpl-when">{html.escape(when)}</div>'
+            f'<pre class="tpl-text">{html.escape(text)}</pre></div>')
+    return "".join(out)
+
 def render_body():
     # Recompute contacted set per request so manual toggles show on reload.
     global contacted_ids
@@ -1744,6 +1799,23 @@ document.addEventListener('keydown', function(e) {{
         e.preventDefault(); e.target.click();
     }}
 }});
+// copy an outreach template to the clipboard
+function copyTpl(btn) {{
+    var pre = btn.closest('.tpl').querySelector('.tpl-text');
+    var txt = pre.innerText;
+    function done() {{
+        var o = btn.textContent; btn.textContent = '✓ Copied'; btn.classList.add('ok');
+        setTimeout(function() {{ btn.textContent = o; btn.classList.remove('ok'); }}, 1500);
+    }}
+    if (navigator.clipboard && navigator.clipboard.writeText) {{
+        navigator.clipboard.writeText(txt).then(done).catch(select);
+    }} else {{ select(); }}
+    function select() {{
+        var r = document.createRange(); r.selectNodeContents(pre);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        try {{ document.execCommand('copy'); done(); }} catch (e) {{}}
+    }}
+}}
 // back-to-top button
 function scrollTop() {{ window.scrollTo({{top: 0, behavior: 'smooth'}}); }}
 window.addEventListener('scroll', function() {{
@@ -1777,6 +1849,13 @@ document.addEventListener('DOMContentLoaded', function() {{
 <strong>3. Lead with commitment + speed</strong> — "in PA now, can view today, sign + deposit immediately," and send a "keep me as backup" note on every "it's taken."</p>
 <p><strong>Strongest right now:</strong> Suite Spot coliving (RWC en-suite, $1,700) · Emerald Hills $1,475 / Menlo marble-bath $1,495 / RWC Orchard $1,200 (private-bath, June) · Sunnyvale whole studio $1,970 (now) · on campus: Renovated Rains $1,600 + whole studio $2,100. Easiest application-free whole unit: the <strong>$1,890 Palo Alto sublease</strong>.</p>
 <p><strong>Official help:</strong> email R&amp;DE <strong>summerhousing@stanford.edu</strong> (650-725-2810) and the Summer Session office — see the channel directory at the bottom.</p>
+</div>
+</details>
+
+<details class="disc">
+<summary>✉️ Copy-paste outreach messages ({len(OUTREACH_TEMPLATES)} templates — all signed ipo@stanford.edu)</summary>
+<div class="disc-body">
+{render_templates()}
 </div>
 </details>
 
