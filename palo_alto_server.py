@@ -1129,26 +1129,33 @@ FRESH_LEADS = [
   "cnote":"Cheapest room+bath ($1,300) but 35-45 min away — last-resort only. Verified Jun 13."},
 ]
 
-# ---- LOCATION FILTER (Jun 15): Simon narrowed to ON-CAMPUS + Palo Alto (El Camino
-# corridor) only. Drop Mountain View / Menlo Park / Redwood City / Atherton / Los
-# Altos / and farther. Applied in-place so every count, section, and filter reflects it.
-_LOC_OUT = ("mountain view", "menlo", "redwood", "atherton", "los altos", "portola",
-            "san mateo", "burlingame", "san bruno", "half moon", "sunnyvale", "woodside",
-            "emerald hills", "east palo alto", "san jose", "fremont", "oakland", "berkeley",
-            " sf", "san francisco", "union city", "san carlos", "santa clara", "hillsborough")
-_LOC_IN = ("on campus", "stanford", "escondido", "evgr", " ev ", "ev studio", "ev low",
-           "rains", "munger", "kennedy", "blackwelder", "lyman", "barnes", "oak creek",
-           "stanford west", "stanford villa", "campus", "palo alto", "college terrace",
-           "professorville", "university ave", "california ave", "cal ave")
-def _on_campus_pa(L):
-    s = (L.get("area", "") + " " + L.get("title", "")).lower()
-    if "east palo alto" in s:
-        return False
-    if any(t in s for t in _LOC_OUT):
-        return False
-    return any(t in s for t in _LOC_IN)
+# ---- LOCATION FILTER (Jun 15): ON-CAMPUS STANFORD HOUSING ONLY. Simon tightened
+# to Stanford-campus sublets only — even off-campus Palo Alto (downtown, Professorville,
+# College Terrace, Oak Creek, El Camino, etc.) is now out. Applied in-place so every
+# count, section, and filter reflects it.
+# Off-campus markers: present => NOT campus (unless a hard on-campus building also appears).
+_LOC_OFF = ("college terrace", "oak creek", "stanford villa", "professorville", "downtown",
+            "university ave", "california ave", "cal ave", "el camino", "midtown",
+            "palo alto high", "5-min walk", "5 min walk", "near campus", "co-op",
+            "community house", "mountain view", "menlo", "redwood", "atherton", "los altos",
+            "east palo alto", "san jose", "fremont", "oakland", "berkeley", "san francisco",
+            "hillsborough", "san mateo", "burlingame", "sunnyvale")
+# Hard on-campus Stanford housing building names (override the off-markers if present).
+_LOC_BLDG = ("escondido", "evgr", "ev studio", "ev low", "ev mid", "ev high",
+             "ev south", "ev junior", "ev apartment", "munger", "rains", "blackwelder",
+             "lyman", "barnes", "mirrielees", "mireless", "mirelees", "stanford west",
+             "hulme", "comstock", "kennedy")
+# General on-campus signals.
+_LOC_ON = _LOC_BLDG + ("on campus", "on-campus", "heart of campus",
+                       "heart of the stanford campus", "r&de", "graduate housing",
+                       "grad housing", "campus house", "house in the heart")
+def _campus_only(L):
+    s = (L.get("area", "") + " " + L.get("title", "") + " " + " ".join(L.get("facts", []))).lower()
+    if any(t in s for t in _LOC_OFF):
+        return any(t in s for t in _LOC_BLDG)  # keep only if a real on-campus building is named
+    return any(t in s for t in _LOC_ON)
 for _lst in (NON_CL, SUBLETS, REGULAR_RENTALS, SHORT_TERM, SUPOST, FRESH_LEADS):
-    _lst[:] = [L for L in _lst if _on_campus_pa(L)]
+    _lst[:] = [L for L in _lst if _campus_only(L)]
 
 def placeholder_svg(area, price):
     """Clean location placeholder for listings without a real photo —
@@ -1561,6 +1568,7 @@ def render_body():
         + fresh_section("⚠️ Near-miss — shared bath / over budget / far", "warn")
     )
     n_fresh = len(FRESH_LEADS)
+    fresh_sec = (f'<h2>🆕 Fresh leads (off-SUpost, {n_fresh})</h2>{fresh_grouped}' if FRESH_LEADS else "")
 
     # Conditional sections — empty ones (after the on-campus/PA filter) are hidden.
     official_sec = (f'<h2>Official Stanford Housing (most reliable)</h2>{"".join(card(L) for L in NON_CL)}'
@@ -1754,7 +1762,7 @@ document.addEventListener('DOMContentLoaded', function() {{
 </header>
 
 <div class="banner" style="background:#ecfdf5;border-color:#a7f3d0">
-<strong>Scope:</strong> on-campus Stanford + Palo Alto (El Camino corridor) only — Mountain View / Menlo / Redwood City / Atherton / Los Altos removed. Best on-budget fits here are <strong>on-campus SUpost rooms &amp; studios</strong> and <strong>Palo Alto private-room+private-bath</strong>. Tap <strong>⚡ My next moves</strong> below to see exactly what to contact today.
+<strong>Scope:</strong> <strong>on-campus Stanford housing sublets only</strong> — EV / EVGR / Munger / Rains / Kennedy / Blackwelder / Lyman / Barnes / Stanford West + R&amp;DE. Off-campus Palo Alto (downtown, Professorville, College Terrace, Oak Creek, El Camino) and everywhere else removed. Tap <strong>⚡ My next moves</strong> below to see what to contact today.
 </div>
 
 <details class="disc">
@@ -1812,11 +1820,7 @@ document.addEventListener('DOMContentLoaded', function() {{
 </div>
 <div id="noResults">No listings match these filters. Try raising the price cap or clearing a filter.</div>
 
-<h2>🆕 Fresh leads — Jun 13 web sweep ({n_fresh}, off-SUpost)</h2>
-<div class="banner cl">
-Off-SUpost leads, each <strong>verified live</strong>, now filtered to <strong>Palo Alto only</strong> (El Camino corridor / walk-bike to campus). The realistic on-budget options here are <strong>private room + private bath</strong> in Palo Alto plus the on-campus SUpost rooms &amp; studios above. The full list of places to search is in the channel directory at the bottom.
-</div>
-{fresh_grouped}
+{fresh_sec}
 
 <h2>⭐ SUpost — Stanford marketplace ({len(SUPOST)} offers, grouped by status)</h2>
 <div class="banner cl">
