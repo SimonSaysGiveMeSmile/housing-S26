@@ -1570,6 +1570,20 @@ def render_channels():
 
 # ---- Copy-paste outreach message templates (shown on the dashboard) ----
 OUTREACH_TEMPLATES = [
+ ("⭐ Reply to R&DE Student Housing (Szonja) — applying now", "Szonja confirmed the GRADUATE SUMMER rolling round is open to you; reply after you submit at myhousing.stanford.edu",
+  "Subject: Re: Graduate summer housing — thank you, submitting now\n\n"
+  "Hi Szonja,\n\n"
+  "Thank you so much — this is exactly the guidance I needed. I'm submitting the Graduate Housing "
+  "Application for 2026 Summer at myhousing.stanford.edu right now.\n\n"
+  "A couple of quick questions:\n"
+  "1. Can I indicate a preference for a single room or studio, and does being flexible on "
+  "building/location improve my chances in the rolling round?\n"
+  "2. Classes start June 22 and I'm already in the area — is there anything I can do to flag that I "
+  "can move in immediately and be considered as early as possible?\n"
+  "3. If an assignment comes through after the 22nd, is there short-term on-campus housing to bridge "
+  "the gap?\n\n"
+  "Thank you again for your help — I really appreciate it.\n\n"
+  "Best,\nSimon Tian · ipo@stanford.edu · 607-262-9704"),
  ("Reply to R&DE Conferences (Chris) — Adult Housing details", "Chris @ summerhousing offered on-campus 'Adult Housing'; reply to pin down full-summer rate + student rate before registering",
   "Subject: Re: Adult Housing — full-summer rates & student eligibility?\n\n"
   "Hi Chris,\n\n"
@@ -1652,13 +1666,16 @@ def render_templates():
 
 # ---- To-do list (checkable, persists per-browser) ----
 TODOS = [
- ("🔴 Official on-campus path — act by July 1", [
-   "✅ REPLY ARRIVED (Jun 17): summerhousing@ is R&DE CONFERENCES (non-Stanford guests). Chris offered on-campus 'Adult Housing' (min 3 nights, 18+, needs Stanford affiliation — you qualify): rde.stanford.edu/conferences/non-student-summer-housing-housing-choices. Available NOW but likely priced PER NIGHT — reply to Chris (template above) to confirm full-summer rate + ask for a student rate BEFORE registering.",
-   "Confirm you're enrolled in Summer Session 2026 (you have ipo@stanford.edu, so likely yes). If NOT, call Summer Session 650-723-3109 / summersession@stanford.edu today and ask about late/waitlist admission — it unlocks everything.",
-   "Call R&DE Housing Assignments (650) 725-2810 AND file a Help Ticket at rde.stanford.edu/studenthousing/contact-us for a SPACE-AVAILABLE summer room — the rolling round closes July 1.",
-   "Submit the summer housing application at myhousing.stanford.edu (Graduate Housing Application → Summer).",
-   "Email shsublease@lists.stanford.edu / call (650) 724-0544 for access to the OFFICIAL on-campus sublease database (sublicense window Jun 19 – Aug 31). Verify any sublicense is authorized before paying.",
-   "Email studenthousing@stanford.edu for a Places4Students login (or register at places4students.com with ipo@stanford.edu).",
+ ("🟢 #1 — SUBMIT THE GRAD APPLICATION NOW (rolling round is OPEN)", [
+   "⭐ GREEN LIGHT (Jun 17 — Szonja Vajda, R&DE Student Housing Assignments): the GRADUATE SUMMER rolling round is open to you. SUBMIT TODAY at myhousing.stanford.edu → Graduate Housing Application → pick a category → 2026 Summer → follow prompts → submit. This is the CHEAP official student path.",
+   "Before you pick a category, check the rates/options so you choose one within budget: rde.stanford.edu/studenthousing/summer-graduate-housing-options-and-rates",
+   "Assignments are made on a ROLLING basis (no fixed date) — could land by next Friday or sooner. Apply now to get in the queue early; flexibility on building/location helps.",
+   "Reply to Szonja once submitted (⭐ template above) — confirm you applied + ask about a single/studio preference and bridging the gap if the assignment lands after June 22.",
+ ]),
+ ("🟠 Backups if the grad assignment is slow", [
+   "PAID BRIDGE — R&DE Conferences 'Adult Housing' (Chris @ summerhousing): on-campus, available NOW, min 3 nights, needs affiliation (you qualify). Likely priced PER NIGHT — reply to Chris (template above) to confirm the full-summer rate BEFORE registering. Use only to bridge a gap. rde.stanford.edu/conferences/non-student-summer-housing-housing-choices",
+   "Email shsublease@lists.stanford.edu / call (650) 724-0544 for the OFFICIAL on-campus sublease database (sublicense window Jun 19 – Aug 31). Verify any sublicense is authorized before paying.",
+   "Email studenthousing@stanford.edu for a Places4Students login (or register at places4students.com with ipo@stanford.edu) for vetted off-campus listings.",
  ]),
  ("🟡 Work the sublet tracker (below)", [
    "Message the not-yet-contacted on-campus sublets — tap ⚡ My next moves, then copy the “Fast-mover opener” template.",
