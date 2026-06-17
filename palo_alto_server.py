@@ -1599,14 +1599,22 @@ OUTREACH_TEMPLATES = [
   "Totally understand, thanks for letting me know! If it ends up falling through, I'd jump on "
   "it immediately — would you mind keeping me in mind? Good luck either way!"
   "\n\nSimon · ipo@stanford.edu · 607-262-9704"),
- ("Stanford R&DE / Summer Session — official help", "Email summerhousing@stanford.edu + the Summer Session office",
-  "Subject: Incoming Summer Session student — space-available campus housing?\n\n"
-  "Hi — I'm an incoming Stanford Summer Session student (visiting from Cornell), already in "
-  "Palo Alto and looking for on-campus housing for the summer. I applied after the priority "
-  "deadline, so I understand it would be space-available. Could you tell me (1) what "
-  "single-occupancy options remain and the rates, and (2) how I get a Places4Students login "
-  "to see the off-campus listings? I can complete any application and pay a deposit right "
-  "away. Thank you!\n\nSimon · ipo@stanford.edu · 607-262-9704"),
+ ("Stanford R&DE / Summer Session — official help", "Send to: summerhousing@stanford.edu, summersession@stanford.edu, shsublease@lists.stanford.edu, studenthousing@stanford.edu",
+  "Subject: Incoming Summer Session student — any on-campus housing still possible?\n\n"
+  "Hi,\n\n"
+  "I'm Simon, an incoming Stanford Summer Session student (joining from Cornell), and I'm hoping "
+  "you can help with a last-minute housing situation. I had been planning to live off campus, but "
+  "my off-campus lease application ran into problems and fell through — leaving me searching for "
+  "housing on very short notice, despite having started early. With classes beginning June 22 and "
+  "me already in Palo Alto, I'm now hoping to find something on campus.\n\n"
+  "Could you let me know:\n"
+  "1. Whether any on-campus rooms or studios are still available for the summer (space-available "
+  "is completely fine), and the rates; and\n"
+  "2. Whether it's too late to apply — and if there's still a window, exactly how I submit the "
+  "application?\n\n"
+  "I can complete any paperwork and pay a deposit right away, and I'd be genuinely grateful for "
+  "any guidance you can offer. Thank you so much for your help!\n\n"
+  "Best,\nSimon · ipo@stanford.edu · 607-262-9704"),
  ("“Housing Wanted” post", "Post on SUpost, FB Stanford Housing, r/stanford",
   "Looking: on-campus Stanford summer sublet, June – early Sept, up to $2,000/mo\n\n"
   "Hi! I'm Simon, an incoming Stanford Summer Session student (from Cornell). Looking for an "
