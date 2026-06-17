@@ -1570,6 +1570,15 @@ def render_channels():
 
 # ---- Copy-paste outreach message templates (shown on the dashboard) ----
 OUTREACH_TEMPLATES = [
+ ("EVGR direct email — to a named poster", "When you have the poster's name + email (e.g. an EVGR unit); proofread/cleaned version",
+  "Subject: Still available? — Simon (incoming Stanford summer student)\n\n"
+  "Hi [name],\n\n"
+  "I'm Simon, an incoming graduate student (previously at Cornell) staying on campus for the summer. "
+  "Sorry for the double message if you've already received my SUpost note. I'm looking to sublet a unit "
+  "at EVGR — I'm a Stanford affiliate, so I should be eligible for the sublicense (happy to confirm "
+  "whatever's needed on my end). Your place looks great and the location seems like a good fit. "
+  "Is it still available? Kindly let me know — thank you! 😊\n\n"
+  "Best,\nSimon · ipo@stanford.edu · 607-262-9704"),
  ("Direct email — re-check (school starts Jun 22)", "Email posters directly (BCC the list); apologizes for the repeat",
   "Subject: Still available? — Simon (incoming Stanford summer student)\n\n"
   "Hi! Apologies if you've already heard from me — my earlier note may have gone through the SUpost relay, so I'm reaching out directly this time. I'm Simon, an incoming Stanford student and classes start June 22, so I'm trying to lock in summer housing. Is your place still available? I'm already in Palo Alto, can come see it today, and can sign + pay a deposit right away. Thanks so much, and sorry again for the repeat message!\n\nSimon · ipo@stanford.edu · 607-262-9704"),
