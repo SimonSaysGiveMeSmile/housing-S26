@@ -1570,6 +1570,22 @@ def render_channels():
 
 # ---- Copy-paste outreach message templates (shown on the dashboard) ----
 OUTREACH_TEMPLATES = [
+ ("Reply to R&DE Conferences (Chris) — Adult Housing details", "Chris @ summerhousing offered on-campus 'Adult Housing'; reply to pin down full-summer rate + student rate before registering",
+  "Subject: Re: Adult Housing — full-summer rates & student eligibility?\n\n"
+  "Hi Chris,\n\n"
+  "Thank you so much for the quick and helpful reply — I really appreciate it. The Adult Housing option "
+  "looks promising, and I do have Stanford affiliation: I'm an enrolled incoming Summer Session student "
+  "(my Stanford email is ipo@stanford.edu), so I can send proof right away.\n\n"
+  "Before I register, could you help me with a few details?\n"
+  "1. For a full-summer stay (roughly June 22 through mid-September), what is the rate — is it billed per "
+  "night or as a flat term rate?\n"
+  "2. Is the room a private single/studio, and is the bathroom private or shared?\n"
+  "3. Since I'm an enrolled Summer Session student (not a guest), is there a student rate, or a separate "
+  "Summer Session student housing path I should be using instead?\n"
+  "4. If I register via the button on the page, does that secure the room, or is there a separate "
+  "confirmation step?\n\n"
+  "I'm ready to register and pay a deposit as soon as you point me the right way. Thank you again!\n\n"
+  "Best,\nSimon Tian · ipo@stanford.edu · 607-262-9704"),
  ("EVGR direct email — to a named poster", "When you have the poster's name + email (e.g. an EVGR unit); proofread/cleaned version",
   "Subject: Still available? — Simon (incoming Stanford summer student)\n\n"
   "Hi [name],\n\n"
@@ -1637,6 +1653,7 @@ def render_templates():
 # ---- To-do list (checkable, persists per-browser) ----
 TODOS = [
  ("🔴 Official on-campus path — act by July 1", [
+   "✅ REPLY ARRIVED (Jun 17): summerhousing@ is R&DE CONFERENCES (non-Stanford guests). Chris offered on-campus 'Adult Housing' (min 3 nights, 18+, needs Stanford affiliation — you qualify): rde.stanford.edu/conferences/non-student-summer-housing-housing-choices. Available NOW but likely priced PER NIGHT — reply to Chris (template above) to confirm full-summer rate + ask for a student rate BEFORE registering.",
    "Confirm you're enrolled in Summer Session 2026 (you have ipo@stanford.edu, so likely yes). If NOT, call Summer Session 650-723-3109 / summersession@stanford.edu today and ask about late/waitlist admission — it unlocks everything.",
    "Call R&DE Housing Assignments (650) 725-2810 AND file a Help Ticket at rde.stanford.edu/studenthousing/contact-us for a SPACE-AVAILABLE summer room — the rolling round closes July 1.",
    "Submit the summer housing application at myhousing.stanford.edu (Graduate Housing Application → Summer).",
