@@ -1580,23 +1580,22 @@ def render_channels():
 
 # ---- Copy-paste outreach message templates (shown on the dashboard) ----
 OUTREACH_TEMPLATES = [
- ("⭐ Reply-all to the thread — applied + confirm grad vs undergrad", "After submitting at myhousing. Thank Curie + HA, confirm submitted, flag the “Undergraduate” header vs the Graduate form, ask timing + bridge. (If not yet submitted, change “and submitted” → “and am submitting now”.)",
-  "Subject: Re: Incoming Summer Session Grad Student Looking for Housing — Simon\n\n"
-  "Hi Curie and the Housing Assignments team,\n\n"
-  "Thank you both so much — Curie, I really appreciate you redirecting me, and Szonja, thank you for the "
-  "clear instructions. Following them, I've completed and submitted my housing application at "
-  "myhousing.stanford.edu for the 2026 Summer rolling round.\n\n"
-  "One thing I'd like to confirm: the application I was routed to is titled “Undergraduate Housing "
-  "Application,” but your note pointed me to the Graduate Housing Application. As an incoming Summer "
-  "Session student, could you confirm I'm in the correct application and queue? I'm happy to redo it under "
-  "the right form, and I can send proof of my Summer Session enrollment right away.\n\n"
-  "A couple of quick questions so I can plan:\n"
-  "1. Roughly when might I hear about an assignment? Classes start June 22 and I'm already in the area, so "
-  "I'd love to be considered as early as possible.\n"
-  "2. If an assignment lands after the 22nd, is there any interim/short-term on-campus housing to bridge "
-  "the gap?\n"
-  "3. Is there anything else you need from me to move things along?\n\n"
-  "Thank you again for all your help!\n\n"
+ ("⭐ Email 1 of 2 — thank-you to Curie", "Send to: csevilla@stanford.edu (keep it short)",
+  "Subject: Thank you!\n\n"
+  "Hi Curie,\n\n"
+  "Thank you for redirecting me to Housing Assignments — much appreciated. I've now submitted my "
+  "application for the 2026 Summer rolling round. Grateful for your help!\n\n"
+  "Best,\nSimon Tian · ipo@stanford.edu"),
+ ("⭐ Email 2 of 2 — Housing Assignments (confirm + timing)", "Send to: housingassignments@stanford.edu",
+  "Subject: Application submitted (2026 Summer) — quick questions\n\n"
+  "Hi Szonja,\n\n"
+  "Thank you — I've submitted my application at myhousing.stanford.edu for the 2026 Summer rolling round. "
+  "Two quick things:\n"
+  "1. It was titled “Undergraduate Housing Application,” but you'd pointed me to the Graduate one — as a "
+  "Summer Session student, am I in the right queue? Happy to redo it or send proof of enrollment.\n"
+  "2. Roughly when might I hear about an assignment, and is there interim housing if it lands after classes "
+  "start June 22?\n\n"
+  "Thanks so much!\n\n"
   "Best,\nSimon Tian · ipo@stanford.edu · 607-262-9704"),
  ("EVGR direct email — to a named poster", "When you have the poster's name + email (e.g. an EVGR unit); proofread/cleaned version",
   "Subject: Still available? — Simon (incoming Stanford summer student)\n\n"
