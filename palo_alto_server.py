@@ -257,8 +257,8 @@ NON_CL = [
           "Default summer-session start July 3; 8-wk ends Aug 16, 10-wk ends Sep 1."],
   "clabel":"Apply → myhousing.stanford.edu",
   "curl":"https://myhousing.stanford.edu",
-  "email":"summerhousing@stanford.edu",
-  "cnote":"ACTION: (1) Apply at myhousing.stanford.edu → Graduate Housing Application → Summer. (2) Email summerhousing@stanford.edu — say you're an incoming Summer Session student, ask what SINGLE-occupancy studios remain space-available and how late assignment works. Cheapest private studio is EV Standard at $2,039 ($39 over). Sub-$2k = shared rooms only.",
+  "email":"housingassignments@stanford.edu",
+  "cnote":"ACTION (Jun 17 — confirmed by HA): (1) Apply at myhousing.stanford.edu → Graduate Housing Application → 2026 Summer → submit. (2) Reply-all to the HA thread (⭐ template) — confirm you applied, ask the right category + bridge. Do NOT email summerhousing@/Conferences — NSSH can't house Summer Session students. Cheapest private studio is EV Standard at $2,039 ($39 over); sub-$2k = shared rooms only.",
   "src":"Stanford R&DE · rates pulled Jun 11"},
 ]
 
@@ -1620,7 +1620,7 @@ OUTREACH_TEMPLATES = [
   "Totally understand, thanks for letting me know! If it ends up falling through, I'd jump on "
   "it immediately — would you mind keeping me in mind? Good luck either way!"
   "\n\nSimon · ipo@stanford.edu · 607-262-9704"),
- ("Stanford R&DE / Summer Session — official help", "Send to: summerhousing@stanford.edu, summersession@stanford.edu, shsublease@lists.stanford.edu, studenthousing@stanford.edu",
+ ("Stanford R&DE / Summer Session — initial cold email (already sent)", "Send to: housingassignments@stanford.edu, summersession@stanford.edu, shsublease@lists.stanford.edu — NOT summerhousing@ (NSSH can't house Summer Session students). Superseded by the ⭐ reply-all template above.",
   "Subject: Incoming Summer Session student — any on-campus housing still possible?\n\n"
   "Hi,\n\n"
   "I'm Simon, an incoming Stanford Summer Session student (joining from Cornell), and I'm hoping "
@@ -1987,7 +1987,7 @@ document.addEventListener('DOMContentLoaded', function() {{
 </head><body>
 <header class="masthead">
 <h1>Simon's Stanford Summer 2026 Housing</h1>
-<p class="sub">Under $2,000/mo · Dedicated units, no housemates · Within 20 min of Stanford · East Palo Alto excluded</p>
+<p class="sub">On-campus Stanford only · ~3–4 month lease (full June→September, extendable) · Official R&amp;DE grad application is the path · sublets as a hedge</p>
 </header>
 
 <div class="actionplan">
@@ -2014,14 +2014,14 @@ document.addEventListener('DOMContentLoaded', function() {{
 </div>
 
 <details class="disc">
-<summary>📋 Strategy &amp; today's picks — why you keep hearing "taken," and the fix</summary>
+<summary>📋 Strategy — the official path first, sublets as a hedge</summary>
 <div class="disc-body">
-<p><strong>You're in the most-flooded pond</strong> — cheap on-campus sublets get dozens of messages and vanish in hours. Three fixes:</p>
-<p><strong>1. Flip the funnel</strong> — post a "Housing Wanted" ad (SUpost · FB · r/stanford · Nextdoor) so posters come to you.
-<strong>2. Pivot to private landlords &amp; CALL</strong> — Palo Alto room listings get a few inquiries, not 50; many list phone numbers.
-<strong>3. Lead with commitment + speed</strong> — "in PA now, can view today, sign + deposit immediately," and send a "keep me as backup" note on every "it's taken."</p>
-<p><strong>Strongest right now:</strong> Suite Spot coliving (RWC en-suite, $1,700) · Emerald Hills $1,475 / Menlo marble-bath $1,495 / RWC Orchard $1,200 (private-bath, June) · Sunnyvale whole studio $1,970 (now) · on campus: Renovated Rains $1,600 + whole studio $2,100. Easiest application-free whole unit: the <strong>$1,890 Palo Alto sublease</strong>.</p>
-<p><strong>Official help:</strong> email R&amp;DE <strong>summerhousing@stanford.edu</strong> (650-725-2810) and the Summer Session office — see the channel directory at the bottom.</p>
+<p><strong>The official path is now your #1 shot.</strong> R&amp;DE Student Housing Assignments (HA) confirmed you can apply to the <strong>graduate summer rolling round</strong>, and Curie told HA to house you — far cheaper and more reliable than chasing sublets. Apply today at <strong>myhousing.stanford.edu</strong>, then reply-all to the thread (templates below). The catch is timing: an assignment may not land until ~June 26, after classes start June 22.</p>
+<p><strong>So run sublets in parallel as a hedge + a move-in bridge.</strong> On-campus sublets are the most-flooded pond — they get dozens of messages and vanish in hours. Three fixes:</p>
+<p><strong>1. Flip the funnel</strong> — post a "Housing Wanted" ad (SUpost · FB Stanford Housing · r/stanford) so posters come to you.
+<strong>2. Be first &amp; commit</strong> — message within minutes, lead with "already in the area, can view today, sign + deposit immediately."
+<strong>3. Keep leads warm</strong> — send a "keep me as backup" note on every "it's taken."</p>
+<p><strong>Official contacts:</strong> R&amp;DE Housing Assignments <strong>housingassignments@stanford.edu</strong> (650-725-2810) · official sublease list <strong>shsublease@lists.stanford.edu</strong>. <span class="ap-out">Not summerhousing@ / Conferences — NSSH can't house Summer Session students.</span></p>
 </div>
 </details>
 
