@@ -1580,20 +1580,23 @@ def render_channels():
 
 # ---- Copy-paste outreach message templates (shown on the dashboard) ----
 OUTREACH_TEMPLATES = [
- ("⭐ Reply-all to the thread — thank Curie + confirm to HA", "Curie (NSSH) looped in Housing Assignments & confirmed they should house you. Reply-all: thank her, tell HA you're applying, ask the key questions",
+ ("⭐ Reply-all to the thread — applied + confirm grad vs undergrad", "After submitting at myhousing. Thank Curie + HA, confirm submitted, flag the “Undergraduate” header vs the Graduate form, ask timing + bridge. (If not yet submitted, change “and submitted” → “and am submitting now”.)",
   "Subject: Re: Incoming Summer Session Grad Student Looking for Housing — Simon\n\n"
   "Hi Curie and the Housing Assignments team,\n\n"
-  "Thank you both so much — Curie, I appreciate you redirecting me, and Szonja, thank you for the clear "
-  "instructions. I'm submitting the Graduate Housing Application for 2026 Summer at myhousing.stanford.edu "
-  "now.\n\n"
-  "A few quick questions so I apply correctly:\n"
-  "1. As an incoming Summer Session student, is the Graduate Housing Application the right form, and which "
-  "category should I select? Happy to send proof of my Summer Session enrollment.\n"
-  "2. Can I indicate a preference for a single room or studio, and does being flexible on "
-  "building/location improve my chances in the rolling round?\n"
-  "3. Classes start June 22 and I'm already in the area — is there interim/short-term on-campus housing to "
-  "bridge the gap if my assignment lands after the 22nd?\n\n"
-  "I can complete any paperwork and pay a deposit right away. Thank you again!\n\n"
+  "Thank you both so much — Curie, I really appreciate you redirecting me, and Szonja, thank you for the "
+  "clear instructions. Following them, I've completed and submitted my housing application at "
+  "myhousing.stanford.edu for the 2026 Summer rolling round.\n\n"
+  "One thing I'd like to confirm: the application I was routed to is titled “Undergraduate Housing "
+  "Application,” but your note pointed me to the Graduate Housing Application. As an incoming Summer "
+  "Session student, could you confirm I'm in the correct application and queue? I'm happy to redo it under "
+  "the right form, and I can send proof of my Summer Session enrollment right away.\n\n"
+  "A couple of quick questions so I can plan:\n"
+  "1. Roughly when might I hear about an assignment? Classes start June 22 and I'm already in the area, so "
+  "I'd love to be considered as early as possible.\n"
+  "2. If an assignment lands after the 22nd, is there any interim/short-term on-campus housing to bridge "
+  "the gap?\n"
+  "3. Is there anything else you need from me to move things along?\n\n"
+  "Thank you again for all your help!\n\n"
   "Best,\nSimon Tian · ipo@stanford.edu · 607-262-9704"),
  ("EVGR direct email — to a named poster", "When you have the poster's name + email (e.g. an EVGR unit); proofread/cleaned version",
   "Subject: Still available? — Simon (incoming Stanford summer student)\n\n"
@@ -1703,6 +1706,7 @@ TODOS = [
 
 # ---- Progress log (newest first) ----
 PROGRESS = [
+ ("Jun 19", "✅ Application SUBMITTED for the 2026 Summer rolling round. Replying to the email thread to confirm it's in, flag the “Undergraduate” header vs the Graduate form HA pointed me to (asking them to verify my queue), and ask about timing + a move-in bridge. Now waiting on a rolling assignment."),
  ("Jun 18", "Inside the housing application — every section complete through the Application Summary Page. Reached the “Suggested Groupmates” step (got an 88% match suggestion). Decided to stay SOLO for fastest placement (not cold-inviting a stranger). To confirm: that it's the GRADUATE app (header said Undergraduate) and that it's actually SUBMITTED."),
  ("Jun 17", "Email thread resolved: NSSH/Conferences can't house Summer Session students; R&DE Student Housing Assignments (Szonja) + Curie confirmed the GRADUATE summer rolling-round application is the path. Replied to the thread."),
 ]
