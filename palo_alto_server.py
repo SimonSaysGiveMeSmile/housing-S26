@@ -1580,17 +1580,15 @@ def render_channels():
 
 # ---- Copy-paste outreach message templates (shown on the dashboard) ----
 OUTREACH_TEMPLATES = [
- ("⭐ Reply to Vicky / Summer Session — RESIDENTIAL switch (do this first)", "Reply on ticket 61011 (summersession@stanford.edu). Vicky is switching you to the dorms — confirm + ask move-in/this-weekend logistics",
+ ("⭐ Reply to Vicky / Summer Session — RESIDENTIAL switch (do this first)", "Reply on ticket 61011 (summersession@stanford.edu). You've submitted the app — confirm it's the right one + ask move-in/this-weekend logistics",
   "Hi Vicky,\n\n"
-  "This is wonderful news — thank you so much! I'm submitting the housing application through your link "
-  "right now.\n\n"
-  "A few quick questions:\n"
-  "1. I'd already submitted a housing application earlier this week (it appeared as the “Undergraduate "
-  "Housing Application”) — does that cover the residential switch, or should I complete the one you linked "
-  "instead?\n"
-  "2. When can I move in, and what's happening this weekend that I should plan around?\n"
-  "3. Anything else you need from me to finish processing?\n\n"
-  "Thank you again — I really appreciate your help!\n\n"
+  "Thank you so much — this is great news! I've already submitted my housing application, so I think I'm "
+  "set on that front. A few quick questions:\n"
+  "1. Could you confirm the application I submitted is the correct one for the residential switch, and "
+  "that nothing further is needed from me?\n"
+  "2. When can I move in, and what should I plan around this weekend?\n"
+  "3. Is there anything else you need to finish processing?\n\n"
+  "Thank you again — I really appreciate your help, and I'm looking forward to this weekend!\n\n"
   "Best,\nSimon Tian · ipo@stanford.edu · (415) 426-8741"),
  ("Email 1 of 2 — thank-you to Curie", "Send to: csevilla@stanford.edu (keep it short)",
   "Subject: Thank you!\n\n"
@@ -1710,7 +1708,7 @@ TODOS = [
 
 # ---- Progress log (newest first) ----
 PROGRESS = [
- ("Jun 19 (PM)", "🎉 BREAKTHROUGH — Vicky B. (Stanford Summer Session) is switching me from the commuter program to the RESIDENTIAL program: “there is still space available in the dorms.” On-campus housing essentially secured. Next: submit the housing app via her link, reply to confirm + ask move-in/this-weekend logistics, lock the cost. This (Summer Session residential) is the right native path — likely resolves the Undergraduate-vs-Graduate confusion. June 22 gap likely solved if move-in is this weekend."),
+ ("Jun 19 (PM)", "🎉 BREAKTHROUGH — Vicky B. (Stanford Summer Session) is switching me from the commuter program to the RESIDENTIAL program: “there is still space available in the dorms.” Housing application SUBMITTED. Replied on ticket 61011 to confirm the submitted app is the correct residential one + ask move-in date / this-weekend check-in / cost. On-campus housing essentially secured; June 22 gap likely solved if move-in is this weekend."),
  ("Jun 19 (AM)", "✅ Application SUBMITTED for the 2026 Summer rolling round (R&DE/HA path). Replied to confirm + flag the Undergraduate-vs-Graduate header. Now a BACKUP to the Summer Session residential switch."),
  ("Jun 18", "Inside the housing application — every section complete through the Application Summary Page. Reached the “Suggested Groupmates” step (got an 88% match suggestion). Decided to stay SOLO for fastest placement (not cold-inviting a stranger). To confirm: that it's the GRADUATE app (header said Undergraduate) and that it's actually SUBMITTED."),
  ("Jun 17", "Email thread resolved: NSSH/Conferences can't house Summer Session students; R&DE Student Housing Assignments (Szonja) + Curie confirmed the GRADUATE summer rolling-round application is the path. Replied to the thread."),
