@@ -1570,35 +1570,20 @@ def render_channels():
 
 # ---- Copy-paste outreach message templates (shown on the dashboard) ----
 OUTREACH_TEMPLATES = [
- ("⭐ Reply to R&DE Student Housing (Szonja) — applying now", "Szonja confirmed the GRADUATE SUMMER rolling round is open to you; reply after you submit at myhousing.stanford.edu",
-  "Subject: Re: Graduate summer housing — thank you, submitting now\n\n"
-  "Hi Szonja,\n\n"
-  "Thank you so much — this is exactly the guidance I needed. I'm submitting the Graduate Housing "
-  "Application for 2026 Summer at myhousing.stanford.edu right now.\n\n"
-  "A couple of quick questions:\n"
-  "1. Can I indicate a preference for a single room or studio, and does being flexible on "
+ ("⭐ Reply-all to the thread — thank Curie + confirm to HA", "Curie (NSSH) looped in Housing Assignments & confirmed they should house you. Reply-all: thank her, tell HA you're applying, ask the key questions",
+  "Subject: Re: Incoming Summer Session Grad Student Looking for Housing — Simon\n\n"
+  "Hi Curie and the Housing Assignments team,\n\n"
+  "Thank you both so much — Curie, I appreciate you redirecting me, and Szonja, thank you for the clear "
+  "instructions. I'm submitting the Graduate Housing Application for 2026 Summer at myhousing.stanford.edu "
+  "now.\n\n"
+  "A few quick questions so I apply correctly:\n"
+  "1. As an incoming Summer Session student, is the Graduate Housing Application the right form, and which "
+  "category should I select? Happy to send proof of my Summer Session enrollment.\n"
+  "2. Can I indicate a preference for a single room or studio, and does being flexible on "
   "building/location improve my chances in the rolling round?\n"
-  "2. Classes start June 22 and I'm already in the area — is there anything I can do to flag that I "
-  "can move in immediately and be considered as early as possible?\n"
-  "3. If an assignment comes through after the 22nd, is there short-term on-campus housing to bridge "
-  "the gap?\n\n"
-  "Thank you again for your help — I really appreciate it.\n\n"
-  "Best,\nSimon Tian · ipo@stanford.edu · 607-262-9704"),
- ("Reply to R&DE Conferences (Chris) — Adult Housing details", "Chris @ summerhousing offered on-campus 'Adult Housing'; reply to pin down full-summer rate + student rate before registering",
-  "Subject: Re: Adult Housing — full-summer rates & student eligibility?\n\n"
-  "Hi Chris,\n\n"
-  "Thank you so much for the quick and helpful reply — I really appreciate it. The Adult Housing option "
-  "looks promising, and I do have Stanford affiliation: I'm an enrolled incoming Summer Session student "
-  "(my Stanford email is ipo@stanford.edu), so I can send proof right away.\n\n"
-  "Before I register, could you help me with a few details?\n"
-  "1. For a full-summer stay (roughly June 22 through mid-September), what is the rate — is it billed per "
-  "night or as a flat term rate?\n"
-  "2. Is the room a private single/studio, and is the bathroom private or shared?\n"
-  "3. Since I'm an enrolled Summer Session student (not a guest), is there a student rate, or a separate "
-  "Summer Session student housing path I should be using instead?\n"
-  "4. If I register via the button on the page, does that secure the room, or is there a separate "
-  "confirmation step?\n\n"
-  "I'm ready to register and pay a deposit as soon as you point me the right way. Thank you again!\n\n"
+  "3. Classes start June 22 and I'm already in the area — is there interim/short-term on-campus housing to "
+  "bridge the gap if my assignment lands after the 22nd?\n\n"
+  "I can complete any paperwork and pay a deposit right away. Thank you again!\n\n"
   "Best,\nSimon Tian · ipo@stanford.edu · 607-262-9704"),
  ("EVGR direct email — to a named poster", "When you have the poster's name + email (e.g. an EVGR unit); proofread/cleaned version",
   "Subject: Still available? — Simon (incoming Stanford summer student)\n\n"
@@ -1666,15 +1651,17 @@ def render_templates():
 
 # ---- To-do list (checkable, persists per-browser) ----
 TODOS = [
- ("🟢 #1 — SUBMIT THE GRAD APPLICATION NOW (rolling round is OPEN)", [
-   "⭐ GREEN LIGHT (Jun 17 — Szonja Vajda, R&DE Student Housing Assignments): the GRADUATE SUMMER rolling round is open to you. SUBMIT TODAY at myhousing.stanford.edu → Graduate Housing Application → pick a category → 2026 Summer → follow prompts → submit. This is the CHEAP official student path.",
-   "Before you pick a category, check the rates/options so you choose one within budget: rde.stanford.edu/studenthousing/summer-graduate-housing-options-and-rates",
-   "Assignments are made on a ROLLING basis (no fixed date) — could land by next Friday or sooner. Apply now to get in the queue early; flexibility on building/location helps.",
-   "Reply to Szonja once submitted (⭐ template above) — confirm you applied + ask about a single/studio preference and bridging the gap if the assignment lands after June 22.",
+ ("🟢 #1 — SUBMIT THE GRAD APPLICATION NOW (HA confirmed your path)", [
+   "⭐ CONFIRMED (Jun 17): R&DE Student Housing Assignments (Szonja Vajda) says submit the GRADUATE SUMMER application, rolling round — and Curie Sevilla looped HA in and told them to house you. That's leverage. SUBMIT TODAY: myhousing.stanford.edu → Graduate Housing Application → pick a category → 2026 Summer → submit. SCREENSHOT the confirmation.",
+   "First check rates/options so you pick a category within ~$2k budget: rde.stanford.edu/studenthousing/summer-graduate-housing-options-and-rates",
+   "Assignments are ROLLING (no fixed date) — could land by next Friday (~Jun 26) or sooner. Apply now to be early in the queue; flexibility on building/location helps.",
+   "If the form blocks you on grad-enrollment/eligibility, DON'T quit — reply to HA citing Curie's email (she told HA to house you as a Summer Session student).",
+   "Reply-all to the thread (⭐ template above): thank Curie, confirm to HA you've applied, ask the right category for a Summer Session student + whether interim housing bridges the June 22 gap.",
  ]),
- ("🟠 Backups if the grad assignment is slow", [
-   "PAID BRIDGE — R&DE Conferences 'Adult Housing' (Chris @ summerhousing): on-campus, available NOW, min 3 nights, needs affiliation (you qualify). Likely priced PER NIGHT — reply to Chris (template above) to confirm the full-summer rate BEFORE registering. Use only to bridge a gap. rde.stanford.edu/conferences/non-student-summer-housing-housing-choices",
-   "Email shsublease@lists.stanford.edu / call (650) 724-0544 for the OFFICIAL on-campus sublease database (sublicense window Jun 19 – Aug 31). Verify any sublicense is authorized before paying.",
+ ("🟠 Cover the June 22 move-in gap + hedge", [
+   "❌ NOT Conferences/Adult Housing — Curie confirmed NSSH cannot house Summer Session students. Crossed off; ignore Chris's reply.",
+   "BRIDGE for ~June 22–28 (assignment may land after classes start): line up a short SUpost sublet, or a cheap Airbnb/hotel as a last resort, so you're covered on day one. Also ask HA (reply above) if interim on-campus housing exists.",
+   "Email shsublease@lists.stanford.edu / call (650) 724-0544 for the OFFICIAL on-campus sublease database (sublicense window Jun 19 – Aug 31). A legit sublet could beat HA's timeline — verify any sublicense is authorized before paying.",
    "Email studenthousing@stanford.edu for a Places4Students login (or register at places4students.com with ipo@stanford.edu) for vetted off-campus listings.",
  ]),
  ("🟡 Work the sublet tracker (below)", [
