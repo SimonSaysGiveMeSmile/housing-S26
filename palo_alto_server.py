@@ -235,6 +235,10 @@ details.chan[open]>summary{border-bottom:1px solid #eee}
 .todo.done span{text-decoration:line-through;color:#9ca3af}
 details.disc.todobox{background:#fff;border-color:#d1d5db}
 details.disc.todobox>summary{color:#111;font-size:14px;font-weight:700}
+.prog{background:#fffbeb;border:1px solid #fde68a;border-radius:6px;padding:8px 12px;margin:0 0 12px}
+.prog-t{font-weight:700;font-size:13px;color:#92400e;margin-bottom:4px}
+.prog ul{margin:0;padding-left:18px}
+.prog li{font-size:12.5px;line-height:1.5;color:#444;margin:3px 0}
 .actionplan{background:#eff6ff;border:1px solid #bfdbfe;border-left:4px solid #2563eb;border-radius:8px;padding:12px 16px;margin:12px 0}
 .actionplan .ap-title{font-size:14px;font-weight:800;color:#1e3a8a;margin-bottom:8px}
 .actionplan ol{margin:0;padding-left:22px}
@@ -1663,6 +1667,9 @@ TODOS = [
    "Select Graduate Housing Application → choose a category → quarter = 2026 Summer",
    "Follow the prompts and submit",
    "Screenshot the confirmation",
+   "⚠️ Verify the form is the GRADUATE Housing Application (Szonja's instruction) — the portal header showed 'Undergraduate'. Make sure you're in the right queue.",
+   "Confirm the application is actually SUBMITTED — the 'Suggested Groupmates' page is a separate/optional step and being on it doesn't mean you've submitted.",
+   "Groupmates are OPTIONAL: solo applicants are usually easier to place fast. Don't cold-invite a stranger; only invite/join (or 'Send Message' first) if you specifically want a chosen roommate over speed.",
  ]),
  ("2 · Reply-all to the email thread", [
    "Open the HA thread (Curie Sevilla / Szonja Vajda / Housing Assignments)",
@@ -1693,6 +1700,16 @@ TODOS = [
    "Have a deposit ready to move same-day",
  ]),
 ]
+
+# ---- Progress log (newest first) ----
+PROGRESS = [
+ ("Jun 18", "Inside the housing application — every section complete through the Application Summary Page. Reached the “Suggested Groupmates” step (got an 88% match suggestion). Decided to stay SOLO for fastest placement (not cold-inviting a stranger). To confirm: that it's the GRADUATE app (header said Undergraduate) and that it's actually SUBMITTED."),
+ ("Jun 17", "Email thread resolved: NSSH/Conferences can't house Summer Session students; R&DE Student Housing Assignments (Szonja) + Curie confirmed the GRADUATE summer rolling-round application is the path. Replied to the thread."),
+]
+def render_progress():
+    if not PROGRESS: return ""
+    rows = "".join(f'<li><b>{html.escape(d)}</b> — {html.escape(t)}</li>' for d, t in PROGRESS)
+    return f'<div class="prog"><div class="prog-t">📍 Progress (latest first)</div><ul>{rows}</ul></div>'
 
 def render_todos():
     out = []
@@ -2017,6 +2034,7 @@ document.addEventListener('DOMContentLoaded', function() {{
 <details class="disc todobox" open>
 <summary>✅ Action-plan checklist — tick these off in order <span id="todoCount" style="font-weight:500;color:#9ca3af;font-size:12px"></span></summary>
 <div class="disc-body">
+{render_progress()}
 {render_todos()}
 </div>
 </details>
