@@ -1455,8 +1455,8 @@ OUTREACH_CHANNELS = [
    ("R&DE Short-Term Visitors", "https://rde.stanford.edu/studenthousing/short-term-visitors", "gateway: what proof to send to unlock the listings", "gateway"),
    ("R&DE Sublicense board", "https://rde.stanford.edu/studenthousing/sublicense", "on-campus grad sublets (EV/Munger/Rains), often below-market — needs Stanford login", "often <$2k"),
    ("Stanford FSH mailing lists", "https://fsh.stanford.edu/mailing_lists", "faculty/staff housing alerts + direct-from-owner portal", "some <$2.1k"),
-   ("Summer Session — Live on Campus", "https://summer.stanford.edu/residential", "your program's official on-campus option — email about late/waitlist", "bundled pkg"),
-   ("Summer housing application portal", "https://summerapply.stanford.edu/", "complete/check housing app or confirm commuter status", "portal"),
+   ("Summer Session — Live on Campus", "https://summer.stanford.edu/residential", "⚠️ NOT your path — R&DE redirected you to the Graduate Housing Application (myhousing); Curie says NSSH/Summer-Session residential can't house Summer Session students. Verify only.", "OUT for you"),
+   ("Summer housing application portal", "https://summerapply.stanford.edu/", "Summer Session program portal — use to confirm commuter status only; your housing path is myhousing.stanford.edu", "portal"),
    ("SabbaticalHomes — GSB sublets", "https://www.sabbaticalhomes.com/housing/stanford-graduate-school-of-business", "MBAs sublet furnished units Jun–Aug — strong window", "furnished"),
    ("Intl visitor resources", "https://community.stanford.edu/engage/engaging-globally/resources-international-visitors-stanford-appointments", "Stanford-curated homestay/visitor links (cheap rooms)", "homestay"),
  ]),
@@ -1657,28 +1657,40 @@ def render_templates():
 
 # ---- To-do list (checkable, persists per-browser) ----
 TODOS = [
- ("🟢 #1 — SUBMIT THE GRAD APPLICATION NOW (HA confirmed your path)", [
-   "⭐ CONFIRMED (Jun 17): R&DE Student Housing Assignments (Szonja Vajda) says submit the GRADUATE SUMMER application, rolling round — and Curie Sevilla looped HA in and told them to house you. That's leverage. SUBMIT TODAY: myhousing.stanford.edu → Graduate Housing Application → pick a category → 2026 Summer → submit. SCREENSHOT the confirmation.",
-   "First check rates/options so you pick a category within ~$2k budget: rde.stanford.edu/studenthousing/summer-graduate-housing-options-and-rates",
-   "Assignments are ROLLING (no fixed date) — could land by next Friday (~Jun 26) or sooner. Apply now to be early in the queue; flexibility on building/location helps.",
-   "If the form blocks you on grad-enrollment/eligibility, DON'T quit — reply to HA citing Curie's email (she told HA to house you as a Summer Session student).",
-   "Reply-all to the thread (⭐ template above): thank Curie, confirm to HA you've applied, ask the right category for a Summer Session student + whether interim housing bridges the June 22 gap.",
+ ("1 · Apply today — the official path ⭐", [
+   "Open the rates page and pick a category within ~$2k: rde.stanford.edu/studenthousing/summer-graduate-housing-options-and-rates",
+   "Go to myhousing.stanford.edu and log in",
+   "Select Graduate Housing Application → choose a category → quarter = 2026 Summer",
+   "Follow the prompts and submit",
+   "Screenshot the confirmation",
  ]),
- ("🟠 Cover the June 22 move-in gap + hedge", [
-   "❌ NOT Conferences/Adult Housing — Curie confirmed NSSH cannot house Summer Session students. Crossed off; ignore Chris's reply.",
-   "BRIDGE for ~June 22–28 (assignment may land after classes start): line up a short SUpost sublet, or a cheap Airbnb/hotel as a last resort, so you're covered on day one. Also ask HA (reply above) if interim on-campus housing exists.",
-   "Email shsublease@lists.stanford.edu / call (650) 724-0544 for the OFFICIAL on-campus sublease database (sublicense window Jun 19 – Aug 31). A legit sublet could beat HA's timeline — verify any sublicense is authorized before paying.",
-   "Email studenthousing@stanford.edu for a Places4Students login (or register at places4students.com with ipo@stanford.edu) for vetted off-campus listings.",
+ ("2 · Reply-all to the email thread", [
+   "Open the HA thread (Curie Sevilla / Szonja Vajda / Housing Assignments)",
+   "Copy the ⭐ “Reply-all to the thread” template below",
+   "Reply-all: thank Curie, tell HA you've applied, ask the right category + the move-in bridge",
+   "Send it",
  ]),
- ("🟡 Work the sublet tracker (below)", [
-   "Message the not-yet-contacted on-campus sublets — tap ⚡ My next moves, then copy the “Fast-mover opener” template.",
-   "Send a follow-up to anyone silent 3+ days (Follow-up template).",
-   "Send the “Keep me as backup” note to every “it's taken” reply (Faatira, Sujay, Selim so far).",
-   "Post a “Housing Wanted” ad on SUpost + FB Stanford Housing + r/stanford (template above).",
-   "Follow up with Hulme (andaru@stanford.edu) on next steps / the price.",
+ ("3 · If the form blocks you", [
+   "If it asks for grad-enrollment/eligibility you can't meet, DON'T quit",
+   "Reply to HA citing Curie's email (she told them to house you) and offer proof of your Summer Session enrollment",
  ]),
- ("🟢 Daily habit", [
-   "Check SUpost sorted newest 2–3× a day and message within minutes — and mark each contact here as you go.",
+ ("4 · Cover June 22–28 — the move-in bridge", [
+   "Assume the assignment may land AFTER classes start June 22 — plan a ~1-week bridge",
+   "Line up a short SUpost sublet, or a cheap Airbnb as a last resort",
+   "Ask HA whether interim on-campus housing exists (covered by your reply above)",
+   "❌ Skip Conferences/Adult Housing — NSSH can't house Summer Session students",
+ ]),
+ ("5 · Hedge — keep options open", [
+   "Email shsublease@lists.stanford.edu / call (650) 724-0544 for the OFFICIAL on-campus sublease list — a legit sublet could beat HA's timeline (verify any sublicense is authorized before paying)",
+   "Keep messaging not-yet-contacted on-campus sublets — tap ⚡ My next moves, then copy the “Fast-mover opener” template",
+   "Send a follow-up to anyone silent 3+ days; send the “Keep me as backup” note on every “it's taken”",
+   "Post a “Housing Wanted” ad on SUpost + FB Stanford Housing + r/stanford (template below)",
+   "Daily: check SUpost sorted newest 2–3× a day, message within minutes, and mark each contact here",
+ ]),
+ ("6 · When an offer lands — decide", [
+   "Compare the HA assignment (rate / building / dates) vs. your best sublet",
+   "Take the cheaper one that fits your dates; decline the other promptly",
+   "Have a deposit ready to move same-day",
  ]),
 ]
 
@@ -2003,7 +2015,7 @@ document.addEventListener('DOMContentLoaded', function() {{
 </div>
 
 <details class="disc todobox" open>
-<summary>✅ Your housing to-do list <span id="todoCount" style="font-weight:500;color:#9ca3af;font-size:12px"></span></summary>
+<summary>✅ Action-plan checklist — tick these off in order <span id="todoCount" style="font-weight:500;color:#9ca3af;font-size:12px"></span></summary>
 <div class="disc-body">
 {render_todos()}
 </div>
