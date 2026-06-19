@@ -1711,6 +1711,7 @@ TODOS = [
 
 # ---- Progress log (newest first) ----
 PROGRESS = [
+ ("Jun 19 (CONFIRMED ✅)", "Vicky (15:38): “You will soon receive a housing assignment — periodically check your housing portal.” = ROOM SECURED, just awaiting the specific assignment (building/room/move-in will appear in MyHousing). Residential switch adds a HOUSING FEE — estimate it at summer.stanford.edu/cost/tuition-fees-calculator. Only to-dos left: watch the portal + check the cost. Search effectively DONE."),
  ("Jun 19 (sublets)", "Logged poster replies — all dead or wrong-dates (moot now that residential is secured): Suvir/EVGR, Jiayi/Stanford West, Bhavya/Kennedy, Ayush/EVGR flat, Sahithi = TAKEN; Keanu/Hulme = waitlisted + offered 7/25–9/1 (declined, needed June); Chenxi-Cody/garden suite = available Aug–mid-Sep only (wrong dates). On-campus June sublet market is basically exhausted — confirms the official residential path was the right call."),
  ("Jun 19 (PM)", "🎉 BREAKTHROUGH — Vicky B. (Stanford Summer Session) is switching me from the commuter program to the RESIDENTIAL program: “there is still space available in the dorms.” Housing application SUBMITTED via MyHousing. Replied on ticket 61011 asking how to expedite + whether there are extra charges for the switch. STILL TO CONFIRM: that the submitted app is the correct residential one (Vicky sent a specific StarRez link), and my move-in date / this-weekend check-in. On-campus housing essentially secured; June 22 gap solved if move-in is this weekend."),
  ("Jun 19 (AM)", "✅ Application SUBMITTED for the 2026 Summer rolling round (R&DE/HA path). Replied to confirm + flag the Undergraduate-vs-Graduate header. Now a BACKUP to the Summer Session residential switch."),
@@ -2027,18 +2028,17 @@ document.addEventListener('DOMContentLoaded', function() {{
 </head><body>
 <header class="masthead">
 <h1>Simon's Stanford Summer 2026 Housing</h1>
-<p class="sub">🎉 Summer Session is switching you commuter → RESIDENTIAL (dorm space available). On-campus housing essentially secured — just finish the application + move-in logistics.</p>
+<p class="sub">✅ HOUSING SECURED — Summer Session switched you commuter → RESIDENTIAL; application submitted; Vicky confirmed a room assignment is coming. Just watch the portal + check the cost.</p>
 </header>
 
 <div class="actionplan">
-<div class="ap-title">📌 Action plan — do these in order (updated Jun 19)</div>
+<div class="ap-title">📌 Action plan — almost done (updated Jun 19, confirmed)</div>
 <ol>
-<li><strong>Submit the housing app via Vicky's link NOW.</strong> <a href="https://myhousing.stanford.edu/StarRezPortalX/BDDC9F67/1/1/Home-Home?UrlToken=3D3B91AF" target="_blank">Summer Session residential application</a>. Space is confirmed available — this is your solution.</li>
-<li><strong>Check it's not a duplicate.</strong> If this is the same app you already submitted (the "Undergraduate Housing Application"), just confirm it's complete; if different, finish this one.</li>
-<li><strong>Reply to Vicky (ticket 61011).</strong> Thank her, confirm you're submitting, ask move-in date + this weekend's check-in + whether your earlier app counts (⭐ Email to Vicky below).</li>
-<li><strong>Lock move-in this weekend.</strong> Confirm date / building / key pickup / what to bring + the cost. Move-in this weekend = the June 22 gap is solved. If the app snags, file an R&amp;DE Help Ticket.</li>
-<li><strong>Keep the grad rolling-round app (Szonja/HA) as backup</strong> — don't cancel until residential is 100% confirmed.</li>
-<li><strong>Stand down sublets</strong> to 1–2 warm leads only until you're physically moved in. <span class="ap-out">Conferences/Adult Housing remains OUT.</span></li>
+<li><strong>✅ Done:</strong> commuter → residential switch + application submitted; Vicky (Summer Session) confirmed “you will soon receive a housing assignment.”</li>
+<li><strong>Watch the MyHousing portal</strong> every day or two — your building / room / move-in date will appear there as the assignment is processed.</li>
+<li><strong>Check the cost.</strong> Residential adds a housing fee — estimate it with the <a href="https://summer.stanford.edu/cost/tuition-fees-calculator" target="_blank">tuition &amp; fees calculator</a> so there's no billing surprise.</li>
+<li><strong>(Optional) confirm move-in logistics</strong> — if the portal doesn't show a date, ask R&amp;DE / Summer Session about key pickup + this weekend's check-in.</li>
+<li><strong>Stand down the backups</strong> — the grad rolling-round app and the sublet search are no longer needed. <span class="ap-out">Conferences/Adult Housing remains OUT.</span></li>
 </ol>
 </div>
 
