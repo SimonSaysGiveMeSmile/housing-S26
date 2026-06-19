@@ -2149,6 +2149,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 if __name__=="__main__":
     if "--serve" not in sys.argv:
         print(render_body()); sys.exit(0)
+    socketserver.TCPServer.allow_reuse_address = True
     with socketserver.TCPServer(("",PORT),Handler) as httpd:
         print(f"[palo_alto_server] http://localhost:{PORT}/",flush=True)
         try: httpd.serve_forever()
