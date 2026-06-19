@@ -235,6 +235,12 @@ details.chan[open]>summary{border-bottom:1px solid #eee}
 .todo.done span{text-decoration:line-through;color:#9ca3af}
 details.disc.todobox{background:#fff;border-color:#d1d5db}
 details.disc.todobox>summary{color:#111;font-size:14px;font-weight:700}
+.actionplan{background:#eff6ff;border:1px solid #bfdbfe;border-left:4px solid #2563eb;border-radius:8px;padding:12px 16px;margin:12px 0}
+.actionplan .ap-title{font-size:14px;font-weight:800;color:#1e3a8a;margin-bottom:8px}
+.actionplan ol{margin:0;padding-left:22px}
+.actionplan li{font-size:13px;line-height:1.5;color:#1f2937;margin:5px 0}
+.actionplan li strong{color:#111}
+.actionplan .ap-out{color:#b91c1c;font-weight:600}
 @media (max-width:720px){body{padding:12px}.card,.card.noimg{grid-template-columns:1fr;height:auto}.card-images{width:100%;height:160px}.status-row{flex-wrap:wrap}.stat{flex:1 0 50%;border-bottom:1px solid #eee}.fb-count{margin-left:0;flex-basis:100%}.card-head{flex-wrap:wrap}.price{white-space:normal}table{min-width:560px}}
 @media print{.card{break-inside:avoid;height:auto!important}h2{break-after:avoid}.filterbar{display:none}}
 """
@@ -1983,6 +1989,18 @@ document.addEventListener('DOMContentLoaded', function() {{
 <h1>Simon's Stanford Summer 2026 Housing</h1>
 <p class="sub">Under $2,000/mo · Dedicated units, no housemates · Within 20 min of Stanford · East Palo Alto excluded</p>
 </header>
+
+<div class="actionplan">
+<div class="ap-title">📌 Action plan — do these in order</div>
+<ol>
+<li><strong>Apply today.</strong> myhousing.stanford.edu → Graduate Housing Application → 2026 Summer → submit. Check rates first; screenshot the confirmation.</li>
+<li><strong>Reply-all to the email thread.</strong> Thank Curie, tell HA you've applied, ask the right category + the move-in bridge (⭐ template below).</li>
+<li><strong>If the form blocks you,</strong> don't quit — reply to HA citing Curie's email (she told them to house you).</li>
+<li><strong>Cover June 22–28.</strong> Line up a short sublet or cheap Airbnb as a bridge — the assignment may land after classes start. <span class="ap-out">Conferences/Adult Housing is OUT (can't house Summer Session students).</span></li>
+<li><strong>Hedge.</strong> Keep messaging on-campus sublets and request the official sublease list (shsublease@lists.stanford.edu).</li>
+<li><strong>When an offer lands,</strong> compare it vs. your best sublet, take the cheaper one that fits your dates — deposit ready.</li>
+</ol>
+</div>
 
 <details class="disc todobox" open>
 <summary>✅ Your housing to-do list <span id="todoCount" style="font-weight:500;color:#9ca3af;font-size:12px"></span></summary>
