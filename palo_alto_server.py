@@ -1583,18 +1583,16 @@ OUTREACH_TEMPLATES = [
  ("⭐ Email 1 of 2 — thank-you to Curie", "Send to: csevilla@stanford.edu (keep it short)",
   "Subject: Thank you!\n\n"
   "Hi Curie,\n\n"
-  "Thank you for redirecting me to Housing Assignments — much appreciated. I've now submitted my "
-  "application for the 2026 Summer rolling round. Grateful for your help!\n\n"
+  "Thank you so much for the pointers and for sending me to Housing Assignments — much appreciated. "
+  "I've submitted my application for the 2026 Summer rolling round. Grateful for your help!\n\n"
   "Best,\nSimon Tian · ipo@stanford.edu"),
- ("⭐ Email 2 of 2 — Housing Assignments (confirm + timing)", "Send to: housingassignments@stanford.edu",
-  "Subject: Application submitted (2026 Summer) — quick questions\n\n"
+ ("⭐ Email 2 of 2 — Housing Assignments (what's next / expedite)", "Send to: housingassignments@stanford.edu",
+  "Subject: Application submitted (2026 Summer) — what's next?\n\n"
   "Hi Szonja,\n\n"
-  "Thank you — I've submitted my application at myhousing.stanford.edu for the 2026 Summer rolling round. "
-  "Two quick things:\n"
-  "1. It was titled “Undergraduate Housing Application,” but you'd pointed me to the Graduate one — as a "
-  "Summer Session student, am I in the right queue? Happy to redo it or send proof of enrollment.\n"
-  "2. Roughly when might I hear about an assignment, and is there interim housing if it lands after classes "
-  "start June 22?\n\n"
+  "Thank you for the pointers — I've submitted my application at myhousing.stanford.edu for the 2026 "
+  "Summer rolling round. What are the next steps from here? And since classes start June 22 and I'm "
+  "already in the area, is there any way to expedite the assignment (or any interim housing in the "
+  "meantime)? Happy to send anything you need.\n\n"
   "Thanks so much!\n\n"
   "Best,\nSimon Tian · ipo@stanford.edu · 607-262-9704"),
  ("EVGR direct email — to a named poster", "When you have the poster's name + email (e.g. an EVGR unit); proofread/cleaned version",
