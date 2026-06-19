@@ -1580,13 +1580,25 @@ def render_channels():
 
 # ---- Copy-paste outreach message templates (shown on the dashboard) ----
 OUTREACH_TEMPLATES = [
- ("⭐ Email 1 of 2 — thank-you to Curie", "Send to: csevilla@stanford.edu (keep it short)",
+ ("⭐ Reply to Vicky / Summer Session — RESIDENTIAL switch (do this first)", "Reply on ticket 61011 (summersession@stanford.edu). Vicky is switching you to the dorms — confirm + ask move-in/this-weekend logistics",
+  "Hi Vicky,\n\n"
+  "This is wonderful news — thank you so much! I'm submitting the housing application through your link "
+  "right now.\n\n"
+  "A few quick questions:\n"
+  "1. I'd already submitted a housing application earlier this week (it appeared as the “Undergraduate "
+  "Housing Application”) — does that cover the residential switch, or should I complete the one you linked "
+  "instead?\n"
+  "2. When can I move in, and what's happening this weekend that I should plan around?\n"
+  "3. Anything else you need from me to finish processing?\n\n"
+  "Thank you again — I really appreciate your help!\n\n"
+  "Best,\nSimon Tian · ipo@stanford.edu · (415) 426-8741"),
+ ("Email 1 of 2 — thank-you to Curie", "Send to: csevilla@stanford.edu (keep it short)",
   "Subject: Thank you!\n\n"
   "Hi Curie,\n\n"
   "Thank you so much for the pointers and for sending me to Housing Assignments — much appreciated. "
   "I've submitted my application for the 2026 Summer rolling round. Grateful for your help!\n\n"
   "Best,\nSimon Tian · ipo@stanford.edu"),
- ("⭐ Email 2 of 2 — Housing Assignments (what's next / expedite)", "Send to: housingassignments@stanford.edu",
+ ("Email 2 of 2 — Housing Assignments (backup path)", "Send to: housingassignments@stanford.edu — only if the Summer Session residential switch falls through",
   "Subject: Application submitted (2026 Summer) — what's next?\n\n"
   "Hi Szonja,\n\n"
   "Thank you for the pointers — I've submitted my application at myhousing.stanford.edu for the 2026 "
@@ -1661,21 +1673,16 @@ def render_templates():
 
 # ---- To-do list (checkable, persists per-browser) ----
 TODOS = [
- ("1 · Apply today — the official path ⭐", [
-   "Open the rates page and pick a category within ~$2k: rde.stanford.edu/studenthousing/summer-graduate-housing-options-and-rates",
-   "Go to myhousing.stanford.edu and log in",
-   "Select Graduate Housing Application → choose a category → quarter = 2026 Summer",
-   "Follow the prompts and submit",
-   "Screenshot the confirmation",
-   "⚠️ Verify the form is the GRADUATE Housing Application (Szonja's instruction) — the portal header showed 'Undergraduate'. Make sure you're in the right queue.",
-   "Confirm the application is actually SUBMITTED — the 'Suggested Groupmates' page is a separate/optional step and being on it doesn't mean you've submitted.",
-   "Groupmates are OPTIONAL: solo applicants are usually easier to place fast. Don't cold-invite a stranger; only invite/join (or 'Send Message' first) if you specifically want a chosen roommate over speed.",
+ ("1 · 🎉 Summer Session RESIDENTIAL switch — your solution ⭐", [
+   "Submit the housing app via Vicky's link NOW: myhousing.stanford.edu/StarRezPortalX/BDDC9F67/1/1/Home-Home?UrlToken=3D3B91AF",
+   "Check it's not a duplicate of the app you already submitted (the 'Undergraduate Housing Application'). If same → confirm complete; if different → finish this one.",
+   "Reply to Vicky on ticket 61011 (⭐ template below): thank her, confirm submitting, ask move-in date + this weekend's check-in + whether your earlier app counts.",
+   "If the application snags, file an R&DE Help Ticket (as Vicky suggested).",
  ]),
- ("2 · Reply-all to the email thread", [
-   "Open the HA thread (Curie Sevilla / Szonja Vajda / Housing Assignments)",
-   "Copy the ⭐ “Reply-all to the thread” template below",
-   "Reply-all: thank Curie, tell HA you've applied, ask the right category + the move-in bridge",
-   "Send it",
+ ("2 · Lock move-in + cost", [
+   "Confirm move-in date, building, key pickup, and what to bring — aim for this weekend (June 20–21) so you're in before classes June 22.",
+   "Confirm the residential program cost (room+board bundle; charges hit next billing period).",
+   "If move-in is this weekend, the June 22 gap is SOLVED — relax the bridge plan.",
  ]),
  ("3 · If the form blocks you", [
    "If it asks for grad-enrollment/eligibility you can't meet, DON'T quit",
@@ -1703,7 +1710,8 @@ TODOS = [
 
 # ---- Progress log (newest first) ----
 PROGRESS = [
- ("Jun 19", "✅ Application SUBMITTED for the 2026 Summer rolling round. Replying to the email thread to confirm it's in, flag the “Undergraduate” header vs the Graduate form HA pointed me to (asking them to verify my queue), and ask about timing + a move-in bridge. Now waiting on a rolling assignment."),
+ ("Jun 19 (PM)", "🎉 BREAKTHROUGH — Vicky B. (Stanford Summer Session) is switching me from the commuter program to the RESIDENTIAL program: “there is still space available in the dorms.” On-campus housing essentially secured. Next: submit the housing app via her link, reply to confirm + ask move-in/this-weekend logistics, lock the cost. This (Summer Session residential) is the right native path — likely resolves the Undergraduate-vs-Graduate confusion. June 22 gap likely solved if move-in is this weekend."),
+ ("Jun 19 (AM)", "✅ Application SUBMITTED for the 2026 Summer rolling round (R&DE/HA path). Replied to confirm + flag the Undergraduate-vs-Graduate header. Now a BACKUP to the Summer Session residential switch."),
  ("Jun 18", "Inside the housing application — every section complete through the Application Summary Page. Reached the “Suggested Groupmates” step (got an 88% match suggestion). Decided to stay SOLO for fastest placement (not cold-inviting a stranger). To confirm: that it's the GRADUATE app (header said Undergraduate) and that it's actually SUBMITTED."),
  ("Jun 17", "Email thread resolved: NSSH/Conferences can't house Summer Session students; R&DE Student Housing Assignments (Szonja) + Curie confirmed the GRADUATE summer rolling-round application is the path. Replied to the thread."),
 ]
@@ -2017,18 +2025,18 @@ document.addEventListener('DOMContentLoaded', function() {{
 </head><body>
 <header class="masthead">
 <h1>Simon's Stanford Summer 2026 Housing</h1>
-<p class="sub">On-campus Stanford only · ~3–4 month lease (full June→September, extendable) · Official R&amp;DE grad application is the path · sublets as a hedge</p>
+<p class="sub">🎉 Summer Session is switching you commuter → RESIDENTIAL (dorm space available). On-campus housing essentially secured — just finish the application + move-in logistics.</p>
 </header>
 
 <div class="actionplan">
-<div class="ap-title">📌 Action plan — do these in order</div>
+<div class="ap-title">📌 Action plan — do these in order (updated Jun 19)</div>
 <ol>
-<li><strong>Apply today.</strong> myhousing.stanford.edu → Graduate Housing Application → 2026 Summer → submit. Check rates first; screenshot the confirmation.</li>
-<li><strong>Reply-all to the email thread.</strong> Thank Curie, tell HA you've applied, ask the right category + the move-in bridge (⭐ template below).</li>
-<li><strong>If the form blocks you,</strong> don't quit — reply to HA citing Curie's email (she told them to house you).</li>
-<li><strong>Cover June 22–28.</strong> Line up a short sublet or cheap Airbnb as a bridge — the assignment may land after classes start. <span class="ap-out">Conferences/Adult Housing is OUT (can't house Summer Session students).</span></li>
-<li><strong>Hedge.</strong> Keep messaging on-campus sublets and request the official sublease list (shsublease@lists.stanford.edu).</li>
-<li><strong>When an offer lands,</strong> compare it vs. your best sublet, take the cheaper one that fits your dates — deposit ready.</li>
+<li><strong>Submit the housing app via Vicky's link NOW.</strong> <a href="https://myhousing.stanford.edu/StarRezPortalX/BDDC9F67/1/1/Home-Home?UrlToken=3D3B91AF" target="_blank">Summer Session residential application</a>. Space is confirmed available — this is your solution.</li>
+<li><strong>Check it's not a duplicate.</strong> If this is the same app you already submitted (the "Undergraduate Housing Application"), just confirm it's complete; if different, finish this one.</li>
+<li><strong>Reply to Vicky (ticket 61011).</strong> Thank her, confirm you're submitting, ask move-in date + this weekend's check-in + whether your earlier app counts (⭐ Email to Vicky below).</li>
+<li><strong>Lock move-in this weekend.</strong> Confirm date / building / key pickup / what to bring + the cost. Move-in this weekend = the June 22 gap is solved. If the app snags, file an R&amp;DE Help Ticket.</li>
+<li><strong>Keep the grad rolling-round app (Szonja/HA) as backup</strong> — don't cancel until residential is 100% confirmed.</li>
+<li><strong>Stand down sublets</strong> to 1–2 warm leads only until you're physically moved in. <span class="ap-out">Conferences/Adult Housing remains OUT.</span></li>
 </ol>
 </div>
 
