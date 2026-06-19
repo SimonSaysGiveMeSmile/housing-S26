@@ -398,7 +398,8 @@ SHORT_TERM = [
 SUPOST = [
  # ---- NEWEST (Jun 8) — your latest outreach on top ----
  {"top":True,"title":"Room sublease — Kennedy (Jun 23–Sep 10)","mid":"su-kennedy-jun23-sep10","price":"$1,600/mo","src":"SUpost · Stanford-only",
-  "area":"On campus, Stanford (Kennedy grad housing)","status":("go","CONTACTED Jun 8 · best date match"),
+  "area":"On campus, Stanford (Kennedy grad housing)","status":("dead","TAKEN · found someone"),"dead":True,"replied":True,
+  "reply":"bhavyac@stanford.edu (Bhavya Chauhan) replied Jun 19: “I have already found someone for the room.” Closed.",
   "facts":["Room sublease in Kennedy graduate housing, June 23 – Sept 10 — covers nearly your whole summer.",
            "Under budget at $1,600, on campus.",
            "Best date coverage of this batch."],
@@ -565,7 +566,8 @@ SUPOST = [
 
  # ---- PRIVATE SUITE / ROOM + PRIVATE BATH ----
  {"top":True,"title":"Private garden suite (bed + bath, own entrance)","mid":"su-garden-suite-130085923","price":"$2,000/mo","src":"SUpost · Stanford-only",
-  "area":"Near Palo Alto High (~10 min to Stanford)","status":("check","Private suite · Aug 1–Sep 15 only"),
+  "area":"Near Palo Alto High (~10 min to Stanford)","status":("dead","REPLIED · available Aug–mid-Sep only (wrong dates)"),"dead":True,"replied":True,
+  "reply":"codywang@stanford.edu (Chenxi/Cody Wang) replied Jun 19: unit is available early August – mid-September 2026, offered to send videos. Doesn't fit a June start (and moot now that residential is secured). Closed — but genuinely still open for Aug-onward dates.",
   "offcriteria":"Jun 13 sweep found the dated post: available Aug 1 – Sep 15, 2026 only — does NOT cover your June/July gap; useful only as an Aug-onward bridge.",
   "facts":["Private garden suite: own bedroom + own bathroom + private entrance.",
            "Utilities, laundry, and internet INCLUDED in the $2,000/mo.",
@@ -647,9 +649,8 @@ SUPOST = [
   "cnote":"TAKEN — Sujay went with another subletter. Said he'd reach out if anything changes; treat as a long-shot backup."},
 
  {"top":True,"title":"1BR Hulme Sublease (Jun 21–Sep 14)","mid":"su-hulme-1br","price":"$2,500/mo","src":"SUpost · Stanford-only",
-  "area":"On campus, Stanford (Hulme)","status":("go","REPLIED · interest form submitted"),
-  "replied":True,
-  "reply":"andaru@stanford.edu replied and asked you to fill out the Hulme interest form (tinyurl.com/HulmeInterestForm). You submitted it — waiting to hear back.",
+  "area":"On campus, Stanford (Hulme)","status":("dead","WAITLISTED · wrong dates · declined"),"dead":True,"replied":True,
+  "reply":"andaru@stanford.edu (Keanu Andaru) replied Jun 19: another tenant already moved forward via the R&DE process, so you're waitlisted; offered 7/25–9/1 instead. You declined (needed a June start). Closed.",
   "offcriteria":"$500 over your $2,000 limit — confirm the price before going further.",
   "facts":["Whole 1BR sublease in Hulme, June 21 – Sept 14.","Over budget at $2,500.",
            "Poster: andaru@stanford.edu (Stanford Verified)."],
@@ -718,7 +719,8 @@ SUPOST = [
   "cnote":"NEW Jun 13 — Lyman 2B/1B furnished, $1,684, Jun 27–Aug 22, on campus. Confirm room vs unit + eligibility."},
 
  {"top":True,"title":"EVGR on-campus sublet (Jul–Sep)","mid":"su-evgr-julsep-1659","price":"$1,659/mo","src":"SUpost · Jun 13 paste",
-  "area":"On campus, Stanford (EVGR)","status":("go","On campus · under budget"),
+  "area":"On campus, Stanford (EVGR)","status":("dead","TAKEN · room no longer available"),"dead":True,"replied":True,
+  "reply":"smirchan@stanford.edu (Suvir Mirchandani) replied Jun 19: “the room is no longer available.” Taken. Closed.",
   "offcriteria":"Starts in July — leaves a June gap (pair with a June bridge). Confirm studio vs room + eligibility.",
   "facts":["On-campus EVGR summer sublet, July – September.","Under budget at $1,659."],
   "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
@@ -817,7 +819,8 @@ SUPOST = [
   "cnote":"NEW Jun 13 — College Terrace private bed+bath, $2,150 (over), great location. Confirm dates; only if you stretch budget."},
 
  {"top":False,"title":"Private bed + attached bath, Stanford West 2B/2B","mid":"su-stanfordwest-2b2b-2200","price":"$2,200/mo","src":"SUpost · Jun 13 paste",
-  "area":"Stanford West (on/near campus)","status":("warn","Private room+bath · over budget"),
+  "area":"Stanford West (on/near campus)","status":("dead","TAKEN · rented out"),"dead":True,"replied":True,
+  "reply":"ljy007@stanford.edu (Jiayi Li) replied Jun 19: the Stanford West room “has already been rented out.” Closed.",
   "offcriteria":"$200 over your $2,000 base. Private room in a 2B/2B (one housemate), not a whole unit.",
   "facts":["Spacious private bedroom with attached bathroom in a 2B/2B Stanford West apartment (photo on SUpost).","$2,200 — over budget; confirm dates."],
   "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
@@ -1708,6 +1711,7 @@ TODOS = [
 
 # ---- Progress log (newest first) ----
 PROGRESS = [
+ ("Jun 19 (sublets)", "Logged poster replies — all dead or wrong-dates (moot now that residential is secured): Suvir/EVGR, Jiayi/Stanford West, Bhavya/Kennedy, Ayush/EVGR flat, Sahithi = TAKEN; Keanu/Hulme = waitlisted + offered 7/25–9/1 (declined, needed June); Chenxi-Cody/garden suite = available Aug–mid-Sep only (wrong dates). On-campus June sublet market is basically exhausted — confirms the official residential path was the right call."),
  ("Jun 19 (PM)", "🎉 BREAKTHROUGH — Vicky B. (Stanford Summer Session) is switching me from the commuter program to the RESIDENTIAL program: “there is still space available in the dorms.” Housing application SUBMITTED via MyHousing. Replied on ticket 61011 asking how to expedite + whether there are extra charges for the switch. STILL TO CONFIRM: that the submitted app is the correct residential one (Vicky sent a specific StarRez link), and my move-in date / this-weekend check-in. On-campus housing essentially secured; June 22 gap solved if move-in is this weekend."),
  ("Jun 19 (AM)", "✅ Application SUBMITTED for the 2026 Summer rolling round (R&DE/HA path). Replied to confirm + flag the Undergraduate-vs-Graduate header. Now a BACKUP to the Summer Session residential switch."),
  ("Jun 18", "Inside the housing application — every section complete through the Application Summary Page. Reached the “Suggested Groupmates” step (got an 88% match suggestion). Decided to stay SOLO for fastest placement (not cold-inviting a stranger). To confirm: that it's the GRADUATE app (header said Undergraduate) and that it's actually SUBMITTED."),
