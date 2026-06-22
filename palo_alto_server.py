@@ -639,14 +639,14 @@ SUPOST = [
   "clabel":"Open post →","curl":"https://supost.com/post/index/130085804",
   "cnote":"You messaged this, but it's a FEMALE household — likely a no. On-campus Rains room, $1,628."},
 
- {"top":False,"title":"Blackwelder Room Sublet (6/19–8/31)","mid":"su-blackwelder","price":"$1,165/mo","src":"SUpost · Stanford-only",
-  "area":"On campus, Stanford (Blackwelder)","status":("dead","TAKEN · went to another subletter"),
-  "dead":True,"replied":True,
-  "reply":"Sujay Holla Rao (sujayrao@stanford.edu) was in active conversation (offered a virtual tour, June 11 move-in possible), but replied: another person got back to him first and he's working with them. Will let you know if it changes.",
-  "offcriteria":"A room (shared apartment), not a whole unit.",
-  "facts":["Room sublet in Blackwelder, June 19 – Aug 31.","Cheapest of everything you've messaged: $1,165."],
+ {"top":True,"title":"Blackwelder Room Sublet (6/19–8/31)","mid":"su-blackwelder","price":"$1,165/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (Blackwelder)","status":("go","REOPENED · authorized R&DE sublicense in progress"),
+  "dead":False,"replied":True,
+  "reply":"Sujay Holla Rao (sujayrao@stanford.edu) RE-ENGAGED Jun 21: the room is ready now and he's doing it through Stanford's OFFICIAL R&DE sublicense process (the subleasing office reviews + approves). He needs my written proof of Stanford affiliation + a move-in date. Replied Jun 21: yes, I have proof (incoming Summer Session student); asked him to confirm the unit, monthly rate, and end date so I can match the form. Targeting an early-July authorized start.",
+  "offcriteria":"A room in a shared apartment, not a whole unit.",
+  "facts":["Room sublet in Blackwelder, June 19 – Aug 31. Cheapest of everything I've messaged: $1,165 — under budget.","AUTHORIZED route: official R&DE sublicense (form + proof of affiliation + office approval) — the legitimacy the EVGR-B / $2,700 option lacked.","Timing: authorized move-in is ~2 weeks out (form must be submitted ≥2 weeks before start); rent is capped at what the license holder pays R&DE."],
   "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
-  "cnote":"TAKEN — Sujay went with another subletter. Said he'd reach out if anything changes; treat as a long-shot backup."},
+  "cnote":"STRONG OPTION — authorized, on-campus, under budget, full summer. The real decision is now dorm vs. this room: keep the secured dorm assignment until this is approved + signed, and compare the dorm's housing fee against $1,165/mo before signing. Don't double-book."},
 
  {"top":True,"title":"1BR Hulme Sublease (Jun 21–Sep 14)","mid":"su-hulme-1br","price":"$2,500/mo","src":"SUpost · Stanford-only",
   "area":"On campus, Stanford (Hulme)","status":("dead","WAITLISTED · wrong dates · declined"),"dead":True,"replied":True,
@@ -1711,6 +1711,7 @@ TODOS = [
 
 # ---- Progress log (newest first) ----
 PROGRESS = [
+ ("Jun 21 (Blackwelder REOPENED ✅)", "Sujay (sujayrao@stanford.edu) — my earlier Blackwelder contact who'd gone with someone else — re-engaged: the $1,165/mo room (Jun 19–Aug 31) is available again AND he's running it through Stanford's OFFICIAL R&DE sublicense process (subleasing office approves; he needs my proof of affiliation + a move-in date). This is the legitimacy the EVGR-B / $2,700 option lacked — and it's UNDER budget, on-campus, full summer. Replied Jun 21: yes I have proof (incoming Summer Session student), asked him to confirm unit/rate/end-date; targeting an early-July authorized start (forms must go in ≥2 weeks ahead, so no truly-immediate authorized move-in). DECISION NOW: dorm vs. this room — keep the secured dorm until this is approved + SIGNED; compare the dorm housing fee against $1,165/mo before signing. Don't double-book."),
  ("Jun 19 (sublet option — ON HOLD)", "A mutual friend offered a private sublet of an EVGR-B Premium Studio (735 Campus Dr #366), $2,700/mo, Jun 22–Aug 31. ⚠️ It's ON-campus R&DE grad housing — private subletting needs OFFICIAL R&DE sublicense authorization, which this informal 1-page agreement (host-signed only) doesn't show; it's also over budget ($2.7k vs $2k) and would double-book against my assigned residential dorm. DECISION: NOT signing / not paying the $810-due-today; sent a warm hold-off note citing the R&DE-authorization + pending-assignment checks (true reason that doubles as a clean no-fault exit). Keeping as a backup ONLY; default remains the assigned residential dorm. If the host won't show R&DE authorization → walk."),
  ("Jun 19 (CONFIRMED ✅)", "Vicky (15:38): “You will soon receive a housing assignment — periodically check your housing portal.” = ROOM SECURED, just awaiting the specific assignment (building/room/move-in will appear in MyHousing). Residential switch adds a HOUSING FEE — estimate it at summer.stanford.edu/cost/tuition-fees-calculator. Only to-dos left: watch the portal + check the cost. Search effectively DONE."),
  ("Jun 19 (sublets)", "Logged poster replies — all dead or wrong-dates (moot now that residential is secured): Suvir/EVGR, Jiayi/Stanford West, Bhavya/Kennedy, Ayush/EVGR flat, Sahithi = TAKEN; Keanu/Hulme = waitlisted + offered 7/25–9/1 (declined, needed June); Chenxi-Cody/garden suite = available Aug–mid-Sep only (wrong dates). On-campus June sublet market is basically exhausted — confirms the official residential path was the right call."),
@@ -2033,13 +2034,14 @@ document.addEventListener('DOMContentLoaded', function() {{
 </header>
 
 <div class="actionplan">
-<div class="ap-title">📌 Action plan — almost done (updated Jun 19, confirmed)</div>
+<div class="ap-title">📌 Action plan — dorm secured; one cheaper authorized option to weigh (updated Jun 21)</div>
 <ol>
 <li><strong>✅ Done:</strong> commuter → residential switch + application submitted; Vicky (Summer Session) confirmed “you will soon receive a housing assignment.”</li>
 <li><strong>Watch the MyHousing portal</strong> every day or two — your building / room / move-in date will appear there as the assignment is processed.</li>
-<li><strong>Check the cost.</strong> Residential adds a housing fee — estimate it with the <a href="https://summer.stanford.edu/cost/tuition-fees-calculator" target="_blank">tuition &amp; fees calculator</a> so there's no billing surprise.</li>
+<li><strong>Check the cost.</strong> Residential adds a housing fee — estimate it with the <a href="https://summer.stanford.edu/cost/tuition-fees-calculator" target="_blank">tuition &amp; fees calculator</a>. This number now does double duty: it's also what decides <strong>dorm vs. Blackwelder</strong> below.</li>
 <li><strong>(Optional) confirm move-in logistics</strong> — if the portal doesn't show a date, ask R&amp;DE / Summer Session about key pickup + this weekend's check-in.</li>
-<li><strong>Stand down the backups</strong> — the grad rolling-round app and the sublet search are no longer needed. <span class="ap-out">Conferences/Adult Housing remains OUT.</span></li>
+<li><strong>Weigh the one live alternative</strong> — Sujay's <strong>Blackwelder room reopened ($1,165/mo, on-campus, Jun 19–Aug 31)</strong> and he's running it through the <em>official R&amp;DE sublicense</em> (proof of affiliation + form + office approval). It's authorized + under budget, so it's a real dorm alternative. Replied Jun 21; compare it to the dorm fee, and <strong>don't sign until you've decided — keep the dorm until this is approved + signed.</strong></li>
+<li><strong>Stand down the rest</strong> — the grad rolling-round app and the broader sublet search are no longer needed. <span class="ap-out">Conferences/Adult Housing remains OUT.</span></li>
 </ol>
 </div>
 
