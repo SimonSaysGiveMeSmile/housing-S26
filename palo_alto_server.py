@@ -1583,6 +1583,25 @@ def render_channels():
 
 # ---- Copy-paste outreach message templates (shown on the dashboard) ----
 OUTREACH_TEMPLATES = [
+ ("⭐ Expedite EVGR move-in — assigned + ready now (do this now)", "To your EVGR Housing Service Center / front desk (cc housingassignments@stanford.edu). You're assigned via HSA — ask to move in earlier than the ~1-week wait so you stop paying for a hotel. Fill in [building/unit] + the dates.",
+  "Subject: Request to expedite move-in — assigned resident, ready immediately\n\n"
+  "Dear EVGR Housing Office,\n\n"
+  "My name is Simon Tian (SUNet [sunet]), and I've been assigned to [building / unit] for Summer 2026 "
+  "through Housing Assignments. I'm writing to respectfully ask whether my move-in could be brought "
+  "forward to the earliest possible date — ideally [target date] instead of [currently scheduled date].\n\n"
+  "I've tried to make this as simple as possible on your end: every required document and form is already "
+  "complete, so nothing is pending from me. I have my own vehicle and can move in on no notice — I won't "
+  "need any moving help, key delivery, or logistical assistance. And as I understand it the unit is "
+  "currently vacant, so an earlier move-in wouldn't affect anyone else's placement.\n\n"
+  "The reason I'm asking: I originally planned to commute, but my off-campus apartment application near "
+  "campus fell through, which has left me paying out of pocket for a hotel while I wait. I'm genuinely "
+  "grateful to have received this assignment — it's a great fit — and every additional day in the hotel "
+  "is a meaningful cost for me as a student. If the room is ready, moving in even a few days sooner would "
+  "make a real difference.\n\n"
+  "I'm happy to complete any remaining step, come by the office in person, or pick up keys whenever is "
+  "convenient. Please let me know what's possible or how I can help move things along.\n\n"
+  "Thank you very much for your time.\n\n"
+  "Best regards,\nSimon Tian · ipo@stanford.edu · 607-262-9704"),
  ("⭐ Reply to Vicky / Summer Session — RESIDENTIAL switch (do this first)", "Reply on ticket 61011 (summersession@stanford.edu). You've submitted the app — confirm it's the right one + ask move-in/this-weekend logistics",
   "Hi Vicky,\n\n"
   "Thank you so much — this is great news! I've already submitted my housing application, so I think I'm "
@@ -1711,6 +1730,7 @@ TODOS = [
 
 # ---- Progress log (newest first) ----
 PROGRESS = [
+ ("Jun 24 (assignment cleared — expediting move-in 🏃)", "The HSA housing assignment came through (EVGR) and it's a good fit — so the residential path is effectively settled; now it's EVGR's move-in step. Catch: the scheduled move-in is about a week out, and I'm paying out of pocket for a hotel until then while the assigned unit reportedly sits vacant. Drafted an expedite request to the EVGR Housing Service Center (cc Housing Assignments): I'm fully ready (all docs/forms done), have my own vehicle, need zero logistical help, and an earlier move-in wouldn't displace anyone — asking to move in as early as possible to cut the hotel cost. Email ready under Outreach → '⭐ Expedite EVGR move-in'."),
  ("Jun 22 (timing confirmed ⏱️)", "Spoke with the housing department: max wait for the DORM assignment is ~1 week (≈ by Jun 29); the Blackwelder SUBLET sublicense takes ~2 weeks to approve (≈ by Jul 6). So the dorm is the faster path by about a week. Can EXPEDITE either one by going to the housing office IN PERSON to nudge them. Net: dorm = quicker bed (and already secured); Blackwelder = cheaper but ~1 week slower to authorize. Decision still hinges on cost — especially whether the dorm forces a (mandatory) meal plan on top of the housing fee."),
  ("Jun 21 (Blackwelder REOPENED ✅)", "Sujay (sujayrao@stanford.edu) — my earlier Blackwelder contact who'd gone with someone else — re-engaged: the $1,165/mo room (Jun 19–Aug 31) is available again AND he's running it through Stanford's OFFICIAL R&DE sublicense process (subleasing office approves; he needs my proof of affiliation + a move-in date). This is the legitimacy the EVGR-B / $2,700 option lacked — and it's UNDER budget, on-campus, full summer. Replied Jun 21: yes I have proof (incoming Summer Session student), asked him to confirm unit/rate/end-date; targeting an early-July authorized start (forms must go in ≥2 weeks ahead, so no truly-immediate authorized move-in). DECISION NOW: dorm vs. this room — keep the secured dorm until this is approved + SIGNED; compare the dorm housing fee against $1,165/mo before signing. Don't double-book."),
  ("Jun 19 (sublet option — ON HOLD)", "A mutual friend offered a private sublet of an EVGR-B Premium Studio (735 Campus Dr #366), $2,700/mo, Jun 22–Aug 31. ⚠️ It's ON-campus R&DE grad housing — private subletting needs OFFICIAL R&DE sublicense authorization, which this informal 1-page agreement (host-signed only) doesn't show; it's also over budget ($2.7k vs $2k) and would double-book against my assigned residential dorm. DECISION: NOT signing / not paying the $810-due-today; sent a warm hold-off note citing the R&DE-authorization + pending-assignment checks (true reason that doubles as a clean no-fault exit). Keeping as a backup ONLY; default remains the assigned residential dorm. If the host won't show R&DE authorization → walk."),
@@ -2031,14 +2051,14 @@ document.addEventListener('DOMContentLoaded', function() {{
 </head><body>
 <header class="masthead">
 <h1>Simon's Stanford Summer 2026 Housing</h1>
-<p class="sub">✅ HOUSING SECURED — Summer Session switched you commuter → RESIDENTIAL; application submitted; Vicky confirmed a room assignment is coming. Just watch the portal + check the cost.</p>
+<p class="sub">✅ HOUSING SECURED — assigned to an EVGR unit (a good fit). Now expediting the move-in: it's about a week out and you're in a hotel until then, so you're asking the EVGR office to let you move in sooner.</p>
 </header>
 
 <div class="actionplan">
-<div class="ap-title">📌 Action plan — dorm secured; one cheaper authorized option to weigh (updated Jun 21)</div>
+<div class="ap-title">📌 Action plan — assigned (EVGR); now expediting move-in (updated Jun 24)</div>
 <ol>
 <li><strong>✅ Done:</strong> commuter → residential switch + application submitted; Vicky (Summer Session) confirmed “you will soon receive a housing assignment.”</li>
-<li><strong>Watch the MyHousing portal</strong> every day or two — your building / room / move-in date will appear there as the assignment is processed.</li>
+<li><strong>✅ Assignment received (EVGR) — now expedite the move-in.</strong> Move-in is about a week out and you're paying for a hotel until then, so email the EVGR Housing Service Center (cc Housing Assignments) for the earliest possible date — you're fully ready, have your own vehicle, and the unit's reportedly vacant. Template under <em>Outreach → "⭐ Expedite EVGR move-in"</em>.</li>
 <li><strong>Check the cost.</strong> Residential adds a housing fee — estimate it with the <a href="https://summer.stanford.edu/cost/tuition-fees-calculator" target="_blank">tuition &amp; fees calculator</a>. This number now does double duty: it's also what decides <strong>dorm vs. Blackwelder</strong> below.</li>
 <li><strong>Dorm timing — ~1 week.</strong> The dept's max wait for the assignment is about a week (≈ by Jun 29). If the portal's slow, <strong>go to the housing office in person to nudge it</strong>; ask about key pickup / check-in.</li>
 <li><strong>Weigh the one live alternative</strong> — Sujay's <strong>Blackwelder room reopened ($1,165/mo, on-campus, Jun 19–Aug 31)</strong> and he's running it through the <em>official R&amp;DE sublicense</em> (proof of affiliation + form + office approval, <strong>~2 weeks</strong> — about a week slower than the dorm; can nudge in person). It's authorized + under budget, so it's a real dorm alternative. Replied Jun 21; compare it to the dorm fee, and <strong>don't sign until you've decided — keep the dorm until this is approved + signed.</strong></li>
