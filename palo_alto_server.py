@@ -1584,15 +1584,18 @@ def render_channels():
 # ---- Copy-paste outreach message templates (shown on the dashboard) ----
 OUTREACH_TEMPLATES = [
  ("⭐ Expedite EVGR move-in — assigned + ready now (do this now)", "To your EVGR Housing Service Center / front desk (cc housingassignments@stanford.edu). You're assigned via HSA — ask to move in earlier than the ~1-week wait so you stop paying for a hotel. Fill in [building/unit] + the dates.",
-  "Subject: Request to expedite move-in — assigned resident, ready immediately\n\n"
+  "Subject: Moving in a little earlier\n\n"
   "Dear EVGR Housing Office,\n\n"
-  "I'm Simon Tian (SUNet [sunet]), assigned to [building / unit] for Summer 2026 through Housing "
-  "Assignments. Could I possibly move in earlier than [currently scheduled date] — ideally [target date]?\n\n"
-  "My off-campus plan fell through, so I've been paying for a hotel while I wait. Everything on my end is "
-  "ready: all documents complete, my own car, and I can move in within hours — no help needed. I understand "
-  "the unit is currently vacant, so coming early wouldn't affect anyone.\n\n"
-  "I'd be very grateful for any help. Thank you!\n\n"
-  "Warm regards,\nSimon Tian · ipo@stanford.edu · 607-262-9704"),
+  "My name is Simon Tian and my SUNet ID is [sunet]. I've been assigned to [building/unit] for Summer 2026 "
+  "through Housing Assignments, and I'm writing to ask if I might be able to move in a little earlier than "
+  "my scheduled date of [currently scheduled date]. I'm hoping for something closer to [target date] if "
+  "that's possible.\n\n"
+  "My original off campus plan fell through at the last minute, so I've been staying in a hotel while I "
+  "wait, and the cost is adding up. Everything on my end is already taken care of. All of my documents are "
+  "complete, I have my own car, and I can be moved in within a few hours of hearing from you. From what I "
+  "understand the unit is sitting empty right now, so coming in early shouldn't get in anyone's way.\n\n"
+  "I would be really grateful for any help you can offer. Thank you so much.\n\n"
+  "Warm regards,\nSimon Tian\nipo@stanford.edu\n607-262-9704"),
  ("⭐ Reply to Vicky / Summer Session — RESIDENTIAL switch (do this first)", "Reply on ticket 61011 (summersession@stanford.edu). You've submitted the app — confirm it's the right one + ask move-in/this-weekend logistics",
   "Hi Vicky,\n\n"
   "Thank you so much — this is great news! I've already submitted my housing application, so I think I'm "
