@@ -639,14 +639,14 @@ SUPOST = [
   "clabel":"Open post →","curl":"https://supost.com/post/index/130085804",
   "cnote":"You messaged this, but it's a FEMALE household — likely a no. On-campus Rains room, $1,628."},
 
- {"top":True,"title":"Blackwelder Room Sublet (6/19–8/31)","mid":"su-blackwelder","price":"$1,165/mo","src":"SUpost · Stanford-only",
-  "area":"On campus, Stanford (Blackwelder)","status":("go","REOPENED · authorized R&DE sublicense in progress"),
-  "dead":False,"replied":True,
-  "reply":"Sujay Holla Rao (sujayrao@stanford.edu) RE-ENGAGED Jun 21: the room is ready now and he's doing it through Stanford's OFFICIAL R&DE sublicense process (the subleasing office reviews + approves). He needs my written proof of Stanford affiliation + a move-in date. Replied Jun 21: yes, I have proof (incoming Summer Session student); asked him to confirm the unit, monthly rate, and end date so I can match the form. Targeting an early-July authorized start.",
+ {"top":False,"title":"Blackwelder Room Sublet (6/19–8/31)","mid":"su-blackwelder","price":"$1,165/mo","src":"SUpost · Stanford-only",
+  "area":"On campus, Stanford (Blackwelder)","status":("dead","STOOD DOWN · chose the EVGR assignment"),
+  "dead":True,"replied":True,
+  "reply":"Sujay Holla Rao (sujayrao@stanford.edu) reopened this Jun 21 via Stanford's official R&DE sublicense path — a genuinely strong, authorized, under-budget backup. STOOD DOWN Jun 25: my EVGR Housing Assignment came through with a confirmed Jun 26 check-in, so I'm going with the assigned unit. Worth a quick thank-you note to Sujay to close it out kindly.",
   "offcriteria":"A room in a shared apartment, not a whole unit.",
-  "facts":["Room sublet in Blackwelder, June 19 – Aug 31. Cheapest of everything I've messaged: $1,165 — under budget.","AUTHORIZED route: official R&DE sublicense (form + proof of affiliation + office approval) — the legitimacy the EVGR-B / $2,700 option lacked.","Timing (dept-confirmed Jun 22): the sublet sublicense takes about two weeks to approve — roughly a week longer than the dorm assignment. Can nudge either in person at the housing office. Rent is capped at what the license holder pays R&DE."],
+  "facts":["Room sublet in Blackwelder, June 19 – Aug 31. Was the cheapest I'd messaged: $1,165, under budget.","AUTHORIZED route: official R&DE sublicense (form + proof of affiliation + office approval) — the legitimacy the EVGR-B / $2,700 option lacked.","Closed because the EVGR assignment landed first with a set check-in; kept here as a record of a solid authorized backup."],
   "clabel":"Find post →","curl":"https://supost.com/search/cat/3",
-  "cnote":"STRONG OPTION — authorized, on-campus, under budget, full summer. The real decision is now dorm vs. this room: keep the secured dorm assignment until this is approved + signed, and compare the dorm's housing fee against $1,165/mo before signing. Don't double-book."},
+  "cnote":"Closed by choice — went with the confirmed EVGR assignment (check-in Jun 26). This was a strong authorized backup; no longer needed."},
 
  {"top":True,"title":"1BR Hulme Sublease (Jun 21–Sep 14)","mid":"su-hulme-1br","price":"$2,500/mo","src":"SUpost · Stanford-only",
   "area":"On campus, Stanford (Hulme)","status":("dead","WAITLISTED · wrong dates · declined"),"dead":True,"replied":True,
@@ -1583,7 +1583,7 @@ def render_channels():
 
 # ---- Copy-paste outreach message templates (shown on the dashboard) ----
 OUTREACH_TEMPLATES = [
- ("⭐ Expedite EVGR move-in — assigned + ready now (do this now)", "To your EVGR Housing Service Center / front desk (cc housingassignments@stanford.edu). You're assigned via HSA — ask to move in earlier than the ~1-week wait so you stop paying for a hotel. Fill in [building/unit] + the dates.",
+ ("Expedite EVGR move-in (done — check-in confirmed Fri Jun 26)", "Kept for the record. This asked the EVGR office to move the date up; check-in is now CONFIRMED for Fri Jun 26, 3:00 PM, so it's no longer needed. Reuse only if plans change.",
   "Subject: Moving in a little earlier\n\n"
   "Dear EVGR Housing Office,\n\n"
   "My name is Simon Tian and my SUNet ID is [sunet]. I've been assigned to [building/unit] for Summer 2026 "
@@ -1596,7 +1596,7 @@ OUTREACH_TEMPLATES = [
   "understand the unit is sitting empty right now, so coming in early shouldn't get in anyone's way.\n\n"
   "I would be really grateful for any help you can offer. Thank you so much.\n\n"
   "Warm regards,\nSimon Tian\nipo@stanford.edu\n607-262-9704"),
- ("⭐ Reply to Vicky / Summer Session — RESIDENTIAL switch (do this first)", "Reply on ticket 61011 (summersession@stanford.edu). You've submitted the app — confirm it's the right one + ask move-in/this-weekend logistics",
+ ("Reply to Vicky / Summer Session — RESIDENTIAL switch (done)", "Handled — the residential switch went through and check-in is confirmed for Jun 26. Kept for the record (ticket 61011, summersession@stanford.edu).",
   "Hi Vicky,\n\n"
   "Thank you so much — this is great news! I've already submitted my housing application, so I think I'm "
   "set on that front. A few quick questions:\n"
@@ -1605,7 +1605,7 @@ OUTREACH_TEMPLATES = [
   "2. When can I move in, and what should I plan around this weekend?\n"
   "3. Is there anything else you need to finish processing?\n\n"
   "Thank you again — I really appreciate your help, and I'm looking forward to this weekend!\n\n"
-  "Best,\nSimon Tian · ipo@stanford.edu · (415) 426-8741"),
+  "Best,\nSimon Tian · ipo@stanford.edu · 607-262-9704"),
  ("Email 1 of 2 — thank-you to Curie", "Send to: csevilla@stanford.edu (keep it short)",
   "Subject: Thank you!\n\n"
   "Hi Curie,\n\n"
@@ -1687,43 +1687,37 @@ def render_templates():
 
 # ---- To-do list (checkable, persists per-browser) ----
 TODOS = [
- ("1 · 🎉 Summer Session RESIDENTIAL switch — your solution ⭐", [
-   "Submit the housing app via Vicky's link NOW: myhousing.stanford.edu/StarRezPortalX/BDDC9F67/1/1/Home-Home?UrlToken=3D3B91AF",
-   "Check it's not a duplicate of the app you already submitted (the 'Undergraduate Housing Application'). If same → confirm complete; if different → finish this one.",
-   "Reply to Vicky on ticket 61011 (⭐ template below): thank her, confirm submitting, ask move-in date + this weekend's check-in + whether your earlier app counts.",
-   "If the application snags, file an R&DE Help Ticket (as Vicky suggested).",
+ ("1 · Tonight — before you check in ⚠️", [
+   "⚠️ Upload your SUID photo NOW at stanfordcard.stanford.edu. You're past the 'photo ≥2 weeks before move-in' cutoff, so your card won't be pre-printed — upload anyway to start it, and plan to get a temporary card at the desk tomorrow.",
+   "Pack a government photo ID (passport / driver's license). With no printed SUID, this is what verifies you and releases your keys at check-in.",
+   "Buy renter's insurance — R&DE insures the building, not your belongings (theft, water, fire are on you without it).",
+   "Re-read the Residence Agreement end-to-end — especially the summer move-out date, cancellation, and damage/cleaning clauses.",
+   "Don't ship any mail or packages to EVGR until you're checked in with a real mailbox — early packages get refused or lost.",
+   "Save these in your phone: EVGR front desk (650) 497-7995, supervisor Eric Podgorny (650) 497-8021, after-hours lockout/maintenance (650) 725-1602, Housing Assignments (650) 725-2810.",
+   "Bringing your car? You'll need a Stanford Transportation parking permit for your move-in date — and ask the desk tomorrow where to unload.",
  ]),
- ("2 · Lock move-in + cost", [
-   "Confirm move-in date, building, key pickup, and what to bring — aim for this weekend (June 20–21) so you're in before classes June 22.",
-   "Confirm the residential program cost (room+board bundle; charges hit next billing period).",
-   "If move-in is this weekend, the June 22 gap is SOLVED — relax the bridge plan.",
+ ("2 · At check-in — Fri Jun 26, 3:00 PM · 735 Campus Drive, Suite 100 🔑", [
+   "Bring your photo ID; pick up your finalized apartment/unit, mailing address, and keys/fob at the EVGR Housing Service Center.",
+   "Ask for the temporary card / access since your permanent SUID isn't printed yet — that's how you actually get into the unit tomorrow.",
+   "BEFORE you sign: walk the room-condition form and photograph everything (walls, floors, fixtures, appliances). Anything unrecorded gets billed to you at move-out.",
+   "Have ready in case keys are gated on it: a payment method for any fee/deposit, your SUNet ID, and proof of Summer Session enrollment.",
+   "Borrow a hand truck/dolly at the desk (first-come) — you can self-move with your car, no movers needed.",
+   "Ask the two cost questions: is a meal plan mandatory, and what's the housing fee? (Closes the open cost question.)",
+   "Note: extended hours 8 AM–8 PM, 7 days through move-in. After-hours emergency arrival only: (650) 725-1602 (be on/near campus, ID ready).",
  ]),
- ("3 · If the form blocks you", [
-   "If it asks for grad-enrollment/eligibility you can't meet, DON'T quit",
-   "Reply to HA citing Curie's email (she told them to house you) and offer proof of your Summer Session enrollment",
- ]),
- ("4 · Cover June 22–28 — the move-in bridge", [
-   "Assume the assignment may land AFTER classes start June 22 — plan a ~1-week bridge",
-   "Line up a short SUpost sublet, or a cheap Airbnb as a last resort",
-   "Ask HA whether interim on-campus housing exists (covered by your reply above)",
-   "❌ Skip Conferences/Adult Housing — NSSH can't house Summer Session students",
- ]),
- ("5 · Hedge — keep options open", [
-   "Email shsublease@lists.stanford.edu / call (650) 724-0544 for the OFFICIAL on-campus sublease list — a legit sublet could beat HA's timeline (verify any sublicense is authorized before paying)",
-   "Keep messaging not-yet-contacted on-campus sublets — tap ⚡ My next moves, then copy the “Fast-mover opener” template",
-   "Send a follow-up to anyone silent 3+ days; send the “Keep me as backup” note on every “it's taken”",
-   "Post a “Housing Wanted” ad on SUpost + FB Stanford Housing + r/stanford (template below)",
-   "Daily: check SUpost sorted newest 2–3× a day, message within minutes, and mark each contact here",
- ]),
- ("6 · When an offer lands — decide", [
-   "Compare the HA assignment (rate / building / dates) vs. your best sublet",
-   "Take the cheaper one that fits your dates; decline the other promptly",
-   "Have a deposit ready to move same-day",
+ ("3 · After you're in", [
+   "Cancel the hotel for any nights you no longer need — that was the whole point of getting in.",
+   "Pick up your permanent SUID once it's ready and return the temporary card (it's your durable door + dining access).",
+   "Note your summer move-out / contract end date and check-out steps now — missing them triggers holdover or cleaning penalties.",
+   "Submit a fix-it work order for anything broken (don't self-repair) — get it on record before the move-out inspection.",
+   "Optional: if it's a shared apartment, opt into the Roommate Portal in MyHousing; set up dining (Meal Plan / Cardinal Dollars).",
+   "If your plans ever change and you don't need the unit, tell Housing Assignments in writing right away ((650) 725-2810) — silence keeps you billed.",
  ]),
 ]
 
 # ---- Progress log (newest first) ----
 PROGRESS = [
+ ("Jun 25 (CHECK-IN CONFIRMED 🔑)", "Official EVGR welcome letter from the Housing Service Center (Eric Podgorny): tentatively assigned to an EVGR location, with the specific furnished apartment + mailing address handed over AT check-in. Check-in CONFIRMED for Friday, June 26 at 3:00 PM — EVGR HSC, 735 Campus Drive Suite 100 (extended hours 8am–8pm, 7 days through move-in; bring a government photo ID). Biggest catch: I'm past the 'upload SUID photo ≥2 weeks before move-in' cutoff, so my card won't be pre-printed — uploading the photo now anyway and will get a temporary card at the desk. Built the full move-in checklist (tonight / at check-in / after) below. Blackwelder stood down — going with the EVGR assignment."),
  ("Jun 24 (assignment cleared — expediting move-in 🏃)", "The HSA housing assignment came through (EVGR) and it's a good fit — so the residential path is effectively settled; now it's EVGR's move-in step. Catch: the scheduled move-in is about a week out, and I'm paying out of pocket for a hotel until then while the assigned unit reportedly sits vacant. Drafted an expedite request to the EVGR Housing Service Center (cc Housing Assignments): I'm fully ready (all docs/forms done), have my own vehicle, need zero logistical help, and an earlier move-in wouldn't displace anyone — asking to move in as early as possible to cut the hotel cost. Email ready under Outreach → '⭐ Expedite EVGR move-in'."),
  ("Jun 22 (timing confirmed ⏱️)", "Spoke with the housing department: max wait for the DORM assignment is ~1 week (≈ by Jun 29); the Blackwelder SUBLET sublicense takes ~2 weeks to approve (≈ by Jul 6). So the dorm is the faster path by about a week. Can EXPEDITE either one by going to the housing office IN PERSON to nudge them. Net: dorm = quicker bed (and already secured); Blackwelder = cheaper but ~1 week slower to authorize. Decision still hinges on cost — especially whether the dorm forces a (mandatory) meal plan on top of the housing fee."),
  ("Jun 21 (Blackwelder REOPENED ✅)", "Sujay (sujayrao@stanford.edu) — my earlier Blackwelder contact who'd gone with someone else — re-engaged: the $1,165/mo room (Jun 19–Aug 31) is available again AND he's running it through Stanford's OFFICIAL R&DE sublicense process (subleasing office approves; he needs my proof of affiliation + a move-in date). This is the legitimacy the EVGR-B / $2,700 option lacked — and it's UNDER budget, on-campus, full summer. Replied Jun 21: yes I have proof (incoming Summer Session student), asked him to confirm unit/rate/end-date; targeting an early-July authorized start (forms must go in ≥2 weeks ahead, so no truly-immediate authorized move-in). DECISION NOW: dorm vs. this room — keep the secured dorm until this is approved + SIGNED; compare the dorm housing fee against $1,165/mo before signing. Don't double-book."),
@@ -2045,18 +2039,17 @@ document.addEventListener('DOMContentLoaded', function() {{
 </head><body>
 <header class="masthead">
 <h1>Simon's Stanford Summer 2026 Housing</h1>
-<p class="sub">✅ HOUSING SECURED — assigned to an EVGR unit (a good fit). Now expediting the move-in: it's about a week out and you're in a hotel until then, so you're asking the EVGR office to let you move in sooner.</p>
+<p class="sub">✅ CHECK-IN CONFIRMED — you're assigned to EVGR, with check-in <strong>Friday, June 26 at 3:00 PM</strong> (EVGR Housing Service Center, 735 Campus Drive, Suite 100). The checklist below covers what to do tonight, at the desk, and after you're in.</p>
 </header>
 
 <div class="actionplan">
-<div class="ap-title">📌 Action plan — assigned (EVGR); now expediting move-in (updated Jun 24)</div>
+<div class="ap-title">📌 Check-in confirmed — Fri Jun 26, 3:00 PM at EVGR (updated Jun 25)</div>
 <ol>
-<li><strong>✅ Done:</strong> commuter → residential switch + application submitted; Vicky (Summer Session) confirmed “you will soon receive a housing assignment.”</li>
-<li><strong>✅ Assignment received (EVGR) — now expedite the move-in.</strong> Move-in is about a week out and you're paying for a hotel until then, so email the EVGR Housing Service Center (cc Housing Assignments) for the earliest possible date — you're fully ready, have your own vehicle, and the unit's reportedly vacant. Template under <em>Outreach → "⭐ Expedite EVGR move-in"</em>.</li>
-<li><strong>Check the cost.</strong> Residential adds a housing fee — estimate it with the <a href="https://summer.stanford.edu/cost/tuition-fees-calculator" target="_blank">tuition &amp; fees calculator</a>. This number now does double duty: it's also what decides <strong>dorm vs. Blackwelder</strong> below.</li>
-<li><strong>Dorm timing — ~1 week.</strong> The dept's max wait for the assignment is about a week (≈ by Jun 29). If the portal's slow, <strong>go to the housing office in person to nudge it</strong>; ask about key pickup / check-in.</li>
-<li><strong>Weigh the one live alternative</strong> — Sujay's <strong>Blackwelder room reopened ($1,165/mo, on-campus, Jun 19–Aug 31)</strong> and he's running it through the <em>official R&amp;DE sublicense</em> (proof of affiliation + form + office approval, <strong>~2 weeks</strong> — about a week slower than the dorm; can nudge in person). It's authorized + under budget, so it's a real dorm alternative. Replied Jun 21; compare it to the dorm fee, and <strong>don't sign until you've decided — keep the dorm until this is approved + signed.</strong></li>
-<li><strong>Stand down the rest</strong> — the grad rolling-round app and the broader sublet search are no longer needed. <span class="ap-out">Conferences/Adult Housing remains OUT.</span></li>
+<li><strong>✅ Check-in: Friday, June 26 at 3:00 PM</strong> — EVGR Housing Service Center, 735 Campus Drive, Suite 100. Bring a government photo ID. Your specific apartment + mailing address are handed to you at the desk.</li>
+<li><strong>⚠️ Most urgent (tonight):</strong> your SUID won't be pre-printed (you're past the 2-weeks-ahead photo cutoff), so upload your photo now at <a href="https://stanfordcard.stanford.edu" target="_blank">stanfordcard.stanford.edu</a> and plan to get a <strong>temporary card at the desk</strong> — without access you can't get into the unit.</li>
+<li><strong>Also tonight:</strong> buy renter's insurance, re-read the Residence Agreement (note the move-out date), and don't ship any packages until you have a real mailbox.</li>
+<li><strong>At the desk:</strong> photograph the unit + note all damage on the condition form <em>before</em> you sign; have your SUNet ID, proof of enrollment, and a payment method ready; ask whether a meal plan is mandatory and what the housing fee is.</li>
+<li><strong>✅ Blackwelder stood down</strong> — going with the EVGR assignment. Full move-in checklist below.</li>
 </ol>
 </div>
 
@@ -2073,14 +2066,11 @@ document.addEventListener('DOMContentLoaded', function() {{
 </div>
 
 <details class="disc">
-<summary>📋 Strategy — the official path first, sublets as a hedge</summary>
+<summary>📋 Strategy (resolved) — the official R&amp;DE path won</summary>
 <div class="disc-body">
-<p><strong>The official path is now your #1 shot.</strong> R&amp;DE Student Housing Assignments (HA) confirmed you can apply to the <strong>graduate summer rolling round</strong>, and Curie told HA to house you — far cheaper and more reliable than chasing sublets. Apply today at <strong>myhousing.stanford.edu</strong>, then reply-all to the thread (templates below). The catch is timing: an assignment may not land until ~June 26, after classes start June 22.</p>
-<p><strong>So run sublets in parallel as a hedge + a move-in bridge.</strong> On-campus sublets are the most-flooded pond — they get dozens of messages and vanish in hours. Three fixes:</p>
-<p><strong>1. Flip the funnel</strong> — post a "Housing Wanted" ad (SUpost · FB Stanford Housing · r/stanford) so posters come to you.
-<strong>2. Be first &amp; commit</strong> — message within minutes, lead with "already in the area, can view today, sign + deposit immediately."
-<strong>3. Keep leads warm</strong> — send a "keep me as backup" note on every "it's taken."</p>
-<p><strong>Official contacts:</strong> R&amp;DE Housing Assignments <strong>housingassignments@stanford.edu</strong> (650-725-2810) · official sublease list <strong>shsublease@lists.stanford.edu</strong>. <span class="ap-out">Not summerhousing@ / Conferences — NSSH can't house Summer Session students.</span></p>
+<p><strong>Outcome:</strong> the official path delivered. R&amp;DE Student Housing Assignments placed you in an <strong>EVGR</strong> unit (Summer Session residential), and <strong>check-in is confirmed for Fri June 26, 3:00 PM</strong>. That beat chasing private sublets on cost, reliability, and authorization. The move-in checklist above is the only live to-do now.</p>
+<p style="color:var(--muted)"><strong>How it played out (for the record):</strong> applied via myhousing.stanford.edu, worked the email thread (Curie → Housing Assignments → Summer Session / Vicky, ticket 61011), and ran on-campus sublets in parallel as a hedge. The strongest sublet backup — Sujay's authorized Blackwelder room — was stood down once the EVGR assignment landed with a set check-in.</p>
+<p><strong>Official contacts:</strong> R&amp;DE Housing Assignments <strong>housingassignments@stanford.edu</strong> (650-725-2810) · EVGR Housing Service Center <strong>(650) 497-7995</strong>. <span class="ap-out">Not summerhousing@ / Conferences — NSSH can't house Summer Session students.</span></p>
 </div>
 </details>
 
