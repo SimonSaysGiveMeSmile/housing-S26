@@ -1687,36 +1687,29 @@ def render_templates():
 
 # ---- To-do list (checkable, persists per-browser) ----
 TODOS = [
- ("1 · Tonight — before you check in ⚠️", [
-   "⚠️ Upload your SUID photo NOW at stanfordcard.stanford.edu. You're past the 'photo ≥2 weeks before move-in' cutoff, so your card won't be pre-printed — upload anyway to start it, and plan to get a temporary card at the desk tomorrow.",
-   "Pack a government photo ID (passport / driver's license). With no printed SUID, this is what verifies you and releases your keys at check-in.",
-   "Buy renter's insurance — R&DE insures the building, not your belongings (theft, water, fire are on you without it).",
-   "Re-read the Residence Agreement end-to-end — especially the summer move-out date, cancellation, and damage/cleaning clauses.",
-   "Don't ship any mail or packages to EVGR until you're checked in with a real mailbox — early packages get refused or lost.",
-   "Save these in your phone: EVGR front desk (650) 497-7995, supervisor Eric Podgorny (650) 497-8021, after-hours lockout/maintenance (650) 725-1602, Housing Assignments (650) 725-2810.",
-   "Bringing your car? You'll need a Stanford Transportation parking permit for your move-in date — and ask the desk tomorrow where to unload.",
- ]),
- ("2 · At check-in — Fri Jun 26, 3:00 PM · 735 Campus Drive, Suite 100 🔑", [
-   "Bring your photo ID; pick up your finalized apartment/unit, mailing address, and keys/fob at the EVGR Housing Service Center.",
-   "Ask for the temporary card / access since your permanent SUID isn't printed yet — that's how you actually get into the unit tomorrow.",
-   "BEFORE you sign: walk the room-condition form and photograph everything (walls, floors, fixtures, appliances). Anything unrecorded gets billed to you at move-out.",
-   "Have ready in case keys are gated on it: a payment method for any fee/deposit, your SUNet ID, and proof of Summer Session enrollment.",
-   "Borrow a hand truck/dolly at the desk (first-come) — you can self-move with your car, no movers needed.",
-   "Ask the two cost questions: is a meal plan mandatory, and what's the housing fee? (Closes the open cost question.)",
-   "Note: extended hours 8 AM–8 PM, 7 days through move-in. After-hours emergency arrival only: (650) 725-1602 (be on/near campus, ID ready).",
- ]),
- ("3 · After you're in", [
+ ("1 · Settle in — now that you're moved in ✅", [
    "Cancel the hotel for any nights you no longer need — that was the whole point of getting in.",
+   "Confirm renter's insurance is actually in force and file the proof — R&DE insures the building, not your belongings (theft, water, fire are on you).",
    "Pick up your permanent SUID once it's ready and return the temporary card (it's your durable door + dining access).",
-   "Note your summer move-out / contract end date and check-out steps now — missing them triggers holdover or cleaning penalties.",
+   "Lock in your summer move-out / contract end date and the check-out steps now — missing them triggers holdover or cleaning penalties.",
    "Submit a fix-it work order for anything broken (don't self-repair) — get it on record before the move-out inspection.",
-   "Optional: if it's a shared apartment, opt into the Roommate Portal in MyHousing; set up dining (Meal Plan / Cardinal Dollars).",
+   "Make sure your check-in room-condition photos + damage notes are saved somewhere safe — they're your defense against move-out charges.",
+   "Sort your Stanford Transportation parking permit if you brought the car, and set up dining (Meal Plan / Cardinal Dollars); if it's a shared apt, opt into the Roommate Portal in MyHousing.",
    "If your plans ever change and you don't need the unit, tell Housing Assignments in writing right away ((650) 725-2810) — silence keeps you billed.",
+   "Save these in your phone: EVGR front desk (650) 497-7995, supervisor Eric Podgorny (650) 497-8021, after-hours lockout/maintenance (650) 725-1602, Housing Assignments (650) 725-2810.",
+ ]),
+ ("2 · Done at check-in — Fri Jun 26, 3:00 PM · 735 Campus Drive, Suite 100 🔑 (for the record)", [
+   "Picked up the finalized apartment/unit, mailing address, and keys/fob at the EVGR Housing Service Center (photo ID required).",
+   "Got a temporary card at the desk since the permanent SUID wasn't printed yet (past the 2-weeks-ahead photo cutoff).",
+   "Walked the room-condition form + photographed everything BEFORE signing — anything unrecorded gets billed at move-out.",
+   "Confirmed the two cost questions: whether a meal plan is mandatory, and the housing fee.",
+   "If any of these are still open, chase them now: front desk (650) 497-7995; after-hours emergency (650) 725-1602.",
  ]),
 ]
 
 # ---- Progress log (newest first) ----
 PROGRESS = [
+ ("Jul 1 (moved in — settle-in mode 🏡)", "Rolling the board forward: check-in day (Fri Jun 26, 3:00 PM at EVGR) has passed, so the search + move-in prep is done and the board is now in settle-in mode. The active checklist is the post-move-in items — cancel any leftover hotel nights, confirm renter's insurance is actually in force, pick up the permanent SUID and return the temporary card, file work orders for anything broken, and lock in the summer move-out date. Housing is resolved; the watcher can stay on only as a just-in-case backstop. (If anything about the actual move-in went differently, update this entry.)"),
  ("Jun 25 (CHECK-IN CONFIRMED 🔑)", "Official EVGR welcome letter from the Housing Service Center (Eric Podgorny): tentatively assigned to an EVGR location, with the specific furnished apartment + mailing address handed over AT check-in. Check-in CONFIRMED for Friday, June 26 at 3:00 PM — EVGR HSC, 735 Campus Drive Suite 100 (extended hours 8am–8pm, 7 days through move-in; bring a government photo ID). Biggest catch: I'm past the 'upload SUID photo ≥2 weeks before move-in' cutoff, so my card won't be pre-printed — uploading the photo now anyway and will get a temporary card at the desk. Built the full move-in checklist (tonight / at check-in / after) below. Blackwelder stood down — going with the EVGR assignment."),
  ("Jun 24 (assignment cleared — expediting move-in 🏃)", "The HSA housing assignment came through (EVGR) and it's a good fit — so the residential path is effectively settled; now it's EVGR's move-in step. Catch: the scheduled move-in is about a week out, and I'm paying out of pocket for a hotel until then while the assigned unit reportedly sits vacant. Drafted an expedite request to the EVGR Housing Service Center (cc Housing Assignments): I'm fully ready (all docs/forms done), have my own vehicle, need zero logistical help, and an earlier move-in wouldn't displace anyone — asking to move in as early as possible to cut the hotel cost. Email ready under Outreach → '⭐ Expedite EVGR move-in'."),
  ("Jun 22 (timing confirmed ⏱️)", "Spoke with the housing department: max wait for the DORM assignment is ~1 week (≈ by Jun 29); the Blackwelder SUBLET sublicense takes ~2 weeks to approve (≈ by Jul 6). So the dorm is the faster path by about a week. Can EXPEDITE either one by going to the housing office IN PERSON to nudge them. Net: dorm = quicker bed (and already secured); Blackwelder = cheaper but ~1 week slower to authorize. Decision still hinges on cost — especially whether the dorm forces a (mandatory) meal plan on top of the housing fee."),
@@ -2039,17 +2032,17 @@ document.addEventListener('DOMContentLoaded', function() {{
 </head><body>
 <header class="masthead">
 <h1>Simon's Stanford Summer 2026 Housing</h1>
-<p class="sub">✅ CHECK-IN CONFIRMED — you're assigned to EVGR, with check-in <strong>Friday, June 26 at 3:00 PM</strong> (EVGR Housing Service Center, 735 Campus Drive, Suite 100). The checklist below covers what to do tonight, at the desk, and after you're in.</p>
+<p class="sub">🏡 MOVED IN — your EVGR check-in was <strong>Friday, June 26 at 3:00 PM</strong> (Housing Service Center, 735 Campus Drive, Suite 100). The board is now in <strong>settle-in mode</strong>: the short checklist below is what's left — cancel leftover hotel nights, confirm renter's insurance, pick up the permanent SUID, file any work orders, and lock in your summer move-out date.</p>
 </header>
 
 <div class="actionplan">
-<div class="ap-title">📌 Check-in confirmed — Fri Jun 26, 3:00 PM at EVGR (updated Jun 25)</div>
+<div class="ap-title">🏡 Moved in at EVGR — settle-in mode (Fri Jun 26 check-in done · updated Jul 1)</div>
 <ol>
-<li><strong>✅ Check-in: Friday, June 26 at 3:00 PM</strong> — EVGR Housing Service Center, 735 Campus Drive, Suite 100. Bring a government photo ID. Your specific apartment + mailing address are handed to you at the desk.</li>
-<li><strong>⚠️ Most urgent (tonight):</strong> your SUID won't be pre-printed (you're past the 2-weeks-ahead photo cutoff), so upload your photo now at <a href="https://stanfordcard.stanford.edu" target="_blank">stanfordcard.stanford.edu</a> and plan to get a <strong>temporary card at the desk</strong> — without access you can't get into the unit.</li>
-<li><strong>Also tonight:</strong> buy renter's insurance, re-read the Residence Agreement (note the move-out date), and don't ship any packages until you have a real mailbox.</li>
-<li><strong>At the desk:</strong> photograph the unit + note all damage on the condition form <em>before</em> you sign; have your SUNet ID, proof of enrollment, and a payment method ready; ask whether a meal plan is mandatory and what the housing fee is.</li>
-<li><strong>✅ Blackwelder stood down</strong> — going with the EVGR assignment. Full move-in checklist below.</li>
+<li><strong>✅ Checked in: Friday, June 26 at 3:00 PM</strong> — EVGR Housing Service Center, 735 Campus Drive, Suite 100. Search + move-in prep are done; what's left is settling in.</li>
+<li><strong>Money leaks to close:</strong> cancel the hotel for any nights you no longer need, and confirm your renter's insurance is actually in force with the proof filed.</li>
+<li><strong>ID + access:</strong> pick up your <strong>permanent SUID</strong> once it's ready and return the temporary card — it's your durable door + dining access.</li>
+<li><strong>Protect yourself later:</strong> keep your check-in room-condition photos safe, file a work order for anything broken (don't self-repair), and <strong>lock in the summer move-out date</strong> + check-out steps so you don't get hit with holdover/cleaning fees.</li>
+<li><strong>✅ Search resolved</strong> — EVGR assignment taken; Blackwelder stood down. Full settle-in checklist below.</li>
 </ol>
 </div>
 
@@ -2068,7 +2061,7 @@ document.addEventListener('DOMContentLoaded', function() {{
 <details class="disc">
 <summary>📋 Strategy (resolved) — the official R&amp;DE path won</summary>
 <div class="disc-body">
-<p><strong>Outcome:</strong> the official path delivered. R&amp;DE Student Housing Assignments placed you in an <strong>EVGR</strong> unit (Summer Session residential), and <strong>check-in is confirmed for Fri June 26, 3:00 PM</strong>. That beat chasing private sublets on cost, reliability, and authorization. The move-in checklist above is the only live to-do now.</p>
+<p><strong>Outcome:</strong> the official path delivered. R&amp;DE Student Housing Assignments placed you in an <strong>EVGR</strong> unit (Summer Session residential), and you <strong>checked in Fri June 26, 3:00 PM</strong>. That beat chasing private sublets on cost, reliability, and authorization. The settle-in checklist above is the only live to-do now.</p>
 <p style="color:var(--muted)"><strong>How it played out (for the record):</strong> applied via myhousing.stanford.edu, worked the email thread (Curie → Housing Assignments → Summer Session / Vicky, ticket 61011), and ran on-campus sublets in parallel as a hedge. The strongest sublet backup — Sujay's authorized Blackwelder room — was stood down once the EVGR assignment landed with a set check-in.</p>
 <p><strong>Official contacts:</strong> R&amp;DE Housing Assignments <strong>housingassignments@stanford.edu</strong> (650-725-2810) · EVGR Housing Service Center <strong>(650) 497-7995</strong>. <span class="ap-out">Not summerhousing@ / Conferences — NSSH can't house Summer Session students.</span></p>
 </div>
