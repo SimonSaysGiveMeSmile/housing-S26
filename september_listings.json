@@ -1,320 +1,440 @@
 {
-  "researched": "September 25, 2026",
-  "move_in": "September 29, 2026",
-  "listings": [
+ "researched": "September 25, 2026",
+ "move_in": "September 29, 2026",
+ "listings": [
+  {
+   "id": "ff-949142_1",
+   "source": "furnishedfinder",
+   "title": "El Sobrante en-suite room · freshest calendar on the board",
+   "area": "El Sobrante, Contra Costa County",
+   "rent": 1475,
+   "extra": false,
+   "group": "one_month",
+   "timing_label": "Advertised start Sept 30 · ask about Sept 29",
+   "parking": "offstreet",
+   "parking_label": "Free parking on premises advertised",
+   "furnished": "yes",
+   "availability": "Calendar updated September 10, 2026 — the most recently maintained listing on the board. The listing’s first available date shows September 30, 2026, one night after the requested start, so September 29 needs host confirmation.",
+   "deposit": "$1,475 refundable deposit + $350 cleaning fee. First 30 days including cleaning: $1,825 ($60.83/day), excluding the refundable deposit.",
+   "term": "One-month / 30-day minimum; confirm monthly extensions and the notice period.",
+   "neighborhood": "Advertiser describes a one-level single-family home on a quiet street between Richmond, Pinole and Orinda, near Wildcat Canyon Regional Park and San Pablo Reservoir, with San Pablo Dam Road as the main non-highway route. Ask how far groceries are by car.",
+   "included": "Utilities included; washer and dryer on premises, heating and storage. The 500 sq ft room has a large closet, ceiling fan, TV and a built-in window seat. Smart locks on the front gate and house entry.",
+   "bath": "Private bathroom with shower, en-suite to the room.",
+   "conditions": "One occupant and one vehicle. Pets are allowed and pets already live on the property. No smoking.",
+   "confirm": "A September 29 start against the advertised September 30 date, monthly extension terms, and whether the large parking space is assigned to you.",
+   "url": "https://www.furnishedfinder.com/property/949142_1",
+   "photos": [
     {
-      "id": "ff-224172_1",
-      "source": "furnishedfinder",
-      "title": "Vacaville furnished room · one-month minimum",
-      "area": "Vacaville, Solano County",
-      "rent": 1200,
-      "extra": false,
-      "group": "one_month",
-      "parking": "offstreet",
-      "parking_label": "Free parking on property advertised",
-      "furnished": "yes",
-      "availability": "Advertised available; calendar updated August 19, 2026. September 29 needs host confirmation.",
-      "deposit": "$450 refundable deposit + $125 cleaning fee. First 30 days including cleaning: $1,325 ($44.17/day), excluding refundable deposit.",
-      "term": "One-month / 30-day minimum; confirm monthly extensions and notice.",
-      "neighborhood": "Advertiser describes a quiet residential subdivision in central Vacaville. Ask for cross streets and distance to groceries.",
-      "included": "Utilities, Wi-Fi, kitchen and laundry access; queen bed, pool and hot tub.",
-      "bath": "Private bathroom advertised.",
-      "conditions": "One occupant and one vehicle. No smoking or tenant pets; pets live on the property.",
-      "confirm": "September 29 availability, a reserved parking space, bathroom exclusivity and renewal terms.",
-      "url": "https://www.furnishedfinder.com/property/224172_1",
-      "photos": [
-        {
-          "file": "september-ff-224172_1-1.jpg",
-          "source": "https://www.furnishedfinder.com/_pdp_/224172/1/224172_1_56657505-full.jpg"
-        },
-        {
-          "file": "september-ff-224172_1-2.jpg",
-          "source": "https://www.furnishedfinder.com/_pdp_/224172/1/224172_1_67643826-full.jpg"
-        },
-        {
-          "file": "september-ff-224172_1-3.jpg",
-          "source": "https://www.furnishedfinder.com/_pdp_/224172/1/224172_1_67643859-full.jpg"
-        }
-      ],
-      "checked": "September 25, 2026",
-      "contact": "Open the original listing to review the host’s contact options. No message has been sent.",
-      "city": "Vacaville",
-      "region": "solano"
+     "file": "september-ff-949142_1-1.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/949142/1/949142_1_66138173-full.jpg"
     },
     {
-      "id": "ff-848526_1",
-      "source": "furnishedfinder",
-      "title": "Fairfield junior suite · driveway parking",
-      "area": "Summerwalk / north of Clay Bank, Fairfield",
-      "rent": 1500,
-      "extra": false,
-      "group": "one_month",
-      "parking": "driveway",
-      "parking_label": "Driveway + street parking advertised",
-      "furnished": "yes",
-      "availability": "Advertised available; calendar updated July 28, 2026. September 29 unconfirmed.",
-      "deposit": "$1,000 refundable deposit; ask whether any additional fees apply.",
-      "term": "One-month / 30-day minimum; monthly renewal needs confirmation.",
-      "neighborhood": "Residential Summerwalk area, a few miles from shopping and dining; listing mentions Solano Mall.",
-      "included": "$1,400 rent + listed $100 utilities = $1,500 budgeted monthly. Furnished queen room, kitchen and laundry.",
-      "bath": "Private bathroom in a second-floor junior suite.",
-      "conditions": "Single occupancy, one vehicle, no pets or smoking. Stairs to bedroom.",
-      "confirm": "September 29, driveway assignment, whether the $100 utility charge is recurring and the complete monthly total.",
-      "url": "https://www.furnishedfinder.com/property/848526_1",
-      "photos": [
-        {
-          "file": "september-ff-848526_1-1.jpg",
-          "source": "https://www.furnishedfinder.com/_pdp_/848526/1/848526_1_62343762-full.jpeg"
-        },
-        {
-          "file": "september-ff-848526_1-2.jpg",
-          "source": "https://www.furnishedfinder.com/_pdp_/848526/1/848526_1_62343759-full.jpeg"
-        },
-        {
-          "file": "september-ff-848526_1-3.jpg",
-          "source": "https://www.furnishedfinder.com/_pdp_/848526/1/848526_1_62343760-full.jpeg"
-        }
-      ],
-      "checked": "September 25, 2026",
-      "contact": "Open the original listing to review the host’s contact options. No message has been sent.",
-      "city": "Fairfield",
-      "region": "solano"
+     "file": "september-ff-949142_1-2.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/949142/1/949142_1_66138143-full.JPG"
     },
     {
-      "id": "ff-669591_1",
-      "source": "furnishedfinder",
-      "title": "Fairfield furnished room · electricity extra",
-      "area": "Fairfield, near NorthBay Medical Center",
-      "rent": 1200,
-      "extra": true,
-      "group": "one_month",
-      "parking": "offstreet",
-      "parking_label": "Free parking on property advertised",
-      "furnished": "yes",
-      "availability": "Advertised available; calendar updated August 2, 2026. September 29 unconfirmed.",
-      "deposit": "$1,200 refundable deposit + $150 cleaning fee; first month $1,350 plus electricity, excluding deposit.",
-      "term": "One-month / 30-day minimum; confirm renewal terms.",
-      "neighborhood": "Advertiser describes a cul-de-sac setting with a short drive to shops, restaurants and parks.",
-      "included": "Queen bed, kitchen, laundry, water, trash and Wi-Fi. Description says electricity is split despite the utilities-included badge.",
-      "bath": "Hallway bathroom advertised private; caption says primary use and not shared with other tenants. Confirm guests will not use it.",
-      "conditions": "Advertiser seeks female tenants. No smoking or pets.",
-      "confirm": "Tenant eligibility, exclusive bathroom use, electricity estimate, parking and September 29.",
-      "url": "https://www.furnishedfinder.com/property/669591_1",
-      "photos": [
-        {
-          "file": "september-ff-669591_1-1.png",
-          "source": "https://www.furnishedfinder.com/_pdp_/669591/1/669591_1_55439154-full.png"
-        },
-        {
-          "file": "september-ff-669591_1-2.png",
-          "source": "https://www.furnishedfinder.com/_pdp_/669591/1/669591_1_55439148-full.png"
-        },
-        {
-          "file": "september-ff-669591_1-3.png",
-          "source": "https://www.furnishedfinder.com/_pdp_/669591/1/669591_1_55439149-full.png"
-        }
-      ],
-      "checked": "September 25, 2026",
-      "contact": "Open the original listing to review the host’s contact options. No message has been sent.",
-      "city": "Fairfield",
-      "region": "solano"
-    },
-    {
-      "id": "zillow-15658964",
-      "source": "zillow",
-      "title": "Vallejo private entrance + full bathroom",
-      "area": "Old City Vallejo · exact address undisclosed",
-      "city": "Vallejo",
-      "region": "solano",
-      "rent": 1345,
-      "extra": true,
-      "group": "confirm",
-      "timing_label": "Lease conflict · parking unconfirmed",
-      "parking": "unknown",
-      "parking_label": "Parking unspecified",
-      "furnished": "no",
-      "availability": "Advertised available now; reviewed September 25, 2026. September 29 is unconfirmed.",
-      "deposit": "Deposit and any additional fees unspecified.",
-      "term": "Description says month-to-month; structured lease field says one year. Resolve before treating this as a monthly option.",
-      "neighborhood": "Advertiser describes a residential setting near groceries and transit; ask for the address to assess the immediate area.",
-      "included": "$1,250 rent + $65 PG&E + $30 internet = $1,345/month before any unlisted charges. Water and garbage included; laundry unavailable.",
-      "bath": "Private full bathroom and separate entrance advertised.",
-      "conditions": "Unfurnished; no pets or smoking. Advertised minimum credit score 630. Kitchen access unspecified.",
-      "confirm": "Monthly lease versus one year, parking for one car and its cost, September 29 vacancy, deposit and kitchen access.",
-      "url": "https://www.zillow.com/homedetails/Vallejo-CA-94590/15658964_zpid/",
-      "photos": [
-        {
-          "file": "september-zillow-15658964-1.jpg",
-          "source": "https://photos.zillowstatic.com/fp/88de1ec3959362cdc260d03d02f82c89-cc_ft_960.jpg"
-        },
-        {
-          "file": "september-zillow-15658964-2.jpg",
-          "source": "https://photos.zillowstatic.com/fp/af8a74104b87459301d3831b97dc7743-cc_ft_576.jpg"
-        },
-        {
-          "file": "september-zillow-15658964-3.jpg",
-          "source": "https://photos.zillowstatic.com/fp/6f47e3cc32fcbd26965217f6e5060fcf-cc_ft_576.jpg"
-        }
-      ],
-      "checked": "September 25, 2026",
-      "contact": "Open Zillow to review the listing and contact the manager. No message has been sent."
-    },
-    {
-      "id": "su-130109474",
-      "source": "supost",
-      "title": "Palo Alto private bed + bath · October 1",
-      "area": "408 Grant Avenue, Palo Alto",
-      "rent": 1430,
-      "extra": true,
-      "group": "later",
-      "timing_label": "October 1 · 2-night gap from September 29",
-      "parking": "unknown",
-      "parking_label": "Parking not specified",
-      "furnished": "unknown",
-      "availability": "October 1, 2026 or later. Posted September 25. Does not cover September 29–30 as advertised.",
-      "deposit": "Deposit not specified. Furnishings available for an additional fee.",
-      "term": "Long-term sublet preferred; one month and monthly renewal are not confirmed.",
-      "neighborhood": "Advertiser mentions downtown, restaurants, cafés, shops and Caltrain nearby; check the exact walking distances from Grant Avenue.",
-      "included": "$1,430 base rent; utilities and furnishing fees not specified. Shared apartment.",
-      "bath": "Private bedroom and private bathroom advertised.",
-      "conditions": "Female tenant preferred. Living room has been converted into an additional bedroom.",
-      "confirm": "An earlier start or two-night bridge, one-month acceptance, parking, utilities and furnishing costs.",
-      "url": "https://supost.com/post/1-bedroom-1-bathroom-in-a-2b2b-apartment-for-long-term-suble-130109474",
-      "photos": [
-        {
-          "file": "september-su-130109474-1.jpg",
-          "source": "https://cdn.supost.com/v2/posts/d6dc5806-0460-491f-875f-fe399d22e983/26bd7317-6850-4d31-8a56-c5f9006b3c37.jpg"
-        },
-        {
-          "file": "september-su-130109474-2.jpg",
-          "source": "https://cdn.supost.com/v2/posts/1a1ca97e-0fdd-4b56-b282-1c38c33a0182/7835c4bc-1b37-4449-8e4f-058b7a9a9a9b.jpg"
-        },
-        {
-          "file": "september-su-130109474-3.jpg",
-          "source": "https://cdn.supost.com/v2/posts/bfff5d64-835f-4bab-9233-efe0d204897c/56fe1859-7ce1-4807-b3c2-dc45c5cde5ce.jpg"
-        }
-      ],
-      "checked": "September 25, 2026",
-      "contact": "Open the original listing to review the host’s contact options. No message has been sent.",
-      "city": "Palo Alto",
-      "region": "peninsula"
-    },
-    {
-      "id": "su-130107280",
-      "source": "supost",
-      "title": "Downtown Palo Alto furnished room · October 2",
-      "area": "Downtown Palo Alto",
-      "rent": 1500,
-      "extra": false,
-      "group": "later",
-      "timing_label": "October 2 · 3-night gap from September 29",
-      "parking": "unknown",
-      "parking_label": "Parking not specified",
-      "furnished": "yes",
-      "availability": "Title says October 2; description says early October. Posted September 16. September 29–October 1 not covered.",
-      "deposit": "$300 refundable security deposit.",
-      "term": "Lease length and monthly flexibility not stated.",
-      "neighborhood": "Downtown Palo Alto location; ask for exact cross streets to assess residential setting and access to shops.",
-      "included": "Utilities, furnished bedroom, kitchen and free onsite laundry.",
-      "bath": "Private bathroom advertised in a shared house.",
-      "conditions": "Advertised for graduate students, postdocs and visiting Stanford researchers; eligibility needs confirmation.",
-      "confirm": "Exact start date, monthly flexibility, parking and any additional fees. Requires a three-night bridge unless an earlier start is agreed.",
-      "url": "https://supost.com/post/1-bed-with-private-bath-available-in-downtown-palo-alto-star-130107280",
-      "photos": [
-        {
-          "file": "september-su-130107280-1.jpg",
-          "source": "https://cdn.supost.com/v2/posts/61c6fe4e-4c14-4910-9a33-743dd48f2f6b/ebc75c53-d4ec-421f-959e-0778dd84278c.jpeg"
-        },
-        {
-          "file": "september-su-130107280-2.jpg",
-          "source": "https://cdn.supost.com/v2/posts/68ba29e5-4658-49ee-b245-eeb84ee93078/f47ac04a-9ac2-4010-9520-1a59e852bcc1.jpeg"
-        },
-        {
-          "file": "september-su-130107280-3.jpg",
-          "source": "https://cdn.supost.com/v2/posts/346cc9bf-e9c5-4cf7-a452-aa5a9e6b805e/83904be2-3515-4746-9340-30609bd72152.jpeg"
-        }
-      ],
-      "checked": "September 25, 2026",
-      "contact": "Open the original listing to review the host’s contact options. No message has been sent.",
-      "city": "Palo Alto",
-      "region": "peninsula"
-    },
-    {
-      "id": "ff-915271_1",
-      "source": "furnishedfinder",
-      "title": "Fairfield furnished private bed + bath · older calendar",
-      "area": "Fairfield, Solano County",
-      "rent": 1300,
-      "extra": false,
-      "group": "unverified",
-      "timing_label": "Older calendar · October 2025 · verify first",
-      "parking": "street",
-      "parking_label": "Street parking in description",
-      "furnished": "yes",
-      "availability": "Page says available, but calendar was last updated October 6, 2025. Do not assume current vacancy.",
-      "deposit": "$500 refundable deposit + $50 cleaning fee; first month $1,350, excluding deposit.",
-      "term": "Advertised one-month / 30-day minimum; verify current terms.",
-      "neighborhood": "Advertiser describes a quiet residential neighborhood; cross streets and nearby shops are unconfirmed.",
-      "included": "Utilities, Wi-Fi, kitchen, laundry and twin bed.",
-      "bath": "Private bathroom advertised.",
-      "conditions": "Single occupancy and one vehicle; no pets or smoking.",
-      "confirm": "Whether still offered, September 29, renewal terms and parking. Description says street parking although the amenity badge says on premises.",
-      "url": "https://www.furnishedfinder.com/property/915271_1",
-      "photos": [
-        {
-          "file": "september-ff-915271_1-1.jpg",
-          "source": "https://www.furnishedfinder.com/_pdp_/915271/1/915271_1_61005637-full.jpeg"
-        },
-        {
-          "file": "september-ff-915271_1-2.jpg",
-          "source": "https://www.furnishedfinder.com/_pdp_/915271/1/915271_1_60813062-full.jpeg"
-        }
-      ],
-      "checked": "September 25, 2026",
-      "contact": "Open the original listing to review the host’s contact options. No message has been sent.",
-      "city": "Fairfield",
-      "region": "solano"
-    },
-    {
-      "id": "ff-306547_1",
-      "source": "furnishedfinder",
-      "title": "Southern Novato furnished room · older calendar",
-      "area": "Southern Novato, Marin County",
-      "rent": 1200,
-      "extra": false,
-      "group": "unverified",
-      "timing_label": "Older calendar · December 2025 · verify first",
-      "parking": "offstreet",
-      "parking_label": "Free parking on property advertised",
-      "furnished": "yes",
-      "availability": "Page says available; calendar last updated December 10, 2025. Current vacancy and September 29 are unconfirmed.",
-      "deposit": "$400 refundable deposit + $100 cleaning fee. First 30 days: $1,300 excluding deposit ($43.33/day).",
-      "term": "Advertised one-month / 30-day minimum; monthly extensions unconfirmed.",
-      "neighborhood": "Southern Novato residential home; ask for cross streets and driving distance to groceries and restaurants.",
-      "included": "Utilities, internet, cable, laundry access and twice-monthly house cleaning. Furnished bedroom; bed size is inconsistent in the listing.",
-      "bath": "Private full bathroom advertised.",
-      "conditions": "Shared with owner and adult daughter; resident cat. One occupant, no tenant pets or smoking.",
-      "confirm": "Whether this older listing is still offered, September 29, bathroom exclusivity, parking assignment and monthly renewal.",
-      "url": "https://www.furnishedfinder.com/property/306547_1",
-      "photos": [
-        {
-          "file": "september-ff-306547_1-1.jpg",
-          "source": "https://www.furnishedfinder.com/_pdp_/306547/1/306547_1_38222262-full.jpg"
-        },
-        {
-          "file": "september-ff-306547_1-2.jpg",
-          "source": "https://www.furnishedfinder.com/_pdp_/306547/1/306547_1_45339609-full.jpeg"
-        },
-        {
-          "file": "september-ff-306547_1-3.jpg",
-          "source": "https://www.furnishedfinder.com/_pdp_/306547/1/306547_1_45339614-full.jpeg"
-        }
-      ],
-      "checked": "September 25, 2026",
-      "contact": "Open the listing to check current availability with the host. No message has been sent.",
-      "city": "Novato",
-      "region": "north"
+     "file": "september-ff-949142_1-3.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/949142/1/949142_1_66138115-full.JPG"
     }
-  ],
-  "photos_checked": "September 25, 2026"
+   ],
+   "checked": "September 25, 2026",
+   "contact": "Advertised reply time: typically within an hour. Open the listing to message the host. No message has been sent.",
+   "city": "El Sobrante",
+   "region": "east"
+  },
+  {
+   "id": "ff-224172_1",
+   "source": "furnishedfinder",
+   "title": "Vacaville furnished room · one-month minimum",
+   "area": "Vacaville, Solano County",
+   "rent": 1200,
+   "extra": false,
+   "group": "one_month",
+   "parking": "offstreet",
+   "parking_label": "Free parking on property advertised",
+   "furnished": "yes",
+   "availability": "Advertised available; calendar updated August 19, 2026. September 29 needs host confirmation.",
+   "deposit": "$450 refundable deposit + $125 cleaning fee. First 30 days including cleaning: $1,325 ($44.17/day), excluding refundable deposit.",
+   "term": "One-month / 30-day minimum; confirm monthly extensions and notice.",
+   "neighborhood": "Advertiser describes a quiet residential subdivision in central Vacaville. Ask for cross streets and distance to groceries.",
+   "included": "Utilities, Wi-Fi, kitchen and laundry access; queen bed, pool and hot tub.",
+   "bath": "Private bathroom advertised.",
+   "conditions": "One occupant and one vehicle. No smoking or tenant pets; pets live on the property.",
+   "confirm": "September 29 availability, a reserved parking space, bathroom exclusivity and renewal terms.",
+   "url": "https://www.furnishedfinder.com/property/224172_1",
+   "photos": [
+    {
+     "file": "september-ff-224172_1-1.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/224172/1/224172_1_56657505-full.jpg"
+    },
+    {
+     "file": "september-ff-224172_1-2.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/224172/1/224172_1_67643826-full.jpg"
+    },
+    {
+     "file": "september-ff-224172_1-3.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/224172/1/224172_1_67643859-full.jpg"
+    }
+   ],
+   "checked": "September 25, 2026 (link re-verified)",
+   "contact": "Advertised reply time: typically within a day. Open the listing to message the host. No message has been sent.",
+   "city": "Vacaville",
+   "region": "solano"
+  },
+  {
+   "id": "ff-848526_1",
+   "source": "furnishedfinder",
+   "title": "Fairfield junior suite · driveway parking",
+   "area": "Summerwalk / north of Clay Bank, Fairfield",
+   "rent": 1500,
+   "extra": false,
+   "group": "one_month",
+   "parking": "driveway",
+   "parking_label": "Driveway + street parking advertised",
+   "furnished": "yes",
+   "availability": "Advertised available; calendar updated July 28, 2026. September 29 unconfirmed.",
+   "deposit": "$1,000 refundable deposit; ask whether any additional fees apply.",
+   "term": "One-month / 30-day minimum; monthly renewal needs confirmation.",
+   "neighborhood": "Residential Summerwalk area, a few miles from shopping and dining; listing mentions Solano Mall.",
+   "included": "$1,400 rent + listed $100 utilities = $1,500 budgeted monthly. Furnished queen room, kitchen and laundry.",
+   "bath": "Private bathroom in a second-floor junior suite.",
+   "conditions": "Single occupancy, one vehicle, no pets or smoking. Stairs to bedroom.",
+   "confirm": "September 29, driveway assignment, whether the $100 utility charge is recurring and the complete monthly total.",
+   "url": "https://www.furnishedfinder.com/property/848526_1",
+   "photos": [
+    {
+     "file": "september-ff-848526_1-1.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/848526/1/848526_1_62343762-full.jpeg"
+    },
+    {
+     "file": "september-ff-848526_1-2.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/848526/1/848526_1_62343759-full.jpeg"
+    },
+    {
+     "file": "september-ff-848526_1-3.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/848526/1/848526_1_62343760-full.jpeg"
+    }
+   ],
+   "checked": "September 25, 2026 (link re-verified)",
+   "contact": "Advertised reply time: typically within an hour. Open the listing to message the host. No message has been sent.",
+   "city": "Fairfield",
+   "region": "solano"
+  },
+  {
+   "id": "ff-669591_1",
+   "source": "furnishedfinder",
+   "title": "Fairfield furnished room · electricity extra",
+   "area": "Fairfield, near NorthBay Medical Center",
+   "rent": 1200,
+   "extra": true,
+   "group": "one_month",
+   "parking": "offstreet",
+   "parking_label": "Free parking on property advertised",
+   "furnished": "yes",
+   "availability": "Advertised available; calendar updated August 2, 2026. September 29 unconfirmed.",
+   "deposit": "$1,200 refundable deposit + $150 cleaning fee; first month $1,350 plus electricity, excluding deposit.",
+   "term": "One-month / 30-day minimum; confirm renewal terms.",
+   "neighborhood": "Advertiser describes a cul-de-sac setting with a short drive to shops, restaurants and parks.",
+   "included": "Queen bed, kitchen, laundry, water, trash and Wi-Fi. Description says electricity is split despite the utilities-included badge.",
+   "bath": "Hallway bathroom advertised private; caption says primary use and not shared with other tenants. Confirm guests will not use it.",
+   "conditions": "Advertiser seeks female tenants. No smoking or pets.",
+   "confirm": "Tenant eligibility, exclusive bathroom use, electricity estimate, parking and September 29.",
+   "url": "https://www.furnishedfinder.com/property/669591_1",
+   "photos": [
+    {
+     "file": "september-ff-669591_1-1.png",
+     "source": "https://www.furnishedfinder.com/_pdp_/669591/1/669591_1_55439154-full.png"
+    },
+    {
+     "file": "september-ff-669591_1-2.png",
+     "source": "https://www.furnishedfinder.com/_pdp_/669591/1/669591_1_55439148-full.png"
+    },
+    {
+     "file": "september-ff-669591_1-3.png",
+     "source": "https://www.furnishedfinder.com/_pdp_/669591/1/669591_1_55439149-full.png"
+    }
+   ],
+   "checked": "September 25, 2026 (link re-verified)",
+   "contact": "Advertised reply time: typically within an hour; the host now has 2 reviews. Open the listing to message the host. No message has been sent.",
+   "city": "Fairfield",
+   "region": "solano"
+  },
+  {
+   "id": "ff-415061_1",
+   "source": "furnishedfinder",
+   "title": "Hayward room with private bath and private entrance",
+   "area": "Hayward, Alameda County",
+   "rent": 1250,
+   "extra": false,
+   "group": "confirm",
+   "timing_label": "Two-month minimum · conflicts with a one-month start",
+   "parking": "unknown",
+   "parking_label": "Parking type not stated for this room",
+   "furnished": "yes",
+   "availability": "Advertised available with utilities included; calendar last updated June 17, 2026. September 29 needs host confirmation.",
+   "deposit": "$650 refundable deposit + $200 cleaning fee. Two-month minimum including cleaning: $2,700 ($45/day), excluding the refundable deposit.",
+   "term": "Two-month / 60-day minimum — longer than the one-month start requested. Ask whether a single month is possible and how renewal works after that.",
+   "neighborhood": "Advertiser describes a quiet corner condo near downtown Hayward, shopping under three blocks away, close to Eden, Kaiser and St Rose hospitals. One other tenant shares the home.",
+   "included": "Utilities included; internet and Wi-Fi, kitchen and washer/dryer access. Small backyard.",
+   "bath": "Private bathroom and private entrance advertised.",
+   "conditions": "No pets, no smoking. One other tenant shares the condo with the owner.",
+   "confirm": "Whether one month is acceptable despite the 60-day minimum, September 29 availability, and whether a parking space comes with the room.",
+   "url": "https://www.furnishedfinder.com/property/415061_1",
+   "photos": [
+    {
+     "file": "september-ff-415061_1-1.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/415061/1/415061_1_63788860-full.jpg"
+    },
+    {
+     "file": "september-ff-415061_1-2.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/415061/1/415061_1_63713494-full.jpg"
+    },
+    {
+     "file": "september-ff-415061_1-3.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/415061/1/415061_1_63788859-full.jpg"
+    }
+   ],
+   "checked": "September 25, 2026",
+   "contact": "Open the listing to message the host. No message has been sent.",
+   "city": "Hayward",
+   "region": "east"
+  },
+  {
+   "id": "su-130109474",
+   "source": "supost",
+   "title": "Palo Alto private bed + bath · October 1",
+   "area": "408 Grant Avenue, Palo Alto",
+   "rent": 1430,
+   "extra": true,
+   "group": "later",
+   "timing_label": "October 1 · 2-night gap from September 29",
+   "parking": "unknown",
+   "parking_label": "Parking not specified",
+   "furnished": "unknown",
+   "availability": "October 1, 2026 or later. Posted September 25. Does not cover September 29–30 as advertised.",
+   "deposit": "Deposit not specified. Furnishings available for an additional fee.",
+   "term": "Long-term sublet preferred; one month and monthly renewal are not confirmed.",
+   "neighborhood": "Advertiser mentions downtown, restaurants, cafés, shops and Caltrain nearby; check the exact walking distances from Grant Avenue.",
+   "included": "$1,430 base rent; utilities and furnishing fees not specified. Shared apartment.",
+   "bath": "Private bedroom and private bathroom advertised.",
+   "conditions": "Female tenant preferred. Living room has been converted into an additional bedroom.",
+   "confirm": "An earlier start or two-night bridge, one-month acceptance, parking, utilities and furnishing costs.",
+   "url": "https://supost.com/post/1-bedroom-1-bathroom-in-a-2b2b-apartment-for-long-term-suble-130109474",
+   "photos": [
+    {
+     "file": "september-su-130109474-1.jpg",
+     "source": "https://cdn.supost.com/v2/posts/d6dc5806-0460-491f-875f-fe399d22e983/26bd7317-6850-4d31-8a56-c5f9006b3c37.jpg"
+    },
+    {
+     "file": "september-su-130109474-2.jpg",
+     "source": "https://cdn.supost.com/v2/posts/1a1ca97e-0fdd-4b56-b282-1c38c33a0182/7835c4bc-1b37-4449-8e4f-058b7a9a9a9b.jpg"
+    },
+    {
+     "file": "september-su-130109474-3.jpg",
+     "source": "https://cdn.supost.com/v2/posts/bfff5d64-835f-4bab-9233-efe0d204897c/56fe1859-7ce1-4807-b3c2-dc45c5cde5ce.jpg"
+    }
+   ],
+   "checked": "September 25, 2026 (link re-verified)",
+   "contact": "Re-checked September 25: post is live with 48 views and 8 replies, so expect competition. Message through the post’s reply form. No message has been sent.",
+   "city": "Palo Alto",
+   "region": "peninsula"
+  },
+  {
+   "id": "su-130107280",
+   "source": "supost",
+   "title": "Downtown Palo Alto furnished room · October 2",
+   "area": "Downtown Palo Alto",
+   "rent": 1500,
+   "extra": false,
+   "group": "later",
+   "timing_label": "October 2 · 3-night gap from September 29",
+   "parking": "unknown",
+   "parking_label": "Parking not specified",
+   "furnished": "yes",
+   "availability": "Title says October 2; description says early October. Posted September 16. September 29–October 1 not covered.",
+   "deposit": "$300 refundable security deposit.",
+   "term": "Lease length and monthly flexibility not stated.",
+   "neighborhood": "Downtown Palo Alto location; ask for exact cross streets to assess residential setting and access to shops.",
+   "included": "Utilities, furnished bedroom, kitchen and free onsite laundry.",
+   "bath": "Private bathroom advertised in a shared house.",
+   "conditions": "Advertised for graduate students, postdocs and visiting Stanford researchers; eligibility needs confirmation.",
+   "confirm": "Exact start date, monthly flexibility, parking and any additional fees. Requires a three-night bridge unless an earlier start is agreed.",
+   "url": "https://supost.com/post/1-bed-with-private-bath-available-in-downtown-palo-alto-star-130107280",
+   "photos": [
+    {
+     "file": "september-su-130107280-1.jpg",
+     "source": "https://cdn.supost.com/v2/posts/61c6fe4e-4c14-4910-9a33-743dd48f2f6b/ebc75c53-d4ec-421f-959e-0778dd84278c.jpeg"
+    },
+    {
+     "file": "september-su-130107280-2.jpg",
+     "source": "https://cdn.supost.com/v2/posts/68ba29e5-4658-49ee-b245-eeb84ee93078/f47ac04a-9ac2-4010-9520-1a59e852bcc1.jpeg"
+    },
+    {
+     "file": "september-su-130107280-3.jpg",
+     "source": "https://cdn.supost.com/v2/posts/346cc9bf-e9c5-4cf7-a452-aa5a9e6b805e/83904be2-3515-4746-9340-30609bd72152.jpeg"
+    }
+   ],
+   "checked": "September 25, 2026 (link re-verified)",
+   "contact": "Re-checked September 25: post is live with 114 views, 6 replies and 5 favourites. The post lists a landlord phone number for tours. No message has been sent.",
+   "city": "Palo Alto",
+   "region": "peninsula"
+  },
+  {
+   "id": "ff-933277_1",
+   "source": "furnishedfinder",
+   "title": "North Berkeley hills room · closest to SF on the board",
+   "area": "Berkeley, Alameda County",
+   "rent": 1350,
+   "extra": false,
+   "group": "unverified",
+   "timing_label": "Older calendar · January 2026 · verify first",
+   "parking": "unknown",
+   "parking_label": "Parking not stated for this room",
+   "furnished": "yes",
+   "availability": "Advertised available with a one-month minimum, but the calendar was last updated January 20, 2026 and the house’s other rooms show later dates. Treat September 29 as unverified until the host replies.",
+   "deposit": "$1,500 refundable deposit + $150 cleaning fee + $40 application fee. First 30 days including cleaning and application: $1,540 ($51.33/day), excluding the refundable deposit.",
+   "term": "One-month / 30-day minimum advertised; confirm monthly extensions.",
+   "neighborhood": "Advertiser describes the North Berkeley hills by the Solano Avenue shops, walking distance to groceries, banks and restaurants, with bridge views and transit around the corner.",
+   "included": "Utilities included; the 180 sq ft room has a queen bed, dresser, end table, desk, TV, closet, window air conditioning and central heat.",
+   "bath": "Private bathroom advertised for this bedroom in a four-bedroom house.",
+   "conditions": "No pets and no smoking for tenants; pets live on the property.",
+   "confirm": "Whether the January 2026 calendar is current, September 29 availability, parking for one car, and monthly renewal.",
+   "url": "https://www.furnishedfinder.com/property/933277_1",
+   "photos": [
+    {
+     "file": "september-ff-933277_1-1.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/933277/1/933277_1_61248329-full.jpg"
+    },
+    {
+     "file": "september-ff-933277_1-2.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/933277/1/933277_1_61248331-full.jpg"
+    },
+    {
+     "file": "september-ff-933277_1-3.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/933277/1/933277_1_61248328-full.jpg"
+    }
+   ],
+   "checked": "September 25, 2026",
+   "contact": "Open the listing to message the host. No message has been sent.",
+   "city": "Berkeley",
+   "region": "east"
+  },
+  {
+   "id": "ff-933335_1",
+   "source": "furnishedfinder",
+   "title": "Alameda condo room with private bath",
+   "area": "Alameda, Alameda County",
+   "rent": 1500,
+   "extra": false,
+   "group": "unverified",
+   "timing_label": "Older calendar · November 2025 · verify first",
+   "parking": "offstreet",
+   "parking_label": "Free parking on premises advertised",
+   "furnished": "unknown",
+   "availability": "Advertiser says move-in is available immediately and the listing’s first available date shows September 30, 2026, but the calendar was last updated November 17, 2025, so availability is unverified.",
+   "deposit": "$1,500 refundable deposit + $100 cleaning fee. First 30 days including cleaning: $1,600 ($53.33/day), excluding the refundable deposit.",
+   "term": "One-month / 30-day minimum advertised; confirm monthly extensions.",
+   "neighborhood": "Advertiser cites a walk score of 85 near downtown Alameda, close to groceries and coffee shops, one ferry ride to San Francisco and an easy commute to Oakland.",
+   "included": "Utilities included. The room is offered either unfurnished or furnished, so the furnishing has to be settled with the host.",
+   "bath": "Private bathroom advertised, in a two-bedroom two-bath condo.",
+   "conditions": "Pets not allowed. Pets live on the property.",
+   "confirm": "Whether the November 2025 calendar is current, September 29 availability, furnished versus unfurnished, and monthly renewal.",
+   "url": "https://www.furnishedfinder.com/property/933335_1",
+   "photos": [
+    {
+     "file": "september-ff-933335_1-1.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/933335/1/933335_1_61248596-full.jpg"
+    },
+    {
+     "file": "september-ff-933335_1-2.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/933335/1/933335_1_61248593-full.jpg"
+    },
+    {
+     "file": "september-ff-933335_1-3.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/933335/1/933335_1_61248595-full.jpg"
+    }
+   ],
+   "checked": "September 25, 2026",
+   "contact": "Open the listing to message the host. No message has been sent.",
+   "city": "Alameda",
+   "region": "east"
+  },
+  {
+   "id": "ff-915271_1",
+   "source": "furnishedfinder",
+   "title": "Fairfield furnished private bed + bath · older calendar",
+   "area": "Fairfield, Solano County",
+   "rent": 1300,
+   "extra": false,
+   "group": "unverified",
+   "timing_label": "Older calendar · October 2025 · verify first",
+   "parking": "street",
+   "parking_label": "Street parking in description",
+   "furnished": "yes",
+   "availability": "Page says available, but calendar was last updated October 6, 2025. Do not assume current vacancy.",
+   "deposit": "$500 refundable deposit + $50 cleaning fee; first month $1,350, excluding deposit.",
+   "term": "Advertised one-month / 30-day minimum; verify current terms.",
+   "neighborhood": "Advertiser describes a quiet residential neighborhood; cross streets and nearby shops are unconfirmed.",
+   "included": "Utilities, Wi-Fi, kitchen, laundry and twin bed.",
+   "bath": "Private bathroom advertised.",
+   "conditions": "Single occupancy and one vehicle; no pets or smoking.",
+   "confirm": "Whether still offered, September 29, renewal terms and parking. Description says street parking although the amenity badge says on premises.",
+   "url": "https://www.furnishedfinder.com/property/915271_1",
+   "photos": [
+    {
+     "file": "september-ff-915271_1-1.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/915271/1/915271_1_61005637-full.jpeg"
+    },
+    {
+     "file": "september-ff-915271_1-2.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/915271/1/915271_1_60813062-full.jpeg"
+    }
+   ],
+   "checked": "September 25, 2026 (link re-verified)",
+   "contact": "Advertised reply time: more than a week — too slow to rely on for a September 29 start. No message has been sent.",
+   "city": "Fairfield",
+   "region": "solano"
+  },
+  {
+   "id": "ff-306547_1",
+   "source": "furnishedfinder",
+   "title": "Southern Novato furnished room · older calendar",
+   "area": "Southern Novato, Marin County",
+   "rent": 1200,
+   "extra": false,
+   "group": "unverified",
+   "timing_label": "Older calendar · December 2025 · verify first",
+   "parking": "offstreet",
+   "parking_label": "Free parking on property advertised",
+   "furnished": "yes",
+   "availability": "Page says available; calendar last updated December 10, 2025. Current vacancy and September 29 are unconfirmed.",
+   "deposit": "$400 refundable deposit + $100 cleaning fee. First 30 days: $1,300 excluding deposit ($43.33/day).",
+   "term": "Advertised one-month / 30-day minimum; monthly extensions unconfirmed.",
+   "neighborhood": "Southern Novato residential home; ask for cross streets and driving distance to groceries and restaurants.",
+   "included": "Utilities, internet, cable, laundry access and twice-monthly house cleaning. Furnished bedroom; bed size is inconsistent in the listing.",
+   "bath": "Private full bathroom advertised.",
+   "conditions": "Shared with owner and adult daughter; resident cat. One occupant, no tenant pets or smoking.",
+   "confirm": "Whether this older listing is still offered, September 29, bathroom exclusivity, parking assignment and monthly renewal.",
+   "url": "https://www.furnishedfinder.com/property/306547_1",
+   "photos": [
+    {
+     "file": "september-ff-306547_1-1.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/306547/1/306547_1_38222262-full.jpg"
+    },
+    {
+     "file": "september-ff-306547_1-2.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/306547/1/306547_1_45339609-full.jpeg"
+    },
+    {
+     "file": "september-ff-306547_1-3.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/306547/1/306547_1_45339614-full.jpeg"
+    }
+   ],
+   "checked": "September 25, 2026 (link re-verified)",
+   "contact": "Advertised reply time: typically within a week — slow for a September 29 start. No message has been sent.",
+   "city": "Novato",
+   "region": "north"
+  }
+ ],
+ "photos_checked": "September 25, 2026"
 }

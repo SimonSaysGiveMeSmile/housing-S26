@@ -92,12 +92,35 @@ check(all(item['source'] in ('zillow', 'supost', 'furnishedfinder') for item in 
       "inventory contains only the selected housing platforms")
 check("availability has not been confirmed with hosts" in latest,
       "advertised leads are not represented as host-confirmed availability")
-check(next(item for item in leads if item['id'] == 'zillow-15658964')['rent'] == 1250 + 65 + 30,
-      "Zillow comparison price includes electricity and internet charges")
 check(next(item for item in leads if item['id'] == 'ff-848526_1')['rent'] == 1400 + 100,
       "Fairfield comparison price includes the listed utility charge")
-check(next(item for item in leads if item['id'] == 'zillow-15658964')['group'] == 'confirm',
-      "conflicting Zillow lease terms are not counted as confirmed monthly terms")
+
+# A lead whose page stops being a rental offer must leave the inventory, not linger.
+check(not any(item['id'] == 'zillow-15658964' for item in leads),
+      "the withdrawn Vallejo listing (page now resolves to a sold house) is out of inventory")
+
+# Lease terms longer than the requested one-month start are never counted as monthly.
+check(next(item for item in leads if item['id'] == 'ff-415061_1')['group'] == 'confirm',
+      "the two-month-minimum Hayward room is not counted as monthly terms")
+check(all(item['group'] != 'one_month' for item in leads if '2 month' in item['term'].lower()
+          or 'two-month' in item['term'].lower() or '12 month' in item['term'].lower()),
+      "no longer-than-monthly minimum is filed under the one-month group")
+
+# Older-calendar leads stay in the verify-first bucket, hidden by the default filter.
+for stale in ('ff-933277_1', 'ff-933335_1', 'ff-915271_1', 'ff-306547_1'):
+    item = next(i for i in leads if i['id'] == stale)
+    check(item['group'] == 'unverified', f"older-calendar lead {stale} is marked verify-first")
+
+# Every city needs a distance entry, or rendering a new lead raises KeyError.
+import json as _json
+with open(os.path.join(d.ROOT, 'distance_estimates.json')) as _f:
+    _dist = _json.load(_f)['cities']
+missing_city = sorted({item['city'] for item in leads} - set(_dist))
+check(not missing_city, f"every lead's city has a measured SF distance (missing: {missing_city})")
+
+# No lead may claim a host has confirmed the requested date.
+check(all('no message has been sent' in item['contact'].lower() for item in leads),
+      "every card still states that no message has been sent")
 photos = [photo for item in leads for photo in item.get("photos", [])]
 check(all(os.path.isfile(os.path.join(d.ROOT, "maps", photo["file"])) for photo in photos),
       "all listing photos exist for the static site build")
