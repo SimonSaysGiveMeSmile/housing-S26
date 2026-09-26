@@ -22,7 +22,9 @@
       "confirm": "September 29 move-in and whether a driveway space is guaranteed at this price.",
       "url": "https://www.craigslist.org/view/d/sunnyvale-master-bedroom-furnished-with/1jR4s4qtSAHyBJtU3pFAb1",
       "photos": [],
-      "source": "craigslist"
+      "source": "craigslist",
+      "city": "Sunnyvale",
+      "region": "south"
     },
     {
       "id": "ff-224172_1",
@@ -59,7 +61,9 @@
         }
       ],
       "checked": "September 25, 2026",
-      "contact": "Open the original listing to review the host’s contact options. No message has been sent."
+      "contact": "Open the original listing to review the host’s contact options. No message has been sent.",
+      "city": "Vacaville",
+      "region": "solano"
     },
     {
       "id": "ff-848526_1",
@@ -96,7 +100,9 @@
         }
       ],
       "checked": "September 25, 2026",
-      "contact": "Open the original listing to review the host’s contact options. No message has been sent."
+      "contact": "Open the original listing to review the host’s contact options. No message has been sent.",
+      "city": "Fairfield",
+      "region": "solano"
     },
     {
       "id": "cl-7965272718",
@@ -139,7 +145,9 @@
           "source": "https://images.craigslist.org/00Y0Y_7fJtBJY7KQO_0MM132_600x450.jpg"
         }
       ],
-      "source": "craigslist"
+      "source": "craigslist",
+      "city": "Newark",
+      "region": "east"
     },
     {
       "id": "ff-669591_1",
@@ -176,7 +184,9 @@
         }
       ],
       "checked": "September 25, 2026",
-      "contact": "Open the original listing to review the host’s contact options. No message has been sent."
+      "contact": "Open the original listing to review the host’s contact options. No message has been sent.",
+      "city": "Fairfield",
+      "region": "solano"
     },
     {
       "id": "su-130109474",
@@ -214,7 +224,9 @@
         }
       ],
       "checked": "September 25, 2026",
-      "contact": "Open the original listing to review the host’s contact options. No message has been sent."
+      "contact": "Open the original listing to review the host’s contact options. No message has been sent.",
+      "city": "Palo Alto",
+      "region": "peninsula"
     },
     {
       "id": "su-130107280",
@@ -252,7 +264,9 @@
         }
       ],
       "checked": "September 25, 2026",
-      "contact": "Open the original listing to review the host’s contact options. No message has been sent."
+      "contact": "Open the original listing to review the host’s contact options. No message has been sent.",
+      "city": "Palo Alto",
+      "region": "peninsula"
     },
     {
       "id": "cl-7955884526",
@@ -275,7 +289,9 @@
       "url": "https://www.craigslist.org/view/d/novato-newly-furnished-private-room/ne5JK7Pf6GjYpxdw1JEXSc",
       "photos": [],
       "contact": "Original listing is unavailable as of September 25; retained for reference.",
-      "source": "craigslist"
+      "source": "craigslist",
+      "city": "Novato",
+      "region": "north"
     },
     {
       "id": "cl-7958109656",
@@ -318,7 +334,9 @@
           "source": "https://images.craigslist.org/00Z0Z_eTN9PenKcWF_0x20iA_600x450.jpg"
         }
       ],
-      "source": "craigslist"
+      "source": "craigslist",
+      "city": "Concord",
+      "region": "east"
     },
     {
       "id": "cl-7956128046",
@@ -341,7 +359,9 @@
       "contact": "Mrs. Flores requests daytime phone calls only. Open the listing to reveal the number.",
       "url": "https://www.craigslist.org/view/d/brentwood-bedroom-with-private-bath-in/mStHk8pELDdPsbPkHo1jJ8",
       "photos": [],
-      "source": "craigslist"
+      "source": "craigslist",
+      "city": "Brentwood",
+      "region": "east"
     },
     {
       "id": "cl-7971142872",
@@ -384,7 +404,9 @@
           "source": "https://images.craigslist.org/00v0v_6fgVSloGUVf_0x20oM_600x450.jpg"
         }
       ],
-      "source": "craigslist"
+      "source": "craigslist",
+      "city": "San Rafael",
+      "region": "north"
     },
     {
       "id": "cl-7966253142",
@@ -427,7 +449,9 @@
           "source": "https://images.craigslist.org/00y0y_3OvhD2hxuG1_0hd0cU_600x450.jpg"
         }
       ],
-      "source": "craigslist"
+      "source": "craigslist",
+      "city": "Livermore",
+      "region": "east"
     },
     {
       "id": "cl-7957798043",
@@ -470,7 +494,9 @@
           "source": "https://images.craigslist.org/00o0o_ioCwtzUwNtC_0CI0t2_600x450.jpg"
         }
       ],
-      "source": "craigslist"
+      "source": "craigslist",
+      "city": "Antioch",
+      "region": "east"
     },
     {
       "id": "cl-7959180948",
@@ -513,7 +539,9 @@
           "source": "https://images.craigslist.org/00a0a_9Yp7ZQ20qHb_0CI0t2_600x450.jpg"
         }
       ],
-      "source": "craigslist"
+      "source": "craigslist",
+      "city": "Millbrae",
+      "region": "peninsula"
     },
     {
       "id": "cl-7959921291",
@@ -556,7 +584,9 @@
           "source": "https://images.craigslist.org/00k0k_8qvWN66eNsW_0hq0cr_600x450.jpg"
         }
       ],
-      "source": "craigslist"
+      "source": "craigslist",
+      "city": "Hayward",
+      "region": "east"
     },
     {
       "id": "cl-7969966377",
@@ -579,7 +609,9 @@
       "url": "https://www.craigslist.org/view/d/milpitas-private-room-bath-in-gated/uhXjvC4BdZngi9qgxYP8pP",
       "photos": [],
       "contact": "Original listing is unavailable as of September 25; retained for reference.",
-      "source": "craigslist"
+      "source": "craigslist",
+      "city": "Milpitas",
+      "region": "south"
     },
     {
       "id": "rr-39898",
@@ -602,7 +634,9 @@
       "contact": "Open RotatingRoom to review the full listing and contact the host.",
       "url": "https://rotatingroom.com/need-a-room/39898?origin=city%2Flos_gatos-ca",
       "photos": [],
-      "source": "rotatingroom"
+      "source": "rotatingroom",
+      "city": "Oakland",
+      "region": "east"
     },
     {
       "id": "ff-915271_1",
@@ -636,7 +670,49 @@
         }
       ],
       "checked": "September 25, 2026",
-      "contact": "Open the original listing to review the host’s contact options. No message has been sent."
+      "contact": "Open the original listing to review the host’s contact options. No message has been sent.",
+      "city": "Fairfield",
+      "region": "solano"
+    },
+    {
+      "id": "ff-306547_1",
+      "source": "furnishedfinder",
+      "title": "Southern Novato furnished room · older calendar",
+      "area": "Southern Novato, Marin County",
+      "rent": 1200,
+      "extra": false,
+      "group": "unverified",
+      "timing_label": "Older calendar · December 2025 · verify first",
+      "parking": "offstreet",
+      "parking_label": "Free parking on property advertised",
+      "furnished": "yes",
+      "availability": "Page says available; calendar last updated December 10, 2025. Current vacancy and September 29 are unconfirmed.",
+      "deposit": "$400 refundable deposit + $100 cleaning fee. First 30 days: $1,300 excluding deposit ($43.33/day).",
+      "term": "Advertised one-month / 30-day minimum; monthly extensions unconfirmed.",
+      "neighborhood": "Southern Novato residential home; ask for cross streets and driving distance to groceries and restaurants.",
+      "included": "Utilities, internet, cable, laundry access and twice-monthly house cleaning. Furnished bedroom; bed size is inconsistent in the listing.",
+      "bath": "Private full bathroom advertised.",
+      "conditions": "Shared with owner and adult daughter; resident cat. One occupant, no tenant pets or smoking.",
+      "confirm": "Whether this older listing is still offered, September 29, bathroom exclusivity, parking assignment and monthly renewal.",
+      "url": "https://www.furnishedfinder.com/property/306547_1",
+      "photos": [
+        {
+          "file": "september-ff-306547_1-1.jpg",
+          "source": "https://www.furnishedfinder.com/_pdp_/306547/1/306547_1_38222262-full.jpg"
+        },
+        {
+          "file": "september-ff-306547_1-2.jpg",
+          "source": "https://www.furnishedfinder.com/_pdp_/306547/1/306547_1_45339609-full.jpeg"
+        },
+        {
+          "file": "september-ff-306547_1-3.jpg",
+          "source": "https://www.furnishedfinder.com/_pdp_/306547/1/306547_1_45339614-full.jpeg"
+        }
+      ],
+      "checked": "September 25, 2026",
+      "contact": "Open the listing to check current availability with the host. No message has been sent.",
+      "city": "Novato",
+      "region": "north"
     }
   ],
   "photos_checked": "September 25, 2026"

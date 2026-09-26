@@ -13,6 +13,7 @@ def load_listings():
 
 def render(css, contacted_ids, placeholder_svg):
     data = load_listings()
+    distances = json.loads((ROOT / 'distance_estimates.json').read_text())
     esc = html.escape
     labels = {
         "monthly": "Month-to-month advertised",
@@ -24,9 +25,16 @@ def render(css, contacted_ids, placeholder_svg):
     }
     sources = {"craigslist": "Craigslist", "supost": "SUpost", "furnishedfinder": "Furnished Finder", "rotatingroom": "RotatingRoom"}
     source_options = ''.join(f'<option value="{key}">{value}</option>' for key, value in sources.items())
+    regions = {"north": "North of SF · Marin / Sonoma", "solano": "Solano · northeast Bay", "east": "East Bay", "peninsula": "Peninsula", "south": "South Bay"}
+    region_options = ''.join(f'<option value="{key}">{value}</option>' for key, value in regions.items())
+    ff_monthly = sum(item['source'] == 'furnishedfinder' and item['group'] == 'one_month' for item in data['listings'])
+    ff_older = sum(item['source'] == 'furnishedfinder' and item['group'] == 'unverified' for item in data['listings'])
     cards = []
     for rank, item in enumerate(data["listings"]):
         contacted = item["id"] in contacted_ids
+        distance = distances['cities'][item['city']]
+        miles = distance['driving_miles']
+        route_url = f"https://www.google.com/maps/dir/?api=1&origin={distance['lat']},{distance['lon']}&destination={distances['destination']['lat']},{distances['destination']['lon']}&travelmode=driving"
         extra = "+" if item["extra"] else ""
         daily = f'{item["rent"] / 30:.2f}'.rstrip("0").rstrip(".")
         furnishing = {"yes": "Furnished", "no": "Unfurnished", "unknown": "Furnishing unconfirmed"}[item["furnished"]]
@@ -48,8 +56,9 @@ def render(css, contacted_ids, placeholder_svg):
         else:
             gallery = f'''<figure class="listing-gallery no-photos"><img src="{placeholder_svg(item['area'], '')}" alt="Area illustration for {esc(item['area'])}; property photos unavailable" width="180" height="162"><figcaption>Area illustration · no listing photos available</figcaption></figure>'''
         cards.append(f'''
-<article class="card latest-card{' top' if rank == 0 else ''}{' contacted' if contacted else ''}"
+<article id="{esc(item['id'])}" class="card latest-card{' contacted' if contacted else ''}"
  data-id="{esc(item['id'])}" data-rank="{rank}" data-price="{item['rent']}"
+ data-distance="{miles}" data-region="{item['region']}"
  data-group="{item['group']}" data-source="{item['source']}" data-parking="{item['parking']}" data-furnished="{item['furnished']}"
  data-contacted="{int(contacted)}" data-text="{esc(' '.join(str(v) for v in item.values()).lower())}">
  {gallery}
@@ -57,6 +66,7 @@ def render(css, contacted_ids, placeholder_svg):
   <div class="card-head"><h2 class="card-title">{esc(item['title'])}</h2>
    <div class="price">${item['rent']:,}{extra}<small>/month · ${daily}{extra}/day</small></div></div>
   <p class="area">{esc(item['area'])}</p>
+  <p class="distance-line"><strong>≈ {miles:.0f} driving miles to SF</strong> · {regions[item['region']]}<small>From {esc(item['city'])} city center to the Ferry Building</small></p>
   <div class="tags"><span class="pill source-label">{sources[item['source']]}</span><span class="status {'go' if item['group'] in ('monthly', 'one_month') else 'check'}">{esc(item.get('timing_label', labels[item['group']]))}</span>
    <span class="pill">{furnishing}</span><span class="pill">{esc(item['parking_label'])}</span></div>
   <ul class="facts">{fact_html}</ul>
@@ -68,9 +78,10 @@ def render(css, contacted_ids, placeholder_svg):
   </details>
  </div>
  <aside class="contact-box">
-  <div class="contact-title">{'Start here' if rank == 0 else 'Next step'}</div>
+  <div class="contact-title">Next step</div>
   <a class="btn" href="{esc(item['url'])}" target="_blank" rel="noopener noreferrer">Open listing ↗</a>
   <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query={quote(item['area'] + ', California')}" target="_blank" rel="noopener noreferrer">Explore approximate area ↗</a>
+  <a class="map-link" href="{esc(route_url)}" target="_blank" rel="noopener noreferrer">Drive to SF · check traffic ↗</a>
   <button class="copy-inquiry reach-toggle" type="button">Copy inquiry</button>
   <button class="mark-contact reach-toggle{' on' if contacted else ''}" type="button" aria-pressed="{str(contacted).lower()}">{'✓ Reached out' if contacted else 'Mark as reached out'}</button>
   <p class="contact-help">{esc(contact)}</p>
@@ -80,7 +91,7 @@ def render(css, contacted_ids, placeholder_svg):
     count = len(data["listings"])
     start_count = sum(item["group"] in ("monthly", "one_month", "confirm") for item in data["listings"])
     monthly_count = sum(item["group"] in ("monthly", "one_month") for item in data["listings"])
-    lowest = min(item["rent"] for item in data["listings"] if item["group"] in ("monthly", "confirm"))
+    lowest = min(item["rent"] for item in data["listings"] if item["group"] in ("monthly", "one_month", "confirm"))
     return f'''<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Bay Area Monthly Stays · September 29</title>
@@ -93,6 +104,9 @@ h1{{font-size:30px;letter-spacing:-.7px}}.archive-link{{font-size:12px;white-spa
 .scope-note{{font-size:12px;color:#64748b;margin-top:8px}}
 .status-panel{{margin:18px 0}}.stat-num{{font-size:26px}}.stat-lbl{{font-size:11px}}
 .research-note{{background:#eff6ff;border:1px solid #dbeafe;border-radius:8px;padding:12px 16px;color:#334155;font-size:13px}}
+.geography{{margin:16px 0;padding:16px;border:1px solid #a7d4ca;background:#f0f9f6;border-radius:8px;font-size:13px;color:#334155;line-height:1.6}}
+.geography h2{{border:0;margin:0 0 6px;padding:0;font-size:17px;color:#0f513d}}.geography .fb-preset{{margin-top:10px}}
+.distance-line{{margin:0 0 12px;font-size:12px;color:#0f766e;line-height:1.6}}.distance-line small{{display:block;color:#64748b;font-size:11px}}
 .channels{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}}
 .channel{{border:1px solid #e2e8f0;border-radius:8px;background:white;padding:14px;font-size:12px;color:#475569;line-height:1.55}}
 .channel h2{{font-size:15px;margin:0 0 6px;border:0;padding:0;color:#0f172a}}.channel p{{margin-bottom:8px}}
@@ -146,9 +160,14 @@ dl{{display:grid;grid-template-columns:120px 1fr;gap:6px 12px;margin-top:10px}}d
 <div class="stat"><div class="stat-num warn">0</div><div class="stat-lbl">September 29 dates<br>confirmed by a host</div></div>
 </div></div>
 <p class="research-note"><strong>New beyond Craigslist:</strong> Vacaville at $1,200 including utilities and Fairfield at $1,500 including the listed utility charge both advertise a private bathroom, parking and a one-month minimum. SUpost adds two Palo Alto backups starting October 1–2. <strong>Research: {data['researched']}.</strong> These are advertised leads; availability has not been confirmed with hosts.</p>
+<section class="geography" id="north-bay"><h2>Closer to San Francisco — including the North Bay</h2>
+<p>The shortlist now starts with the closest areas. <strong>San Rafael ≈ {distances['cities']['San Rafael']['driving_miles']:.0f} miles</strong>, <strong>Novato ≈ {distances['cities']['Novato']['driving_miles']:.0f} miles</strong>, compared with <strong>Sunnyvale ≈ {distances['cities']['Sunnyvale']['driving_miles']:.0f} miles</strong>.</p>
+<p>North of SF: the San Rafael $1,325 lead has off-street parking but monthly terms need confirmation. A Novato $1,200 room advertises a one-month minimum, private bathroom and onsite parking; its December 2025 calendar needs a fresh check.</p>
+<button id="north" class="fb-preset" type="button">North of SF + unverified backups</button>
+<p class="scope-note">Distances use city centers → SF Ferry Building, not exact property addresses. They are approximate road distances, not live commute times. “Drive to SF” opens a route to check traffic. <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a> · <a href="https://project-osrm.org/" target="_blank" rel="noopener noreferrer">OSRM routing</a>.</p></section>
 <section class="channels" aria-label="Search coverage">
 <div class="channel"><h2>SUpost</h2><p>Two private-bathroom backups at $1,430+ and $1,500. Both start after September 29; parking and monthly flexibility need confirmation.</p><button type="button" data-source-preset="supost">Show SUpost + later starts →</button></div>
-<div class="channel"><h2>Furnished Finder</h2><p>Three leads with a one-month minimum; one additional room has a calendar from 2025. Check cleaning fees and whether monthly extensions are possible.</p><button type="button" data-source-preset="furnishedfinder">Show Furnished Finder leads →</button></div>
+<div class="channel"><h2>Furnished Finder</h2><p>{ff_monthly} leads with a one-month minimum, plus {ff_older} older-calendar backups hidden by default. Check cleaning fees and whether monthly extensions are possible.</p><button type="button" data-source-preset="furnishedfinder">Show Furnished Finder leads →</button></div>
 <div class="channel"><h2>Rednote / 小红书</h2><p>Search attempted; no housing posts verified yet. Interactive browsing is pending access to the browser session.</p><a href="https://www.xiaohongshu.com/explore" target="_blank" rel="noopener noreferrer">Open Rednote ↗</a><p class="scope-note">Search: 湾区 短租 独卫 停车</p></div>
 </section>
 <div class="filterbar"><div class="fb-row">
@@ -156,18 +175,20 @@ dl{{display:grid;grid-template-columns:120px 1fr;gap:6px 12px;margin-top:10px}}d
 <button id="best" class="fb-preset" type="button">One-month options</button><button class="fb-preset" type="button" data-source-preset="noncl">Beyond Craigslist</button><button id="reset" class="fb-reset" type="button">Reset</button>
 <span class="fb-count" aria-live="polite"><b id="shown">{start_count}</b> of {count} showing</span></div>
 <div class="filter-controls">
+<label>Region<select id="region"><option value="all">Entire Bay Area</option>{region_options}</select></label>
+<label>Distance to SF<select id="maxdistance"><option value="all">Any distance</option><option value="25">Within 25 driving miles</option><option value="35">Within 35 driving miles</option><option value="50">Within 50 driving miles</option></select></label>
 <label>Monthly cost<select id="budget"><option value="1500">Up to $1,500</option><option value="1300">Up to $1,300</option><option value="1200">Up to $1,200</option><option value="1000">Up to $1,000</option></select></label>
 <label>Source<select id="source"><option value="all">All sources</option><option value="noncl">Beyond Craigslist</option>{source_options}</select></label>
-<label>Lease / timing<select id="term"><option value="start">September 29 leads · confirm dates</option><option value="monthly">One-month / monthly advertised</option><option value="confirm">Lease needs confirmation</option><option value="active">Shortlist + later-start backups</option><option value="later">Later-start backups</option><option value="all">All, including unavailable / unverified</option></select></label>
+<label>Lease / timing<select id="term"><option value="start">September 29 leads · confirm dates</option><option value="monthly">One-month / monthly advertised</option><option value="confirm">Lease needs confirmation</option><option value="active">Shortlist + later-start backups</option><option value="later">Later-start backups</option><option value="review">Include unverified backups</option><option value="all">All, including unavailable / unverified</option></select></label>
 <label>Parking<select id="parking"><option value="all">All parking types</option><option value="offstreet">Driveway / off-street advertised</option><option value="street">Street only</option></select></label>
 <label>Furnishing<select id="furnished"><option value="all">Any</option><option value="yes">Furnished</option><option value="no">Unfurnished</option></select></label>
-<label>Sort<select id="sort"><option value="recommended">Recommended order</option><option value="price">Lowest price first</option></select></label>
+<label>Sort<select id="sort"><option value="distance">Closest to San Francisco</option><option value="recommended">Recommended order</option><option value="price">Lowest price first</option></select></label>
 </div><p class="scope-note">Price filters use known recurring monthly charges. “+” means extra charges are unconfirmed. One-time fees and deposits appear under each listing’s details. A one-month minimum does not guarantee month-to-month renewal.</p></div>
 <main><div class="list-heading"><h2>The latest shortlist</h2><p>All bathrooms advertised as private</p></div>
 <div id="listings">{''.join(cards)}</div>
 <p id="empty" class="banner" hidden>No listings match. Try a higher budget or reset the filters.</p>
 <details class="disc"><summary>Inquiry to send to the host</summary><div class="disc-body"><p id="inquiry">Hi, I’m looking for housing starting September 29, 2026, initially for one month with the option to extend monthly. Is your room available for those dates, and would that arrangement work? I need a bathroom exclusively for my use and parking for one car. Could you confirm the total monthly cost including utilities, internet and parking, all upfront charges, whether the room is furnished, and the notice required to move out? Please also share the nearest cross streets and whether an in-person or video tour is available. Thank you.</p></div></details>
-<details class="disc"><summary>Other sources checked and listing freshness</summary><div class="disc-body"><p>SpareRoom: the Pacifica $1,150 listing is not accepting applications and has conflicting minimum-term details, so it is excluded. Roomies: search results surfaced candidates, but their full terms could not be verified. No Roomies listings are counted as matches.</p><p>SUpost research used public listing pages. The Furnished Finder cards show their calendar update dates; the October 2025 calendar is hidden by default. Craigslist Novato and Milpitas pages are no longer available. Use “All, including unavailable / unverified” to see retained older leads.</p></div></details>
+<details class="disc"><summary>Other sources checked and listing freshness</summary><div class="disc-body"><p>SpareRoom: the Pacifica $1,150 and San Rafael $1,250 listings are not accepting applications, so they are excluded. Roomies: search results surfaced candidates, but their full terms could not be verified. No Roomies listings are counted as matches.</p><p>Further north, Petaluma’s $1,400 garden suite starts November 30, and a Rohnert Park $1,300 casita requires three months; both miss the requested stay. The San Rafael $1,400 Furnished Finder room has a shared bathroom and a 12-month minimum.</p><p>SUpost research used public listing pages. Furnished Finder cards show their calendar update dates; older 2025 calendars are hidden by default. Craigslist Novato and Milpitas pages are no longer available. Use “Include unverified backups” for older-calendar leads or “All, including unavailable / unverified” for the complete research history.</p></div></details>
 </main><footer class="footer-note">Daily equivalents use a 30-day month; refundable deposits are additional move-in cash. Neighborhood descriptions are from advertisers and are not independent safety assessments. Source pages may contain cached details. Reached-out marks are saved in this browser and do not send messages.</footer>
 <dialog id="photo-dialog" class="photo-dialog" aria-labelledby="photo-title"><header><h2 id="photo-title">Listing photos</h2><button id="close-photo" type="button" aria-label="Close photos">Close ✕</button></header><img id="large-photo" alt=""><div class="photo-navigation"><button id="previous-photo" type="button" aria-label="Previous photo">← Previous</button><span id="photo-position" aria-live="polite"></span><button id="next-photo" type="button" aria-label="Next photo">Next →</button></div><p class="scope-note">Advertiser-supplied photos. Open the original listing for the complete photo set.</p></dialog>
 <div id="feedback" role="status" aria-live="polite"></div><script>{script}</script></body></html>'''

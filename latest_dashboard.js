@@ -1,6 +1,6 @@
 (() => {
   const cards = [...document.querySelectorAll('.latest-card')];
-  const ids = ['search', 'budget', 'source', 'term', 'parking', 'furnished', 'sort'];
+  const ids = ['search', 'budget', 'source', 'region', 'maxdistance', 'term', 'parking', 'furnished', 'sort'];
   const controls = Object.fromEntries(ids.map(id => [id, document.getElementById(id)]));
   const contactKey = 'housingContacted';
   let contacts = {};
@@ -12,19 +12,21 @@
   function filter() {
     const q = controls.search.value.trim().toLowerCase();
     let shown = 0;
-    const sorted = [...cards].sort((a, b) => controls.sort.value === 'price'
-      ? Number(a.dataset.price) - Number(b.dataset.price) || Number(a.dataset.rank) - Number(b.dataset.rank)
-      : Number(a.dataset.rank) - Number(b.dataset.rank));
+    const sortKey = {price: 'price', distance: 'distance', recommended: 'rank'}[controls.sort.value];
+    const sorted = [...cards].sort((a, b) =>
+      Number(a.dataset[sortKey]) - Number(b.dataset[sortKey]) || Number(a.dataset.rank) - Number(b.dataset.rank));
     for (const card of sorted) {
       const d = card.dataset;
       const term = controls.term.value;
-      const timingGroups = {start: ['monthly', 'one_month', 'confirm'], monthly: ['monthly', 'one_month'], active: ['monthly', 'one_month', 'confirm', 'later']};
+      const timingGroups = {start: ['monthly', 'one_month', 'confirm'], monthly: ['monthly', 'one_month'], active: ['monthly', 'one_month', 'confirm', 'later'], review: ['monthly', 'one_month', 'confirm', 'later', 'unverified']};
       const timingFits = term === 'all' || (timingGroups[term] ? timingGroups[term].includes(d.group) : d.group === term);
       const source = controls.source.value;
       const sourceFits = source === 'all' || (source === 'noncl' ? d.source !== 'craigslist' : d.source === source);
+      const regionFits = controls.region.value === 'all' || d.region === controls.region.value;
+      const distanceFits = controls.maxdistance.value === 'all' || Number(d.distance) <= Number(controls.maxdistance.value);
       const parking = controls.parking.value;
       const parkingFits = parking === 'all' || (parking === 'offstreet' ? ['offstreet', 'driveway'].includes(d.parking) : d.parking === parking);
-      const visible = Number(d.price) <= Number(controls.budget.value) && timingFits && parkingFits && sourceFits
+      const visible = Number(d.price) <= Number(controls.budget.value) && timingFits && parkingFits && sourceFits && regionFits && distanceFits
         && (controls.furnished.value === 'all' || d.furnished === controls.furnished.value)
         && (!q || d.text.includes(q));
       card.hidden = !visible;
@@ -39,10 +41,12 @@
     controls.search.value = '';
     controls.budget.value = '1500';
     controls.source.value = 'all';
+    controls.region.value = 'all';
+    controls.maxdistance.value = 'all';
     controls.term.value = 'start';
     controls.parking.value = 'all';
     controls.furnished.value = 'all';
-    controls.sort.value = 'recommended';
+    controls.sort.value = 'distance';
   }
 
   let feedbackTimer;
@@ -92,6 +96,13 @@
   for (const control of Object.values(controls)) control.addEventListener(control.type === 'search' ? 'input' : 'change', filter);
   document.getElementById('reset').addEventListener('click', () => { reset(); filter(); });
   document.getElementById('best').addEventListener('click', () => { reset(); controls.term.value = 'monthly'; filter(); });
+  document.getElementById('north').addEventListener('click', () => {
+    reset();
+    controls.region.value = 'north';
+    controls.term.value = 'review';
+    filter();
+    document.querySelector('.filterbar').scrollIntoView({block: 'start', behavior: 'smooth'});
+  });
   document.querySelectorAll('[data-source-preset]').forEach(button => {
     button.addEventListener('click', () => {
       reset();
