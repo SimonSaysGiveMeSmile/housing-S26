@@ -19,9 +19,9 @@
       const d = card.dataset;
       const term = controls.term.value;
       const timingGroups = {start: ['monthly', 'one_month', 'confirm'], monthly: ['monthly', 'one_month'], active: ['monthly', 'one_month', 'confirm', 'later'], review: ['monthly', 'one_month', 'confirm', 'later', 'unverified']};
-      const timingFits = term === 'all' || (timingGroups[term] ? timingGroups[term].includes(d.group) : d.group === term);
+      const timingFits = timingGroups[term] ? timingGroups[term].includes(d.group) : d.group === term;
       const source = controls.source.value;
-      const sourceFits = source === 'all' || (source === 'noncl' ? d.source !== 'craigslist' : d.source === source);
+      const sourceFits = source === 'all' || d.source === source;
       const regionFits = controls.region.value === 'all' || d.region === controls.region.value;
       const distanceFits = controls.maxdistance.value === 'all' || Number(d.distance) <= Number(controls.maxdistance.value);
       const parking = controls.parking.value;

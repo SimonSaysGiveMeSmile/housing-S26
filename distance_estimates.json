@@ -161,6 +161,16 @@
       "driving_miles": 48.8,
       "model_minutes": 70,
       "meters": 78482.5
+    },
+    "Vallejo": {
+      "lat": 38.1040864,
+      "lon": -122.2566367,
+      "display_name": "Vallejo, Solano County, California, United States",
+      "source_url": "https://nominatim.openstreetmap.org/search?q=Vallejo%2C+California%2C+United+States&format=jsonv2&limit=1",
+      "driving_miles": 30.2,
+      "model_minutes": 42,
+      "meters": 48528.2,
+      "route_source": "https://router.project-osrm.org/route/v1/driving/-122.2566367,38.1040864;-122.3934746,37.7955487?overview=false"
     }
   }
 }

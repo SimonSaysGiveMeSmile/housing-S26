@@ -86,16 +86,36 @@ check("settle-in mode" not in latest and "June-start" not in latest,
       "home page does not show obsolete summer criteria")
 check(latest.count('data-rank=') == len(leads), "every new lead renders regardless of the old campus filter")
 check(all(html.escape(item["url"]) in latest for item in leads), "every lead retains its source link")
-check('href="summer.html"' in latest, "summer archive remains accessible on GitHub Pages")
+check('href="summer.html"' not in latest, "withdrawn summer inventory is not linked")
+check("craigslist" not in latest.lower(), "current page contains no excluded platform listings, links or controls")
+check(all(item['source'] in ('zillow', 'supost', 'furnishedfinder') for item in leads),
+      "inventory contains only the selected housing platforms")
 check("availability has not been confirmed with hosts" in latest,
       "advertised leads are not represented as host-confirmed availability")
-check("$1,325" in latest and "$1,385" in latest,
-      "known utility charges are included in comparison prices")
+check(next(item for item in leads if item['id'] == 'zillow-15658964')['rent'] == 1250 + 65 + 30,
+      "Zillow comparison price includes electricity and internet charges")
+check(next(item for item in leads if item['id'] == 'ff-848526_1')['rent'] == 1400 + 100,
+      "Fairfield comparison price includes the listed utility charge")
+check(next(item for item in leads if item['id'] == 'zillow-15658964')['group'] == 'confirm',
+      "conflicting Zillow lease terms are not counted as confirmed monthly terms")
 photos = [photo for item in leads for photo in item.get("photos", [])]
 check(all(os.path.isfile(os.path.join(d.ROOT, "maps", photo["file"])) for photo in photos),
       "all listing photos exist for the static site build")
 check(all('maps/' + html.escape(photo["file"]) in latest for photo in photos),
       "all downloaded listing photos appear in the galleries")
+
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from build_site import build
+with TemporaryDirectory() as temporary:
+    exported = Path(temporary) / 'site'
+    build(exported)
+    check((exported / 'index.html').read_text() == latest, "static export matches the reviewed page")
+    archive = (exported / 'summer.html').read_text()
+    check('url=index.html' in archive and 'craigslist' not in archive.lower() and 'card-title' not in archive,
+          "old archive URL redirects without exposing withdrawn listings")
+    check({p.name for p in (exported / 'maps').iterdir()} == {photo['file'] for photo in photos},
+          "static site publishes only photos referenced by retained listings")
 
 # --- summary -----------------------------------------------------------------
 print()

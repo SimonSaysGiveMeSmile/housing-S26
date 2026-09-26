@@ -2146,11 +2146,21 @@ def render_body():
     return render(CSS, current_contacts, placeholder_svg)
 
 
+def render_archive_redirect():
+    """Keep old bookmarks working without publishing withdrawn inventory."""
+    return '''<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="refresh" content="0;url=index.html">
+<title>Current housing search</title></head><body>
+<p><a href="index.html">View the current Bay Area housing search</a></p>
+</body></html>'''
+
+
 class Handler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         p = urlparse(self.path).path
         if p in ("/", "/index.html", "/summer.html"):
-            body = (render_summer_body() if p == "/summer.html" else render_body()).encode("utf-8")
+            body = (render_archive_redirect() if p == "/summer.html" else render_body()).encode("utf-8")
             self.send_response(200); self.send_header("Content-Type","text/html; charset=utf-8")
             self.send_header("Content-Length", str(len(body))); self.end_headers()
             self.wfile.write(body)
@@ -2184,7 +2194,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
 if __name__=="__main__":
     if "--serve" not in sys.argv:
-        print(render_summer_body() if "--summer" in sys.argv else render_body()); sys.exit(0)
+        print(render_archive_redirect() if "--summer" in sys.argv else render_body()); sys.exit(0)
     socketserver.TCPServer.allow_reuse_address = True
     with socketserver.TCPServer(("",PORT),Handler) as httpd:
         print(f"[palo_alto_server] http://localhost:{PORT}/",flush=True)
