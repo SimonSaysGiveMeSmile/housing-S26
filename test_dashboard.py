@@ -91,6 +91,11 @@ check("availability has not been confirmed with hosts" in latest,
       "advertised leads are not represented as host-confirmed availability")
 check("$1,325" in latest and "$1,385" in latest,
       "known utility charges are included in comparison prices")
+photos = [photo for item in leads for photo in item.get("photos", [])]
+check(all(os.path.isfile(os.path.join(d.ROOT, "maps", photo["file"])) for photo in photos),
+      "all listing photos exist for the static site build")
+check(all('maps/' + html.escape(photo["file"]) in latest for photo in photos),
+      "all downloaded listing photos appear in the galleries")
 
 # --- summary -----------------------------------------------------------------
 print()

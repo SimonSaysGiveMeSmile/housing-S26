@@ -2143,7 +2143,7 @@ Every channel below was found + URL-checked by a multi-agent web sweep. Tap a gr
 def render_body():
     from latest_dashboard import render
     current_contacts = set(sent_log) | set(contact_history) | load_manual()
-    return render(CSS, current_contacts)
+    return render(CSS, current_contacts, placeholder_svg)
 
 
 class Handler(http.server.SimpleHTTPRequestHandler):

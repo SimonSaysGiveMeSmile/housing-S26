@@ -2,6 +2,8 @@
 
 Research date: September 24, 2026. Budget: preferably below $50/day, about $1,500 per 30 days, including recurring utilities and parking. Required: private full bathroom, parking, residential surroundings with access to shops/restaurants. Furnished private rooms are provisionally included; the user has not yet confirmed whether sharing the home is acceptable.
 
+**September 25 link/photo update:** The Novato and Milpitas Craigslist pages now return HTTP 410 (Gone); they are no longer active recommendations and are hidden from the website's default results. The Oakland studio page also returns 410 and remains unverified. Photos from seven other listing pages are included in the website. The older details below are retained for reference.
+
 These are advertised leads, not host-confirmed availability or reservations. Listing details were read through web search/page retrieval, which can contain cached information. Direct Chrome verification was unavailable. Neighborhood descriptions below are the advertisers' descriptions, not independent safety assessments. Daily equivalents use a 30-day month; refundable deposits are additional move-in cash. Monthly billing does not itself establish a month-to-month lease.
 
 ## Best leads with explicit monthly flexibility

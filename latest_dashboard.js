@@ -88,5 +88,39 @@
   for (const control of Object.values(controls)) control.addEventListener(control.type === 'search' ? 'input' : 'change', filter);
   document.getElementById('reset').addEventListener('click', () => { reset(); filter(); });
   document.getElementById('best').addEventListener('click', () => { reset(); controls.term.value = 'monthly'; filter(); });
+  const dialog = document.getElementById('photo-dialog');
+  let activePhotos = [], activeIndex = 0, activeLocation = '';
+  function showPhoto(index) {
+    activeIndex = (index + activePhotos.length) % activePhotos.length;
+    const photo = document.getElementById('large-photo');
+    photo.src = activePhotos[activeIndex];
+    photo.alt = `Advertiser’s photo ${activeIndex + 1} of ${activeLocation}`;
+    document.getElementById('photo-title').textContent = activeLocation;
+    document.getElementById('photo-position').textContent = `${activeIndex + 1} of ${activePhotos.length}`;
+  }
+  document.querySelectorAll('[data-photo-index]').forEach(button => {
+    button.addEventListener('click', () => {
+      const gallery = button.closest('.listing-gallery');
+      activePhotos = JSON.parse(gallery.dataset.photos);
+      activeLocation = gallery.dataset.location;
+      showPhoto(Number(button.dataset.photoIndex));
+      dialog.showModal();
+    });
+  });
+  document.getElementById('close-photo').addEventListener('click', () => dialog.close());
+  document.getElementById('previous-photo').addEventListener('click', () => showPhoto(activeIndex - 1));
+  document.getElementById('next-photo').addEventListener('click', () => showPhoto(activeIndex + 1));
+  dialog.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      showPhoto(activeIndex + (event.key === 'ArrowRight' ? 1 : -1));
+    }
+  });
+  dialog.addEventListener('click', event => {
+    if (event.target === dialog) {
+      const rect = dialog.getBoundingClientRect();
+      if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+    }
+  });
   filter();
 })();
