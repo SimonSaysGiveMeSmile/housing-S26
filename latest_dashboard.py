@@ -16,11 +16,14 @@ def render(css, contacted_ids, placeholder_svg):
     esc = html.escape
     labels = {
         "monthly": "Month-to-month advertised",
+        "one_month": "One-month minimum · renewal unconfirmed",
         "confirm": "Confirm monthly flexibility",
-        "later": "Later start · October 14",
+        "later": "Later start · check dates",
         "unverified": "Incomplete listing · verify first",
         "unavailable": "Listing page no longer available",
     }
+    sources = {"craigslist": "Craigslist", "supost": "SUpost", "furnishedfinder": "Furnished Finder", "rotatingroom": "RotatingRoom"}
+    source_options = ''.join(f'<option value="{key}">{value}</option>' for key, value in sources.items())
     cards = []
     for rank, item in enumerate(data["listings"]):
         contacted = item["id"] in contacted_ids
@@ -47,14 +50,14 @@ def render(css, contacted_ids, placeholder_svg):
         cards.append(f'''
 <article class="card latest-card{' top' if rank == 0 else ''}{' contacted' if contacted else ''}"
  data-id="{esc(item['id'])}" data-rank="{rank}" data-price="{item['rent']}"
- data-group="{item['group']}" data-parking="{item['parking']}" data-furnished="{item['furnished']}"
+ data-group="{item['group']}" data-source="{item['source']}" data-parking="{item['parking']}" data-furnished="{item['furnished']}"
  data-contacted="{int(contacted)}" data-text="{esc(' '.join(str(v) for v in item.values()).lower())}">
  {gallery}
  <div class="card-content">
   <div class="card-head"><h2 class="card-title">{esc(item['title'])}</h2>
    <div class="price">${item['rent']:,}{extra}<small>/month · ${daily}{extra}/day</small></div></div>
   <p class="area">{esc(item['area'])}</p>
-  <div class="tags"><span class="status {'go' if item['group'] == 'monthly' else 'check'}">{labels[item['group']]}</span>
+  <div class="tags"><span class="pill source-label">{sources[item['source']]}</span><span class="status {'go' if item['group'] in ('monthly', 'one_month') else 'check'}">{esc(item.get('timing_label', labels[item['group']]))}</span>
    <span class="pill">{furnishing}</span><span class="pill">{esc(item['parking_label'])}</span></div>
   <ul class="facts">{fact_html}</ul>
   <p class="confirmation"><strong>Confirm:</strong> {esc(item['confirm'])}</p>
@@ -75,8 +78,8 @@ def render(css, contacted_ids, placeholder_svg):
 </article>''')
     script = (ROOT / "latest_dashboard.js").read_text()
     count = len(data["listings"])
-    start_count = sum(item["group"] in ("monthly", "confirm") for item in data["listings"])
-    monthly_count = sum(item["group"] == "monthly" for item in data["listings"])
+    start_count = sum(item["group"] in ("monthly", "one_month", "confirm") for item in data["listings"])
+    monthly_count = sum(item["group"] in ("monthly", "one_month") for item in data["listings"])
     lowest = min(item["rent"] for item in data["listings"] if item["group"] in ("monthly", "confirm"))
     return f'''<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -90,6 +93,11 @@ h1{{font-size:30px;letter-spacing:-.7px}}.archive-link{{font-size:12px;white-spa
 .scope-note{{font-size:12px;color:#64748b;margin-top:8px}}
 .status-panel{{margin:18px 0}}.stat-num{{font-size:26px}}.stat-lbl{{font-size:11px}}
 .research-note{{background:#eff6ff;border:1px solid #dbeafe;border-radius:8px;padding:12px 16px;color:#334155;font-size:13px}}
+.channels{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}}
+.channel{{border:1px solid #e2e8f0;border-radius:8px;background:white;padding:14px;font-size:12px;color:#475569;line-height:1.55}}
+.channel h2{{font-size:15px;margin:0 0 6px;border:0;padding:0;color:#0f172a}}.channel p{{margin-bottom:8px}}
+.channel button{{border:0;padding:0;background:none;font:inherit;color:#2563eb;text-align:left;cursor:pointer;font-weight:600}}
+.source-label{{background:#e0e7ff!important;color:#3730a3!important;font-weight:600}}
 .filterbar{{position:static;padding:14px;margin-top:20px}}.filter-controls{{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}}
 .filter-controls label{{display:flex;flex-direction:column;gap:4px;color:#64748b;font-size:11px;font-weight:600;flex:1;min-width:135px}}
 select{{width:100%;padding:8px;border:1px solid #cbd5e1;border-radius:6px;background:white;color:#1e293b;font:inherit;font-size:13px}}
@@ -125,7 +133,7 @@ dl{{display:grid;grid-template-columns:120px 1fr;gap:6px 12px;margin-top:10px}}d
 #feedback{{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);padding:10px 18px;background:#0f172a;color:white;border-radius:8px;z-index:100;font-size:13px;max-width:90vw}}
 #feedback:empty{{display:none}}[hidden]{{display:none!important}}button:focus-visible,select:focus-visible,a:focus-visible,summary:focus-visible{{outline:2px solid #2563eb;outline-offset:3px}}
 @media(min-width:721px) and (max-width:1000px){{.latest-card{{grid-template-columns:180px minmax(0,1fr)}}.latest-card .contact-box{{grid-column:2}}}}
-@media(max-width:720px){{body{{padding:18px 12px}}.masthead{{flex-direction:column;gap:6px}}h1{{font-size:25px}}.archive-link{{padding:0}}.latest-card{{grid-template-columns:1fr;padding:16px;gap:14px}}.latest-card .card-head{{align-items:flex-start}}.latest-card .price{{text-align:left}}.latest-card .contact-box{{width:100%}}.list-heading{{align-items:flex-start}}.stat-num{{font-size:24px}}dl{{grid-template-columns:100px 1fr}}.photo-main img{{height:230px}}.photo-thumb img{{height:55px}}.no-photos{{display:flex;align-items:center;gap:10px}}.no-photos img{{width:90px;height:81px;margin:0}}}}
+@media(max-width:720px){{body{{padding:18px 12px}}.channels{{grid-template-columns:1fr}}.masthead{{flex-direction:column;gap:6px}}h1{{font-size:25px}}.archive-link{{padding:0}}.latest-card{{grid-template-columns:1fr;padding:16px;gap:14px}}.latest-card .card-head{{align-items:flex-start}}.latest-card .price{{text-align:left}}.latest-card .contact-box{{width:100%}}.list-heading{{align-items:flex-start}}.stat-num{{font-size:24px}}dl{{grid-template-columns:100px 1fr}}.photo-main img{{height:230px}}.photo-thumb img{{height:55px}}.no-photos{{display:flex;align-items:center;gap:10px}}.no-photos img{{width:90px;height:81px;margin:0}}}}
 </style></head><body>
 <header class="masthead"><div><p class="eyebrow">Your housing search · Fall 2026</p><h1>Bay Area monthly stays</h1>
 <p class="search-summary">From <strong>{data['move_in']}</strong> · preferably below <strong>$50/day</strong> · private bathroom + parking</p>
@@ -133,26 +141,33 @@ dl{{display:grid;grid-template-columns:120px 1fr;gap:6px 12px;margin-top:10px}}d
 <a class="archive-link" href="summer.html">Summer housing archive ↗</a></header>
 <div class="status-panel"><div class="status-row">
 <div class="stat"><div class="stat-num">{count}</div><div class="stat-lbl">Researched leads</div></div>
-<div class="stat"><div class="stat-num ok">{monthly_count}</div><div class="stat-lbl">Start-date leads advertising<br>month-to-month</div></div>
+<div class="stat"><div class="stat-num ok">{monthly_count}</div><div class="stat-lbl">Leads advertising monthly terms<br>or a one-month minimum</div></div>
 <div class="stat"><div class="stat-num">${lowest:,}</div><div class="stat-lbl">Lowest advertised monthly cost<br>lease and area need checking</div></div>
 <div class="stat"><div class="stat-num warn">0</div><div class="stat-lbl">September 29 dates<br>confirmed by a host</div></div>
 </div></div>
-<p class="research-note"><strong>Start with Sunnyvale:</strong> $1,200 including utilities, furnished, private entrance and month-to-month terms. Confirm a driveway space and September 29. <strong>Research: {data['researched']}.</strong> These are advertised leads; availability has not been confirmed with hosts. <strong>Photo/link check: September 25.</strong> Novato and Milpitas posts are no longer available and are hidden by default.</p>
+<p class="research-note"><strong>New beyond Craigslist:</strong> Vacaville at $1,200 including utilities and Fairfield at $1,500 including the listed utility charge both advertise a private bathroom, parking and a one-month minimum. SUpost adds two Palo Alto backups starting October 1–2. <strong>Research: {data['researched']}.</strong> These are advertised leads; availability has not been confirmed with hosts.</p>
+<section class="channels" aria-label="Search coverage">
+<div class="channel"><h2>SUpost</h2><p>Two private-bathroom backups at $1,430+ and $1,500. Both start after September 29; parking and monthly flexibility need confirmation.</p><button type="button" data-source-preset="supost">Show SUpost + later starts →</button></div>
+<div class="channel"><h2>Furnished Finder</h2><p>Three leads with a one-month minimum; one additional room has a calendar from 2025. Check cleaning fees and whether monthly extensions are possible.</p><button type="button" data-source-preset="furnishedfinder">Show Furnished Finder leads →</button></div>
+<div class="channel"><h2>Rednote / 小红书</h2><p>Search attempted; no housing posts verified yet. Interactive browsing is pending access to the browser session.</p><a href="https://www.xiaohongshu.com/explore" target="_blank" rel="noopener noreferrer">Open Rednote ↗</a><p class="scope-note">Search: 湾区 短租 独卫 停车</p></div>
+</section>
 <div class="filterbar"><div class="fb-row">
 <input id="search" class="fb-search" type="search" aria-label="Search listings" placeholder="Search city, neighborhood or details…">
-<button id="best" class="fb-preset" type="button">Monthly options</button><button id="reset" class="fb-reset" type="button">Reset</button>
+<button id="best" class="fb-preset" type="button">One-month options</button><button class="fb-preset" type="button" data-source-preset="noncl">Beyond Craigslist</button><button id="reset" class="fb-reset" type="button">Reset</button>
 <span class="fb-count" aria-live="polite"><b id="shown">{start_count}</b> of {count} showing</span></div>
 <div class="filter-controls">
 <label>Monthly cost<select id="budget"><option value="1500">Up to $1,500</option><option value="1300">Up to $1,300</option><option value="1200">Up to $1,200</option><option value="1000">Up to $1,000</option></select></label>
-<label>Lease / timing<select id="term"><option value="start">September 29 leads</option><option value="monthly">Month-to-month advertised</option><option value="confirm">Lease needs confirmation</option><option value="all">All, including unavailable / unverified</option></select></label>
+<label>Source<select id="source"><option value="all">All sources</option><option value="noncl">Beyond Craigslist</option>{source_options}</select></label>
+<label>Lease / timing<select id="term"><option value="start">September 29 leads · confirm dates</option><option value="monthly">One-month / monthly advertised</option><option value="confirm">Lease needs confirmation</option><option value="active">Shortlist + later-start backups</option><option value="later">Later-start backups</option><option value="all">All, including unavailable / unverified</option></select></label>
 <label>Parking<select id="parking"><option value="all">All parking types</option><option value="offstreet">Driveway / off-street advertised</option><option value="street">Street only</option></select></label>
 <label>Furnishing<select id="furnished"><option value="all">Any</option><option value="yes">Furnished</option><option value="no">Unfurnished</option></select></label>
 <label>Sort<select id="sort"><option value="recommended">Recommended order</option><option value="price">Lowest price first</option></select></label>
-</div><p class="scope-note">Price filters use known monthly charges. “+” means utilities or parking may cost extra. Off-street availability and fees still need confirmation.</p></div>
+</div><p class="scope-note">Price filters use known recurring monthly charges. “+” means extra charges are unconfirmed. One-time fees and deposits appear under each listing’s details. A one-month minimum does not guarantee month-to-month renewal.</p></div>
 <main><div class="list-heading"><h2>The latest shortlist</h2><p>All bathrooms advertised as private</p></div>
 <div id="listings">{''.join(cards)}</div>
 <p id="empty" class="banner" hidden>No listings match. Try a higher budget or reset the filters.</p>
 <details class="disc"><summary>Inquiry to send to the host</summary><div class="disc-body"><p id="inquiry">Hi, I’m looking for housing starting September 29, 2026, initially for one month with the option to extend monthly. Is your room available for those dates, and would that arrangement work? I need a bathroom exclusively for my use and parking for one car. Could you confirm the total monthly cost including utilities, internet and parking, all upfront charges, whether the room is furnished, and the notice required to move out? Please also share the nearest cross streets and whether an in-person or video tour is available. Thank you.</p></div></details>
+<details class="disc"><summary>Other sources checked and listing freshness</summary><div class="disc-body"><p>SpareRoom: the Pacifica $1,150 listing is not accepting applications and has conflicting minimum-term details, so it is excluded. Roomies: search results surfaced candidates, but their full terms could not be verified. No Roomies listings are counted as matches.</p><p>SUpost research used public listing pages. The Furnished Finder cards show their calendar update dates; the October 2025 calendar is hidden by default. Craigslist Novato and Milpitas pages are no longer available. Use “All, including unavailable / unverified” to see retained older leads.</p></div></details>
 </main><footer class="footer-note">Daily equivalents use a 30-day month; refundable deposits are additional move-in cash. Neighborhood descriptions are from advertisers and are not independent safety assessments. Source pages may contain cached details. Reached-out marks are saved in this browser and do not send messages.</footer>
 <dialog id="photo-dialog" class="photo-dialog" aria-labelledby="photo-title"><header><h2 id="photo-title">Listing photos</h2><button id="close-photo" type="button" aria-label="Close photos">Close ✕</button></header><img id="large-photo" alt=""><div class="photo-navigation"><button id="previous-photo" type="button" aria-label="Previous photo">← Previous</button><span id="photo-position" aria-live="polite"></span><button id="next-photo" type="button" aria-label="Next photo">Next →</button></div><p class="scope-note">Advertiser-supplied photos. Open the original listing for the complete photo set.</p></dialog>
 <div id="feedback" role="status" aria-live="polite"></div><script>{script}</script></body></html>'''

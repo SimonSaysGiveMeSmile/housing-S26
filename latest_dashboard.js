@@ -1,6 +1,6 @@
 (() => {
   const cards = [...document.querySelectorAll('.latest-card')];
-  const ids = ['search', 'budget', 'term', 'parking', 'furnished', 'sort'];
+  const ids = ['search', 'budget', 'source', 'term', 'parking', 'furnished', 'sort'];
   const controls = Object.fromEntries(ids.map(id => [id, document.getElementById(id)]));
   const contactKey = 'housingContacted';
   let contacts = {};
@@ -18,10 +18,13 @@
     for (const card of sorted) {
       const d = card.dataset;
       const term = controls.term.value;
-      const timingFits = term === 'all' || (term === 'start' ? ['monthly', 'confirm'].includes(d.group) : d.group === term);
+      const timingGroups = {start: ['monthly', 'one_month', 'confirm'], monthly: ['monthly', 'one_month'], active: ['monthly', 'one_month', 'confirm', 'later']};
+      const timingFits = term === 'all' || (timingGroups[term] ? timingGroups[term].includes(d.group) : d.group === term);
+      const source = controls.source.value;
+      const sourceFits = source === 'all' || (source === 'noncl' ? d.source !== 'craigslist' : d.source === source);
       const parking = controls.parking.value;
       const parkingFits = parking === 'all' || (parking === 'offstreet' ? ['offstreet', 'driveway'].includes(d.parking) : d.parking === parking);
-      const visible = Number(d.price) <= Number(controls.budget.value) && timingFits && parkingFits
+      const visible = Number(d.price) <= Number(controls.budget.value) && timingFits && parkingFits && sourceFits
         && (controls.furnished.value === 'all' || d.furnished === controls.furnished.value)
         && (!q || d.text.includes(q));
       card.hidden = !visible;
@@ -35,6 +38,7 @@
   function reset() {
     controls.search.value = '';
     controls.budget.value = '1500';
+    controls.source.value = 'all';
     controls.term.value = 'start';
     controls.parking.value = 'all';
     controls.furnished.value = 'all';
@@ -88,6 +92,15 @@
   for (const control of Object.values(controls)) control.addEventListener(control.type === 'search' ? 'input' : 'change', filter);
   document.getElementById('reset').addEventListener('click', () => { reset(); filter(); });
   document.getElementById('best').addEventListener('click', () => { reset(); controls.term.value = 'monthly'; filter(); });
+  document.querySelectorAll('[data-source-preset]').forEach(button => {
+    button.addEventListener('click', () => {
+      reset();
+      controls.source.value = button.dataset.sourcePreset;
+      controls.term.value = 'active';
+      filter();
+      document.querySelector('.filterbar').scrollIntoView({block: 'start', behavior: 'smooth'});
+    });
+  });
   const dialog = document.getElementById('photo-dialog');
   let activePhotos = [], activeIndex = 0, activeLocation = '';
   function showPhoto(index) {

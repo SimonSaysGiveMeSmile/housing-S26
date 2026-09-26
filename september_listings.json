@@ -1,5 +1,5 @@
 {
-  "researched": "September 24, 2026",
+  "researched": "September 25, 2026",
   "move_in": "September 29, 2026",
   "listings": [
     {
@@ -21,7 +21,82 @@
       "conditions": "Light cooking only; no overnight guests, pets or alcohol.",
       "confirm": "September 29 move-in and whether a driveway space is guaranteed at this price.",
       "url": "https://www.craigslist.org/view/d/sunnyvale-master-bedroom-furnished-with/1jR4s4qtSAHyBJtU3pFAb1",
-      "photos": []
+      "photos": [],
+      "source": "craigslist"
+    },
+    {
+      "id": "ff-224172_1",
+      "source": "furnishedfinder",
+      "title": "Vacaville furnished room · one-month minimum",
+      "area": "Vacaville, Solano County",
+      "rent": 1200,
+      "extra": false,
+      "group": "one_month",
+      "parking": "offstreet",
+      "parking_label": "Free parking on property advertised",
+      "furnished": "yes",
+      "availability": "Advertised available; calendar updated August 19, 2026. September 29 needs host confirmation.",
+      "deposit": "$450 refundable deposit + $125 cleaning fee. First 30 days including cleaning: $1,325 ($44.17/day), excluding refundable deposit.",
+      "term": "One-month / 30-day minimum; confirm monthly extensions and notice.",
+      "neighborhood": "Advertiser describes a quiet residential subdivision in central Vacaville. Ask for cross streets and distance to groceries.",
+      "included": "Utilities, Wi-Fi, kitchen and laundry access; queen bed, pool and hot tub.",
+      "bath": "Private bathroom advertised.",
+      "conditions": "One occupant and one vehicle. No smoking or tenant pets; pets live on the property.",
+      "confirm": "September 29 availability, a reserved parking space, bathroom exclusivity and renewal terms.",
+      "url": "https://www.furnishedfinder.com/property/224172_1",
+      "photos": [
+        {
+          "file": "september-ff-224172_1-1.jpg",
+          "source": "https://www.furnishedfinder.com/_pdp_/224172/1/224172_1_56657505-full.jpg"
+        },
+        {
+          "file": "september-ff-224172_1-2.jpg",
+          "source": "https://www.furnishedfinder.com/_pdp_/224172/1/224172_1_67643826-full.jpg"
+        },
+        {
+          "file": "september-ff-224172_1-3.jpg",
+          "source": "https://www.furnishedfinder.com/_pdp_/224172/1/224172_1_67643859-full.jpg"
+        }
+      ],
+      "checked": "September 25, 2026",
+      "contact": "Open the original listing to review the host’s contact options. No message has been sent."
+    },
+    {
+      "id": "ff-848526_1",
+      "source": "furnishedfinder",
+      "title": "Fairfield junior suite · driveway parking",
+      "area": "Summerwalk / north of Clay Bank, Fairfield",
+      "rent": 1500,
+      "extra": false,
+      "group": "one_month",
+      "parking": "driveway",
+      "parking_label": "Driveway + street parking advertised",
+      "furnished": "yes",
+      "availability": "Advertised available; calendar updated July 28, 2026. September 29 unconfirmed.",
+      "deposit": "$1,000 refundable deposit; ask whether any additional fees apply.",
+      "term": "One-month / 30-day minimum; monthly renewal needs confirmation.",
+      "neighborhood": "Residential Summerwalk area, a few miles from shopping and dining; listing mentions Solano Mall.",
+      "included": "$1,400 rent + listed $100 utilities = $1,500 budgeted monthly. Furnished queen room, kitchen and laundry.",
+      "bath": "Private bathroom in a second-floor junior suite.",
+      "conditions": "Single occupancy, one vehicle, no pets or smoking. Stairs to bedroom.",
+      "confirm": "September 29, driveway assignment, whether the $100 utility charge is recurring and the complete monthly total.",
+      "url": "https://www.furnishedfinder.com/property/848526_1",
+      "photos": [
+        {
+          "file": "september-ff-848526_1-1.jpg",
+          "source": "https://www.furnishedfinder.com/_pdp_/848526/1/848526_1_62343762-full.jpeg"
+        },
+        {
+          "file": "september-ff-848526_1-2.jpg",
+          "source": "https://www.furnishedfinder.com/_pdp_/848526/1/848526_1_62343759-full.jpeg"
+        },
+        {
+          "file": "september-ff-848526_1-3.jpg",
+          "source": "https://www.furnishedfinder.com/_pdp_/848526/1/848526_1_62343760-full.jpeg"
+        }
+      ],
+      "checked": "September 25, 2026",
+      "contact": "Open the original listing to review the host’s contact options. No message has been sent."
     },
     {
       "id": "cl-7965272718",
@@ -63,7 +138,121 @@
           "file": "september-cl-7965272718-5.jpg",
           "source": "https://images.craigslist.org/00Y0Y_7fJtBJY7KQO_0MM132_600x450.jpg"
         }
-      ]
+      ],
+      "source": "craigslist"
+    },
+    {
+      "id": "ff-669591_1",
+      "source": "furnishedfinder",
+      "title": "Fairfield furnished room · electricity extra",
+      "area": "Fairfield, near NorthBay Medical Center",
+      "rent": 1200,
+      "extra": true,
+      "group": "one_month",
+      "parking": "offstreet",
+      "parking_label": "Free parking on property advertised",
+      "furnished": "yes",
+      "availability": "Advertised available; calendar updated August 2, 2026. September 29 unconfirmed.",
+      "deposit": "$1,200 refundable deposit + $150 cleaning fee; first month $1,350 plus electricity, excluding deposit.",
+      "term": "One-month / 30-day minimum; confirm renewal terms.",
+      "neighborhood": "Advertiser describes a cul-de-sac setting with a short drive to shops, restaurants and parks.",
+      "included": "Queen bed, kitchen, laundry, water, trash and Wi-Fi. Description says electricity is split despite the utilities-included badge.",
+      "bath": "Hallway bathroom advertised private; caption says primary use and not shared with other tenants. Confirm guests will not use it.",
+      "conditions": "Advertiser seeks female tenants. No smoking or pets.",
+      "confirm": "Tenant eligibility, exclusive bathroom use, electricity estimate, parking and September 29.",
+      "url": "https://www.furnishedfinder.com/property/669591_1",
+      "photos": [
+        {
+          "file": "september-ff-669591_1-1.png",
+          "source": "https://www.furnishedfinder.com/_pdp_/669591/1/669591_1_55439154-full.png"
+        },
+        {
+          "file": "september-ff-669591_1-2.png",
+          "source": "https://www.furnishedfinder.com/_pdp_/669591/1/669591_1_55439148-full.png"
+        },
+        {
+          "file": "september-ff-669591_1-3.png",
+          "source": "https://www.furnishedfinder.com/_pdp_/669591/1/669591_1_55439149-full.png"
+        }
+      ],
+      "checked": "September 25, 2026",
+      "contact": "Open the original listing to review the host’s contact options. No message has been sent."
+    },
+    {
+      "id": "su-130109474",
+      "source": "supost",
+      "title": "Palo Alto private bed + bath · October 1",
+      "area": "408 Grant Avenue, Palo Alto",
+      "rent": 1430,
+      "extra": true,
+      "group": "later",
+      "timing_label": "October 1 · 2-night gap from September 29",
+      "parking": "unknown",
+      "parking_label": "Parking not specified",
+      "furnished": "unknown",
+      "availability": "October 1, 2026 or later. Posted September 25. Does not cover September 29–30 as advertised.",
+      "deposit": "Deposit not specified. Furnishings available for an additional fee.",
+      "term": "Long-term sublet preferred; one month and monthly renewal are not confirmed.",
+      "neighborhood": "Advertiser mentions downtown, restaurants, cafés, shops and Caltrain nearby; check the exact walking distances from Grant Avenue.",
+      "included": "$1,430 base rent; utilities and furnishing fees not specified. Shared apartment.",
+      "bath": "Private bedroom and private bathroom advertised.",
+      "conditions": "Female tenant preferred. Living room has been converted into an additional bedroom.",
+      "confirm": "An earlier start or two-night bridge, one-month acceptance, parking, utilities and furnishing costs.",
+      "url": "https://supost.com/post/1-bedroom-1-bathroom-in-a-2b2b-apartment-for-long-term-suble-130109474",
+      "photos": [
+        {
+          "file": "september-su-130109474-1.jpg",
+          "source": "https://cdn.supost.com/v2/posts/d6dc5806-0460-491f-875f-fe399d22e983/26bd7317-6850-4d31-8a56-c5f9006b3c37.jpg"
+        },
+        {
+          "file": "september-su-130109474-2.jpg",
+          "source": "https://cdn.supost.com/v2/posts/1a1ca97e-0fdd-4b56-b282-1c38c33a0182/7835c4bc-1b37-4449-8e4f-058b7a9a9a9b.jpg"
+        },
+        {
+          "file": "september-su-130109474-3.jpg",
+          "source": "https://cdn.supost.com/v2/posts/bfff5d64-835f-4bab-9233-efe0d204897c/56fe1859-7ce1-4807-b3c2-dc45c5cde5ce.jpg"
+        }
+      ],
+      "checked": "September 25, 2026",
+      "contact": "Open the original listing to review the host’s contact options. No message has been sent."
+    },
+    {
+      "id": "su-130107280",
+      "source": "supost",
+      "title": "Downtown Palo Alto furnished room · October 2",
+      "area": "Downtown Palo Alto",
+      "rent": 1500,
+      "extra": false,
+      "group": "later",
+      "timing_label": "October 2 · 3-night gap from September 29",
+      "parking": "unknown",
+      "parking_label": "Parking not specified",
+      "furnished": "yes",
+      "availability": "Title says October 2; description says early October. Posted September 16. September 29–October 1 not covered.",
+      "deposit": "$300 refundable security deposit.",
+      "term": "Lease length and monthly flexibility not stated.",
+      "neighborhood": "Downtown Palo Alto location; ask for exact cross streets to assess residential setting and access to shops.",
+      "included": "Utilities, furnished bedroom, kitchen and free onsite laundry.",
+      "bath": "Private bathroom advertised in a shared house.",
+      "conditions": "Advertised for graduate students, postdocs and visiting Stanford researchers; eligibility needs confirmation.",
+      "confirm": "Exact start date, monthly flexibility, parking and any additional fees. Requires a three-night bridge unless an earlier start is agreed.",
+      "url": "https://supost.com/post/1-bed-with-private-bath-available-in-downtown-palo-alto-star-130107280",
+      "photos": [
+        {
+          "file": "september-su-130107280-1.jpg",
+          "source": "https://cdn.supost.com/v2/posts/61c6fe4e-4c14-4910-9a33-743dd48f2f6b/ebc75c53-d4ec-421f-959e-0778dd84278c.jpeg"
+        },
+        {
+          "file": "september-su-130107280-2.jpg",
+          "source": "https://cdn.supost.com/v2/posts/68ba29e5-4658-49ee-b245-eeb84ee93078/f47ac04a-9ac2-4010-9520-1a59e852bcc1.jpeg"
+        },
+        {
+          "file": "september-su-130107280-3.jpg",
+          "source": "https://cdn.supost.com/v2/posts/346cc9bf-e9c5-4cf7-a452-aa5a9e6b805e/83904be2-3515-4746-9340-30609bd72152.jpeg"
+        }
+      ],
+      "checked": "September 25, 2026",
+      "contact": "Open the original listing to review the host’s contact options. No message has been sent."
     },
     {
       "id": "cl-7955884526",
@@ -85,7 +274,8 @@
       "confirm": "Original post is no longer available. Retained only for reference; do not treat as an active lead.",
       "url": "https://www.craigslist.org/view/d/novato-newly-furnished-private-room/ne5JK7Pf6GjYpxdw1JEXSc",
       "photos": [],
-      "contact": "Original listing is unavailable as of September 25; retained for reference."
+      "contact": "Original listing is unavailable as of September 25; retained for reference.",
+      "source": "craigslist"
     },
     {
       "id": "cl-7958109656",
@@ -127,7 +317,8 @@
           "file": "september-cl-7958109656-5.jpg",
           "source": "https://images.craigslist.org/00Z0Z_eTN9PenKcWF_0x20iA_600x450.jpg"
         }
-      ]
+      ],
+      "source": "craigslist"
     },
     {
       "id": "cl-7956128046",
@@ -149,7 +340,8 @@
       "confirm": "One-month renewable stay, September 29, furnishings, parking inclusion and nearby shops.",
       "contact": "Mrs. Flores requests daytime phone calls only. Open the listing to reveal the number.",
       "url": "https://www.craigslist.org/view/d/brentwood-bedroom-with-private-bath-in/mStHk8pELDdPsbPkHo1jJ8",
-      "photos": []
+      "photos": [],
+      "source": "craigslist"
     },
     {
       "id": "cl-7971142872",
@@ -191,7 +383,8 @@
           "file": "september-cl-7971142872-5.jpg",
           "source": "https://images.craigslist.org/00v0v_6fgVSloGUVf_0x20oM_600x450.jpg"
         }
-      ]
+      ],
+      "source": "craigslist"
     },
     {
       "id": "cl-7966253142",
@@ -233,7 +426,8 @@
           "file": "september-cl-7966253142-5.jpg",
           "source": "https://images.craigslist.org/00y0y_3OvhD2hxuG1_0hd0cU_600x450.jpg"
         }
-      ]
+      ],
+      "source": "craigslist"
     },
     {
       "id": "cl-7957798043",
@@ -275,7 +469,8 @@
           "file": "september-cl-7957798043-5.jpg",
           "source": "https://images.craigslist.org/00o0o_ioCwtzUwNtC_0CI0t2_600x450.jpg"
         }
-      ]
+      ],
+      "source": "craigslist"
     },
     {
       "id": "cl-7959180948",
@@ -317,7 +512,8 @@
           "file": "september-cl-7959180948-5.jpg",
           "source": "https://images.craigslist.org/00a0a_9Yp7ZQ20qHb_0CI0t2_600x450.jpg"
         }
-      ]
+      ],
+      "source": "craigslist"
     },
     {
       "id": "cl-7959921291",
@@ -359,7 +555,8 @@
           "file": "september-cl-7959921291-5.jpg",
           "source": "https://images.craigslist.org/00k0k_8qvWN66eNsW_0hq0cr_600x450.jpg"
         }
-      ]
+      ],
+      "source": "craigslist"
     },
     {
       "id": "cl-7969966377",
@@ -381,7 +578,8 @@
       "confirm": "Original post is no longer available. Retained only for reference; do not treat as an active lead.",
       "url": "https://www.craigslist.org/view/d/milpitas-private-room-bath-in-gated/uhXjvC4BdZngi9qgxYP8pP",
       "photos": [],
-      "contact": "Original listing is unavailable as of September 25; retained for reference."
+      "contact": "Original listing is unavailable as of September 25; retained for reference.",
+      "source": "craigslist"
     },
     {
       "id": "rr-39898",
@@ -403,7 +601,42 @@
       "confirm": "Original page could not be retrieved (HTTP 410 on September 25). Parking, availability, fees and eligibility remain unverified.",
       "contact": "Open RotatingRoom to review the full listing and contact the host.",
       "url": "https://rotatingroom.com/need-a-room/39898?origin=city%2Flos_gatos-ca",
-      "photos": []
+      "photos": [],
+      "source": "rotatingroom"
+    },
+    {
+      "id": "ff-915271_1",
+      "source": "furnishedfinder",
+      "title": "Fairfield furnished private bed + bath · older calendar",
+      "area": "Fairfield, Solano County",
+      "rent": 1300,
+      "extra": false,
+      "group": "unverified",
+      "timing_label": "Older calendar · October 2025 · verify first",
+      "parking": "street",
+      "parking_label": "Street parking in description",
+      "furnished": "yes",
+      "availability": "Page says available, but calendar was last updated October 6, 2025. Do not assume current vacancy.",
+      "deposit": "$500 refundable deposit + $50 cleaning fee; first month $1,350, excluding deposit.",
+      "term": "Advertised one-month / 30-day minimum; verify current terms.",
+      "neighborhood": "Advertiser describes a quiet residential neighborhood; cross streets and nearby shops are unconfirmed.",
+      "included": "Utilities, Wi-Fi, kitchen, laundry and twin bed.",
+      "bath": "Private bathroom advertised.",
+      "conditions": "Single occupancy and one vehicle; no pets or smoking.",
+      "confirm": "Whether still offered, September 29, renewal terms and parking. Description says street parking although the amenity badge says on premises.",
+      "url": "https://www.furnishedfinder.com/property/915271_1",
+      "photos": [
+        {
+          "file": "september-ff-915271_1-1.jpg",
+          "source": "https://www.furnishedfinder.com/_pdp_/915271/1/915271_1_61005637-full.jpeg"
+        },
+        {
+          "file": "september-ff-915271_1-2.jpg",
+          "source": "https://www.furnishedfinder.com/_pdp_/915271/1/915271_1_60813062-full.jpeg"
+        }
+      ],
+      "checked": "September 25, 2026",
+      "contact": "Open the original listing to review the host’s contact options. No message has been sent."
     }
   ],
   "photos_checked": "September 25, 2026"
