@@ -25,9 +25,9 @@ def check(cond, msg):
         _fail.append(msg)
 
 # --- 1. Build cleanly ---------------------------------------------------------
-out = d.render_body()
+out = d.render_summer_body()
 check(isinstance(out, str) and len(out) > 80_000,
-      f"render_body() builds a full page ({len(out):,} bytes, expect >80k)")
+      f"summer archive builds a full page ({len(out):,} bytes, expect >80k)")
 
 # --- 2. Critical sections present --------------------------------------------
 for anchor in [
@@ -75,6 +75,22 @@ check(d._campus_only({"area": "Downtown San Jose", "title": "Loft", "facts": []}
 # --- 5. No unrendered template leaks ----------------------------------------
 for leak in ["{len(", "{render_todos", "{render_progress", '{"".join']:
     check(leak not in out, f"no unrendered f-string leak: {leak!r}")
+
+# --- Current search: stale summer criteria must not hide September leads ------
+from latest_dashboard import load_listings
+latest = d.render_body()
+leads = load_listings()["listings"]
+check("September 29, 2026" in latest and "Bay Area monthly stays" in latest,
+      "home page shows the current September search")
+check("settle-in mode" not in latest and "June-start" not in latest,
+      "home page does not show obsolete summer criteria")
+check(latest.count('data-rank=') == len(leads), "every new lead renders regardless of the old campus filter")
+check(all(html.escape(item["url"]) in latest for item in leads), "every lead retains its source link")
+check('href="summer.html"' in latest, "summer archive remains accessible on GitHub Pages")
+check("availability has not been confirmed with hosts" in latest,
+      "advertised leads are not represented as host-confirmed availability")
+check("$1,325" in latest and "$1,385" in latest,
+      "known utility charges are included in comparison prices")
 
 # --- summary -----------------------------------------------------------------
 print()

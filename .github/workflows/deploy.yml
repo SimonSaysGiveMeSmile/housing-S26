@@ -29,6 +29,7 @@ jobs:
           mkdir -p site
           # No --serve => the server prints the rendered dashboard HTML to stdout.
           python3 palo_alto_server.py > site/index.html
+          python3 palo_alto_server.py --summer > site/summer.html
           cp -r maps site/maps
           touch site/.nojekyll
           echo "Built $(wc -c < site/index.html) bytes; $(ls site/maps | wc -l) images."

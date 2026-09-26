@@ -1737,7 +1737,7 @@ def render_todos():
         out.append(f'<div class="todo-group"><div class="todo-gtitle">{html.escape(title)}</div>{rows}</div>')
     return "".join(out)
 
-def render_body():
+def render_summer_body():
     # Recompute contacted set per request so manual toggles show on reload.
     global contacted_ids
     manual = load_manual()
@@ -2140,11 +2140,17 @@ Every channel below was found + URL-checked by a multi-agent web sweep. Tap a gr
 <p style="margin-top:20px;color:#777;font-size:11px">Dashboard updated: June 15, 2026 · {len(SUPOST)} SUpost offers + {n_fresh} fresh leads · {sum(len(g[2]) for g in OUTREACH_CHANNELS)} outreach channels · East Palo Alto excluded · Tap “Mark as reached out” to track outreach · Blue = reached out · Amber = queued · Red = expired</p>
 </body></html>"""
 
+def render_body():
+    from latest_dashboard import render
+    current_contacts = set(sent_log) | set(contact_history) | load_manual()
+    return render(CSS, current_contacts)
+
+
 class Handler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         p = urlparse(self.path).path
-        if p=="/":
-            body = render_body().encode("utf-8")
+        if p in ("/", "/index.html", "/summer.html"):
+            body = (render_summer_body() if p == "/summer.html" else render_body()).encode("utf-8")
             self.send_response(200); self.send_header("Content-Type","text/html; charset=utf-8")
             self.send_header("Content-Length", str(len(body))); self.end_headers()
             self.wfile.write(body)
@@ -2178,7 +2184,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
 if __name__=="__main__":
     if "--serve" not in sys.argv:
-        print(render_body()); sys.exit(0)
+        print(render_summer_body() if "--summer" in sys.argv else render_body()); sys.exit(0)
     socketserver.TCPServer.allow_reuse_address = True
     with socketserver.TCPServer(("",PORT),Handler) as httpd:
         print(f"[palo_alto_server] http://localhost:{PORT}/",flush=True)

@@ -1,0 +1,37 @@
+# Bay Area monthly housing shortlist — September 29, 2026
+
+Research date: September 24, 2026. Budget: preferably below $50/day, about $1,500 per 30 days, including recurring utilities and parking. Required: private full bathroom, parking, residential surroundings with access to shops/restaurants. Furnished private rooms are provisionally included; the user has not yet confirmed whether sharing the home is acceptable.
+
+These are advertised leads, not host-confirmed availability or reservations. Listing details were read through web search/page retrieval, which can contain cached information. Direct Chrome verification was unavailable. Neighborhood descriptions below are the advertisers' descriptions, not independent safety assessments. Daily equivalents use a 30-day month; refundable deposits are additional move-in cash. Monthly billing does not itself establish a month-to-month lease.
+
+## Best leads with explicit monthly flexibility
+
+| Priority / listing | Recurring cost | Bathroom / parking | Timing and terms | Residential setting and conveniences |
+|---|---:|---|---|---|
+| 1. [Sunnyvale 94087 furnished master suite](https://www.craigslist.org/view/d/sunnyvale-master-bedroom-furnished-with/1jR4s4qtSAHyBJtU3pFAb1) | $1,200 including utilities/Wi-Fi; $40/day | Private bath and entrance; driveway or street parking | Explicit month-to-month; ready to rent; posted Sep 21. $1,200 deposit. Confirm Sep 29 and a dedicated driveway space. | Single-family home; shops nearby. Bed, desk, fridge and microwave. Light cooking only; no overnight guests, pets, or alcohol. |
+| 2. [Newark, Potrero Dr near Parada St](https://www.craigslist.org/view/d/fremont-bedroom-with-private-bath-end/tHKTAZBA4aUCExwiFPGgSi) | $1,100 base; $36.67/day before extra utilities | Private bath; street parking | Explicit month-to-month with 30-day advance notice. $1,100 deposit. Gas/electric and water only partially included: obtain exact charges. Confirm Sep 29. | Furnished room in end-unit home; near NewPark Mall, Pacific Commons, Costco and supermarket. Light cooking only; no overnight guests, pets, or alcohol. Posted Sep 12. |
+| 3. [Northwest Novato furnished room](https://www.craigslist.org/view/d/novato-newly-furnished-private-room/ne5JK7Pf6GjYpxdw1JEXSc) | $1,300 including utilities, Wi-Fi and twice-monthly cleaning; $43.33/day | Private bath; street parking | Explicit month-by-month. Availability field Sep 26; body says now. $1,300 refundable deposit. Updated Sep 21. | Quiet owner-occupied home, yard, parks/trails; shopping requires a walk or drive. Owner has a dog and cat. Confirm actual grocery driving time and Sep 29. |
+| 4. [Concord, Trailside Circle furnished room](https://www.craigslist.org/view/d/concord-fully-furnished-private-room/nSPAq2h7EvF4XZdEuZ8U1D) | $1,500 including utilities, internet and common-area cleaning; $50/day before any parking surcharge | Attached private bath; off-street parking tag, but body only says parking option available | Month-to-month or 6+ months preferred. Advertised available now. First + last month's rent: $3,000 upfront. | Quiet townhouse shared with professionals; kitchen/laundry; listing says near groceries, gyms and Concord BART. Confirm parking allocation and fee, Sep 29, and renewal terms. |
+
+## Lower-priced or useful backups with lease details still missing
+
+| Listing | Cost and move-in cash | Fit / unresolved questions |
+|---|---|---|
+| [Brentwood private room, quiet court](https://www.craigslist.org/view/d/brentwood-bedroom-with-private-bath-in/mStHk8pELDdPsbPkHo1jJ8) | $950 including utilities; $31.67/day. $400 deposit. | Private full bathroom outside bedroom; off-street parking advertised. Available from Sep 1; updated Sep 17. Confirm month-to-month, Sep 29, furnishing, parking inclusion and exact location/distance to shops. Light cooking, no overnight guests. Contact Mrs. Flores by daytime phone only; use listing's contact button. |
+| [San Rafael near China Camp](https://www.craigslist.org/view/d/san-rafael-br-private-bath-for-one/3Pi2NykzWn3KsMp3AxBjEk) | $1,150 + $175 utilities = $1,325; $44.17/day. $1,050 deposit. | Unfurnished room with attached shower bathroom; off-street parking advertised. Shared with owner; deck and kitchen. Advertised available now, about five minutes from Civic Center. Confirm month-to-month, parking inclusion, Sep 29, shops and furnishing possibility. Posted Sep 22. |
+| [Livermore, Nightingale Street](https://www.craigslist.org/view/d/livermore-2nd-floor-room-with-private/jovUNkkqAY8R1LppjHT1z6) | $1,200 including listed utilities; $40/day. $1,200 deposit. | Private bath; street parking; quiet cul-de-sac, minutes from shops/restaurants per ad. Immediate move-in advertised. Seeking male housemate. Confirm minimum lease, furnishing, internet and Sep 29. Posted Sep 14. |
+| [Antioch, Marie Ave near E 16th St](https://www.craigslist.org/view/d/antioch-room-and-private-bath-all/cCwcUp1P8XAtaBHeu4kMXy) | $875 including utilities, Wi-Fi and laundry; $29.17/day. $500 deposit. | Private bath, optional furniture included, street parking. Advertised now; updated Sep 20. Confirm month-to-month and Sep 29. Exact block quality and proximity to everyday shops need checking; price alone does not establish the requested neighborhood fit. |
+
+## Other leads checked
+
+- [Millbrae private-entry room](https://www.craigslist.org/view/d/millbrae-quiet-room-with-private/fsAbc3RU4AvTCGCKD5LfP3): $1,290 + $95 utilities = $1,385/month; private full bathroom, street parking, shared kitchenette. $1,200 deposit + $35 credit report. Lease duration and furnishing unspecified.
+- [Hayward, 514 Staley Ave](https://www.craigslist.org/view/d/hayward-private-bedroom-and-bath-on-1st/mrCD8RmLyxZsxGm8nTMWJe): $1,100 including utilities, private bath and street parking, $1,000 deposit. Unfurnished; minimum lease unspecified.
+- [Milpitas gated townhouse](https://www.craigslist.org/view/d/milpitas-private-room-bath-in-gated/uhXjvC4BdZngi9qgxYP8pP): $1,469 all-inclusive, private bathroom, off-street parking, explicit month-to-month. Available **October 14**, so it misses the requested start.
+- [Oakland “The Oasis” studio](https://rotatingroom.com/need-a-room/39898?origin=city%2Flos_gatos-ca): search result advertises $1,500 for one month, $1,450/month for two, $1,400/month for three or more, with dates beginning Sep 22. Private bath/entrance and kitchenette. Full listing could not be retrieved: parking, fees, eligibility and availability remain unverified; not a confirmed match.
+- Excluded several apparent bargains after reading details: shared bathrooms, six-month minimum leases, October starts, or advertisers no longer accepting applications.
+
+## Inquiry draft — not sent
+
+Hi, I’m looking for housing starting September 29, 2026, initially for one month with the option to extend monthly. Is your room available for those dates, and would that arrangement work? I need a bathroom exclusively for my use and parking for one car. Could you confirm the total monthly cost including utilities, internet and parking, all upfront charges, whether the room is furnished, and the notice required to move out? Please also share the nearest cross streets and whether an in-person or video tour is available. Thank you.
+
+For Sunnyvale, specifically ask whether the driveway space is guaranteed. For Newark, ask how the partial utility allowance works. For Concord, ask whether off-street parking costs extra. For the cheaper backups, establish monthly flexibility before arranging a tour.

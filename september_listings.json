@@ -1,0 +1,129 @@
+{
+  "researched": "September 24, 2026",
+  "move_in": "September 29, 2026",
+  "listings": [
+    {
+      "id": "cl-7970472222", "title": "Furnished master suite with private entrance", "area": "Sunnyvale · 94087", "rent": 1200, "extra": false,
+      "group": "monthly", "parking": "driveway", "parking_label": "Driveway or street · confirm dedicated space", "furnished": "yes",
+      "availability": "Advertised ready to rent · posted Sep 21", "deposit": "$1,200 deposit", "term": "Explicit month-to-month",
+      "neighborhood": "Single-family residential home; shops nearby, per listing.",
+      "included": "Utilities and Wi-Fi included; bed, desk, fridge and microwave.",
+      "bath": "Private remodeled bathroom and private entrance.",
+      "conditions": "Light cooking only; no overnight guests, pets or alcohol.",
+      "confirm": "September 29 move-in and whether a driveway space is guaranteed at this price.",
+      "url": "https://www.craigslist.org/view/d/sunnyvale-master-bedroom-furnished-with/1jR4s4qtSAHyBJtU3pFAb1"
+    },
+    {
+      "id": "cl-7965272718", "title": "Furnished room in an end-unit home", "area": "Newark · Potrero Drive near Parada Street", "rent": 1100, "extra": true,
+      "group": "monthly", "parking": "street", "parking_label": "Street parking", "furnished": "yes",
+      "availability": "Posted Sep 12 · confirm move-in date", "deposit": "$1,100 deposit", "term": "Month-to-month · 30-day notice",
+      "neighborhood": "Near NewPark Mall, Pacific Commons, Costco and groceries, per listing.",
+      "included": "Internet, garbage and laundry included. Gas/electric and water only partially included.",
+      "bath": "Private full bathroom.", "conditions": "Light cooking only; no overnight guests, pets or alcohol.",
+      "confirm": "September 29 availability and the exact extra utility charges or allowance.",
+      "url": "https://www.craigslist.org/view/d/fremont-bedroom-with-private-bath-end/tHKTAZBA4aUCExwiFPGgSi"
+    },
+    {
+      "id": "cl-7955884526", "title": "Furnished room in a home with a garden", "area": "Northwest Novato", "rent": 1300, "extra": false,
+      "group": "monthly", "parking": "street", "parking_label": "Street parking", "furnished": "yes",
+      "availability": "Availability field: Sep 26 · body: now", "deposit": "$1,300 refundable deposit", "term": "Explicit month-by-month",
+      "neighborhood": "Quiet owner-occupied neighborhood near parks and trails. Shopping is easier by car.",
+      "included": "Utilities, Wi-Fi and twice-monthly professional cleaning included; laundry available.",
+      "bath": "Private bathroom.", "conditions": "Shared with owner, a dog and a cat; no tenant pets.",
+      "confirm": "September 29 move-in, parking restrictions and actual driving time to groceries.",
+      "url": "https://www.craigslist.org/view/d/novato-newly-furnished-private-room/ne5JK7Pf6GjYpxdw1JEXSc"
+    },
+    {
+      "id": "cl-7958109656", "title": "Furnished townhouse room near BART", "area": "Concord · Trailside Circle", "rent": 1500, "extra": true,
+      "group": "monthly", "parking": "offstreet", "parking_label": "Off-street option · fee unconfirmed", "furnished": "yes",
+      "availability": "Advertised available now", "deposit": "$3,000 upfront: first + last month", "term": "Month-to-month or 6+ months preferred",
+      "neighborhood": "Quiet townhouse; groceries, gyms and Concord BART nearby, per listing.",
+      "included": "Utilities, internet and common-area cleaning included; shared kitchen and laundry.",
+      "bath": "Attached private bathroom.", "conditions": "Shared with professionals; no pets or indoor smoking.",
+      "confirm": "September 29, monthly renewal, parking allocation and any parking surcharge. Extra parking would exceed $50/day.",
+      "url": "https://www.craigslist.org/view/d/concord-fully-furnished-private-room/nSPAq2h7EvF4XZdEuZ8U1D"
+    },
+    {
+      "id": "cl-7956128046", "title": "Room with private bathroom on a quiet court", "area": "Brentwood · exact location needed", "rent": 950, "extra": false,
+      "group": "confirm", "parking": "offstreet", "parking_label": "Off-street advertised · confirm inclusion", "furnished": "unknown",
+      "availability": "Advertised from Sep 1 · updated Sep 17", "deposit": "$400 deposit", "term": "Minimum lease not stated",
+      "neighborhood": "Quiet court and backyard, per listing; exact location and distance to shops need checking.",
+      "included": "Utilities, kitchen access, laundry and cable included.",
+      "bath": "Private bathroom outside the bedroom.", "conditions": "Light cooking, no oil frying; no overnight guests or pets.",
+      "confirm": "One-month renewable stay, September 29, furnishings, parking inclusion and nearby shops.",
+      "contact": "Mrs. Flores requests daytime phone calls only. Open the listing to reveal the number.",
+      "url": "https://www.craigslist.org/view/d/brentwood-bedroom-with-private-bath-in/mStHk8pELDdPsbPkHo1jJ8"
+    },
+    {
+      "id": "cl-7971142872", "title": "Room with attached bath near China Camp", "area": "San Rafael · near China Camp", "rent": 1325, "extra": false,
+      "group": "confirm", "parking": "offstreet", "parking_label": "Off-street advertised · confirm inclusion", "furnished": "no",
+      "availability": "Advertised available now · posted Sep 22", "deposit": "$1,050 deposit", "term": "Minimum lease not stated",
+      "neighborhood": "Near hiking trails and about five minutes from Civic Center, per listing; shop distances unverified.",
+      "included": "$1,150 rent + $175 utilities = $1,325 monthly; kitchen and deck access.",
+      "bath": "Attached private bathroom with shower.", "conditions": "Unfurnished; share home with owner. Dogs considered.",
+      "confirm": "Month-to-month, September 29, parking inclusion and furnishing possibility.",
+      "url": "https://www.craigslist.org/view/d/san-rafael-br-private-bath-for-one/3Pi2NykzWn3KsMp3AxBjEk"
+    },
+    {
+      "id": "cl-7966253142", "title": "Upstairs room on a peaceful cul-de-sac", "area": "Livermore · Nightingale Street", "rent": 1200, "extra": false,
+      "group": "confirm", "parking": "street", "parking_label": "Street parking", "furnished": "unknown",
+      "availability": "Advertised immediate move-in · posted Sep 14", "deposit": "$1,200 deposit", "term": "Minimum lease not stated",
+      "neighborhood": "Cul-de-sac, minutes from parks, shopping and restaurants, per listing.",
+      "included": "Gas, water, garbage and electricity included; shared kitchen and laundry.",
+      "bath": "Private bathroom.", "conditions": "Seeking a male housemate; furnishings and internet unspecified.",
+      "confirm": "Month-to-month, September 29, furniture and whether internet costs extra.",
+      "url": "https://www.craigslist.org/view/d/livermore-2nd-floor-room-with-private/jovUNkkqAY8R1LppjHT1z6"
+    },
+    {
+      "id": "cl-7957798043", "title": "Furnished room with all utilities included", "area": "Antioch · Marie Avenue near E 16th Street", "rent": 875, "extra": false,
+      "group": "confirm", "parking": "street", "parking_label": "Street parking", "furnished": "yes",
+      "availability": "Advertised available now · updated Sep 20", "deposit": "$500 deposit", "term": "Minimum lease not stated",
+      "neighborhood": "Listing says five minutes by car to BART. Block quality and access to everyday shops need checking.",
+      "included": "Utilities, Wi-Fi, cable and laundry included; optional furniture at no extra charge.",
+      "bath": "Private bathroom.", "conditions": "Single occupant; no pets or smoking.",
+      "confirm": "One-month renewable stay, September 29 and whether the location fits your neighborhood preference.",
+      "url": "https://www.craigslist.org/view/d/antioch-room-and-private-bath-all/cCwcUp1P8XAtaBHeu4kMXy"
+    },
+    {
+      "id": "cl-7959180948", "title": "Private-entry room with kitchenette access", "area": "Millbrae · exact location needed", "rent": 1385, "extra": false,
+      "group": "confirm", "parking": "street", "parking_label": "Street parking", "furnished": "unknown",
+      "availability": "Advertised available now · posted Sep 1", "deposit": "$1,200 deposit + $35 credit report", "term": "Minimum lease not stated",
+      "neighborhood": "Advertised quiet home; exact cross streets and shop distances not supplied.",
+      "included": "$1,290 rent + $95 utilities/internet = $1,385 monthly; laundry available.",
+      "bath": "Private full bathroom and private entrance.", "conditions": "Shared kitchenette for light cooking; no overnight guests or pets.",
+      "confirm": "September 29, month-to-month, furnishing and street parking restrictions.",
+      "url": "https://www.craigslist.org/view/d/millbrae-quiet-room-with-private/fsAbc3RU4AvTCGCKD5LfP3"
+    },
+    {
+      "id": "cl-7959921291", "title": "First-floor room in a shared townhouse", "area": "Hayward · 514 Staley Avenue", "rent": 1100, "extra": false,
+      "group": "confirm", "parking": "street", "parking_label": "Street parking", "furnished": "no",
+      "availability": "Advertised available now · updated Sep 10", "deposit": "$1,000 deposit", "term": "Minimum lease not stated",
+      "neighborhood": "Quiet townhouse community within walking distance of Hayward BART, per listing.",
+      "included": "$1,000 rent + $100 utilities/internet = $1,100 monthly; shared kitchen and laundry.",
+      "bath": "Private first-floor bathroom.", "conditions": "Unfurnished; two other professionals; no pets or smoking.",
+      "confirm": "Month-to-month, September 29, nearby shops and furniture availability.",
+      "url": "https://www.craigslist.org/view/d/hayward-private-bedroom-and-bath-on-1st/mrCD8RmLyxZsxGm8nTMWJe"
+    },
+    {
+      "id": "cl-7969966377", "title": "Gated townhouse room — October 14 start", "area": "Milpitas · near Great Mall", "rent": 1469, "extra": false,
+      "group": "later", "parking": "offstreet", "parking_label": "Off-street advertised · confirm inclusion", "furnished": "unknown",
+      "availability": "October 14, 2026 · misses September 29", "deposit": "Deposit not stated", "term": "Explicit month-to-month",
+      "neighborhood": "Gated townhouse community, minutes from Great Mall, BART and VTA, per listing.",
+      "included": "Utilities, internet and monthly cleaning included; laundry, pool and spa.",
+      "bath": "Private bathroom.", "conditions": "Single occupant; shared with homeowner; no pets or frequent overnight guests.",
+      "confirm": "Only a later-start backup. Confirm furnishing, parking and upfront charges.",
+      "url": "https://www.craigslist.org/view/d/milpitas-private-room-bath-in-gated/uhXjvC4BdZngi9qgxYP8pP"
+    },
+    {
+      "id": "rr-39898", "title": "The Oasis — private garden studio", "area": "Oakland · exact neighborhood unverified", "rent": 1500, "extra": true,
+      "group": "unverified", "parking": "unknown", "parking_label": "Parking unverified", "furnished": "yes",
+      "availability": "Search result: Sep 22 onward · full page unavailable", "deposit": "Deposit and fees unverified", "term": "One-month minimum advertised; extensions unconfirmed",
+      "neighborhood": "Exact location and access to shops unverified.",
+      "included": "Search result: $1,500 for one month; $1,450/month for two; $1,400/month for three or more. Utilities unverified.",
+      "bath": "Private bathroom, entrance and kitchenette advertised.", "conditions": "Single occupant; no pets or smoking. Platform eligibility unverified.",
+      "confirm": "Full listing could not be retrieved. Confirm availability, parking, total cost and eligibility before treating this as a match.",
+      "contact": "Open RotatingRoom to review the full listing and contact the host.",
+      "url": "https://rotatingroom.com/need-a-room/39898?origin=city%2Flos_gatos-ca"
+    }
+  ]
+}
