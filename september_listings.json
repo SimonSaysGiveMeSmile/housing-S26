@@ -363,120 +363,6 @@
    "region": "east"
   },
   {
-   "id": "ff-848526_1",
-   "source": "furnishedfinder",
-   "title": "Fairfield junior suite · driveway parking",
-   "area": "Summerwalk / north of Clay Bank, Fairfield",
-   "rent": 1500,
-   "extra": false,
-   "group": "one_month",
-   "parking": "driveway",
-   "parking_label": "Driveway + street parking advertised",
-   "furnished": "yes",
-   "availability": "Advertised available; calendar updated July 28, 2026. September 29 unconfirmed.",
-   "deposit": "$1,000 refundable deposit; ask whether any additional fees apply.",
-   "term": "One-month / 30-day minimum; monthly renewal needs confirmation.",
-   "neighborhood": "Residential Summerwalk area, a few miles from shopping and dining; listing mentions Solano Mall.",
-   "included": "$1,400 rent + listed $100 utilities = $1,500 budgeted monthly. Furnished queen room, kitchen and laundry.",
-   "bath": "Private bathroom in a second-floor junior suite.",
-   "conditions": "Single occupancy, one vehicle, no pets or smoking. Stairs to bedroom.",
-   "confirm": "September 29, driveway assignment, whether the $100 utility charge is recurring and the complete monthly total.",
-   "url": "https://www.furnishedfinder.com/property/848526_1",
-   "photos": [
-    {
-     "file": "september-ff-848526_1-1.jpg",
-     "source": "https://www.furnishedfinder.com/_pdp_/848526/1/848526_1_62343762-full.jpeg"
-    },
-    {
-     "file": "september-ff-848526_1-2.jpg",
-     "source": "https://www.furnishedfinder.com/_pdp_/848526/1/848526_1_62343759-full.jpeg"
-    },
-    {
-     "file": "september-ff-848526_1-3.jpg",
-     "source": "https://www.furnishedfinder.com/_pdp_/848526/1/848526_1_62343760-full.jpeg"
-    }
-   ],
-   "checked": "September 25, 2026 (link re-verified)",
-   "contact": "Advertised reply time: typically within an hour. Open the listing to message the host. No message has been sent.",
-   "city": "Fairfield",
-   "region": "solano"
-  },
-  {
-   "id": "ff-669591_1",
-   "source": "furnishedfinder",
-   "title": "Fairfield furnished room · electricity extra",
-   "area": "Fairfield, near NorthBay Medical Center",
-   "rent": 1200,
-   "extra": true,
-   "group": "one_month",
-   "parking": "offstreet",
-   "parking_label": "Free parking on property advertised",
-   "furnished": "yes",
-   "availability": "Advertised available; calendar updated August 2, 2026. September 29 unconfirmed.",
-   "deposit": "$1,200 refundable deposit + $150 cleaning fee; first month $1,350 plus electricity, excluding deposit.",
-   "term": "One-month / 30-day minimum; confirm renewal terms.",
-   "neighborhood": "Advertiser describes a cul-de-sac setting with a short drive to shops, restaurants and parks.",
-   "included": "Queen bed, kitchen, laundry, water, trash and Wi-Fi. Description says electricity is split despite the utilities-included badge.",
-   "bath": "Hallway bathroom advertised private; caption says primary use and not shared with other tenants. Confirm guests will not use it.",
-   "conditions": "Advertiser seeks female tenants. No smoking or pets.",
-   "confirm": "Tenant eligibility, exclusive bathroom use, electricity estimate, parking and September 29.",
-   "url": "https://www.furnishedfinder.com/property/669591_1",
-   "photos": [
-    {
-     "file": "september-ff-669591_1-1.png",
-     "source": "https://www.furnishedfinder.com/_pdp_/669591/1/669591_1_55439154-full.png"
-    },
-    {
-     "file": "september-ff-669591_1-2.png",
-     "source": "https://www.furnishedfinder.com/_pdp_/669591/1/669591_1_55439148-full.png"
-    },
-    {
-     "file": "september-ff-669591_1-3.png",
-     "source": "https://www.furnishedfinder.com/_pdp_/669591/1/669591_1_55439149-full.png"
-    }
-   ],
-   "checked": "September 25, 2026 (link re-verified)",
-   "contact": "Advertised reply time: typically within an hour; the host now has 2 reviews. Open the listing to message the host. No message has been sent.",
-   "city": "Fairfield",
-   "region": "solano"
-  },
-  {
-   "id": "ff-915271_1",
-   "source": "furnishedfinder",
-   "title": "Fairfield furnished private bed + bath · older calendar",
-   "area": "Fairfield, Solano County",
-   "rent": 1300,
-   "extra": false,
-   "group": "unverified",
-   "timing_label": "Older calendar · October 2025 · verify first",
-   "parking": "street",
-   "parking_label": "Street parking in description",
-   "furnished": "yes",
-   "availability": "Page says available, but calendar was last updated October 6, 2025. Do not assume current vacancy.",
-   "deposit": "$500 refundable deposit + $50 cleaning fee; first month $1,350, excluding deposit.",
-   "term": "Advertised one-month / 30-day minimum; verify current terms.",
-   "neighborhood": "Advertiser describes a quiet residential neighborhood; cross streets and nearby shops are unconfirmed.",
-   "included": "Utilities, Wi-Fi, kitchen, laundry and twin bed.",
-   "bath": "Private bathroom advertised.",
-   "conditions": "Single occupancy and one vehicle; no pets or smoking.",
-   "confirm": "Whether still offered, September 29, renewal terms and parking. Description says street parking although the amenity badge says on premises.",
-   "url": "https://www.furnishedfinder.com/property/915271_1",
-   "photos": [
-    {
-     "file": "september-ff-915271_1-1.jpg",
-     "source": "https://www.furnishedfinder.com/_pdp_/915271/1/915271_1_61005637-full.jpeg"
-    },
-    {
-     "file": "september-ff-915271_1-2.jpg",
-     "source": "https://www.furnishedfinder.com/_pdp_/915271/1/915271_1_60813062-full.jpeg"
-    }
-   ],
-   "checked": "September 25, 2026 (link re-verified)",
-   "contact": "Advertised reply time: more than a week — too slow to rely on for a September 29 start. No message has been sent.",
-   "city": "Fairfield",
-   "region": "solano"
-  },
-  {
    "id": "ff-306547_1",
    "source": "furnishedfinder",
    "title": "Southern Novato furnished room · older calendar",
@@ -517,45 +403,87 @@
    "region": "north"
   },
   {
-   "id": "ff-224172_1",
-   "source": "furnishedfinder",
-   "title": "Vacaville furnished room · one-month minimum",
-   "area": "Vacaville, Solano County",
-   "rent": 1200,
+   "id": "sr-103156861",
+   "source": "spareroom",
+   "title": "South San Francisco private room and bath",
+   "area": "Sunshine Gardens, South San Francisco (94080)",
+   "rent": 1050,
    "extra": false,
-   "group": "one_month",
+   "group": "waitlist",
+   "timing_label": "Lease pending · advertiser not accepting applications",
    "parking": "offstreet",
-   "parking_label": "Free parking on property advertised",
+   "parking_label": "Parking advertised; “plenty of places to park”",
    "furnished": "yes",
-   "availability": "Advertised available; calendar updated August 19, 2026. September 29 needs host confirmation.",
-   "deposit": "$450 refundable deposit + $125 cleaning fee. First 30 days including cleaning: $1,325 ($44.17/day), excluding refundable deposit.",
-   "term": "One-month / 30-day minimum; confirm monthly extensions and notice.",
-   "neighborhood": "Advertiser describes a quiet residential subdivision in central Vacaville. Ask for cross streets and distance to groceries.",
-   "included": "Utilities, Wi-Fi, kitchen and laundry access; queen bed, pool and hot tub.",
-   "bath": "Private bathroom advertised.",
-   "conditions": "One occupant and one vehicle. No smoking or tenant pets; pets live on the property.",
-   "confirm": "September 29 availability, a reserved parking space, bathroom exclusivity and renewal terms.",
-   "url": "https://www.furnishedfinder.com/property/224172_1",
+   "availability": "Advertised available now with no minimum and no maximum term, but SpareRoom shows “The advertiser is not currently accepting applications.” Kept on the board because lease-pending rooms in this band come back.",
+   "deposit": "$500 deposit — the lowest of any lead found. Utilities included, no fees advertised.",
+   "term": "Minimum term None, maximum term None — month-to-month on the same terms as the Millbrae room, at $450 less.",
+   "neighborhood": "Sunshine Gardens, a quiet pocket of South San Francisco about 15 minutes from SFO. 11.6 miles to San Francisco and 23.9 to Stanford.",
+   "included": "Utilities included and the room is furnished. Shared four-bedroom house; no shared living room.",
+   "bath": "Private bathroom, recorded as “Large (Private bathroom)”.",
+   "conditions": "Three existing roommates, all long-term civil servants with background clearances, in the house over four years. Advertiser wants an established professional with a clean background. No smoking, no pets.",
+   "confirm": "Whether the pending lease has closed. If it falls through, this is the strongest lead in the search on price and terms — ask immediately.",
+   "url": "https://www.spareroom.com/rooms-for-rent/san_mateo_county/sunshine_gardens/103156861",
    "photos": [
     {
-     "file": "september-ff-224172_1-1.jpg",
-     "source": "https://www.furnishedfinder.com/_pdp_/224172/1/224172_1_56657505-full.jpg"
+     "file": "september-sr-103156861-1.jpg",
+     "source": "https://photos.spareroom.com/images/flatshare/listings/large/21/11/211133705.jpg"
     },
     {
-     "file": "september-ff-224172_1-2.jpg",
-     "source": "https://www.furnishedfinder.com/_pdp_/224172/1/224172_1_67643826-full.jpg"
+     "file": "september-sr-103156861-2.jpg",
+     "source": "https://photos.spareroom.com/images/flatshare/listings/large/21/11/211133706.jpg"
     },
     {
-     "file": "september-ff-224172_1-3.jpg",
-     "source": "https://www.furnishedfinder.com/_pdp_/224172/1/224172_1_67643859-full.jpg"
+     "file": "september-sr-103156861-3.jpg",
+     "source": "https://photos.spareroom.com/images/flatshare/listings/large/21/11/211133707.jpg"
     }
    ],
-   "checked": "September 25, 2026 (link re-verified)",
-   "contact": "Advertised reply time: typically within a day. Open the listing to message the host. No message has been sent.",
-   "city": "Vacaville",
-   "region": "solano"
+   "checked": "September 27, 2026",
+   "contact": "No contact possible right now: SpareRoom shows the advertiser is not accepting applications. No message has been sent.",
+   "city": "South San Francisco",
+   "region": "peninsula"
+  },
+  {
+   "id": "sr-103169912",
+   "source": "spareroom",
+   "title": "Daly City suite · private bath + assigned parking",
+   "area": "St. Francis, Daly City (94015)",
+   "rent": 1100,
+   "extra": false,
+   "group": "waitlist",
+   "timing_label": "Lease pending · advertiser not accepting applications",
+   "parking": "offstreet",
+   "parking_label": "Assigned parking space stated in the ad",
+   "furnished": "unknown",
+   "availability": "Advertised available now, but SpareRoom shows “The advertiser is not currently accepting applications.” Held as a watch item.",
+   "deposit": "$1,600 deposit. The ad’s own text has its numbers stripped, so the lease length and credit score it requires are not readable.",
+   "term": "Unreadable: the ad says “Lease: months” with the number removed, and SpareRoom records no minimum or maximum. Terms would have to be confirmed before this counts as monthly.",
+   "neighborhood": "St. Francis, Daly City — 10.6 miles to San Francisco, 28.7 to Stanford, with quick highway access and shops nearby.",
+   "included": "Shared kitchen, dining area and on-site laundry; patio access onto the back yard. Utilities not stated.",
+   "bath": "Private bathroom stated in the description.",
+   "conditions": "Screening is heavy: full application per adult, government photo ID, two months of pay stubs, a minimum credit score, no prior evictions, and a positive — not neutral — reference from the most recent landlord. No pets, no smoking.",
+   "confirm": "Whether the pending lease closed, and the actual lease length, which the ad redacts. This is the cheapest private-bath-plus-assigned-parking room found anywhere in the corridor.",
+   "url": "https://www.spareroom.com/rooms-for-rent/san_mateo_county/daly_city/103169912",
+   "photos": [
+    {
+     "file": "september-sr-103169912-1.jpg",
+     "source": "https://photos.spareroom.com/images/flatshare/listings/large/21/12/211206614.jpg"
+    },
+    {
+     "file": "september-sr-103169912-2.jpg",
+     "source": "https://photos.spareroom.com/images/flatshare/listings/large/21/12/211206855.jpg"
+    },
+    {
+     "file": "september-sr-103169912-3.jpg",
+     "source": "https://photos.spareroom.com/images/flatshare/listings/large/21/12/211206692.jpg"
+    }
+   ],
+   "checked": "September 27, 2026",
+   "contact": "No contact possible right now: the advertiser is not accepting applications. Listed via TurboTenant, which syndicates ads across many states — verify the landlord is real before sending anything. No message has been sent.",
+   "city": "Daly City",
+   "region": "peninsula"
   }
  ],
  "photos_checked": "September 25, 2026",
- "anchors": "SF Ferry Building and Stanford University; ranked on the worse of the two drives."
+ "anchors": "SF Ferry Building and Stanford University; ranked on the worse of the two drives.",
+ "commute_ceiling_minutes": 90
 }

@@ -4,7 +4,8 @@
 constraints, what has been checked, what was found, what is blocked, and what to do next. Update it
 whenever the search moves. Per-pass details live in the dated notes listed at the bottom.
 
-_Last updated: September 27, 2026 (late night). Move-in is September 29 — two days out._
+_Last updated: September 27, 2026 (late night, after the South San Francisco sweep). Move-in is
+September 29 — two days out._
 
 ## The brief
 
@@ -15,6 +16,7 @@ _Last updated: September 27, 2026 (late night). Move-in is September 29 — two 
 | Budget | Preferably under **$1,500 per 30 days**, including recurring utilities and parking (~$50/day) |
 | Must have | **Private full bathroom** · **parking for one car** |
 | Where | Must work for **both San Francisco and Stanford** — ranked on the worse of the two drives. Widened on Sept 27 to include East Bay, north of Berkeley, SF, toward Sacramento, and the Peninsula south of SF. |
+| Commute ceiling | **Nothing over 1.5 hours from *both* anchors** (added Sept 27). Applied to the worse of the two drive times; it removed all four Solano cards. |
 | Type | A room in a shared house is fine; whole apartments/studios welcome |
 | Platforms | Zillow, SUpost, Furnished Finder, **SpareRoom** (added Sept 27 — it turned out to hold the best leads). **Craigslist excluded** at the owner's request (Sept 25). |
 | Decision (Sept 26) | **Hold all four constraints** rather than relax budget, bathroom, or dates. |
@@ -44,7 +46,7 @@ These beat every Solano card by ~50 miles on location *and* on lease terms.
 private bathroom + $1,500, and only El Sobrante cleared both (one night late). SpareRoom is the
 exception because it lists genuine no-minimum-term rooms, which the others mostly do not.
 
-## The board (14 cards) — `september_listings.json`, live at simonsaysgivemesmile.github.io/housing-S26
+## The board (12 cards) — `september_listings.json`, live at simonsaysgivemesmile.github.io/housing-S26
 
 Ranked on the worse of the two drives (SF / Stanford):
 
@@ -59,9 +61,18 @@ Ranked on the worse of the two drives (SF / Stanford):
 | 7 | Palo Alto, downtown (SUpost) | 1,500 | 34 | unknown | Oct 2 |
 | 8 | Alameda condo (FF) | 1,500 | 32 | 1-month min | Calendar Nov 2025 — verify |
 | 9 | Berkeley, North hills (FF) | 1,350 | 40 | 1-month min | Calendar Jan 2026 — verify |
-| 10–14 | Fairfield ×3, Novato, Vacaville (FF) | 1,200–1,500 | 60–84 | 1-month min | Worst-placed; Vacaville last |
+| 10 | Novato, furnished (FF) | 1,200 | 60 | 1-month min | Calendar Dec 2025; 88 min to campus — closest to the ceiling |
+| — | **South San Francisco, Sunshine Gardens** (SpareRoom) | **1,050** | 24 | **No minimum or maximum** | **Watch list — lease pending, not accepting applications** |
+| — | **Daly City suite, St. Francis** (SpareRoom) | **1,100** | 29 | Redacted in the ad | **Watch list — lease pending, not accepting applications** |
+
+The two watch-list rows are filed under the new `waitlist` group: they are the cheapest private-bath
+rooms found anywhere in the search, but neither can be contacted right now.
 
 **Under the month-by-month rule, Hayward's 60-day minimum is a real conflict, not a formality.**
+
+**The four Solano cards (Fairfield ×3, Vacaville) were withdrawn on Sept 27** under the new 1.5-hour
+ceiling: Fairfield is 100 minutes to Stanford and Vacaville 109, both over the limit even at free-flow
+speeds. Novato survives at 88 minutes, but it is the first card that would fail the rule in traffic.
 
 ## Ruled out, and why (do not re-check)
 
@@ -73,6 +84,11 @@ Ranked on the worse of the two drives (SF / Stanford):
 - **San Carlos Hills, $1,400** (SpareRoom) — 2BR/**1BA**, shared bath, utilities not included.
 - **San Mateo Bay View, $1,588** (SpareRoom) — **6-month minimum**.
 - **Foster City, $1,300** (SpareRoom) — 3 bedrooms sharing 1.5 baths; male preferred.
+- **Bayshore furnished room, $1,200** (SpareRoom) — **6-month minimum**, parking "No" (street only), and the ad contradicts itself: the structured field says private bathroom, the description says "shared bathroom on the main level".
+- **Noe Valley, $1,500** (SpareRoom) — private bath, utilities included, but a **24-month minimum** and a minimum age of 40.
+- **Oceanview, $1,150** (SpareRoom) — genuinely month-to-month and available now, but **shared bath, no parking, unfurnished**. The nearest miss in the target price band.
+- **West Portal house share, $1,290** (SpareRoom) — parking, furnished, utilities, 1–3 month term, but the $1,290 room **shares one of three bathrooms**; only the $2,000 room has a private bath. House rules are extreme: no visitors ever, no locking your bedroom, silence 8pm–10am, "one shower a day as short as possible".
+- **Two "TurboTenant" Daly City ads, $950 and $1,380** — both **shared baths**, both syndicated by one advertiser listing across Wildomar, Susanville, Visalia, Long Beach and more, with prices stripped out of the description and contact pushed to a personal WhatsApp. Treated as lead-generation, not real local rooms. **Do not send anything to these.**
 - **South SF studio, $1,950–2,050** — whole unit, but over budget, one-year preferred.
 - **San Leandro, $1,500** — private bath, but **12-month minimum**.
 - **Palo Alto cheap rooms** (College Terrace $850, Loma Verde $1,400, South PA $1,400) — all share a bathroom.
@@ -83,8 +99,11 @@ Ranked on the worse of the two drives (SF / Stanford):
 
 Best-balanced towns: **Burlingame 18** · San Mateo 21 · Millbrae 21 (the one BART+Caltrain stop) ·
 San Bruno 22 · Foster City 23 · South SF 24 · Belmont 25 · **Hayward 25** · San Carlos 26 · Redwood
-City 27. Nine of the ten are on the Peninsula. Current cards for comparison: El Sobrante 49, Novato 60,
-Fairfield 76, Vacaville 84.
+City 27. Nine of the ten are on the Peninsula. Current cards for comparison: El Sobrante 49, Novato 60.
+
+**The 1.5-hour ceiling, in minutes on the worse anchor:** South SF 36 · Millbrae 33 · San Mateo 29 ·
+Foster City 32 · Daly City 40 · Hayward 36 · Palo Alto 47 · Alameda 48 · Berkeley 61 · El Sobrante 69 ·
+Novato 88 — then the cut: Fairfield 100, Vacaville 109, both removed.
 
 ## Blocked / unchecked — genuinely unknown, not empty
 
@@ -110,9 +129,14 @@ SpareRoom and Kopa: first URL guesses were 404s; proper search URLs not yet foun
    rent?). Outreach is the owner's call; nothing has been sent.
 3. Retry Furnished Finder once the block clears — the Burlingame cottage first, then the blocked
    cities. FF's entire inventory is monthly minimums, so it is the best source for this constraint.
-4. Sweep the rest of SpareRoom — only San Mateo, Burlingame and Millbrae were covered, with the
-   `?parking=Y` filter. San Bruno, Belmont, South SF, Daly City, Redwood City and the East Bay
-   counties are untouched, and this platform has the best hit rate by far.
+4. **Re-check the two watch-list rooms daily.** South San Francisco at $1,050 (private bath, parking,
+   furnished, utilities included, $500 deposit, no minimum *or* maximum term) is the best-value lead
+   the search has produced; it is lease-pending only. Daly City at $1,100 is the same story. Pending
+   leases in this band fall through often — if either reopens, it beats Millbrae on price by $400+.
+5. Sweep the rest of SpareRoom. **Done Sept 27:** South San Francisco, Daly City, San Bruno, Brisbane,
+   Westlake, Serramonte, Pacifica, Colma, and the southern SF neighborhoods (Ingleside, Excelsior,
+   Visitacion Valley, Outer Mission). **Still untouched:** Belmont, San Carlos, Redwood City,
+   Burlingame proper, and the whole East Bay (Alameda + Contra Costa counties).
 
 ## How to work on this
 
@@ -126,6 +150,10 @@ SpareRoom and Kopa: first URL guesses were 404s; proper search URLs not yet foun
   pages spell out **Minimum term / Maximum term / Short rentals considered**, "(Private bathroom)"
   on the room line, utilities-included, deposit and parking. Photos at
   `photos.spareroom.com/images/flatshare/listings/large/...` download with a normal UA + Referer.
+  Filter by price with `?max_rent=1500&per=pcm`; **`offset=` does not paginate** — each town returns
+  about 10 ads and page 2 repeats page 1, so cover an area by searching neighbouring towns instead,
+  whose radii overlap. A closed ad reads **"The advertiser is not currently accepting applications"**
+  at the foot of the page — the "LEASE PENDING" badge alone does not prove it, so open the ad.
 - After editing `september_listings.json` or `latest_dashboard.py`: `python3 test_dashboard.py`,
   restart the local server on :5555 (it doesn't hot-reload), commit + push (auto-deploys).
 - Every new city needs an entry in `distance_estimates.json` with *both* anchors, or the render
@@ -140,3 +168,4 @@ SpareRoom and Kopa: first URL guesses were 404s; proper search URLs not yet foun
 - `east_bay_september_25.md` — re-verification of every card, Vallejo withdrawal, East Bay adds
 - `peninsula_september_27.md` — Peninsula measured and searched; Cloudflare block documented
 - `spareroom_september_27.md` — SpareRoom sweep; the three month-to-month Peninsula leads
+- `south_sf_september_27.md` — South San Francisco sweep; the $1,000–$1,200 band and why it is closed

@@ -18,7 +18,7 @@
     for (const card of sorted) {
       const d = card.dataset;
       const term = controls.term.value;
-      const timingGroups = {start: ['monthly', 'one_month', 'confirm'], monthly: ['monthly', 'one_month'], active: ['monthly', 'one_month', 'confirm', 'later'], review: ['monthly', 'one_month', 'confirm', 'later', 'unverified']};
+      const timingGroups = {start: ['monthly', 'one_month', 'confirm'], monthly: ['monthly', 'one_month'], active: ['monthly', 'one_month', 'confirm', 'later'], review: ['monthly', 'one_month', 'confirm', 'later', 'unverified', 'waitlist']};
       const timingFits = timingGroups[term] ? timingGroups[term].includes(d.group) : d.group === term;
       const source = controls.source.value;
       const sourceFits = source === 'all' || d.source === source;

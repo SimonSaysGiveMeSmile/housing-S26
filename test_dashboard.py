@@ -99,8 +99,8 @@ _long = [i['id'] for i in leads if i['group'] in ('monthly', 'one_month')
 check(not _long, f"no long-minimum lease is presented as a monthly option (offenders: {_long})")
 check("availability has not been confirmed with hosts" in latest,
       "advertised leads are not represented as host-confirmed availability")
-check(next(item for item in leads if item['id'] == 'ff-848526_1')['rent'] == 1400 + 100,
-      "Fairfield comparison price includes the listed utility charge")
+check(not any(item['city'] in ('Fairfield', 'Vacaville') for item in leads),
+      "the Solano leads dropped for breaking the 1.5-hour ceiling have not crept back")
 
 # A lead whose page stops being a rental offer must leave the inventory, not linger.
 check(not any(item['id'] == 'zillow-15658964' for item in leads),
@@ -114,7 +114,7 @@ check(all(item['group'] != 'one_month' for item in leads if '2 month' in item['t
       "no longer-than-monthly minimum is filed under the one-month group")
 
 # Older-calendar leads stay in the verify-first bucket, hidden by the default filter.
-for stale in ('ff-933277_1', 'ff-933335_1', 'ff-915271_1', 'ff-306547_1'):
+for stale in ('ff-933277_1', 'ff-933335_1', 'ff-306547_1'):
     item = next(i for i in leads if i['id'] == stale)
     check(item['group'] == 'unverified', f"older-calendar lead {stale} is marked verify-first")
 
@@ -134,6 +134,21 @@ check(all(_dist[c]['balanced_miles'] == max(_dist[c]['driving_miles'], _dist[c][
       "balanced distance is the worse of the two drives, never an average")
 check('Closest to Stanford' in latest and 'Balanced' in latest,
       "the board offers sorting by Stanford and by the balanced figure")
+
+# The user's ceiling: nothing whose worse-anchor drive exceeds 1.5 hours stays on the board.
+_far = sorted({f"{item['city']} ({max(_dist[item['city']]['model_minutes'], _dist[item['city']]['stanford_minutes'])} min)"
+               for item in leads
+               if max(_dist[item['city']]['model_minutes'], _dist[item['city']]['stanford_minutes']) > 90})
+check(not _far, f"no lead is over 1.5 hours from both SF and Stanford (offenders: {_far})")
+
+# The list heading promises every bathroom is private, so no card may describe a shared one.
+_shared = [item['id'] for item in leads
+           if any(k in item['bath'].lower() for k in ('shared bath', 'share a bath', 'sharing the bath',
+                                                      'shares a bath', 'shared use of the bath',
+                                                      'shared full bath', 'communal bath'))]
+check(not _shared, f"no lead on the private-bath board describes a shared bathroom (offenders: {_shared})")
+check('All bathrooms advertised as private' in latest,
+      "the list heading still states the private-bathroom rule the cards are checked against")
 
 # No lead may claim a host has confirmed the requested date.
 check(all('no message has been sent' in item['contact'].lower() for item in leads),

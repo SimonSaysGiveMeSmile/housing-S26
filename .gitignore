@@ -6,3 +6,5 @@ run_status.json
 
 __pycache__/
 .outreach-browser-profile/
+.DS_Store
+site/
