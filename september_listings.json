@@ -1,7 +1,127 @@
 {
- "researched": "September 25, 2026",
+ "researched": "September 27, 2026",
  "move_in": "September 29, 2026",
  "listings": [
+  {
+   "id": "sr-103220421",
+   "source": "spareroom",
+   "title": "Millbrae private room and bath · month-to-month",
+   "area": "Millbrae, San Mateo County (94030)",
+   "rent": 1500,
+   "extra": false,
+   "group": "monthly",
+   "timing_label": "Month-to-month stated · available now",
+   "parking": "offstreet",
+   "parking_label": "Plenty of parking advertised",
+   "furnished": "no",
+   "availability": "Advertised available now, which covers September 29. Listed September 2026 and marked new on SpareRoom.",
+   "deposit": "$1,500 refundable deposit. No fees advertised. First 30 days: $1,500 ($50/day), excluding the deposit.",
+   "term": "The advertiser states month-to-month or short-term, and the listing records no minimum and no maximum term — the clearest monthly terms found in this search.",
+   "neighborhood": "Millbrae is the best-connected town for this search: the one stop served by both BART and Caltrain, so SF and the Peninsula are both reachable without a car. Ask for the nearest cross streets and the walk to the station.",
+   "included": "Utilities included in the rent. The room is unfurnished, so a one-month stay would need furniture — worth asking whether any can be left or rented.",
+   "bath": "Private bathroom, advertised as no sharing.",
+   "conditions": "Advertiser asks for an introduction with occupation, move-in date and intended length of stay; references on request.",
+   "confirm": "September 29 start, whether the room can be furnished or part-furnished for a short stay, and whether a parking space is assigned.",
+   "url": "https://www.spareroom.com/rooms-for-rent/san_mateo_county/millbrae/103220421",
+   "photos": [
+    {
+     "file": "september-sr-103220421-1.jpg",
+     "source": "https://photos.spareroom.com/images/flatshare/listings/large/21/15/211549388.jpg"
+    },
+    {
+     "file": "september-sr-103220421-2.jpg",
+     "source": "https://photos.spareroom.com/images/flatshare/listings/large/21/15/211549389.jpg"
+    },
+    {
+     "file": "september-sr-103220421-3.jpg",
+     "source": "https://photos.spareroom.com/images/flatshare/listings/large/21/15/211549413.jpg"
+    }
+   ],
+   "checked": "September 27, 2026",
+   "contact": "Message through the SpareRoom ad; the advertiser is marked free to contact. No message has been sent.",
+   "city": "Millbrae",
+   "region": "peninsula"
+  },
+  {
+   "id": "sr-102101468",
+   "source": "spareroom",
+   "title": "San Mateo townhouse master suite · no minimum term",
+   "area": "San Mateo, San Mateo County (94401)",
+   "rent": 1600,
+   "extra": false,
+   "group": "monthly",
+   "timing_label": "No minimum term · short rentals considered",
+   "parking": "offstreet",
+   "parking_label": "Parking and a garage advertised",
+   "furnished": "yes",
+   "availability": "Advertised available now, which covers September 29.",
+   "deposit": "$1,600 refundable deposit. No fees advertised. First 30 days: $1,600 ($53.33/day), excluding the deposit.",
+   "term": "No minimum and no maximum term, with short rentals explicitly considered.",
+   "neighborhood": "Advertiser describes a two-level townhouse four blocks from downtown Burlingame, near the train, shops and groceries, close to both 101 and 280, and describes the location as halfway between San Francisco and San Jose.",
+   "included": "Utilities included; furnished, with wifi. Master bedroom has its own balcony; living room is shared.",
+   "bath": "Private bathroom en-suite to the master bedroom.",
+   "conditions": "Sharing with the owner, a professional woman in her fifties who works weekdays; her friends and grown children visit.",
+   "confirm": "September 29 start, whether the garage space is yours, and the total monthly figure — this is $100 above the target even with utilities included.",
+   "url": "https://www.spareroom.com/rooms-for-rent/san_mateo_county/san_mateo/102101468",
+   "photos": [
+    {
+     "file": "september-sr-102101468-1.jpg",
+     "source": "https://photos.spareroom.com/images/flatshare/listings/large/20/62/206201972.jpg"
+    },
+    {
+     "file": "september-sr-102101468-2.jpg",
+     "source": "https://photos.spareroom.com/images/flatshare/listings/large/20/62/206201978.jpg"
+    },
+    {
+     "file": "september-sr-102101468-3.jpg",
+     "source": "https://photos.spareroom.com/images/flatshare/listings/large/20/62/206201979.jpg"
+    }
+   ],
+   "checked": "September 27, 2026",
+   "contact": "Message through the SpareRoom ad. No message has been sent.",
+   "city": "San Mateo",
+   "region": "peninsula"
+  },
+  {
+   "id": "sr-102027784",
+   "source": "spareroom",
+   "title": "Foster City room with a brand-new private bath",
+   "area": "Foster City, San Mateo County (94404)",
+   "rent": 1600,
+   "extra": false,
+   "group": "confirm",
+   "timing_label": "Three-month minimum · short rentals considered",
+   "parking": "offstreet",
+   "parking_label": "Garage parking advertised",
+   "furnished": "yes",
+   "availability": "Advertised available now and the advertiser says it will not last, which covers September 29.",
+   "deposit": "$1,300 refundable deposit, below one month's rent. No fees advertised.",
+   "term": "A three-month minimum is listed, but the advertiser also marks short rentals as considered — so a one-month stay has to be agreed directly.",
+   "neighborhood": "Advertiser describes a single-family home on a cul-de-sac in Foster City, 14 miles from campus and 23 from the city.",
+   "included": "Utilities included; the room is furnished and bright.",
+   "bath": "Brand-new full bathroom for the room, per the advertiser.",
+   "conditions": "Room in a single-family home; confirm who else lives there.",
+   "confirm": "Whether one month is acceptable against the three-month minimum, September 29 availability, and that the new bathroom is yours alone.",
+   "url": "https://www.spareroom.com/rooms-for-rent/san_mateo_county/famous_ships/102027784",
+   "photos": [
+    {
+     "file": "september-sr-102027784-1.jpg",
+     "source": "https://photos.spareroom.com/images/flatshare/listings/large/20/58/205886989.jpg"
+    },
+    {
+     "file": "september-sr-102027784-2.jpg",
+     "source": "https://photos.spareroom.com/images/flatshare/listings/large/20/58/205886992.jpg"
+    },
+    {
+     "file": "september-sr-102027784-3.jpg",
+     "source": "https://photos.spareroom.com/images/flatshare/listings/large/20/58/205886995.jpg"
+    }
+   ],
+   "checked": "September 27, 2026",
+   "contact": "Message through the SpareRoom ad. No message has been sent.",
+   "city": "Foster City",
+   "region": "peninsula"
+  },
   {
    "id": "ff-949142_1",
    "source": "furnishedfinder",

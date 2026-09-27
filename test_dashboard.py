@@ -88,8 +88,15 @@ check(latest.count('data-rank=') == len(leads), "every new lead renders regardle
 check(all(html.escape(item["url"]) in latest for item in leads), "every lead retains its source link")
 check('href="summer.html"' not in latest, "withdrawn summer inventory is not linked")
 check("craigslist" not in latest.lower(), "current page contains no excluded platform listings, links or controls")
-check(all(item['source'] in ('zillow', 'supost', 'furnishedfinder') for item in leads),
+check(all(item['source'] in ('zillow', 'supost', 'furnishedfinder', 'spareroom') for item in leads),
       "inventory contains only the selected housing platforms")
+
+# The lease rule is hard: month-by-month or sublet only. Nothing with a long
+# minimum may sit in a group the default view presents as a ready option.
+_long = [i['id'] for i in leads if i['group'] in ('monthly', 'one_month')
+         and any(k in i['term'].lower() for k in ('12-month', 'twelve month', 'two-month', '60-day',
+                                                  'three-month', '90-day', 'six month', 'year'))]
+check(not _long, f"no long-minimum lease is presented as a monthly option (offenders: {_long})")
 check("availability has not been confirmed with hosts" in latest,
       "advertised leads are not represented as host-confirmed availability")
 check(next(item for item in leads if item['id'] == 'ff-848526_1')['rent'] == 1400 + 100,
