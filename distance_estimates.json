@@ -1,5 +1,5 @@
 {
- "checked": "September 26, 2026",
+ "checked": "September 27, 2026",
  "destination": {
   "name": "San Francisco Ferry Building",
   "lat": 37.7955487,
@@ -264,6 +264,126 @@
    "stanford_miles": 49.4,
    "stanford_minutes": 69,
    "balanced_miles": 49.4
+  },
+  "Daly City": {
+   "lat": 37.6904826,
+   "lon": -122.47267,
+   "display_name": "Daly City, San Mateo County, California, United States",
+   "source_url": "https://nominatim.openstreetmap.org/search?q=Daly+City%2C+San+Mateo+County%2C+California%2C+United+States&format=jsonv2&limit=1",
+   "driving_miles": 10.6,
+   "model_minutes": 16,
+   "meters": 17059.0,
+   "stanford_miles": 28.7,
+   "stanford_minutes": 40,
+   "balanced_miles": 28.7
+  },
+  "South San Francisco": {
+   "lat": 37.6535403,
+   "lon": -122.4168664,
+   "display_name": "South San Francisco, San Mateo County, California, United States",
+   "source_url": "https://nominatim.openstreetmap.org/search?q=South+San+Francisco%2C+San+Mateo+County%2C+California%2C+United+States&format=jsonv2&limit=1",
+   "driving_miles": 11.6,
+   "model_minutes": 18,
+   "meters": 18668.4,
+   "stanford_miles": 23.9,
+   "stanford_minutes": 36,
+   "balanced_miles": 23.9
+  },
+  "San Bruno": {
+   "lat": 37.6248536,
+   "lon": -122.4145986,
+   "display_name": "San Bruno, San Mateo County, California, 94066, United States",
+   "source_url": "https://nominatim.openstreetmap.org/search?q=San+Bruno%2C+San+Mateo+County%2C+California%2C+United+States&format=jsonv2&limit=1",
+   "driving_miles": 13.8,
+   "model_minutes": 21,
+   "meters": 22208.9,
+   "stanford_miles": 22.0,
+   "stanford_minutes": 35,
+   "balanced_miles": 22.0
+  },
+  "Burlingame": {
+   "lat": 37.5780965,
+   "lon": -122.3473099,
+   "display_name": "Burlingame, San Mateo County, California, 94010, United States",
+   "source_url": "https://nominatim.openstreetmap.org/search?q=Burlingame%2C+San+Mateo+County%2C+California%2C+United+States&format=jsonv2&limit=1",
+   "driving_miles": 18.2,
+   "model_minutes": 27,
+   "meters": 29290.1,
+   "stanford_miles": 17.4,
+   "stanford_minutes": 29,
+   "balanced_miles": 18.2
+  },
+  "San Mateo": {
+   "lat": 37.5629997,
+   "lon": -122.3253265,
+   "display_name": "San Mateo, San Mateo County, California, United States",
+   "source_url": "https://nominatim.openstreetmap.org/search?q=San+Mateo%2C+San+Mateo+County%2C+California%2C+United+States&format=jsonv2&limit=1",
+   "driving_miles": 20.6,
+   "model_minutes": 29,
+   "meters": 33152.5,
+   "stanford_miles": 15.4,
+   "stanford_minutes": 26,
+   "balanced_miles": 20.6
+  },
+  "Foster City": {
+   "lat": 37.5600336,
+   "lon": -122.2688522,
+   "display_name": "Foster City, San Mateo County, California, United States",
+   "source_url": "https://nominatim.openstreetmap.org/search?q=Foster+City%2C+San+Mateo+County%2C+California%2C+United+States&format=jsonv2&limit=1",
+   "driving_miles": 23.2,
+   "model_minutes": 32,
+   "meters": 37336.8,
+   "stanford_miles": 14.0,
+   "stanford_minutes": 25,
+   "balanced_miles": 23.2
+  },
+  "Belmont": {
+   "lat": 37.5164926,
+   "lon": -122.2941914,
+   "display_name": "Belmont, San Mateo County, California, 94002, United States",
+   "source_url": "https://nominatim.openstreetmap.org/search?q=Belmont%2C+San+Mateo+County%2C+California%2C+United+States&format=jsonv2&limit=1",
+   "driving_miles": 25.0,
+   "model_minutes": 36,
+   "meters": 40233.6,
+   "stanford_miles": 12.6,
+   "stanford_minutes": 25,
+   "balanced_miles": 25.0
+  },
+  "San Carlos": {
+   "lat": 37.504936,
+   "lon": -122.261823,
+   "display_name": "San Carlos, San Mateo County, California, 94070, United States",
+   "source_url": "https://nominatim.openstreetmap.org/search?q=San+Carlos%2C+San+Mateo+County%2C+California%2C+United+States&format=jsonv2&limit=1",
+   "driving_miles": 25.5,
+   "model_minutes": 35,
+   "meters": 41038.3,
+   "stanford_miles": 7.9,
+   "stanford_minutes": 19,
+   "balanced_miles": 25.5
+  },
+  "Redwood City": {
+   "lat": 37.4863239,
+   "lon": -122.232523,
+   "display_name": "Redwood City, San Mateo County, California, United States",
+   "source_url": "https://nominatim.openstreetmap.org/search?q=Redwood+City%2C+San+Mateo+County%2C+California%2C+United+States&format=jsonv2&limit=1",
+   "driving_miles": 27.3,
+   "model_minutes": 36,
+   "meters": 43935.1,
+   "stanford_miles": 5.7,
+   "stanford_minutes": 14,
+   "balanced_miles": 27.3
+  },
+  "Menlo Park": {
+   "lat": 37.4519671,
+   "lon": -122.177992,
+   "display_name": "Menlo Park, San Mateo County, California, 94025, United States",
+   "source_url": "https://nominatim.openstreetmap.org/search?q=Menlo+Park%2C+San+Mateo+County%2C+California%2C+United+States&format=jsonv2&limit=1",
+   "driving_miles": 32.6,
+   "model_minutes": 46,
+   "meters": 52464.6,
+   "stanford_miles": 1.8,
+   "stanford_minutes": 6,
+   "balanced_miles": 32.6
   }
  },
  "destination_stanford": {
