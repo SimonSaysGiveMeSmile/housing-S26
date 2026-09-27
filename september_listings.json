@@ -21,7 +21,7 @@
    "included": "Utilities included in the rent. The room is unfurnished, so a one-month stay would need furniture — worth asking whether any can be left or rented.",
    "bath": "Private bathroom, advertised as no sharing.",
    "conditions": "Advertiser asks for an introduction with occupation, move-in date and intended length of stay; references on request.",
-   "confirm": "September 29 start, whether the room can be furnished or part-furnished for a short stay, and whether a parking space is assigned.",
+   "confirm": "Awaiting the host's reply. Still unanswered: whether the room can be furnished or part-furnished for a one-month stay, whether a parking space is assigned, and whether September 29 works.",
    "url": "https://www.spareroom.com/rooms-for-rent/san_mateo_county/millbrae/103220421",
    "photos": [
     {
@@ -38,9 +38,11 @@
     }
    ],
    "checked": "September 27, 2026",
-   "contact": "Message through the SpareRoom ad; the advertiser is marked free to contact. No message has been sent.",
+   "contact": "Message sent by the owner on September 27: introduced themselves as a Stanford graduate looking for short-term housing, asked whether the room is still available and when a tour could be scheduled, and left a Stanford email address. Awaiting a reply. The follow-up below covers what that message did not ask.",
    "city": "Millbrae",
-   "region": "peninsula"
+   "region": "peninsula",
+   "inquiry": "Thanks again — one more question I should have asked. The ad lists the room as unfurnished, and I'd be starting with a one-month stay, so buying furniture isn't practical. Is there any chance the room could come with a bed and a desk, or could I rent furniture and have it delivered before September 29? I'm also hoping to confirm two details: that the bathroom is mine alone, and that a parking space comes with the room. Happy to do a video tour any evening this week.",
+   "inquiry_note": "FOLLOW-UP (your first message is already sent)"
   },
   {
    "id": "sr-102101468",
@@ -80,7 +82,9 @@
    "checked": "September 27, 2026",
    "contact": "Message through the SpareRoom ad. No message has been sent.",
    "city": "San Mateo",
-   "region": "peninsula"
+   "region": "peninsula",
+   "inquiry": "Hi, I'm a Stanford graduate looking for a short-term room and your townhouse master suite looks ideal — the en-suite bathroom, garage parking and the fact that you list no minimum term are exactly what I need. I'd start September 29, initially one month with the option to extend month to month. My budget is $1,500 all in, so I wanted to ask directly whether $1,600 has any flexibility for a tenant who pays the full month upfront and is easy to deal with. If the price is firm I understand. Could you also confirm the room is available from the 29th and that the bathroom and a parking space are mine alone? I can tour in person or by video any day this week.",
+   "inquiry_note": "Send second — best backup, and the ask is the price"
   },
   {
    "id": "sr-102027784",
@@ -120,7 +124,9 @@
    "checked": "September 27, 2026",
    "contact": "Message through the SpareRoom ad. No message has been sent.",
    "city": "Foster City",
-   "region": "peninsula"
+   "region": "peninsula",
+   "inquiry": "Hi, I'm a Stanford graduate looking for short-term housing and your Foster City room looks excellent — a brand-new private bath and garage parking are exactly what I'm after. Your ad lists a three-month minimum but says short rentals are considered, so I wanted to ask directly: would one month starting September 29 work, with the option to extend month to month if we both want to continue? I can pay the month upfront. Could you also confirm the $1,600 includes utilities and parking, and what the deposit and notice period are? Happy to tour in person or by video any day this week.",
+   "inquiry_note": "Send third — the ask is the three-month minimum"
   },
   {
    "id": "ff-949142_1",
@@ -160,7 +166,9 @@
    "checked": "September 25, 2026",
    "contact": "Advertised reply time: typically within an hour. Open the listing to message the host. No message has been sent.",
    "city": "El Sobrante",
-   "region": "east"
+   "region": "east",
+   "inquiry": "Hi, I'm a Stanford graduate looking for a one-month stay with the option to extend monthly, and your en-suite room is the closest match I've found — private bathroom, parking on site and a one-month minimum. Your calendar shows September 30, and I need to move in on September 29. Is there any chance of starting one day earlier? If the 30th is fixed I can likely make that work, so please let me know either way. Could you also confirm the total monthly cost including utilities and parking, any cleaning or booking fees, and the notice required to leave? I'd love to arrange a tour.",
+   "inquiry_note": "Send fourth — the ask is one day"
   },
   {
    "id": "ff-415061_1",
@@ -200,7 +208,9 @@
    "checked": "September 25, 2026",
    "contact": "Open the listing to message the host. No message has been sent.",
    "city": "Hayward",
-   "region": "east"
+   "region": "east",
+   "inquiry": "Hi, I'm a Stanford graduate looking for short-term housing near both San Francisco and Stanford, and your room is the best-placed one I've found — roughly 25 miles to each. The private bathroom and private entrance are exactly what I need. Your listing shows a 60-day minimum, and I'm looking to start September 29 for one month with the option to extend month to month. Would you consider a one-month stay, or a month-to-month arrangement after an initial month? I can pay upfront. Could you also confirm whether a parking space comes with the room, and what the total monthly cost and any fees are? Happy to tour any time.",
+   "inquiry_note": "Send fifth — the ask is the 60-day minimum"
   },
   {
    "id": "su-130109474",
@@ -240,7 +250,9 @@
    "checked": "September 25, 2026 (link re-verified)",
    "contact": "Re-checked September 25: post is live with 48 views and 8 replies, so expect competition. Message through the post’s reply form. No message has been sent.",
    "city": "Palo Alto",
-   "region": "peninsula"
+   "region": "peninsula",
+   "inquiry": "Hi, I'm a Stanford graduate looking for a room from September 29, initially one month with the option to extend month to month. Your listing shows an October 1 start — would September 29 be possible, or is the room occupied until then? I also wanted to check two things the post doesn't mention: whether the bathroom is mine alone and whether parking for one car is included. If you'd prefer a longer-term tenant I completely understand, but I'm happy to extend monthly if it works out for both of us. Could you confirm the total monthly cost and the deposit? Thank you.",
+   "inquiry_note": "SUpost — start date and parking are both open"
   },
   {
    "id": "su-130107280",
@@ -280,7 +292,9 @@
    "checked": "September 25, 2026 (link re-verified)",
    "contact": "Re-checked September 25: post is live with 114 views, 6 replies and 5 favourites. The post lists a landlord phone number for tours. No message has been sent.",
    "city": "Palo Alto",
-   "region": "peninsula"
+   "region": "peninsula",
+   "inquiry": "Hi, I'm a Stanford graduate looking for a furnished room from September 29, initially one month with the option to extend month to month. Your post lists an October 2 start — is there any chance of moving in on the 29th, or is the room occupied until then? Could you also confirm whether the bathroom is for my use only, whether parking for one car is included, and what the total monthly cost and deposit are? I'm happy to arrange a tour in person or by video. Thank you.",
+   "inquiry_note": "SUpost — start date and parking are both open"
   },
   {
    "id": "ff-933335_1",
@@ -320,7 +334,9 @@
    "checked": "September 25, 2026",
    "contact": "Open the listing to message the host. No message has been sent.",
    "city": "Alameda",
-   "region": "east"
+   "region": "east",
+   "inquiry": "Hi, I'm a Stanford graduate looking for a one-month stay starting September 29, 2026, with the option to extend month to month. I came across your condo room and wanted to check whether it's still available, since the calendar on the listing hasn't been updated recently. If it is, could you confirm the room has a private bathroom, whether parking for one car is included, and the total monthly cost with utilities and any fees? If it's no longer available, no problem at all — just let me know so I can stop checking. Thank you.",
+   "inquiry_note": "Verify first — the calendar is from November 2025"
   },
   {
    "id": "ff-933277_1",
@@ -360,7 +376,9 @@
    "checked": "September 25, 2026",
    "contact": "Open the listing to message the host. No message has been sent.",
    "city": "Berkeley",
-   "region": "east"
+   "region": "east",
+   "inquiry": "Hi, I'm a Stanford graduate looking for a one-month stay starting September 29, 2026, with the option to extend month to month. Your North Berkeley room looks lovely and I wanted to check whether it's still available, since the listing calendar hasn't been updated in a while. If it is, could you confirm the bathroom is private to the room, whether parking is included, and the total monthly cost including utilities and any fees? If it's gone, no problem — just let me know. Thank you.",
+   "inquiry_note": "Verify first — the calendar is from January 2026"
   },
   {
    "id": "ff-306547_1",
@@ -400,7 +418,9 @@
    "checked": "September 25, 2026 (link re-verified)",
    "contact": "Advertised reply time: typically within a week — slow for a September 29 start. No message has been sent.",
    "city": "Novato",
-   "region": "north"
+   "region": "north",
+   "inquiry": "Hi, I'm a Stanford graduate looking for a one-month stay starting September 29, 2026, with the option to extend month to month. I wanted to check whether your furnished room is still available, as the listing calendar hasn't been updated recently. If it is, could you confirm the private bathroom and onsite parking are still part of the room, and the total monthly cost including utilities and any fees? Thank you.",
+   "inquiry_note": "Verify first — the calendar is from December 2025, and it is the furthest lead still standing"
   },
   {
    "id": "sr-103156861",

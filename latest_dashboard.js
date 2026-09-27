@@ -76,11 +76,12 @@
         feedback(on ? 'Marked as reached out. No message sent.' : 'Reached-out mark removed.');
       } catch (_) { feedback('Updated for this visit; browser storage is unavailable.'); }
     });
-    card.querySelector('.copy-inquiry').addEventListener('click', async () => {
-      const inquiry = document.getElementById('inquiry');
+    const copyButton = card.querySelector('.copy-inquiry');
+    if (copyButton) copyButton.addEventListener('click', async () => {
+      const inquiry = card.querySelector('.draft-text') || document.getElementById('inquiry');
       try {
         await navigator.clipboard.writeText(inquiry.textContent);
-        feedback('Inquiry copied. Review it before sending.');
+        feedback('Message copied. Read it before you send it.');
       } catch (_) {
         inquiry.closest('details').open = true;
         const range = document.createRange();
@@ -89,7 +90,7 @@
         selection.removeAllRanges();
         selection.addRange(range);
         inquiry.scrollIntoView({block: 'center'});
-        feedback('Inquiry selected; copy it with your keyboard.');
+        feedback('Message selected; copy it with your keyboard.');
       }
     });
   }

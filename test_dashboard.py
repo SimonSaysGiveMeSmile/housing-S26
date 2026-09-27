@@ -151,8 +151,23 @@ check('All bathrooms advertised as private' in latest,
       "the list heading still states the private-bathroom rule the cards are checked against")
 
 # No lead may claim a host has confirmed the requested date.
-check(all('no message has been sent' in item['contact'].lower() for item in leads),
-      "every card still states that no message has been sent")
+# Outreach is outward-facing: a card may only claim a message was sent if it is logged as sent.
+_sent_ids = set(_json.load(open(os.path.join(d.ROOT, 'manual_contacts.json'))))
+_claims_sent = [i['id'] for i in leads if 'no message has been sent' not in i['contact'].lower()]
+check(all(i in _sent_ids for i in _claims_sent),
+      f"only logged-as-sent cards claim an outreach message (unlogged claims: "
+      f"{[i for i in _claims_sent if i not in _sent_ids]})")
+check(all('no message has been sent' in i['contact'].lower()
+          for i in leads if i['id'] not in _sent_ids),
+      "every card that has not been contacted still states that no message has been sent")
+
+# Every contactable lead carries a draft; the two that cannot be contacted carry none.
+_no_draft = [i['id'] for i in leads if i['group'] != 'waitlist' and not i.get('inquiry')]
+check(not _no_draft, f"every contactable lead has a drafted message (missing: {_no_draft})")
+_bad_draft = [i['id'] for i in leads if i['group'] == 'waitlist' and i.get('inquiry')]
+check(not _bad_draft,
+      f"no draft is offered for a lead whose advertiser is not accepting applications "
+      f"(offenders: {_bad_draft})")
 photos = [photo for item in leads for photo in item.get("photos", [])]
 check(all(os.path.isfile(os.path.join(d.ROOT, "maps", photo["file"])) for photo in photos),
       "all listing photos exist for the static site build")

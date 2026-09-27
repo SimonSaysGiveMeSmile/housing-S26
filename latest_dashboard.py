@@ -80,6 +80,7 @@ def render(css, contacted_ids, placeholder_svg):
    <span class="pill">{furnishing}</span><span class="pill">{esc(item['parking_label'])}</span></div>
   <ul class="facts">{fact_html}</ul>
   <p class="confirmation"><strong>Confirm:</strong> {esc(item['confirm'])}</p>
+  {f'''<details class="draft" open><summary>Message to send &middot; <em>{esc(item["inquiry_note"])}</em></summary><p class="draft-text">{esc(item["inquiry"])}</p></details>''' if item.get('inquiry') else ''}
   <details class="listing-details"><summary>Dates, deposit and house rules</summary>
    <dl><dt>Advertised timing</dt><dd>{esc(item['availability'])}</dd>
    <dt>Lease</dt><dd>{esc(item['term'])}</dd><dt>Upfront cost</dt><dd>{esc(item['deposit'])}</dd>
@@ -92,7 +93,7 @@ def render(css, contacted_ids, placeholder_svg):
   <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query={quote(item['area'] + ', California')}" target="_blank" rel="noopener noreferrer">Explore approximate area ↗</a>
   <a class="map-link" href="{esc(route_url)}" target="_blank" rel="noopener noreferrer">Drive to SF · check traffic ↗</a>
   <a class="map-link" href="{esc(campus_route_url)}" target="_blank" rel="noopener noreferrer">Drive to Stanford · check traffic ↗</a>
-  <button class="copy-inquiry reach-toggle" type="button">Copy inquiry</button>
+  {'<button class="copy-inquiry reach-toggle" type="button">Copy the message below</button>' if item.get('inquiry') else ''}
   <button class="mark-contact reach-toggle{' on' if contacted else ''}" type="button" aria-pressed="{str(contacted).lower()}">{'✓ Reached out' if contacted else 'Mark as reached out'}</button>
   <p class="contact-help">{esc(contact)}</p>
  </aside>
@@ -151,6 +152,9 @@ select{{width:100%;padding:8px;border:1px solid #cbd5e1;border-radius:6px;backgr
 .latest-card .contact-box{{height:auto;overflow:visible;align-self:start;padding:12px;gap:8px}}
 .latest-card .btn{{flex:initial}}.map-link{{font-size:12px;text-align:center}}
 .contact-help{{font-size:11px;line-height:1.5;color:#64748b;margin-top:2px}}
+.draft{{margin-top:12px;border:1px solid #c7d2fe;background:#eef2ff;border-radius:8px;padding:10px 12px;font-size:12px}}
+.draft summary{{color:#3730a3;cursor:pointer;font-weight:700}}.draft summary em{{font-weight:500;font-style:normal;color:#4f46e5}}
+.draft-text{{margin:8px 0 0;color:#1e1b4b;font-size:13px;line-height:1.55;white-space:pre-wrap}}
 .listing-details{{font-size:12px;margin-top:12px}}.listing-details summary{{color:#2563eb;cursor:pointer;font-weight:600}}
 dl{{display:grid;grid-template-columns:120px 1fr;gap:6px 12px;margin-top:10px}}dt{{color:#64748b}}dd{{margin:0;color:#334155}}
 .footer-note{{font-size:12px;color:#64748b;line-height:1.7;margin-top:22px}}
