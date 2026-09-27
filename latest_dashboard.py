@@ -36,7 +36,10 @@ def render(css, contacted_ids, placeholder_svg):
         contacted = item["id"] in contacted_ids
         distance = distances['cities'][item['city']]
         miles = distance['driving_miles']
+        campus_miles = distance['stanford_miles']
+        balanced_miles = distance['balanced_miles']
         route_url = f"https://www.google.com/maps/dir/?api=1&origin={distance['lat']},{distance['lon']}&destination={distances['destination']['lat']},{distances['destination']['lon']}&travelmode=driving"
+        campus_route_url = f"https://www.google.com/maps/dir/?api=1&origin={distance['lat']},{distance['lon']}&destination={distances['destination_stanford']['lat']},{distances['destination_stanford']['lon']}&travelmode=driving"
         extra = "+" if item["extra"] else ""
         daily = f'{item["rent"] / 30:.2f}'.rstrip("0").rstrip(".")
         furnishing = {"yes": "Furnished", "no": "Unfurnished", "unknown": "Furnishing unconfirmed"}[item["furnished"]]
@@ -60,7 +63,7 @@ def render(css, contacted_ids, placeholder_svg):
         cards.append(f'''
 <article id="{esc(item['id'])}" class="card latest-card{' contacted' if contacted else ''}"
  data-id="{esc(item['id'])}" data-rank="{rank}" data-price="{item['rent']}"
- data-distance="{miles}" data-region="{item['region']}"
+ data-distance="{miles}" data-stanford="{campus_miles}" data-balanced="{balanced_miles}" data-region="{item['region']}"
  data-group="{item['group']}" data-source="{item['source']}" data-parking="{item['parking']}" data-furnished="{item['furnished']}"
  data-contacted="{int(contacted)}" data-text="{esc(' '.join(str(v) for v in item.values()).lower())}">
  {gallery}
@@ -68,7 +71,8 @@ def render(css, contacted_ids, placeholder_svg):
   <div class="card-head"><h2 class="card-title">{esc(item['title'])}</h2>
    <div class="price">${item['rent']:,}{extra}<small>/month · ${daily}{extra}/day</small></div></div>
   <p class="area">{esc(item['area'])}</p>
-  <p class="distance-line"><strong>≈ {miles:.0f} driving miles to SF</strong> · {regions[item['region']]}<small>From {esc(item['city'])} city center to the Ferry Building</small></p>
+  <p class="distance-line"><strong>≈ {miles:.0f} mi to SF</strong> · <strong>≈ {campus_miles:.0f} mi to Stanford</strong> · {regions[item['region']]}
+   <small>Worst-case one-way drive: <b>{balanced_miles:.0f} miles</b>. From {esc(item['city'])} city center to the Ferry Building and to campus.</small></p>
   <div class="tags"><span class="pill source-label">{sources[item['source']]}</span><span class="status {'go' if item['group'] in ('monthly', 'one_month') else 'check'}">{esc(item.get('timing_label', labels[item['group']]))}</span>
    <span class="pill">{furnishing}</span><span class="pill">{esc(item['parking_label'])}</span></div>
   <ul class="facts">{fact_html}</ul>
@@ -84,6 +88,7 @@ def render(css, contacted_ids, placeholder_svg):
   <a class="btn" href="{esc(item['url'])}" target="_blank" rel="noopener noreferrer">Open listing ↗</a>
   <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query={quote(item['area'] + ', California')}" target="_blank" rel="noopener noreferrer">Explore approximate area ↗</a>
   <a class="map-link" href="{esc(route_url)}" target="_blank" rel="noopener noreferrer">Drive to SF · check traffic ↗</a>
+  <a class="map-link" href="{esc(campus_route_url)}" target="_blank" rel="noopener noreferrer">Drive to Stanford · check traffic ↗</a>
   <button class="copy-inquiry reach-toggle" type="button">Copy inquiry</button>
   <button class="mark-contact reach-toggle{' on' if contacted else ''}" type="button" aria-pressed="{str(contacted).lower()}">{'✓ Reached out' if contacted else 'Mark as reached out'}</button>
   <p class="contact-help">{esc(contact)}</p>
@@ -153,7 +158,7 @@ dl{{display:grid;grid-template-columns:120px 1fr;gap:6px 12px;margin-top:10px}}d
 </style></head><body>
 <header class="masthead"><div><p class="eyebrow">Your housing search · Fall 2026</p><h1>Bay Area monthly stays</h1>
 <p class="search-summary">From <strong>{data['move_in']}</strong> · preferably below <strong>$50/day</strong> · private bathroom + parking</p>
-<p class="scope-note">Residential areas near shops. Private rooms in shared homes included; whole-place preference still to confirm.</p></div>
+<p class="scope-note">Residential areas near shops. Private rooms in shared homes included. Ranked to work for <strong>both</strong> San Francisco and Stanford — the headline figure is the worse of the two one-way drives.</p></div>
 </header>
 <div class="status-panel"><div class="status-row">
 <div class="stat"><div class="stat-num">{count}</div><div class="stat-lbl">Researched leads</div></div>
@@ -161,9 +166,9 @@ dl{{display:grid;grid-template-columns:120px 1fr;gap:6px 12px;margin-top:10px}}d
 <div class="stat"><div class="stat-num">${lowest:,}</div><div class="stat-lbl">Lowest advertised monthly cost<br>lease and area need checking</div></div>
 <div class="stat"><div class="stat-num warn">0</div><div class="stat-lbl">September 29 dates<br>confirmed by a host</div></div>
 </div></div>
-<p class="research-note"><strong>SUpost · Furnished Finder:</strong> every card was re-opened on September 25 and each platform page still resolves. The closest complete match is now <strong>El Sobrante at $1,475 including utilities</strong> — private en-suite bathroom, parking on the property, a one-month minimum and a calendar updated September 10, 2026 — roughly {distances['cities']['El Sobrante']['driving_miles']:.0f} driving miles from SF rather than the {distances['cities']['Fairfield']['driving_miles']:.0f}+ miles of the Solano rooms. Its advertised start is September 30, one night after the requested date. <strong>Research: {data['researched']}.</strong> These are advertised leads; availability has not been confirmed with hosts.</p>
-<section class="geography" id="north-bay"><h2>Closer to San Francisco — including the North Bay</h2>
-<p>Listings are sorted by approximate driving distance to SF. <strong>Berkeley ≈ {distances['cities']['Berkeley']['driving_miles']:.0f} miles</strong>, <strong>Alameda ≈ {distances['cities']['Alameda']['driving_miles']:.0f} miles</strong>, <strong>El Sobrante ≈ {distances['cities']['El Sobrante']['driving_miles']:.0f} miles</strong> and <strong>Palo Alto ≈ {distances['cities']['Palo Alto']['driving_miles']:.0f} miles</strong>; dates and lease terms still need checking. The September 25 East Bay pass added the four closest-in cards on the board.</p>
+<p class="research-note"><strong>Measured against both anchors on September 26.</strong> <strong>El Sobrante at $1,475</strong> is still the only lead meeting every requirement — en-suite bathroom, parking on site, one-month minimum, calendar updated September 10, 2026, replies within the hour — but at {distances['cities']['El Sobrante']['stanford_miles']:.0f} miles from campus it is a San Francisco answer, not a balanced one. The best-placed card is now <strong>Hayward at $1,250</strong>: {distances['cities']['Hayward']['driving_miles']:.0f} miles to SF and {distances['cities']['Hayward']['stanford_miles']:.0f} to Stanford, the only lead under 30 miles from both — its one obstacle is a 60-day minimum. The Solano rooms are the worst-placed inventory on the board: Fairfield is {distances['cities']['Fairfield']['balanced_miles']:.0f} miles and Vacaville {distances['cities']['Vacaville']['balanced_miles']:.0f} miles worst-case. <strong>Research: {data['researched']}.</strong> These are advertised leads; availability has not been confirmed with hosts.</p>
+<section class="geography" id="north-bay"><h2>Two anchors: San Francisco and Stanford</h2>
+<p>Every card now carries both drives, and the default ranking uses the <strong>worse</strong> of the two, so a low number means somewhere that is not bad to either. Nothing is genuinely close to both: the two anchors are about {distances['cities']['Palo Alto']['driving_miles']:.0f} miles apart, so a place near campus is far from the city and the reverse. <strong>Millbrae is the best-balanced town in the region at {distances['cities']['Millbrae']['balanced_miles']:.0f} miles worst-case</strong> — it is the one stop served by both BART and Caltrain — but no lead on an approved platform has turned up there yet, so it stays a gap worth searching. Among the current cards <strong>Hayward is the only one under 30 miles from both</strong> ({distances['cities']['Hayward']['driving_miles']:.0f} to SF, {distances['cities']['Hayward']['stanford_miles']:.0f} to campus). The two Palo Alto rooms sit {distances['cities']['Palo Alto']['stanford_miles']:.1f} miles from campus but {distances['cities']['Palo Alto']['driving_miles']:.0f} from SF.</p>
 <p>North of SF: the Novato $1,200 Furnished Finder room advertises a one-month minimum, private bathroom and onsite parking. Its December 2025 calendar is old, so it is hidden by default. No current complete match in Marin or Sonoma was verified in this search.</p>
 <button id="north" class="fb-preset" type="button">North of SF + unverified backups</button>
 <p class="scope-note">Distances use city centers → SF Ferry Building, not exact property addresses. They are approximate road distances, not live commute times. “Drive to SF” opens a route to check traffic. <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a> · <a href="https://project-osrm.org/" target="_blank" rel="noopener noreferrer">OSRM routing</a>.</p></section>
@@ -184,7 +189,7 @@ dl{{display:grid;grid-template-columns:120px 1fr;gap:6px 12px;margin-top:10px}}d
 <label>Lease / timing<select id="term"><option value="start">September 29 leads · confirm dates</option><option value="monthly">One-month / monthly advertised</option><option value="confirm">Lease needs confirmation</option><option value="active">Shortlist + later-start backups</option><option value="later">Later-start backups</option><option value="review">Include older-calendar backups</option></select></label>
 <label>Parking<select id="parking"><option value="all">All parking types</option><option value="offstreet">Driveway / off-street advertised</option><option value="street">Street only</option></select></label>
 <label>Furnishing<select id="furnished"><option value="all">Any</option><option value="yes">Furnished</option><option value="no">Unfurnished</option></select></label>
-<label>Sort<select id="sort"><option value="distance">Closest to San Francisco</option><option value="recommended">Recommended order</option><option value="price">Lowest price first</option></select></label>
+<label>Sort<select id="sort"><option value="balanced">Balanced · best for both</option><option value="distance">Closest to San Francisco</option><option value="stanford">Closest to Stanford</option><option value="recommended">Recommended order</option><option value="price">Lowest price first</option></select></label>
 </div><p class="scope-note">Price filters use known recurring monthly charges. “+” means extra charges are unconfirmed. One-time fees and deposits appear under each listing’s details. A one-month minimum does not guarantee month-to-month renewal.</p></div>
 <main><div class="list-heading"><h2>The latest shortlist</h2><p>All bathrooms advertised as private</p></div>
 <div id="listings">{''.join(cards)}</div>

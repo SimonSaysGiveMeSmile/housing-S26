@@ -118,6 +118,16 @@ with open(os.path.join(d.ROOT, 'distance_estimates.json')) as _f:
 missing_city = sorted({item['city'] for item in leads} - set(_dist))
 check(not missing_city, f"every lead's city has a measured SF distance (missing: {missing_city})")
 
+# Both anchors must be measured for every city, or the card render raises KeyError.
+_missing_anchor = sorted(c for c in {item['city'] for item in leads}
+                         if not {'driving_miles', 'stanford_miles', 'balanced_miles'} <= set(_dist.get(c, {})))
+check(not _missing_anchor, f"every city has SF + Stanford + balanced distances (missing: {_missing_anchor})")
+check(all(_dist[c]['balanced_miles'] == max(_dist[c]['driving_miles'], _dist[c]['stanford_miles'])
+          for c in {item['city'] for item in leads}),
+      "balanced distance is the worse of the two drives, never an average")
+check('Closest to Stanford' in latest and 'Balanced' in latest,
+      "the board offers sorting by Stanford and by the balanced figure")
+
 # No lead may claim a host has confirmed the requested date.
 check(all('no message has been sent' in item['contact'].lower() for item in leads),
       "every card still states that no message has been sent")

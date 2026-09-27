@@ -12,7 +12,7 @@
   function filter() {
     const q = controls.search.value.trim().toLowerCase();
     let shown = 0;
-    const sortKey = {price: 'price', distance: 'distance', recommended: 'rank'}[controls.sort.value];
+    const sortKey = {price: 'price', distance: 'distance', stanford: 'stanford', balanced: 'balanced', recommended: 'rank'}[controls.sort.value];
     const sorted = [...cards].sort((a, b) =>
       Number(a.dataset[sortKey]) - Number(b.dataset[sortKey]) || Number(a.dataset.rank) - Number(b.dataset.rank));
     for (const card of sorted) {
@@ -46,7 +46,7 @@
     controls.term.value = 'start';
     controls.parking.value = 'all';
     controls.furnished.value = 'all';
-    controls.sort.value = 'distance';
+    controls.sort.value = 'balanced';
   }
 
   let feedbackTimer;
