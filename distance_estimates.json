@@ -396,6 +396,42 @@
    "stanford_miles": 33.6,
    "stanford_minutes": 49,
    "balanced_miles": 33.6
+  },
+  "Sacramento": {
+   "lat": 38.5810606,
+   "lon": -121.493895,
+   "display_name": "Sacramento, Sacramento County, California, United States",
+   "source_url": "https://nominatim.openstreetmap.org/search?q=Sacramento%2C%20California%2C%20United%20States&format=jsonv2&limit=1",
+   "driving_miles": 85.9,
+   "model_minutes": 105,
+   "meters": 138313.1,
+   "stanford_miles": 115.9,
+   "stanford_minutes": 147,
+   "balanced_miles": 115.9
+  },
+  "Santa Rosa": {
+   "lat": 38.4404925,
+   "lon": -122.7141049,
+   "display_name": "Santa Rosa, Sonoma County, California, United States",
+   "source_url": "https://nominatim.openstreetmap.org/search?q=Santa%20Rosa%2C%20Sonoma%20County%2C%20California%2C%20United%20States&format=jsonv2&limit=1",
+   "driving_miles": 55.1,
+   "model_minutes": 76,
+   "meters": 88691.3,
+   "stanford_miles": 87.0,
+   "stanford_minutes": 119,
+   "balanced_miles": 87.0
+  },
+  "Stockton": {
+   "lat": 37.9577016,
+   "lon": -121.290779,
+   "display_name": "Stockton, San Joaquin County, California, United States",
+   "source_url": "https://nominatim.openstreetmap.org/search?q=Stockton%2C%20San%20Joaquin%20County%2C%20California%2C%20United%20States&format=jsonv2&limit=1",
+   "driving_miles": 81.5,
+   "model_minutes": 99,
+   "meters": 131226.7,
+   "stanford_miles": 79.6,
+   "stanford_minutes": 105,
+   "balanced_miles": 81.5
   }
  },
  "destination_stanford": {

@@ -99,8 +99,13 @@ _long = [i['id'] for i in leads if i['group'] in ('monthly', 'one_month')
 check(not _long, f"no long-minimum lease is presented as a monthly option (offenders: {_long})")
 check("availability has not been confirmed with hosts" in latest,
       "advertised leads are not represented as host-confirmed availability")
-check(not any(item['city'] in ('Fairfield', 'Vacaville') for item in leads),
-      "the Solano leads dropped for breaking the 1.5-hour ceiling have not crept back")
+# Solano came back on September 28 with the wider geography; every restored lead must say so,
+# so nothing silently reappears without an explanation of why the rule changed.
+_restored = [i['id'] for i in leads if i['city'] in ('Fairfield', 'Vacaville')]
+check(all('wider' in next(x for x in leads if x['id'] == r)['outreach_note'].lower()
+          or 'widened' in next(x for x in leads if x['id'] == r)['outreach_note'].lower()
+          for r in _restored),
+      f"each restored Solano lead records why it came back (restored: {len(_restored)})")
 
 # A lead whose page stops being a rental offer must leave the inventory, not linger.
 check(not any(item['id'] == 'zillow-15658964' for item in leads),
@@ -135,11 +140,13 @@ check(all(_dist[c]['balanced_miles'] == max(_dist[c]['driving_miles'], _dist[c][
 check('Closest to Stanford' in latest and 'Balanced' in latest,
       "the board offers sorting by Stanford and by the balanced figure")
 
-# The user's ceiling: nothing whose worse-anchor drive exceeds 1.5 hours stays on the board.
+# The ceiling widened on September 28: the search is for a job-hunting base near the Bay Area,
+# not a daily commute, so the limit is 2.5 hours on the worse anchor rather than 1.5.
+CEILING_MINUTES = 150
 _far = sorted({f"{item['city']} ({max(_dist[item['city']]['model_minutes'], _dist[item['city']]['stanford_minutes'])} min)"
                for item in leads
-               if max(_dist[item['city']]['model_minutes'], _dist[item['city']]['stanford_minutes']) > 90})
-check(not _far, f"no lead is over 1.5 hours from both SF and Stanford (offenders: {_far})")
+               if max(_dist[item['city']]['model_minutes'], _dist[item['city']]['stanford_minutes']) > CEILING_MINUTES})
+check(not _far, f"no lead is more than 2.5 hours from both SF and Stanford (offenders: {_far})")
 
 # Any bathroom that is not fully private must say so in the card title, not just the fine print,
 # because the list heading now promises exactly that.

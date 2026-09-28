@@ -585,6 +585,206 @@
    "inquiry_note": "Call first — (650) 379-0827 — this is the only lead that could house you tomorrow",
    "outreach": "ready",
    "outreach_note": "Not yet contacted. Has a phone number — (650) 379-0827 — so this is the fastest lead to close."
+  },
+  {
+   "id": "ff-848526_1",
+   "source": "furnishedfinder",
+   "title": "Fairfield junior suite · driveway parking",
+   "area": "Summerwalk / north of Clay Bank, Fairfield",
+   "rent": 1500,
+   "extra": false,
+   "group": "one_month",
+   "parking": "driveway",
+   "parking_label": "Driveway + street parking advertised",
+   "furnished": "yes",
+   "availability": "Advertised available; calendar updated July 28, 2026. September 29 unconfirmed.",
+   "deposit": "$1,000 refundable deposit; ask whether any additional fees apply.",
+   "term": "One-month / 30-day minimum; monthly renewal needs confirmation.",
+   "neighborhood": "Residential Summerwalk area, a few miles from shopping and dining; listing mentions Solano Mall.",
+   "included": "$1,400 rent + listed $100 utilities = $1,500 budgeted monthly. Furnished queen room, kitchen and laundry.",
+   "bath": "Private bathroom in a second-floor junior suite.",
+   "conditions": "Single occupancy, one vehicle, no pets or smoking. Stairs to bedroom.",
+   "confirm": "September 29, driveway assignment, whether the $100 utility charge is recurring and the complete monthly total.",
+   "url": "https://www.furnishedfinder.com/property/848526_1",
+   "photos": [
+    {
+     "file": "september-ff-848526_1-1.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/848526/1/848526_1_62343762-full.jpeg"
+    },
+    {
+     "file": "september-ff-848526_1-2.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/848526/1/848526_1_62343759-full.jpeg"
+    },
+    {
+     "file": "september-ff-848526_1-3.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/848526/1/848526_1_62343760-full.jpeg"
+    }
+   ],
+   "checked": "September 28, 2026 (restored)",
+   "contact": "Advertised reply time: typically within an hour. Open the listing to message the host. No message has been sent.",
+   "city": "Fairfield",
+   "region": "solano",
+   "outreach": "blocked",
+   "outreach_note": "Furnished Finder is Cloudflare-blocking this machine. Send from your own browser. Restored September 28 when the search widened beyond a 1.5-hour commute. Fairfield is 100 minutes to Stanford, so this is a job-hunting base rather than a commute.",
+   "inquiry_note": "Fairfield — junior suite, the best-appointed of the Solano rooms",
+   "inquiry": "Hi, I'm a Stanford graduate relocating to the Bay Area and looking for a base while I job-hunt, so I don't need a short commute — I need somewhere comfortable and month-to-month. Is your junior suite available from September 29, initially for one month with the option to extend monthly? Could you confirm the private bathroom, that a parking space comes with the room, the total monthly cost including utilities, and any cleaning or booking fees? I can tour by video today or tomorrow."
+  },
+  {
+   "id": "ff-669591_1",
+   "source": "furnishedfinder",
+   "title": "Fairfield furnished room · electricity extra",
+   "area": "Fairfield, near NorthBay Medical Center",
+   "rent": 1200,
+   "extra": true,
+   "group": "one_month",
+   "parking": "offstreet",
+   "parking_label": "Free parking on property advertised",
+   "furnished": "yes",
+   "availability": "Advertised available; calendar updated August 2, 2026. September 29 unconfirmed.",
+   "deposit": "$1,200 refundable deposit + $150 cleaning fee; first month $1,350 plus electricity, excluding deposit.",
+   "term": "One-month / 30-day minimum; confirm renewal terms.",
+   "neighborhood": "Advertiser describes a cul-de-sac setting with a short drive to shops, restaurants and parks.",
+   "included": "Queen bed, kitchen, laundry, water, trash and Wi-Fi. Description says electricity is split despite the utilities-included badge.",
+   "bath": "Hallway bathroom advertised private; caption says primary use and not shared with other tenants. Confirm guests will not use it.",
+   "conditions": "Advertiser seeks female tenants. No smoking or pets.",
+   "confirm": "Tenant eligibility, exclusive bathroom use, electricity estimate, parking and September 29.",
+   "url": "https://www.furnishedfinder.com/property/669591_1",
+   "photos": [
+    {
+     "file": "september-ff-669591_1-1.png",
+     "source": "https://www.furnishedfinder.com/_pdp_/669591/1/669591_1_55439154-full.png"
+    },
+    {
+     "file": "september-ff-669591_1-2.png",
+     "source": "https://www.furnishedfinder.com/_pdp_/669591/1/669591_1_55439148-full.png"
+    },
+    {
+     "file": "september-ff-669591_1-3.png",
+     "source": "https://www.furnishedfinder.com/_pdp_/669591/1/669591_1_55439149-full.png"
+    }
+   ],
+   "checked": "September 28, 2026 (restored)",
+   "contact": "Advertised reply time: typically within an hour; the host now has 2 reviews. Open the listing to message the host. No message has been sent.",
+   "city": "Fairfield",
+   "region": "solano",
+   "outreach": "blocked",
+   "outreach_note": "Furnished Finder is Cloudflare-blocking this machine. Send from your own browser. Restored September 28 with the wider geography. Note the bathroom caption contradicts the listing — confirm it is genuinely private.",
+   "inquiry_note": "Fairfield $1,200 — confirm the bathroom, the ad contradicts itself",
+   "inquiry": "Hi, I'm a Stanford graduate looking for a month-to-month room from September 29 while I job-hunt. Before anything else, could you confirm the bathroom arrangement? The listing describes a hallway bathroom as private, and I want to be sure it is not shared with anyone else. If it is genuinely mine alone, is the room available from September 29 for one month with the option to extend? Please also confirm parking, the total monthly cost with utilities, and any fees."
+  },
+  {
+   "id": "ff-915271_1",
+   "source": "furnishedfinder",
+   "title": "Fairfield furnished private bed + bath · older calendar",
+   "area": "Fairfield, Solano County",
+   "rent": 1300,
+   "extra": false,
+   "group": "unverified",
+   "timing_label": "Older calendar · October 2025 · verify first",
+   "parking": "street",
+   "parking_label": "Street parking in description",
+   "furnished": "yes",
+   "availability": "Page says available, but calendar was last updated October 6, 2025. Do not assume current vacancy.",
+   "deposit": "$500 refundable deposit + $50 cleaning fee; first month $1,350, excluding deposit.",
+   "term": "Advertised one-month / 30-day minimum; verify current terms.",
+   "neighborhood": "Advertiser describes a quiet residential neighborhood; cross streets and nearby shops are unconfirmed.",
+   "included": "Utilities, Wi-Fi, kitchen, laundry and twin bed.",
+   "bath": "Private bathroom advertised.",
+   "conditions": "Single occupancy and one vehicle; no pets or smoking.",
+   "confirm": "Whether still offered, September 29, renewal terms and parking. Description says street parking although the amenity badge says on premises.",
+   "url": "https://www.furnishedfinder.com/property/915271_1",
+   "photos": [
+    {
+     "file": "september-ff-915271_1-1.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/915271/1/915271_1_61005637-full.jpeg"
+    },
+    {
+     "file": "september-ff-915271_1-2.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/915271/1/915271_1_60813062-full.jpeg"
+    }
+   ],
+   "checked": "September 28, 2026 (restored)",
+   "contact": "Advertised reply time: more than a week — too slow to rely on for a September 29 start. No message has been sent.",
+   "city": "Fairfield",
+   "region": "solano",
+   "outreach": "blocked",
+   "outreach_note": "Furnished Finder is Cloudflare-blocking this machine. Send from your own browser. Restored September 28 with the wider geography. Calendar is stale; confirm it still exists before anything else.",
+   "inquiry_note": "Fairfield $1,300 — stale calendar, ask if it still exists",
+   "inquiry": "Hi, I'm a Stanford graduate looking for a month-to-month room from September 29, 2026. I wanted to check whether your room is still available, as the listing calendar has not been updated recently. If it is, could you confirm the private bathroom, whether parking is included, and the total monthly cost with utilities and any fees? If it has gone, no problem — just let me know."
+  },
+  {
+   "id": "ff-224172_1",
+   "source": "furnishedfinder",
+   "title": "Vacaville furnished room · one-month minimum",
+   "area": "Vacaville, Solano County",
+   "rent": 1200,
+   "extra": false,
+   "group": "one_month",
+   "parking": "offstreet",
+   "parking_label": "Free parking on property advertised",
+   "furnished": "yes",
+   "availability": "Advertised available; calendar updated August 19, 2026. September 29 needs host confirmation.",
+   "deposit": "$450 refundable deposit + $125 cleaning fee. First 30 days including cleaning: $1,325 ($44.17/day), excluding refundable deposit.",
+   "term": "One-month / 30-day minimum; confirm monthly extensions and notice.",
+   "neighborhood": "Advertiser describes a quiet residential subdivision in central Vacaville. Ask for cross streets and distance to groceries.",
+   "included": "Utilities, Wi-Fi, kitchen and laundry access; queen bed, pool and hot tub.",
+   "bath": "Private bathroom advertised.",
+   "conditions": "One occupant and one vehicle. No smoking or tenant pets; pets live on the property.",
+   "confirm": "September 29 availability, a reserved parking space, bathroom exclusivity and renewal terms.",
+   "url": "https://www.furnishedfinder.com/property/224172_1",
+   "photos": [
+    {
+     "file": "september-ff-224172_1-1.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/224172/1/224172_1_56657505-full.jpg"
+    },
+    {
+     "file": "september-ff-224172_1-2.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/224172/1/224172_1_67643826-full.jpg"
+    },
+    {
+     "file": "september-ff-224172_1-3.jpg",
+     "source": "https://www.furnishedfinder.com/_pdp_/224172/1/224172_1_67643859-full.jpg"
+    }
+   ],
+   "checked": "September 28, 2026 (restored)",
+   "contact": "Advertised reply time: typically within a day. Open the listing to message the host. No message has been sent.",
+   "city": "Vacaville",
+   "region": "solano",
+   "outreach": "blocked",
+   "outreach_note": "Furnished Finder is Cloudflare-blocking this machine. Send from your own browser. Restored September 28 with the wider geography. Vacaville is the furthest point on the board at 109 minutes to campus.",
+   "inquiry_note": "Vacaville $1,200 — furthest on the board, so ask before investing time",
+   "inquiry": "Hi, I'm a Stanford graduate looking for a base while I job-hunt, so I'm flexible on location and need month-to-month terms rather than a short commute. Is your room available from September 29, initially one month with the option to extend monthly? Could you confirm the private bathroom, the free parking on the property, and the total monthly cost including utilities and any fees? Happy to tour by video."
+  },
+  {
+   "id": "sr-103201950",
+   "source": "spareroom",
+   "title": "Sacramento furnished room with its own private bath",
+   "area": "The Cove, South Natomas, Sacramento (95833)",
+   "rent": 1000,
+   "extra": true,
+   "group": "monthly",
+   "timing_label": "Month-to-month stated · available now · free to contact",
+   "parking": "unknown",
+   "parking_label": "Parking not stated — ask; the complex has community amenities",
+   "furnished": "yes",
+   "availability": "Advertised available now and month-to-month, so September 29 is realistic. Free to contact on SpareRoom with no paid upgrade.",
+   "deposit": "$1,000 deposit. Utilities are shared separately rather than included, so budget above the headline rent.",
+   "term": "The ad states month-to-month outright and the listing records a one-month minimum with no maximum.",
+   "neighborhood": "The Cove community in South Natomas, Sacramento — pool, fitness center, clubhouse and park. 86 miles to San Francisco (105 min) and 116 to Stanford (147 min): a job-hunting base, not a commute.",
+   "included": "Furnished bedroom and furnished common areas — living room, dining area, kitchen and in-home laundry.",
+   "bath": "Private bathroom stated twice in the ad: the room 'includes a private bathroom, giving you your own personal bedroom and bath while sharing the home's common spaces.'",
+   "conditions": "Shared with one male resident who works outside the home on weekdays. One-person occupancy, no pets, no smoking. The advertiser asks for your occupation, reason for moving, approximate income and credit score.",
+   "confirm": "Whether parking is included, what utilities typically run on top of the $1,000, and a September 29 start. This ad is syndicated through TurboTenant, so verify the landlord and the address are real before sending money.",
+   "url": "https://www.spareroom.com/rooms-for-rent/ca/sacramento_county/south_natomas/103201950",
+   "photos": [],
+   "checked": "September 28, 2026",
+   "contact": "Marked free to contact on SpareRoom, so no paid upgrade is needed. No message has been sent.",
+   "city": "Sacramento",
+   "region": "solano",
+   "outreach": "ready",
+   "outreach_note": "Free to contact and available now — the cheapest private bath found anywhere. Sending needs the login window reopened.",
+   "inquiry_note": "Cheapest private bath in the search — furnished, month-to-month, available now",
+   "inquiry": "Hi, I'm a Stanford graduate looking for a furnished month-to-month room while I job-hunt, so I'm flexible on location. Your room looks like a good fit. Is it available from September 29? A little about me: I've just finished at Stanford and am searching for work in the region, I'm quiet and respectful of shared space, a non-smoker with no pets, and I'd be looking at one month initially with the option to extend monthly. Could you confirm the bathroom is private to my room, whether a parking space is included, and roughly what the shared utilities come to each month? Happy to do a video tour today."
   }
  ],
  "photos_checked": "September 25, 2026",
