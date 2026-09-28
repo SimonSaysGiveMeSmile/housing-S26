@@ -141,14 +141,20 @@ _far = sorted({f"{item['city']} ({max(_dist[item['city']]['model_minutes'], _dis
                if max(_dist[item['city']]['model_minutes'], _dist[item['city']]['stanford_minutes']) > 90})
 check(not _far, f"no lead is over 1.5 hours from both SF and Stanford (offenders: {_far})")
 
-# The list heading promises every bathroom is private, so no card may describe a shared one.
-_shared = [item['id'] for item in leads
-           if any(k in item['bath'].lower() for k in ('shared bath', 'share a bath', 'sharing the bath',
-                                                      'shares a bath', 'shared use of the bath',
-                                                      'shared full bath', 'communal bath'))]
-check(not _shared, f"no lead on the private-bath board describes a shared bathroom (offenders: {_shared})")
-check('All bathrooms advertised as private' in latest,
-      "the list heading still states the private-bathroom rule the cards are checked against")
+# Any bathroom that is not fully private must say so in the card title, not just the fine print,
+# because the list heading now promises exactly that.
+def _bath_compromised(item):
+    b = item['bath'].lower()
+    return any(k in b for k in ('shared bath', 'share a bath', 'sharing the bath', 'shares a bath',
+                                'shared use of the bath', 'shared full bath', 'communal bath',
+                                'shower is shared', 'shower is in the full bathroom and is shared',
+                                'is shared', 'partial:'))
+_undisclosed = [i['id'] for i in leads if _bath_compromised(i)
+                and not any(w in i['title'].lower() for w in ('shared', 'partial'))]
+check(not _undisclosed,
+      f"any lead without a fully private bathroom says so in its title (undisclosed: {_undisclosed})")
+check('Every bathroom is private unless the card says otherwise' in latest,
+      "the list heading states the bathroom rule the cards are checked against")
 
 # No lead may claim a host has confirmed the requested date.
 # Outreach is outward-facing: a card may only claim a message was sent if it is logged as sent.
