@@ -384,6 +384,18 @@
    "stanford_miles": 1.8,
    "stanford_minutes": 6,
    "balanced_miles": 32.6
+  },
+  "San Francisco": {
+   "lat": 37.7851337,
+   "lon": -122.4100164,
+   "display_name": "229, Ellis Street, Union Square, Tenderloin, San Francisco, California, 94102, United States",
+   "source_url": "https://nominatim.openstreetmap.org/search?q=229+Ellis+Street%2C+San+Francisco%2C+California&format=jsonv2&limit=1",
+   "driving_miles": 2.0,
+   "model_minutes": 7,
+   "meters": 3169.8,
+   "stanford_miles": 33.6,
+   "stanford_minutes": 49,
+   "balanced_miles": 33.6
   }
  },
  "destination_stanford": {

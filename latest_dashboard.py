@@ -24,7 +24,7 @@ def render(css, contacted_ids, placeholder_svg):
         "waitlist": "Lease pending · watch for it to reopen",
         "unavailable": "Listing page no longer available",
     }
-    sources = {"zillow": "Zillow", "supost": "SUpost", "furnishedfinder": "Furnished Finder", "spareroom": "SpareRoom"}
+    sources = {"zillow": "Zillow", "supost": "SUpost", "furnishedfinder": "Furnished Finder", "spareroom": "SpareRoom", "apartments": "Apartments.com"}
     present_sources = {item['source'] for item in data['listings']}
     source_options = ''.join(f'<option value="{key}">{value}</option>'
                              for key, value in sources.items() if key in present_sources)

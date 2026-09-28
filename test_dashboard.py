@@ -88,7 +88,7 @@ check(latest.count('data-rank=') == len(leads), "every new lead renders regardle
 check(all(html.escape(item["url"]) in latest for item in leads), "every lead retains its source link")
 check('href="summer.html"' not in latest, "withdrawn summer inventory is not linked")
 check("craigslist" not in latest.lower(), "current page contains no excluded platform listings, links or controls")
-check(all(item['source'] in ('zillow', 'supost', 'furnishedfinder', 'spareroom') for item in leads),
+check(all(item['source'] in ('zillow', 'supost', 'furnishedfinder', 'spareroom', 'apartments') for item in leads),
       "inventory contains only the selected housing platforms")
 
 # The lease rule is hard: month-by-month or sublet only. Nothing with a long

@@ -42,7 +42,9 @@
    "city": "Millbrae",
    "region": "peninsula",
    "inquiry": "Thanks again — one more question I should have asked. The ad lists the room as unfurnished, and I'd be starting with a one-month stay, so buying furniture isn't practical. Is there any chance the room could come with a bed and a desk, or could I rent furniture and have it delivered before September 29? I'm also hoping to confirm two details: that the bathroom is mine alone, and that a parking space comes with the room. Happy to do a video tour any evening this week.",
-   "inquiry_note": "FOLLOW-UP (your first message is already sent)"
+   "inquiry_note": "FOLLOW-UP (your first message is already sent)",
+   "outreach": "sent",
+   "outreach_note": "Two messages sent to Ally — Sept 27 by you, Sept 28 furniture follow-up. Awaiting reply."
   },
   {
    "id": "sr-102101468",
@@ -82,7 +84,9 @@
    "checked": "September 27, 2026",
    "contact": "No longer contactable. The ad was open on September 27 and by September 28 SpareRoom reports the advertiser is not accepting applications. No message has been sent.",
    "city": "San Mateo",
-   "region": "peninsula"
+   "region": "peninsula",
+   "outreach": "closed",
+   "outreach_note": "Ad closed to applications on Sept 28, one day after it was found. Nothing sent."
   },
   {
    "id": "sr-102027784",
@@ -124,7 +128,9 @@
    "city": "Foster City",
    "region": "peninsula",
    "inquiry": "Hi, I'm a Stanford graduate looking for short-term housing and your Foster City room looks excellent — a brand-new private bath and garage parking are exactly what I'm after. Your ad lists a three-month minimum but says short rentals are considered, so I wanted to ask directly: would one month starting September 29 work, with the option to extend month to month if we both want to continue? I can pay the month upfront. Could you also confirm the $1,600 includes utilities and parking, and what the deposit and notice period are? Happy to tour in person or by video any day this week.",
-   "inquiry_note": "Send third — the ask is the three-month minimum"
+   "inquiry_note": "Send third — the ask is the three-month minimum",
+   "outreach": "blocked",
+   "outreach_note": "Message written and loaded, but SpareRoom demands a $27–30 Early Bird upgrade to send. Not paid."
   },
   {
    "id": "ff-949142_1",
@@ -166,7 +172,9 @@
    "city": "El Sobrante",
    "region": "east",
    "inquiry": "Hi, I'm a Stanford graduate looking for a one-month stay with the option to extend monthly, and your en-suite room is the closest match I've found — private bathroom, parking on site and a one-month minimum. Your calendar shows September 30, and I need to move in on September 29. Is there any chance of starting one day earlier? If the 30th is fixed I can likely make that work, so please let me know either way. Could you also confirm the total monthly cost including utilities and parking, any cleaning or booking fees, and the notice required to leave? I'd love to arrange a tour.",
-   "inquiry_note": "Send fourth — the ask is one day"
+   "inquiry_note": "Send fourth — the ask is one day",
+   "outreach": "blocked",
+   "outreach_note": "Furnished Finder has been Cloudflare-blocking this machine since Sept 26. Send from your own browser."
   },
   {
    "id": "ff-415061_1",
@@ -208,7 +216,9 @@
    "city": "Hayward",
    "region": "east",
    "inquiry": "Hi, I'm a Stanford graduate looking for short-term housing near both San Francisco and Stanford, and your room is the best-placed one I've found — roughly 25 miles to each. The private bathroom and private entrance are exactly what I need. Your listing shows a 60-day minimum, and I'm looking to start September 29 for one month with the option to extend month to month. Would you consider a one-month stay, or a month-to-month arrangement after an initial month? I can pay upfront. Could you also confirm whether a parking space comes with the room, and what the total monthly cost and any fees are? Happy to tour any time.",
-   "inquiry_note": "Send fifth — the ask is the 60-day minimum"
+   "inquiry_note": "Send fifth — the ask is the 60-day minimum",
+   "outreach": "blocked",
+   "outreach_note": "Furnished Finder blocked by Cloudflare. Send from your own browser."
   },
   {
    "id": "su-130109474",
@@ -250,7 +260,9 @@
    "city": "Palo Alto",
    "region": "peninsula",
    "inquiry": "Hi, I'm a Stanford graduate looking for a room from September 29, initially one month with the option to extend month to month. Your listing shows an October 1 start — would September 29 be possible, or is the room occupied until then? I also wanted to check two things the post doesn't mention: whether the bathroom is mine alone and whether parking for one car is included. If you'd prefer a longer-term tenant I completely understand, but I'm happy to extend monthly if it works out for both of us. Could you confirm the total monthly cost and the deposit? Thank you.",
-   "inquiry_note": "SUpost — start date and parking are both open"
+   "inquiry_note": "SUpost — start date and parking are both open",
+   "outreach": "ready",
+   "outreach_note": "Needs your Stanford SUNet login — I cannot reach SUpost. Draft is ready to paste."
   },
   {
    "id": "su-130107280",
@@ -292,7 +304,9 @@
    "city": "Palo Alto",
    "region": "peninsula",
    "inquiry": "Hi, I'm a Stanford graduate looking for a furnished room from September 29, initially one month with the option to extend month to month. Your post lists an October 2 start — is there any chance of moving in on the 29th, or is the room occupied until then? Could you also confirm whether the bathroom is for my use only, whether parking for one car is included, and what the total monthly cost and deposit are? I'm happy to arrange a tour in person or by video. Thank you.",
-   "inquiry_note": "SUpost — start date and parking are both open"
+   "inquiry_note": "SUpost — start date and parking are both open",
+   "outreach": "ready",
+   "outreach_note": "Needs your Stanford SUNet login — I cannot reach SUpost. Draft is ready to paste."
   },
   {
    "id": "ff-933335_1",
@@ -334,7 +348,9 @@
    "city": "Alameda",
    "region": "east",
    "inquiry": "Hi, I'm a Stanford graduate looking for a one-month stay starting September 29, 2026, with the option to extend month to month. I came across your condo room and wanted to check whether it's still available, since the calendar on the listing hasn't been updated recently. If it is, could you confirm the room has a private bathroom, whether parking for one car is included, and the total monthly cost with utilities and any fees? If it's no longer available, no problem at all — just let me know so I can stop checking. Thank you.",
-   "inquiry_note": "Verify first — the calendar is from November 2025"
+   "inquiry_note": "Verify first — the calendar is from November 2025",
+   "outreach": "blocked",
+   "outreach_note": "Furnished Finder blocked by Cloudflare. Stale calendar anyway — verify before writing."
   },
   {
    "id": "ff-933277_1",
@@ -376,7 +392,9 @@
    "city": "Berkeley",
    "region": "east",
    "inquiry": "Hi, I'm a Stanford graduate looking for a one-month stay starting September 29, 2026, with the option to extend month to month. Your North Berkeley room looks lovely and I wanted to check whether it's still available, since the listing calendar hasn't been updated in a while. If it is, could you confirm the bathroom is private to the room, whether parking is included, and the total monthly cost including utilities and any fees? If it's gone, no problem — just let me know. Thank you.",
-   "inquiry_note": "Verify first — the calendar is from January 2026"
+   "inquiry_note": "Verify first — the calendar is from January 2026",
+   "outreach": "blocked",
+   "outreach_note": "Furnished Finder blocked by Cloudflare. Stale calendar anyway — verify before writing."
   },
   {
    "id": "ff-306547_1",
@@ -418,7 +436,9 @@
    "city": "Novato",
    "region": "north",
    "inquiry": "Hi, I'm a Stanford graduate looking for a one-month stay starting September 29, 2026, with the option to extend month to month. I wanted to check whether your furnished room is still available, as the listing calendar hasn't been updated recently. If it is, could you confirm the private bathroom and onsite parking are still part of the room, and the total monthly cost including utilities and any fees? Thank you.",
-   "inquiry_note": "Verify first — the calendar is from December 2025, and it is the furthest lead still standing"
+   "inquiry_note": "Verify first — the calendar is from December 2025, and it is the furthest lead still standing",
+   "outreach": "blocked",
+   "outreach_note": "Furnished Finder blocked by Cloudflare. Stale calendar anyway — verify before writing."
   },
   {
    "id": "sr-103156861",
@@ -458,7 +478,9 @@
    "checked": "September 27, 2026",
    "contact": "No contact possible right now: SpareRoom shows the advertiser is not accepting applications. No message has been sent.",
    "city": "South San Francisco",
-   "region": "peninsula"
+   "region": "peninsula",
+   "outreach": "closed",
+   "outreach_note": "Advertiser not accepting applications. Nothing to send."
   },
   {
    "id": "sr-103169912",
@@ -498,7 +520,9 @@
    "checked": "September 27, 2026",
    "contact": "No contact possible right now: the advertiser is not accepting applications. Listed via TurboTenant, which syndicates ads across many states — verify the landlord is real before sending anything. No message has been sent.",
    "city": "Daly City",
-   "region": "peninsula"
+   "region": "peninsula",
+   "outreach": "closed",
+   "outreach_note": "Advertiser not accepting applications. Nothing to send."
   },
   {
    "id": "sr-103225663",
@@ -527,7 +551,40 @@
    "city": "Oakland",
    "region": "east",
    "inquiry": "Hi, I'm a Stanford graduate looking for a room from September 29, initially one month with the option to extend month to month, so your no-minimum-term listing is a good fit. Two questions before I get ahead of myself. Your ad shows October 3 — is there any chance of moving in on September 29, or is the room occupied until then? And could you confirm the bathroom arrangement: the listing summary says a private bathroom, while your description says the shower in the full bathroom is shared. I'd also like to confirm the carport space is available to me and roughly what utilities run per month. Happy to tour in person or by video any day this week.",
-   "inquiry_note": "Free to contact — ask about the date and the shower before anything else"
+   "inquiry_note": "Free to contact — ask about the date and the shower before anything else",
+   "outreach": "sent",
+   "outreach_note": "Message sent to Ami on Sept 28 asking about a Sept 29 start and the shared shower. Awaiting reply."
+  },
+  {
+   "id": "apt-sfhouse-229ellis",
+   "source": "apartments",
+   "title": "SF House co-living studio · furnished, move-in ready",
+   "area": "229 Ellis St, Civic Center, San Francisco (94102)",
+   "rent": 1312,
+   "extra": true,
+   "group": "monthly",
+   "timing_label": "Flexible lease terms · 55 move-in-ready rooms",
+   "parking": "unknown",
+   "parking_label": "Parking not stated — downtown SF, assume none",
+   "furnished": "yes",
+   "availability": "Advertises 55 move-in-ready rooms, so September 29 is plausible here in a way it is not anywhere else on this board. Confirm by phone: (650) 379-0827.",
+   "deposit": "Not stated on the listing. Rent spans $1,312–$2,600 across room types; $1,312 is the smallest studio at 89 sq ft.",
+   "term": "Advertises flexible lease terms and markets itself for short stays — the operator, not a private landlord, so monthly terms are a product rather than a favour.",
+   "neighborhood": "Civic Center / Tenderloin. Excellent for San Francisco and walkable to BART, but this is the roughest neighbourhood on the board and worth seeing in person before committing.",
+   "included": "Fully furnished. Six shared kitchens, lounges, rooftop, gym, theater and study spaces. Utilities and amenities bundled in the co-living model.",
+   "bath": "Studio unit listed as 1 bathroom, so private to the unit. Confirm it is not a shared-bath room type at the $1,312 tier.",
+   "conditions": "Operated as a co-living building rather than a private room in someone's home. Two renter reviews, rated 5.0.",
+   "confirm": "Whether a room is free for September 29, whether $1,312 includes utilities, whether parking exists at all, and whether the bathroom is private at this price tier — the smallest unit is 89 sq ft.",
+   "url": "https://www.apartments.com/sf-house-san-francisco-ca/tt0xekb/",
+   "photos": [],
+   "checked": "September 28, 2026",
+   "contact": "Listed with a phone number, (650) 379-0827, and an Apartments.com message form. No message has been sent.",
+   "city": "San Francisco",
+   "region": "peninsula",
+   "inquiry": "Hi, I'm a Stanford graduate looking for a furnished room from September 29, 2026, initially for one month with the option to extend month to month. Your listing mentions move-in-ready rooms and flexible lease terms, which is exactly what I need. Do you have anything available for September 29 at or near $1,312? Could you confirm whether that rate includes utilities, whether the bathroom is private to the room at that price, and whether any parking is available for one car? I can view in person today or tomorrow. Thank you.",
+   "inquiry_note": "Call first — (650) 379-0827 — this is the only lead that could house you tomorrow",
+   "outreach": "ready",
+   "outreach_note": "Not yet contacted. Has a phone number — (650) 379-0827 — so this is the fastest lead to close."
   }
  ],
  "photos_checked": "September 25, 2026",
