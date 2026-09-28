@@ -10,7 +10,7 @@
    "rent": 1500,
    "extra": false,
    "group": "monthly",
-   "timing_label": "Month-to-month stated · available now",
+   "timing_label": "Month-to-month · two messages sent, awaiting reply",
    "parking": "offstreet",
    "parking_label": "Plenty of parking advertised",
    "furnished": "no",
@@ -21,7 +21,7 @@
    "included": "Utilities included in the rent. The room is unfurnished, so a one-month stay would need furniture — worth asking whether any can be left or rented.",
    "bath": "Private bathroom, advertised as no sharing.",
    "conditions": "Advertiser asks for an introduction with occupation, move-in date and intended length of stay; references on request.",
-   "confirm": "Awaiting the host's reply. Still unanswered: whether the room can be furnished or part-furnished for a one-month stay, whether a parking space is assigned, and whether September 29 works.",
+   "confirm": "Awaiting Ally's reply to two messages. Open: whether the room can be furnished for a one-month stay, whether a parking space is assigned, and whether September 29 works.",
    "url": "https://www.spareroom.com/rooms-for-rent/san_mateo_county/millbrae/103220421",
    "photos": [
     {
@@ -38,7 +38,7 @@
     }
    ],
    "checked": "September 27, 2026",
-   "contact": "Message sent by the owner on September 27: introduced themselves as a Stanford graduate looking for short-term housing, asked whether the room is still available and when a tour could be scheduled, and left a Stanford email address. Awaiting a reply. The follow-up below covers what that message did not ask.",
+   "contact": "Two messages sent to the host (Ally). The owner's first message on September 27 introduced themselves as a Stanford graduate and asked about availability and a tour; the furniture follow-up was sent on September 28 and is confirmed in the SpareRoom Sent folder. Awaiting a reply.",
    "city": "Millbrae",
    "region": "peninsula",
    "inquiry": "Thanks again — one more question I should have asked. The ad lists the room as unfurnished, and I'd be starting with a one-month stay, so buying furniture isn't practical. Is there any chance the room could come with a bed and a desk, or could I rent furniture and have it delivered before September 29? I'm also hoping to confirm two details: that the bathroom is mine alone, and that a parking space comes with the room. Happy to do a video tour any evening this week.",
@@ -51,8 +51,8 @@
    "area": "San Mateo, San Mateo County (94401)",
    "rent": 1600,
    "extra": false,
-   "group": "monthly",
-   "timing_label": "No minimum term · short rentals considered",
+   "group": "waitlist",
+   "timing_label": "Closed September 28 · advertiser not accepting applications",
    "parking": "offstreet",
    "parking_label": "Parking and a garage advertised",
    "furnished": "yes",
@@ -63,7 +63,7 @@
    "included": "Utilities included; furnished, with wifi. Master bedroom has its own balcony; living room is shared.",
    "bath": "Private bathroom en-suite to the master bedroom.",
    "conditions": "Sharing with the owner, a professional woman in her fifties who works weekdays; her friends and grown children visit.",
-   "confirm": "September 29 start, whether the garage space is yours, and the total monthly figure — this is $100 above the target even with utilities included.",
+   "confirm": "Lost to turnover within a day. Worth re-checking only if it reopens.",
    "url": "https://www.spareroom.com/rooms-for-rent/san_mateo_county/san_mateo/102101468",
    "photos": [
     {
@@ -80,11 +80,9 @@
     }
    ],
    "checked": "September 27, 2026",
-   "contact": "Message through the SpareRoom ad. No message has been sent.",
+   "contact": "No longer contactable. The ad was open on September 27 and by September 28 SpareRoom reports the advertiser is not accepting applications. No message has been sent.",
    "city": "San Mateo",
-   "region": "peninsula",
-   "inquiry": "Hi, I'm a Stanford graduate looking for a short-term room and your townhouse master suite looks ideal — the en-suite bathroom, garage parking and the fact that you list no minimum term are exactly what I need. I'd start September 29, initially one month with the option to extend month to month. My budget is $1,500 all in, so I wanted to ask directly whether $1,600 has any flexibility for a tenant who pays the full month upfront and is easy to deal with. If the price is firm I understand. Could you also confirm the room is available from the 29th and that the bathroom and a parking space are mine alone? I can tour in person or by video any day this week.",
-   "inquiry_note": "Send second — best backup, and the ask is the price"
+   "region": "peninsula"
   },
   {
    "id": "sr-102027784",
@@ -94,7 +92,7 @@
    "rent": 1600,
    "extra": false,
    "group": "confirm",
-   "timing_label": "Three-month minimum · short rentals considered",
+   "timing_label": "Live · blocked by SpareRoom's paid upgrade",
    "parking": "offstreet",
    "parking_label": "Garage parking advertised",
    "furnished": "yes",
@@ -122,7 +120,7 @@
     }
    ],
    "checked": "September 27, 2026",
-   "contact": "Message through the SpareRoom ad. No message has been sent.",
+   "contact": "The message is written and was loaded into the SpareRoom contact form on September 28, but it cannot be submitted: SpareRoom classes this as a newly-listed Free Ad and demands a paid Early Bird upgrade ($27 for two weeks, $30 for four) to contact the advertiser. No message has been sent and nothing has been paid.",
    "city": "Foster City",
    "region": "peninsula",
    "inquiry": "Hi, I'm a Stanford graduate looking for short-term housing and your Foster City room looks excellent — a brand-new private bath and garage parking are exactly what I'm after. Your ad lists a three-month minimum but says short rentals are considered, so I wanted to ask directly: would one month starting September 29 work, with the option to extend month to month if we both want to continue? I can pay the month upfront. Could you also confirm the $1,600 includes utilities and parking, and what the deposit and notice period are? Happy to tour in person or by video any day this week.",

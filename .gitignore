@@ -8,3 +8,4 @@ __pycache__/
 .outreach-browser-profile/
 .DS_Store
 site/
+.artifact-board/
