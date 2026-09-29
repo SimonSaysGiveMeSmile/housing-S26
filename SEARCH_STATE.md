@@ -119,6 +119,23 @@ comes back "Attention Required." Zeros from these are *blocks*, not results:
 
 SpareRoom and Kopa: first URL guesses were 404s; proper search URLs not yet found.
 
+**Furnished Finder is blocked on `/property/*` only** — the homepage returns HTTP 200 but every
+property page returns "Sorry, you have been blocked". Tried and failed on Sept 28: plain HTTP,
+headless CDP, **headful CDP**, and in-site navigation from the homepage with a real referrer. This is
+not a solvable challenge from this machine; the nine FF drafts must be sent from the owner's browser.
+
+**Facebook Marketplace works logged-out** (swept Sept 28) and is the densest source of sub-$1,500
+rooms found anywhere — but every listing checked failed on bathroom or lease, and **messaging requires
+a Facebook login the agent does not have**. Two traps specific to it: the structured "1 bed · 1 bath"
+describes the *property*, not what you get (a Santa Clara townhouse advertised that way turned out to
+be "se comparte baño y cocina"), and its lease field is often a year or more even on rooms advertised
+as available now. Sweep URL: `facebook.com/marketplace/<city>/propertyrentals?minPrice=0&maxPrice=1500`.
+
+**The SpareRoom session does not survive a browser restart** and there is no "Remember me" checkbox on
+the login form. Reading the inbox or sending anything needs the owner to log in again in a visible
+window. The login page says "You are already logged in" rather than showing the "Hi <name>" header, so
+check for that string too.
+
 ## Next moves, in order of value
 
 1. **Message Millbrae first.** It is the only lead meeting every hard constraint; ask about a
