@@ -13,6 +13,12 @@ Updated October 1, 2026, 10 AM. The private unified inbox is the current message
 - **Rednote:** the user approved public comments with their WeChat ID. Posted at 12:39 PM on the Palo Alto $1,500 October sublet and the Woodside private-bath room. Any reply arrives on WeChat or Rednote, and neither is monitored.
 - **Sima:** at 11:07 AM she said she is showing the room to another person at 2 PM and will update this evening. The October 2 time is not confirmed.
 - **Facebook Marketplace:** four short asks were sent this morning (Millbrae $1,500, Menlo Park $1,300 and $1,100, Mountain View $1,400). Proof is in the private audit folder.
+- **3:15 PM, more modern places near SFO (photos checked).** Facebook asks sent and confirmed:
+  - a renovated private unit in Westborough, South SF: private entrance, in-unit washer and dryer, AC, $1,950 all-in, unfurnished
+  - a private room with its own bathroom and walk-in closet in a San Bruno apartment complex with a pool, $1,850, unfurnished, available through November 14
+
+  **Skipped:** a South SF in-law master suite (6-month lease), a Foster City 2b2b room (female preferred), Burlingame rooms (shared bathroom), and a Millbrae one-bedroom (dated; the same flat as the Craigslist post).
+- **Notifications:** the user asked to be alerted when hosts reply. Alerts go by email to tianjiahe11 in the "Housing update" thread and as a phone push when the session is idle.
 - **2:50 PM Airbnb search and $2,000 pass near SFO, with photos checked.**
   - **Airbnb has almost nothing under $2,000 between South SF and Palo Alto.** Results spill into the East Bay and San Jose. The only near-SFO option is a room in a traditional house in South SF, free from October 6.
   - **Photos checked for 13 listings.** Three passed (modern, private entrance and bathroom, real-looking photos):
