@@ -1,8 +1,19 @@
 # Housing search — current state
 
-Updated September 30, 2026, late evening. The private unified inbox is the current message view. This supersedes the earlier outreach and tour schedule.
+Updated October 1, 2026, 10 AM. The private unified inbox is the current message view. This supersedes the earlier outreach and tour schedule.
 
 **Public repository warning.** This file and `september_listings.json` are tracked in a public GitHub repository that auto-deploys to GitHub Pages. Host phone numbers, the user's own number, access codes and private thread URLs must stay in `.outreach/`, which is gitignored. Written out in full they would be published. Redact before committing.
+
+## October 1 update (10 AM)
+
+- **DMV canceled. Today the user stays in the San Mateo - Palo Alto corridor (Millbrae and SFO included).** No East Bay trips today.
+- **Sima (El Sobrante): the confirmed 11:30 AM October 1 viewing is no longer confirmed.** At 9:50 AM the user asked to move it to **October 2 at 11:30 AM, or for a video**. Awaiting Sima. There are zero confirmed viewings until she answers.
+- **Ami (Oakland):** she read the October 1 4:00-5:30 PM proposal without replying. At 9:50 AM asked for **October 2, 4:00-5:30 PM, or a video**.
+- **Don:** phone call at 1:00 PM today, confirmed. Tour next week.
+- **Tony (Millbrae): still the only possible viewing today.** He has no time or address yet, and the 24-hour follow-up window is closed until 9:46 PM. The user should phone him directly.
+- **Downtown Palo Alto SUpost (su-130107280):** the landlord's phone number is in the private audit. A direct call is the fastest way to get a viewing today.
+- **Zillow San Jose (Paulo): closed.** No one-month stays.
+- Google Calendar (therealsimontian@gmail.com) holds private events: Don's call (Oct 1), Tony (tentative, Oct 1 2 PM), and Sima and Ami (tentative, Oct 2).
 
 ## Brief and authorization
 

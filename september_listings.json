@@ -183,7 +183,7 @@
       "included": "Utilities included; washer and dryer on premises, heating and storage. The 500 sq ft room has a large closet, ceiling fan, TV and a built-in window seat. Smart locks on the front gate and house entry.",
       "bath": "Private bathroom with shower, en-suite to the room.",
       "conditions": "One occupant and one vehicle. Pets are allowed and pets already live on the property. No smoking.",
-      "confirm": "CONFIRMED October 1 at 11:30 AM",
+      "confirm": "October 2 11:30 AM proposed (moved from confirmed Oct 1); not confirmed",
       "url": "https://www.furnishedfinder.com/property/949142_1",
       "photos": [
         {
@@ -200,15 +200,15 @@
         }
       ],
       "checked": "September 29, 2026",
-      "contact": "Sima confirmed a viewing on October 1 at 11:30 AM at 1306 Fascination Circle and accepted the move from 10:30 for the DMV appointment. $1,475, furnished, en-suite bathroom and off-street parking all fit the brief.",
+      "contact": "Viewing was confirmed for October 1 at 11:30 AM; the user asked on October 1 to move it to October 2 at 11:30 AM or receive a video. Awaiting Sima. $1,475, furnished, en-suite bath, parking.",
       "city": "El Sobrante",
       "region": "east",
       "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "outreach": "sent",
-      "outreach_note": "Sima confirmed a viewing on October 1 at 11:30 AM at 1306 Fascination Circle and accepted the move from 10:30 for the DMV appointment. $1,475, furnished, en-suite bathroom and off-street parking all fit the brief.",
+      "outreach_note": "Viewing was confirmed for October 1 at 11:30 AM; the user asked on October 1 to move it to October 2 at 11:30 AM or receive a video. Awaiting Sima. $1,475, furnished, en-suite bath, parking.",
       "outreach_status": "sent",
-      "tour_status": "CONFIRMED October 1 at 11:30 AM",
+      "tour_status": "October 2 11:30 AM proposed (moved from confirmed Oct 1); not confirmed",
       "visual_review": {
         "cleanliness": 4,
         "modernity": 4,
@@ -678,7 +678,7 @@
       "included": "In-unit washer and dryer, large shared backyard, wood floors, windows on all sides. No dishwasher, and stairs are required to reach the unit.",
       "bath": "Confirmed by the host: a private half bathroom (toilet and sink) inside the room, with a SHARED shower sitting between the two bedrooms. Not a full private bathroom.",
       "conditions": "Sharing with one working professional on a 9-to-5 schedule. The advertiser asks for an introduction covering your work, schedule and what you want in a roommate.",
-      "confirm": "Proposed September 30 at 4:30 PM Pacific · 668 Alma Ave, Oakland; awaiting host confirmation.",
+      "confirm": "October 2 4:00-5:30 PM proposed, or video; not confirmed",
       "url": "https://www.spareroom.com/rooms-for-rent/alameda_county/cleveland_heights/103225663",
       "photos": [
         {
@@ -699,15 +699,15 @@
         }
       ],
       "checked": "September 29, 2026",
-      "contact": "SMS matched to Ami at 668 Alma Ave, Oakland. September 29 evening unavailable; sent a brief proposal for September 30 at 4:30 PM on SpareRoom. Awaiting confirmation.",
+      "contact": "Ami read the October 1 4:00-5:30 PM proposal without answering. On October 1 asked for October 2, 4:00-5:30 PM, or a video instead.",
       "city": "Oakland",
       "region": "east",
       "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "outreach": "sent",
-      "outreach_note": "SMS matched to Ami at 668 Alma Ave, Oakland. September 29 evening unavailable; sent a brief proposal for September 30 at 4:30 PM on SpareRoom. Awaiting confirmation.",
+      "outreach_note": "Ami read the October 1 4:00-5:30 PM proposal without answering. On October 1 asked for October 2, 4:00-5:30 PM, or a video instead.",
       "outreach_status": "sent",
-      "tour_status": "Proposed September 30 at 4:30 PM Pacific · 668 Alma Ave, Oakland; awaiting host confirmation.",
+      "tour_status": "October 2 4:00-5:30 PM proposed, or video; not confirmed",
       "visual_review": {
         "cleanliness": 4,
         "modernity": 3.5,
@@ -2619,17 +2619,17 @@
   "anchors": "SF Ferry Building and Stanford University; ranked on the worse of the two drives.",
   "commute_ceiling_minutes": 90,
   "outreach_updated": "2026-09-29T00:42:20.848708-07:00",
-  "updated_at": "2026-10-01T08:57:00-07:00",
+  "updated_at": "2026-10-01T09:52:00-07:00",
   "outreach_summary": {
-    "new_verified_sent": 98,
+    "new_verified_sent": 100,
     "previously_contacted_hosts": 3,
     "previous_outgoing_messages": 7,
     "pending_email_verification": 0,
     "submission_unconfirmed": 0,
-    "confirmed_tours": 1,
+    "confirmed_tours": 0,
     "total_hosts_contacted": 40,
     "tracked_leads": 45,
-    "total_verified_outgoing_messages": 105,
+    "total_verified_outgoing_messages": 107,
     "human_hosts_replied": 14,
     "accepted_queued_messages": 1,
     "note": "Human hosts who have replied: Ami, Mona/Ramona, Leticia, Don, Alice, Anna, Laura, Rachael, the downtown Palo Alto SUpost poster, the Millbrae Craigslist host and Malou. Sima has the first confirmed viewing: October 1 at 11:30 AM in El Sobrante. Tony in Millbrae agreed to October 1 with no time set."
@@ -2680,10 +2680,10 @@
     },
     {
       "listing_id": "ff-949142_1",
-      "status": "confirmed",
-      "when": "2026-10-01T11:30:00-07:00",
+      "status": "reschedule_requested",
+      "when": "2026-10-02T11:30:00-07:00",
       "area": "1306 Fascination Circle, Richmond/El Sobrante, CA 94803",
-      "note": "Confirmed for October 1 at 11:30 AM. She first agreed to 10:30; the time was moved because of a 10 AM DMV appointment and she replied \"Yes that works too\" at 10:14 PM. Simon confirmed back at 10:26 PM. Address 1306 Fascination Circle, Richmond/El Sobrante, CA 94803."
+      "note": "Confirmed for October 1 at 11:30 AM. She first agreed to 10:30; the time was moved because of a 10 AM DMV appointment and she replied \"Yes that works too\" at 10:14 PM. Simon confirmed back at 10:26 PM. Address 1306 Fascination Circle, Richmond/El Sobrante, CA 94803. On October 1 at 9:50 AM the user asked to move it to October 2 at 11:30 AM or receive a video; awaiting Sima."
     },
     {
       "listing_id": "ff-915271_1",
