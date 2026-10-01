@@ -6,6 +6,7 @@ Updated October 1, 2026, 10 AM. The private unified inbox is the current message
 
 ## October 1 update (12:40 PM)
 
+- **Brief updated by the user at 2:40 PM:** a unit or room in an **apartment building**, **under $2,000 a month all-inclusive**, **month-to-month**. Interiors must look **modern and decent in the photos**, checked before contacting, and **no old houses**. Airbnb monthly stays are acceptable.
 - **New preference: an apartment sublet in an apartment building or complex comes first.** A room in a single-family house is the fallback. Rank and contact apartment-building sublets ahead of house rooms.
 - **Replies always go inside the host's existing thread** (same email thread or platform conversation), never as a new message, and stay concise.
 - **Mailbox coverage:** the hourly monitor reads tianjiahe11@gmail.com only. therealsimontian@gmail.com and ipo@stanford.edu are **not monitored**. The agent browser isn't signed in to either, and the Gmail connector has no read permission. Both need a browser sign-in when the user is back at the computer.
