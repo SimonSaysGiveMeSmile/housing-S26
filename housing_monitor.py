@@ -188,7 +188,7 @@ class Collector:
         links += b.evaluate(tid, '[...document.querySelectorAll("a[href*=thread_id]")].map(a=>a.href)')
         threads = {}
         for m in self.audit.get('messages', []) + self.audit.get('previous_conversations', []):
-            url = m.get('thread_url', '')
+            url = m.get('thread_url') or ''
             if 'spareroom.com' in url and 'thread_id=' in url:
                 threads[m['listing_id']] = url
         for url in links:
