@@ -18,8 +18,9 @@ Outreach and in-person tour scheduling are authorized. Do not ask routine permis
 
 - **42 tracked leads; 37 contacted hosts; 87 verified outgoing messages overall.** This is 80 messages in the current audit plus seven earlier messages across three SpareRoom threads. One SUpost inquiry (Grant Avenue) is still queued.
 - **First live phone contact: Tony, the Millbrae Craigslist host (cl-7959180948), [phone in the private audit].** He reached Simon by phone at about 9:45 PM and a tour on **October 1 was agreed in principle with the time left undecided**. Proposed 2:00 PM by email and asked for the address by text. This is not a confirmed appointment until Tony gives a time.
+- **Sima D / El Sobrante en-suite room, ff-949142_1 — now the strongest open lead.** She replied at 9:45 PM offering a viewing **any time on October 1**, then asked Simon to name one. Proposed **10:30 AM** at 9:58 PM so the Peninsula afternoon stays free; **the address is still pending and she has not confirmed**. $1,475, furnished, en-suite bathroom and off-street parking all fit the brief.
 - **Pitfall found: the Gmail signature advertises an old number, (607) 262-9704, directly under the [phone in the private audit] given in the message body.** Tony tried twice to call and could not get through, then emailed "I am calling you but not getting through". A correction naming [phone in the private audit] as the best number went out at 9:43 PM. Consider fixing the signature before sending more numbers to hosts.
-- **Eleven human hosts have now replied:** Ami, Mona/Ramona, Leticia, Don, Alice, Anna, Laura, Rachael, the downtown Palo Alto SUpost poster, Tony in Millbrae and Malou.
+- **Twelve human hosts have now replied:** Ami, Mona/Ramona, Leticia, Don, Alice, Anna, Laura, Rachael, the downtown Palo Alto SUpost poster, Tony in Millbrae, Malou and Sima.
 - **Evening replies to the four hosts who were waiting:** Ami, Anna, Malou and Tony. See the next section.
 - **Evening tour-ask sweep, 25-40 words each, availability plus in-person tour time only:** nine Craigslist threads, five Furnished Finder hosts (Merci, Paul, Nur, Sima, Mona), four SpareRoom hosts (Matthew, Ashish, Kathleen, Dawn) and one Zillow host (Paulo). Eight more were queued to fire as each host's one-follow-up-per-24h window opened, through about 10:45 PM: Rachael, Hayward, Sunnyvale, the SUpost Palo Alto poster, Ally, Don, Tim and Suisun. Check `.outreach/queued-followups-2026-09-30.json` for the per-host result before assuming any of them sent.
 - **Monitoring:** a read-only local collector runs through launchd every hour until October 4 at 10 PM Pacific. See `http://localhost:5555/inbox` for actual per-channel success times and failures. Never infer successful monitoring from a registered schedule.
@@ -91,7 +92,9 @@ No Git commit, remote deployment, payment or lease commitment has been made. `.o
 
 Read the unified inbox and current monitor health first, then check `.outreach/queued-followups-2026-09-30.json` to see which of the eight queued follow-ups actually sent before claiming any of them.
 
-The live thread is **Tony in Millbrae**: a tour was agreed for October 1 by phone with no time set, and he prefers the phone over email. If he has not named a time, chase it; his number and the user's best number are both in the private audit. Watch for a reply to the 2:00 PM proposal.
+Two live threads. **Sima in El Sobrante** offered any time on October 1 and is waiting on a time and an address exchange; 10:30 AM was proposed and needs her confirmation. **Tony in Millbrae**: a tour was agreed for October 1 by phone with no time set, and he prefers the phone over email. If he has not named a time, chase it; his number and the user's best number are both in the private audit. Watch for a reply to the 2:00 PM proposal.
+
+If both land, October 1 runs El Sobrante in the morning and Millbrae in the afternoon; leave travel buffer between the East Bay and the Peninsula.
 
 Also open: Ami's October 1 4:00-5:30 PM proposal, Anna's re-ask after the missed 9 AM slot, Mona's replacement time, Don's tour before his tenant leaves, Rachael, Tim/Foster City and both Zillow hosts. Leticia's room is taken and Malou is closed; do not chase either.
 
