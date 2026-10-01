@@ -12,6 +12,10 @@ Updated October 1, 2026, 10 AM. The private unified inbox is the current message
 - **Rednote:** the user approved public comments with their WeChat ID. Posted at 12:39 PM on the Palo Alto $1,500 October sublet and the Woodside private-bath room. Any reply arrives on WeChat or Rednote, and neither is monitored.
 - **Sima:** at 11:07 AM she said she is showing the room to another person at 2 PM and will update this evening. The October 2 time is not confirmed.
 - **Facebook Marketplace:** four short asks were sent this morning (Millbrae $1,500, Menlo Park $1,300 and $1,100, Mountain View $1,400). Proof is in the private audit folder.
+- **2 PM outreach (user said "keep reaching out").** Each host got a short ask: is it still available, and can I see it today or tomorrow.
+  - **Craigslist, by email (confirmed in Gmail Sent):** the Hillsborough in-law unit ($1,300, private parking), the San Mateo master bedroom with private entrance and bathroom ($1,390), and the downtown South SF room with private bathroom ($1,250).
+  - **Craigslist now shows a captcha before revealing reply addresses,** so these went unsent: the Menlo Park furnished studio ($1,380, driveway parking), the Burlingame studio ($1,300, parking), two San Bruno rooms, and the South SF $1,050 room (phone only).
+  - **Facebook Marketplace (each shows "Message again"):** a San Mateo apartment room ($1,400), a San Mateo room with private bathroom near Caltrain ($1,300), a Menlo Park furnished room with separate entrance and private bathroom ($1,300 + $100), and a San Mateo room available October 1 ($1,150). The Menlo Park host is Sanjay, already messaged this morning about another listing, so he got a second message today.
 - **Midday platform sweep (South SF to Palo Alto):** Craigslist turned up five rooms with a private bathroom at $1,500 or less, and Zillow two fresh rooms (Palo Alto and San Mateo). Furnished Finder is mostly over $1,650, SUpost has nothing that fits, and the SpareRoom search failed. None of these hosts has been contacted yet. Most are rooms in houses, so they rank below apartment sublets.
 
 ## October 1 update (10 AM)
