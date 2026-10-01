@@ -87,8 +87,8 @@ check("settle-in mode" not in latest and "June-start" not in latest,
 check(latest.count('data-rank=') == len(leads), "every new lead renders regardless of the old campus filter")
 check(all(html.escape(item["url"]) in latest for item in leads), "every lead retains its source link")
 check('href="summer.html"' not in latest, "withdrawn summer inventory is not linked")
-check("craigslist" not in latest.lower(), "current page contains no excluded platform listings, links or controls")
-check(all(item['source'] in ('zillow', 'supost', 'furnishedfinder', 'spareroom', 'apartments') for item in leads),
+check('data-source="craigslist"' in latest, "current page includes the requested Craigslist outreach")
+check(all(item['source'] in ('zillow', 'supost', 'furnishedfinder', 'spareroom', 'apartments', 'craigslist') for item in leads),
       "inventory contains only the selected housing platforms")
 
 # The lease rule is hard: month-by-month or sublet only. Nothing with a long
@@ -175,7 +175,7 @@ check(all('no message has been sent' in i['contact'].lower()
       "every card that has not been contacted still states that no message has been sent")
 
 # Every contactable lead carries a draft; the two that cannot be contacted carry none.
-_no_draft = [i['id'] for i in leads if i['group'] != 'waitlist' and not i.get('inquiry')]
+_no_draft = [i['id'] for i in leads if i['group'] != 'waitlist' and i.get('fit_status') != 'mismatch' and not i.get('inquiry')]
 check(not _no_draft, f"every contactable lead has a drafted message (missing: {_no_draft})")
 _bad_draft = [i['id'] for i in leads if i['group'] == 'waitlist' and i.get('inquiry')]
 check(not _bad_draft,
@@ -186,6 +186,23 @@ check(all(os.path.isfile(os.path.join(d.ROOT, "maps", photo["file"])) for photo 
       "all listing photos exist for the static site build")
 check(all('maps/' + html.escape(photo["file"]) in latest for photo in photos),
       "all downloaded listing photos appear in the galleries")
+_photo_sources = {}
+for photo in photos:
+    _photo_sources.setdefault(photo['file'], set()).add(photo['source'])
+check(all(len(sources) == 1 for sources in _photo_sources.values()),
+      "different properties' photos cannot overwrite one another through a shared filename")
+check(len({i['id'] for i in leads}) == len(leads), "the combined inventory has no duplicate leads")
+check(all(len(i.get('inquiry', '').split()) <= 40 for i in leads),
+      "future inquiry templates stay brief")
+check(all(i.get('visual_review') for i in leads), "every lead includes a scoped photo review or an explicit unrated result")
+check(sum(i.get('verified_contact', False) for i in leads) == load_listings()['outreach_summary']['total_hosts_contacted'],
+      "displayed contacted count matches verified listing records")
+check('data-verified="1"' in latest and "card.dataset.verified !== '1'" in latest,
+      "old browser contact marks cannot erase verified sends")
+check('id="all-tracked"' in latest and 'id="outreach"' in latest and 'id="fit"' in latest,
+      "all tracked records and outreach/fit filters are accessible")
+check('Gate Code is' not in latest and '8880' not in latest and 'monthly household income' not in latest,
+      "private arrival codes and screening financial details are not exported")
 
 from pathlib import Path
 from tempfile import TemporaryDirectory

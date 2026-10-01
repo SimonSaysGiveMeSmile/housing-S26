@@ -2157,17 +2157,47 @@ def render_archive_redirect():
 
 
 class Handler(http.server.SimpleHTTPRequestHandler):
+    def local_request(self):
+        """Messages and monitor controls are available only on this computer."""
+        host = self.headers.get('Host', '').split(':')[0]
+        origin = self.headers.get('Origin')
+        return (self.client_address[0] in ('127.0.0.1', '::1') and host in ('localhost', '127.0.0.1')
+                and (not origin or origin in (f'http://localhost:{PORT}', f'http://127.0.0.1:{PORT}')))
+
+    def inbox_response(self, body, content_type='application/json', status=200):
+        if not isinstance(body, bytes):
+            body = json.dumps(body, ensure_ascii=False).encode()
+        self.send_response(status)
+        self.send_header('Content-Type', content_type)
+        self.send_header('Content-Length', str(len(body)))
+        self.send_header('Cache-Control', 'no-store')
+        self.send_header('X-Content-Type-Options', 'nosniff')
+        self.send_header('X-Frame-Options', 'DENY')
+        self.end_headers()
+        self.wfile.write(body)
+
     def do_GET(self):
         p = urlparse(self.path).path
-        if p in ("/", "/index.html", "/summer.html"):
+        if p in ('/inbox', '/inbox/', '/inbox.js', '/api/inbox'):
+            if not self.local_request():
+                self.send_error(403); return
+            if p == '/api/inbox':
+                from housing_inbox import payload
+                self.inbox_response(payload())
+            else:
+                from pathlib import Path
+                filename = 'housing_inbox.js' if p == '/inbox.js' else 'housing_inbox.html'
+                ctype = 'text/javascript; charset=utf-8' if p == '/inbox.js' else 'text/html; charset=utf-8'
+                self.inbox_response((Path(ROOT) / filename).read_bytes(), ctype)
+        elif p in ("/", "/index.html", "/summer.html"):
             body = (render_archive_redirect() if p == "/summer.html" else render_body()).encode("utf-8")
             self.send_response(200); self.send_header("Content-Type","text/html; charset=utf-8")
             self.send_header("Content-Length", str(len(body))); self.end_headers()
             self.wfile.write(body)
-        elif p.startswith("/maps/") and (p.endswith(".png") or p.endswith(".jpg")):
+        elif p.startswith("/maps/") and p.endswith((".png", ".jpg", ".jpeg", ".webp")):
             fp=os.path.join(ROOT,"maps",os.path.basename(p))
             if os.path.isfile(fp):
-                ctype = "image/jpeg" if p.endswith(".jpg") else "image/png"
+                ctype = "image/webp" if p.endswith(".webp") else "image/jpeg" if p.endswith((".jpg", ".jpeg")) else "image/png"
                 self.send_response(200); self.send_header("Content-Type",ctype); self.end_headers()
                 with open(fp,"rb") as f: self.wfile.write(f.read())
             else:
@@ -2177,7 +2207,47 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     def do_POST(self):
         p = urlparse(self.path)
-        if p.path == "/api/toggle":
+        if p.path in ('/api/inbox/check', '/api/inbox/import'):
+            if not self.local_request() or self.headers.get('X-Housing-Inbox') != '1':
+                self.send_error(403); return
+            from housing_inbox import OUT, STATE, ROOT as INBOX_ROOT, read, write, merge_message, digest, now
+            import fcntl
+            if p.path == '/api/inbox/check':
+                import subprocess
+                with open(OUT / 'monitor.lock', 'a') as lock:
+                    try:
+                        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                    except BlockingIOError:
+                        self.inbox_response({'message': 'A check is already running. Results will appear here automatically.'}, status=202)
+                        return
+                with open(OUT / 'monitor.log', 'ab') as log:
+                    subprocess.Popen([sys.executable, str(INBOX_ROOT / 'housing_monitor.py')], cwd=ROOT,
+                                     stdout=log, stderr=log, start_new_session=True)
+                self.inbox_response({'message': 'Background check started. This page will update automatically.'}, status=202)
+            else:
+                length = int(self.headers.get('Content-Length', '0'))
+                if not 0 < length <= 30000:
+                    self.send_error(400); return
+                try:
+                    value = json.loads(self.rfile.read(length))
+                    allowed = {x['id'] for x in read(INBOX_ROOT / 'september_listings.json')['listings']}
+                    if value.get('listing_id') not in allowed or not value.get('body', '').strip() or not value.get('sender', '').strip():
+                        raise ValueError('Missing property, sender or message')
+                    if value.get('at'):
+                        datetime.fromisoformat(value['at'].replace('Z', '+00:00'))
+                except (ValueError, TypeError, AttributeError):
+                    self.send_error(400); return
+                # Separate append-only manual store avoids racing a running collector.
+                import threading
+                with INBOX_IMPORT_LOCK:
+                    manual = read(OUT / 'manual-messages.json', {'messages': []})
+                    merge_message(manual, dict(id='manual-' + digest(value['listing_id'], value['sender'], value['body'], value.get('at')),
+                        source='sms-import', channel='SMS · manually added', direction='incoming', kind='message',
+                        listing_id=value['listing_id'], sender=value['sender'], body=value['body'], at=value.get('at'),
+                        date_label='Time not supplied', observed_at=now()))
+                    write(OUT / 'manual-messages.json', manual)
+                self.inbox_response({'saved': True})
+        elif p.path == "/api/toggle":
             from urllib.parse import parse_qs
             mid = (parse_qs(p.query).get("id") or [""])[0]
             if not mid:
@@ -2192,11 +2262,14 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     def log_message(self,fmt,*args): pass
 
+import threading
+INBOX_IMPORT_LOCK = threading.Lock()
+
 if __name__=="__main__":
     if "--serve" not in sys.argv:
         print(render_archive_redirect() if "--summer" in sys.argv else render_body()); sys.exit(0)
-    socketserver.TCPServer.allow_reuse_address = True
-    with socketserver.TCPServer(("",PORT),Handler) as httpd:
+    http.server.ThreadingHTTPServer.allow_reuse_address = True
+    with http.server.ThreadingHTTPServer(("127.0.0.1",PORT),Handler) as httpd:
         print(f"[palo_alto_server] http://localhost:{PORT}/",flush=True)
         try: httpd.serve_forever()
         except KeyboardInterrupt: print("\n[palo_alto_server] stopped")

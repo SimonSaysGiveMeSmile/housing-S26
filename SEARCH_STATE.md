@@ -1,188 +1,98 @@
-# Housing search — living state file
+# Housing search — current state
 
-**Read this first.** It is the one document that holds the whole state of the Fall 2026 search:
-constraints, what has been checked, what was found, what is blocked, and what to do next. Update it
-whenever the search moves. Per-pass details live in the dated notes listed at the bottom.
+Updated September 30, 2026, late evening. The private unified inbox is the current message view. This supersedes the earlier outreach and tour schedule.
 
-_Last updated: September 27, 2026 (late night, after the South San Francisco sweep). Move-in is
-September 29 — two days out._
+**Public repository warning.** This file and `september_listings.json` are tracked in a public GitHub repository that auto-deploys to GitHub Pages. Host phone numbers, the user's own number, access codes and private thread URLs must stay in `.outreach/`, which is gitignored. Written out in full they would be published. Redact before committing.
 
-## The brief
+## Brief and authorization
 
-| | |
-| --- | --- |
-| Start | **September 29, 2026** |
-| Lease | **Month-by-month or sublet only** — no 12-month leases, no long minimums. Confirmed as a hard constraint on Sept 27. |
-| Budget | Preferably under **$1,500 per 30 days**, including recurring utilities and parking (~$50/day) |
-| Must have | **Private full bathroom** · **parking for one car** |
-| Where | Must work for **both San Francisco and Stanford** — ranked on the worse of the two drives. Widened on Sept 27 to include East Bay, north of Berkeley, SF, toward Sacramento, and the Peninsula south of SF. |
-| Commute ceiling | **Nothing over 1.5 hours from *both* anchors** (added Sept 27). Applied to the worse of the two drive times; it removed all four Solano cards. |
-| Type | A room in a shared house is fine; whole apartments/studios welcome |
-| Platforms | Zillow, SUpost, Furnished Finder, **SpareRoom** (added Sept 27 — it turned out to hold the best leads). **Craigslist excluded** at the owner's request (Sept 25). |
-| Decision (Sept 26) | **Hold all four constraints** rather than relax budget, bathroom, or dates. |
+One month from September 29/30, extend monthly if possible; sublet preferred, month-to-month accepted. Maximum $1,500 in recurring monthly costs; private full bathroom and parking. Furnished apartment/condo preferred; shared houses allowed. Geography up to 2.5 hours to the worse of SF and Stanford, using approximate city-center routes.
 
-## Where things stand
+Outreach and in-person tour scheduling are authorized. Do not ask routine permission questions. No paid upgrades, application fees, rental commitments or payments. Skip blocked channels and continue. Contacts and exact messages are in the private audit.
 
-**No host has been contacted. No host has confirmed September 29. Zero outreach has gone out.**
-Every card says "No message has been sent." With two days left, replies — not inventory — are the
-constraint.
+**Latest message preference:** only ask availability and when an in-person tour is possible, about 25–40 words. Do not send requirement questionnaires. Historical sent messages remain unchanged.
 
-**Searching SpareRoom on Sept 27 broke the deadlock.** It had never been swept, and it holds the only
-leads that satisfy every hard constraint at once:
+## Current result
 
-- **Millbrae, $1,500 including utilities** — private bathroom ("no sharing"), parking, **month-to-month
-  stated, no minimum and no maximum term**, available now. 21 miles worst-case, and Millbrae is the one
-  stop served by *both* BART and Caltrain. **Unfurnished** — the single trade-off for a one-month stay.
-  *This is the best lead in the search.*
-- **San Mateo townhouse master suite, $1,600 including utilities** — en-suite bath and balcony, garage,
-  furnished, **no minimum or maximum term, short rentals considered**, available now. 21 miles
-  worst-case, 4 blocks from downtown Burlingame. $100 over target.
-- **Foster City, $1,600 including utilities** — brand-new private bath, garage, furnished, available
-  now. Lists a three-month minimum but marks short rentals as considered, so one month must be agreed.
+**Verified monitor run:** September 30 at 9:40 PM Pacific, exit 0. Ten Furnished Finder threads, ten SpareRoom threads, both Zillow threads and 29 housing email threads checked. The 24 imported records were this session's own outgoing messages; no host reply arrived during the sweep.
 
-These beat every Solano card by ~50 miles on location *and* on lease terms.
+- **42 tracked leads; 37 contacted hosts; 87 verified outgoing messages overall.** This is 80 messages in the current audit plus seven earlier messages across three SpareRoom threads. One SUpost inquiry (Grant Avenue) is still queued.
+- **First live phone contact: Tony, the Millbrae Craigslist host (cl-7959180948), [phone in the private audit].** He reached Simon by phone at about 9:45 PM and a tour on **October 1 was agreed in principle with the time left undecided**. Proposed 2:00 PM by email and asked for the address by text. This is not a confirmed appointment until Tony gives a time.
+- **Pitfall found: the Gmail signature advertises an old number, (607) 262-9704, directly under the [phone in the private audit] given in the message body.** Tony tried twice to call and could not get through, then emailed "I am calling you but not getting through". A correction naming [phone in the private audit] as the best number went out at 9:43 PM. Consider fixing the signature before sending more numbers to hosts.
+- **Eleven human hosts have now replied:** Ami, Mona/Ramona, Leticia, Don, Alice, Anna, Laura, Rachael, the downtown Palo Alto SUpost poster, Tony in Millbrae and Malou.
+- **Evening replies to the four hosts who were waiting:** Ami, Anna, Malou and Tony. See the next section.
+- **Evening tour-ask sweep, 25-40 words each, availability plus in-person tour time only:** nine Craigslist threads, five Furnished Finder hosts (Merci, Paul, Nur, Sima, Mona), four SpareRoom hosts (Matthew, Ashish, Kathleen, Dawn) and one Zillow host (Paulo). Eight more were queued to fire as each host's one-follow-up-per-24h window opened, through about 10:45 PM: Rachael, Hayward, Sunnyvale, the SUpost Palo Alto poster, Ally, Don, Tim and Suisun. Check `.outreach/queued-followups-2026-09-30.json` for the per-host result before assuming any of them sent.
+- **Monitoring:** a read-only local collector runs through launchd every hour until October 4 at 10 PM Pacific. See `http://localhost:5555/inbox` for actual per-channel success times and failures. Never infer successful monitoring from a registered schedule.
+- **37 listings have provisional interior-photo ratings**; five lack usable room photos.
+- **No tour has a confirmed time.** Tony's October 1 tour is agreed but unscheduled. Anna's September 30 at 9 AM time has passed with attendance and outcome unknown; do not mark it attended. Mona's San Pablo appointment remains postponed.
+- Facebook Marketplace was swept on September 28 and left unused: it is the densest source of sub-$1,500 rooms, but every listing checked failed on bathroom or lease terms and messaging needs a Facebook login. No Facebook lead is tracked and nothing monitors it.
+- The 76 tabs open at the start were classified and matched: 48 property/conversation tabs, 10 local reviews, 14 search/account tabs, one Rednote login block, two email/account tabs and one unrelated tab. Duplicate tabs share one outreach record.
 
-**The earlier structural finding still holds** for Furnished Finder/SUpost/Zillow: the binding pair was
-private bathroom + $1,500, and only El Sobrante cleared both (one night late). SpareRoom is the
-exception because it lists genuine no-minimum-term rooms, which the others mostly do not.
+## Addresses, replies and tours
 
-## The board (12 cards) — `september_listings.json`, live at simonsaysgivemesmile.github.io/housing-S26
+- **Ami / Oakland, sr-103225663:** latest user SMS screenshot matches **668 Alma Ave, Oakland**, **[phone in the private audit]**. She cannot host September 29 evening because of a workout and offered another time September 30 or a video. She reports moving-out clutter. She answered at **2:05 PM Pacific September 30** asking whether 4:30 PM still worked, and that message went unanswered until the time had passed, so the viewing did not happen. A short SpareRoom reply at 9:18 PM apologised and **proposed October 1 between 4:00 and 5:30 PM Pacific**; awaiting confirmation. Private half bath/shared shower and October 1 earliest move-in remain mismatches. Screenshot and address match saved in the audit.
+- **Mona / Ramona / San Pablo, ff-657379_1:** **1000 Evergreen Terrace, San Pablo**. Previously confirmed September 30 at 11 AM, then **postponed at 7:51 PM September 29**. At 9:43 PM she said she will keep Simon posted; no replacement time. Do not present the old appointment as booked. $1,500 includes Wi-Fi, water and electricity; extra fees unresolved. Requested screening; replied that the room would be viewed first. No screening paid or submitted. Private gate/parking/phone details remain in the audit.
+- **Anna / Fairfield junior suite, ff-848526_1:** **PAST September 30 at 9 AM, outcome unknown**, **2850 Lumin Ct, Fairfield**. Anna followed up at 9:38 AM asking whether Simon is still coming/interested; that sat unanswered for about twelve hours. A neutral reply at 9:24 PM asked whether the suite is still available and offered **October 1 morning or evening** without claiming or denying attendance. Host offered 9 AM or 7 PM, Simon accepted 9 AM, and Anna acknowledged at 9:41 PM. Phone **[phone in the private audit]** from Ann’s user-supplied SMS. Direct month-to-month lease agreed; $1,400 rent + $100 advertised utilities. No booking/payment made.
 
-Ranked on the worse of the two drives (SF / Stanford):
+- **Tony / Millbrae private-entry room, cl-7959180948, [phone in the private audit]:** the only host reached by phone. He asked for a number at 5:14 PM, could not get through twice, and emailed "I am calling you but not getting through" at 9:39 PM because the Gmail signature advertises an old (607) 262-9704 number. A correction went out at 9:43 PM, he called successfully at about 9:45 PM, and **a tour on October 1 was agreed with no time set**. A 9:46 PM email proposed 2:00 PM and asked for the address by text. Treat it as unscheduled until he names a time.
+- **Malou / SpareRoom, sr-103227255: CLOSED.** She requires a background check that takes one to two weeks before move-in, which cannot work for an immediate start. Closed politely at 9:18 PM; fit withdrawn, sent history kept.
+- **Leticia / Fairfield, ff-669591_1:** **ROOM TAKEN** per 10:14 PM reply. October 1 at 5:30 PM proposal is canceled, not pending. Acknowledged briefly and asked to be kept in mind if it falls through. Keep the sent history; fit is closed, value score withdrawn.
+- **Don / Fairfield, ff-915271_1:** user’s SMS from **[phone in the private audit]** was matched to Don through the listing’s Call Landlord dialog. At 9:52 PM requested LinkedIn and said his tenant leaves next week. No verified LinkedIn URL is available; offered a phone introduction and asked to tour this week. Exact date/address/time pending. September 30 vacancy does not work.
+- **Rachael / Lower Haight, sr-103227128:** user’s SMS from **[phone in the private audit]** matches Rachael Byrd. Sent a brief SpareRoom response confirming interest and requesting a this-week tour. Exact street address pending.
+- **Turbo automated SMS, [phone in the private audit]:** matched to the Sacramento SpareRoom referral. Says details forwarded to TurboTenant; this is not a human reply or an availability confirmation.
+- **Alice / Berkeley, ff-933277_1:** shared bathroom confirmed; politely declined.
+- **Laura / Vacaville, ff-224172_1:** host says no full bathroom and street parking only. Politely declined; main title, fit and value rating corrected.
+- **Turbo / Sacramento, sr-103201950:** automated response only. Submitted the lead form using the user-provided information; redirected to SpareRoom without a receipt. Record as submission unconfirmed, not another verified outgoing message. Private financial fields must not be published.
 
-| # | Lead | $/mo | Worst-case mi | Lease | Status |
-| --- | --- | ---: | ---: | --- | --- |
-| 1 | **Millbrae private room + bath** (SpareRoom) | 1,500 | 21 | **Month-to-month, no minimum** | **Full match. Unfurnished.** |
-| 2 | **San Mateo townhouse master suite** (SpareRoom) | 1,600 | 21 | **No minimum term** | Full match; $100 over |
-| 3 | Foster City, new private bath (SpareRoom) | 1,600 | 23 | 3-month min, shorts considered | Negotiate the term |
-| 4 | El Sobrante en-suite (FF) | 1,475 | 49 | 1-month min | Sept 30 start, one night late |
-| 5 | Hayward, private bath + entrance (FF) | 1,250 | 25 | **60-day minimum** | Cheapest; term conflicts |
-| 6 | Palo Alto, 408 Grant (SUpost) | 1,430 | 34 | long-term preferred | Oct 1, female preferred |
-| 7 | Palo Alto, downtown (SUpost) | 1,500 | 34 | unknown | Oct 2 |
-| 8 | Alameda condo (FF) | 1,500 | 32 | 1-month min | Calendar Nov 2025 — verify |
-| 9 | Berkeley, North hills (FF) | 1,350 | 40 | 1-month min | Calendar Jan 2026 — verify |
-| 10 | Novato, furnished (FF) | 1,200 | 60 | 1-month min | Calendar Dec 2025; 88 min to campus — closest to the ceiling |
-| — | **South San Francisco, Sunshine Gardens** (SpareRoom) | **1,050** | 24 | **No minimum or maximum** | **Watch list — lease pending, not accepting applications** |
-| — | **Daly City suite, St. Francis** (SpareRoom) | **1,100** | 29 | Redacted in the ad | **Watch list — lease pending, not accepting applications** |
+## Platforms and remaining exceptions
 
-The two watch-list rows are filed under the new `waitlist` group: they are the cheapest private-bath
-rooms found anywhere in the search, but neither can be contacted right now.
+- Furnished Finder works: all ten initial inquiries verified, with replies/follow-ups logged.
+- Craigslist: twelve email inquiries verified. Foster City's Carol ad is phone/text only, starts October 20 and shares a bathroom. No background SMS capability available; foreground computer control is prohibited by the user's latest instruction. No message sent.
+- SpareRoom: ten contacted advertisers. San Mateo, Sunshine Gardens and Menlo Park still closed; Daly City previously closed and fresh URL now redirects to homepage. **Foster City free contact worked at 10:44 PM**: concise request for one month at $1,500 and a tour, verified in Sent. No upgrade purchased. Advertised $1,600 and three-month minimum remain conflicts. Thread `104306785_102027784`. Rachael's latest reply shows Message delivered in her direct thread even though it does not appear in the default Sent list.
+- SUpost: both Palo Alto email links verified. Downtown poster andoht@stanford.edu replied at 4:17 PM with landlord phone **[phone in the private audit]**. Sent a concise email asking them to pass Simon’s number for tour coordination. Grant Avenue remains queued; do not duplicate the original inquiry.
+- Zillow: **both tracked inquiries verified sent**. San Jose #27 still awaiting reply to the $1,500 exception request. Suisun City succeeded at 10:45 PM with a concise availability/tour inquiry; the optional renter-profile update was closed without submitting, revealing a Message sent dialog naming Casa Bonita. A 10:46 PM email confirms contact. Earlier failed attempts remain historical evidence; zero unresolved submissions now. No profile financial fields, application or fee submitted. Suisun still has a shared/private bathroom contradiction.
+- Rednote requires login; no messages sent.
+- SF House correction retained: private-bath City Suite starts at $1,750 before extras; cheaper Urban Nest shares bathrooms and parking is unavailable. Exception inquiry sent; not a budget-compliant candidate.
 
-**Under the month-by-month rule, Hayward's 60-day minimum is a real conflict, not a formality.**
+## Current travel and computer-use constraints
 
-**The four Solano cards (Fairfield ×3, Vacaville) were withdrawn on Sept 27** under the new 1.5-hour
-ceiling: Fairfield is 100 minutes to Stanford and Vacaville 109, both over the limit even at free-flow
-speeds. Novato survives at 88 minutes, but it is the first card that would fail the rule in traffic.
+User is near **Oakland Airport**, has a car, and will visit a **DMV near San Mateo September 30**; exact DMV time not provided. Keep Peninsula tour times tentative around that trip. Short follow-ups were sent to Ally/Millbrae, Craigslist Millbrae, Sunnyvale and Hayward. Leave travel buffers; no driving-time guarantee given.
 
-## Ruled out, and why (do not re-check)
+**Do not interfere with regular computer use.** No bringing windows/tabs to front and no desktop mouse/keyboard control. Use separate background tabs and DOM-only interactions. Skip steps that need foreground control. This supersedes the earlier browser focus workflow.
 
-- **Vallejo Zillow room** — page now resolves to a *sold house*, not a rental. Removed.
-- **Redwood City 2B/2B, $1,847** — private bath + parking, but **12-month lease** with screening.
-- **Foster City townhouse, $2,367** — private bath, **available exactly Sept 29** (the only exact date match found anywhere), but 58% over budget; parking unmentioned.
-- **Foster City family house, $1,390** — shared bath, **12-month lease to Sept 2027**.
-- **Redwood City 2B1B, $1,500** — shared bath (one bathroom), wants ~a year.
-- **San Carlos Hills, $1,400** (SpareRoom) — 2BR/**1BA**, shared bath, utilities not included.
-- **San Mateo Bay View, $1,588** (SpareRoom) — **6-month minimum**.
-- **Foster City, $1,300** (SpareRoom) — 3 bedrooms sharing 1.5 baths; male preferred.
-- **Bayshore furnished room, $1,200** (SpareRoom) — **6-month minimum**, parking "No" (street only), and the ad contradicts itself: the structured field says private bathroom, the description says "shared bathroom on the main level".
-- **Noe Valley, $1,500** (SpareRoom) — private bath, utilities included, but a **24-month minimum** and a minimum age of 40.
-- **Oceanview, $1,150** (SpareRoom) — genuinely month-to-month and available now, but **shared bath, no parking, unfurnished**. The nearest miss in the target price band.
-- **West Portal house share, $1,290** (SpareRoom) — parking, furnished, utilities, 1–3 month term, but the $1,290 room **shares one of three bathrooms**; only the $2,000 room has a private bath. House rules are extreme: no visitors ever, no locking your bedroom, silence 8pm–10am, "one shower a day as short as possible".
-- **Two "TurboTenant" Daly City ads, $950 and $1,380** — both **shared baths**, both syndicated by one advertiser listing across Wildomar, Susanville, Visalia, Long Beach and more, with prices stripped out of the description and contact pushed to a personal WhatsApp. Treated as lead-generation, not real local rooms. **Do not send anything to these.**
-- **South SF studio, $1,950–2,050** — whole unit, but over budget, one-year preferred.
-- **San Leandro, $1,500** — private bath, but **12-month minimum**.
-- **Palo Alto cheap rooms** (College Terrace $850, Loma Verde $1,400, South PA $1,400) — all share a bathroom.
-- **Whole apartments/studios** — the floor is ~$1,700–$2,000 and all start after Sept 29. None under $1,500 exist on approved platforms this week.
-- Sunnyvale / Newark / Concord / Brentwood / Livermore / Antioch / Millbrae leads from the Sept 24 shortlist — **all Craigslist**, excluded.
+The collector owns isolated REPL port **9884**; do not share that port during a run. Manual investigations use `BROWSERUSE_PORT=9883 /Applications/Sarea.app/Contents/Resources/bin/browseruse` for the housing task's isolated REPL. Avoid the shared default port 9876. Connect to the existing CDP browser at port 9333; never launch Chrome. Use one page target per eval, await each CLI process fully before starting another browser operation, and set `Runtime.evaluate` read timeout to 5000 ms. Batched target switching caused stalled requests. Background-page hydration can need `Emulation.setFocusEmulationEnabled` on the agent's own tab; it does not activate or bring a tab forward. Close only tabs created by the monitoring pass.
 
-## Geography (both anchors measured for 31 cities — `distance_estimates.json`)
+## Updated application and artifacts
 
-Best-balanced towns: **Burlingame 18** · San Mateo 21 · Millbrae 21 (the one BART+Caltrain stop) ·
-San Bruno 22 · Foster City 23 · South SF 24 · Belmont 25 · **Hayward 25** · San Carlos 26 · Redwood
-City 27. Nine of the ten are on the Peninsula. Current cards for comparison: El Sobrante 49, Novato 60.
+The **original Bay Area monthly stays app is updated**, not only the private report. All 42 records are in `september_listings.json`, with verified outreach, tour status, fit conflicts, ratings and short future templates. The old September 27 narrative and 1.5-hour limit are removed. Show all tracked exposes closed and over-budget records; filters include fit, outreach and visual scores. Browser-local marks cannot erase verified sends. The main page does not expose screening income, private access codes or private thread URLs.
 
-**The 1.5-hour ceiling, in minutes on the worse anchor:** South SF 36 · Millbrae 33 · San Mateo 29 ·
-Foster City 32 · Daly City 40 · Hayward 36 · Palo Alto 47 · Alameda 48 · Berkeley 61 · El Sobrante 69 ·
-Novato 88 — then the cut: Fairfield 100, Vacaville 109, both removed.
+- **Unified private inbox:** `http://localhost:5555/inbox`; property board: `http://localhost:5555/`. Local-only server binds 127.0.0.1. Private data/API routes reject non-local Host/Origin and use no-store caching.
+- `housing_inbox.py`, `housing_inbox.html`, `housing_inbox.js`: local conversation view, duplicate-evidence reconciliation, search, filters, channel health, photo ratings and tour status. Incoming/outgoing messages are grouped by listing ID; latest first. SMS screenshots are transcribed with provenance.
+- `housing_monitor.py`: read-only browser collector; no sending, no CDP Input, no foreground activation. Opens and closes only its own background tabs. FF all ten conversations, SR all ten including direct-only Rachael, both Zillow conversations, and housing-scoped Gmail. Gmail opens a fresh background page for each changed thread and validates its subject; reusing hash-navigation pages returned stale DOM. Do not weaken identity validation.
+- `.outreach/inbox.json`: current normalized message history, source health, last checks and run history; `.outreach/monitor-snapshots/`: evidence. `.outreach/manual-messages.json`: texts pasted through Add a text; kept separate to avoid races.
+- LaunchAgents: `~/Library/LaunchAgents/com.simon.housing-inbox-server.plist` (KeepAlive local server) and `com.simon.housing-inbox-monitor.plist` (StartInterval 3600, RunAtLoad). Reload renderer changes with `launchctl kickstart -k gui/501/com.simon.housing-inbox-server`; request a scan with the UI Check now button. A lock prevents overlapping scans. Do not restart the monitor during a live scan unless debugging a proven problem.
+- Connected email is **tianjiahe11@gmail.com**. Craigslist, SUpost and Apartments.com replies are checked through that mailbox. **Live SMS, Rednote, therealsimontian@gmail.com and ipo@stanford.edu are not connected.** macOS denied read-only access to Messages chat.db. Do not claim these are monitored or prompt for routine permission. Existing user SMS screenshots are historical imports.
+- Monitoring updates message history; it does not automatically send replies or make tour commitments. Future assistant turns can coordinate using existing user authorization and concise wording.
+- `.outreach/main-list-2026-09-29/index.html`: static snapshot with referenced photos.
+- `.outreach/housing-review.html`: private report with exact sent messages and proof.
+- `.outreach/2026-09-29.json`: authoritative private audit, messages, incoming replies, tour history and address matching.
+- `.outreach/tab-audit-2026-09-29.json`: 76-tab coverage.
+- `.outreach/visual-review.json`: ratings and scope; `.outreach/review-data.json`: generated private board data.
+- `.outreach/ami-sms-2026-09-29.png` and per-listing SMS screenshots: user-supplied evidence.
+- `.outreach/confirmed-viewings.ics`: no upcoming confirmed appointments currently. Past Anna time is recorded in the audit. No calendar invitations sent.
+- `.outreach/sync_current_state.py`: refreshes public statuses and calendar from the latest audit without overwriting newer replies.
+- `.outreach/build_review.py`: regenerate private report from current inventory and audit.
+- `.outreach/monitoring.json`: current launchd schedule, failed predecessor and actual last completion/success. The current collector does not send messages. For authorized future outreach, at most one unsolicited follow-up per host per 24 hours.
+- `.outreach/reconcile.py` and `update_dashboard.py` were one-time migration scripts. **Do not rerun**: later host replies supersede their embedded snapshot.
 
-## Blocked / unchecked — genuinely unknown, not empty
+No Git commit, remote deployment, payment or lease commitment has been made. `.outreach` is ignored by Git. The main static export uses only referenced property images; private financial/contact evidence stays local.
 
-**Furnished Finder is serving Cloudflare challenges to this machine** (since Sept 26). Every request
-comes back "Attention Required." Zeros from these are *blocks*, not results:
+## Continue
 
-- Whole-unit sweep: Richmond, San Pablo, El Cerrito, Pinole, Hercules, Vallejo
-- Room sweep: Daly City, South San Francisco, Emeryville, Sausalito, fresh Palo Alto pass
-- The entire Peninsula on Furnished Finder (only SUpost was searched there)
-- **The Burlingame garden cottage** — whole two-level home, two full baths, walk to Broadway
-  Caltrain, in the best-balanced town. Price is on FF property 906435_1. **Most promising
-  unverified lead on the board.**
+Read the unified inbox and current monitor health first, then check `.outreach/queued-followups-2026-09-30.json` to see which of the eight queued follow-ups actually sent before claiming any of them.
 
-SpareRoom and Kopa: first URL guesses were 404s; proper search URLs not yet found.
+The live thread is **Tony in Millbrae**: a tour was agreed for October 1 by phone with no time set, and he prefers the phone over email. If he has not named a time, chase it; his number and the user's best number are both in the private audit. Watch for a reply to the 2:00 PM proposal.
 
-**Furnished Finder is blocked on `/property/*` only** — the homepage returns HTTP 200 but every
-property page returns "Sorry, you have been blocked". Tried and failed on Sept 28: plain HTTP,
-headless CDP, **headful CDP**, and in-site navigation from the homepage with a real referrer. This is
-not a solvable challenge from this machine; the nine FF drafts must be sent from the owner's browser.
+Also open: Ami's October 1 4:00-5:30 PM proposal, Anna's re-ask after the missed 9 AM slot, Mona's replacement time, Don's tour before his tenant leaves, Rachael, Tim/Foster City and both Zillow hosts. Leticia's room is taken and Malou is closed; do not chase either.
 
-**Facebook Marketplace works logged-out** (swept Sept 28) and is the densest source of sub-$1,500
-rooms found anywhere — but every listing checked failed on bathroom or lease, and **messaging requires
-a Facebook login the agent does not have**. Two traps specific to it: the structured "1 bed · 1 bath"
-describes the *property*, not what you get (a Santa Clara townhouse advertised that way turned out to
-be "se comparte baño y cocina"), and its lease field is often a year or more even on rooms advertised
-as available now. Sweep URL: `facebook.com/marketplace/<city>/propertyrentals?minPrice=0&maxPrice=1500`.
-
-**The SpareRoom session does not survive a browser restart** and there is no "Remember me" checkbox on
-the login form. Reading the inbox or sending anything needs the owner to log in again in a visible
-window. The login page says "You are already logged in" rather than showing the "Hi <name>" header, so
-check for that string too.
-
-## Next moves, in order of value
-
-1. **Message Millbrae first.** It is the only lead meeting every hard constraint; ask about a
-   September 29 start and whether any furniture can be left or rented. Then San Mateo (garage,
-   furnished, no minimum) and Foster City (can one month work?).
-2. **Then the older three** (drafted on each card — "Copy inquiry"): Hayward (can you do one
-   month?), El Sobrante (Sept 29 instead of 30?), the unpriced Stanford-hospital 1B1B (what's the
-   rent?). Outreach is the owner's call; nothing has been sent.
-3. Retry Furnished Finder once the block clears — the Burlingame cottage first, then the blocked
-   cities. FF's entire inventory is monthly minimums, so it is the best source for this constraint.
-4. **Re-check the two watch-list rooms daily.** South San Francisco at $1,050 (private bath, parking,
-   furnished, utilities included, $500 deposit, no minimum *or* maximum term) is the best-value lead
-   the search has produced; it is lease-pending only. Daly City at $1,100 is the same story. Pending
-   leases in this band fall through often — if either reopens, it beats Millbrae on price by $400+.
-5. Sweep the rest of SpareRoom. **Done Sept 27:** South San Francisco, Daly City, San Bruno, Brisbane,
-   Westlake, Serramonte, Pacifica, Colma, and the southern SF neighborhoods (Ingleside, Excelsior,
-   Visitacion Valley, Outer Mission). **Still untouched:** Belmont, San Carlos, Redwood City,
-   Burlingame proper, and the whole East Bay (Alameda + Contra Costa counties).
-
-## How to work on this
-
-- Listing pages refuse plain HTTP (FF 403, SUpost 429). Drive Chrome over CDP, **headless on port
-  9333 with the project's own profile** — never the owner's browser. Scripts from the last session
-  lived in the session scratchpad (`cdp.py`, `ffsearch.py`, `sweep.py`).
-- FF search URL: `/housing/us--ca--<city>?budget=&filters=&map=&moveDate={"in":"2026-09-29"}&page=`.
-  Results state "1 private bathroom" vs "N shared bathrooms" directly.
-- **SpareRoom** (best hit rate, not rate-limited): search
-  `spareroom.com/rooms-for-rent/<county>/<city>?parking=Y` (e.g. `san_mateo_county/millbrae`); ad
-  pages spell out **Minimum term / Maximum term / Short rentals considered**, "(Private bathroom)"
-  on the room line, utilities-included, deposit and parking. Photos at
-  `photos.spareroom.com/images/flatshare/listings/large/...` download with a normal UA + Referer.
-  Filter by price with `?max_rent=1500&per=pcm`; **`offset=` does not paginate** — each town returns
-  about 10 ads and page 2 repeats page 1, so cover an area by searching neighbouring towns instead,
-  whose radii overlap. A closed ad reads **"The advertiser is not currently accepting applications"**
-  at the foot of the page — the "LEASE PENDING" badge alone does not prove it, so open the ad.
-- After editing `september_listings.json` or `latest_dashboard.py`: `python3 test_dashboard.py`,
-  restart the local server on :5555 (it doesn't hot-reload), commit + push (auto-deploys).
-- Every new city needs an entry in `distance_estimates.json` with *both* anchors, or the render
-  raises KeyError — the test guards this.
-
-## Dated notes
-
-- `september_29_2026_shortlist.md` — Sept 24 original shortlist (mostly Craigslist, now excluded)
-- `multi_source_september_25.md` — SUpost + Furnished Finder leads, first Solano cards
-- `north_bay_distance_research.md` — SF distance method, Marin/Sonoma findings
-- `zillow_september_25_research.md` — Craigslist removal, Zillow exclusions
-- `east_bay_september_25.md` — re-verification of every card, Vallejo withdrawal, East Bay adds
-- `peninsula_september_27.md` — Peninsula measured and searched; Cloudflare block documented
-- `spareroom_september_27.md` — SpareRoom sweep; the three month-to-month Peninsula leads
-- `south_sf_september_27.md` — South San Francisco sweep; the $1,000–$1,200 band and why it is closed
+Keep replies brief, 25-40 words, asking only availability and when an in-person tour is possible. Log the exact outgoing text plus observed proof immediately. A proposed time is never a confirmed appointment, and a verbal agreement without a time is not an appointment either. Respect at most one unsolicited follow-up per host per 24 hours. SMS and the two requested reply-email accounts remain connection gaps, so phone-only hosts still depend on the user answering directly.

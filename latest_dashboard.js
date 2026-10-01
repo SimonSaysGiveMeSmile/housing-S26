@@ -1,6 +1,6 @@
 (() => {
   const cards = [...document.querySelectorAll('.latest-card')];
-  const ids = ['search', 'budget', 'source', 'region', 'maxdistance', 'term', 'parking', 'furnished', 'sort'];
+  const ids = ['search', 'budget', 'source', 'region', 'maxdistance', 'term', 'parking', 'furnished', 'fit', 'outreach', 'sort'];
   const controls = Object.fromEntries(ids.map(id => [id, document.getElementById(id)]));
   const contactKey = 'housingContacted';
   let contacts = {};
@@ -12,21 +12,27 @@
   function filter() {
     const q = controls.search.value.trim().toLowerCase();
     let shown = 0;
-    const sortKey = {price: 'price', distance: 'distance', stanford: 'stanford', balanced: 'balanced', recommended: 'rank'}[controls.sort.value];
+    const sortKey = {price: 'price', distance: 'distance', stanford: 'stanford', balanced: 'balanced', recommended: 'rank', priority: 'priority', clean: 'clean', modern: 'modern', value: 'value'}[controls.sort.value];
+    const direction = ['clean', 'modern', 'value'].includes(sortKey) ? -1 : 1;
     const sorted = [...cards].sort((a, b) =>
-      Number(a.dataset[sortKey]) - Number(b.dataset[sortKey]) || Number(a.dataset.rank) - Number(b.dataset.rank));
+      direction * (Number(a.dataset[sortKey]) - Number(b.dataset[sortKey])) || Number(a.dataset.rank) - Number(b.dataset.rank));
     for (const card of sorted) {
       const d = card.dataset;
       const term = controls.term.value;
       const timingGroups = {start: ['monthly', 'one_month', 'confirm'], monthly: ['monthly', 'one_month'], active: ['monthly', 'one_month', 'confirm', 'later'], review: ['monthly', 'one_month', 'confirm', 'later', 'unverified', 'waitlist']};
-      const timingFits = timingGroups[term] ? timingGroups[term].includes(d.group) : d.group === term;
+      const timingFits = term === 'review' || (timingGroups[term] ? timingGroups[term].includes(d.group) : d.group === term);
       const source = controls.source.value;
       const sourceFits = source === 'all' || d.source === source;
       const regionFits = controls.region.value === 'all' || d.region === controls.region.value;
       const distanceFits = controls.maxdistance.value === 'all' || Number(d.distance) <= Number(controls.maxdistance.value);
       const parking = controls.parking.value;
       const parkingFits = parking === 'all' || (parking === 'offstreet' ? ['offstreet', 'driveway'].includes(d.parking) : d.parking === parking);
+      const fit = controls.fit.value;
+      const fitMatches = fit === 'all' || (fit === 'viable' ? ['candidate', 'conditional'].includes(d.fit) : fit === d.fit);
+      const outreach = controls.outreach.value;
+      const outreachMatches = outreach === 'all' || (outreach === 'sent' ? d.verified === '1' : d.outreach === outreach);
       const visible = Number(d.price) <= Number(controls.budget.value) && timingFits && parkingFits && sourceFits && regionFits && distanceFits
+        && fitMatches && outreachMatches
         && (controls.furnished.value === 'all' || d.furnished === controls.furnished.value)
         && (!q || d.text.includes(q));
       card.hidden = !visible;
@@ -46,6 +52,8 @@
     controls.term.value = 'start';
     controls.parking.value = 'all';
     controls.furnished.value = 'all';
+    controls.fit.value = 'viable';
+    controls.outreach.value = 'all';
     controls.sort.value = 'balanced';
   }
 
@@ -66,8 +74,9 @@
   }
 
   for (const card of cards) {
-    if (Object.prototype.hasOwnProperty.call(contacts, card.dataset.id)) paint(card, Boolean(contacts[card.dataset.id]));
+    if (card.dataset.verified !== '1' && Object.prototype.hasOwnProperty.call(contacts, card.dataset.id)) paint(card, Boolean(contacts[card.dataset.id]));
     card.querySelector('.mark-contact').addEventListener('click', () => {
+      if (card.dataset.verified === '1') return;
       const on = card.dataset.contacted !== '1';
       contacts[card.dataset.id] = on;
       paint(card, on);
@@ -96,6 +105,9 @@
   }
   for (const control of Object.values(controls)) control.addEventListener(control.type === 'search' ? 'input' : 'change', filter);
   document.getElementById('reset').addEventListener('click', () => { reset(); filter(); });
+  document.getElementById('all-tracked').addEventListener('click', () => {
+    reset(); controls.budget.value = '999999'; controls.term.value = 'review'; controls.fit.value = 'all'; filter();
+  });
   document.getElementById('best').addEventListener('click', () => { reset(); controls.term.value = 'monthly'; filter(); });
   document.getElementById('north').addEventListener('click', () => {
     reset();
@@ -108,7 +120,9 @@
     button.addEventListener('click', () => {
       reset();
       controls.source.value = button.dataset.sourcePreset;
-      controls.term.value = 'active';
+      controls.term.value = 'review';
+      controls.fit.value = 'all';
+      controls.budget.value = '999999';
       filter();
       document.querySelector('.filterbar').scrollIntoView({block: 'start', behavior: 'smooth'});
     });

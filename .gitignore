@@ -9,3 +9,7 @@ __pycache__/
 .DS_Store
 site/
 .artifact-board/
+.outreach/
+
+.agents/
+.claude/
