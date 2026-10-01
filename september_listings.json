@@ -2626,7 +2626,7 @@
     "previous_outgoing_messages": 7,
     "pending_email_verification": 0,
     "submission_unconfirmed": 0,
-    "confirmed_tours": 0,
+    "confirmed_tours": 1,
     "total_hosts_contacted": 40,
     "tracked_leads": 45,
     "total_verified_outgoing_messages": 107,
@@ -2638,10 +2638,10 @@
   "tours_public": [
     {
       "listing_id": "sr-103225663",
-      "status": "awaiting_confirmation",
-      "when": "2026-10-01T16:00:00-07:00",
+      "status": "confirmed",
+      "when": "2026-10-02T16:00:00-07:00",
       "area": "668 Alma Ave, Oakland",
-      "note": "September 29 at 7 PM unavailable; September 30 at 4:30 PM lapsed unanswered. Proposed October 1 between 4:00 and 5:30 PM through SpareRoom; host confirmation pending. Shared shower and October 1 earliest start remain mismatches."
+      "note": "CONFIRMED for October 2 at 4:00 PM. At 2:08 PM on October 1 Ami said the room is still available and tomorrow after 4-4:30 works; Simon confirmed 4:00 PM at 3:12 PM and asked her to confirm the address. Shared shower and East Bay location remain mismatches."
     },
     {
       "listing_id": "ff-657379_1",

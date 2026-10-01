@@ -13,6 +13,7 @@ Updated October 1, 2026, 10 AM. The private unified inbox is the current message
 - **Rednote:** the user approved public comments with their WeChat ID. Posted at 12:39 PM on the Palo Alto $1,500 October sublet and the Woodside private-bath room. Any reply arrives on WeChat or Rednote, and neither is monitored.
 - **Sima:** at 11:07 AM she said she is showing the room to another person at 2 PM and will update this evening. The October 2 time is not confirmed.
 - **Facebook Marketplace:** four short asks were sent this morning (Millbrae $1,500, Menlo Park $1,300 and $1,100, Mountain View $1,400). Proof is in the private audit folder.
+- **CONFIRMED: Ami (Oakland, SpareRoom sr-103225663), October 2 at 4:00 PM.** At 2:08 PM she said the room is still available and tomorrow after 4-4:30 works, and offered a video this afternoon as an alternative. Simon confirmed 4:00 PM at 3:12 PM and asked her to confirm the address. The calendar event is updated and no longer tentative. Shared shower and the East Bay location remain mismatches.
 - **3:15 PM, more modern places near SFO (photos checked).** Facebook asks sent and confirmed:
   - a renovated private unit in Westborough, South SF: private entrance, in-unit washer and dryer, AC, $1,950 all-in, unfurnished
   - a private room with its own bathroom and walk-in closet in a San Bruno apartment complex with a pool, $1,850, unfurnished, available through November 14
