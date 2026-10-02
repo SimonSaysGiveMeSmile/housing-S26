@@ -13,6 +13,22 @@ Updated October 1, 2026, 10 AM. The private unified inbox is the current message
 - **Rednote:** the user approved public comments with their WeChat ID. Posted at 12:39 PM on the Palo Alto $1,500 October sublet and the Woodside private-bath room. Any reply arrives on WeChat or Rednote, and neither is monitored.
 - **Sima:** at 11:07 AM she said she is showing the room to another person at 2 PM and will update this evening. The October 2 time is not confirmed.
 - **Facebook Marketplace:** four short asks were sent this morning (Millbrae $1,500, Menlo Park $1,300 and $1,100, Mountain View $1,400). Proof is in the private audit folder.
+- **9:45 PM: search widened to Daly City and Pacifica at the user's request (photos checked).**
+  - **Two Westlake (Daly City) studios pass but are not contacted yet:** Craigslist hides the reply address behind a captcha.
+    - in-law studio, $1,700 utilities included (Craigslist 7965013188): hardwood floors, granite kitchenette, marble shower, separate entrance
+    - newly remodeled studio, $1,975 (Craigslist 7969616634): new bathroom and floors, kitchenette, private entrance. The listing mentions a $35 application fee; don't pay it.
+  - **Skipped:**
+    - a Pacifica room with private living room and bathroom, $1,995: staged real-estate photos
+    - a Daly City downstairs unit: dated bathroom
+    - a Daly City attached-bath room: no photos of the room itself
+    - a Daly City in-law with no kitchen
+    - a "luxury home" room with a shared bathroom
+    - a studio not free until November 1
+    - female-only rooms
+    - whole houses at $1,450–1,500 (likely scams)
+  - **Also noted, not contacted (Furnished Finder needs profile contact info):**
+    - Daly City room with private bathroom, $1,600, "fast responder"
+    - a Zillow Daly City studio at $1,400, listed a day ago
 - **6:44 PM: the downtown South SF Craigslist room (7962460497, $1,250, private bathroom) can do a viewing tomorrow late evening.** I proposed Thursday, October 2 at 7:30 PM in the same email thread and asked for the address. It's on the calendar as tentative. Photos look decent (newer house, bright room), but it is backup tier.
 - **CONFIRMED: Ami (Oakland, SpareRoom sr-103225663), October 2 at 4:00 PM.** At 2:08 PM she said the room is still available and tomorrow after 4-4:30 works, and offered a video this afternoon as an alternative. Simon confirmed 4:00 PM at 3:12 PM and asked her to confirm the address. The calendar event is updated and no longer tentative. Shared shower and the East Bay location remain mismatches.
 - **3:15 PM, more modern places near SFO (photos checked).** Facebook asks sent and confirmed:
