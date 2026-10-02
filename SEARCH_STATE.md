@@ -13,6 +13,8 @@ Updated October 1, 2026, 10 AM. The private unified inbox is the current message
 - **Rednote:** the user approved public comments with their WeChat ID. Posted at 12:39 PM on the Palo Alto $1,500 October sublet and the Woodside private-bath room. Any reply arrives on WeChat or Rednote, and neither is monitored.
 - **Sima:** at 11:07 AM she said she is showing the room to another person at 2 PM and will update this evening. The October 2 time is not confirmed.
 - **Facebook Marketplace:** four short asks were sent this morning (Millbrae $1,500, Menlo Park $1,300 and $1,100, Mountain View $1,400). Proof is in the private audit folder.
+- **Oct 2, 11:32 AM: Ami's 4 PM Oakland viewing is off; the user is in Palo Alto.** I asked Ami in the SpareRoom thread whether Saturday or Sunday works instead. Her calendar event is marked rescheduling.
+- **Oct 2: Sima never confirmed a new time**; her calendar event is marked not confirmed. All viewing events now link to the original post and its photos.
 - **11:27 PM: South SF room (Craigslist 7962460497) CONFIRMED for Friday, October 2 at 7:30 PM.** The host sent the address and asks for a call 30 minutes before; the number is in the Craigslist email thread. I confirmed in the same thread; the calendar event is now confirmed.
 - **11:27 PM: Manas (San Bruno apartment-complex room, private bathroom, $1,850) can show it any time after 5 PM Friday.** It is only free until Nov 15 ("we can figure out something"). I proposed 6:15 PM in the same Messenger thread and asked for the address; tentative on the calendar.
 - **11:43 PM: Manas sent his San Bruno address, accepting 6:15 PM Friday; I confirmed in the same thread.**
