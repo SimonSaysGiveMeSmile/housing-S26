@@ -13,6 +13,9 @@ Updated October 1, 2026, 10 AM. The private unified inbox is the current message
 - **Rednote:** the user approved public comments with their WeChat ID. Posted at 12:39 PM on the Palo Alto $1,500 October sublet and the Woodside private-bath room. Any reply arrives on WeChat or Rednote, and neither is monitored.
 - **Sima:** at 11:07 AM she said she is showing the room to another person at 2 PM and will update this evening. The October 2 time is not confirmed.
 - **Facebook Marketplace:** four short asks were sent this morning (Millbrae $1,500, Menlo Park $1,300 and $1,100, Mountain View $1,400). Proof is in the private audit folder.
+- **11:27 PM: South SF room (Craigslist 7962460497) CONFIRMED for Friday, October 2 at 7:30 PM.** The host sent the address and asks for a call 30 minutes before; the number is in the Craigslist email thread. I confirmed in the same thread; the calendar event is now confirmed.
+- **11:27 PM: Manas (San Bruno apartment-complex room, private bathroom, $1,850) can show it any time after 5 PM Friday.** It is only free until Nov 15 ("we can figure out something"). I proposed 6:15 PM in the same Messenger thread and asked for the address; tentative on the calendar.
+- **Friday evening route:** Ami in Oakland at 4:00 PM (confirmed), then San Bruno at 6:15 PM (proposed), then downtown South SF at 7:30 PM (confirmed, about 10 minutes away).
 - **9:45 PM: search widened to Daly City and Pacifica at the user's request (photos checked).**
   - **Two Westlake (Daly City) studios pass but are not contacted yet:** Craigslist hides the reply address behind a captcha.
     - in-law studio, $1,700 utilities included (Craigslist 7965013188): hardwood floors, granite kitchenette, marble shower, separate entrance
