@@ -13,6 +13,7 @@ Updated October 1, 2026, 10 AM. The private unified inbox is the current message
 - **Rednote:** the user approved public comments with their WeChat ID. Posted at 12:39 PM on the Palo Alto $1,500 October sublet and the Woodside private-bath room. Any reply arrives on WeChat or Rednote, and neither is monitored.
 - **Sima:** at 11:07 AM she said she is showing the room to another person at 2 PM and will update this evening. The October 2 time is not confirmed.
 - **Facebook Marketplace:** four short asks were sent this morning (Millbrae $1,500, Menlo Park $1,300 and $1,100, Mountain View $1,400). Proof is in the private audit folder.
+- **Oct 3, 9:56 AM: Jonathan's 11 AM viewing cancelled at the user's request** (the studio is inside a family house, which the user doesn't want). A brief, neutral cancellation went in the same thread; the calendar events are marked cancelled.
 - **Oct 2, 8:11 PM: told Manas the user is interested** (user approved by email). Asked in the same thread about month-to-month past Nov 15, earliest move-in, deposit and anything to sign.
 - **Oct 2, 7:58 PM: after both viewings the user rated San Bruno (Manas, $1,850, private bath, apartment complex) much better than the South SF room ($1,250).** Open question before committing: Manas said the room is available until Nov 15 ("we can figure out something").
 - **Oct 2, 3:05 PM: Jonathan CONFIRMED Saturday, October 3 at 11:00 AM** at his Westborough studio in South SF. I confirmed in the same thread; the calendar event is confirmed.
