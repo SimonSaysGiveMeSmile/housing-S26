@@ -4,6 +4,14 @@ Updated October 1, 2026, 10 AM. The private unified inbox is the current message
 
 **Public repository warning.** This file and `september_listings.json` are tracked in a public GitHub repository that auto-deploys to GitHub Pages. Host phone numbers, the user's own number, access codes and private thread URLs must stay in `.outreach/`, which is gitignored. Written out in full they would be published. Redact before committing.
 
+## October 3 update (3:50 PM)
+
+- **Brief tightened by the user: apartments and condos only, no houses.** That excludes rooms, in-law studios, ADUs and backyard units on a house lot, however modern. Dropped: Bertha (South SF in-law studio), the South SF $1,250 room, the San Mateo private-entrance suite (7972508997) and backyard unit (7970031696), Ami (Oakland) and Sima (El Sobrante). The building type of the San Mateo renovated studio (7969466970) is unconfirmed, and it hasn't replied.
+- **The only live lead is Manas (San Bruno apartment-complex room, about $1,850).** Still waiting on his answer about going past Nov 15, and on the user's preferred month-to-month length.
+- **Two sweeps today found nothing that passes.** The first, at noon, covered six platforms and about 600 listings. The second, at 3 PM, was apartments and condos only: Craigslist type-filtered, Zillow, Apartments.com, HotPads, Zumper, Airbnb, Facebook, Rednote, Furnished Finder and SpareRoom, about 1,100 listings. Near misses: a new 2025 building at 732 El Camino Real, San Bruno (studio $1,799, likely income-restricted and "fully leased"); Tradewind Surf, Foster City ($1,975, dated 1960s interior, utilities extra); and a South SF luxury-apartment room on Rednote (daily rate of about $2,300 a month, only until Oct 25).
+- **Platform inboxes:** no host replies on Furnished Finder, SpareRoom, Rednote, Facebook or Gmail since the morning. Rednote's Oct 1 commented posts have been deleted. Airbnb is not logged in on the agent browser.
+- The user has been emailed a summary in the Housing update thread.
+
 ## October 1 update (12:40 PM)
 
 - **Brief updated by the user at 2:40 PM:** a unit or room in an **apartment building**, **under $2,000 a month all-inclusive**, **month-to-month**. Interiors must look **modern and decent in the photos**, checked before contacting, and **no old houses**. Airbnb monthly stays are acceptable.
