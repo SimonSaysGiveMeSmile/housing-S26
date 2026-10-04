@@ -4,6 +4,10 @@ Updated October 1, 2026, 10 AM. The private unified inbox is the current message
 
 **Public repository warning.** This file and `september_listings.json` are tracked in a public GitHub repository that auto-deploys to GitHub Pages. Host phone numbers, the user's own number, access codes and private thread URLs must stay in `.outreach/`, which is gitignored. Written out in full they would be published. Redact before committing.
 
+## October 4 update (4:05 AM)
+
+- **Manas: told him the user needs month-to-month with no fixed end date**, as the user asked. Sent in the existing Facebook thread and verified in the thread. He hasn't yet answered whether the room can continue past Nov 15. No other host replies overnight.
+
 ## October 3 update (3:50 PM)
 
 - **Brief tightened by the user: apartments and condos only, no houses.** That excludes rooms, in-law studios, ADUs and backyard units on a house lot, however modern. Dropped: Bertha (South SF in-law studio), the South SF $1,250 room, the San Mateo private-entrance suite (7972508997) and backyard unit (7970031696), Ami (Oakland) and Sima (El Sobrante). The building type of the San Mateo renovated studio (7969466970) is unconfirmed, and it hasn't replied.
