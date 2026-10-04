@@ -7,6 +7,7 @@ Updated October 1, 2026, 10 AM. The private unified inbox is the current message
 ## October 4 update (4:05 AM)
 
 - **Manas: told him the user needs month-to-month with no fixed end date**, as the user asked. Sent in the existing Facebook thread and verified in the thread. He hasn't yet answered whether the room can continue past Nov 15. No other host replies overnight.
+- **Oct 4, 10:52 AM: Manas replied:** he'll talk to the leasing office (closed yesterday) about next steps for month-to-month. Nothing needed from the user yet; the user has been emailed.
 - **Oct 4, 9:06 AM: Bertha (South SF in-law studio, already dropped as a house) says it's rented.** Closed; no reply needed.
 
 ## October 3 update (3:50 PM)
