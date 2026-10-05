@@ -8,7 +8,7 @@ import urllib.request
 import urllib.error
 from http.server import ThreadingHTTPServer
 from housing_inbox import merge_message, visible_messages, payload
-from housing_monitor import parse_date, FF_EXTRACT, SR_EXTRACT, ZILLOW_EXTRACT, GMAIL_EXTRACT, GMAIL_ROWS, GMAIL_EXPAND, NORMALIZE_JS
+from housing_monitor import parse_date, parse_facebook_labels, Collector, FACEBOOK_EXTRACT, FF_EXTRACT, SR_EXTRACT, ZILLOW_EXTRACT, GMAIL_EXTRACT, GMAIL_ROWS, GMAIL_EXPAND, NORMALIZE_JS
 from palo_alto_server import Handler
 
 
@@ -59,12 +59,29 @@ class InboxTests(unittest.TestCase):
 
     def test_every_tracked_property_remains_accessible(self):
         p = payload()
-        self.assertEqual(len([t for t in p['threads'] if t.get('url')]), 42)
+        from latest_dashboard import load_listings
+        self.assertEqual({t['id'] for t in p['threads'] if t.get('url')},
+                         {item['id'] for item in load_listings()['listings']})
         self.assertIn('sms', p['sources'])
+
+    def test_facebook_messages_keep_direction_and_stable_identity(self):
+        first = 'Enter, Message sent 3:40 PM by You: Is monthly renewal possible?'
+        host = 'Enter, Message sent 3:45 PM by Manas: I am checking.'
+        messages = parse_facebook_labels([first, first, host, 'Enter, Message sent 3:45 PM by Manas'])
+        self.assertEqual(len(messages), 2)
+        self.assertEqual([m['direction'] for m in messages], ['outgoing', 'incoming'])
+        self.assertIsNone(messages[0]['at'])
+        later = parse_facebook_labels([first.replace('3:40 PM', 'Yesterday 3:40 PM')])[0]
+        self.assertEqual(messages[0]['source_id'], later['source_id'])
+
+    def test_redwood_reply_matches_even_without_quoted_original(self):
+        collector = Collector({}, {}, None)
+        self.assertEqual(collector.match_email('Re: SUpost - response: Private bedroom and bathroom available in 2bd/2ba - $1800',
+                                              'Yes, monthly renewal works.', []), 'su-130001643')
 
     @unittest.skipUnless(shutil.which('node'), 'Node is needed for JavaScript syntax validation')
     def test_browser_extractors_compile_before_running(self):
-        for expression in [FF_EXTRACT, SR_EXTRACT, ZILLOW_EXTRACT, GMAIL_EXTRACT, GMAIL_ROWS, GMAIL_EXPAND, NORMALIZE_JS]:
+        for expression in [FACEBOOK_EXTRACT, FF_EXTRACT, SR_EXTRACT, ZILLOW_EXTRACT, GMAIL_EXTRACT, GMAIL_ROWS, GMAIL_EXPAND, NORMALIZE_JS]:
             with self.subTest(expression=expression[:40]):
                 result = subprocess.run(['node', '-e', 'new Function(process.argv[1])', expression], capture_output=True, text=True)
                 self.assertEqual(result.returncode, 0, result.stderr)

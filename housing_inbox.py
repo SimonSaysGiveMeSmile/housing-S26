@@ -52,7 +52,7 @@ def timestamp(value):
 
 
 def channel_for(listing_id):
-    return {'ff': 'Furnished Finder', 'sr': 'SpareRoom', 'cl': 'Craigslist · email',
+    return {'fb': 'Facebook Messenger', 'ff': 'Furnished Finder', 'sr': 'SpareRoom', 'cl': 'Craigslist · email',
             'su': 'SUpost · email', 'zi': 'Zillow', 'apt': 'Apartments.com · email'}.get(listing_id.split('-')[0], 'Email')
 
 

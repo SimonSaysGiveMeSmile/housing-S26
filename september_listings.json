@@ -1,7 +1,107 @@
 {
-  "researched": "September 29, 2026",
-  "move_in": "September 29, 2026 · September 30 also requested",
+  "researched": "October 5, 2026",
+  "move_in": "As soon as agreed · ongoing month-to-month, no fixed end date",
   "listings": [
+    {
+      "group": "confirm",
+      "region": "peninsula",
+      "parking": "offstreet",
+      "search_status": "active",
+      "outreach_status": "sent",
+      "outreach": "sent",
+      "verified_contact": true,
+      "fit_status": "conditional",
+      "checked": "October 5, 2026",
+      "inquiry_note": "Availability and tour only · template, not a new send",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
+      "deposit": "Not confirmed; no deposit paid.",
+      "conditions": "Rental terms and permission for an ongoing sublet still need agreement.",
+      "id": "fb-1541250288018605",
+      "source": "facebook",
+      "city": "San Bruno",
+      "title": "San Bruno apartment room · viewed and preferred",
+      "area": "San Bruno apartment complex",
+      "rent": 1850,
+      "extra": true,
+      "price_note": "$1,850 advertised; confirm utilities and any parking charge keep the total under $2,000.",
+      "furnished": "no",
+      "parking_label": "Garage parking advertised · confirm cost",
+      "bath": "Private full bathroom.",
+      "availability": "Host said immediate move-in was possible October 2. Listing runs through November 14; host mentioned November 15.",
+      "term": "Ongoing month-to-month beyond November 15 is not agreed. Host is consulting the leasing office.",
+      "neighborhood": "Apartment complex in San Bruno, near BART and Caltrain; pool and community amenities advertised.",
+      "included": "Unfurnished room with balcony and walk-in closet. In-unit laundry and garage parking advertised; recurring charges need confirmation.",
+      "timing_label": "Viewed · monthly extension pending",
+      "tour_status": "Viewed October 2 at 6:15 PM; user preferred this apartment. No new viewing booked.",
+      "confirm": "Leasing-office approval for ongoing month-to-month, all-in cost, deposit and written terms.",
+      "contact": "October 5, 3:40 PM: follow-up verified sent in the existing Messenger thread. Awaiting Manas.",
+      "outreach_note": "Manas replied October 4 that he would speak to the leasing office. Followed up October 5 at 3:40 PM about ongoing month-to-month; verified Sent.",
+      "current_note": "First choice after the viewing. Awaiting leasing-office approval; no rental commitment made.",
+      "url": "https://www.facebook.com/marketplace/item/1541250288018605/",
+      "photos": [
+        {
+          "file": "october-fb-1541250288018605-1.jpg",
+          "source": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/808730229_1081774688148780_2641598762692949440_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1537&ctp=s960x960&_nc_cat=107&ccb=1-7&_nc_sid=946e27&_nc_ohc=jSN2oEQJ81MQ7kNvwHyPFnw&_nc_oc=AdrLb6wfdjKbZiToHPKJStERJopmzHvF4dZAnHlQe9y42eFHIl3636CihfE-7eVPypA&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=6Ccp8kdMy0Jej6uDSNeRog&_nc_ss=7b2a8&oh=00_AQPDT9mnse0ofxjzRLqT2w8r0LGOdwbEszsnxPGJqFrJyw&oe=6ACA113C"
+        }
+      ],
+      "visual_review": {
+        "cleanliness": 4,
+        "modernity": 3.5,
+        "value": null,
+        "scope": "Bathroom photo checked October 5; user viewed October 2",
+        "note": "Photo shows a tidy double-vanity bathroom, bathtub and walk-in closet. User rated this apartment much better than the South SF house room after visiting. Value remains unrated until total cost and ongoing terms are agreed."
+      }
+    },
+    {
+      "group": "confirm",
+      "region": "peninsula",
+      "parking": "offstreet",
+      "search_status": "active",
+      "outreach_status": "sent",
+      "outreach": "sent",
+      "verified_contact": true,
+      "fit_status": "conditional",
+      "checked": "October 5, 2026",
+      "inquiry_note": "Availability and tour only · template, not a new send",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
+      "deposit": "Not confirmed; no deposit paid.",
+      "conditions": "Rental terms and permission for an ongoing sublet still need agreement.",
+      "id": "su-130001643",
+      "source": "supost",
+      "city": "Redwood City",
+      "title": "Redwood City 2BR/2BA apartment · private room and bath",
+      "area": "Redwood City · about 3 miles from Stanford per advertiser",
+      "rent": 1900,
+      "extra": true,
+      "price_note": "$1,800 base rent plus variable shared utilities; roughly $1,900–2,000 total needs confirmation.",
+      "furnished": "yes",
+      "parking_label": "One reserved garage space included",
+      "bath": "Own bathroom in a 2BR/2BA apartment.",
+      "availability": "Listing checked October 5 and advertises immediate availability. Host replied October 4.",
+      "term": "Host prioritizes longer leases. October 5 reply asks for one month initially, then ongoing monthly renewal; not agreed.",
+      "neighborhood": "Advertiser says grocery stores and restaurants are walkable; Target and Costco are about a mile away.",
+      "included": "$1,800 base rent. Power, water, internet and garbage split; listing says about $100 each per month, with the exact total to clarify. Garage space and storage included. Bed frame, mattress and chair can stay or be removed.",
+      "timing_label": "Host replied · monthly terms requested",
+      "tour_status": "Viewing requested; no date or time confirmed.",
+      "confirm": "Whether monthly renewal is possible, exact all-in recurring cost below $2,000, and a viewing of the actual room.",
+      "contact": "October 5, 3:39 PM: reply verified sent in the existing email thread. Awaiting Matthew.",
+      "outreach_note": "Initial SUpost inquiry October 4; Matthew replied that longer leases take priority. Replied October 5 at 3:39 PM asking about one month followed by month-to-month renewal.",
+      "current_note": "Second active lead. Longer lease preference and total utilities remain unresolved; no viewing booked.",
+      "url": "https://supost.com/post/private-bedroom-and-bathroom-available-in-2bd-2ba-1800-130001643",
+      "photos": [
+        {
+          "file": "october-su-130001643-1.jpg",
+          "source": "https://cdn.supost.com/posts/130001643/post_130001643a"
+        }
+      ],
+      "visual_review": {
+        "cleanliness": null,
+        "modernity": null,
+        "value": null,
+        "scope": "Staged bedroom photo checked October 5",
+        "note": "Bright bedroom with wood flooring, but the image is professionally staged and may predate the current rental. Confirm current condition in person; numeric scores withheld."
+      }
+    },
     {
       "id": "sr-103220421",
       "source": "spareroom",
@@ -10,7 +110,7 @@
       "rent": 1500,
       "extra": false,
       "group": "monthly",
-      "timing_label": "Afternoon tour requested · awaiting reply",
+      "timing_label": "Historical outreach · no upcoming tour",
       "parking": "offstreet",
       "parking_label": "Plenty of parking advertised",
       "furnished": "no",
@@ -21,7 +121,7 @@
       "included": "Utilities included in the rent. The room is unfurnished, so a one-month stay would need furniture — worth asking whether any can be left or rented.",
       "bath": "Private bathroom, advertised as no sharing.",
       "conditions": "Advertiser asks for an introduction with occupation, move-in date and intended length of stay; references on request.",
-      "confirm": "September 30 afternoon requested; no time confirmed.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "url": "https://www.spareroom.com/rooms-for-rent/san_mateo_county/millbrae/103220421",
       "photos": [
         {
@@ -37,12 +137,12 @@
       "contact": "Four outgoing messages overall. Latest short follow-up asks for a September 30 afternoon tour while near San Mateo. No host response yet.",
       "city": "Millbrae",
       "region": "peninsula",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "outreach": "sent",
-      "outreach_note": "Four outgoing messages overall. Latest short follow-up asks for a September 30 afternoon tour while near San Mateo. No host response yet.",
+      "outreach_note": "Historical outreach: Four outgoing messages overall. Latest short follow-up asks for a September 30 afternoon tour while near San Mateo. No host response yet.",
       "outreach_status": "sent",
-      "tour_status": "September 30 afternoon requested; no time confirmed.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "visual_review": {
         "cleanliness": 4,
         "modernity": 3,
@@ -51,7 +151,9 @@
         "scope": "2 property photos; bedroom and bathroom"
       },
       "verified_contact": true,
-      "fit_status": "candidate"
+      "fit_status": "candidate",
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "sr-102101468",
@@ -61,7 +163,7 @@
       "rent": 1600,
       "extra": false,
       "group": "waitlist",
-      "timing_label": "Closed · not accepting applications",
+      "timing_label": "Historical outreach · no upcoming tour",
       "parking": "offstreet",
       "parking_label": "Parking and a garage advertised",
       "furnished": "yes",
@@ -72,7 +174,7 @@
       "included": "Utilities included; furnished, with wifi. Master bedroom has its own balcony; living room is shared.",
       "bath": "Private bathroom en-suite to the master bedroom.",
       "conditions": "Sharing with the owner, a professional woman in her fifties who works weekdays; her friends and grown children visit.",
-      "confirm": "Lost to turnover within a day. Worth re-checking only if it reopens.",
+      "confirm": "Excluded from the current search: house, townhouse or a unit on a house lot. Apartments and condos only.",
       "url": "https://www.spareroom.com/rooms-for-rent/san_mateo_county/san_mateo/102101468",
       "photos": [
         {
@@ -93,9 +195,9 @@
       "city": "San Mateo",
       "region": "peninsula",
       "outreach": "closed",
-      "outreach_note": "No message has been sent; listing closed.",
+      "outreach_note": "Historical outreach: No message has been sent; listing closed.",
       "outreach_status": "closed",
-      "tour_status": "No tour arranged.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "visual_review": {
         "cleanliness": 4,
         "modernity": 3,
@@ -106,7 +208,9 @@
       "verified_contact": false,
       "fit_status": "closed",
       "inquiry": "",
-      "inquiry_note": "Availability and tour only · template, not a new send"
+      "inquiry_note": "Availability and tour only · template, not a new send",
+      "search_status": "history",
+      "current_note": "Excluded from the current search: house, townhouse or a unit on a house lot. Apartments and condos only."
     },
     {
       "id": "sr-102027784",
@@ -116,7 +220,7 @@
       "rent": 1600,
       "extra": false,
       "group": "confirm",
-      "timing_label": "Message sent · one-month discount requested",
+      "timing_label": "Historical outreach · no upcoming tour",
       "parking": "offstreet",
       "parking_label": "Garage parking advertised",
       "furnished": "yes",
@@ -127,7 +231,7 @@
       "included": "Utilities included; the room is furnished and bright.",
       "bath": "Brand-new full bathroom for the room, per the advertiser.",
       "conditions": "Room in a single-family home; confirm who else lives there.",
-      "confirm": "Tour requested if one month at $1,500 works; no time confirmed.",
+      "confirm": "Excluded from the current search: house, townhouse or a unit on a house lot. Apartments and condos only.",
       "url": "https://www.spareroom.com/rooms-for-rent/san_mateo_county/famous_ships/102027784",
       "photos": [
         {
@@ -147,12 +251,12 @@
       "contact": "Free contact worked September 29 at 10:44 PM. Short inquiry verified in SpareRoom Sent, asking for a one-month stay at $1,500 all in and a viewing. Advertised $1,600 and three-month minimum still require agreement.",
       "city": "Foster City",
       "region": "peninsula",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "outreach": "blocked",
-      "outreach_note": "Free contact worked September 29 at 10:44 PM. Short inquiry verified in SpareRoom Sent, asking for a one-month stay at $1,500 all in and a viewing. Advertised $1,600 and three-month minimum still require agreement.",
+      "outreach_note": "Historical outreach: Free contact worked September 29 at 10:44 PM. Short inquiry verified in SpareRoom Sent, asking for a one-month stay at $1,500 all in and a viewing. Advertised $1,600 and three-month minimum still require agreement.",
       "outreach_status": "sent",
-      "tour_status": "Tour requested if one month at $1,500 works; no time confirmed.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "visual_review": {
         "cleanliness": 4,
         "modernity": 2.5,
@@ -161,8 +265,10 @@
         "scope": "3 bedroom photos; bathroom unseen"
       },
       "verified_contact": true,
-      "fit_status": "conditional",
-      "contactable": true
+      "fit_status": "mismatch",
+      "contactable": true,
+      "search_status": "history",
+      "current_note": "Excluded from the current search: house, townhouse or a unit on a house lot. Apartments and condos only."
     },
     {
       "id": "ff-949142_1",
@@ -172,7 +278,7 @@
       "rent": 1475,
       "extra": false,
       "group": "one_month",
-      "timing_label": "CONFIRMED tour · October 1 at 11:30 AM",
+      "timing_label": "Closed to this search",
       "parking": "offstreet",
       "parking_label": "Free parking on premises advertised",
       "furnished": "yes",
@@ -183,7 +289,7 @@
       "included": "Utilities included; washer and dryer on premises, heating and storage. The 500 sq ft room has a large closet, ceiling fan, TV and a built-in window seat. Smart locks on the front gate and house entry.",
       "bath": "Private bathroom with shower, en-suite to the room.",
       "conditions": "One occupant and one vehicle. Pets are allowed and pets already live on the property. No smoking.",
-      "confirm": "October 2 11:30 AM proposed (moved from confirmed Oct 1); not confirmed",
+      "confirm": "Dropped October 3: single-family house; the October 2 viewing was never confirmed.",
       "url": "https://www.furnishedfinder.com/property/949142_1",
       "photos": [
         {
@@ -203,12 +309,12 @@
       "contact": "Viewing was confirmed for October 1 at 11:30 AM; the user asked on October 1 to move it to October 2 at 11:30 AM or receive a video. Awaiting Sima. $1,475, furnished, en-suite bath, parking.",
       "city": "El Sobrante",
       "region": "east",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "outreach": "sent",
-      "outreach_note": "Viewing was confirmed for October 1 at 11:30 AM; the user asked on October 1 to move it to October 2 at 11:30 AM or receive a video. Awaiting Sima. $1,475, furnished, en-suite bath, parking.",
+      "outreach_note": "Historical outreach: Viewing was confirmed for October 1 at 11:30 AM; the user asked on October 1 to move it to October 2 at 11:30 AM or receive a video. Awaiting Sima. $1,475, furnished, en-suite bath, parking.",
       "outreach_status": "sent",
-      "tour_status": "October 2 11:30 AM proposed (moved from confirmed Oct 1); not confirmed",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "visual_review": {
         "cleanliness": 4,
         "modernity": 4,
@@ -217,7 +323,9 @@
         "scope": "3 bedroom photos; bathroom unseen"
       },
       "verified_contact": true,
-      "fit_status": "candidate"
+      "fit_status": "closed",
+      "search_status": "history",
+      "current_note": "Dropped October 3: single-family house; the October 2 viewing was never confirmed."
     },
     {
       "id": "ff-415061_1",
@@ -227,7 +335,7 @@
       "rent": 1250,
       "extra": false,
       "group": "confirm",
-      "timing_label": "Message sent · awaiting reply",
+      "timing_label": "Historical outreach · no upcoming tour",
       "parking": "unknown",
       "parking_label": "Parking type not stated for this room",
       "furnished": "yes",
@@ -238,7 +346,7 @@
       "included": "Utilities included; internet and Wi-Fi, kitchen and washer/dryer access. Small backyard.",
       "bath": "Private bathroom and private entrance advertised.",
       "conditions": "No pets, no smoking. One other tenant shares the condo with the owner.",
-      "confirm": "Tour follow-up: asked availability from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "url": "https://www.furnishedfinder.com/property/415061_1",
       "photos": [
         {
@@ -258,12 +366,12 @@
       "contact": "Outgoing message 3856519e-38ad-40a3-8bb7-fcbd007eff2f present in the Paul C conversation; thread grew from 1 to 2 messages.",
       "city": "Hayward",
       "region": "east",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "outreach": "sent",
-      "outreach_note": "Outgoing message 3856519e-38ad-40a3-8bb7-fcbd007eff2f present in the Paul C conversation; thread grew from 1 to 2 messages.",
+      "outreach_note": "Historical outreach: Outgoing message 3856519e-38ad-40a3-8bb7-fcbd007eff2f present in the Paul C conversation; thread grew from 1 to 2 messages.",
       "outreach_status": "sent",
-      "tour_status": "Tour follow-up: asked availability from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "visual_review": {
         "cleanliness": 4,
         "modernity": 3,
@@ -272,7 +380,9 @@
         "scope": "3 photos; room and bathroom"
       },
       "verified_contact": true,
-      "fit_status": "conditional"
+      "fit_status": "conditional",
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "su-130109474",
@@ -282,7 +392,7 @@
       "rent": 1430,
       "extra": true,
       "group": "later",
-      "timing_label": "Accepted by SUpost · delivery queued",
+      "timing_label": "Historical outreach · no upcoming tour",
       "parking": "unknown",
       "parking_label": "Parking not specified",
       "furnished": "unknown",
@@ -293,7 +403,7 @@
       "included": "$1,430 base rent; utilities and furnishing fees not specified. Shared apartment.",
       "bath": "Private bedroom and private bathroom advertised.",
       "conditions": "Female tenant preferred. Living room has been converted into an additional bedroom.",
-      "confirm": "requested in draft; not confirmed",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "url": "https://supost.com/post/1-bedroom-1-bathroom-in-a-2b2b-apartment-for-long-term-suble-130109474",
       "photos": [
         {
@@ -313,12 +423,12 @@
       "contact": "Email verified through the signed-in inbox. SUpost displayed Message Sent! and said the message was sent to the poster; inline status still says pending delivery to seller. Platform accepted/queued; recipient delivery and reading unconfirmed.",
       "city": "Palo Alto",
       "region": "peninsula",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "outreach": "sent",
-      "outreach_note": "Email verified through the signed-in inbox. SUpost displayed Message Sent! and said the message was sent to the poster; inline status still says pending delivery to seller. Platform accepted/queued; recipient delivery and reading unconfirmed.",
+      "outreach_note": "Historical outreach: Email verified through the signed-in inbox. SUpost displayed Message Sent! and said the message was sent to the poster; inline status still says pending delivery to seller. Platform accepted/queued; recipient delivery and reading unconfirmed.",
       "outreach_status": "queued",
-      "tour_status": "requested in draft; not confirmed",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "visual_review": {
         "cleanliness": 4,
         "modernity": 3,
@@ -327,7 +437,9 @@
         "scope": "3 photos; empty room, kitchen, bathroom"
       },
       "verified_contact": true,
-      "fit_status": "conditional"
+      "fit_status": "conditional",
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "su-130107280",
@@ -337,7 +449,7 @@
       "rent": 1500,
       "extra": false,
       "group": "later",
-      "timing_label": "Replied by email · landlord phone supplied",
+      "timing_label": "Historical outreach · no upcoming tour",
       "parking": "unknown",
       "parking_label": "Parking not specified",
       "furnished": "yes",
@@ -348,7 +460,7 @@
       "included": "Utilities, furnished bedroom, kitchen and free onsite laundry.",
       "bath": "Private bathroom advertised in a shared house.",
       "conditions": "Advertised for graduate students, postdocs and visiting Stanford researchers; eligibility needs confirmation.",
-      "confirm": "Tour coordination requested; exact address and time pending.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "url": "https://supost.com/post/1-bed-with-private-bath-available-in-downtown-palo-alto-star-130107280",
       "photos": [
         {
@@ -368,12 +480,12 @@
       "contact": "Poster replied by email and referred to landlord [phone in the private audit]. Sent a short email asking the poster to pass along Simon’s number for a tour this week.",
       "city": "Palo Alto",
       "region": "peninsula",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "outreach": "sent",
-      "outreach_note": "Poster replied by email and referred to landlord [phone in the private audit]. Sent a short email asking the poster to pass along Simon’s number for a tour this week.",
+      "outreach_note": "Historical outreach: Poster replied by email and referred to landlord [phone in the private audit]. Sent a short email asking the poster to pass along Simon’s number for a tour this week.",
       "outreach_status": "sent",
-      "tour_status": "Tour coordination requested; exact address and time pending.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "visual_review": {
         "cleanliness": 4,
         "modernity": 2.5,
@@ -382,7 +494,9 @@
         "scope": "3 photos; bedroom and bathroom"
       },
       "verified_contact": true,
-      "fit_status": "conditional"
+      "fit_status": "conditional",
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "ff-933335_1",
@@ -392,7 +506,7 @@
       "rent": 1500,
       "extra": false,
       "group": "unverified",
-      "timing_label": "Message sent · awaiting reply",
+      "timing_label": "Historical outreach · no upcoming tour",
       "parking": "offstreet",
       "parking_label": "Free parking on premises advertised",
       "furnished": "unknown",
@@ -403,7 +517,7 @@
       "included": "Utilities included. The room is offered either unfurnished or furnished, so the furnishing has to be settled with the host.",
       "bath": "Private bathroom advertised, in a two-bedroom two-bath condo.",
       "conditions": "Pets not allowed. Pets live on the property.",
-      "confirm": "Tour follow-up: asked availability from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "url": "https://www.furnishedfinder.com/property/933335_1",
       "photos": [
         {
@@ -423,12 +537,12 @@
       "contact": "Outgoing message 09eed200-19fe-4347-8701-6d6598c34e1c present in the Nur M conversation; thread grew from 1 to 2 messages.",
       "city": "Alameda",
       "region": "east",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "outreach": "sent",
-      "outreach_note": "Outgoing message 09eed200-19fe-4347-8701-6d6598c34e1c present in the Nur M conversation; thread grew from 1 to 2 messages.",
+      "outreach_note": "Historical outreach: Outgoing message 09eed200-19fe-4347-8701-6d6598c34e1c present in the Nur M conversation; thread grew from 1 to 2 messages.",
       "outreach_status": "sent",
-      "tour_status": "Tour follow-up: asked availability from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "visual_review": {
         "cleanliness": 4.5,
         "modernity": 4,
@@ -437,7 +551,9 @@
         "scope": "3 photos; kitchen, empty bedroom, living room; bathroom unseen"
       },
       "verified_contact": true,
-      "fit_status": "conditional"
+      "fit_status": "conditional",
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "ff-933277_1",
@@ -447,7 +563,7 @@
       "rent": 1350,
       "extra": false,
       "group": "unverified",
-      "timing_label": "Declined · shared bathroom confirmed",
+      "timing_label": "Historical outreach · no upcoming tour",
       "parking": "unknown",
       "parking_label": "Parking not stated for this room",
       "furnished": "yes",
@@ -458,7 +574,7 @@
       "included": "Utilities included; the 180 sq ft room has a queen bed, dresser, end table, desk, TV, closet, window air conditioning and central heat.",
       "bath": "Host confirmed a shared bathroom with a UC Berkeley student. Declined.",
       "conditions": "No pets and no smoking for tenants; pets live on the property.",
-      "confirm": "Ruled out after host reply; no tour requested further.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "url": "https://www.furnishedfinder.com/property/933277_1",
       "photos": [
         {
@@ -481,9 +597,9 @@
       "inquiry": "",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "outreach": "sent",
-      "outreach_note": "Alice confirmed the bathroom must be shared with a UC Berkeley student. Sent a brief thank-you and declined; this fails the private-bathroom requirement.",
+      "outreach_note": "Historical outreach: Alice confirmed the bathroom must be shared with a UC Berkeley student. Sent a brief thank-you and declined; this fails the private-bathroom requirement.",
       "outreach_status": "sent",
-      "tour_status": "Not pursuing: host confirmed shared bathroom",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "visual_review": {
         "cleanliness": 3.5,
         "modernity": 2.5,
@@ -492,7 +608,9 @@
         "note": "Bedroom and desk look orderly; ornate wallpaper and traditional furnishings are less modern. Host confirmed the bathroom is shared with a UC Berkeley student. Declined because it fails the private-full-bathroom requirement."
       },
       "verified_contact": true,
-      "fit_status": "mismatch"
+      "fit_status": "mismatch",
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "ff-306547_1",
@@ -502,7 +620,7 @@
       "rent": 1200,
       "extra": false,
       "group": "unverified",
-      "timing_label": "Message sent · awaiting reply",
+      "timing_label": "Historical outreach · no upcoming tour",
       "parking": "offstreet",
       "parking_label": "Free parking on property advertised",
       "furnished": "yes",
@@ -513,7 +631,7 @@
       "included": "Utilities, internet, cable, laundry access and twice-monthly house cleaning. Furnished bedroom; bed size is inconsistent in the listing.",
       "bath": "Private full bathroom advertised.",
       "conditions": "Shared with owner and adult daughter; resident cat. One occupant, no tenant pets or smoking.",
-      "confirm": "Tour follow-up: asked availability from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "confirm": "Excluded from the current search: house, townhouse or a unit on a house lot. Apartments and condos only.",
       "url": "https://www.furnishedfinder.com/property/306547_1",
       "photos": [
         {
@@ -533,12 +651,12 @@
       "contact": "Outgoing message 5249f8d5-379e-462f-877d-a3c4f5db7fbd present in the Merci M conversation; thread grew from 1 to 2 messages.",
       "city": "Novato",
       "region": "north",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "outreach": "sent",
-      "outreach_note": "Outgoing message 5249f8d5-379e-462f-877d-a3c4f5db7fbd present in the Merci M conversation; thread grew from 1 to 2 messages.",
+      "outreach_note": "Historical outreach: Outgoing message 5249f8d5-379e-462f-877d-a3c4f5db7fbd present in the Merci M conversation; thread grew from 1 to 2 messages.",
       "outreach_status": "sent",
-      "tour_status": "Tour follow-up: asked availability from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "visual_review": {
         "cleanliness": 3.5,
         "modernity": 2.5,
@@ -547,7 +665,9 @@
         "scope": "Kitchen/common area and patio only"
       },
       "verified_contact": true,
-      "fit_status": "conditional"
+      "fit_status": "mismatch",
+      "search_status": "history",
+      "current_note": "Excluded from the current search: house, townhouse or a unit on a house lot. Apartments and condos only."
     },
     {
       "id": "sr-103156861",
@@ -557,7 +677,7 @@
       "rent": 1050,
       "extra": false,
       "group": "waitlist",
-      "timing_label": "Closed · not accepting applications",
+      "timing_label": "Historical outreach · no upcoming tour",
       "parking": "offstreet",
       "parking_label": "Parking advertised; “plenty of places to park”",
       "furnished": "yes",
@@ -568,7 +688,7 @@
       "included": "Utilities included and the room is furnished. Shared four-bedroom house; no shared living room.",
       "bath": "Private bathroom, recorded as “Large (Private bathroom)”.",
       "conditions": "Three existing roommates, all long-term civil servants with background clearances, in the house over four years. Advertiser wants an established professional with a clean background. No smoking, no pets.",
-      "confirm": "Whether the pending lease has closed. If it falls through, this is the strongest lead in the search on price and terms — ask immediately.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "url": "https://www.spareroom.com/rooms-for-rent/san_mateo_county/sunshine_gardens/103156861",
       "photos": [
         {
@@ -589,9 +709,9 @@
       "city": "South San Francisco",
       "region": "peninsula",
       "outreach": "closed",
-      "outreach_note": "No message has been sent; listing closed.",
+      "outreach_note": "Historical outreach: No message has been sent; listing closed.",
       "outreach_status": "closed",
-      "tour_status": "No tour arranged.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "visual_review": {
         "cleanliness": 3,
         "modernity": 2,
@@ -602,7 +722,9 @@
       "verified_contact": false,
       "fit_status": "closed",
       "inquiry": "",
-      "inquiry_note": "Availability and tour only · template, not a new send"
+      "inquiry_note": "Availability and tour only · template, not a new send",
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "sr-103169912",
@@ -612,7 +734,7 @@
       "rent": 1100,
       "extra": false,
       "group": "waitlist",
-      "timing_label": "Closed · not accepting applications",
+      "timing_label": "Historical outreach · no upcoming tour",
       "parking": "offstreet",
       "parking_label": "Assigned parking space stated in the ad",
       "furnished": "unknown",
@@ -623,7 +745,7 @@
       "included": "Shared kitchen, dining area and on-site laundry; patio access onto the back yard. Utilities not stated.",
       "bath": "Private bathroom stated in the description.",
       "conditions": "Screening is heavy: full application per adult, government photo ID, two months of pay stubs, a minimum credit score, no prior evictions, and a positive — not neutral — reference from the most recent landlord. No pets, no smoking.",
-      "confirm": "Whether the pending lease closed, and the actual lease length, which the ad redacts. This is the cheapest private-bath-plus-assigned-parking room found anywhere in the corridor.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "url": "https://www.spareroom.com/rooms-for-rent/san_mateo_county/daly_city/103169912",
       "photos": [
         {
@@ -644,9 +766,9 @@
       "city": "Daly City",
       "region": "peninsula",
       "outreach": "closed",
-      "outreach_note": "Earlier checks showed the advertiser not accepting applications. Latest fresh listing URL redirected to the SpareRoom home page; no contactable listing found.",
+      "outreach_note": "Historical outreach: Earlier checks showed the advertiser not accepting applications. Latest fresh listing URL redirected to the SpareRoom home page; no contactable listing found.",
       "outreach_status": "closed",
-      "tour_status": "Not requested; no contactable listing.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "visual_review": {
         "cleanliness": 4,
         "modernity": 3.5,
@@ -657,7 +779,9 @@
       "verified_contact": false,
       "fit_status": "closed",
       "inquiry": "",
-      "inquiry_note": "Availability and tour only · template, not a new send"
+      "inquiry_note": "Availability and tour only · template, not a new send",
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "sr-103225663",
@@ -667,7 +791,7 @@
       "rent": 1315,
       "extra": true,
       "group": "confirm",
-      "timing_label": "Replied · tour proposal awaits confirmation",
+      "timing_label": "Closed to this search",
       "parking": "offstreet",
       "parking_label": "Carport space plus free street parking",
       "furnished": "no",
@@ -678,7 +802,7 @@
       "included": "In-unit washer and dryer, large shared backyard, wood floors, windows on all sides. No dishwasher, and stairs are required to reach the unit.",
       "bath": "Confirmed by the host: a private half bathroom (toilet and sink) inside the room, with a SHARED shower sitting between the two bedrooms. Not a full private bathroom.",
       "conditions": "Sharing with one working professional on a 9-to-5 schedule. The advertiser asks for an introduction covering your work, schedule and what you want in a roommate.",
-      "confirm": "October 2 4:00-5:30 PM proposed, or video; not confirmed",
+      "confirm": "Dropped October 3: house/duplex and shared shower. October 2 viewing was canceled; no replacement booked.",
       "url": "https://www.spareroom.com/rooms-for-rent/alameda_county/cleveland_heights/103225663",
       "photos": [
         {
@@ -702,12 +826,12 @@
       "contact": "Ami read the October 1 4:00-5:30 PM proposal without answering. On October 1 asked for October 2, 4:00-5:30 PM, or a video instead.",
       "city": "Oakland",
       "region": "east",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "outreach": "sent",
-      "outreach_note": "Ami read the October 1 4:00-5:30 PM proposal without answering. On October 1 asked for October 2, 4:00-5:30 PM, or a video instead.",
+      "outreach_note": "Historical outreach: Ami read the October 1 4:00-5:30 PM proposal without answering. On October 1 asked for October 2, 4:00-5:30 PM, or a video instead.",
       "outreach_status": "sent",
-      "tour_status": "October 2 4:00-5:30 PM proposed, or video; not confirmed",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "visual_review": {
         "cleanliness": 4,
         "modernity": 3.5,
@@ -716,7 +840,9 @@
         "scope": "4 photos; half bath, kitchen, hall, living area"
       },
       "verified_contact": true,
-      "fit_status": "mismatch"
+      "fit_status": "closed",
+      "search_status": "history",
+      "current_note": "Dropped October 3: house/duplex and shared shower. October 2 viewing was canceled; no replacement booked."
     },
     {
       "id": "apt-sfhouse-229ellis",
@@ -726,7 +852,7 @@
       "rent": 1750,
       "extra": true,
       "group": "confirm",
-      "timing_label": "Message sent · awaiting reply",
+      "timing_label": "Historical outreach · no upcoming tour",
       "parking": "none",
       "parking_label": "No parking listed",
       "furnished": "yes",
@@ -737,7 +863,7 @@
       "included": "Furnished co-living building. Private-bath tier exceeds $1,500 before utilities/insurance.",
       "bath": "Private bathroom is in the City Suite tier from $1,750. Cheaper Urban Nest rooms have shared bathrooms.",
       "conditions": "Operated as a co-living building rather than a private room in someone's home. Two renter reviews, rated 5.0.",
-      "confirm": "requested only if a compliant discounted option exists",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "url": "https://www.apartments.com/sf-house-san-francisco-ca/tt0xekb/",
       "photos": [
         {
@@ -749,12 +875,12 @@
       "contact": "Apartments.com: Your message has been successfully sent; full recipient contact summary displayed",
       "city": "San Francisco",
       "region": "peninsula",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "outreach": "sent",
-      "outreach_note": "Apartments.com: Your message has been successfully sent; full recipient contact summary displayed",
+      "outreach_note": "Historical outreach: Apartments.com: Your message has been successfully sent; full recipient contact summary displayed",
       "outreach_status": "sent",
-      "tour_status": "requested only if a compliant discounted option exists",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "visual_review": {
         "cleanliness": 4.5,
         "modernity": 4.5,
@@ -763,7 +889,9 @@
         "scope": "Official listing photos; kitchen/exterior and small room preview"
       },
       "verified_contact": true,
-      "fit_status": "mismatch"
+      "fit_status": "mismatch",
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "ff-848526_1",
@@ -783,7 +911,7 @@
       "included": "$1,400 rent + listed $100 utilities = $1,500 budgeted monthly. Furnished queen room, kitchen and laundry.",
       "bath": "Private bathroom in a second-floor junior suite.",
       "conditions": "Single occupancy, one vehicle, no pets or smoking. Stairs to bedroom.",
-      "confirm": "September 30 9 AM past, outcome unknown; October 1 requested, not confirmed",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "url": "https://www.furnishedfinder.com/property/848526_1",
       "photos": [
         {
@@ -804,11 +932,11 @@
       "city": "Fairfield",
       "region": "solano",
       "outreach": "sent",
-      "outreach_note": "Ann confirmed by text that she reads the Furnished Finder thread and gave 2850 Lumin Ct, Fairfield. She texted \"c u soon at 9am\" before the September 30 slot; attendance and outcome are still unknown. A reply at 9:24 PM asked whether the suite is still available and offered October 1 morning or evening. She also offers the room as an Airbnb booking if a tour is missed, which would be a payment and is not authorized. Included under the widened 2.5-hour search area.",
+      "outreach_note": "Historical outreach: Ann confirmed by text that she reads the Furnished Finder thread and gave 2850 Lumin Ct, Fairfield. She texted \"c u soon at 9am\" before the September 30 slot; attendance and outcome are still unknown. A reply at 9:24 PM asked whether the suite is still available and offered October 1 morning or evening. She also offers the room as an Airbnb booking if a tour is missed, which would be a payment and is not authorized. Included under the widened 2.5-hour search area.",
       "inquiry_note": "Availability and tour only · template, not a new send",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "outreach_status": "sent",
-      "tour_status": "September 30 9 AM past, outcome unknown; October 1 requested, not confirmed",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "visual_review": {
         "cleanliness": 4.5,
         "modernity": 4,
@@ -818,7 +946,9 @@
       },
       "verified_contact": true,
       "fit_status": "candidate",
-      "timing_label": "New reply · past tour outcome unknown"
+      "timing_label": "Historical outreach · no upcoming tour",
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "ff-669591_1",
@@ -838,7 +968,7 @@
       "included": "Queen bed, kitchen, laundry, water, trash and Wi-Fi. Description says electricity is split despite the utilities-included badge.",
       "bath": "Hallway bathroom advertised private; caption says primary use and not shared with other tenants. Confirm guests will not use it.",
       "conditions": "Current description says female tenants only. Short inquiry asks whether the preference is firm; eligibility unconfirmed. Electricity split among tenants.",
-      "confirm": "Canceled: room taken. October 1 at 5:30 PM is not booked.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "url": "https://www.furnishedfinder.com/property/669591_1",
       "photos": [
         {
@@ -859,11 +989,11 @@
       "city": "Fairfield",
       "region": "solano",
       "outreach": "sent",
-      "outreach_note": "Leticia reported at 10:14 PM that the room was taken. Acknowledged and asked to be kept in mind if it falls through. October 1 proposed tour canceled. Included under the widened 2.5-hour search area.",
+      "outreach_note": "Historical outreach: Leticia reported at 10:14 PM that the room was taken. Acknowledged and asked to be kept in mind if it falls through. October 1 proposed tour canceled. Included under the widened 2.5-hour search area.",
       "inquiry_note": "Availability and tour only · template, not a new send",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "outreach_status": "sent",
-      "tour_status": "Canceled: room taken. October 1 at 5:30 PM is not booked.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "visual_review": {
         "cleanliness": 4.5,
         "modernity": 4,
@@ -873,7 +1003,9 @@
       },
       "verified_contact": true,
       "fit_status": "closed",
-      "timing_label": "Taken · host confirmed September 29"
+      "timing_label": "Historical outreach · no upcoming tour",
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "ff-915271_1",
@@ -883,7 +1015,7 @@
       "rent": 1300,
       "extra": false,
       "group": "later",
-      "timing_label": "Replied · tenant leaves next week",
+      "timing_label": "Historical outreach · no upcoming tour",
       "parking": "street",
       "parking_label": "Street parking in description",
       "furnished": "yes",
@@ -894,7 +1026,7 @@
       "included": "Utilities, Wi-Fi, kitchen, laundry and twin bed.",
       "bath": "Private bathroom advertised.",
       "conditions": "Single occupancy and one vehicle; no pets or smoking.",
-      "confirm": "call at 1 PM October 1; viewing next week, nothing booked",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "url": "https://www.furnishedfinder.com/property/915271_1",
       "photos": [
         {
@@ -911,11 +1043,11 @@
       "city": "Fairfield",
       "region": "solano",
       "outreach": "sent",
-      "outreach_note": "Don confirmed he will call Simon on October 1 at 1:00 PM. That is a call, not a viewing. He is away from October 2 until Tuesday and wants to tour next week. Included under the widened 2.5-hour search area.",
+      "outreach_note": "Historical outreach: Don confirmed he will call Simon on October 1 at 1:00 PM. That is a call, not a viewing. He is away from October 2 until Tuesday and wants to tour next week. Included under the widened 2.5-hour search area.",
       "inquiry_note": "Availability and tour only · template, not a new send",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "outreach_status": "sent",
-      "tour_status": "call at 1 PM October 1; viewing next week, nothing booked",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "visual_review": {
         "cleanliness": 4,
         "modernity": 3,
@@ -924,7 +1056,9 @@
         "scope": "2 bedroom photos; bathroom unseen"
       },
       "verified_contact": true,
-      "fit_status": "conditional"
+      "fit_status": "conditional",
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "ff-224172_1",
@@ -944,7 +1078,7 @@
       "included": "Utilities, Wi-Fi, kitchen and laundry access; queen bed, pool and hot tub.",
       "bath": "Host confirmed September 29: no full bathroom is available. Does not meet the private full-bathroom requirement.",
       "conditions": "One occupant and one vehicle. No smoking or tenant pets; pets live on the property.",
-      "confirm": "No longer pursuing after the host corrected the bathroom and parking details.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "url": "https://www.furnishedfinder.com/property/224172_1",
       "photos": [
         {
@@ -965,11 +1099,11 @@
       "city": "Vacaville",
       "region": "solano",
       "outreach": "sent",
-      "outreach_note": "Laura confirmed she cannot offer a full bathroom and parking is on the street. Sent a brief decline; no longer pursuing. Included under the widened 2.5-hour search area.",
+      "outreach_note": "Historical outreach: Laura confirmed she cannot offer a full bathroom and parking is on the street. Sent a brief decline; no longer pursuing. Included under the widened 2.5-hour search area.",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "inquiry": "",
       "outreach_status": "sent",
-      "tour_status": "Declined: host cannot offer a full private bathroom.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "visual_review": {
         "cleanliness": 3.5,
         "modernity": 3,
@@ -979,7 +1113,9 @@
       },
       "verified_contact": true,
       "fit_status": "mismatch",
-      "timing_label": "Declined · no full private bathroom"
+      "timing_label": "Historical outreach · no upcoming tour",
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "sr-103201950",
@@ -989,7 +1125,7 @@
       "rent": 1000,
       "extra": true,
       "group": "monthly",
-      "timing_label": "Automated reply only · form receipt unconfirmed",
+      "timing_label": "Historical outreach · no upcoming tour",
       "parking": "unknown",
       "parking_label": "Parking not stated — ask; the complex has community amenities",
       "furnished": "yes",
@@ -1000,7 +1136,7 @@
       "included": "Furnished bedroom and furnished common areas — living room, dining area, kitchen and in-home laundry.",
       "bath": "Private bathroom stated twice in the ad: the room 'includes a private bathroom, giving you your own personal bedroom and bath while sharing the home's common spaces.'",
       "conditions": "Shared with one male resident who works outside the home on weekdays. One-person occupancy, no pets, no smoking. The advertiser asks for your occupation, reason for moving, approximate income and credit score.",
-      "confirm": "Requested; no host-confirmed time.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "url": "https://www.spareroom.com/rooms-for-rent/ca/sacramento_county/south_natomas/103201950",
       "photos": [],
       "checked": "September 29, 2026",
@@ -1008,11 +1144,11 @@
       "city": "Sacramento",
       "region": "solano",
       "outreach": "sent",
-      "outreach_note": "Two previous messages; only automated TurboTenant response. Lead form submitted, but redirect gave no independent receipt. Awaiting a human reply.",
+      "outreach_note": "Historical outreach: Two previous messages; only automated TurboTenant response. Lead form submitted, but redirect gave no independent receipt. Awaiting a human reply.",
       "inquiry_note": "Availability and tour only · template, not a new send",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "outreach_status": "previously_sent",
-      "tour_status": "Requested; no host-confirmed time.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "visual_review": {
         "cleanliness": null,
         "modernity": null,
@@ -1021,7 +1157,9 @@
         "scope": "No verified property photos"
       },
       "verified_contact": true,
-      "fit_status": "candidate"
+      "fit_status": "candidate",
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "sr-103221786",
@@ -1043,18 +1181,18 @@
       "neighborhood": "See the approximate-area map and listing for location details.",
       "included": "One-month minimum; furnished; utilities included. Sublet permission and exclusive bathroom/parking requested.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "Tour follow-up: asked availability from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "region": "south",
       "parking_label": "Parking arrangement unconfirmed",
       "outreach_status": "sent",
-      "outreach_note": "Outgoing message msg_200040354352 shows the Message sent label in the thread (Today 12:37 AM EDT).",
-      "tour_status": "Tour follow-up: asked availability from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "outreach_note": "Historical outreach: Outgoing message msg_200040354352 shows the Message sent label in the thread (Today 12:37 AM EDT).",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Outgoing message msg_200040354352 shows the Message sent label in the thread (Today 12:37 AM EDT).",
       "outreach": "sent",
       "fit_status": "candidate",
-      "timing_label": "Message sent · awaiting reply",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "timing_label": "Historical outreach · no upcoming tour",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -1063,7 +1201,9 @@
         "value": 4,
         "note": "No property photos on the inspected ad. Requested current bedroom/bathroom photos and an in-person tour. $950 including utilities in an apartment near Rivermark is a strong advertised fit; exclusive bathroom, parking and permission for a one-month sublet need confirmation.",
         "scope": "No property photos"
-      }
+      },
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "cl-7965272718",
@@ -1130,18 +1270,18 @@
       "neighborhood": "See the approximate-area map and listing for location details.",
       "included": "Explicit month-to-month with 30-day notice; $1,100 deposit. Furnished. PG&E and water only partly included. Street parking and light cooking only; total utilities and September 29/30 availability need confirmation.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "Tour follow-up: asked whether the room is still available from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "region": "east",
       "parking_label": "Street parking",
       "outreach_status": "sent",
-      "outreach_note": "Reply composed in the existing thread; recipient validated as d3ff751f02fc3d84b8d88972ddd132e9@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Newark private-bath room - one-month stay and in-person tour\".",
-      "tour_status": "Tour follow-up: asked whether the room is still available from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "outreach_note": "Historical outreach: Reply composed in the existing thread; recipient validated as d3ff751f02fc3d84b8d88972ddd132e9@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Newark private-bath room - one-month stay and in-person tour\".",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Reply composed in the existing thread; recipient validated as d3ff751f02fc3d84b8d88972ddd132e9@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Newark private-bath room - one-month stay and in-person tour\".",
       "outreach": "sent",
       "fit_status": "candidate",
-      "timing_label": "Message sent · awaiting reply",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "timing_label": "Historical outreach · no upcoming tour",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -1150,7 +1290,9 @@
         "value": 4,
         "scope": "11 listing photos: bedroom, full shower bathroom, kitchen, shared rooms, laundry and exterior.",
         "note": "Tidy uncluttered room with light flooring; older wood cabinets and shower fittings. Good advertised monthly value with furniture and full private bath, subject to utility cost, actual availability and reliable street parking."
-      }
+      },
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "cl-7959921291",
@@ -1193,18 +1335,18 @@
       "neighborhood": "See the approximate-area map and listing for location details.",
       "included": "$1,000 rent + $100 utilities including internet; $1,000 deposit. Unfurnished private first-floor room/bath in townhouse, kitchen/laundry and street parking. One-month/sublet terms and furniture requested.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "This-week tour requested; no time confirmed.",
+      "confirm": "Excluded from the current search: house, townhouse or a unit on a house lot. Apartments and condos only.",
       "region": "east",
       "parking_label": "Street parking",
       "outreach_status": "sent",
-      "outreach_note": "Short email follow-up sent: currently near Oakland Airport, seeking a tour this week. Awaiting reply.",
-      "tour_status": "This-week tour requested; no time confirmed.",
+      "outreach_note": "Historical outreach: Short email follow-up sent: currently near Oakland Airport, seeking a tour this week. Awaiting reply.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Short email follow-up sent: currently near Oakland Airport, seeking a tour this week. Awaiting reply.",
       "outreach": "sent",
-      "fit_status": "conditional",
-      "timing_label": "Message sent · awaiting reply",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "fit_status": "mismatch",
+      "timing_label": "Historical outreach · no upcoming tour",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -1213,7 +1355,9 @@
         "value": 4,
         "scope": "5 listing photos: exterior, shared kitchen, community area, bathroom and bedroom shown as an office.",
         "note": "Polished kitchen, neutral bathroom and organized room appear clean and comparatively modern. Images carry real-estate styling/watermarks and may predate current occupancy; current room photos requested. Strong advertised value if short stay and furniture are agreed."
-      }
+      },
+      "search_status": "history",
+      "current_note": "Excluded from the current search: house, townhouse or a unit on a house lot. Apartments and condos only."
     },
     {
       "id": "cl-7970472222",
@@ -1235,18 +1379,18 @@
       "neighborhood": "See the approximate-area map and listing for location details.",
       "included": "Month-to-month; utilities and Wi-Fi included. $1,200 deposit. Driveway or street parking; light cooking only.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "September 30 requested; no time confirmed.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "region": "south",
       "parking_label": "Driveway or street parking advertised",
       "outreach_status": "sent",
-      "outreach_note": "Short email follow-up sent requesting a viewing while on the Peninsula September 30. Awaiting a reply.",
-      "tour_status": "September 30 requested; no time confirmed.",
+      "outreach_note": "Historical outreach: Short email follow-up sent requesting a viewing while on the Peninsula September 30. Awaiting a reply.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Short email follow-up sent requesting a viewing while on the Peninsula September 30. Awaiting a reply.",
       "outreach": "sent",
       "fit_status": "candidate",
-      "timing_label": "Message sent · awaiting reply",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "timing_label": "Historical outreach · no upcoming tour",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -1255,7 +1399,9 @@
         "value": 4,
         "note": "No property photos on the inspected ad. $1,200 includes utilities and Wi-Fi with month-to-month terms and a private entrance; possible driveway parking. Only light cooking allowed. Asked for current photos and a tour.",
         "scope": "No property photos"
-      }
+      },
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "cl-7967144088",
@@ -1294,18 +1440,18 @@
       "neighborhood": "See the approximate-area map and listing for location details.",
       "included": "Posted in sublets; one-month permission unconfirmed. Dedicated bathroom and off-street parking advertised; utilities extra.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "Tour follow-up: asked whether the room is still available from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "confirm": "Excluded from the current search: house, townhouse or a unit on a house lot. Apartments and condos only.",
       "region": "east",
       "parking_label": "Off-street parking advertised",
       "outreach_status": "sent",
-      "outreach_note": "Reply composed in the existing thread; recipient validated as bcddf5bc0a7f308f8f70544a2edb673c@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Pleasanton sublet - one month from September 29 / in-person tour\".",
-      "tour_status": "Tour follow-up: asked whether the room is still available from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "outreach_note": "Historical outreach: Reply composed in the existing thread; recipient validated as bcddf5bc0a7f308f8f70544a2edb673c@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Pleasanton sublet - one month from September 29 / in-person tour\".",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Reply composed in the existing thread; recipient validated as bcddf5bc0a7f308f8f70544a2edb673c@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Pleasanton sublet - one month from September 29 / in-person tour\".",
       "outreach": "sent",
-      "fit_status": "conditional",
-      "timing_label": "Message sent · awaiting reply",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "fit_status": "mismatch",
+      "timing_label": "Historical outreach · no upcoming tour",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -1314,7 +1460,9 @@
         "value": 4,
         "note": "Bedroom is neatly made, floors and kitchen look maintained. Stainless appliances and wood floors; traditional cabinets and some vanity clutter. Best newly contacted option with useful interior photos, at $1,300 plus unconfirmed utilities. Confirm dedicated full bathroom and one-month permission.",
         "scope": "4 photos; kitchen, bedroom, vanity/bath doorway"
-      }
+      },
+      "search_status": "history",
+      "current_note": "Excluded from the current search: house, townhouse or a unit on a house lot. Apartments and condos only."
     },
     {
       "id": "cl-7960510902",
@@ -1385,18 +1533,18 @@
       "neighborhood": "See the approximate-area map and listing for location details.",
       "included": "Month-to-month, six months preferred. $1,050 including utilities; $1,050 deposit. Exclusive hall bathroom and off-street parking advertised. No kitchen; microwave/fridge in garage. Employment eligibility and one-month acceptance need confirmation.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "Tour follow-up: asked whether the room is still available from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "confirm": "Excluded from the current search: house, townhouse or a unit on a house lot. Apartments and condos only.",
       "region": "east",
       "parking_label": "Off-street parking advertised",
       "outreach_status": "sent",
-      "outreach_note": "Reply composed in the existing thread; recipient validated as ac45c3c3795a314eb0840f1014290803@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Fremont Sundale private-bath room - one month and tour\".",
-      "tour_status": "Tour follow-up: asked whether the room is still available from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "outreach_note": "Historical outreach: Reply composed in the existing thread; recipient validated as ac45c3c3795a314eb0840f1014290803@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Fremont Sundale private-bath room - one month and tour\".",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Reply composed in the existing thread; recipient validated as ac45c3c3795a314eb0840f1014290803@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Fremont Sundale private-bath room - one month and tour\".",
       "outreach": "sent",
-      "fit_status": "conditional",
-      "timing_label": "Message sent · awaiting reply",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "fit_status": "mismatch",
+      "timing_label": "Historical outreach · no upcoming tour",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -1405,7 +1553,9 @@
         "value": 3.5,
         "scope": "12 listing photos: repeated bedroom angles and compact full bathroom.",
         "note": "Room and bath look tidy with neutral walls, newer vanity and simple furnishings. No kitchen substantially limits daily use; job-hunting eligibility, exact parking and one-month acceptance remain open."
-      }
+      },
+      "search_status": "history",
+      "current_note": "Excluded from the current search: house, townhouse or a unit on a house lot. Apartments and condos only."
     },
     {
       "id": "cl-7959180948",
@@ -1448,18 +1598,18 @@
       "neighborhood": "See the approximate-area map and listing for location details.",
       "included": "$1,290 rent plus $95 flat utilities; $1,200 deposit and advertised $35 credit-report fee. Shared kitchenette, street parking and apparently unfurnished. One-month/sublet terms and furniture requested; no fee paid.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "October 1 agreed in principle; time and address still to be confirmed",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "region": "peninsula",
       "parking_label": "Street parking",
       "outreach_status": "sent",
-      "outreach_note": "Host is Tony. He reached Simon by phone late on September 30 after calls would not connect, and a tour on October 1 was agreed with no time set. Proposed 2:00 PM in writing and asked for the address by text.",
-      "tour_status": "October 1 agreed in principle; time and address still to be confirmed",
+      "outreach_note": "Historical outreach: Host is Tony. He reached Simon by phone late on September 30 after calls would not connect, and a tour on October 1 was agreed with no time set. Proposed 2:00 PM in writing and asked for the address by text.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Host is Tony. He reached Simon by phone late on September 30 after calls would not connect, and a tour on October 1 was agreed with no time set. Proposed 2:00 PM in writing and asked for the address by text.",
       "outreach": "sent",
       "fit_status": "conditional",
-      "timing_label": "Tour agreed for October 1 · time undecided",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "timing_label": "Historical outreach · no upcoming tour",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -1468,7 +1618,9 @@
         "value": 3.5,
         "scope": "5 listing photos: empty bedroom, built-in shelves and full bathroom with shower.",
         "note": "Uncluttered room, wood-look floor and simple bathroom appear maintained; older wood trim and cabinetry. Good location and $1,385 recurring price, but unfurnished short stay, monthly flexibility and parking need agreement."
-      }
+      },
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "cl-7958109656",
@@ -1507,18 +1659,18 @@
       "neighborhood": "See the approximate-area map and listing for location details.",
       "included": "Month-to-month advertised; $1,500 includes utilities, Wi-Fi and common-area cleaning. Attached private bathroom; parking option needs confirmation. First plus last month ($3,000) requested; treatment for a one-month stay and job-hunting eligibility are open.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "Tour follow-up: asked whether the room is still available from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "confirm": "Excluded from the current search: house, townhouse or a unit on a house lot. Apartments and condos only.",
       "region": "east",
       "parking_label": "Parking arrangement unconfirmed",
       "outreach_status": "sent",
-      "outreach_note": "Reply composed in the existing thread; recipient validated as d29b38a4d8c735729c6db448ad8ee915@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Concord townhouse - one-month stay from September 29 and tour\".",
-      "tour_status": "Tour follow-up: asked whether the room is still available from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "outreach_note": "Historical outreach: Reply composed in the existing thread; recipient validated as d29b38a4d8c735729c6db448ad8ee915@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Concord townhouse - one-month stay from September 29 and tour\".",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Reply composed in the existing thread; recipient validated as d29b38a4d8c735729c6db448ad8ee915@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Concord townhouse - one-month stay from September 29 and tour\".",
       "outreach": "sent",
-      "fit_status": "candidate",
-      "timing_label": "Message sent · awaiting reply",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "fit_status": "mismatch",
+      "timing_label": "Historical outreach · no upcoming tour",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -1527,7 +1679,9 @@
         "value": 3.5,
         "scope": "8 photos: bedroom, kitchen, living/dining areas and townhouse exterior; bathroom not pictured",
         "note": "Townhouse has recent-looking dark kitchen cabinets, stainless appliances and recessed lighting. Kitchen counters and bedroom surfaces are noticeably cluttered, with clothing on the chair and a casually made bed. No bathroom photo. $1,500 includes utilities and cleaning, but parking, income flexibility and first/last-month terms need agreement."
-      }
+      },
+      "search_status": "history",
+      "current_note": "Excluded from the current search: house, townhouse or a unit on a house lot. Apartments and condos only."
     },
     {
       "id": "sr-103227128",
@@ -1566,18 +1720,18 @@
       "neighborhood": "See the approximate-area map and listing for location details.",
       "included": "One-month minimum advertised; utilities, private bath and parking advertised. Confirm actual room, address and sublet permission.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "This-week tour requested; time and address pending.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "region": "peninsula",
       "parking_label": "Off-street parking advertised",
       "outreach_status": "sent",
-      "outreach_note": "Rachael replied by SMS from [phone in the private audit]. Sent a short SpareRoom reply confirming interest and requesting a tour this week. Exact address not supplied.",
-      "tour_status": "This-week tour requested; time and address pending.",
+      "outreach_note": "Historical outreach: Rachael replied by SMS from [phone in the private audit]. Sent a short SpareRoom reply confirming interest and requesting a tour this week. Exact address not supplied.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Rachael replied by SMS from [phone in the private audit]. Sent a short SpareRoom reply confirming interest and requesting a tour this week. Exact address not supplied.",
       "outreach": "sent",
       "fit_status": "candidate",
-      "timing_label": "Replied by SMS · tour requested",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "timing_label": "Historical outreach · no upcoming tour",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -1586,7 +1740,9 @@
         "value": 3,
         "note": "Polished studio-style photos show a neat bed, light plank floors, recessed lighting, modern kitchenette and glass shower. The ad offers a room share, so confirm these photos show the actual offered space. $900 including utilities is unusually low; address, rights to sublet and tour remain unverified.",
         "scope": "4 photos; sleeping area, kitchenette and bathroom"
-      }
+      },
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "sr-102959097",
@@ -1608,18 +1764,18 @@
       "neighborhood": "See the approximate-area map and listing for location details.",
       "included": "No minimum/maximum term. Headline $1,200; description $1,300 including utilities. Roommate preference and exact rent need agreement.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "Tour follow-up: asked availability from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "region": "north",
       "parking_label": "Parking arrangement unconfirmed",
       "outreach_status": "sent",
-      "outreach_note": "Outgoing message msg_200040354350 shows the Message sent label in the thread (Today 12:37 AM EDT).",
-      "tour_status": "Tour follow-up: asked availability from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "outreach_note": "Historical outreach: Outgoing message msg_200040354350 shows the Message sent label in the thread (Today 12:37 AM EDT).",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Outgoing message msg_200040354350 shows the Message sent label in the thread (Today 12:37 AM EDT).",
       "outreach": "sent",
       "fit_status": "candidate",
-      "timing_label": "Message sent · awaiting reply",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "timing_label": "Historical outreach · no upcoming tour",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -1628,7 +1784,9 @@
         "value": 3,
         "note": "The four ad images are personal/family photos, not useful bedroom/bathroom evidence. They were excluded from the housing gallery. Requested property photos. $1,200 headline versus $1,300 description and roommate preference require clarification.",
         "scope": "No usable room/bathroom photos"
-      }
+      },
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "cl-7968494427",
@@ -1650,18 +1808,18 @@
       "neighborhood": "See the approximate-area map and listing for location details.",
       "included": "Short-term room. Description says private bath but checkbox contradicts it; parking and total cost need confirmation.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "Tour follow-up: asked whether the room is still available from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "region": "peninsula",
       "parking_label": "Parking arrangement unconfirmed",
       "outreach_status": "sent",
-      "outreach_note": "Reply composed in the existing thread; recipient validated as e57f6eb80b8e3cbfb6cf98f2e250a7aa@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Palo Alto short-term room - private bathroom question and tour\".",
-      "tour_status": "Tour follow-up: asked whether the room is still available from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "outreach_note": "Historical outreach: Reply composed in the existing thread; recipient validated as e57f6eb80b8e3cbfb6cf98f2e250a7aa@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Palo Alto short-term room - private bathroom question and tour\".",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Reply composed in the existing thread; recipient validated as e57f6eb80b8e3cbfb6cf98f2e250a7aa@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Palo Alto short-term room - private bathroom question and tour\".",
       "outreach": "sent",
       "fit_status": "conditional",
-      "timing_label": "Message sent · awaiting reply",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "timing_label": "Historical outreach · no upcoming tour",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -1670,7 +1828,9 @@
         "value": 3,
         "note": "No property images in the inspected listing. At $1,290 it has budget room, but the private-bath description contradicts the checkbox. Requested bathroom clarification and current photos.",
         "scope": "No property photos"
-      }
+      },
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "cl-7958827203",
@@ -1709,18 +1869,18 @@
       "neighborhood": "See the approximate-area map and listing for location details.",
       "included": "Month-to-month only; utilities and internet included. Description says available now but date field says October 1. Street parking. Ad quotes $4,600 move-in total; itemization and treatment of last-month rent for a one-month stay requested.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "Tour follow-up: asked whether the room is still available from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "region": "north",
       "parking_label": "Street parking",
       "outreach_status": "sent",
-      "outreach_note": "Reply composed in the existing thread; recipient validated as 45f87f36cad33c5bbc3be6376836a745@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Napa master suite - one-month availability and in-person tour\".",
-      "tour_status": "Tour follow-up: asked whether the room is still available from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "outreach_note": "Historical outreach: Reply composed in the existing thread; recipient validated as 45f87f36cad33c5bbc3be6376836a745@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Napa master suite - one-month availability and in-person tour\".",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Reply composed in the existing thread; recipient validated as 45f87f36cad33c5bbc3be6376836a745@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Napa master suite - one-month availability and in-person tour\".",
       "outreach": "sent",
       "fit_status": "candidate",
-      "timing_label": "Message sent · awaiting reply",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "timing_label": "Historical outreach · no upcoming tour",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -1729,7 +1889,9 @@
         "value": 3,
         "scope": "21 photos: bedroom, full bathroom, kitchen, laundry and outdoor areas",
         "note": "Bedroom is neatly made and bathroom surfaces look maintained. The glass shower and gray tile look updated; bedroom furniture and kitchen cabinets are traditional. Some countertop items and decorative clutter. $1,500 all in with private entry is appealing, but the distant location, street parking, date conflict and unclear $4,600 upfront demand reduce value."
-      }
+      },
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "ff-657379_1",
@@ -1792,18 +1954,18 @@
       "neighborhood": "See the approximate-area map and listing for location details.",
       "included": "One-month minimum, September 30 advertised, utilities included and designated parking. Private full bathroom. Fee list repeats $300 cleaning twice and adds $200 repair; total and refundability unclear. Asked about short-stay flexibility on fees.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "Postponed by host; waiting for her next available time. September 30 at 11 AM is no longer booked.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "region": "east",
       "parking_label": "Off-street parking advertised",
       "outreach_status": "sent",
-      "outreach_note": "Mona postponed the September 30 at 11 AM tour and said at 9:43 PM that she will keep Simon posted. No replacement time confirmed. $1,500 utilities confirmed; extra fees remain unresolved.",
-      "tour_status": "Postponed by host; waiting for her next available time. September 30 at 11 AM is no longer booked.",
+      "outreach_note": "Historical outreach: Mona postponed the September 30 at 11 AM tour and said at 9:43 PM that she will keep Simon posted. No replacement time confirmed. $1,500 utilities confirmed; extra fees remain unresolved.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Mona postponed the September 30 at 11 AM tour and said at 9:43 PM that she will keep Simon posted. No replacement time confirmed. $1,500 utilities confirmed; extra fees remain unresolved.",
       "outreach": "sent",
       "fit_status": "candidate",
-      "timing_label": "Tour postponed · new time requested",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "timing_label": "Historical outreach · no upcoming tour",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -1812,7 +1974,9 @@
         "value": 2.5,
         "scope": "10 listing photos: bedroom, full bathroom, vanity, common room/kitchen, exterior and parking.",
         "note": "Simple, uncluttered room with newer-looking gray flooring and a clean-looking bath. More contemporary than several house-share options; condo building and designated parking fit. Repeated cleaning fees plus a repair charge weaken one-month value until clarified or reduced."
-      }
+      },
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "zi-2057204067",
@@ -1855,18 +2019,18 @@
       "neighborhood": "See the approximate-area map and listing for location details.",
       "included": "Explicit month-to-month; private bath and utilities included. Unfurnished. Parking concession refers to June and needs renewal confirmation. $1,000 deposit + $25 application fee. Asked only about a $1,500 all-in discount or smaller room; no fee paid.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "none",
+      "confirm": "Closed October 1: host declined a one-month stay. A polite acknowledgment was sent.",
       "region": "south",
       "parking_label": "Off-street parking advertised",
       "outreach_status": "sent",
-      "outreach_note": "Paulo replied on October 1 that the room is not available for a one-month stay. Acknowledged and closed; fit withdrawn, sent history kept.",
-      "tour_status": "none",
+      "outreach_note": "Historical outreach: Paulo replied on October 1 that the room is not available for a one-month stay. Acknowledged and closed; fit withdrawn, sent history kept.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Paulo replied on October 1 that the room is not available for a one-month stay. Acknowledged and closed; fit withdrawn, sent history kept.",
       "outreach": "sent",
-      "fit_status": "conditional",
-      "timing_label": "Message sent · awaiting reply",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "fit_status": "closed",
+      "timing_label": "Closed to this search",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -1875,7 +2039,9 @@
         "value": 2.5,
         "scope": "5 listing images: building exterior and repeated kitchenette angles; bathroom and sleeping area not reviewed.",
         "note": "Neat, recently finished-looking kitchenette with wood cabinets, stone counters and clean appliances. Apartment building and monthly terms fit, but $1,600 exceeds budget; discounted price, furnishings and current parking concession remain unconfirmed."
-      }
+      },
+      "search_status": "history",
+      "current_note": "Closed October 1: host declined a one-month stay. A polite acknowledgment was sent."
     },
     {
       "id": "zi-15736519",
@@ -1914,18 +2080,18 @@
       "neighborhood": "See the approximate-area map and listing for location details.",
       "included": "$995 rent + listed $60 utilities; $100 cleaning and $750 deposit to confirm. One month; description says shared bath. Income 3.5× rent required; asked about eligibility.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "Viewing requested conditional on a full private bathroom; no time confirmed.",
+      "confirm": "Closed October 1: the connected Zillow thread says a one-month stay is unavailable. Bathroom details also conflict.",
       "region": "solano",
       "parking_label": "Parking arrangement unconfirmed",
       "outreach_status": "sent",
-      "outreach_note": "Inquiry now verified sent: Zillow confirmation dialog and 10:46 PM email receipt. Asked whether a full-private-bath room is available for one month and when it can be viewed. The listing bathroom contradiction remains unresolved.",
-      "tour_status": "Viewing requested conditional on a full private bathroom; no time confirmed.",
+      "outreach_note": "Historical outreach: Inquiry now verified sent: Zillow confirmation dialog and 10:46 PM email receipt. Asked whether a full-private-bath room is available for one month and when it can be viewed. The listing bathroom contradiction remains unresolved.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Inquiry now verified sent: Zillow confirmation dialog and 10:46 PM email receipt. Asked whether a full-private-bath room is available for one month and when it can be viewed. The listing bathroom contradiction remains unresolved.",
       "outreach": "blocked",
-      "fit_status": "mismatch",
-      "timing_label": "Message sent · private bathroom needs confirmation",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "fit_status": "closed",
+      "timing_label": "Closed to this search",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -1934,7 +2100,9 @@
         "value": 2.5,
         "note": "Photos show a neatly made bed, uncluttered bathroom and kitchen, stainless refrigerator and maintained yard. Kitchen wood cabinets and bathroom fixtures are conventional rather than recent designer finishes. $995 plus listed $60 utilities is inexpensive, but the description says shared bath despite a private-bath flag; parking and income eligibility remain unresolved. Submission unconfirmed.",
         "scope": "4 photos: kitchen, sink/toilet area, yard, bedroom; shower unseen"
-      }
+      },
+      "search_status": "history",
+      "current_note": "Closed October 1: the connected Zillow thread says a one-month stay is unavailable. Bathroom details also conflict."
     },
     {
       "id": "sr-102909511",
@@ -1956,7 +2124,7 @@
       "url": "https://www.spareroom.com/rooms-for-rent/san_mateo_county/menlo_park/102909511",
       "neighborhood": "See the approximate-area map and listing for location details.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "Awaiting availability and an in-person tour time.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "photos": [
         {
           "file": "review-sr-102909511-1.jpg",
@@ -1997,13 +2165,13 @@
       ],
       "region": "peninsula",
       "outreach_status": "closed",
-      "outreach_note": "Rechecked September 29: advertiser is not accepting applications. No message sent.",
-      "tour_status": "Not requested; listing closed.",
+      "outreach_note": "Historical outreach: Rechecked September 29: advertiser is not accepting applications. No message sent.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": false,
       "contact": "No message has been sent with verified confirmation. Rechecked September 29: advertiser is not accepting applications. No message sent.",
       "outreach": "closed",
       "fit_status": "closed",
-      "timing_label": "Closed · not accepting applications",
+      "timing_label": "Historical outreach · no upcoming tour",
       "inquiry": "",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
@@ -2013,7 +2181,9 @@
         "value": null,
         "scope": "9 photos: bedrooms, bathroom, kitchen and shared spaces.",
         "note": "Tidy furnished rooms, stainless appliances and updated tile bathroom; carpet and furnishings are more traditional. Listing is closed, so value is unrated."
-      }
+      },
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "sr-103227255",
@@ -2035,7 +2205,7 @@
       "conditions": "Working-person preference; no pets, smoking or overnight guests.",
       "url": "https://www.spareroom.com/rooms-for-rent/sonoma_county/roseland/103227255",
       "neighborhood": "See the approximate-area map and listing for location details.",
-      "confirm": "No tour. Host requires a one-to-two-week background check before move-in; incompatible with an immediate start. Closed politely.",
+      "confirm": "Closed: host requires a one-to-two-week background check; immediate move-in unavailable.",
       "photos": [
         {
           "file": "review-sr-103227255-1.jpg",
@@ -2076,14 +2246,14 @@
       ],
       "region": "north",
       "outreach_status": "sent",
-      "outreach_note": "Outgoing message msg_200040354238 visible in thread with Message sent label, dated Today 12:18 AM EDT.",
-      "tour_status": "No tour. Host requires a one-to-two-week background check before move-in; incompatible with an immediate start. Closed politely.",
+      "outreach_note": "Historical outreach: Outgoing message msg_200040354238 visible in thread with Message sent label, dated Today 12:18 AM EDT.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Outgoing message msg_200040354238 visible in thread with Message sent label, dated Today 12:18 AM EDT.",
       "outreach": "sent",
-      "fit_status": "conditional",
-      "timing_label": "Message sent · awaiting reply",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "fit_status": "closed",
+      "timing_label": "Closed to this search",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -2092,7 +2262,9 @@
         "value": 2,
         "scope": "9 photos: bedroom, bathroom, kitchen, living space and patio.",
         "note": "Orderly decorated rooms and maintained surfaces, with neutral finishes. Bathroom could be shared with a future tenant; exclusive use for the whole stay is unconfirmed. October 1 start and insurance add to the conditions."
-      }
+      },
+      "search_status": "history",
+      "current_note": "Closed: host requires a one-to-two-week background check; immediate move-in unavailable."
     },
     {
       "id": "sr-103227278",
@@ -2114,7 +2286,7 @@
       "url": "https://www.spareroom.com/rooms-for-rent/santa_clara_county/milpitas/103227278",
       "neighborhood": "See the approximate-area map and listing for location details.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "Tour follow-up: asked availability from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "photos": [
         {
           "file": "review-sr-103227278-1.jpg",
@@ -2135,14 +2307,14 @@
       ],
       "region": "south",
       "outreach_status": "sent",
-      "outreach_note": "Outgoing message msg_200040354354 shows the Message sent label in the thread (Today 12:37 AM EDT).",
-      "tour_status": "Tour follow-up: asked availability from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "outreach_note": "Historical outreach: Outgoing message msg_200040354354 shows the Message sent label in the thread (Today 12:37 AM EDT).",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Outgoing message msg_200040354354 shows the Message sent label in the thread (Today 12:37 AM EDT).",
       "outreach": "sent",
       "fit_status": "conditional",
-      "timing_label": "Message sent · awaiting reply",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "timing_label": "Historical outreach · no upcoming tour",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -2151,7 +2323,9 @@
         "value": 3,
         "scope": "4 photos: furnished bedroom and bathroom.",
         "note": "Tidy simple room, gray flooring and a recent-looking vanity; older glass shower. Private entrance and parking are useful, but no kitchen, six-month minimum and female preference require exceptions."
-      }
+      },
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "sr-103225460",
@@ -2173,7 +2347,7 @@
       "url": "https://www.spareroom.com/rooms-for-rent/alameda_county/central_downtown/103225460",
       "neighborhood": "See the approximate-area map and listing for location details.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "Tour follow-up: asked availability from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "photos": [
         {
           "file": "review-sr-103225460-1.jpg",
@@ -2198,14 +2372,14 @@
       ],
       "region": "east",
       "outreach_status": "sent",
-      "outreach_note": "Outgoing message msg_200040354353 shows the Message sent label in the thread (Today 12:37 AM EDT).",
-      "tour_status": "Tour follow-up: asked availability from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "outreach_note": "Historical outreach: Outgoing message msg_200040354353 shows the Message sent label in the thread (Today 12:37 AM EDT).",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Outgoing message msg_200040354353 shows the Message sent label in the thread (Today 12:37 AM EDT).",
       "outreach": "sent",
       "fit_status": "mismatch",
-      "timing_label": "Message sent · awaiting reply",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "timing_label": "Historical outreach · no upcoming tour",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -2214,7 +2388,9 @@
         "value": 1.5,
         "scope": "5 photos: empty bedroom, closet and bathroom.",
         "note": "Bright neutral finishes in a newer condo; some lived-in bathroom counter items. Shared Jack-and-Jill bathroom, six-month minimum, utilities extra and no furniture weaken the short-stay fit."
-      }
+      },
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "cl-7969026450",
@@ -2236,7 +2412,7 @@
       "url": "https://www.craigslist.org/view/d/atherton-furnished-studio-with-private/wgScS4h6erXv1ETyZ9vrgM",
       "neighborhood": "See the approximate-area map and listing for location details.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "Tour follow-up: asked whether the room is still available from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "photos": [
         {
           "file": "review-cl-7969026450-1.jpg",
@@ -2277,14 +2453,14 @@
       ],
       "region": "peninsula",
       "outreach_status": "sent",
-      "outreach_note": "Reply composed in the existing thread; recipient validated as 03eac60e8a19384a8c45409e4ecd9201@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Redwood City studio - earlier one-month availability\".",
-      "tour_status": "Tour follow-up: asked whether the room is still available from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "outreach_note": "Historical outreach: Reply composed in the existing thread; recipient validated as 03eac60e8a19384a8c45409e4ecd9201@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Redwood City studio - earlier one-month availability\".",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Reply composed in the existing thread; recipient validated as 03eac60e8a19384a8c45409e4ecd9201@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Redwood City studio - earlier one-month availability\".",
       "outreach": "sent",
       "fit_status": "conditional",
-      "timing_label": "Message sent · awaiting reply",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "timing_label": "Historical outreach · no upcoming tour",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -2293,7 +2469,9 @@
         "value": 2,
         "scope": "9 property photos: studio, bathroom and outdoor areas; dog photo excluded.",
         "note": "Tidy cozy studio with traditional dark furniture and beige tile bathroom. $1,500 with utilities and off-street parking fits the price, but December 1 availability is much too late unless an earlier opening exists."
-      }
+      },
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "cl-7969543500",
@@ -2301,7 +2479,7 @@
       "title": "Foster City apartment room · shared bathroom",
       "area": "Foster City",
       "city": "Foster City",
-      "rent": 1300,
+      "rent": 1325,
       "extra": false,
       "group": "later",
       "parking": "street",
@@ -2315,7 +2493,7 @@
       "url": "https://www.craigslist.org/view/d/san-mateo-great-furnished-room-all/uAfA2piv3QkTK1C2FBYrGY",
       "neighborhood": "See the approximate-area map and listing for location details.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "Awaiting availability and an in-person tour time.",
+      "confirm": "Shared bathroom; October 20 start.",
       "photos": [
         {
           "file": "review-cl-7969543500-1.jpg",
@@ -2344,23 +2522,25 @@
       ],
       "region": "peninsula",
       "outreach_status": "blocked",
-      "outreach_note": "Phone/text contact only; no email reply option. SMS tooling unavailable. No message sent. October 20 start and shared bathroom also conflict.",
-      "tour_status": "Not requested; no SMS sent.",
+      "outreach_note": "Historical outreach: Phone/text contact only; no email reply option. SMS tooling unavailable. No message sent. October 20 start and shared bathroom also conflict.",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": false,
       "contact": "No message has been sent with verified confirmation. Phone/text contact only; no email reply option. SMS tooling unavailable. No message sent. October 20 start and shared bathroom also conflict.",
       "outreach": "blocked",
       "fit_status": "mismatch",
-      "timing_label": "Contact blocked · not sent",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "timing_label": "Historical outreach · no upcoming tour",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
-      "checked": "September 29, 2026",
+      "checked": "October 5, 2026",
       "visual_review": {
         "cleanliness": 3.5,
         "modernity": 2,
         "value": 1.5,
         "scope": "6 photos: furnished room, bathroom, apartment grounds and pool.",
         "note": "Generally tidy rooms with older bathroom finishes, wallpaper and furniture. Shared bathroom and October 20 start conflict; contact is phone/text only."
-      }
+      },
+      "search_status": "history",
+      "current_note": "Rechecked October 5: shared bathroom and October 20 start. Not pursued."
     },
     {
       "id": "cl-7973652768",
@@ -2382,7 +2562,7 @@
       "url": "https://www.craigslist.org/view/d/campbell-furnished-master-available-for/tiYVVS7vDhb8xP7MYmBAWb",
       "neighborhood": "See the approximate-area map and listing for location details.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "Tour follow-up: asked whether the room is still available from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "photos": [
         {
           "file": "review-cl-7973652768-1.jpg",
@@ -2407,14 +2587,14 @@
       ],
       "region": "south",
       "outreach_status": "sent",
-      "outreach_note": "Reply composed in the existing thread; recipient validated as b61d71d407753aafabade2eebcc99f96@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Campbell room - one-month option and private bathroom\".",
-      "tour_status": "Tour follow-up: asked whether the room is still available from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "outreach_note": "Historical outreach: Reply composed in the existing thread; recipient validated as b61d71d407753aafabade2eebcc99f96@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Campbell room - one-month option and private bathroom\".",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Reply composed in the existing thread; recipient validated as b61d71d407753aafabade2eebcc99f96@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Campbell room - one-month option and private bathroom\".",
       "outreach": "sent",
       "fit_status": "mismatch",
-      "timing_label": "Message sent · awaiting reply",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "timing_label": "Historical outreach · no upcoming tour",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -2423,7 +2603,9 @@
         "value": 1.5,
         "scope": "5 photos: bedroom, shower and kitchen.",
         "note": "Tidy room with wood-look flooring and tiled shower; traditional wood kitchen cabinets and tile counters. Furnished rent already exceeds budget, with utilities extra, longer terms and a contradictory shared-bath description."
-      }
+      },
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "cl-7970134089",
@@ -2445,7 +2627,7 @@
       "url": "https://www.craigslist.org/view/d/burlingame-sublet-private-room-in-our/7bBaoQrKdFByeepYDPwGYp",
       "neighborhood": "See the approximate-area map and listing for location details.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "Tour follow-up: asked whether the room is still available from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "confirm": "Excluded from the current search: house, townhouse or a unit on a house lot. Apartments and condos only.",
       "photos": [
         {
           "file": "review-cl-7970134089-1.jpg",
@@ -2470,14 +2652,14 @@
       ],
       "region": "peninsula",
       "outreach_status": "sent",
-      "outreach_note": "Reply composed in the existing thread; recipient validated as c6c74edb34e23626bb1fe9d9b448750a@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Hillsborough sublet - one month from October 1\".",
-      "tour_status": "Tour follow-up: asked whether the room is still available from October 1 and when an in-person viewing is possible. Nothing confirmed.",
+      "outreach_note": "Historical outreach: Reply composed in the existing thread; recipient validated as c6c74edb34e23626bb1fe9d9b448750a@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Hillsborough sublet - one month from October 1\".",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
       "verified_contact": true,
       "contact": "Reply composed in the existing thread; recipient validated as c6c74edb34e23626bb1fe9d9b448750a@hous.craigslist.org. Visible in Gmail Sent at 9:33-9:35 PM with subject \"Hillsborough sublet - one month from October 1\".",
       "outreach": "sent",
       "fit_status": "mismatch",
-      "timing_label": "Message sent · awaiting reply",
-      "inquiry": "Hi, I'm Simon, a Stanford graduate. Is your room available for a one-month stay from September 30? When could I tour it in person? Thanks!",
+      "timing_label": "Historical outreach · no upcoming tour",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "checked": "September 29, 2026",
       "visual_review": {
@@ -2486,7 +2668,9 @@
         "value": 2,
         "scope": "5 photos: bedroom, kitchen and pool/garden; bathroom not shown.",
         "note": "Lived-in bedroom with personal items and a rumpled bed; busy counters in an updated white kitchen. Sublet flexibility helps, but shared bathroom and utilities on top of $1,475 weaken the fit."
-      }
+      },
+      "search_status": "history",
+      "current_note": "Excluded from the current search: house, townhouse or a unit on a house lot. Apartments and condos only."
     },
     {
       "id": "cl-7972523880",
@@ -2509,7 +2693,7 @@
       "url": "https://www.craigslist.org/view/d/palo-alto-lease-free-furnished-room/6XcwsaRUMA5h9W5ZvNukDa",
       "neighborhood": "See the listing for location details.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "New lead from the September 30 sublets sweep; asked availability from October 1 and a tour time. Nothing confirmed.",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "photos": [],
       "visual_review": {
         "cleanliness": null,
@@ -2522,13 +2706,15 @@
       "checked": "2026-09-30",
       "outreach": "sent",
       "outreach_status": "sent",
-      "outreach_note": "Sent from the signed-in mailbox to the listing's Craigslist relay address; recipient chip verified before sending. Subject \"Palo Alto furnished room with private bath - one month from October 1\" visible in Gmail Sent.",
+      "outreach_note": "Historical outreach: Sent from the signed-in mailbox to the listing's Craigslist relay address; recipient chip verified before sending. Subject \"Palo Alto furnished room with private bath - one month from October 1\" visible in Gmail Sent.",
       "verified_contact": true,
-      "inquiry": "Is the furnished room with its own bathroom still available for a one-month stay from October 1, and when could I see it in person?",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Craigslist email relay.",
-      "timing_label": "New lead · inquiry sent",
-      "tour_status": "New lead from the September 30 sublets sweep; asked availability from October 1 and a tour time. Nothing confirmed.",
-      "contact": "Sent from the signed-in mailbox to the listing's Craigslist relay address; recipient chip verified before sending. Subject \"Palo Alto furnished room with private bath - one month from October 1\" visible in Gmail Sent."
+      "timing_label": "Historical outreach · no upcoming tour",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
+      "contact": "Sent from the signed-in mailbox to the listing's Craigslist relay address; recipient chip verified before sending. Subject \"Palo Alto furnished room with private bath - one month from October 1\" visible in Gmail Sent.",
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     },
     {
       "id": "cl-7965196320",
@@ -2551,7 +2737,7 @@
       "url": "https://www.craigslist.org/view/d/palo-alto-furnished-private-room-in/cVEDYPrWsenmzs5WvBKTiS",
       "neighborhood": "See the listing for location details.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "New lead from the September 30 sublets sweep; asked availability from October 1 and a tour time. Nothing confirmed.",
+      "confirm": "Excluded from the current search: house, townhouse or a unit on a house lot. Apartments and condos only.",
       "photos": [],
       "visual_review": {
         "cleanliness": null,
@@ -2560,17 +2746,19 @@
         "scope": "No photo review yet",
         "note": "Found in the September 30 Craigslist sublets sweep; photos not yet retrieved or rated."
       },
-      "fit_status": "candidate",
+      "fit_status": "mismatch",
       "checked": "2026-09-30",
       "outreach": "sent",
       "outreach_status": "sent",
-      "outreach_note": "Sent from the signed-in mailbox to the listing's Craigslist relay address; recipient chip verified before sending. Subject \"Palo Alto furnished private room - one month from October 1\" visible in Gmail Sent.",
+      "outreach_note": "Historical outreach: Sent from the signed-in mailbox to the listing's Craigslist relay address; recipient chip verified before sending. Subject \"Palo Alto furnished private room - one month from October 1\" visible in Gmail Sent.",
       "verified_contact": true,
-      "inquiry": "Could you clarify the private bath and whether it is furnished, is it available for one month from October 1, and when could I see it?",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Craigslist email relay.",
-      "timing_label": "New lead · inquiry sent",
-      "tour_status": "New lead from the September 30 sublets sweep; asked availability from October 1 and a tour time. Nothing confirmed.",
-      "contact": "Sent from the signed-in mailbox to the listing's Craigslist relay address; recipient chip verified before sending. Subject \"Palo Alto furnished private room - one month from October 1\" visible in Gmail Sent."
+      "timing_label": "Historical outreach · no upcoming tour",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
+      "contact": "Sent from the signed-in mailbox to the listing's Craigslist relay address; recipient chip verified before sending. Subject \"Palo Alto furnished private room - one month from October 1\" visible in Gmail Sent.",
+      "search_status": "history",
+      "current_note": "Excluded from the current search: house, townhouse or a unit on a house lot. Apartments and condos only."
     },
     {
       "id": "cl-7974807000",
@@ -2593,7 +2781,7 @@
       "url": "https://www.craigslist.org/view/d/san-jose-master-bedroom-for-rent-with/2sVr9pWEnnLnLNtF6Vwb8N",
       "neighborhood": "See the listing for location details.",
       "conditions": "Eligibility and house rules unconfirmed.",
-      "confirm": "viewing requested this week; not confirmed",
+      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
       "photos": [],
       "visual_review": {
         "cleanliness": null,
@@ -2606,21 +2794,47 @@
       "checked": "2026-09-30",
       "outreach": "sent",
       "outreach_status": "sent",
-      "outreach_note": "Host replied within four hours: the room should be vacant within the week and could start before October 15, earlier than the advertised date. Asked for a viewing this week.",
+      "outreach_note": "Historical outreach: Host replied within four hours: the room should be vacant within the week and could start before October 15, earlier than the advertised date. Asked for a viewing this week.",
       "verified_contact": true,
-      "inquiry": "Your ad shows October 15 - would an October 1 start work for one month, and when could I see it in person?",
+      "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "inquiry_note": "Craigslist email relay.",
-      "timing_label": "New lead · inquiry sent",
-      "tour_status": "viewing requested this week; not confirmed",
-      "contact": "Host replied within four hours: the room should be vacant within the week and could start before October 15, earlier than the advertised date. Asked for a viewing this week."
+      "timing_label": "Historical outreach · no upcoming tour",
+      "tour_status": "No upcoming tour. Earlier requests and appointments are historical.",
+      "contact": "Host replied within four hours: the room should be vacant within the week and could start before October 15, earlier than the advertised date. Asked for a viewing this week.",
+      "search_status": "history",
+      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
     }
   ],
-  "photos_checked": "September 25, 2026",
+  "photos_checked": "October 5, 2026 for active leads; older photo reviews are dated individually",
   "anchors": "SF Ferry Building and Stanford University; ranked on the worse of the two drives.",
-  "commute_ceiling_minutes": 90,
+  "commute_ceiling_minutes": 150,
   "outreach_updated": "2026-09-29T00:42:20.848708-07:00",
-  "updated_at": "2026-10-01T09:52:00-07:00",
-  "outreach_summary": {
+  "updated_at": "2026-10-05T15:51:09-07:00",
+  "rating_scale": "1–5, higher is better. Cleanliness means visible tidiness and surface condition in advertiser photos, not an inspection. Modernity means visible finishes and furnishings. Value weighs advertised cost, location, bathroom, parking and one-month suitability. All scores are provisional; null means insufficient evidence or unavailable.",
+  "tours_public": [],
+  "travel_plan": "No upcoming confirmed viewings. Manas was viewed October 2; Matthew has no tour time yet.",
+  "monitoring_public": {
+    "status": "active",
+    "schedule": "Hourly",
+    "timeZone": "America/Los_Angeles",
+    "schedule_note": "Hourly read-only inbox checks through October 12, 10 PM Pacific",
+    "requires": "This Mac must be awake and online, with the signed-in housing browser available.",
+    "last_completed_check": "2026-10-05T22:50:55.074702+00:00",
+    "last_successful_check": "2026-10-05T22:47:13.096045+00:00",
+    "last_run_status": "success"
+  },
+  "criteria": {
+    "property_types": [
+      "apartment",
+      "condo"
+    ],
+    "budget_exclusive": 2000,
+    "private_full_bathroom": true,
+    "parking": true,
+    "lease": "Ongoing month-to-month"
+  },
+  "current_summary": "Two active apartment leads, both awaiting agreement on ongoing month-to-month. No complete match or upcoming tour is confirmed. Houses and outdated offers are outside the default shortlist.",
+  "historical_outreach_summary": {
     "new_verified_sent": 100,
     "previously_contacted_hosts": 3,
     "previous_outgoing_messages": 7,
@@ -2634,72 +2848,17 @@
     "accepted_queued_messages": 1,
     "note": "Human hosts who have replied: Ami, Mona/Ramona, Leticia, Don, Alice, Anna, Laura, Rachael, the downtown Palo Alto SUpost poster, the Millbrae Craigslist host and Malou. Sima has the first confirmed viewing: October 1 at 11:30 AM in El Sobrante. Tony in Millbrae agreed to October 1 with no time set."
   },
-  "rating_scale": "1–5, higher is better. Cleanliness means visible tidiness and surface condition in advertiser photos, not an inspection. Modernity means visible finishes and furnishings. Value weighs advertised cost, location, bathroom, parking and one-month suitability. All scores are provisional; null means insufficient evidence or unavailable.",
-  "tours_public": [
-    {
-      "listing_id": "sr-103225663",
-      "status": "confirmed",
-      "when": "2026-10-02T16:00:00-07:00",
-      "area": "668 Alma Ave, Oakland",
-      "note": "CONFIRMED for October 2 at 4:00 PM. At 2:08 PM on October 1 Ami said the room is still available and tomorrow after 4-4:30 works; Simon confirmed 4:00 PM at 3:12 PM and asked her to confirm the address. Shared shower and East Bay location remain mismatches."
-    },
-    {
-      "listing_id": "ff-657379_1",
-      "status": "postponed_by_host",
-      "when": "2026-09-30T11:00:00-07:00",
-      "area": "1000 Evergreen Terr, San Pablo, CA 94806",
-      "note": "Host postponed September 30 and will keep Simon posted. No replacement appointment confirmed."
-    },
-    {
-      "listing_id": "ff-669591_1",
-      "status": "canceled_unavailable",
-      "when": "2026-10-01T17:30:00-07:00",
-      "area": "Fairfield; exact address requested",
-      "note": "Host reported the room taken. The proposed October 1 at 5:30 PM viewing is canceled, with no appointment booked."
-    },
-    {
-      "listing_id": "ff-848526_1",
-      "status": "past_outcome_unknown",
-      "when": "2026-09-30T09:00:00-07:00",
-      "area": "2850 Lumin Ct, Fairfield",
-      "note": "September 30 at 9 AM was confirmed at 2850 Lumin Ct, Fairfield. The time has passed; attendance and outcome are unknown. Anna followed up at 9:38 AM asking whether Simon is still coming or interested."
-    },
-    {
-      "listing_id": "ff-848526_1",
-      "status": "past_outcome_unknown",
-      "when": "",
-      "area": "2850 Lumin Ct, Fairfield",
-      "note": "September 30 at 9 AM is past and attendance/outcome is unknown; do not record it as attended. Asked again on September 30 at 9:24 PM whether the suite is still available and offered October 1 morning or evening. Nothing confirmed."
-    },
-    {
-      "listing_id": "cl-7959180948",
-      "status": "agreed_time_undecided",
-      "when": "2026-10-01T14:00:00-07:00",
-      "area": "Millbrae, CA (exact address pending)",
-      "note": "Host reached Simon by phone on September 30 at about 9:45 PM after two failed call attempts; a tour on October 1 was agreed in principle with no time set. Proposed 2:00 PM by email and asked for the address by text. Not a confirmed appointment until Tony replies with a time."
-    },
-    {
-      "listing_id": "ff-949142_1",
-      "status": "reschedule_requested",
-      "when": "2026-10-02T11:30:00-07:00",
-      "area": "1306 Fascination Circle, Richmond/El Sobrante, CA 94803",
-      "note": "Confirmed for October 1 at 11:30 AM. She first agreed to 10:30; the time was moved because of a 10 AM DMV appointment and she replied \"Yes that works too\" at 10:14 PM. Simon confirmed back at 10:26 PM. Address 1306 Fascination Circle, Richmond/El Sobrante, CA 94803. On October 1 at 9:50 AM the user asked to move it to October 2 at 11:30 AM or receive a video; awaiting Sima."
-    },
-    {
-      "listing_id": "ff-915271_1",
-      "status": "call_agreed_not_a_viewing",
-      "when": "",
-      "area": "Fairfield (address pending)",
-      "note": "Phone call agreed for October 1 at 1:00 PM, host calling Simon. This is an introduction call, not a viewing. Don is away from October 2 until Tuesday and proposes touring next week. Note the call lands between the 11:30 El Sobrante viewing and the proposed 2:00 PM Millbrae slot, likely while Simon is driving."
-    }
-  ],
-  "travel_plan": "Starting near Oakland Airport. Driving to a DMV near San Mateo on September 30; exact visit time not specified. Peninsula tour requests remain tentative around that trip.",
-  "monitoring_public": {
-    "status": "active",
-    "schedule": "Every hour",
-    "timeZone": "America/Los_Angeles",
-    "schedule_note": "Background checks every hour through October 4, 10 PM Pacific",
-    "requires": "This Mac must be awake, online, and Chrome must keep its signed-in housing session available.",
-    "last_completed_check": "2026-09-30T17:57:50.986142+00:00"
-  }
+  "outreach_summary": {
+    "total_hosts_contacted": 42,
+    "tracked_leads": 47,
+    "active_leads": 2,
+    "confirmed_tours": 0,
+    "followups_sent_today": 2
+  },
+  "research_updates": [
+    "October 5: checked nine Craigslist detail pages after apartment/condo and private-bath searches, plus the two active source listings.",
+    "Mountain View $1,700 and Cupertino $1,500 require a three-month start. South San Jose $1,400 is a nine-month price; its shortest three-month option is $2,000 before garage parking.",
+    "North San Jose $1,900 plus utilities requires a lease takeover and starts mid-October or November. Santa Clara $1,550 prefers six months; photos show worn carpet and older interiors.",
+    "Foster City, Avalon/Eaves Mountain View and El Sobrante condo offers have shared bathrooms. Millbrae $2,000 ends December 10. No new complete match from this pass."
+  ]
 }

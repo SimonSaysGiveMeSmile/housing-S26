@@ -80,15 +80,23 @@ for leak in ["{len(", "{render_todos", "{render_progress", '{"".join']:
 from latest_dashboard import load_listings
 latest = d.render_body()
 leads = load_listings()["listings"]
-check("September 29, 2026" in latest and "Bay Area monthly stays" in latest,
-      "home page shows the current September search")
+check(load_listings()['researched'] in latest and "Bay Area monthly stays" in latest,
+      "home page shows the current search date")
+check('Apartments and condos only' in latest and 'under $2,000 all in' in latest,
+      "home page reflects the current building and budget requirements")
+check('shared homes included' not in latest and 'September 29–30, 2026' not in latest,
+      "obsolete search criteria are removed")
+check(latest.count('data-current="1" data-group=') == load_listings()['outreach_summary']['active_leads'],
+      "only the active shortlist is marked current")
+check(not load_listings()['tours_public'] and load_listings()['outreach_summary']['confirmed_tours'] == 0,
+      "expired and canceled tours are not presented as upcoming appointments")
 check("settle-in mode" not in latest and "June-start" not in latest,
       "home page does not show obsolete summer criteria")
 check(latest.count('data-rank=') == len(leads), "every new lead renders regardless of the old campus filter")
 check(all(html.escape(item["url"]) in latest for item in leads), "every lead retains its source link")
 check('href="summer.html"' not in latest, "withdrawn summer inventory is not linked")
 check('data-source="craigslist"' in latest, "current page includes the requested Craigslist outreach")
-check(all(item['source'] in ('zillow', 'supost', 'furnishedfinder', 'spareroom', 'apartments', 'craigslist') for item in leads),
+check(all(item['source'] in ('facebook', 'zillow', 'supost', 'furnishedfinder', 'spareroom', 'apartments', 'craigslist') for item in leads),
       "inventory contains only the selected housing platforms")
 
 # The lease rule is hard: month-by-month or sublet only. Nothing with a long

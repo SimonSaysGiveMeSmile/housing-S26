@@ -46,6 +46,7 @@ GMAIL_ROWS = r'''({url:location.href,title:document.title,main:!!document.queryS
 rows:[...document.querySelectorAll('tr.zA')].map(x=>({text:x.textContent,subject:x.querySelector('.bog')?.textContent,
 id:x.querySelector('[data-legacy-thread-id]')?.getAttribute('data-legacy-thread-id'),
 date:x.querySelector('td.xW span[title]')?.title})),
+has_older:!!document.querySelector('[role=button][aria-label="Older"]:not([aria-disabled="true"])'),
 empty:document.querySelector('[role=main]')?.textContent?.includes('No conversations found')})'''
 
 GMAIL_EXTRACT = r'''({url:location.href,subject:document.querySelector('h2.hP')?.textContent,
@@ -56,8 +57,34 @@ body:b?.innerText||b?.textContent||'',links:b?[...b.querySelectorAll('a[href]')]
 
 NORMALIZE_JS = r'''s=>{let v=String(s||'');for(let i=0;i<3;i++){v=v.replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;|&apos;/g,"'").replace(/&nbsp;/g,' ');}return v.replace(/\s+/g,' ').trim();}'''
 
-GMAIL_EXPAND = r'''[...document.querySelectorAll('[data-tooltip="Expand all"],[aria-label="Expand all"]')].forEach(x=>x.click());
-[...document.querySelectorAll('.adn[data-message-id]')].filter(x=>!x.querySelector('.a3s')).forEach(x=>x.querySelector('.gE')?.click());true'''
+FACEBOOK_EXTRACT = r'''({url:location.href, title:document.querySelector('[role=main]')?.innerText?.split('\n').slice(0,3).join(' '),
+labels:[...document.querySelectorAll('[role=main] [aria-label], [role=main] span')]
+ .flatMap(e=>[e.getAttribute('aria-label'),e.children.length===0?e.textContent:null])
+ .filter(s=>s?.startsWith('Enter, Message sent '))})'''
+
+
+def parse_facebook_labels(labels):
+    """Read message accessibility labels; relative dates remain explicitly unparsed."""
+    counts = {}
+    messages = []
+    for label in dict.fromkeys(labels):
+        match = re.match(r'^Enter, Message sent (.+?) by ([^:]+):\s*(.+)$', label, re.S)
+        if not match:
+            continue
+        date_label, sender, body = match.groups()
+        direction = 'outgoing' if sender == 'You' else 'incoming'
+        key = digest(sender, body)
+        occurrence = counts.get(key, 0)
+        counts[key] = occurrence + 1
+        messages.append(dict(sender='Simon' if direction == 'outgoing' else sender,
+                             direction=direction, body=body, date_label=date_label, at=None,
+                             sequence=len(messages),
+                             time_precision='Displayed relative time; loaded thread excerpt',
+                             source_id=digest(key, occurrence)))
+    return messages
+
+GMAIL_EXPAND = r'''(()=>{const expand=document.querySelector('[data-tooltip="Expand all"],[aria-label="Expand all"]');
+if(expand){expand.click();}else{[...document.querySelectorAll('.adn[data-message-id]')].filter(x=>!x.querySelector('.a3s')).forEach(x=>x.querySelector('.gE')?.click());}return true;})()'''
 
 ZILLOW_EXTRACT = r'''(()=>{const list=document.querySelector('[data-testid="message-list"]');let day='';return {url:location.href,
 messages:list?[...list.children].flatMap((x,i)=>{if(x.tagName==='TIME'){day=x.textContent;return [];}const b=x.querySelector('[data-testid="interactive-chat-bubble"]');if(!b)return [];const ps=[...b.querySelectorAll('p')];
@@ -242,6 +269,8 @@ class Collector:
         return 'Both tracked conversations checked'
 
     def match_email(self, subject, body, links):
+        if 'Private bedroom and bathroom available in 2bd/2ba - $1800' in subject:
+            return 'su-130001643'
         if subject.startswith('Follow up with rentals'):
             return None
         if 'screening' in subject.lower() and re.search(r'\b(?:mona|ramona) z\.', body, re.I):
@@ -273,10 +302,38 @@ class Collector:
             return 'apt-sfhouse-229ellis'
         return None
 
+    def facebook(self):
+        b = self.browser
+        active_ids = {x['id'] for x in read(ROOT / 'september_listings.json')['listings']
+                      if x.get('search_status') == 'active'}
+        threads = [x for x in read(OUT / 'facebook-threads.json', []) if x['listing_id'] in active_ids]
+        if not threads:
+            raise RuntimeError('No active Facebook thread has been connected')
+        captured = []
+        for thread in threads:
+            tid = b.page(thread['url'])
+            b.wait(tid, 'document.querySelectorAll(\'[aria-label^="Enter, Message sent "]\').length')
+            # Message rows hydrate in stages; wait for the known host side too.
+            b.wait(tid, 'document.querySelector(\'[role=main]\')?.innerText.includes(' + json.dumps('by ' + thread['title'].split(' · ', 1)[0] + ':') + ')')
+            data = b.evaluate(tid, FACEBOOK_EXTRACT)
+            if thread['title'] not in (data.get('title') or '') or data['url'].rstrip('/') != thread['url'].rstrip('/'):
+                raise RuntimeError('Facebook thread identity could not be verified')
+            messages = parse_facebook_labels(data['labels'])
+            if not messages:
+                raise RuntimeError('No Facebook message bodies were accessible')
+            for msg in messages:
+                msg['source_id'] = digest(thread['listing_id'], msg['source_id'])
+                self.add('facebook', thread['listing_id'], 'Facebook Messenger', msg, data['url'])
+            captured.append(data)
+            b.close_page(tid)
+        self.screens['facebook'] = captured
+        return f'{len(captured)} active conversations checked; loaded messages only, encrypted history may be incomplete'
+
     def gmail(self):
         b = self.browser
         # Explicit correspondents and housing services; no general personal mail.
-        correspondents = sorted({m['recipient'] for m in self.audit.get('messages', []) if '@' in m.get('recipient', '')})
+        correspondents = sorted({m['recipient'] for m in self.audit.get('messages', []) if '@' in m.get('recipient', '')}
+                                | {m['address'] for m in read(OUT / 'email-correspondents.json', [])})
         query = 'newer_than:14d {' + ' '.join('{' + 'from:' + a + ' to:' + a + '}' for a in correspondents)
         query += ' from:craigslist.org from:furnishedfinder.com from:leads.furnishedfinder.com from:spareroom.com from:zillow.com from:supost.com from:sfhouse.com from:apartments.com}'
         tid = b.page(GMAIL + '#search/' + urllib.parse.quote(query, safe=''))
@@ -284,6 +341,18 @@ class Collector:
         rows = b.evaluate(tid, GMAIL_ROWS)
         if 'tianjiahe11@gmail.com' not in rows.get('title', ''):
             raise RuntimeError('The expected signed-in Gmail account was not available')
+        pages = [rows]
+        while pages[-1].get('has_older'):
+            if len(pages) >= 5:
+                raise RuntimeError('Housing email search exceeded five pages; coverage incomplete')
+            first_id = (pages[-1]['rows'] or [{}])[0].get('id')
+            b.evaluate(tid, 'document.querySelector(\'[role=button][aria-label="Older"]:not([aria-disabled="true"])\').click()')
+            b.wait(tid, '(()=>{const id=document.querySelector(\'tr.zA [data-legacy-thread-id]\')?.getAttribute(\'data-legacy-thread-id\');return id&&id!==' + json.dumps(first_id) + ';})()')
+            page = b.evaluate(tid, GMAIL_ROWS)
+            if 'tianjiahe11@gmail.com' not in page.get('title', ''):
+                raise RuntimeError('Gmail account changed during pagination')
+            pages.append(page)
+        rows = dict(rows, rows=list({row['id']: row for page in pages for row in page['rows']}.values()))
         useful = []
         ignore = re.compile(r'daily matches|save the date|newsletter|renter profile|welcome to|rental recommendations|new listings|new for rent|discover your|your search|verification code|verify your email|confirm your SUpost|podcast|magic link|sign.in|log.in|password|authentication', re.I)
         for row in rows['rows']:
@@ -305,7 +374,7 @@ class Collector:
                 b.wait(thread_tab, '(()=>{const norm=' + NORMALIZE_JS + ';return norm(document.querySelector("h2.hP")?.textContent)===norm(' + json.dumps(row['subject']) + ')&&document.querySelectorAll(".adn[data-message-id]").length;})()', seconds=20)
                 # Expand only message headers, never a reply/compose control.
                 b.evaluate(thread_tab, GMAIL_EXPAND)
-                time.sleep(.3)
+                b.wait(thread_tab, '!document.querySelector(\'[aria-label="Expand all"],[data-tooltip="Expand all"]\')&&[...document.querySelectorAll(\'.adn[data-message-id]\')].every(e=>e.querySelector(\'.a3s\')?.textContent.trim())', seconds=10)
                 data = b.evaluate(thread_tab, GMAIL_EXTRACT)
                 captured.append(data)
                 if not data.get('messages'):
@@ -345,11 +414,7 @@ class Collector:
             finally:
                 if thread_tab:
                     b.close_page(thread_tab)
-        self.screens['gmail'] = {'search': rows, 'threads': captured}
-        # The query is expected to stay below the first page for this finite search.
-        # If it grows, fail visibly rather than silently omitting page two.
-        if len(rows['rows']) >= 50:
-            errors.append('Search reached 50 rows; more pages may need checking')
+        self.screens['gmail'] = {'search': rows, 'pages': pages, 'threads': captured}
         if errors:
             raise RuntimeError(f'{len(captured)} refreshed threads; ' + '; '.join(errors)[:600])
         return f'{len(useful)} housing email threads checked; {len(captured)} new/changed threads imported · tianjiahe11@gmail.com'
@@ -386,7 +451,7 @@ def run(selected=None):
         try:
             browser = Browser()
             collector = Collector(state, audit, browser)
-            for name, method in [('furnishedfinder', collector.ff), ('spareroom', collector.sr), ('zillow', collector.zillow), ('gmail', collector.gmail)]:
+            for name, method in [('facebook', collector.facebook), ('furnishedfinder', collector.ff), ('spareroom', collector.sr), ('zillow', collector.zillow), ('gmail', collector.gmail)]:
                 if selected and name not in selected:
                     continue
                 status = state.setdefault('sources', {}).setdefault(name, {})
@@ -406,7 +471,7 @@ def run(selected=None):
             added = collector.added
         except Exception as error:
             errors.append('Browser unavailable: ' + str(error))
-            for name in selected or ('furnishedfinder', 'spareroom', 'zillow', 'gmail'):
+            for name in selected or ('facebook', 'furnishedfinder', 'spareroom', 'zillow', 'gmail'):
                 state.setdefault('sources', {}).setdefault(name, {}).update(status='error', last_attempt=now(), detail=errors[-1])
         finally:
             if browser:
@@ -421,7 +486,7 @@ def run(selected=None):
         state['sources']['ipo@stanford.edu'] = dict(status='not_connected', detail='Stanford inbox is not connected. Replies arriving only here cannot be checked.')
         state['running'] = None
         state['updated_at'] = now()
-        state.setdefault('runs', []).append(dict(id=run_id, started_at=started, completed_at=now(), status='partial' if errors else 'success', errors=errors, imported_records=added, sources=selected or ['furnishedfinder', 'spareroom', 'zillow', 'gmail'], trigger='launchd' if os.environ.get('XPC_SERVICE_NAME') == 'com.simon.housing-inbox-monitor' else 'Check now / command line'))
+        state.setdefault('runs', []).append(dict(id=run_id, started_at=started, completed_at=now(), status='partial' if errors else 'success', errors=errors, imported_records=added, sources=selected or ['facebook', 'furnishedfinder', 'spareroom', 'zillow', 'gmail'], trigger='launchd' if os.environ.get('XPC_SERVICE_NAME') == 'com.simon.housing-inbox-monitor' else 'Check now / command line'))
         state['runs'] = state['runs'][-100:]
         write(STATE, state)
         monitor = read(OUT / 'monitoring.json', monitor)
@@ -438,6 +503,6 @@ def run(selected=None):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--sources', nargs='+', choices=['furnishedfinder', 'spareroom', 'zillow', 'gmail'])
+    parser.add_argument('--sources', nargs='+', choices=['facebook', 'furnishedfinder', 'spareroom', 'zillow', 'gmail'])
     args = parser.parse_args()
     raise SystemExit(run(args.sources))

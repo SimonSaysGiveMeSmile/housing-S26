@@ -1,8 +1,19 @@
 # Housing search — current state
 
-Updated October 1, 2026, 10 AM. The private unified inbox is the current message view. This supersedes the earlier outreach and tour schedule.
+Updated October 5, 2026, afternoon. The private unified inbox is the current message view. The October 5 section and brief below supersede older outreach and tour plans.
 
 **Public repository warning.** This file and `september_listings.json` are tracked in a public GitHub repository that auto-deploys to GitHub Pages. Host phone numbers, the user's own number, access codes and private thread URLs must stay in `.outreach/`, which is gitignored. Written out in full they would be published. Redact before committing.
+
+## October 5 update
+
+- **Public board reconciled with the latest brief:** apartments and condos only, under $2,000 all-in, ongoing month-to-month with no fixed end date, private full bathroom and parking, modern/decent interiors. Two active apartment leads are shown by default; 45 earlier records remain in history. No upcoming tour is confirmed.
+- **Manas, San Bruno, advertised $1,850:** October 2 viewing completed; user preferred this apartment. Latest host reply is October 4, 10:52 AM: he will check with the leasing office. **October 5, 3:40 PM:** sent a concise follow-up in the existing Messenger thread asking whether ongoing month-to-month is possible; verified Sent. Total recurring cost and written terms still need agreement.
+- **Matthew, Redwood City, SUpost 130001643:** live listing checked October 5. $1,800 base plus split utilities, approximately $1,900–2,000 total to verify; private bath and reserved garage parking. Host prioritizes longer leases. **October 5, 3:39 PM:** replied in the existing email thread, restating one month initially followed by month-to-month without a fixed end date; verified Message sent. No longer lease or rental commitment offered. Staged listing photo is not proof of current condition; no tour time confirmed.
+- **Fresh pass:** nine Craigslist detail pages checked after apartment/condo and private-bath searches. No new complete fit. Mountain View and Cupertino require a three-month start; South San Jose's $1,400 headline requires nine months (three months costs $2,000 before garage parking). North San Jose is a later lease takeover. Santa Clara prefers six months and has worn/dated interiors. Foster City, Avalon/Eaves and El Sobrante condo offers share bathrooms. Millbrae ends December 10. Evidence and rejected-property photos are in `.outreach/research-2026-10-05.json` and adjacent private files.
+- **Monitoring resumed through October 12, 10 PM Pacific**, hourly read-only checks. Added the active Manas Facebook thread and Matthew's email correspondent to the collector. Private channel configuration stays in `.outreach/facebook-threads.json` and `.outreach/email-correspondents.json`. Facebook reads loaded message excerpts; encrypted older history may be incomplete. The Mac must be awake, online and signed in. SMS, Rednote, WeChat and the two other email accounts remain outside coverage.
+- Exact outgoing text and send proof are in `.outreach/send-fb-manas-followup-2026-10-05.json` and `.outreach/send-matthew-m2m-2026-10-05.json`. No follow-up to either host again within 24 hours unless responding to a new host message.
+
+## Historical updates
 
 ## October 4 update (4:05 AM)
 
@@ -97,7 +108,7 @@ Updated October 1, 2026, 10 AM. The private unified inbox is the current message
 
 ## Brief and authorization
 
-One month from September 29/30, extend monthly if possible; sublet preferred, month-to-month accepted. Maximum $1,500 in recurring monthly costs; private full bathroom and parking. Furnished apartment/condo preferred; shared houses allowed. Geography up to 2.5 hours to the worse of SF and Stanford, using approximate city-center routes.
+Move in as soon as agreed; ongoing month-to-month with no fixed end date. Under $2,000 in recurring monthly costs; private full bathroom and parking. Apartments and condos only, modern/decent interiors; furnished preferred. No houses, house-lot ADUs or in-law units. Prioritize the Peninsula and near SFO; wider geography up to 2.5 hours to the worse of SF and Stanford, using approximate city-center routes.
 
 Outreach and in-person tour scheduling are authorized. Do not ask routine permission questions. No paid upgrades, application fees, rental commitments or payments. Skip blocked channels and continue. Contacts and exact messages are in the private audit.
 
@@ -150,7 +161,7 @@ Outreach and in-person tour scheduling are authorized. Do not ask routine permis
 
 ## Current travel and computer-use constraints
 
-User is near **Oakland Airport**, has a car, and will visit a **DMV near San Mateo September 30**; exact DMV time not provided. Keep Peninsula tour times tentative around that trip. Short follow-ups were sent to Ally/Millbrae, Craigslist Millbrae, Sunnyvale and Hayward. Leave travel buffers; no driving-time guarantee given.
+The September 30 DMV and Oakland Airport itinerary is historical. No current trip or upcoming viewing is confirmed. Use the user's latest location and availability before arranging a new tour, and leave travel buffers.
 
 **Do not interfere with regular computer use.** No bringing windows/tabs to front and no desktop mouse/keyboard control. Use separate background tabs and DOM-only interactions. Skip steps that need foreground control. This supersedes the earlier browser focus workflow.
 
@@ -179,16 +190,12 @@ The **original Bay Area monthly stays app is updated**, not only the private rep
 - `.outreach/monitoring.json`: current launchd schedule, failed predecessor and actual last completion/success. The current collector does not send messages. For authorized future outreach, at most one unsolicited follow-up per host per 24 hours.
 - `.outreach/reconcile.py` and `update_dashboard.py` were one-time migration scripts. **Do not rerun**: later host replies supersede their embedded snapshot.
 
-No Git commit, remote deployment, payment or lease commitment has been made. `.outreach` is ignored by Git. The main static export uses only referenced property images; private financial/contact evidence stays local.
+The public repository deploys to GitHub Pages on main. `.outreach` is ignored by Git. The static export uses only referenced property images; private financial/contact evidence stays local. No payment or lease commitment has been made.
 
 ## Continue
 
-Read the unified inbox and current monitor health first, then check `.outreach/queued-followups-2026-09-30.json` to see which of the eight queued follow-ups actually sent before claiming any of them.
+Read the unified inbox and current monitor health first. Prioritize Manas's leasing-office answer and Matthew's response to the month-to-month request. Keep replies inside the existing host thread. Do not offer a longer fixed lease or pay fees or deposits.
 
-**Sima's October 1 viewing at 11:30 AM in El Sobrante is confirmed with an address; attend it.** **Tony in Millbrae**: a tour was agreed for October 1 by phone with no time set, and he prefers the phone over email. If he has not named a time, chase it; his number and the user's best number are both in the private audit. Watch for a reply to the 2:00 PM proposal.
+Continue apartment/condo searches under $2,000 all-in, checking interior photos, private full bathroom, parking and ongoing monthly flexibility before outreach. Do not restore historical house leads to the shortlist. Save evidence and update the public board when a lead or its status changes; do not rerun old migration scripts with embedded snapshots.
 
-If both land, October 1 runs El Sobrante in the morning and Millbrae in the afternoon; leave travel buffer between the East Bay and the Peninsula.
-
-Also open: Ami's October 1 4:00-5:30 PM proposal, Anna's re-ask after the missed 9 AM slot, Mona's replacement time, Don's tour before his tenant leaves, Rachael, Tim/Foster City and both Zillow hosts. Leticia's room is taken and Malou is closed; do not chase either.
-
-Keep replies brief, 25-40 words, asking only availability and when an in-person tour is possible. Log the exact outgoing text plus observed proof immediately. A proposed time is never a confirmed appointment, and a verbal agreement without a time is not an appointment either. Respect at most one unsolicited follow-up per host per 24 hours. SMS and the two requested reply-email accounts remain connection gaps, so phone-only hosts still depend on the user answering directly.
+Keep replies brief, normally 25–40 words. New inquiries ask availability, monthly terms and a viewing; direct replies can resolve the host's specific question. Log exact outgoing text and observed proof immediately. Proposed times are not confirmed appointments. Respect one unsolicited follow-up per host per 24 hours. Phone-only hosts still depend on the user answering directly.
