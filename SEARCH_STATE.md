@@ -1,8 +1,20 @@
 # Housing search — current state
 
-Updated October 5, 2026, afternoon. The private unified inbox is the current message view. The October 5 section and brief below supersede older outreach and tour plans.
+Updated October 6, 2026, afternoon. The private unified inbox is the current message view. The October 6 section and brief below supersede older outreach and tour plans.
 
 **Public repository warning.** This file and `september_listings.json` are tracked in a public GitHub repository that auto-deploys to GitHub Pages. Host phone numbers, the user's own number, access codes and private thread URLs must stay in `.outreach/`, which is gitignored. Written out in full they would be published. Redact before committing.
+
+## October 6 update
+
+- **Two active leads; no new complete fit or upcoming confirmed tour.** The apartment/condo, private-full-bathroom, parking, ongoing month-to-month and under-$2,000 all-in requirements remain unchanged.
+- **Inbox check at 4:36 PM Pacific:** Facebook, Furnished Finder, SpareRoom, Zillow and 42 housing email threads checked successfully. No new host replies from Manas or Matthew. A read-only Facebook/email recheck at 4:42 PM independently verified today's new Manas outgoing message.
+- **Manas:** follow-up verified sent in the existing Messenger thread at **4:41 PM**, asking for the leasing-office update and next steps. No new terms agreed. Do not follow up again before October 7 at 4:41 PM unless responding to a host reply.
+- **Matthew:** follow-up prepared in the existing Gmail thread, asking whether a one-month start with monthly renewal works and when a viewing is possible. **Not sent:** the browser recorder blocked Submit and left the draft. Last verified outgoing remains October 5 at 3:39 PM. Do not bypass the recorder or count the draft as sent. Recheck the existing draft and thread before any later send to avoid duplicates.
+- **Fresh research:** six Craigslist detail pages, five Facebook listings and four SUpost listings, plus the three SUpost housing feeds. Four Craigslist offers share bathrooms. The Mountain View condo costs about $2,075 including utilities and mandatory cleaning, before optional garage parking. SoMa $1,800 has basic/dated photos, no bathroom photo, and unconfirmed ongoing terms and total cost; not shortlisted. The Facebook offers fail on bathroom, building type, lease minimum or dates. The Menlo Park studio is a backyard unit according to its linked property manager (which also lists $1,800 rather than SUpost's $1,650). Another Redwood City listing has conflicting prices and an October 20 start; Mountain View is female-only. Grant Avenue remains historical with long-term/female preferences and unresolved parking/monthly renewal.
+- **Private evidence:** `.outreach/research-2026-10-06.json`, `.outreach/oakley-manager-verification-2026-10-06.json`, `.outreach/send-fb-manas-followup-2026-10-06.json`, `.outreach/draft-matthew-followup-2026-10-06.json`. The follow-up drafts and host details remain private.
+- Hourly read-only monitoring remains active through **October 12, 10 PM Pacific**, requiring the Mac awake, online and signed in. SMS, Rednote, WeChat and the two other email accounts remain outside coverage.
+
+## Historical updates
 
 ## October 5 update
 
@@ -12,8 +24,6 @@ Updated October 5, 2026, afternoon. The private unified inbox is the current mes
 - **Fresh pass:** nine Craigslist detail pages checked after apartment/condo and private-bath searches. No new complete fit. Mountain View and Cupertino require a three-month start; South San Jose's $1,400 headline requires nine months (three months costs $2,000 before garage parking). North San Jose is a later lease takeover. Santa Clara prefers six months and has worn/dated interiors. Foster City, Avalon/Eaves and El Sobrante condo offers share bathrooms. Millbrae ends December 10. Evidence and rejected-property photos are in `.outreach/research-2026-10-05.json` and adjacent private files.
 - **Monitoring resumed through October 12, 10 PM Pacific**, hourly read-only checks. Added the active Manas Facebook thread and Matthew's email correspondent to the collector. Private channel configuration stays in `.outreach/facebook-threads.json` and `.outreach/email-correspondents.json`. Facebook reads loaded message excerpts; encrypted older history may be incomplete. The Mac must be awake, online and signed in. SMS, Rednote, WeChat and the two other email accounts remain outside coverage.
 - Exact outgoing text and send proof are in `.outreach/send-fb-manas-followup-2026-10-05.json` and `.outreach/send-matthew-m2m-2026-10-05.json`. No follow-up to either host again within 24 hours unless responding to a new host message.
-
-## Historical updates
 
 ## October 4 update (4:05 AM)
 
@@ -195,6 +205,8 @@ The public repository deploys to GitHub Pages on main. `.outreach` is ignored by
 ## Continue
 
 Read the unified inbox and current monitor health first. Prioritize Manas's leasing-office answer and Matthew's response to the month-to-month request. Keep replies inside the existing host thread. Do not offer a longer fixed lease or pay fees or deposits.
+
+Matthew has an unsent October 6 follow-up draft because the browser recorder blocked Submit. Do not work around that block. Once normal sending is available, inspect the existing thread and draft before attempting any send. Manas's October 6 4:41 PM follow-up was independently verified sent; no repeat before the 24-hour window opens unless he replies.
 
 Continue apartment/condo searches under $2,000 all-in, checking interior photos, private full bathroom, parking and ongoing monthly flexibility before outreach. Do not restore historical house leads to the shortlist. Save evidence and update the public board when a lead or its status changes; do not rerun old migration scripts with embedded snapshots.
 

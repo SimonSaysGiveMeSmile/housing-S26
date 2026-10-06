@@ -1,5 +1,5 @@
 {
-  "researched": "October 5, 2026",
+  "researched": "October 6, 2026",
   "move_in": "As soon as agreed · ongoing month-to-month, no fixed end date",
   "listings": [
     {
@@ -11,7 +11,7 @@
       "outreach": "sent",
       "verified_contact": true,
       "fit_status": "conditional",
-      "checked": "October 5, 2026",
+      "checked": "October 6, 2026",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "deposit": "Not confirmed; no deposit paid.",
@@ -34,8 +34,8 @@
       "timing_label": "Viewed · monthly extension pending",
       "tour_status": "Viewed October 2 at 6:15 PM; user preferred this apartment. No new viewing booked.",
       "confirm": "Leasing-office approval for ongoing month-to-month, all-in cost, deposit and written terms.",
-      "contact": "October 5, 3:40 PM: follow-up verified sent in the existing Messenger thread. Awaiting Manas.",
-      "outreach_note": "Manas replied October 4 that he would speak to the leasing office. Followed up October 5 at 3:40 PM about ongoing month-to-month; verified Sent.",
+      "contact": "October 6, 4:41 PM: follow-up verified sent in the existing Messenger thread. Awaiting Manas.",
+      "outreach_note": "Manas last replied October 4 that he would speak to the leasing office. Followed up October 6 at 4:41 PM about ongoing month-to-month and next steps; verified Sent and independently re-read by the inbox collector.",
       "current_note": "First choice after the viewing. Awaiting leasing-office approval; no rental commitment made.",
       "url": "https://www.facebook.com/marketplace/item/1541250288018605/",
       "photos": [
@@ -61,7 +61,7 @@
       "outreach": "sent",
       "verified_contact": true,
       "fit_status": "conditional",
-      "checked": "October 5, 2026",
+      "checked": "October 6, 2026",
       "inquiry_note": "Availability and tour only · template, not a new send",
       "inquiry": "Hi, I'm Simon. Is this still available for an ongoing month-to-month stay? When could I view it in person? Thanks!",
       "deposit": "Not confirmed; no deposit paid.",
@@ -84,8 +84,8 @@
       "timing_label": "Host replied · monthly terms requested",
       "tour_status": "Viewing requested; no date or time confirmed.",
       "confirm": "Whether monthly renewal is possible, exact all-in recurring cost below $2,000, and a viewing of the actual room.",
-      "contact": "October 5, 3:39 PM: reply verified sent in the existing email thread. Awaiting Matthew.",
-      "outreach_note": "Initial SUpost inquiry October 4; Matthew replied that longer leases take priority. Replied October 5 at 3:39 PM asking about one month followed by month-to-month renewal.",
+      "contact": "Last verified email sent October 5 at 3:39 PM. October 6 follow-up remains an unsent draft in the existing thread; awaiting Matthew.",
+      "outreach_note": "Initial inquiry October 4; Matthew prefers longer leases. Replied October 5 asking for one month followed by monthly renewal. No new host reply as of October 6 at 4:42 PM. Today's follow-up draft was not sent.",
       "current_note": "Second active lead. Longer lease preference and total utilities remain unresolved; no viewing booked.",
       "url": "https://supost.com/post/private-bedroom-and-bathroom-available-in-2bd-2ba-1800-130001643",
       "photos": [
@@ -396,14 +396,14 @@
       "parking": "unknown",
       "parking_label": "Parking not specified",
       "furnished": "unknown",
-      "availability": "October 1, 2026 or later. Posted September 25. Does not cover September 29–30 as advertised.",
+      "availability": "Live listing rechecked October 6: available October 1, 2026 or later; current vacancy remains unconfirmed.",
       "deposit": "Deposit not specified. Furnishings available for an additional fee.",
       "term": "Long-term sublet preferred; one month and monthly renewal are not confirmed.",
       "neighborhood": "Advertiser mentions downtown, restaurants, cafés, shops and Caltrain nearby; check the exact walking distances from Grant Avenue.",
       "included": "$1,430 base rent; utilities and furnishing fees not specified. Shared apartment.",
       "bath": "Private bedroom and private bathroom advertised.",
       "conditions": "Female tenant preferred. Living room has been converted into an additional bedroom.",
-      "confirm": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering.",
+      "confirm": "Current vacancy, ongoing monthly renewal, parking and whether the host will consider a male tenant. Earlier inquiry remains queued; no host reply verified.",
       "url": "https://supost.com/post/1-bedroom-1-bathroom-in-a-2b2b-apartment-for-long-term-suble-130109474",
       "photos": [
         {
@@ -419,7 +419,7 @@
           "source": "https://cdn.supost.com/v2/posts/bfff5d64-835f-4bab-9233-efe0d204897c/56fe1859-7ce1-4807-b3c2-dc45c5cde5ce.jpg"
         }
       ],
-      "checked": "September 29, 2026",
+      "checked": "October 6, 2026",
       "contact": "Email verified through the signed-in inbox. SUpost displayed Message Sent! and said the message was sent to the poster; inline status still says pending delivery to seller. Platform accepted/queued; recipient delivery and reading unconfirmed.",
       "city": "Palo Alto",
       "region": "peninsula",
@@ -439,7 +439,7 @@
       "verified_contact": true,
       "fit_status": "conditional",
       "search_status": "history",
-      "current_note": "Earlier outreach record. Recheck building type, availability, interiors and month-to-month terms before reconsidering."
+      "current_note": "Rechecked October 6. Long-term sublet and female tenant preferred; parking and monthly renewal remain unconfirmed. No new outreach."
     },
     {
       "id": "su-130107280",
@@ -2808,8 +2808,8 @@
   "photos_checked": "October 5, 2026 for active leads; older photo reviews are dated individually",
   "anchors": "SF Ferry Building and Stanford University; ranked on the worse of the two drives.",
   "commute_ceiling_minutes": 150,
-  "outreach_updated": "2026-09-29T00:42:20.848708-07:00",
-  "updated_at": "2026-10-05T15:51:09-07:00",
+  "outreach_updated": "2026-10-06T16:43:28-07:00",
+  "updated_at": "2026-10-06T16:43:28-07:00",
   "rating_scale": "1–5, higher is better. Cleanliness means visible tidiness and surface condition in advertiser photos, not an inspection. Modernity means visible finishes and furnishings. Value weighs advertised cost, location, bathroom, parking and one-month suitability. All scores are provisional; null means insufficient evidence or unavailable.",
   "tours_public": [],
   "travel_plan": "No upcoming confirmed viewings. Manas was viewed October 2; Matthew has no tour time yet.",
@@ -2819,8 +2819,8 @@
     "timeZone": "America/Los_Angeles",
     "schedule_note": "Hourly read-only inbox checks through October 12, 10 PM Pacific",
     "requires": "This Mac must be awake and online, with the signed-in housing browser available.",
-    "last_completed_check": "2026-10-05T22:50:55.074702+00:00",
-    "last_successful_check": "2026-10-05T22:47:13.096045+00:00",
+    "last_completed_check": "2026-10-06T23:42:49.996995+00:00",
+    "last_successful_check": "2026-10-06T23:36:44.993360+00:00",
     "last_run_status": "success"
   },
   "criteria": {
@@ -2833,7 +2833,7 @@
     "parking": true,
     "lease": "Ongoing month-to-month"
   },
-  "current_summary": "Two active apartment leads, both awaiting agreement on ongoing month-to-month. No complete match or upcoming tour is confirmed. Houses and outdated offers are outside the default shortlist.",
+  "current_summary": "Two active apartment leads still await agreement on ongoing month-to-month. No new complete match or upcoming tour is confirmed. Manas received a follow-up today; Matthew's follow-up is drafted but not sent.",
   "historical_outreach_summary": {
     "new_verified_sent": 100,
     "previously_contacted_hosts": 3,
@@ -2853,12 +2853,14 @@
     "tracked_leads": 47,
     "active_leads": 2,
     "confirmed_tours": 0,
-    "followups_sent_today": 2
+    "followups_sent_today": 1
   },
   "research_updates": [
-    "October 5: checked nine Craigslist detail pages after apartment/condo and private-bath searches, plus the two active source listings.",
-    "Mountain View $1,700 and Cupertino $1,500 require a three-month start. South San Jose $1,400 is a nine-month price; its shortest three-month option is $2,000 before garage parking.",
-    "North San Jose $1,900 plus utilities requires a lease takeover and starts mid-October or November. Santa Clara $1,550 prefers six months; photos show worn carpet and older interiors.",
-    "Foster City, Avalon/Eaves Mountain View and El Sobrante condo offers have shared bathrooms. Millbrae $2,000 ends December 10. No new complete match from this pass."
+    "October 6: reviewed six Craigslist detail pages, five Facebook Marketplace listings and four SUpost listings, plus the SUpost apartment, rooms and sublet feeds. No new listing cleared the current brief.",
+    "Craigslist: Pacifica, San Bruno, Belmont and Daly City offers share bathrooms. The Mountain View condo is $1,850 plus about $100 utilities and $125 mandatory monthly cleaning per person: roughly $2,075 before optional garage parking.",
+    "SoMa $1,800: three photos reviewed. Interiors are basic/dated, no bathroom photo is shown, and the listing does not establish ongoing month-to-month or total recurring costs. Not shortlisted or contacted.",
+    "Facebook: the five checked offers have shared bathrooms, house locations, three-month or annual minimums, and/or later move-in dates.",
+    "SUpost: the new Menlo Park $1,650 studio is a backyard unit behind a house; the linked property manager lists it at $1,800. Another Redwood City listing has conflicting $1,800/$2,000 prices plus utilities and an October 20 start. Mountain View is female-only. The existing Grant Avenue lead still prefers a long-term female tenant, with parking and monthly renewal unresolved.",
+    "Inbox check completed October 6 at 4:36 PM Pacific across Facebook, Furnished Finder, SpareRoom, Zillow and connected housing email: no new host replies. Read-only recheck at 4:42 PM verified the new Manas outgoing message; Matthew's email was not sent."
   ]
 }
